@@ -4,7 +4,7 @@
 
     <p>✍🏼 A lo largo de 8 años publicamos cerca de 2.000 artículos. Durante un tiempo también colaboramos con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>, grabando 335 podcasts narrando algunas de las recomendaciones de la web.</p>
 
-    <p>⌛️ A principios de 2017 publicamos el último artículo, y a mediados de 2018 perdimos el dominio original bajo el que estaba alojada la web (www.dsong.es). En <a href="https://web.archive.org/web/20170501000000*/http://www.dsong.es" target="_blank">archive.org</a> se pueden seguir consultando algunas capturas de la web original.</p>
+    <p>⌛️ A principios de 2017 publicamos el último artículo. En <a href="https://web.archive.org/web/20170501000000*/http://www.dsong.es" target="_blank">archive.org</a> se pueden seguir consultando algunas capturas de la web original.</p>
 
     <p>💻 Era una pena que todo este contenido se perdiese en un disco duro de copias de seguridad, así que hemos creado este pequeño proyecto para que se pueda seguir consultando más allá del típico formato blog que un día fue. En el <router-link :to="{ name: 'archive' }">Archivo</router-link> puedes encontrar una tabla con todo el contenido, filtrarlo y ordenarlo por distintos criterios. También puedes <router-link :to="{ name: 'lucky' }"><img src="../assets/dices.png" alt="Dados" class="header__menu--dices"> navegar a tu suerte</router-link>, y ver qué te vamos recomendando de entre todo el histórico de publicaciones.</p>
 
