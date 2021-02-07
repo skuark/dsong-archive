@@ -2,7 +2,7 @@
 
 ![](src/assets/logo.png)
 
-https://dsong.skuark.com/
+https://dsong.es/
 
 ---
 
