@@ -7,18 +7,88 @@ permalink: "archive/{{ post.id }}.html"
 layout: layouts/main.njk
 ---
 
-<h1>{{ post.title }}</h1>
-<p>Published on: {{ post.published_at | formatDate("dd/MM/yyyy") }} by {{ post.author.name }}</p>
+<div class="post-view">
+  <h2 class="post-view__title">{{ post.title }}</h2>
 
-<div>
-  {{ post.content | safe }}
+  <div class="post-view__meta">
+    <span>
+      <span class="post-view__author">
+        {% if post.author.url %}
+          <a href="{{ post.author.url }}" target="_blank">
+            <img class="post-view__author-image" src="{{ post.author.gravatar_url }}?s=20" />
+            <span class="post-view__author-name">{{ post.author.name }}</span>
+          </a>
+        {% else %}
+          <img class="post-view__author-image" src="{{ post.author.gravatar_url }}?s=20" />
+          <span class="post-view__author-name">{{ post.author.name }}</span>
+        {% endif %}
+      </span>
+
+      <span class="post-view__date">{{ post.published_at | formatDate("dd/MM/yyyy") }}</span>
+
+      {% set commentsCount = post.comments | length %}
+      {% if commentsCount == 0 %}
+        <span class="post-view__comments-count">Sin comentarios</span>
+      {% elif commentsCount == 1 %}
+        <span class="post-view__comments-count">{{ commentsCount }} comentario</span>
+      {% else %}
+        <span class="post-view__comments-count">{{ commentsCount }} comentarios</span>
+      {% endif %}
+    </span>
+  </div>
+
+  <div class="post-view__content">
+    {{ post.content | safe }}
+  </div>
+
+  {% if post.metadata.podcast_player %}
+    <div class="post-view__media post-view__media--podcast">
+      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
+      <div>{{ post.metadata.podcast_player | safe }}</div>
+    </div>
+  {% endif %}
+
+  {% if post.metadata.youtube_url %}
+    <div class="post-view__media post-view__media--youtube">
+      <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
+      <div class="post-view__media-container">
+        <iframe width="560" height="315" src="{{ post.metadata.youtube_url }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if post.metadata.spotify_url %}
+    <div class="post-view__media post-view__media--spotify">
+      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
+      <div>
+        <iframe src="{{ post.metadata.spotify_url }}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if post.comments and post.comments | length > 0 %}
+    <div class="post-view__comments">
+      <h3 class="post-view__subtitle">Comentarios</h3>
+      <ul>
+        {% for comment in post.comments %}
+          <li class="post-view__comment">
+            <div class="post-view__comment-content">{{ comment.content }}</div>
+            <div class="post-view__comment-meta">
+              <span class="post-view__comment-author">
+                —
+                {% if comment.author.url %}
+                  <a href="{{ comment.author.url }}" target="_blank">
+                    <span class="post-view__comment-author-name">{{ comment.author.name }}</span>
+                  </a>
+                {% else %}
+                  <span class="post-view__comment-author-name">{{ comment.author.name }}</span>
+                {% endif %}
+              </span>
+              <span class="post-view__comment-date">{{ comment.published_at | formatDate("dd/MM/yyyy") }}</span>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
 </div>
-
-<h2>Metadata</h2>
-<ul>
-  <li><strong>Song:</strong> {{ post.metadata.song }}</li>
-  <li><strong>Artist:</strong> {{ post.metadata.artist }}</li>
-  <li><strong>Album:</strong> {{ post.metadata.album }}</li>
-  <li><strong>Year:</strong> {{ post.metadata.year }}</li>
-  <li><strong>Category:</strong> {{ post.metadata.category }}</li>
-</ul>
