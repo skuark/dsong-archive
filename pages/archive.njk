@@ -1,0 +1,34 @@
+---
+title: Archive
+permalink: /archive/index.html
+layout: layouts/main.njk
+---
+
+<table class="archive-table">
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Publicación</th>
+      <th>Canción</th>
+      <th>Artista</th>
+      <th>Álbum</th>
+      <th>Año</th>
+      <th>Categoría</th>
+      <th>Autor</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for post in collections.posts -%}
+    <tr>
+      <td>{{ post.published_at | formatDate("dd/MM/yyyy") }}</td>
+      <td><a href="/archive/{{ post.id }}">{{ post.title }}</a></td>
+      <td>{{ post.metadata.song }}</td>
+      <td>{{ post.metadata.artist }}</td>
+      <td>{{ post.metadata.album }}</td>
+      <td>{{ post.metadata.year }}</td>
+      <td>{{ post.metadata.category }}</td>
+      <td>{{ post.author.name }}</td>
+    </tr>
+    {%- endfor -%}
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+---
+pagination:
+  data: collections.posts
+  size: 1
+  alias: post
+permalink: "archive/{{ post.id }}.html"
+layout: layouts/main.njk
+---
+
+<h1>{{ post.title }}</h1>
+<p>Published on: {{ post.published_at | formatDate("dd/MM/yyyy") }} by {{ post.author.name }}</p>
+
+<div>
+  {{ post.content | safe }}
+</div>
+
+<h2>Metadata</h2>
+<ul>
+  <li><strong>Song:</strong> {{ post.metadata.song }}</li>
+  <li><strong>Artist:</strong> {{ post.metadata.artist }}</li>
+  <li><strong>Album:</strong> {{ post.metadata.album }}</li>
+  <li><strong>Year:</strong> {{ post.metadata.year }}</li>
+  <li><strong>Category:</strong> {{ post.metadata.category }}</li>
+</ul>
