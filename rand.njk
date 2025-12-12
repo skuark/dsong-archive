@@ -1,12 +1,8 @@
----
-permalink: /rand/index.html
----
-
 <script>
   const postIds = [
     {% for post in collections.posts %}"{{ post.id }}",{% endfor %}
   ];
   const randomIndex = Math.floor(Math.random() * postIds.length);
   const randomPostId = postIds[randomIndex];
-  window.location.href = `/archive/${randomPostId}`;
+  window.location.href = `/archive/${randomPostId}.html`;
 </script>

@@ -30,6 +30,8 @@ export default function(eleventyConfig) {
     }
   });
 
+  eleventyConfig.ignores.add("README.md");
+
   eleventyConfig.addPassthroughCopy("css/bundle.css");
   eleventyConfig.addPassthroughCopy("images/dices.png");
   eleventyConfig.addPassthroughCopy("images/favicon.png");
