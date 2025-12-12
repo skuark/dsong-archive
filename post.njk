@@ -1,10 +1,12 @@
 ---
+layout: layouts/main.njk
 pagination:
   data: collections.posts
   size: 1
   alias: post
+eleventyComputed:
+  title: "El Archivo de dSong » {{ post.title }}"
 permalink: "archive/{{ post.id }}.html"
-layout: layouts/main.njk
 ---
 
 <div class="post-view">

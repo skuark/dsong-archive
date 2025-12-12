@@ -1,10 +1,11 @@
 ---
-title: Posts by {{ author[0] }}
 layout: layouts/main.njk
 pagination:
   data: collections.postsByAuthor
   size: 1
   alias: author
+eleventyComputed:
+  title: "El Archivo de dSong » Publicaciones de {{ author[0] }}"
 permalink: "/archive/authors/{{ author[0] | slugify }}.html"
 ---
 
