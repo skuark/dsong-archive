@@ -1,6 +1,12 @@
 ---
 layout: layouts/main.njk
-title: El Archivo de dSong » Archivo
+pagination:
+  data: collections.postsByArtist
+  size: 1
+  alias: artist
+eleventyComputed:
+  title: "El Archivo de dSong » Publicaciones del artista {{ artist[0] }}"
+permalink: "/archive/artists/{{ artist[0] | slugify }}.html"
 ---
 
 <table class="archive-table">
@@ -17,7 +23,9 @@ title: El Archivo de dSong » Archivo
     </tr>
   </thead>
   <tbody>
-    {%- for post in collections.posts -%}
+    <h2>Publicaciones del artista {{ artist[0] }}</h2>
+
+    {%- for post in artist[1] -%}
     <tr>
       <td>{{ post.published_at | formatDate("dd/MM/yyyy") }}</td>
       <td><a href="/archive/{{ post.id }}.html">{{ post.title }}</a></td>

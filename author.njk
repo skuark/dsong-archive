@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: author
 eleventyComputed:
-  title: "El Archivo de dSong » Publicaciones de {{ author[0] }}"
+  title: "El Archivo de dSong » Publicaciones del autor {{ author[0] }}"
 permalink: "/archive/authors/{{ author[0] | slugify }}.html"
 ---
 
@@ -19,20 +19,22 @@ permalink: "/archive/authors/{{ author[0] | slugify }}.html"
       <th>Álbum</th>
       <th>Año</th>
       <th>Categoría</th>
+      <th>Autor</th>
     </tr>
   </thead>
   <tbody>
-    <h2>Posts de {{ author[0] }}</h2>
+    <h2>Publicaciones del autor {{ author[0] }}</h2>
 
     {%- for post in author[1] -%}
     <tr>
       <td>{{ post.published_at | formatDate("dd/MM/yyyy") }}</td>
       <td><a href="/archive/{{ post.id }}.html">{{ post.title }}</a></td>
       <td>{{ post.metadata.song }}</td>
-      <td>{{ post.metadata.artist }}</td>
-      <td>{{ post.metadata.album }}</td>
+      <td><a href="/archive/artists/{{ post.metadata.artist | slugify }}">{{ post.metadata.artist }}</a></td>
+      <td><a href="/archive/albums/{{ post.metadata.artist | slugify }}-{{ post.metadata.album | slugify }}">{{ post.metadata.album }}</a></td>
       <td>{{ post.metadata.year }}</td>
       <td>{{ post.metadata.category }}</td>
+      <td><a href="/archive/authors/{{ post.author.name | slugify }}">{{ post.author.name }}</a></td>
     </tr>
     {%- endfor -%}
   </tbody>

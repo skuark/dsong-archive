@@ -33,6 +33,37 @@ export default function(eleventyConfig) {
     return Object.entries(postsByAuthor);
   });
 
+  eleventyConfig.addCollection("postsByArtist", (collection) => {
+    const posts = loadPosts();
+    const postsByArtist = {};
+
+    for (const post of posts) {
+      const artist = post.metadata.artist;
+      if (!postsByArtist[artist]) {
+        postsByArtist[artist] = [];
+      }
+      postsByArtist[artist].push(post);
+    }
+
+    return Object.entries(postsByArtist);
+  });
+
+  eleventyConfig.addCollection("postsByAlbum", (collection) => {
+    const posts = loadPosts();
+    const postsByAlbum = {};
+
+    for (const post of posts) {
+      const artist = post.metadata.artist;
+      const album = `${artist}-${post.metadata.album}`;
+      if (!postsByAlbum[album]) {
+        postsByAlbum[album] = [];
+      }
+      postsByAlbum[album].push(post);
+    }
+
+    return Object.entries(postsByAlbum);
+  });
+
   eleventyConfig.addFilter("formatDate", (dateString, dateFormat) => {
     if (!dateString) {
       return "";
