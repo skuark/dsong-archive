@@ -6,12 +6,31 @@ import { format, parse } from "date-fns";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+function loadPosts() {
+  const postPath = path.resolve(__dirname, "data/posts.json");
+  const content = fs.readFileSync(postPath, "utf8");
+  const data = JSON.parse(content);
+  return data.posts;
+}
+
 export default function(eleventyConfig) {
   eleventyConfig.addCollection("posts", function() {
-    const dataPath = path.resolve(__dirname, "data/posts.json");
-    const content = fs.readFileSync(dataPath, "utf8");
-    const data = JSON.parse(content);
-    return data.posts;
+    return loadPosts();
+  });
+
+  eleventyConfig.addCollection("postsByAuthor", (collection) => {
+    const posts = loadPosts();
+    const postsByAuthor = {};
+
+    for (const post of posts) {
+      const authorName = post.author.name;
+      if (!postsByAuthor[authorName]) {
+        postsByAuthor[authorName] = [];
+      }
+      postsByAuthor[authorName].push(post);
+    }
+
+    return Object.entries(postsByAuthor);
   });
 
   eleventyConfig.addFilter("formatDate", (dateString, dateFormat) => {

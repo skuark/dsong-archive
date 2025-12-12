@@ -1,6 +1,11 @@
 ---
-title: Archive
+title: Posts by {{ author[0] }}
 layout: layouts/main.njk
+pagination:
+  data: collections.postsByAuthor
+  size: 1
+  alias: author
+permalink: "/archive/authors/{{ author[0] | slugify }}.html"
 ---
 
 <table class="archive-table">
@@ -13,11 +18,12 @@ layout: layouts/main.njk
       <th>Álbum</th>
       <th>Año</th>
       <th>Categoría</th>
-      <th>Autor</th>
     </tr>
   </thead>
   <tbody>
-    {%- for post in collections.posts -%}
+    <h2>Posts de {{ author[0] }}</h2>
+
+    {%- for post in author[1] -%}
     <tr>
       <td>{{ post.published_at | formatDate("dd/MM/yyyy") }}</td>
       <td><a href="/archive/{{ post.id }}.html">{{ post.title }}</a></td>
@@ -26,7 +32,6 @@ layout: layouts/main.njk
       <td>{{ post.metadata.album }}</td>
       <td>{{ post.metadata.year }}</td>
       <td>{{ post.metadata.category }}</td>
-      <td><a href="/archive/authors/{{ post.author.name | slugify }}">{{ post.author.name }}</a></td>
     </tr>
     {%- endfor -%}
   </tbody>
