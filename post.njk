@@ -14,15 +14,17 @@ permalink: "archive/{{ post.id }}.html"
 
   <div class="post-view__meta">
     <span>
-      <span class="post-view__author">
-        {% if post.author.url %}
-          <a href="{{ post.author.url }}" target="_blank">
-            <img class="post-view__author-image" src="{{ post.author.gravatar_url }}?s=20" />
-            <span class="post-view__author-name">{{ post.author.name }}</span>
+      <span class="post-view__editor">
+        {% if post.editor.url %}
+          <a href="{{ post.editor.url }}" target="_blank">
+            <img class="post-view__editor-image" src="{{ post.editor.gravatar_url }}?s=20" />
+            <span class="post-view__editor-name">{{ post.editor.name }}</span>
           </a>
         {% else %}
-          <img class="post-view__author-image" src="{{ post.author.gravatar_url }}?s=20" />
-          <span class="post-view__author-name">{{ post.author.name }}</span>
+          <span>
+            <img class="post-view__editor-image" src="{{ post.editor.gravatar_url }}?s=20" />
+            <span class="post-view__editor-name">{{ post.editor.name }}</span>
+          </span>
         {% endif %}
       </span>
 
@@ -43,18 +45,18 @@ permalink: "archive/{{ post.id }}.html"
     {{ post.content | safe }}
   </div>
 
-  {% if post.metadata.podcast_player %}
+  {% if post.metadata.podcast_file %}
     <div class="post-view__media post-view__media--podcast">
       <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <div>{{ post.metadata.podcast_player | safe }}</div>
+      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/{{ post.metadata.podcast_file }}">Tu navegador no soporta este tipo de reproductor</audio>
     </div>
   {% endif %}
 
-  {% if post.metadata.youtube_url %}
+  {% if post.metadata.youtube_code %}
     <div class="post-view__media post-view__media--youtube">
       <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
       <div class="post-view__media-container">
-        <iframe width="560" height="315" src="{{ post.metadata.youtube_url }}" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/{{ post.metadata.youtube_code }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   {% endif %}
@@ -63,7 +65,7 @@ permalink: "archive/{{ post.id }}.html"
     <div class="post-view__media post-view__media--spotify">
       <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
       <div>
-        <iframe src="{{ post.metadata.spotify_url }}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="{{ post.metadata.spotify_url }}" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
     </div>
   {% endif %}
@@ -83,7 +85,9 @@ permalink: "archive/{{ post.id }}.html"
                     <span class="post-view__comment-author-name">{{ comment.author.name }}</span>
                   </a>
                 {% else %}
-                  <span class="post-view__comment-author-name">{{ comment.author.name }}</span>
+                  <span>
+                    <span class="post-view__comment-author-name">{{ comment.author.name }}</span>
+                  </span>
                 {% endif %}
               </span>
               <span class="post-view__comment-date">{{ comment.published_at | formatDate("dd/MM/yyyy") }}</span>

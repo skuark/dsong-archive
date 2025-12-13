@@ -1,0 +1,34 @@
+{%- if heading %}
+<h2 class="archive-title">{{ heading }}</h2>
+{%- endif %}
+
+<div class="archive">
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th class="archive-table__cell--published-at">Fecha</th>
+        <th class="archive-table__cell--title">Publicación</th>
+        <th class="archive-table__cell--song">Canción</th>
+        <th class="archive-table__cell--artist">Artista</th>
+        <th class="archive-table__cell--album">Álbum</th>
+        <th class="archive-table__cell--year">Año</th>
+        <th class="archive-table__cell--category">Categoría</th>
+        <th class="archive-table__cell--editor">Autor</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for post in posts -%}
+      <tr>
+        <td class="archive-table__cell--published-at">{{ post.published_at | formatDate("dd/MM/yyyy") }}</td>
+        <td class="archive-table__cell--title"><a href="/archive/{{ post.id }}.html">{{ post.title }}</a></td>
+        <td class="archive-table__cell--song">{{ post.metadata.song }}</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/{{ post.metadata.artist | slugify }}">{{ post.metadata.artist }}</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/{{ post.metadata.artist | slugify }}-{{ post.metadata.album | slugify }}">{{ post.metadata.album }}</a></td>
+        <td class="archive-table__cell--year">{{ post.metadata.year }}</td>
+        <td class="archive-table__cell--category">{{ post.metadata.category }}</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/{{ post.editor.name | slugify }}">{{ post.editor.name }}</a></td>
+      </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+</div>

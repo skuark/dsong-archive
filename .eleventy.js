@@ -18,19 +18,19 @@ export default function(eleventyConfig) {
     return loadPosts();
   });
 
-  eleventyConfig.addCollection("postsByAuthor", (collection) => {
+  eleventyConfig.addCollection("postsByEditor", (collection) => {
     const posts = loadPosts();
-    const postsByAuthor = {};
+    const postsByEditor = {};
 
     for (const post of posts) {
-      const authorName = post.author.name;
-      if (!postsByAuthor[authorName]) {
-        postsByAuthor[authorName] = [];
+      const editor = post.editor.name;
+      if (!postsByEditor[editor]) {
+        postsByEditor[editor] = [];
       }
-      postsByAuthor[authorName].push(post);
+      postsByEditor[editor].push(post);
     }
 
-    return Object.entries(postsByAuthor);
+    return Object.entries(postsByEditor);
   });
 
   eleventyConfig.addCollection("postsByArtist", (collection) => {

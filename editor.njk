@@ -1,0 +1,15 @@
+---
+layout: layouts/main.njk
+pagination:
+  data: collections.postsByEditor
+  size: 1
+  alias: editor
+eleventyComputed:
+  title: "El Archivo de dSong » Publicaciones del autor {{ editor[0] }}"
+permalink: "/archive/editors/{{ editor[0] | slugify }}.html"
+pageClass: archive
+---
+
+{% set posts = editor[1] %}
+{% set heading = "Publicaciones del editor " + editor[0] %}
+{% include "partials/archive-table.njk" %}
