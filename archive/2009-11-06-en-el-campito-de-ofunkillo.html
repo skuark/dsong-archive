@@ -6,31 +6,38 @@
   <title>El Archivo de dSong » En el campito, de O&amp;#39;Funk&amp;#39;illo</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
-    </div>
+  <div class="app page-">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
 
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
-  </div>
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
 
-  
+      
 <div class="post-view">
   <h2 class="post-view__title">En el campito, de O&#39;Funk&#39;illo</h2>
 
   <div class="post-view__meta">
     <span>
-      <span class="post-view__author">
+      <span class="post-view__editor">
         
-          <img class="post-view__author-image" src="https://s.gravatar.com/avatar/616b25790f47c73ebb30c76c020fac2e?s=20" />
-          <span class="post-view__author-name">luizk</span>
+          <span>
+            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/616b25790f47c73ebb30c76c020fac2e?s=20" />
+            <span class="post-view__editor-name">luizk</span>
+          </span>
         
       </span>
 
@@ -57,7 +64,7 @@
     <div class="post-view__media post-view__media--spotify">
       <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
       <div>
-        <iframe src="https://open.spotify.com/embed/track/2wnI6uz62Zbs3R1V4DqN6i" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/2wnI6uz62Zbs3R1V4DqN6i" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
     </div>
   
@@ -88,7 +95,9 @@
               <span class="post-view__comment-author">
                 —
                 
-                  <span class="post-view__comment-author-name">luizcarlos</span>
+                  <span>
+                    <span class="post-view__comment-author-name">luizcarlos</span>
+                  </span>
                 
               </span>
               <span class="post-view__comment-date">06/11/2009</span>
@@ -101,7 +110,9 @@
               <span class="post-view__comment-author">
                 —
                 
-                  <span class="post-view__comment-author-name">Jose</span>
+                  <span>
+                    <span class="post-view__comment-author-name">Jose</span>
+                  </span>
                 
               </span>
               <span class="post-view__comment-date">06/11/2009</span>
@@ -114,7 +125,9 @@
               <span class="post-view__comment-author">
                 —
                 
-                  <span class="post-view__comment-author-name">luizcarlos</span>
+                  <span>
+                    <span class="post-view__comment-author-name">luizcarlos</span>
+                  </span>
                 
               </span>
               <span class="post-view__comment-date">06/11/2009</span>
@@ -127,7 +140,9 @@
               <span class="post-view__comment-author">
                 —
                 
-                  <span class="post-view__comment-author-name">Poncho</span>
+                  <span>
+                    <span class="post-view__comment-author-name">Poncho</span>
+                  </span>
                 
               </span>
               <span class="post-view__comment-date">10/11/2009</span>
@@ -139,5 +154,7 @@
   
 </div>
 
+    </div>
+  </div>
 </body>
 </html>

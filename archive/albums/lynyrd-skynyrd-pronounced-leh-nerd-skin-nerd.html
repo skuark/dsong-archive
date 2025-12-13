@@ -6,47 +6,61 @@
   <title>El Archivo de dSong » Publicaciones del álbum Lynyrd Skynyrd-(pronounced &amp;#39;lĕh-&amp;#39;nérd &amp;#39;skin-&amp;#39;nérd)</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
+  <div class="app page-archive">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
+
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
+
+      
+
+
+
+<h2 class="archive-title">Publicaciones del álbum (pronounced &#39;lĕh-&#39;nérd &#39;skin-&#39;nérd), de Lynyrd Skynyrd</h2>
+
+<div class="archive">
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th class="archive-table__cell--published-at">Fecha</th>
+        <th class="archive-table__cell--title">Publicación</th>
+        <th class="archive-table__cell--song">Canción</th>
+        <th class="archive-table__cell--artist">Artista</th>
+        <th class="archive-table__cell--album">Álbum</th>
+        <th class="archive-table__cell--year">Año</th>
+        <th class="archive-table__cell--category">Categoría</th>
+        <th class="archive-table__cell--editor">Autor</th>
+      </tr>
+    </thead>
+    <tbody><tr>
+        <td class="archive-table__cell--published-at">31/12/2009</td>
+        <td class="archive-table__cell--title"><a href="/archive/2009-12-31-free-bird-de-lynyrd-skynyrd.html">Free Bird, de Lynyrd Skynyrd</a></td>
+        <td class="archive-table__cell--song">Free Bird</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/lynyrd-skynyrd">Lynyrd Skynyrd</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/lynyrd-skynyrd-pronounced-leh-nerd-skin-nerd">(pronounced &#39;lĕh-&#39;nérd &#39;skin-&#39;nérd)</a></td>
+        <td class="archive-table__cell--year">1973</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
+      </tr></tbody>
+  </table>
+</div>
+
+
     </div>
-
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
   </div>
-
-  
-<table class="archive-table">
-  <thead>
-    <tr>
-      <th>Fecha</th>
-      <th>Publicación</th>
-      <th>Canción</th>
-      <th>Artista</th>
-      <th>Álbum</th>
-      <th>Año</th>
-      <th>Categoría</th>
-      <th>Autor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <h2>Publicaciones del álbum (pronounced &#39;lĕh-&#39;nérd &#39;skin-&#39;nérd), de Lynyrd Skynyrd</h2><tr>
-      <td>31/12/2009</td>
-      <td><a href="/archive/2009-12-31-free-bird-de-lynyrd-skynyrd.html">Free Bird, de Lynyrd Skynyrd</a></td>
-      <td>Free Bird</td>
-      <td><a href="/archive/artists/lynyrd-skynyrd">Lynyrd Skynyrd</a></td>
-      <td><a href="/archive/albums/lynyrd-skynyrd-pronounced-leh-nerd-skin-nerd">(pronounced &#39;lĕh-&#39;nérd &#39;skin-&#39;nérd)</a></td>
-      <td>1973</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/skuark">skuark</a></td>
-    </tr></tbody>
-</table>
-
 </body>
 </html>

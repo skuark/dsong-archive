@@ -6,22 +6,27 @@
   <title>El Archivo de dSong</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
-    </div>
+  <div class="app page-index">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
 
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
-  </div>
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
 
-  
+      
 <p>🎧 dSong fue un proyecto web sin ánimo de lucro fundado el 18 de Mayo de 2009, en el que un grupo de amigos nos
   propusimos escribir una recomendación musical diaria.</p>
 
@@ -50,5 +55,7 @@
     href="https://github.com/skuark/dsong-archive" target="_blank">abrir una issue en GitHub</a> o mandar un PR con la
   corrección.</p>
 
+    </div>
+  </div>
 </body>
 </html>

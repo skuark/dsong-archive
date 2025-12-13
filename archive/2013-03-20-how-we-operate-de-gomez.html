@@ -6,32 +6,37 @@
   <title>El Archivo de dSong » How we operate, de Gomez</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
-    </div>
+  <div class="app page-">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
 
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
-  </div>
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
 
-  
+      
 <div class="post-view">
   <h2 class="post-view__title">How we operate, de Gomez</h2>
 
   <div class="post-view__meta">
     <span>
-      <span class="post-view__author">
+      <span class="post-view__editor">
         
           <a href="http://www.jesusr.es" target="_blank">
-            <img class="post-view__author-image" src="https://s.gravatar.com/avatar/3627cf44a707970b4f2b493e78030448?s=20" />
-            <span class="post-view__author-name">jesusr</span>
+            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/3627cf44a707970b4f2b493e78030448?s=20" />
+            <span class="post-view__editor-name">jesusr</span>
           </a>
         
       </span>
@@ -60,6 +65,11 @@ La prueba más evidente de esto, la podemos ver en How we operate, del disco hom
   </div>
 
   
+    <div class="post-view__media post-view__media--podcast">
+      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
+      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20130320.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    </div>
+  
 
   
 
@@ -67,7 +77,7 @@ La prueba más evidente de esto, la podemos ver en How we operate, del disco hom
     <div class="post-view__media post-view__media--spotify">
       <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
       <div>
-        <iframe src="https://open.spotify.com/embed/track/18klztuu0FHdMgXvwUDfNI" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/18klztuu0FHdMgXvwUDfNI" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
     </div>
   
@@ -75,5 +85,7 @@ La prueba más evidente de esto, la podemos ver en How we operate, del disco hom
   
 </div>
 
+    </div>
+  </div>
 </body>
 </html>

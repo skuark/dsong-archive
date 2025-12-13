@@ -6,74 +6,88 @@
   <title>El Archivo de dSong » Publicaciones del artista Joaquín Sabina</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
+  <div class="app page-archive">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
+
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
+
+      
+
+
+
+<h2 class="archive-title">Publicaciones del artista Joaquín Sabina</h2>
+
+<div class="archive">
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th class="archive-table__cell--published-at">Fecha</th>
+        <th class="archive-table__cell--title">Publicación</th>
+        <th class="archive-table__cell--song">Canción</th>
+        <th class="archive-table__cell--artist">Artista</th>
+        <th class="archive-table__cell--album">Álbum</th>
+        <th class="archive-table__cell--year">Año</th>
+        <th class="archive-table__cell--category">Categoría</th>
+        <th class="archive-table__cell--editor">Autor</th>
+      </tr>
+    </thead>
+    <tbody><tr>
+        <td class="archive-table__cell--published-at">04/07/2009</td>
+        <td class="archive-table__cell--title"><a href="/archive/2009-07-04-nube-negra-de-joaquin-sabina.html">Nube Negra, de Joaquín Sabina</a></td>
+        <td class="archive-table__cell--song">Nube Negra</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/joaquin-sabina-alivio-de-luto">Alivio de Luto</a></td>
+        <td class="archive-table__cell--year">2005</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">09/12/2009</td>
+        <td class="archive-table__cell--title"><a href="/archive/2009-12-09-peces-de-ciudad-de-joaquin-sabina.html">Peces de ciudad, de Joaquín Sabina</a></td>
+        <td class="archive-table__cell--song">Peces de ciudad</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/joaquin-sabina-dimelo-en-la-calle">Dímelo en la calle</a></td>
+        <td class="archive-table__cell--year">2002</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">23/12/2011</td>
+        <td class="archive-table__cell--title"><a href="/archive/2011-12-23-esta-noche-contigo-de-joaquin-sabina.html">Esta noche contigo, de Joaquín Sabina</a></td>
+        <td class="archive-table__cell--song">Esta boca es mía</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/joaquin-sabina-esta-boca-es-mia">Esta boca es mía</a></td>
+        <td class="archive-table__cell--year">1994</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">17/07/2013</td>
+        <td class="archive-table__cell--title"><a href="/archive/2013-07-17-con-la-frente-marchita-de-joaquin-sabina.html">Con la frente marchita, de Joaquín Sabina</a></td>
+        <td class="archive-table__cell--song">Con la frente marchita</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/joaquin-sabina-mentiras-piadosas">Mentiras piadosas</a></td>
+        <td class="archive-table__cell--year">1990</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
+      </tr></tbody>
+  </table>
+</div>
+
+
     </div>
-
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
   </div>
-
-  
-<table class="archive-table">
-  <thead>
-    <tr>
-      <th>Fecha</th>
-      <th>Publicación</th>
-      <th>Canción</th>
-      <th>Artista</th>
-      <th>Álbum</th>
-      <th>Año</th>
-      <th>Categoría</th>
-      <th>Autor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <h2>Publicaciones del artista Joaquín Sabina</h2><tr>
-      <td>04/07/2009</td>
-      <td><a href="/archive/2009-07-04-nube-negra-de-joaquin-sabina.html">Nube Negra, de Joaquín Sabina</a></td>
-      <td>Nube Negra</td>
-      <td><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
-      <td><a href="/archive/albums/joaquin-sabina-alivio-de-luto">Alivio de Luto</a></td>
-      <td>2005</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/skuark">skuark</a></td>
-    </tr><tr>
-      <td>09/12/2009</td>
-      <td><a href="/archive/2009-12-09-peces-de-ciudad-de-joaquin-sabina.html">Peces de ciudad, de Joaquín Sabina</a></td>
-      <td>Peces de ciudad</td>
-      <td><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
-      <td><a href="/archive/albums/joaquin-sabina-dimelo-en-la-calle">Dímelo en la calle</a></td>
-      <td>2002</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/jesusr">jesusr</a></td>
-    </tr><tr>
-      <td>23/12/2011</td>
-      <td><a href="/archive/2011-12-23-esta-noche-contigo-de-joaquin-sabina.html">Esta noche contigo, de Joaquín Sabina</a></td>
-      <td>Esta boca es mía</td>
-      <td><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
-      <td><a href="/archive/albums/joaquin-sabina-esta-boca-es-mia">Esta boca es mía</a></td>
-      <td>1994</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/skuark">skuark</a></td>
-    </tr><tr>
-      <td>17/07/2013</td>
-      <td><a href="/archive/2013-07-17-con-la-frente-marchita-de-joaquin-sabina.html">Con la frente marchita, de Joaquín Sabina</a></td>
-      <td>Con la frente marchita</td>
-      <td><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
-      <td><a href="/archive/albums/joaquin-sabina-mentiras-piadosas">Mentiras piadosas</a></td>
-      <td>1990</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/skuark">skuark</a></td>
-    </tr></tbody>
-</table>
-
 </body>
 </html>

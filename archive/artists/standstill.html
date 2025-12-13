@@ -6,74 +6,88 @@
   <title>El Archivo de dSong » Publicaciones del artista Standstill</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
+  <div class="app page-archive">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
+
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
+
+      
+
+
+
+<h2 class="archive-title">Publicaciones del artista Standstill</h2>
+
+<div class="archive">
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th class="archive-table__cell--published-at">Fecha</th>
+        <th class="archive-table__cell--title">Publicación</th>
+        <th class="archive-table__cell--song">Canción</th>
+        <th class="archive-table__cell--artist">Artista</th>
+        <th class="archive-table__cell--album">Álbum</th>
+        <th class="archive-table__cell--year">Año</th>
+        <th class="archive-table__cell--category">Categoría</th>
+        <th class="archive-table__cell--editor">Autor</th>
+      </tr>
+    </thead>
+    <tbody><tr>
+        <td class="archive-table__cell--published-at">07/03/2011</td>
+        <td class="archive-table__cell--title"><a href="/archive/2011-03-07-%c2%bfpor-que-me-llamas-a-estas-horas-de-standstill.html">¿Por qué me llamas a estas horas?, de Standstill</a></td>
+        <td class="archive-table__cell--song">¿Por qué me llamas a esas horas?</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/standstill">Standstill</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/standstill-vivalaguerra">Vivalaguerra</a></td>
+        <td class="archive-table__cell--year">2006</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/poncho">Poncho</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">10/04/2012</td>
+        <td class="archive-table__cell--title"><a href="/archive/2012-04-10-adelante-bonaparte-i-de-standstill.html">Adelante Bonaparte (I), de Standstill</a></td>
+        <td class="archive-table__cell--song">Adelante Bonaparte (I)</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/standstill">Standstill</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/standstill-adelante-bonaparte">Adelante Bonaparte</a></td>
+        <td class="archive-table__cell--year">2010</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/ascen">Ascen</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">03/07/2013</td>
+        <td class="archive-table__cell--title"><a href="/archive/2013-07-03-pequeno-pajaro-de-standstill.html">Pequeño pájaro, de Standstill</a></td>
+        <td class="archive-table__cell--song">Pequeño pájaro</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/standstill">Standstill</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/standstill-dentro-de-la-luz">Dentro de la luz</a></td>
+        <td class="archive-table__cell--year">2013</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/ascen">Ascen</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">01/02/2014</td>
+        <td class="archive-table__cell--title"><a href="/archive/2014-02-01-1-2-3-sol-de-standstill.html">1, 2, 3, Sol, de Standstill</a></td>
+        <td class="archive-table__cell--song">1, 2, 3 Sol</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/standstill">Standstill</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/standstill-vivalaguerra">Vivalaguerra</a></td>
+        <td class="archive-table__cell--year">2006</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/ascen">Ascen</a></td>
+      </tr></tbody>
+  </table>
+</div>
+
+
     </div>
-
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
   </div>
-
-  
-<table class="archive-table">
-  <thead>
-    <tr>
-      <th>Fecha</th>
-      <th>Publicación</th>
-      <th>Canción</th>
-      <th>Artista</th>
-      <th>Álbum</th>
-      <th>Año</th>
-      <th>Categoría</th>
-      <th>Autor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <h2>Publicaciones del artista Standstill</h2><tr>
-      <td>07/03/2011</td>
-      <td><a href="/archive/2011-03-07-%c2%bfpor-que-me-llamas-a-estas-horas-de-standstill.html">¿Por qué me llamas a estas horas?, de Standstill</a></td>
-      <td>¿Por qué me llamas a esas horas?</td>
-      <td><a href="/archive/artists/standstill">Standstill</a></td>
-      <td><a href="/archive/albums/standstill-vivalaguerra">Vivalaguerra</a></td>
-      <td>2006</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/poncho">Poncho</a></td>
-    </tr><tr>
-      <td>10/04/2012</td>
-      <td><a href="/archive/2012-04-10-adelante-bonaparte-i-de-standstill.html">Adelante Bonaparte (I), de Standstill</a></td>
-      <td>Adelante Bonaparte (I)</td>
-      <td><a href="/archive/artists/standstill">Standstill</a></td>
-      <td><a href="/archive/albums/standstill-adelante-bonaparte">Adelante Bonaparte</a></td>
-      <td>2010</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/ascen">Ascen</a></td>
-    </tr><tr>
-      <td>03/07/2013</td>
-      <td><a href="/archive/2013-07-03-pequeno-pajaro-de-standstill.html">Pequeño pájaro, de Standstill</a></td>
-      <td>Pequeño pájaro</td>
-      <td><a href="/archive/artists/standstill">Standstill</a></td>
-      <td><a href="/archive/albums/standstill-dentro-de-la-luz">Dentro de la luz</a></td>
-      <td>2013</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/ascen">Ascen</a></td>
-    </tr><tr>
-      <td>01/02/2014</td>
-      <td><a href="/archive/2014-02-01-1-2-3-sol-de-standstill.html">1, 2, 3, Sol, de Standstill</a></td>
-      <td>1, 2, 3 Sol</td>
-      <td><a href="/archive/artists/standstill">Standstill</a></td>
-      <td><a href="/archive/albums/standstill-vivalaguerra">Vivalaguerra</a></td>
-      <td>2006</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/ascen">Ascen</a></td>
-    </tr></tbody>
-</table>
-
 </body>
 </html>

@@ -6,47 +6,61 @@
   <title>El Archivo de dSong » Publicaciones del artista Michael Londra</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
+  <div class="app page-archive">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
+
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
+
+      
+
+
+
+<h2 class="archive-title">Publicaciones del artista Michael Londra</h2>
+
+<div class="archive">
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th class="archive-table__cell--published-at">Fecha</th>
+        <th class="archive-table__cell--title">Publicación</th>
+        <th class="archive-table__cell--song">Canción</th>
+        <th class="archive-table__cell--artist">Artista</th>
+        <th class="archive-table__cell--album">Álbum</th>
+        <th class="archive-table__cell--year">Año</th>
+        <th class="archive-table__cell--category">Categoría</th>
+        <th class="archive-table__cell--editor">Autor</th>
+      </tr>
+    </thead>
+    <tbody><tr>
+        <td class="archive-table__cell--published-at">16/03/2013</td>
+        <td class="archive-table__cell--title"><a href="/archive/2013-03-16-danny-boy-de-michael-londra.html">Danny Boy, de Michael Londra</a></td>
+        <td class="archive-table__cell--song">Danny Boy</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/michael-londra">Michael Londra</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/michael-londra-undefined"></a></td>
+        <td class="archive-table__cell--year">1913</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
+      </tr></tbody>
+  </table>
+</div>
+
+
     </div>
-
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
   </div>
-
-  
-<table class="archive-table">
-  <thead>
-    <tr>
-      <th>Fecha</th>
-      <th>Publicación</th>
-      <th>Canción</th>
-      <th>Artista</th>
-      <th>Álbum</th>
-      <th>Año</th>
-      <th>Categoría</th>
-      <th>Autor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <h2>Publicaciones del artista Michael Londra</h2><tr>
-      <td>16/03/2013</td>
-      <td><a href="/archive/2013-03-16-danny-boy-de-michael-londra.html">Danny Boy, de Michael Londra</a></td>
-      <td>Danny Boy</td>
-      <td><a href="/archive/artists/michael-londra">Michael Londra</a></td>
-      <td><a href="/archive/albums/michael-londra-undefined"></a></td>
-      <td>1913</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/monty">Monty</a></td>
-    </tr></tbody>
-</table>
-
 </body>
 </html>

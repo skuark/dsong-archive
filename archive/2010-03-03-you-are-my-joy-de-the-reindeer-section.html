@@ -6,32 +6,37 @@
   <title>El Archivo de dSong » You are my joy, de The Reindeer Section</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
-    </div>
+  <div class="app page-">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
 
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
-  </div>
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
 
-  
+      
 <div class="post-view">
   <h2 class="post-view__title">You are my joy, de The Reindeer Section</h2>
 
   <div class="post-view__meta">
     <span>
-      <span class="post-view__author">
+      <span class="post-view__editor">
         
           <a href="http://www.jesusr.es" target="_blank">
-            <img class="post-view__author-image" src="https://s.gravatar.com/avatar/3627cf44a707970b4f2b493e78030448?s=20" />
-            <span class="post-view__author-name">jesusr</span>
+            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/3627cf44a707970b4f2b493e78030448?s=20" />
+            <span class="post-view__editor-name">jesusr</span>
           </a>
         
       </span>
@@ -61,7 +66,7 @@ Aunque se formó en el año 2000 y desde el año 2002 no se tienen noticias de a
     <div class="post-view__media post-view__media--spotify">
       <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
       <div>
-        <iframe src="https://open.spotify.com/embed/track/2K1JZacep9t7IaGkcFF1mR" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/2K1JZacep9t7IaGkcFF1mR" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
     </div>
   
@@ -78,7 +83,9 @@ Por cierto, felicidades en tu 24 cumpleaños cherrilla. Tomate una birra a mi sa
               <span class="post-view__comment-author">
                 —
                 
-                  <span class="post-view__comment-author-name">Poncho</span>
+                  <span>
+                    <span class="post-view__comment-author-name">Poncho</span>
+                  </span>
                 
               </span>
               <span class="post-view__comment-date">03/03/2010</span>
@@ -95,7 +102,9 @@ Un abrazo.</div>
               <span class="post-view__comment-author">
                 —
                 
-                  <span class="post-view__comment-author-name">MyRi4M_MaRdEeStReLlAs</span>
+                  <span>
+                    <span class="post-view__comment-author-name">MyRi4M_MaRdEeStReLlAs</span>
+                  </span>
                 
               </span>
               <span class="post-view__comment-date">04/03/2010</span>
@@ -107,5 +116,7 @@ Un abrazo.</div>
   
 </div>
 
+    </div>
+  </div>
 </body>
 </html>

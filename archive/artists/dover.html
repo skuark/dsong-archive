@@ -6,56 +6,70 @@
   <title>El Archivo de dSong » Publicaciones del artista Dover</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
+  <div class="app page-archive">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
+
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
+
+      
+
+
+
+<h2 class="archive-title">Publicaciones del artista Dover</h2>
+
+<div class="archive">
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th class="archive-table__cell--published-at">Fecha</th>
+        <th class="archive-table__cell--title">Publicación</th>
+        <th class="archive-table__cell--song">Canción</th>
+        <th class="archive-table__cell--artist">Artista</th>
+        <th class="archive-table__cell--album">Álbum</th>
+        <th class="archive-table__cell--year">Año</th>
+        <th class="archive-table__cell--category">Categoría</th>
+        <th class="archive-table__cell--editor">Autor</th>
+      </tr>
+    </thead>
+    <tbody><tr>
+        <td class="archive-table__cell--published-at">09/03/2011</td>
+        <td class="archive-table__cell--title"><a href="/archive/2011-03-09-flashback-de-dover.html">Flashback, de Dover</a></td>
+        <td class="archive-table__cell--song">Flashback</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/dover">Dover</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/dover-late-at-night">Late at Night</a></td>
+        <td class="archive-table__cell--year">1999</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">22/03/2012</td>
+        <td class="archive-table__cell--title"><a href="/archive/2012-03-22-the-weak-hour-of-the-rooster-de-dover.html">The weak hour of the rooster, de Dover</a></td>
+        <td class="archive-table__cell--song">The weak hour of the rooster</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/dover">Dover</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/dover-i-was-dead-for-7-weeks-in-the-city-of-angels">I was dead for 7 weeks in the city of angels</a></td>
+        <td class="archive-table__cell--year">2001</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
+      </tr></tbody>
+  </table>
+</div>
+
+
     </div>
-
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
   </div>
-
-  
-<table class="archive-table">
-  <thead>
-    <tr>
-      <th>Fecha</th>
-      <th>Publicación</th>
-      <th>Canción</th>
-      <th>Artista</th>
-      <th>Álbum</th>
-      <th>Año</th>
-      <th>Categoría</th>
-      <th>Autor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <h2>Publicaciones del artista Dover</h2><tr>
-      <td>09/03/2011</td>
-      <td><a href="/archive/2011-03-09-flashback-de-dover.html">Flashback, de Dover</a></td>
-      <td>Flashback</td>
-      <td><a href="/archive/artists/dover">Dover</a></td>
-      <td><a href="/archive/albums/dover-late-at-night">Late at Night</a></td>
-      <td>1999</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/skuark">skuark</a></td>
-    </tr><tr>
-      <td>22/03/2012</td>
-      <td><a href="/archive/2012-03-22-the-weak-hour-of-the-rooster-de-dover.html">The weak hour of the rooster, de Dover</a></td>
-      <td>The weak hour of the rooster</td>
-      <td><a href="/archive/artists/dover">Dover</a></td>
-      <td><a href="/archive/albums/dover-i-was-dead-for-7-weeks-in-the-city-of-angels">I was dead for 7 weeks in the city of angels</a></td>
-      <td>2001</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/jal">Jal</a></td>
-    </tr></tbody>
-</table>
-
 </body>
 </html>

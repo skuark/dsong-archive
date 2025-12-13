@@ -6,65 +6,79 @@
   <title>El Archivo de dSong » Publicaciones del artista Thomas Newman</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
+  <div class="app page-archive">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
+
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
+
+      
+
+
+
+<h2 class="archive-title">Publicaciones del artista Thomas Newman</h2>
+
+<div class="archive">
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th class="archive-table__cell--published-at">Fecha</th>
+        <th class="archive-table__cell--title">Publicación</th>
+        <th class="archive-table__cell--song">Canción</th>
+        <th class="archive-table__cell--artist">Artista</th>
+        <th class="archive-table__cell--album">Álbum</th>
+        <th class="archive-table__cell--year">Año</th>
+        <th class="archive-table__cell--category">Categoría</th>
+        <th class="archive-table__cell--editor">Autor</th>
+      </tr>
+    </thead>
+    <tbody><tr>
+        <td class="archive-table__cell--published-at">16/09/2012</td>
+        <td class="archive-table__cell--title"><a href="/archive/2012-09-16-bso-wall%c2%b7e-de-thomas-newman.html">BSO: WALL·E, de Thomas Newman</a></td>
+        <td class="archive-table__cell--song"></td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/thomas-newman-bso-walle">BSO: Wall·e</a></td>
+        <td class="archive-table__cell--year">2008</td>
+        <td class="archive-table__cell--category">Bandas Sonoras Originales</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">21/07/2013</td>
+        <td class="archive-table__cell--title"><a href="/archive/2013-07-21-bso-cadena-perpetua.html">BSO: Cadena perpetua</a></td>
+        <td class="archive-table__cell--song"></td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/thomas-newman-ost-the-sawshank-redemption">OST: The sawshank redemption</a></td>
+        <td class="archive-table__cell--year"></td>
+        <td class="archive-table__cell--category">Bandas Sonoras Originales</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">05/01/2014</td>
+        <td class="archive-table__cell--title"><a href="/archive/2014-01-05-bso-american-beauty.html">BSO: American Beauty</a></td>
+        <td class="archive-table__cell--song"></td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/thomas-newman-ost-american-beauty">OST: American Beauty</a></td>
+        <td class="archive-table__cell--year">2000</td>
+        <td class="archive-table__cell--category">Bandas Sonoras Originales</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
+      </tr></tbody>
+  </table>
+</div>
+
+
     </div>
-
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
   </div>
-
-  
-<table class="archive-table">
-  <thead>
-    <tr>
-      <th>Fecha</th>
-      <th>Publicación</th>
-      <th>Canción</th>
-      <th>Artista</th>
-      <th>Álbum</th>
-      <th>Año</th>
-      <th>Categoría</th>
-      <th>Autor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <h2>Publicaciones del artista Thomas Newman</h2><tr>
-      <td>16/09/2012</td>
-      <td><a href="/archive/2012-09-16-bso-wall%c2%b7e-de-thomas-newman.html">BSO: WALL·E, de Thomas Newman</a></td>
-      <td></td>
-      <td><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
-      <td><a href="/archive/albums/thomas-newman-bso-walle">BSO: Wall·e</a></td>
-      <td>2008</td>
-      <td>Bandas Sonoras Originales</td>
-      <td><a href="/archive/authors/medinaman">medinaman</a></td>
-    </tr><tr>
-      <td>21/07/2013</td>
-      <td><a href="/archive/2013-07-21-bso-cadena-perpetua.html">BSO: Cadena perpetua</a></td>
-      <td></td>
-      <td><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
-      <td><a href="/archive/albums/thomas-newman-ost-the-sawshank-redemption">OST: The sawshank redemption</a></td>
-      <td></td>
-      <td>Bandas Sonoras Originales</td>
-      <td><a href="/archive/authors/medinaman">medinaman</a></td>
-    </tr><tr>
-      <td>05/01/2014</td>
-      <td><a href="/archive/2014-01-05-bso-american-beauty.html">BSO: American Beauty</a></td>
-      <td></td>
-      <td><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
-      <td><a href="/archive/albums/thomas-newman-ost-american-beauty">OST: American Beauty</a></td>
-      <td>2000</td>
-      <td>Bandas Sonoras Originales</td>
-      <td><a href="/archive/authors/medinaman">medinaman</a></td>
-    </tr></tbody>
-</table>
-
 </body>
 </html>

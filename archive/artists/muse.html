@@ -6,83 +6,97 @@
   <title>El Archivo de dSong » Publicaciones del artista Muse</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <div class="header__logo-container">
-      <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
-      <div class="header__logo-headline">El Archivo de dSong</div>
+  <div class="app page-archive">
+    <div class="app-wrapper">
+      <div class="header">
+        <div class="header__logo-container">
+          <router-link to="/"><img src="/images/logo.png" class="header__logo"></router-link>
+          <div class="header__logo-headline">El Archivo de dSong</div>
+        </div>
+
+        <ul class="header__menu">
+          <li class="header__menu--item"><a href="/">Inicio</a></li>
+          <li class="header__menu--item"><a href="/archive">Archivo</a></li>
+          <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
+        </ul>
+      </div>
+
+      
+
+
+
+<h2 class="archive-title">Publicaciones del artista Muse</h2>
+
+<div class="archive">
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th class="archive-table__cell--published-at">Fecha</th>
+        <th class="archive-table__cell--title">Publicación</th>
+        <th class="archive-table__cell--song">Canción</th>
+        <th class="archive-table__cell--artist">Artista</th>
+        <th class="archive-table__cell--album">Álbum</th>
+        <th class="archive-table__cell--year">Año</th>
+        <th class="archive-table__cell--category">Categoría</th>
+        <th class="archive-table__cell--editor">Autor</th>
+      </tr>
+    </thead>
+    <tbody><tr>
+        <td class="archive-table__cell--published-at">27/09/2009</td>
+        <td class="archive-table__cell--title"><a href="/archive/2009-09-27-the-resistance-de-muse.html">Especial Album: The resistance, de Muse</a></td>
+        <td class="archive-table__cell--song"></td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/muse">Muse</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/muse-the-resistance">The resistance</a></td>
+        <td class="archive-table__cell--year">2009</td>
+        <td class="archive-table__cell--category">Álbumes</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">20/06/2010</td>
+        <td class="archive-table__cell--title"><a href="/archive/2010-06-20-especial-concierto-de-muse-madrid-1662010-estadio-vicente-calderon.html">Especial: Concierto de Muse (Madrid, 16/6/2010, Estadio Vicente Calderón)</a></td>
+        <td class="archive-table__cell--song">Cierre de concierto</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/muse">Muse</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/muse-undefined"></a></td>
+        <td class="archive-table__cell--year"></td>
+        <td class="archive-table__cell--category">Conciertos</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/luizk">luizk</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">13/06/2011</td>
+        <td class="archive-table__cell--title"><a href="/archive/2011-06-13-starlight-de-muse.html">Starlight, de Muse</a></td>
+        <td class="archive-table__cell--song">Starlight</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/muse">Muse</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/muse-black-holes-and-revelations">Black holes and revelations</a></td>
+        <td class="archive-table__cell--year">2006</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/luizk">luizk</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">26/07/2012</td>
+        <td class="archive-table__cell--title"><a href="/archive/2012-07-26-survival-de-muse.html">Survival, de Muse</a></td>
+        <td class="archive-table__cell--song">Survival</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/muse">Muse</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/muse-the-2nd-law">The 2nd Law</a></td>
+        <td class="archive-table__cell--year">2012</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
+      </tr><tr>
+        <td class="archive-table__cell--published-at">24/12/2012</td>
+        <td class="archive-table__cell--title"><a href="/archive/2012-12-24-exogenesis-symphony-part-3-redemption-de-muse.html">Exogenesis: Symphony Part 3 - Redemption, de Muse</a></td>
+        <td class="archive-table__cell--song">Exogenesis: Symphony</td>
+        <td class="archive-table__cell--artist"><a href="/archive/artists/muse">Muse</a></td>
+        <td class="archive-table__cell--album"><a href="/archive/albums/muse-the-resistance">The resistance</a></td>
+        <td class="archive-table__cell--year">2009</td>
+        <td class="archive-table__cell--category">Canciones</td>
+        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
+      </tr></tbody>
+  </table>
+</div>
+
+
     </div>
-
-    <ul class="header__menu">
-      <li class="header__menu--item"><a href="/">Inicio</a></li>
-      <li class="header__menu--item"><a href="/archive">Archivo</a></li>
-      <li class="header__menu--item"><a href="/rand"><img src="/images/dices.png" alt="Dados" class="header__menu--dices"> Voy a tener suerte</a></li>
-    </ul>
   </div>
-
-  
-<table class="archive-table">
-  <thead>
-    <tr>
-      <th>Fecha</th>
-      <th>Publicación</th>
-      <th>Canción</th>
-      <th>Artista</th>
-      <th>Álbum</th>
-      <th>Año</th>
-      <th>Categoría</th>
-      <th>Autor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <h2>Publicaciones del artista Muse</h2><tr>
-      <td>27/09/2009</td>
-      <td><a href="/archive/2009-09-27-the-resistance-de-muse.html">Especial Album: The resistance, de Muse</a></td>
-      <td></td>
-      <td><a href="/archive/artists/muse">Muse</a></td>
-      <td><a href="/archive/albums/muse-the-resistance">The resistance</a></td>
-      <td>2009</td>
-      <td>Álbumes</td>
-      <td><a href="/archive/authors/jesusr">jesusr</a></td>
-    </tr><tr>
-      <td>20/06/2010</td>
-      <td><a href="/archive/2010-06-20-especial-concierto-de-muse-madrid-1662010-estadio-vicente-calderon.html">Especial: Concierto de Muse (Madrid, 16/6/2010, Estadio Vicente Calderón)</a></td>
-      <td>Cierre de concierto</td>
-      <td><a href="/archive/artists/muse">Muse</a></td>
-      <td><a href="/archive/albums/muse-undefined"></a></td>
-      <td></td>
-      <td>Conciertos</td>
-      <td><a href="/archive/authors/luizk">luizk</a></td>
-    </tr><tr>
-      <td>13/06/2011</td>
-      <td><a href="/archive/2011-06-13-starlight-de-muse.html">Starlight, de Muse</a></td>
-      <td>Starlight</td>
-      <td><a href="/archive/artists/muse">Muse</a></td>
-      <td><a href="/archive/albums/muse-black-holes-and-revelations">Black holes and revelations</a></td>
-      <td>2006</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/luizk">luizk</a></td>
-    </tr><tr>
-      <td>26/07/2012</td>
-      <td><a href="/archive/2012-07-26-survival-de-muse.html">Survival, de Muse</a></td>
-      <td>Survival</td>
-      <td><a href="/archive/artists/muse">Muse</a></td>
-      <td><a href="/archive/albums/muse-the-2nd-law">The 2nd Law</a></td>
-      <td>2012</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/skuark">skuark</a></td>
-    </tr><tr>
-      <td>24/12/2012</td>
-      <td><a href="/archive/2012-12-24-exogenesis-symphony-part-3-redemption-de-muse.html">Exogenesis: Symphony Part 3 - Redemption, de Muse</a></td>
-      <td>Exogenesis: Symphony</td>
-      <td><a href="/archive/artists/muse">Muse</a></td>
-      <td><a href="/archive/albums/muse-the-resistance">The resistance</a></td>
-      <td>2009</td>
-      <td>Canciones</td>
-      <td><a href="/archive/authors/skuark">skuark</a></td>
-    </tr></tbody>
-</table>
-
 </body>
 </html>
