@@ -79,6 +79,7 @@ export default function(eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
 
   eleventyConfig.addPassthroughCopy("css/bundle.css");
+  eleventyConfig.addPassthroughCopy("js/archive-table-sort.js");
   eleventyConfig.addPassthroughCopy("images/dices.png");
   eleventyConfig.addPassthroughCopy("images/favicon.png");
   eleventyConfig.addPassthroughCopy("images/logo.png");
