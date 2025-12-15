@@ -64,6 +64,21 @@ export default function(eleventyConfig) {
     return Object.entries(postsByAlbum);
   });
 
+  eleventyConfig.addCollection("postsByYear", (collection) => {
+    const posts = loadPosts();
+    const postsByYear = {};
+
+    for (const post of posts) {
+      const year = post.metadata.year;
+      if (!postsByYear[year]) {
+        postsByYear[year] = [];
+      }
+      postsByYear[year].push(post);
+    }
+
+    return Object.entries(postsByYear);
+  });
+
   eleventyConfig.addFilter("formatDate", (dateString, dateFormat) => {
     if (!dateString) {
       return "";

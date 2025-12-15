@@ -24,7 +24,7 @@
         <td class="archive-table__cell--song">{{ post.metadata.song }}</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/{{ post.metadata.artist | slugify }}">{{ post.metadata.artist }}</a></td>
         <td class="archive-table__cell--album"><a href="/archive/albums/{{ post.metadata.artist | slugify }}-{{ post.metadata.album | slugify }}">{{ post.metadata.album }}</a></td>
-        <td class="archive-table__cell--year">{{ post.metadata.year }}</td>
+        <td class="archive-table__cell--year"><a href="/archive/years/{{ post.metadata.year }}">{{ post.metadata.year }}</a></td>
         <td class="archive-table__cell--category">{{ post.metadata.category }}</td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/{{ post.editor.name | slugify }}">{{ post.editor.name }}</a></td>
       </tr>

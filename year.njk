@@ -1,0 +1,15 @@
+---
+layout: layouts/main.njk
+pagination:
+  data: collections.postsByYear
+  size: 1
+  alias: year
+eleventyComputed:
+  title: "El Archivo de dSong » Publicaciones del año {{ year[0] }}"
+permalink: "/archive/years/{{ year[0] }}.html"
+pageClass: archive
+---
+
+{% set posts = year[1] %}
+{% set heading = "Música del año " + year[0] %}
+{% include "partials/archive-table.njk" %}
