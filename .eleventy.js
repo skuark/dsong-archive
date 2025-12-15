@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { format, parse } from "date-fns";
+import MarkdownIt from "markdown-it";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -93,6 +94,12 @@ export default function(eleventyConfig) {
       console.error(`Error formatting date: ${dateString}`, e);
       return `Error with date: ${dateString}`;
     }
+  });
+
+  const md = new MarkdownIt({ html: true });
+  eleventyConfig.addFilter("markdown", (content) => {
+    if (!content) return "";
+    return md.render(content);
   });
 
   eleventyConfig.ignores.add("README.md");

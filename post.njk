@@ -42,7 +42,7 @@ permalink: "archive/{{ post.id }}.html"
   </div>
 
   <div class="post-view__content">
-    {{ post.content | safe }}
+    {{ post.content | markdown | safe }}
   </div>
 
   {% if post.metadata.podcast_file %}
