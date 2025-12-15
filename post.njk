@@ -78,19 +78,19 @@ permalink: "archive/{{ post.id }}.html"
           <li class="post-view__comment">
             <div class="post-view__comment-content">{{ comment.content }}</div>
             <div class="post-view__comment-meta">
-              <span class="post-view__comment-author">
+              <span class="post-view__comment-editor">
                 —
                 {% if comment.author.url %}
                   <a href="{{ comment.author.url }}" target="_blank">
-                    <span class="post-view__comment-author-name">{{ comment.author.name }}</span>
+                    <span class="post-view__comment-editor-name">{{ comment.author.name }}</span>
                   </a>
                 {% else %}
                   <span>
-                    <span class="post-view__comment-author-name">{{ comment.author.name }}</span>
+                    <span class="post-view__comment-editor-name">{{ comment.author.name }}</span>
                   </span>
                 {% endif %}
               </span>
-              <span class="post-view__comment-date">{{ comment.published_at | formatDate("dd/MM/yyyy") }}</span>
+              <span class="post-view__comment-date">{{ comment.published_at | formatDate("dd/MM/yyyy HH:mm") }}</span>
             </div>
           </li>
         {% endfor %}
