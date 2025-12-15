@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dsong-archive.jesusmagamu.dev/sitemap.xml
