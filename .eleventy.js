@@ -30,6 +30,10 @@ function groupPostsBy(keyFn) {
 }
 
 export default function(eleventyConfig) {
+  eleventyConfig.addGlobalData("env", {
+    ELEVENTY_ENV: process.env.ELEVENTY_ENV || "development"
+  });
+
   eleventyConfig.addCollection("posts", function() {
     return loadPosts();
   });
