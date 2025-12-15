@@ -1,0 +1,38 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dsong.es/</loc>
+  </url>
+  <url>
+    <loc>https://dsong.es/archive/</loc>
+  </url>
+  {%- for post in collections.posts %}
+  <url>
+    <loc>https://dsong.es/archive/{{ post.id }}.html</loc>
+  </url>
+  {%- endfor %}
+  {%- for artist in collections.postsByArtist %}
+  <url>
+    <loc>https://dsong.es/archive/artists/{{ artist[0] | slugify }}.html</loc>
+  </url>
+  {%- endfor %}
+  {%- for album in collections.postsByAlbum %}
+  <url>
+    <loc>https://dsong.es/archive/albums/{{ album[0] | slugify }}.html</loc>
+  </url>
+  {%- endfor %}
+  {%- for editor in collections.postsByEditor %}
+  <url>
+    <loc>https://dsong.es/archive/editors/{{ editor[0] | slugify }}.html</loc>
+  </url>
+  {%- endfor %}
+  {%- for year in collections.postsByYear %}
+  <url>
+    <loc>https://dsong.es/archive/years/{{ year[0] }}.html</loc>
+  </url>
+  {%- endfor %}
+</urlset>
