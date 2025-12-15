@@ -1,0 +1,15 @@
+---
+layout: layouts/main.njk
+pagination:
+  data: collections.postsByCategory
+  size: 1
+  alias: category
+eleventyComputed:
+  title: "El Archivo de dSong » Publicaciones de la categoría {{ category[0] }}"
+permalink: "/archive/categories/{{ category[0] | slugify }}.html"
+pageClass: archive
+---
+
+{% set posts = category[1] %}
+{% set heading = "Publicaciones de la categoría " + category[0] %}
+{% include "partials/archive-table.njk" %}

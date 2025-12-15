@@ -35,4 +35,9 @@ eleventyExcludeFromCollections: true
     <loc>https://dsong.es/archive/years/{{ year[0] }}.html</loc>
   </url>
   {%- endfor %}
+  {%- for category in collections.postsByCategory %}
+  <url>
+    <loc>https://dsong.es/archive/categories/{{ category[0] | slugify }}.html</loc>
+  </url>
+  {%- endfor %}
 </urlset>

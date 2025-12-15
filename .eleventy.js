@@ -14,71 +14,45 @@ function loadPosts() {
   return data.posts;
 }
 
+function groupPostsBy(keyFn) {
+  const posts = loadPosts();
+  const grouped = {};
+
+  for (const post of posts) {
+    const key = keyFn(post);
+    if (!grouped[key]) {
+      grouped[key] = [];
+    }
+    grouped[key].push(post);
+  }
+
+  return Object.entries(grouped);
+}
+
 export default function(eleventyConfig) {
   eleventyConfig.addCollection("posts", function() {
     return loadPosts();
   });
 
-  eleventyConfig.addCollection("postsByEditor", (collection) => {
-    const posts = loadPosts();
-    const postsByEditor = {};
+  eleventyConfig.addCollection("postsByEditor", () =>
+    groupPostsBy(post => post.editor.name)
+  );
 
-    for (const post of posts) {
-      const editor = post.editor.name;
-      if (!postsByEditor[editor]) {
-        postsByEditor[editor] = [];
-      }
-      postsByEditor[editor].push(post);
-    }
+  eleventyConfig.addCollection("postsByArtist", () =>
+    groupPostsBy(post => post.metadata.artist)
+  );
 
-    return Object.entries(postsByEditor);
-  });
+  eleventyConfig.addCollection("postsByAlbum", () =>
+    groupPostsBy(post => `${post.metadata.artist}-${post.metadata.album}`)
+  );
 
-  eleventyConfig.addCollection("postsByArtist", (collection) => {
-    const posts = loadPosts();
-    const postsByArtist = {};
+  eleventyConfig.addCollection("postsByYear", () =>
+    groupPostsBy(post => post.metadata.year)
+  );
 
-    for (const post of posts) {
-      const artist = post.metadata.artist;
-      if (!postsByArtist[artist]) {
-        postsByArtist[artist] = [];
-      }
-      postsByArtist[artist].push(post);
-    }
-
-    return Object.entries(postsByArtist);
-  });
-
-  eleventyConfig.addCollection("postsByAlbum", (collection) => {
-    const posts = loadPosts();
-    const postsByAlbum = {};
-
-    for (const post of posts) {
-      const artist = post.metadata.artist;
-      const album = `${artist}-${post.metadata.album}`;
-      if (!postsByAlbum[album]) {
-        postsByAlbum[album] = [];
-      }
-      postsByAlbum[album].push(post);
-    }
-
-    return Object.entries(postsByAlbum);
-  });
-
-  eleventyConfig.addCollection("postsByYear", (collection) => {
-    const posts = loadPosts();
-    const postsByYear = {};
-
-    for (const post of posts) {
-      const year = post.metadata.year;
-      if (!postsByYear[year]) {
-        postsByYear[year] = [];
-      }
-      postsByYear[year].push(post);
-    }
-
-    return Object.entries(postsByYear);
-  });
+  eleventyConfig.addCollection("postsByCategory", () =>
+    groupPostsBy(post => post.metadata.category)
+  );
 
   eleventyConfig.addFilter("formatDate", (dateString, dateFormat) => {
     if (!dateString) {
