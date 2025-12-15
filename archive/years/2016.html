@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 2016</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">09/02/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-02-09 08:00:52 +0100">09/02/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-02-09-genghis-khan-de-miike-snow.html">Genghis Khan, de Miike Snow</a></td>
         <td class="archive-table__cell--song">Genghis Khan</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/miike-snow">Miike Snow</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/03/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-03-16 10:00:00 +0100">16/03/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-03-16-mira-como-vuelo-de-miss-cafeina.html">Mira como vuelo, de Miss Cafeína</a></td>
         <td class="archive-table__cell--song">Mira como vuelo</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/miss-caffeina">Miss Caffeina</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/09/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-09-01 11:00:28 +0200">01/09/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-09-01-me-mata-si-me-necesitas-de-quique-gonzalez.html">Me mata si me necesitas, de Quique González</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/quique-gonzalez">Quique González</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/09/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-09-15 11:19:58 +0200">15/09/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-09-15-nueve-canciones-de-amor-y-una-de-esperanza-de-elefantes.html">Nueve canciones de amor y una de esperanza, de Elefantes</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/elefantes">Elefantes</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/09/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-09-29 10:00:00 +0200">29/09/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-09-29-deshielo-de-el-gran-oso-blanco.html">Deshielo, de El Gran Oso Blanco</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/el-gran-oso-blanco">El gran oso blanco</a></td>
@@ -96,6 +96,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

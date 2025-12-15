@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del editor medinaman</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">15/04/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-04-15 08:00:27 +0200">15/04/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-04-15-bso-el-principe-de-egipto.html">BSO: El Príncipe de Egipto</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/hans-zimmer">Hans Zimmer</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/04/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-04-22 08:00:00 +0200">22/04/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-04-22-especial-bso-inteligencia-artificial.html">BSO: Inteligencia Artificial</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-williams">John Williams</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/04/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-04-29 08:00:00 +0200">29/04/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-04-29-bso-el-bosque.html">BSO: El Bosque</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/james-newton-howard">James Newton Howard</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-06 08:00:00 +0200">06/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-06-como-entrenar-a-tu-dragon-de-john-powell.html">BSO: Cómo entrenar a tu dragón, de John Powell</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-powell">John Powell</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-27 08:33:12 +0200">27/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-27-bso-eduardo-manostijeras.html">BSO: Eduardo Manostijeras</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/danny-elfman">Danny Elfman</a></td>
@@ -94,7 +94,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/06/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-06-10 08:00:02 +0200">10/06/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-06-10-bso-e-t-el-extraterrestre.html">BSO: E.T. el Extraterrestre</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-williams">John Williams</a></td>
@@ -103,7 +103,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/06/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-06-17 08:00:09 +0200">17/06/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-06-17-bso-matrix-revolutions.html">BSO: Matrix Revolutions</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/varios-autores">Varios Autores</a></td>
@@ -112,7 +112,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">18/06/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-06-18 08:00:00 +0200">18/06/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-06-18-metropolis-part-i-the-miracle-and-the-sleeper-de-dream-theater.html">Metropolis Part I “The Miracle And The Sleeper”, de Dream Theater</a></td>
         <td class="archive-table__cell--song">Metropolis Part I “The Miracle And The Sleeper”</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/dream-theater">Dream Theater</a></td>
@@ -121,7 +121,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/06/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-06-24 08:00:00 +0200">24/06/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-06-24-bso-la-vida-es-bella.html">BSO: La vida es bella</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nicola-piovani">Nicola Piovani</a></td>
@@ -130,7 +130,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/07/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-07-08 09:00:12 +0200">08/07/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-07-08-bso-amelie.html">BSO: Amélie</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/yann-tiersen">Yann Tiersen</a></td>
@@ -139,7 +139,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/07/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-07-15 08:00:54 +0200">15/07/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-07-15-bso-dragonheart-corazon-de-dragon.html">BSO: Dragonheart (Corazón de Dragón)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/randy-edelman">Randy Edelman</a></td>
@@ -148,7 +148,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/07/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-07-23 08:00:00 +0200">23/07/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-07-23-i-want-to-know-what-love-is-de-foreigner.html">I want to know what love is, de Foreigner</a></td>
         <td class="archive-table__cell--song">I want to know what love is</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/foreigner">Foreigner</a></td>
@@ -157,7 +157,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/09/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-09-09 08:00:00 +0200">09/09/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-09-09-bso-the-dark-knight-rises.html">BSO: The Dark Knight Rises</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/hans-zimmer">Hans Zimmer</a></td>
@@ -166,7 +166,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/09/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-09-16 08:00:00 +0200">16/09/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-09-16-bso-wall%c2%b7e-de-thomas-newman.html">BSO: WALL·E, de Thomas Newman</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
@@ -175,7 +175,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">30/09/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-09-30 12:21:57 +0200">30/09/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-09-30-bso-titanic.html">BSO: Titanic</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/james-horner">James Horner</a></td>
@@ -184,7 +184,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">07/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-07 13:47:58 +0200">07/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-07-bso-origen-inception.html">BSO: Origen (Inception)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/hans-zimmer">Hans Zimmer</a></td>
@@ -193,7 +193,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-14 08:00:00 +0200">14/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-14-bso-brave-indomable.html">BSO: Brave (Indomable)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/patrick-doyle">Patrick Doyle</a></td>
@@ -202,7 +202,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-21 08:03:58 +0200">21/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-21-bso-blade-runner.html">BSO: Blade Runner</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/vangelis">Vangelis</a></td>
@@ -211,7 +211,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-28 08:00:39 +0100">28/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-28-la-mision-de-ennio-morricone.html">BSO: La Misión</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ennio-morricone">Ennio Morricone</a></td>
@@ -220,7 +220,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/11/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-11-04 08:00:00 +0100">04/11/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-11-04-bso-drag-me-to-hell-arrastrame-al-infierno.html">BSO: Drag me to Hell (Arrástrame al Infierno)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/christopher-young">Christopher Young</a></td>
@@ -229,7 +229,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/11/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-11-25 08:00:42 +0100">25/11/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-11-25-bso-memorias-de-africa.html">BSO: Memorias de África</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-barry">John Barry</a></td>
@@ -238,7 +238,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">02/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-02 08:00:00 +0100">02/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-02-bso-lady-halcon.html">BSO: Lady Halcón</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/andrew-powell">Andrew Powell</a></td>
@@ -247,7 +247,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-09 08:00:00 +0100">09/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-09-bso-jurassic-park.html">BSO: Jurassic Park</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-williams">John Williams</a></td>
@@ -256,7 +256,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-20 08:00:00 +0100">20/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-20-bso-polar-express.html">BSO: Polar Express</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/alan-silvestri">Alan Silvestri</a></td>
@@ -265,7 +265,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">31/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-31 08:00:00 +0100">31/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-31-midnight-city-de-m83-2.html">Midnight City, de M83</a></td>
         <td class="archive-table__cell--song">Midnight City</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/m83">M83</a></td>
@@ -274,7 +274,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-10 10:00:00 +0100">10/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-10-bso-avatar.html">BSO: Avatar</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/james-horner">James Horner</a></td>
@@ -283,7 +283,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/03/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-03-24 10:00:00 +0100">24/03/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-03-24-bso-la-pasion-de-cristo.html">BSO: La Pasión de Cristo</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-debney">John Debney</a></td>
@@ -292,7 +292,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">07/04/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-04-07 10:00:00 +0200">07/04/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-04-07-bso-los-mundos-de-coraline-de-bruno-coulais.html">BSO: Los mundos de Coraline, de Bruno Coulais</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/bruno-coulais">Bruno Coulais</a></td>
@@ -301,7 +301,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/04/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-04-21 10:00:00 +0200">21/04/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-04-21-bso-gladiator.html">BSO: Gladiator</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/lisa-gerrard">Lisa Gerrard</a></td>
@@ -310,7 +310,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-05 10:00:00 +0200">05/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-05-bso-la-pantera-rosa.html">BSO: La Pantera Rosa</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/henry-mancini">Henry Mancini</a></td>
@@ -319,7 +319,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-12 10:00:00 +0200">12/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-12-bso-mulan.html">BSO: Mulán</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jerry-goldsmith">Jerry Goldsmith</a></td>
@@ -328,7 +328,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">26/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-26 10:00:00 +0200">26/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-26-bso-small-world.html">BSO: Small World</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/klaus-badelt">Klaus Badelt</a></td>
@@ -337,7 +337,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/06/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-06-09 10:00:00 +0200">09/06/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-06-09-bso-juego-de-tronos-tercera-temporada.html">BSO: Juego de tronos (tercera temporada)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ramin-djawadi">Ramin Djawadi</a></td>
@@ -346,7 +346,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/06/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-06-16 10:00:00 +0200">16/06/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-06-16-bso-evil-dead.html">BSO: Evil Dead</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/roque-banos">Roque Baños</a></td>
@@ -355,7 +355,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">30/06/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-06-30 10:00:00 +0200">30/06/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-06-30-bso-man-of-steel.html">BSO: Man of Steel</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/hans-zimmer">Hans Zimmer</a></td>
@@ -364,7 +364,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/07/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-07-14 10:00:00 +0200">14/07/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-07-14-bso-senales-del-futuro.html">BSO: Señales del futuro</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/marco-beltrami">Marco Beltrami</a></td>
@@ -373,7 +373,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/07/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-07-21 10:00:00 +0200">21/07/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-07-21-bso-cadena-perpetua.html">BSO: Cadena perpetua</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
@@ -382,7 +382,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/09/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-09-08 10:00:00 +0200">08/09/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-09-08-bso-pesadilla-antes-de-navidad.html">BSO: Pesadilla antes de Navidad</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/danny-elfman">Danny Elfman</a></td>
@@ -391,7 +391,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/09/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-09-22 10:00:00 +0200">22/09/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-09-22-bso-la-bella-y-la-bestia.html">BSO: La Bella y la Bestia</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/alan-menken">Alan Menken</a></td>
@@ -400,7 +400,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">13/10/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-10-13 10:00:00 +0200">13/10/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-10-13-bso-forrest-gump.html">BSO: Forrest Gump</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/alan-silvestri">Alan Silvestri</a></td>
@@ -409,7 +409,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/10/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-10-27 10:00:00 +0100">27/10/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-10-27-bso-lo-imposible.html">BSO: Lo imposible</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/fernando-velazquez">Fernando Velázquez</a></td>
@@ -418,7 +418,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/11/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-11-10 10:00:00 +0100">10/11/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-11-10-bso-garganta-profunda-deep-throat.html">BSO: Garganta Profunda (Deep Throat)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/gerard-damiano">Gerard Damiano</a></td>
@@ -427,7 +427,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/11/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-11-17 10:00:00 +0100">17/11/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-11-17-bso-una-proposicion-indecente.html">BSO: Una proposición indecente</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-barry">John Barry</a></td>
@@ -436,7 +436,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/12/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-12-01 10:00:00 +0100">01/12/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-12-01-bso-los-juegos-del-hambre-en-llamas.html">BSO: Los Juegos del Hambre: En llamas</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/james-newton-howard">James Newton Howard</a></td>
@@ -445,7 +445,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/12/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-12-15 10:00:00 +0100">15/12/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-12-15-bso-la-delgada-linea-roja-the-thin-red-line.html">BSO: La delgada línea roja (The Thin Red Line)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/hans-zimmer">Hans Zimmer</a></td>
@@ -454,7 +454,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/12/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-12-22 10:00:00 +0100">22/12/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-12-22-bso-frozen-el-reino-del-hielo.html">BSO: Frozen, el reino del hielo</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/christophe-beck">Christophe Beck</a></td>
@@ -463,7 +463,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/01/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-01-05 10:00:00 +0100">05/01/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-01-05-bso-american-beauty.html">BSO: American Beauty</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/thomas-newman">Thomas Newman</a></td>
@@ -472,7 +472,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/01/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-01-19 10:00:00 +0100">19/01/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-01-19-bso-la-vida-de-pi.html">BSO: La vida de Pi</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/mychael-danna">Mychael Danna</a></td>
@@ -481,7 +481,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/02/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-02-09 10:00:00 +0100">09/02/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-02-09-bso-el-rey-leon.html">BSO: El rey león</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/hans-zimmer">Hans Zimmer</a></td>
@@ -490,7 +490,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">02/03/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-03-02 10:00:00 +0100">02/03/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-03-02-bso-el-tiempo-entre-costuras.html">BSO: El tiempo entre costuras</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/cesar-benito">César Benito</a></td>
@@ -499,7 +499,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/03/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-03-23 10:00:00 +0100">23/03/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-03-23-bso-el-ultimo-mohicano.html">BSO: El Último Mohicano</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/trevor-jones">Trevor Jones</a></td>
@@ -508,7 +508,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/05/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-05-04 10:00:00 +0200">04/05/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-05-04-bso-el-juego-de-ender.html">BSO: El Juego de Ender</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/steve-jablonsky">Steve Jablonsky</a></td>
@@ -519,6 +519,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

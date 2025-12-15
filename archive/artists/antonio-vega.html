@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Antonio Vega</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">18/07/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-07-18 09:00:23 +0200">18/07/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-07-18-especial-antonio-vega-i.html">Especial Antonio Vega I</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/antonio-vega">Antonio Vega</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/artistas">Artistas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/07/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-07-19 09:00:24 +0200">19/07/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-07-19-especial-antonio-vega-ii.html">Especial Antonio Vega II</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/antonio-vega">Antonio Vega</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/artistas">Artistas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/05/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-05-12 09:00:28 +0200">12/05/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-05-12-esperando-nada-de-antonio-vega.html">Esperando Nada, de Antonio Vega</a></td>
         <td class="archive-table__cell--song">Esperando Nada</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/antonio-vega">Antonio Vega</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">07/04/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-04-07 09:00:17 +0200">07/04/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-04-07-a-trabajos-forzados-de-antonio-vega.html">A trabajos forzados, de Antonio Vega</a></td>
         <td class="archive-table__cell--song">A trabajos forzados</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/antonio-vega">Antonio Vega</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/07/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-07-04 08:00:18 +0200">04/07/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-07-04-una-decima-de-segundo-de-antonio-vega.html">Una décima de segundo, de Antonio Vega</a></td>
         <td class="archive-table__cell--song">Una décima de segundo</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/antonio-vega">Antonio Vega</a></td>
@@ -96,6 +96,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

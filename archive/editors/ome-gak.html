@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del editor Ome Gak</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">16/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-16 08:00:18 +0100">16/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-16-bso-videojuego-shadow-of-the-colossus.html">BSO Videojuego: Shadow of the Colossus</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/kow-otani">Kow Otani</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/ome-gak">Ome Gak</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-23 08:00:37 +0100">23/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-23-bso-videojuego-bastion.html">BSO Videojuego: Bastion</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/darren-korb">Darren Korb</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/ome-gak">Ome Gak</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-06 08:00:33 +0100">06/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-06-bso-videojuego-vvvvvv.html">BSO Videojuego: VVVVVV</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/souleye">Souleye</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/ome-gak">Ome Gak</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">13/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-13 08:00:12 +0100">13/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-13-bso-videojuego-starcraft.html">BSO Videojuego: Starcraft</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/blizzard">Blizzard</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/ome-gak">Ome Gak</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-17 08:00:57 +0100">17/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-17-bso-videojuego-castlevania-symphony-of-the-night.html">BSO Videojuego: Castlevania Symphony of the Night</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/michiru-yamane">Michiru Yamane</a></td>
@@ -96,6 +96,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

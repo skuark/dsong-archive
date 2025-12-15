@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Elefantes</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">06/07/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-07-06 09:00:39 +0200">06/07/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-07-06-me-gustaria-poder-hacerte-feliz-de-elefantes.html">Me gustaría poder hacerte feliz, de Elefantes</a></td>
         <td class="archive-table__cell--song">Me gustaría poder hacerte feliz</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/elefantes">Elefantes</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-14 08:00:00 +0200">14/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-14-musica-en-1000-direcciones-de-elefantes.html">Música en 1000 direcciones, de Elefantes</a></td>
         <td class="archive-table__cell--song">Música en 1000 direcciones</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/elefantes">Elefantes</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/09/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-09-15 11:19:58 +0200">15/09/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-09-15-nueve-canciones-de-amor-y-una-de-esperanza-de-elefantes.html">Nueve canciones de amor y una de esperanza, de Elefantes</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/elefantes">Elefantes</a></td>
@@ -78,6 +78,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del editor vicluiper</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">06/07/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-07-06 09:00:06 +0200">06/07/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-07-06-universal-mind-de-liquid-tension-experiment.html">Universal Mind, de Liquid Tension Experiment</a></td>
         <td class="archive-table__cell--song">Universal Mind</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/liquid-tension-experiment">Liquid Tension Experiment</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/vicluiper">vicluiper</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/06/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-06-04 09:00:10 +0200">04/06/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-06-04-fool-for-your-loving-de-whitesnake.html">Fool for your loving, de Whitesnake</a></td>
         <td class="archive-table__cell--song">Fool for your loving</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/whitesnake">Whitesnake</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/vicluiper">vicluiper</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/11/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-11-01 08:00:00 +0100">01/11/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-11-01-kayla-de-flying-colors.html">Kayla, de Flying Colors</a></td>
         <td class="archive-table__cell--song">Kayla</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/flying-colors">Flying Colors</a></td>
@@ -78,6 +78,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

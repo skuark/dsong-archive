@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 1975</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">28/06/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-06-28 09:00:39 +0200">28/06/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-06-28-abre-la-puerta-de-triana.html">Especial Álbum: El patio, de Triana</a></td>
         <td class="archive-table__cell--song">Abre la puerta</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/triana">Triana</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/03/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-03-10 09:00:59 +0100">10/03/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-03-10-diamonds-rust-de-joan-baez.html">Diamonds &amp; Rust, de Joan Baez</a></td>
         <td class="archive-table__cell--song">Diamonds &amp; Rust</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/joan-baez">Joan Baez</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/04/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-04-15 09:00:55 +0200">15/04/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-04-15-mamma-mia-de-abba.html">Mamma Mia, de ABBA</a></td>
         <td class="archive-table__cell--song">Mamma Mia</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/abba">Abba</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/juanje-ra">juanje.ra</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/11/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-11-12 09:00:32 +0100">12/11/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-11-12-il-cielo-e-sempre-piu-blu-de-rino-gaetano.html">Il cielo é sempre più blu, de Rino Gaetano</a></td>
         <td class="archive-table__cell--song">Il cielo è sempre più blu</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/rino-gaetano">Rino Gaetano</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">30/11/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-11-30 09:00:19 +0100">30/11/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-11-30-bohemian-rhapsody-de-queen.html">Bohemian Rhapsody, de Queen</a></td>
         <td class="archive-table__cell--song">Bohemian Rhapsody</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/queen">Queen</a></td>
@@ -94,7 +94,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">18/04/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-04-18 11:55:27 +0200">18/04/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-04-18-why-cant-we-be-friends-de-war.html">Why can&#39;t we be friends, de War</a></td>
         <td class="archive-table__cell--song">Why can&#39;t we be friends</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/war">War</a></td>
@@ -103,7 +103,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/luizk">luizk</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/10/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-10-22 09:00:28 +0200">22/10/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-10-22-feria-de-los-puntos.html">Feria, de Los Puntos</a></td>
         <td class="archive-table__cell--song">Feria</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/los-puntos">Los Puntos</a></td>
@@ -112,7 +112,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo">Johnbo</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/03/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-03-21 09:00:44 +0100">21/03/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-03-21-gloria-de-patti-smith.html">Gloria, de Patti Smith</a></td>
         <td class="archive-table__cell--song">Gloria</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/patti-smith">Patti Smith</a></td>
@@ -121,7 +121,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/07/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-07-19 08:00:09 +0200">19/07/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-07-19-se-de-un-lugar-de-triana.html">Se de un lugar, de Triana</a></td>
         <td class="archive-table__cell--song">Se de un lugar</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/triana">Triana</a></td>
@@ -130,7 +130,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/07/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-07-10 08:00:07 +0200">10/07/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-07-10-lady-marmalade-de-patti-labelle.html">Lady Marmalade, de Patti LaBelle</a></td>
         <td class="archive-table__cell--song">Lady Marmalade</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/patti-labelle">Patti LaBelle</a></td>
@@ -139,7 +139,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/07/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-07-03 08:00:08 +0200">03/07/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-07-03-rock-and-roll-all-nite-de-kiss.html">Rock and Roll All Nite, de Kiss</a></td>
         <td class="archive-table__cell--song">Rock and Roll All Nite</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/kiss">KISS</a></td>
@@ -148,7 +148,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">30/12/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-12-30 08:00:31 +0100">30/12/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-12-30-born-to-run-de-bruce-springsteen.html">Born to run, de Bruce Springsteen</a></td>
         <td class="archive-table__cell--song">Born to run</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/bruce-springsteen">Bruce Springsteen</a></td>
@@ -159,6 +159,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

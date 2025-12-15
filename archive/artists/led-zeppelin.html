@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Led Zeppelin</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">19/06/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-06-19 09:00:44 +0200">19/06/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-06-19-thats-the-way-de-led-zeppelin.html">That&#39;s the way, de Led Zeppelin</a></td>
         <td class="archive-table__cell--song">That&#39;s the way</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin">Led Zeppelin</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/liz">Liz</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/06/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-06-08 15:11:33 +0200">08/06/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-06-08-inmigrant-song-de-led-zeppelin.html">Inmigrant Song, de Led Zeppelin</a></td>
         <td class="archive-table__cell--song">Inmigrant Song</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin">Led Zeppelin</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-14 08:00:57 +0100">14/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-14-since-ive-been-loving-you-de-led-zeppelin.html">Since I&#39;ve Been Loving You, de Led Zeppelin</a></td>
         <td class="archive-table__cell--song">Since I&#39;ve Been Loving You</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin">Led Zeppelin</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/06/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-06-28 08:00:24 +0200">28/06/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-06-28-communication-breakdown-de-led-zeppelin.html">Communication Breakdown, de Led Zeppelin</a></td>
         <td class="archive-table__cell--song">Communication Breakdown</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin">Led Zeppelin</a></td>
@@ -87,6 +87,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

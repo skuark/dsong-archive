@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Death Cab for Cutie</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">06/10/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-10-06 09:00:15 +0200">06/10/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-10-06-soul-meets-body-de-death-cab-for-cutie.html">Soul Meets Body, de Death Cab for Cutie</a></td>
         <td class="archive-table__cell--song">Soul Meets Body</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/death-cab-for-cutie">Death Cab for Cutie</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/10/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-10-29 09:00:43 +0100">29/10/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-10-29-a-lack-of-color-de-death-cab-for-cutie.html">A lack of color, de Death Cab for Cutie</a></td>
         <td class="archive-table__cell--song">A lack of color</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/death-cab-for-cutie">Death Cab for Cutie</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose-duenas">Jose Dueñas</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/04/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-04-09 09:00:20 +0200">09/04/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-04-09-i-will-follow-you-into-the-dark-de-death-cab-for-cutie.html">I will follow you into the dark, de Death Cab for Cutie.</a></td>
         <td class="archive-table__cell--song">I will follow you into the dark</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/death-cab-for-cutie">Death Cab for Cutie</a></td>
@@ -78,6 +78,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

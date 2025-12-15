@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 1984</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">22/02/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-02-22 09:00:40 +0100">22/02/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-02-22-were-not-gonna-take-it-de-twisted-sister.html">We&#39;re not gonna take it, de Twisted Sister</a></td>
         <td class="archive-table__cell--song">We&#39;re not gonna take it</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/twisted-sister">Twisted Sister</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/luizk">luizk</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">26/06/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-06-26 09:00:28 +0200">26/06/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-06-26-round-and-round-de-ratt.html">Round and Round, de Ratt</a></td>
         <td class="archive-table__cell--song">Round and Round</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ratt">Ratt</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/01/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-01-24 09:00:24 +0100">24/01/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-01-24-99-luftballons-de-nena.html">99 Luftballons, de Nena</a></td>
         <td class="archive-table__cell--song">99 Luftballons</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nena">Nena</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/06/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-06-16 09:00:57 +0200">16/06/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-06-16-girls-just-wanna-have-fun-de-cyndi-lauper.html">Girls just want to have fun, de Cyndi Lauper</a></td>
         <td class="archive-table__cell--song">Girls just want to have fun</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/cyndi-lauper">Cyndi Lauper</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/03/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-03-08 08:00:48 +0100">08/03/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-03-08-lobo-hombre-en-paris-de-la-union.html">Lobo-hombre en París, de La Unión</a></td>
         <td class="archive-table__cell--song">Lobo-hombre en París</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/la-union">La Unión</a></td>
@@ -94,7 +94,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-05 16:11:20 +0200">05/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-05-escuela-de-calor-de-radio-futura.html">Escuela de Calor, de Radio Futura</a></td>
         <td class="archive-table__cell--song">Escuela de Calor</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/radio-futura">Radio Futura</a></td>
@@ -103,7 +103,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-09 08:00:59 +0200">09/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-09-ghostbusters-de-ray-parker-jr.html">Ghostbusters, de Ray Parker Jr.</a></td>
         <td class="archive-table__cell--song">Ghostbusters</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ray-parker-jr">Ray Parker Jr</a></td>
@@ -112,7 +112,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/07/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-07-23 08:00:00 +0200">23/07/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-07-23-i-want-to-know-what-love-is-de-foreigner.html">I want to know what love is, de Foreigner</a></td>
         <td class="archive-table__cell--song">I want to know what love is</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/foreigner">Foreigner</a></td>
@@ -121,7 +121,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-16 08:00:29 +0200">16/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-16-never-ending-story-de-limahl.html">Never Ending Story, de Limahl</a></td>
         <td class="archive-table__cell--song">Never Ending Story</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/limahl">Limahl</a></td>
@@ -130,7 +130,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-04 08:00:47 +0100">04/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-04-you-spin-me-round-like-a-record-de-dead-or-alive.html">You spin me round (like a record), de Dead or Alive</a></td>
         <td class="archive-table__cell--song">You spin me round</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/dead-or-alive">Dead or Alive</a></td>
@@ -139,7 +139,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-11 08:00:56 +0100">11/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-11-how-soon-is-now-de-the-smiths.html">How Soon Is Now? de The Smiths</a></td>
         <td class="archive-table__cell--song">How Soon Is Now?</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-smiths">The Smiths</a></td>
@@ -150,6 +150,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

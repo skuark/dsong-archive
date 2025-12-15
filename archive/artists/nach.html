@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Nach</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">16/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-16 08:00:10 +0200">16/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-16-el-idioma-de-los-dioses-de-nach.html">El idioma de los Dioses, de Nach</a></td>
         <td class="archive-table__cell--song">El idioma de los Dioses</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nach">Nach</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">31/05/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-05-31 08:00:35 +0200">31/05/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-05-31-ellas-de-nach-e-ismael-serrano.html">Ellas, de Nach e Ismael Serrano</a></td>
         <td class="archive-table__cell--song">Ellas</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nach">Nach</a></td>
@@ -69,6 +69,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

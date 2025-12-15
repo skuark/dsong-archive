@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del editor Monty</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">20/06/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-06-20 08:00:56 +0200">20/06/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-06-20-home-de-edward-sharpe-the-magnetic-zeros.html">Home, de Edward Sharpe &amp; The Magnetic Zeros</a></td>
         <td class="archive-table__cell--song">Home</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/edward-sharpe-and-the-magnetic-zeros">Edward Sharpe &amp; The Magnetic Zeros</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/07/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-07-14 08:00:48 +0200">14/07/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-07-14-amsterdam-de-jacques-brel.html">Amsterdam, de Jacques Brel</a></td>
         <td class="archive-table__cell--song">Amsterdam</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jacques-brel">Jacques Brel</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">07/09/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-09-07 08:00:00 +0200">07/09/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-09-07-grounds-for-a-divorce-de-elbow.html">Grounds for a divorce, de Elbow</a></td>
         <td class="archive-table__cell--song">Grounds for a divorce</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/elbow">Elbow</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">26/09/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-09-26 08:00:46 +0200">26/09/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-09-26-airplanes-de-b-o-b.html">Airplanes, de B.o.B</a></td>
         <td class="archive-table__cell--song">Airplanes</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/b-o-b">B.o.B</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-06 08:00:10 +0200">06/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-06-bao-bei-in-a-day-de-deserts-xuan.html">Bao Bei (In A Day), de Deserts Xuán</a></td>
         <td class="archive-table__cell--song">Bao Bei (In A Day)</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/deserts-xuan">Deserts Xuán</a></td>
@@ -94,7 +94,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-09 08:00:44 +0200">09/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-09-into-the-wild-de-l-p.html">Into the Wild, de L.P.</a></td>
         <td class="archive-table__cell--song">Into the Wild</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/l-p">L.P.</a></td>
@@ -103,7 +103,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-17 08:00:32 +0200">17/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-17-control-de-garbage.html">Control, de Garbage</a></td>
         <td class="archive-table__cell--song">Control</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/garbage">Garbage</a></td>
@@ -112,7 +112,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">31/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-31 08:00:00 +0100">31/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-31-el-emigrante-de-juanito-valderrama.html">El Emigrante, de Juanito Valderrama</a></td>
         <td class="archive-table__cell--song">El Emigrante</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/juanito-valderrama">Juanito Valderrama</a></td>
@@ -121,7 +121,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/11/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-11-11 08:00:23 +0100">11/11/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-11-11-the-lonely-island.html">The Lonely Island</a></td>
         <td class="archive-table__cell--song">I&#39;m on a boat</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-lonely-island">The Lonely Island</a></td>
@@ -130,7 +130,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/artistas">Artistas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/11/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-11-28 08:00:19 +0100">28/11/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-11-28-hate-me-de-blue-october.html">Hate me, de Blue October</a></td>
         <td class="archive-table__cell--song">Hate me</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/blue-october">Blue October</a></td>
@@ -139,7 +139,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-05 08:00:10 +0100">05/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-05-la-mauvaise-reputation-de-georges-brassens.html">La Mauvaise Réputation, de Georges Brassens</a></td>
         <td class="archive-table__cell--song">La Mauvaise Réputation</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/georges-brassens">Georges Brassens</a></td>
@@ -148,7 +148,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-12 08:00:36 +0100">12/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-12-love-struck-baby-de-stevie-ray-vaughan-and-double-trouble.html">Love Struck Baby, de Stevie Ray Vaughan and Double Trouble</a></td>
         <td class="archive-table__cell--song">Love Struck Baby</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/double-trouble">Double Trouble</a></td>
@@ -157,7 +157,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-20 08:00:55 +0100">20/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-20-lao-shu-ai-da-mi-de-xiang-xiang.html">Lao Shu Ai Da Mi, de Xiang Xiang</a></td>
         <td class="archive-table__cell--song">Lao Shu Ai Da Mi</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/xiang-xiang">Xiang Xiang</a></td>
@@ -166,7 +166,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">30/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-30 08:00:21 +0100">30/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-30-especial-cantantes-y-musicos-fallecidos-durante-2012.html">Especial: Cantantes y músicos fallecidos durante 2012</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ravi-shankar">Ravi Shankar</a></td>
@@ -175,7 +175,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/especiales">Especiales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-04 08:00:47 +0100">04/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-04-because-im-a-girl-de-kiss.html">Because I’m a girl, de KISS</a></td>
         <td class="archive-table__cell--song">Because I&#39;m a girl</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/kiss">KISS</a></td>
@@ -184,7 +184,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-11 08:00:47 +0100">11/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-11-im-so-sick-de-flyleaf.html">I’m so sick, de Flyleaf</a></td>
         <td class="archive-table__cell--song">I&#39;m so sick</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/flyleaf">Flyleaf</a></td>
@@ -193,7 +193,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-21 08:00:27 +0100">21/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-21-train-song-de-vashti-bunyan.html">Train Song, de Vashti Bunyan</a></td>
         <td class="archive-table__cell--song">Train Song</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/vashti-bunyan">Vashti Bunyan</a></td>
@@ -202,7 +202,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-27 08:00:04 +0100">27/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-27-musicales-de-broadway.html">Musicales de Broadway</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/stephen-oremus">Stephen Oremus</a></td>
@@ -211,7 +211,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/especiales">Especiales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-05 08:00:53 +0100">05/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-05-lacrimosa-de-zbigniew-preisner.html">Lacrimosa, de Zbigniew Preisner</a></td>
         <td class="archive-table__cell--song">Lacrimosa</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/zbigniew-preisner">Zbigniew Preisner</a></td>
@@ -220,7 +220,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-11 08:00:55 +0100">11/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-11-qing-hua-ci-de-jay-chou.html">Qīng Huā Cí, de Jay Chou</a></td>
         <td class="archive-table__cell--song">Qīng Huā Cí</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jay-chou">Jay Chou</a></td>
@@ -229,7 +229,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-21 00:28:47 +0100">20/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-21-travellin-soldier-de-dixie-chicks.html">Travellin’ Soldier, de Dixie Chicks</a></td>
         <td class="archive-table__cell--song">Travellin&#39; Soldier</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/dixie-chicks">Dixie Chicks</a></td>
@@ -238,7 +238,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-28 08:00:17 +0100">28/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-28-marta-sebas-guille-y-los-demas-de-amaral.html">Marta, Sebas, Guille y los demás, de Amaral</a></td>
         <td class="archive-table__cell--song">Marta, Sebas, Guille y los demás</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/amaral">Amaral</a></td>
@@ -247,7 +247,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">07/03/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-03-07 08:00:27 +0100">07/03/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-03-07-little-talks-de-of-monsters-and-men.html">Little Talks, de Of Monsters and Men</a></td>
         <td class="archive-table__cell--song">Little Talks</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/of-monsters-and-men">Of Monsters and Men</a></td>
@@ -256,7 +256,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/03/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-03-16 08:00:58 +0100">16/03/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-03-16-danny-boy-de-michael-londra.html">Danny Boy, de Michael Londra</a></td>
         <td class="archive-table__cell--song">Danny Boy</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/michael-londra">Michael Londra</a></td>
@@ -265,7 +265,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/03/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-03-21 08:00:54 +0100">21/03/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-03-21-now-de-paramore.html">Now, de Paramore</a></td>
         <td class="archive-table__cell--song">Now</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/paramore">Paramore</a></td>
@@ -274,7 +274,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/03/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-03-28 08:00:32 +0100">28/03/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-03-28-tubthumping-de-chumbawamba.html">Tubthumping, de Chumbawamba</a></td>
         <td class="archive-table__cell--song">Tubthumping</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/chumbawamba">Chumbawamba</a></td>
@@ -283,7 +283,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/04/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-04-03 08:00:17 +0200">03/04/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-04-03-en-un-mundo-nuevo-de-karina.html">En un Mundo Nuevo, de Karina</a></td>
         <td class="archive-table__cell--song">En un Mundo Nuevo</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/karina">Karina</a></td>
@@ -292,7 +292,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/04/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-04-11 08:00:03 +0200">11/04/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-04-11-break-stuff-de-limp-bizkit.html">Break Stuff, de Limp Bizkit</a></td>
         <td class="archive-table__cell--song">Break Stuff</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/limp-bizkit">Limp Bizkit</a></td>
@@ -301,7 +301,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/04/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-04-19 08:00:42 +0200">19/04/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-04-19-lavenir-est-un-long-passe-de-manau.html">L&#39;avenir Est Un Long Passé, de Manau</a></td>
         <td class="archive-table__cell--song">L&#39;avenir Est Un Long Passé</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/manau">Manau</a></td>
@@ -310,7 +310,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/04/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-04-27 08:00:47 +0200">27/04/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-04-27-hero-de-family-of-the-year.html">Hero, de Family of the Year</a></td>
         <td class="archive-table__cell--song">Hero</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/family-of-the-year">Family of the Year</a></td>
@@ -319,7 +319,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-03 08:00:04 +0200">03/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-03-maybe-im-amazed-de-paul-mccartney.html">Maybe I&#39;m Amazed, de Paul McCartney</a></td>
         <td class="archive-table__cell--song">Maybe I&#39;m Amazed</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/paul-mccartney">Paul McCartney</a></td>
@@ -328,7 +328,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-11 08:00:01 +0200">11/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-11-radioactive-de-imagine-dragons.html">Radioactive, de Imagine Dragons</a></td>
         <td class="archive-table__cell--song">Radioactive</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/imagine-dragons">Imagine Dragons</a></td>
@@ -337,7 +337,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-17 08:00:11 +0200">17/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-17-not-ready-to-make-nice-de-dixie-chicks.html">Not Ready To Make Nice, de Dixie Chicks</a></td>
         <td class="archive-table__cell--song">Not Ready To Make Nice</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/dixie-chicks">Dixie Chicks</a></td>
@@ -346,7 +346,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-24 08:00:31 +0200">24/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-24-le-meteque-de-georges-moustaki.html">Le Métèque, de Georges Moustaki</a></td>
         <td class="archive-table__cell--song">Le Métèque</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/georges-moustaki">Georges Moustaki</a></td>
@@ -355,7 +355,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-29 08:00:51 +0200">29/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-29-93-million-miles-de-jason-mraz.html">93 Million Miles, de Jason Mraz</a></td>
         <td class="archive-table__cell--song">93 Million Miles</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jason-mraz">Jason Mraz</a></td>
@@ -364,7 +364,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/06/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-06-06 08:00:59 +0200">06/06/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-06-06-rappers-delight-de-the-sugarhill-gang.html">Rapper&#39;s Delight, de The Sugarhill Gang</a></td>
         <td class="archive-table__cell--song">Rapper&#39;s Delight</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-sugarhill-gang">The Sugarhill Gang</a></td>
@@ -373,7 +373,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/06/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-06-10 08:00:36 +0200">10/06/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-06-10-gone-gone-gone-de-phillip-phillips.html">Gone, gone, gone, de Phillip Phillips</a></td>
         <td class="archive-table__cell--song">Gone, gone, gone</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/phillip-phillips">Phillip Phillips</a></td>
@@ -382,7 +382,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/06/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-06-24 08:00:25 +0200">24/06/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-06-24-al-amanecer-de-los-fresones-rebeldes.html">Al Amanecer, de Los Fresones Rebeldes</a></td>
         <td class="archive-table__cell--song">Al Amanecer</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/los-fresones-rebeldes">Los Fresones Rebeldes</a></td>
@@ -391,7 +391,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/07/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-07-01 08:00:33 +0200">01/07/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-07-01-same-love-de-macklemore-ryan-lewis.html">Same Love, de Macklemore &amp; Ryan Lewis</a></td>
         <td class="archive-table__cell--song">Same Love</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/mary-lambert">Mary Lambert</a></td>
@@ -400,7 +400,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/07/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-07-09 16:59:58 +0200">09/07/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-07-09-estoy-harto-de-guillermo.html">Estoy Harto, de Guillermo</a></td>
         <td class="archive-table__cell--song">Estoy Harto</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/guillermo">Guillermo</a></td>
@@ -409,7 +409,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/09/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-09-24 08:00:24 +0200">24/09/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-09-24-el-7-de-septiembre-de-mecano.html">El 7 de Septiembre, de Mecano</a></td>
         <td class="archive-table__cell--song">El 7 de Septiembre</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/mecano">Mecano</a></td>
@@ -418,7 +418,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/09/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-09-27 08:00:18 +0200">27/09/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-09-27-call-your-girlfriend-de-robyn.html">Call Your Girlfriend, de Robyn</a></td>
         <td class="archive-table__cell--song">Call your girlfriend</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/robyn">Robyn</a></td>
@@ -427,7 +427,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/10/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-10-06 08:00:04 +0200">06/10/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-10-06-austin-city-limits-2013.html">Austin City Limits 2013</a></td>
         <td class="archive-table__cell--song">Austin City Limits</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/undefined"></a></td>
@@ -436,7 +436,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/festivales">Festivales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/10/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-10-11 08:00:35 +0200">11/10/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-10-11-when-i-was-your-man-de-bruno-mars.html">When I was your man, de Bruno Mars</a></td>
         <td class="archive-table__cell--song">When I was your man</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/bruno-mars">Bruno Mars</a></td>
@@ -445,7 +445,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/10/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-10-16 08:00:52 +0200">16/10/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-10-16-san-francisco-be-sure-to-wear-flowers-in-your-hair-de-scott-mckenzie.html">San Francisco (Be Sure to Wear Flowers in Your Hair), de Scott McKenzie</a></td>
         <td class="archive-table__cell--song">San Francisco (Be Sure to Wear Flowers in Your Hair)</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-phillips">John Phillips</a></td>
@@ -454,7 +454,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/10/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-10-23 08:00:50 +0200">23/10/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-10-23-written-in-the-stars-de-tinie-tempah.html">Written in the stars, de Tinie Tempah</a></td>
         <td class="archive-table__cell--song">Written in the stars</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/tinie-tempah">Tinie Tempah</a></td>
@@ -463,7 +463,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/11/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-11-03 08:00:32 +0100">03/11/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-11-03-boy-bands.html">Boy Bands</a></td>
         <td class="archive-table__cell--song">Boy Bands</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/undefined"></a></td>
@@ -472,7 +472,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/listas">Listas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">13/11/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-11-13 08:00:17 +0100">13/11/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-11-13-coming-home-de-diddy-dirty-money.html">Coming Home, de Diddy - Dirty Money</a></td>
         <td class="archive-table__cell--song">Coming Home</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/skylar-grey">Skylar Grey</a></td>
@@ -481,7 +481,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/12/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-12-19 08:00:57 +0100">19/12/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-12-19-the-a-team-de-ed-sheeran.html">The A Team, de Ed Sheeran</a></td>
         <td class="archive-table__cell--song">The A Team</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ed-sheeran">Ed Sheeran</a></td>
@@ -490,7 +490,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">26/12/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-12-26 08:00:31 +0100">26/12/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-12-26-ordinary-love-de-u2.html">Ordinary Love, de U2</a></td>
         <td class="archive-table__cell--song">Ordinary Love</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/u2">U2</a></td>
@@ -499,7 +499,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">02/01/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-01-02 08:00:20 +0100">02/01/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-01-02-if-i-die-young-de-the-band-perry.html">If I Die Young, de The Band Perry</a></td>
         <td class="archive-table__cell--song">If I Die Young</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-band-perry">The Band Perry</a></td>
@@ -508,7 +508,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/01/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-01-09 08:00:03 +0100">09/01/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-01-09-that-day-de-natalie-imbruglia.html">That Day, de Natalie Imbruglia</a></td>
         <td class="archive-table__cell--song">That Day</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/natalie-imbruglia">Natalie Imbruglia</a></td>
@@ -517,7 +517,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">02/02/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-02-02 08:00:41 +0100">02/02/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-02-02-uno-de-enero-dos-de-febrero.html">Uno de Enero, dos de Febrero...</a></td>
         <td class="archive-table__cell--song">Uno de Enero</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ignacio-baleztena">Ignacio Baleztena</a></td>
@@ -526,7 +526,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/especiales">Especiales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">13/02/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-02-13 08:00:30 +0100">13/02/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-02-13-the-times-they-are-a-changin-de-bob-dylan.html">The Times They Are a-Changin’, de Bob Dylan</a></td>
         <td class="archive-table__cell--song">The Times They Are a-Changin’</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/bob-dylan">Bob Dylan</a></td>
@@ -535,7 +535,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/02/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-02-20 08:00:25 +0100">20/02/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-02-20-let-her-go-de-passenger.html">Let Her Go, de Passenger</a></td>
         <td class="archive-table__cell--song">Let Her Go</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/passenger">Passenger</a></td>
@@ -544,7 +544,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/03/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-03-08 08:00:00 +0100">08/03/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-03-08-overwhelmed-de-tim-mcmorris.html">Overwhelmed, de Tim McMorris</a></td>
         <td class="archive-table__cell--song">Overwhelmed</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/tim-mcmorris">Tim McMorris</a></td>
@@ -553,7 +553,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/03/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-03-09 08:00:48 +0100">09/03/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-03-09-subterfuge-records.html">Subterfuge Records</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/varios">Varios</a></td>
@@ -562,7 +562,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/especiales">Especiales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/03/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-03-14 08:00:37 +0100">14/03/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-03-14-entre-animas-de-virjinia-gluck.html">Entre Ánimas, de Virjinia Glück</a></td>
         <td class="archive-table__cell--song">Entre Ánimas</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/virjinia-glueck">Virjinia Glück</a></td>
@@ -571,7 +571,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/03/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-03-25 08:00:03 +0100">25/03/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-03-25-country-roads-de-john-denver.html">Country Roads, de John Denver</a></td>
         <td class="archive-table__cell--song">Country Roads</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-denver">John Denver</a></td>
@@ -580,7 +580,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/04/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-04-01 08:00:11 +0200">01/04/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-04-01-the-monster-de-eminem.html">The Monster, de Eminem</a></td>
         <td class="archive-table__cell--song">The Monster</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/rihanna">Rihanna</a></td>
@@ -589,7 +589,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/04/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-04-06 08:00:51 +0200">06/04/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-04-06-the-walker-de-fitz-and-the-tantrums.html">The Walker, de Fitz and The Tantrums</a></td>
         <td class="archive-table__cell--song">The Walker</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/fitz-and-the-tantrums">Fitz and The Tantrums</a></td>
@@ -598,7 +598,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/04/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-04-20 08:00:50 +0200">20/04/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-04-20-out-among-the-stars-de-johnny-cash.html">Out among the stars, de Johnny Cash</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/johnny-cash">Johnny Cash</a></td>
@@ -607,7 +607,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/04/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-04-29 08:00:14 +0200">29/04/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-04-29-everyone-nose-de-n-e-r-d.html">Everyone Nose, de N.E.R.D</a></td>
         <td class="archive-table__cell--song">Everyone Nose (All the Girls Standing in the Line for the Bathroom)</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/n-e-r-d">N.E.R.D</a></td>
@@ -616,7 +616,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/05/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-05-06 08:00:00 +0200">06/05/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-05-06-habits-stay-high-de-tove-lo.html">Habits (Stay High), de Tove Lo</a></td>
         <td class="archive-table__cell--song">Habits (Stay High)</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/tove-lo">Tove Lo</a></td>
@@ -625,7 +625,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">13/05/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-05-13 08:00:12 +0200">13/05/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-05-13-la-guitarra-de-los-autenticos-decadentes.html">La Guitarra, de Los Auténticos Decadentes</a></td>
         <td class="archive-table__cell--song">La Guitarra</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/los-autenticos-decadentes">Los Auténticos Decadentes</a></td>
@@ -634,7 +634,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/05/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-05-25 17:47:19 +0200">25/05/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-05-25-dia-de-la-musica-2014.html">Día de la Música 2014</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/varios">Varios</a></td>
@@ -643,7 +643,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/festivales">Festivales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/06/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-06-19 08:00:35 +0200">19/06/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-06-19-sleeping-with-a-friend-de-neon-trees.html">Sleeping With A Friend, de Neon Trees</a></td>
         <td class="archive-table__cell--song">Sleeping With A Friend</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/neon-trees">Neon Trees</a></td>
@@ -652,7 +652,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">26/06/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-06-26 08:00:00 +0200">26/06/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-06-26-en-la-variedad-esta-la-diversion-de-un-pinguino-en-mi-ascensor.html">En la variedad está la diversión, de Un Pingüino En Mi Ascensor</a></td>
         <td class="archive-table__cell--song">En la variedad está la diversión</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/un-pingueino-en-mi-ascensor">Un Pingüino En Mi Ascensor</a></td>
@@ -661,7 +661,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/07/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-07-03 08:00:08 +0200">03/07/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-07-03-rock-and-roll-all-nite-de-kiss.html">Rock and Roll All Nite, de Kiss</a></td>
         <td class="archive-table__cell--song">Rock and Roll All Nite</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/kiss">KISS</a></td>
@@ -670,7 +670,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/07/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-07-10 08:00:13 +0200">10/07/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-07-10-happy-birthday-to-you-de-patty-y-mildred-hill.html">Happy Birthday to You, de Patty y Mildred Hill</a></td>
         <td class="archive-table__cell--song">Happy Birthday to You</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/undefined"></a></td>
@@ -679,7 +679,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/especiales">Especiales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/07/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-07-14 08:00:32 +0200">14/07/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-07-14-lost-stars-de-adam-levine.html">Lost Stars, de Adam Levine</a></td>
         <td class="archive-table__cell--song">Lost Stars</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/adam-levine">Adam Levine</a></td>
@@ -688,7 +688,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/07/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-07-24 08:00:17 +0200">24/07/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-07-24-waltzing-matilda-de-banjo-paterson-por-slim-dusty.html">Waltzing Matilda, de Banjo Paterson (por Slim Dusty)</a></td>
         <td class="archive-table__cell--song">Waltzing Matilda</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/slim-dusty">Slim Dusty</a></td>
@@ -697,7 +697,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/07/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-07-28 08:00:12 +0200">28/07/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-07-28-down-under-de-men-at-work.html">Down Under, de Men At Work</a></td>
         <td class="archive-table__cell--song">Down Under</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/men-at-work">Men At Work</a></td>
@@ -706,7 +706,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/09/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-09-04 08:00:07 +0200">04/09/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-09-04-gimme-chocolate-de-babymetal.html">Gimme Chocolate!!, de Babymetal</a></td>
         <td class="archive-table__cell--song">Gimme Chocolate!!</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/babymetal">Babymetal</a></td>
@@ -715,7 +715,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/09/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-09-11 08:00:45 +0200">11/09/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-09-11-el-imperio-contraataca-de-los-nikis.html">El Imperio Contraataca, de Los Nikis</a></td>
         <td class="archive-table__cell--song">El Imperio Contraataca</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/los-nikis">Los Nikis</a></td>
@@ -724,7 +724,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">18/09/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-09-18 08:00:27 +0200">18/09/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-09-18-la-tarara.html">La Tarara</a></td>
         <td class="archive-table__cell--song">La Tarara</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/federico-garcia-lorca">Federico García Lorca</a></td>
@@ -733,7 +733,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/09/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-09-25 08:00:49 +0200">25/09/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-09-25-all-about-that-bass-de-meghan-trainor.html">All About That Bass, de Meghan Trainor</a></td>
         <td class="archive-table__cell--song">All About That Bass</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/meghan-trainor">Meghan Trainor</a></td>
@@ -742,7 +742,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-10 08:00:03 +0200">10/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-10-el-kilo-de-orishas.html">El Kilo, de Orishas</a></td>
         <td class="archive-table__cell--song">El Kilo</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/orishas">Orishas</a></td>
@@ -751,7 +751,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-12 08:00:58 +0200">12/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-12-austin-city-limits-2014.html">Austin City Limits 2014</a></td>
         <td class="archive-table__cell--song">Varios</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/varios">Varios</a></td>
@@ -760,7 +760,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/festivales">Festivales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-14 08:00:16 +0200">14/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-14-vincent-de-don-mclean.html">Vincent, de Don McLean</a></td>
         <td class="archive-table__cell--song">Vincent</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/don-mclean">Don McLean</a></td>
@@ -769,7 +769,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-23 08:00:00 +0200">23/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-23-una-vieja-y-un-viejo-de-el-payo-juan-manuel.html">Una vieja y un viejo, de El Payo Juan Manuel</a></td>
         <td class="archive-table__cell--song">Una vieja y un viejo</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/el-payo-juan-manuel">El Payo Juan Manuel</a></td>
@@ -778,7 +778,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/artistas">Artistas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-24 08:00:25 +0200">24/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-24-chandelier-de-sia.html">Chandelier, de Sia</a></td>
         <td class="archive-table__cell--song">Chandelier</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/sia">Sia</a></td>
@@ -787,7 +787,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-28 08:00:46 +0100">28/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-28-rude-de-magic.html">Rude, de Magic!</a></td>
         <td class="archive-table__cell--song">Rude</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/magic">Magic!</a></td>
@@ -796,7 +796,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">30/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-30 08:00:02 +0100">30/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-30-when-the-sun-goes-down-de-arctic-monkeys.html">When the Sun Goes Down, de Arctic Monkeys</a></td>
         <td class="archive-table__cell--song">When the Sun Goes Down</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/arctic-monkeys">Arctic Monkeys</a></td>
@@ -805,7 +805,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-04 08:00:00 +0100">04/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-04-the-eyes-of-texas-de-john-sinclair.html">The Eyes of Texas, de John Sinclair</a></td>
         <td class="archive-table__cell--song">The Eyes of Texas</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/lewis-johnson">Lewis Johnson</a></td>
@@ -814,7 +814,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-09 08:00:00 +0100">09/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-09-canciones-infantiles.html">Canciones infantiles</a></td>
         <td class="archive-table__cell--song">Varios</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/varios">Varios</a></td>
@@ -823,7 +823,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/listas">Listas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-14 08:00:00 +0100">14/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-14-i-will-wait-for-you-de-connie-francis.html">I Will Wait For You, de Connie Francis</a></td>
         <td class="archive-table__cell--song">I Will Wait For You</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jacques-demy">Jacques Demy</a></td>
@@ -832,7 +832,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-15 08:00:00 +0100">15/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-15-especial-versiones-i.html">Especial Versiones (I)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/varios">Varios</a></td>
@@ -841,7 +841,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/listas">Listas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-16 08:00:00 +0100">16/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-16-especial-versiones-y-ii.html">Especial Versiones (y II)</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/varios">Varios</a></td>
@@ -850,7 +850,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/listas">Listas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-20 08:00:09 +0100">20/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-20-life-in-the-fast-lane-de-eagles.html">Life In The Fast Lane, de Eagles</a></td>
         <td class="archive-table__cell--song">Life In The Fast Lane</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/eagles">Eagles</a></td>
@@ -859,7 +859,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-23 08:00:03 +0100">23/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-23-cinderella-de-steven-curtis-chapman.html">Cinderella, de Steven Curtis Chapman</a></td>
         <td class="archive-table__cell--song">Cinderella</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/steven-curtis-chapman">Steven Curtis Chapman</a></td>
@@ -868,7 +868,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-27 08:00:00 +0100">27/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-27-stealing-cinderella-de-chuck-wicks.html">Stealing Cinderella, de Chuck Wicks</a></td>
         <td class="archive-table__cell--song">Stealing Cinderella</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/chuck-wicks">Chuck Wicks</a></td>
@@ -877,7 +877,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-01 08:00:00 +0100">01/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-01-non-je-ne-regrette-rien-de-edith-piaf.html">Non je ne regrette rien, de Édith Piaf</a></td>
         <td class="archive-table__cell--song">Non, je ne regrette rien</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/edith-piaf">Édith Piaf</a></td>
@@ -886,7 +886,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-03 08:00:11 +0100">03/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-03-where-have-all-the-flowers-gone-de-marlene-dietrich.html">Where have all the flowers gone?, de Marlene Dietrich</a></td>
         <td class="archive-table__cell--song">Where have all the flowers gone?</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/marlene-dietrich">Marlene Dietrich</a></td>
@@ -895,7 +895,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-04 08:00:00 +0100">04/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-04-poupee-de-cire-poupee-de-son-de-france-gall.html">Poupée de cire, poupée de son, de France Gall</a></td>
         <td class="archive-table__cell--song">Poupée de cire, poupée de son</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/france-gall">France Gall</a></td>
@@ -904,7 +904,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-06 08:00:22 +0100">06/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-06-manhattan-kaboul-de-renaud-y-axelle-red.html">Manhattan-Kaboul, de Renaud y Axelle Red</a></td>
         <td class="archive-table__cell--song">Manhattan-Kaboul</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/axelle-red">Axelle Red</a></td>
@@ -913,7 +913,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-08 08:00:48 +0100">08/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-08-this-land-is-your-land-de-my-morning-jacket.html">This land is your land, de My Morning Jacket</a></td>
         <td class="archive-table__cell--song">This land is your land</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/woody-guthrie">Woody Guthrie</a></td>
@@ -922,7 +922,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-12 08:00:00 +0100">12/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-12-100-years-de-five-for-fighting.html">100 years, de Five for Fighting</a></td>
         <td class="archive-table__cell--song">100 years</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/five-for-fighting">Five For Fighting</a></td>
@@ -931,7 +931,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-17 08:00:00 +0100">17/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-17-mississippi-de-the-griswolds.html">Mississippi, de The Griswolds</a></td>
         <td class="archive-table__cell--song">Mississippi</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-griswolds">The Griswolds</a></td>
@@ -940,7 +940,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-22 08:00:00 +0100">22/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-22-well-meet-again-de-vera-lynn.html">We&#39;ll Meet Again, de Vera Lynn</a></td>
         <td class="archive-table__cell--song">We&#39;ll Meet Again</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/vera-lynn">Vera Lynn</a></td>
@@ -949,7 +949,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-28 08:00:00 +0100">28/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-28-especial-100-de-100.html">Especial: 100 de 100</a></td>
         <td class="archive-table__cell--song">Varios</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/varios">Varios</a></td>
@@ -958,7 +958,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/listas">Listas</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">31/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-31 08:00:00 +0100">31/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-31-especial-cantantes-y-musicos-que-nos-dejaron-en-2014.html">Especial: Cantantes y músicos que nos dejaron en 2014</a></td>
         <td class="archive-table__cell--song">Varios</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/le-roux">Le Roux</a></td>
@@ -967,7 +967,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/especiales">Especiales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/01/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-01-04 08:00:20 +0100">04/01/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-01-04-que-nos-deparara-musicalmente-el-2015.html">¿Qué nos deparará musicalmente el 2015?</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/lil-wayne">Lil Wayne</a></td>
@@ -976,7 +976,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/especiales">Especiales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/01/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-01-08 08:00:06 +0100">08/01/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-01-08-the-end-is-the-beginning-is-the-end-de-the-smashing-pumpkins.html">The End Is The Beginning Is The End, de The Smashing Pumpkins</a></td>
         <td class="archive-table__cell--song">The End Is The Beginning Is The End</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-smashing-pumpkins">The Smashing Pumpkins</a></td>
@@ -985,7 +985,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/01/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-01-17 08:00:33 +0100">17/01/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-01-17-the-hanging-tree-de-james-newton-howard-feat-jennifer-lawrence.html">The Hanging Tree, de James Newton Howard (feat. Jennifer Lawrence)</a></td>
         <td class="archive-table__cell--song">The Hanging Tree</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jennifer-lawrence">Jennifer Lawrence</a></td>
@@ -994,7 +994,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/01/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-01-22 08:00:00 +0100">22/01/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-01-22-zamba-del-emigrante-de-ismael-serrano-con-mercedes-sosa.html">Zamba del Emigrante, de Ismael Serrano (con Mercedes Sosa)</a></td>
         <td class="archive-table__cell--song">Zamba del Emigrante</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ismael-serrano">Ismael Serrano</a></td>
@@ -1003,7 +1003,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/01/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-01-29 08:00:00 +0100">29/01/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-01-29-blank-space-de-taylor-swift.html">Blank Space, de Taylor Swift</a></td>
         <td class="archive-table__cell--song">Blank Space</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/taylor-swift">Taylor Swift</a></td>
@@ -1012,7 +1012,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/02/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-02-03 08:00:00 +0100">03/02/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-02-03-england-skies-de-shake-shake-go.html">England Skies, de Shake Shake Go</a></td>
         <td class="archive-table__cell--song">England Skies</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/shake-shake-go">Shake Shake Go</a></td>
@@ -1021,7 +1021,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/02/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-02-27 08:00:00 +0100">27/02/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-02-27-borderline-de-tove-styrke.html">Borderline, de Tove Styrke</a></td>
         <td class="archive-table__cell--song">Borderline</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/tove-styrke">Tove Styrke</a></td>
@@ -1030,7 +1030,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/03/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-03-27 08:00:32 +0100">27/03/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-03-27-budapest-de-george-ezra.html">Budapest, de George Ezra</a></td>
         <td class="archive-table__cell--song">Budapest</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/george-ezra">George Ezra</a></td>
@@ -1039,7 +1039,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/04/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-04-15 08:00:33 +0200">15/04/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-04-15-too-close-de-alex-clare.html">Too Close, de Alex Clare</a></td>
         <td class="archive-table__cell--song">Too Close</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/alex-clare">Alex Clare</a></td>
@@ -1048,7 +1048,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">26/04/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-04-26 08:00:24 +0200">26/04/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-04-26-he-gets-that-from-me-de-reba-mcentire.html">He Gets That From Me, de Reba McEntire</a></td>
         <td class="archive-table__cell--song">He Gets That From Me</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/reba-mcentire">Reba McEntire</a></td>
@@ -1057,7 +1057,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/05/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-05-01 08:00:25 +0200">01/05/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-05-01-exs-ohs-de-elle-king.html">Ex&#39;s &amp; Oh&#39;s, de Elle King</a></td>
         <td class="archive-table__cell--song">Ex&#39;s and Oh&#39;s</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/elle-king">Elle King</a></td>
@@ -1066,7 +1066,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/06/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-06-01 08:00:52 +0200">01/06/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-06-01-honey-im-good-de-andy-grammer.html">Honey I’m Good, de Andy Grammer</a></td>
         <td class="archive-table__cell--song">Honey, I&#39;m Good</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/andy-grammer">Andy Grammer</a></td>
@@ -1075,7 +1075,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/06/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-06-22 08:00:58 +0200">22/06/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-06-22-renegades-de-x-ambassadors.html">Renegades, de X Ambassadors</a></td>
         <td class="archive-table__cell--song">Renegades</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/x-ambassadors">X Ambassadors</a></td>
@@ -1084,7 +1084,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/07/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-07-20 08:00:25 +0200">20/07/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-07-20-cheerleader-de-omi.html">Cheerleader, de OMI</a></td>
         <td class="archive-table__cell--song">Cheerleader</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/felix-jaehn">Felix Jaehn</a></td>
@@ -1093,7 +1093,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/07/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-07-27 08:00:19 +0200">27/07/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-07-27-cecilia-and-the-satellite-de-andrew-mcmahon-in-the-wilderness.html">Cecilia and the Satellite, de Andrew McMahon in the Wilderness</a></td>
         <td class="archive-table__cell--song">Cecilia and the Satellite</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/andrew-mcmahon">Andrew McMahon</a></td>
@@ -1102,7 +1102,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/10/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-10-22 08:00:28 +0200">22/10/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-10-22-s-o-b-de-nathaniel-rateliff.html">S.O.B., de Nathaniel Rateliff and the Night Sweats</a></td>
         <td class="archive-table__cell--song">S.O.B.</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nathaniel-rateliff-and-the-night-sweats">Nathaniel Rateliff and the Night Sweats</a></td>
@@ -1111,7 +1111,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/02/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-02-09 08:00:52 +0100">09/02/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-02-09-genghis-khan-de-miike-snow.html">Genghis Khan, de Miike Snow</a></td>
         <td class="archive-table__cell--song">Genghis Khan</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/miike-snow">Miike Snow</a></td>
@@ -1120,7 +1120,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/02/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-02-16 08:00:25 +0100">16/02/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-02-16-dont-wanna-fight-de-alabama-shakes.html">Don&#39;t Wanna Fight, de Alabama Shakes</a></td>
         <td class="archive-table__cell--song">Don&#39;t Wanna Fight</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/alabama-shakes">Alabama Shakes</a></td>
@@ -1129,7 +1129,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/06/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-06-01 08:00:39 +0200">01/06/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-06-01-girl-crush-de-little-big-town.html">Girl Crush, de Little Big Town</a></td>
         <td class="archive-table__cell--song">Girl Crush</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/little-big-town">Little Big Town</a></td>
@@ -1138,7 +1138,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/12/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-12-16 08:00:56 +0100">16/12/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-12-16-i-want-a-hippopotamus-for-christmas-de-gayla-peevey.html">I Want a Hippopotamus for Christmas, de Gayla Peevey</a></td>
         <td class="archive-table__cell--song">I Want a Hippopotamus for Christmas</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-cox">John Cox</a></td>
@@ -1147,7 +1147,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/12/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-12-23 08:00:12 +0100">23/12/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-12-23-graves-de-whiskey-shivers.html">Graves, de Whiskey Shivers</a></td>
         <td class="archive-table__cell--song">Graves</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/whiskey-shivers">Whiskey Shivers</a></td>
@@ -1156,7 +1156,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">30/12/2016</td>
+        <td class="archive-table__cell--published-at" data-value="2016-12-30 08:00:31 +0100">30/12/2016</td>
         <td class="archive-table__cell--title"><a href="/archive/2016-12-30-born-to-run-de-bruce-springsteen.html">Born to run, de Bruce Springsteen</a></td>
         <td class="archive-table__cell--song">Born to run</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/bruce-springsteen">Bruce Springsteen</a></td>
@@ -1165,7 +1165,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/01/2017</td>
+        <td class="archive-table__cell--published-at" data-value="2017-01-06 08:00:41 +0100">06/01/2017</td>
         <td class="archive-table__cell--title"><a href="/archive/2017-01-06-barcelona-de-freddy-mercury-y-montserrat-caballe.html">Barcelona, de Freddie Mercury y Montserrat Caballé</a></td>
         <td class="archive-table__cell--song">Barcelona</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/montserrat-caballe">Montserrat Caballé</a></td>
@@ -1176,6 +1176,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

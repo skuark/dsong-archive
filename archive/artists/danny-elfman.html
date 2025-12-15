@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Danny Elfman</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">22/05/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-05-22 09:00:27 +0200">22/05/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-05-22-especial-bso-pesadilla-antes-de-navidad.html">Especial BSO: Pesadilla antes de Navidad</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/danny-elfman">Danny Elfman</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/01/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-01-01 09:00:10 +0100">01/01/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-01-01-especial-bso-eduardo-manostijeras.html">Especial BSO: Eduardo Manostijeras</a></td>
         <td class="archive-table__cell--song">Ice Dance</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/danny-elfman">Danny Elfman</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-27 08:33:12 +0200">27/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-27-bso-eduardo-manostijeras.html">BSO: Eduardo Manostijeras</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/danny-elfman">Danny Elfman</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman">medinaman</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/09/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-09-08 10:00:00 +0200">08/09/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-09-08-bso-pesadilla-antes-de-navidad.html">BSO: Pesadilla antes de Navidad</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/danny-elfman">Danny Elfman</a></td>
@@ -87,6 +87,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

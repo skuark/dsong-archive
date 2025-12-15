@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Arctic Monkeys</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">17/02/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-02-17 09:00:17 +0100">17/02/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-02-17-fluorescent-adolescent-de-arctic-monkeys.html">Fluorescent adolescent, de Arctic Monkeys</a></td>
         <td class="archive-table__cell--song">Fluorescent adolescent</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/arctic-monkeys">Arctic Monkeys</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo">Johnbo</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/09/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-09-15 10:00:00 +0200">15/09/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-09-15-album-whatever-people-say-i-am-thats-what-im-not-de-arctic-monkeys.html">Album: Whatever people say I am, that&#39;s what I&#39;m not, de Arctic Monkeys</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/arctic-monkeys">Arctic Monkeys</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">30/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-30 08:00:02 +0100">30/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-30-when-the-sun-goes-down-de-arctic-monkeys.html">When the Sun Goes Down, de Arctic Monkeys</a></td>
         <td class="archive-table__cell--song">When the Sun Goes Down</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/arctic-monkeys">Arctic Monkeys</a></td>
@@ -78,6 +78,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

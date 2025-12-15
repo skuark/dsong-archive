@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 1980</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">08/05/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-05-08 09:00:31 +0200">08/05/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-05-08-tu-frialdad-de-triana.html">Tu Frialdad, de Triana</a></td>
         <td class="archive-table__cell--song">Tu Frialdad</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/triana">Triana</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/juanje-ra">juanje.ra</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/10/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-10-01 09:00:00 +0200">01/10/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-10-01-everybodys-got-to-learn-sometime-de-the-korgis.html">Everybody&#39;s Got To Learn Sometime, de The Korgis</a></td>
         <td class="archive-table__cell--song">Everybody&#39;s Got To Learn Sometime</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-korgis">The Korgis</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/poncho">Poncho</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/02/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-02-21 09:00:41 +0100">21/02/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-02-21-love-will-tear-us-apart-de-joy-division.html">Love will tear us apart, de Joy Division</a></td>
         <td class="archive-table__cell--song">Love will tear us apart again</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/joy-division">Joy Division</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">02/05/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-05-02 09:00:40 +0200">02/05/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-05-02-nine-to-five-de-dolly-parton.html">Nine to five, de Dolly Parton</a></td>
         <td class="archive-table__cell--song">Nine to Five</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/dolly-parton">Dolly Parton</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/06/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-06-04 09:00:10 +0200">04/06/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-06-04-fool-for-your-loving-de-whitesnake.html">Fool for your loving, de Whitesnake</a></td>
         <td class="archive-table__cell--song">Fool for your loving</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/whitesnake">Whitesnake</a></td>
@@ -94,7 +94,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/vicluiper">vicluiper</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/06/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-06-28 11:27:41 +0200">28/06/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-06-28-breaking-the-law-de-judas-priest.html">Breaking the law, de Judas Priest</a></td>
         <td class="archive-table__cell--song">Breaking the law</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/judas-priest">Judas Priest</a></td>
@@ -103,7 +103,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/12/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-12-15 08:00:10 +0100">15/12/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-12-15-funky-town-de-lipps-inc.html">Funkytown, de Lipps Inc.</a></td>
         <td class="archive-table__cell--song">Funkytown</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/lipps-inc">Lipps Inc</a></td>
@@ -112,7 +112,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/12/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-12-24 08:00:42 +0100">24/12/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-12-24-just-idag-ar-jag-stark-de-kenta-gustafsson.html">Just idäg är jag stark, de Kenta Gustafsson</a></td>
         <td class="archive-table__cell--song">Just idag är jag stark</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/kenta-gustafsson">kenta gustafsson</a></td>
@@ -121,7 +121,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/luizk">luizk</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-03 08:00:57 +0200">03/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-03-whip-it-de-devo.html">Whip it, de Devo</a></td>
         <td class="archive-table__cell--song">Whip it</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/devo">Devo</a></td>
@@ -130,7 +130,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/09/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-09-23 08:00:43 +0200">23/09/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-09-23-chica-de-ayer-de-nacha-pop.html">Chica de ayer, de Nacha Pop</a></td>
         <td class="archive-table__cell--song">Chica de ayer</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nacha-pop">Nacha Pop</a></td>
@@ -141,6 +141,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

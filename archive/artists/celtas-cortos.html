@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Celtas Cortos</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">13/10/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-10-13 09:00:59 +0200">13/10/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-10-13-la-senda-del-tiempo-de-celtas-cortos.html">La senda del tiempo, de Celtas Cortos</a></td>
         <td class="archive-table__cell--song">La senda del tiempo</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/celtas-cortos">Celtas Cortos</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/07/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-07-04 09:00:37 +0200">04/07/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-07-04-especial-album-nos-vemos-en-los-bares-de-celtas-cortos.html">Especial Álbum: Nos vemos en los bares, de Celtas Cortos</a></td>
         <td class="archive-table__cell--song">Cuéntame un cuento</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/celtas-cortos">Celtas Cortos</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/09/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-09-10 09:00:08 +0200">10/09/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-09-10-shenandoah-de-celtas-cortos.html">Shenandoah, de Celtas Cortos</a></td>
         <td class="archive-table__cell--song">Shenandoah</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/celtas-cortos">Celtas Cortos</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-12 08:00:00 +0200">12/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-12-tranquilo-majete-de-celtas-cortos.html">Tranquilo majete, de Celtas Cortos</a></td>
         <td class="archive-table__cell--song">Tranquilo majete</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/celtas-cortos">Celtas Cortos</a></td>
@@ -87,6 +87,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

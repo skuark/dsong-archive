@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 2005</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">24/05/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-05-24 09:00:01 +0200">24/05/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-05-24-especial-album-devil-dust-de-bruce-springsteen.html">Especial Álbum: Devil &amp; Dust, de Bruce Springsteen</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/bruce-springsteen">Bruce Springsteen</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/05/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-05-25 09:00:34 +0200">25/05/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-05-25-lift-de-poets-of-the-fall.html">Lift, de Poets of the fall</a></td>
         <td class="archive-table__cell--song">Lift</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/poets-of-the-fall">Poets of the Fall</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/05/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-05-27 09:00:42 +0200">27/05/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-05-27-boston-de-augustana.html">Boston, de Augustana</a></td>
         <td class="archive-table__cell--song">Boston</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/augustana">Augustana</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/06/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-06-04 09:00:25 +0200">04/06/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-06-04-si-tu-si-yo-si-no-de-muchachito-bombo-infierno.html">&#39;Si tú, si yo, sí, no&#39;, de Muchachito Bombo Infierno</a></td>
         <td class="archive-table__cell--song">Si tú, si yo, sí, no</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/muchachito-bombo-infierno">Muchachito Bombo Infierno</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/06/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-06-17 09:00:09 +0200">17/06/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-06-17-get-your-way-de-jamie-cullum.html">Get your way, de Jamie Cullum</a></td>
         <td class="archive-table__cell--song">Get your way</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jamie-cullum">Jamie Cullum</a></td>
@@ -94,7 +94,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">18/06/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-06-18 09:00:35 +0200">18/06/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-06-18-finding-out-true-love-is-blind-de-louis-xiv.html">Finding Out True Love is Blind, de Louis XIV</a></td>
         <td class="archive-table__cell--song">Finding Out True Love is Blind</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/louis-xiv">Louis XIV</a></td>
@@ -103,7 +103,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/mari">Mari</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/06/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-06-24 09:00:30 +0200">24/06/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-06-24-only-this-moment-de-royksopp.html">Only This Moment, de Röyksopp</a></td>
         <td class="archive-table__cell--song">Only This Moment</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/roeyksopp">Röyksopp</a></td>
@@ -112,7 +112,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/07/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-07-04 09:00:06 +0200">04/07/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-07-04-nube-negra-de-joaquin-sabina.html">Nube Negra, de Joaquín Sabina</a></td>
         <td class="archive-table__cell--song">Nube Negra</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/joaquin-sabina">Joaquín Sabina</a></td>
@@ -121,7 +121,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">07/07/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-07-07 09:00:12 +0200">07/07/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-07-07-standing-in-the-way-of-control-de-gossip.html">Standing in the way of control, de Gossip</a></td>
         <td class="archive-table__cell--song">Standing in the way of control</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/gossip">Gossip</a></td>
@@ -130,7 +130,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/07/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-07-20 09:00:35 +0200">20/07/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-07-20-soldado-229-de-antonio-orozco-e-ivan-ferreiro.html">Soldado 229, de Antonio Orozco e Iván Ferreiro</a></td>
         <td class="archive-table__cell--song">Soldado 229</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ivan-ferreiro">Iván Ferreiro</a></td>
@@ -139,7 +139,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/07/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-07-21 09:00:00 +0200">21/07/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-07-21-the-kill-de-30-seconds-to-mars.html">The Kill, de 30 Seconds to Mars</a></td>
         <td class="archive-table__cell--song">The Kill</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/30-seconds-to-mars">30 Seconds to Mars</a></td>
@@ -148,7 +148,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/09/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-09-01 09:00:42 +0200">01/09/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-09-01-chicago-de-sufjan-stevens.html">Chicago, de Sufjan Stevens</a></td>
         <td class="archive-table__cell--song">Chicago</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/sufjan-stevens">Sufjan Stevens</a></td>
@@ -157,7 +157,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/09/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-09-04 09:00:21 +0200">04/09/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-09-04-landed-de-ben-folds.html">Landed, de Ben Folds</a></td>
         <td class="archive-table__cell--song">Landed</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ben-folds">Ben Folds</a></td>
@@ -166,7 +166,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/10/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-10-06 09:00:15 +0200">06/10/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-10-06-soul-meets-body-de-death-cab-for-cutie.html">Soul Meets Body, de Death Cab for Cutie</a></td>
         <td class="archive-table__cell--song">Soul Meets Body</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/death-cab-for-cutie">Death Cab for Cutie</a></td>
@@ -175,7 +175,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/11/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-11-10 09:00:27 +0100">10/11/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-11-10-y-al-final-de-enrique-bunbury.html">Y al final, de Enrique Bunbury</a></td>
         <td class="archive-table__cell--song">Y al final</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/enrique-bunbury">Enrique Bunbury</a></td>
@@ -184,7 +184,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/11/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-11-14 09:00:11 +0100">14/11/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-11-14-gegen-den-strich-de-tocotronic.html">Gegen den Strich, de Tocotronic</a></td>
         <td class="archive-table__cell--song">Gegen den strich</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/tocotronic">Tocotronic</a></td>
@@ -193,7 +193,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/poncho">Poncho</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">27/11/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-11-27 09:00:40 +0100">27/11/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-11-27-always-love-de-nada-surf.html">Always Love, de Nada Surf</a></td>
         <td class="archive-table__cell--song">Always love</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nada-surf">Nada surf</a></td>
@@ -202,7 +202,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/12/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-12-16 09:00:20 +0100">16/12/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-12-16-feeling-a-moment-de-feeder.html">Feeling a moment, de Feeder</a></td>
         <td class="archive-table__cell--song">Feeling a moment</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/feeder">Feeder</a></td>
@@ -211,7 +211,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">24/12/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-12-24 09:00:48 +0100">24/12/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-12-24-let-it-snow-de-diana-krall.html">Let It Snow, de Diana Krall</a></td>
         <td class="archive-table__cell--song">Let It Snow</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/diana-krall">Diana Krall</a></td>
@@ -220,7 +220,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/12/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-12-29 09:00:17 +0100">29/12/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-12-29-best-of-you-de-foo-fighters.html">Best of you, de Foo Fighters</a></td>
         <td class="archive-table__cell--song">Best of you</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/foo-fighters">Foo fighters</a></td>
@@ -229,7 +229,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/01/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-01-29 09:00:04 +0100">29/01/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-01-29-flaca-de-amor-de-pasion-vega.html">Flaca De Amor, de Pasión Vega</a></td>
         <td class="archive-table__cell--song">Flaca De Amor</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/pasion-vega">Pasión Vega</a></td>
@@ -238,7 +238,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/juanje-ra">juanje.ra</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">02/02/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-02-02 09:00:32 +0100">02/02/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-02-02-white-shadows-de-coldplay.html">White Shadows, de Coldplay</a></td>
         <td class="archive-table__cell--song">White Shadows</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/coldplay">Coldplay</a></td>
@@ -247,7 +247,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/02/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-02-15 09:00:12 +0100">15/02/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-02-15-la-rabida-de-manolo-carrasco.html">La Rábida, de Manolo Carrasco</a></td>
         <td class="archive-table__cell--song">La Rábida</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/manolo-carrasco">Manolo Carrasco</a></td>
@@ -256,7 +256,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/juanje-ra">juanje.ra</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/02/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-02-25 09:00:21 +0100">25/02/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-02-25-tourist-de-athlete.html">Tourist, de Athlete</a></td>
         <td class="archive-table__cell--song">Tourist</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/athlete">Athlete</a></td>
@@ -265,7 +265,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/poncho">Poncho</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">26/02/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-02-26 09:00:40 +0100">26/02/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-02-26-here-it-goes-again-de-ok-go.html">Here It Goes Again, de Ok Go</a></td>
         <td class="archive-table__cell--song">Here It Goes Again</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ok-go">Ok Go</a></td>
@@ -274,7 +274,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/02/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-02-28 09:00:09 +0100">28/02/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-02-28-especial-album-i-am-a-bird-now-de-antony-the-johnsons.html">Especial Album: I am a bird now, de Antony &amp; the Johnsons</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/antony-and-the-johnsons">Antony &amp; the Johnsons</a></td>
@@ -283,7 +283,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/03/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-03-05 09:00:50 +0100">05/03/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-03-05-bittersweet-symphony-de-u-n-k-l-e.html">Bittersweet symphony, de U.N.K.L.E.</a></td>
         <td class="archive-table__cell--song">Bittersweet symphony</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/u-n-k-l-e">U.N.K.L.E.</a></td>
@@ -292,7 +292,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/poncho">Poncho</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/03/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-03-12 09:00:31 +0100">12/03/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-03-12-the-magic-of-the-wizards-dream-de-rhapsody-of-fire.html">The Magic of the Wizard&#39;s Dream, de Rhapsody of Fire</a></td>
         <td class="archive-table__cell--song">The Magic of the Wizard&#39;s Dream</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/rhapsody-of-fire">Rhapsody of Fire</a></td>
@@ -301,7 +301,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/03/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-03-19 09:00:51 +0100">19/03/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-03-19-king-of-the-road-de-roger-miller.html">King of The Road, de Roger Miller</a></td>
         <td class="archive-table__cell--song">King of the Road</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/roger-miller">Roger Miller</a></td>
@@ -310,7 +310,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/04/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-04-14 09:00:04 +0200">14/04/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-04-14-ciudadano-a-de-ivan-ferreiro.html">Ciudadano A, de Iván Ferreiro</a></td>
         <td class="archive-table__cell--song">Ciudadano A</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ivan-ferreiro">Iván Ferreiro</a></td>
@@ -319,7 +319,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/06/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-06-08 09:00:20 +0200">08/06/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-06-08-especial-lagarto-festival-2010-el-nino-guey-de-sfdk.html">Especial Lagarto Festival 2010: El niño güey, de SFDK</a></td>
         <td class="archive-table__cell--song">El niño güey</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/sfdk">SFDK</a></td>
@@ -328,7 +328,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/festivales">Festivales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jose">Jose</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/06/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-06-14 09:00:15 +0200">14/06/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-06-14-fruhling-de-hund-am-strand.html">Frühling, de Hund am Strand</a></td>
         <td class="archive-table__cell--song">Frühling</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/hund-am-strand">Hund am Strand</a></td>
@@ -337,7 +337,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/poncho">Poncho</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">18/06/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-06-18 09:00:44 +0200">18/06/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-06-18-estoy-hecho-de-pedacitos-de-ti-de-antonio-orozco-y-arcangel.html">Estoy Hecho De Pedacitos De Ti, de Antonio Orozco y Arcángel</a></td>
         <td class="archive-table__cell--song">Estoy Hecho De Pedacitos De Tí</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/antonio-orozco-y-arcangel">Antonio Orozco y Arcángel</a></td>
@@ -346,7 +346,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/juanje-ra">juanje.ra</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/09/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-09-20 09:00:57 +0200">20/09/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-09-20-ocean-de-john-butler-trio.html">Ocean, de John Butler Trio</a></td>
         <td class="archive-table__cell--song">Ocean</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/john-buttler-trio">John Buttler Trio</a></td>
@@ -355,7 +355,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">13/12/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-12-13 09:00:43 +0100">13/12/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-12-13-jump-de-madonna.html">Jump, de Madonna</a></td>
         <td class="archive-table__cell--song">Jump</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/madonna">Madonna</a></td>
@@ -364,7 +364,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/01/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-01-12 09:00:47 +0100">12/01/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-01-12-oh-mandy-de-the-spinto-band.html">Oh Mandy, de The Spinto Band</a></td>
         <td class="archive-table__cell--song">Oh Mandy</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-spinto-band">The Spinto Band</a></td>
@@ -373,7 +373,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/02/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-02-15 09:00:40 +0100">15/02/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-02-15-concrete-bed-de-nada-surf.html">Concrete Bed, de Nada Surf</a></td>
         <td class="archive-table__cell--song">Concrete bed</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nada-surf">Nada surf</a></td>
@@ -382,7 +382,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/04/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-04-05 09:00:05 +0200">05/04/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-04-05-everyday-i-love-you-less-and-less-de-kaiser-chiefs.html">Everyday I love you less and less, de Kaiser Chiefs</a></td>
         <td class="archive-table__cell--song">Everyday I love you less and less</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/kaiser-chiefs">Kaiser Chiefs</a></td>
@@ -391,7 +391,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo">Johnbo</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/04/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-04-21 09:00:09 +0200">21/04/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-04-21-the-funeral-de-band-of-horses.html">The funeral, de Band of Horses</a></td>
         <td class="archive-table__cell--song">The funeral</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/band-of-horses">Band of horses</a></td>
@@ -400,7 +400,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/06/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-06-17 09:00:43 +0200">17/06/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-06-17-bigger-than-jesus-de-green-manalishi.html">Bigger than Jesus, de Green Manalishi</a></td>
         <td class="archive-table__cell--song">Bigger than Jesus</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/green-manalishi">Green Manalishi</a></td>
@@ -409,7 +409,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/09/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-09-01 09:00:31 +0200">01/09/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-09-01-tripping-de-robbie-williams.html">Tripping, de Robbie Williams</a></td>
         <td class="archive-table__cell--song">Tripping</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/robbie-williams">Robbie Williams</a></td>
@@ -418,7 +418,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/09/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-09-03 09:00:53 +0200">03/09/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-09-03-precious-de-depeche-mode.html">Precious, de Depeche Mode</a></td>
         <td class="archive-table__cell--song">Precious</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/depeche-mode">Depeche Mode</a></td>
@@ -427,7 +427,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/10/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-10-08 09:00:52 +0200">08/10/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-10-08-zapalduen-olerkia-de-ken-zazpi.html">Zapalduen Olerkia, de Ken Zazpi</a></td>
         <td class="archive-table__cell--song">Zapalduen Olerkia</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ken-zazpi">Ken Zazpi</a></td>
@@ -436,7 +436,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/10/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-10-10 09:00:08 +0200">10/10/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-10-10-do-you-want-to-de-franz-ferdinand.html">Do you want to, de Franz Ferdinand</a></td>
         <td class="archive-table__cell--song">Do you want to</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/franz-ferdinand">Franz Ferdinand</a></td>
@@ -445,7 +445,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/11/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-11-03 08:00:00 +0100">03/11/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-11-03-feel-good-inc-de-gorillaz.html">Feel good Inc, de Gorillaz</a></td>
         <td class="archive-table__cell--song">Feel Goog Inc</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/gorillaz">Gorillaz</a></td>
@@ -454,7 +454,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/beita">Beita</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/11/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-11-05 08:00:00 +0100">05/11/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-11-05-love-me-like-you-de-the-magic-numbers.html">Love me like you, de The Magic Numbers</a></td>
         <td class="archive-table__cell--song">Love me like you</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-magic-numbers">The Magic Numbers</a></td>
@@ -463,7 +463,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/11/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-11-19 08:00:19 +0100">19/11/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-11-19-somebody-told-me-de-richard-cheese.html">Somebody told me, de Richard Cheese</a></td>
         <td class="archive-table__cell--song">Somebody told me</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/richard-cheese">Richard Cheese</a></td>
@@ -472,7 +472,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/poncho">Poncho</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/01/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-01-20 08:00:19 +0100">20/01/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-01-20-ta-doleur-de-camille.html">Ta douleur, de Camille</a></td>
         <td class="archive-table__cell--song">Ta douleur</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/camille">Camille</a></td>
@@ -481,7 +481,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/01/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-01-25 08:00:58 +0100">25/01/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-01-25-semilla-en-la-tierra-de-carlos-chaouen.html">Semilla en la tierra, de Carlos Chaouen</a></td>
         <td class="archive-table__cell--song">Semilla en la tierra</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/carlos-chaouen">Carlos Chaouen</a></td>
@@ -490,7 +490,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">09/04/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-04-09 09:00:20 +0200">09/04/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-04-09-i-will-follow-you-into-the-dark-de-death-cab-for-cutie.html">I will follow you into the dark, de Death Cab for Cutie.</a></td>
         <td class="archive-table__cell--song">I will follow you into the dark</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/death-cab-for-cutie">Death Cab for Cutie</a></td>
@@ -499,7 +499,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/04/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-04-12 08:00:11 +0200">12/04/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-04-12-they-de-jem.html">They, de Jem</a></td>
         <td class="archive-table__cell--song">They</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jem">Jem</a></td>
@@ -508,7 +508,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">18/05/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-05-18 08:00:40 +0200">18/05/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-05-18-so-we-are-here-de-bloc-party.html">So we are here, de Bloc Party</a></td>
         <td class="archive-table__cell--song">So we are here</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/bloc-party">Bloc Party</a></td>
@@ -517,7 +517,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/09/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-09-05 08:00:18 +0200">05/09/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-09-05-confusion-de-cycle.html">Confusion!!!, de Cycle</a></td>
         <td class="archive-table__cell--song">Confusion!!!</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/cycle">Cycle</a></td>
@@ -526,7 +526,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">22/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-22 08:00:00 +0200">22/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-22-what-im-looking-for-de-brendan-benson.html">What I&#39;m looking for, de Brendan Benson</a></td>
         <td class="archive-table__cell--song">What I&#39;m looking for</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/brendan-benson">Brendan Benson</a></td>
@@ -535,7 +535,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/11/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-11-15 08:00:00 +0100">15/11/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-11-15-born-in-the-70s-de-ed-harcourt.html">Born in the &#39;70s, de Ed Harcourt</a></td>
         <td class="archive-table__cell--song">Born in the &#39;70s</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/undefined"></a></td>
@@ -544,7 +544,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-16 08:00:18 +0100">16/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-16-bso-videojuego-shadow-of-the-colossus.html">BSO Videojuego: Shadow of the Colossus</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/kow-otani">Kow Otani</a></td>
@@ -553,7 +553,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/bandas-sonoras-originales">Bandas Sonoras Originales</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/ome-gak">Ome Gak</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-19 09:00:02 +0100">19/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-19-bird-on-the-wire-de-perla-batalla.html">Bird on the wire, de Perla Batalla</a></td>
         <td class="archive-table__cell--song">Bird on the wire</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/perla-batalla">Perla Batalla</a></td>
@@ -562,7 +562,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-20 08:00:55 +0100">20/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-20-lao-shu-ai-da-mi-de-xiang-xiang.html">Lao Shu Ai Da Mi, de Xiang Xiang</a></td>
         <td class="archive-table__cell--song">Lao Shu Ai Da Mi</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/xiang-xiang">Xiang Xiang</a></td>
@@ -571,7 +571,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-03 08:00:01 +0100">03/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-03-a-nervous-tic-motion-of-the-head-to-the-left-de-andrew-bird.html">A nervous tic motion of the head to the left, de Andrew Bird </a></td>
         <td class="archive-table__cell--song">A nervous tic motion of the head to the left</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/andrew-bird">Andrew Bird</a></td>
@@ -580,7 +580,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/ascen">Ascen</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/01/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-01-11 08:00:47 +0100">11/01/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-01-11-im-so-sick-de-flyleaf.html">I’m so sick, de Flyleaf</a></td>
         <td class="archive-table__cell--song">I&#39;m so sick</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/flyleaf">Flyleaf</a></td>
@@ -589,7 +589,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">28/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-28 08:00:17 +0100">28/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-28-marta-sebas-guille-y-los-demas-de-amaral.html">Marta, Sebas, Guille y los demás, de Amaral</a></td>
         <td class="archive-table__cell--song">Marta, Sebas, Guille y los demás</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/amaral">Amaral</a></td>
@@ -598,7 +598,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/03/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-03-01 08:00:59 +0100">01/03/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-03-01-desolado-de-pastora.html">Desolado, de Pastora</a></td>
         <td class="archive-table__cell--song">Desolado</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/pastora">Pastora</a></td>
@@ -607,7 +607,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">17/04/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-04-17 08:00:45 +0200">17/04/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-04-17-the-widow-de-the-mars-volta.html">The Widow, de The Mars Volta</a></td>
         <td class="archive-table__cell--song">The Widow</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-mars-volta">The Mars Volta</a></td>
@@ -616,7 +616,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">20/09/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-09-20 09:00:00 +0200">20/09/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-09-20-they-love-you-de-sterlin.html">They love you, de Sterlin</a></td>
         <td class="archive-table__cell--song">They love you</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/sterlin">Sterlin</a></td>
@@ -625,7 +625,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo">Johnbo</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/11/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-11-06 10:00:00 +0100">06/11/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-11-06-drink-me-de-anna-nalick.html">Drink Me, de Anna Nalick</a></td>
         <td class="archive-table__cell--song">Drink Me </td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/anna-nalick">Anna Nalick</a></td>
@@ -634,7 +634,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/12/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-12-25 08:00:55 +0100">25/12/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-12-25-long-walk-de-hauschka.html">Long Walk, de Hauschka</a></td>
         <td class="archive-table__cell--song">Long Walk</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/hauschka">Hauschka</a></td>
@@ -643,7 +643,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/06/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-06-16 08:00:27 +0200">16/06/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-06-16-resurreccion-de-amaral.html">Resurrección, de Amaral</a></td>
         <td class="archive-table__cell--song">Resurreción</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/amaral">Amaral</a></td>
@@ -652,7 +652,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">10/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-10 08:00:03 +0200">10/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-10-el-kilo-de-orishas.html">El Kilo, de Orishas</a></td>
         <td class="archive-table__cell--song">El Kilo</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/orishas">Orishas</a></td>
@@ -661,7 +661,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">11/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-11 10:00:00 +0200">11/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-11-helicopter-de-bloc-party.html">Helicopter, de Bloc Party</a></td>
         <td class="archive-table__cell--song">Helicopter</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/bloc-party">Bloc Party</a></td>
@@ -670,7 +670,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo">Johnbo</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-29 08:00:00 +0100">29/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-29-munich-de-editors.html">Munich, de Editors</a></td>
         <td class="archive-table__cell--song">Munich</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/editors">Editors</a></td>
@@ -679,7 +679,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo">Johnbo</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-05 18:00:45 +0100">05/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-05-solo-tu-de-pastora-soler.html">Sólo tú, de Pastora Soler</a></td>
         <td class="archive-table__cell--song">Sólo tú</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/pastora-soler">Pastora Soler</a></td>
@@ -690,6 +690,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

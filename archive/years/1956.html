@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 1956</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">31/12/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-12-31 08:00:58 +0100">31/12/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-12-31-roll-over-beethoven-de-chuck-berry.html">Roll Over Beethoven, de Chuck Berry</a></td>
         <td class="archive-table__cell--song">Roll over Beethoven</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/chuck-berry">Chuck Berry</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">25/04/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-04-25 08:00:17 +0200">25/04/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-04-25-banana-boat.html">Banana Boat Song (Day-O), de Harry Belafonte</a></td>
         <td class="archive-table__cell--song">Banana Boat Song (Day-O)</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/harry-belafonte">Harry Belafonte</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/10/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-10-09 00:39:16 +0200">08/10/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-10-09-time-after-time-de-chet-baker.html">Time after time, de Chet Baker</a></td>
         <td class="archive-table__cell--song">Time after time</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/chet-baker">Chet Baker</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/brian-edward-hyde">Brian Edward Hyde</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-01 08:00:00 +0100">01/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-01-non-je-ne-regrette-rien-de-edith-piaf.html">Non je ne regrette rien, de Édith Piaf</a></td>
         <td class="archive-table__cell--song">Non, je ne regrette rien</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/edith-piaf">Édith Piaf</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">29/09/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-09-29 09:00:00 +0200">29/09/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-09-29-vals-no-2-de-dmitri-shostakovich.html">Vals nº 2, de Dmitri Shostakóvich</a></td>
         <td class="archive-table__cell--song">Vals nº 2</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/dmitri-shostakovich">Dmitri Shostakóvich</a></td>
@@ -96,6 +96,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

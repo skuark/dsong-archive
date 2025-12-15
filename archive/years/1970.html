@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 1970</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">22/05/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-05-22 09:00:10 +0200">22/05/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-05-22-paranoid-de-black-sabbath.html">Paranoid, de Black Sabbath</a></td>
         <td class="archive-table__cell--song">Paranoid</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/black-sabbath">Black Sabbath</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/luizk">luizk</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">19/06/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-06-19 09:00:44 +0200">19/06/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-06-19-thats-the-way-de-led-zeppelin.html">That&#39;s the way, de Led Zeppelin</a></td>
         <td class="archive-table__cell--song">That&#39;s the way</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin">Led Zeppelin</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/liz">Liz</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/07/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-07-08 09:00:40 +0200">08/07/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-07-08-have-you-ever-seen-the-rain-de-creedence-clearwater-revival.html">Have you ever seen the rain, de Creedence Clearwater Revival</a></td>
         <td class="archive-table__cell--song">Have you ever seen the rain</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/creedence-clearwater-revival">Creedence Clearwater Revival</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">12/03/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-03-12 09:00:19 +0100">12/03/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-03-12-wild-world-de-cat-stevens.html">Wild World, de Cat Stevens</a></td>
         <td class="archive-table__cell--song">Wild World</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/cat-stevens">Cat Stevens</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/06/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-06-08 15:11:33 +0200">08/06/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-06-08-inmigrant-song-de-led-zeppelin.html">Inmigrant Song, de Led Zeppelin</a></td>
         <td class="archive-table__cell--song">Inmigrant Song</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin">Led Zeppelin</a></td>
@@ -94,7 +94,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jal">Jal</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/07/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-07-03 09:00:00 +0200">03/07/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-07-03-especial-album-mad-dogs-and-englishman-de-joe-cocker.html">Especial Álbum: Mad Dogs and Englishman, de Joe Cocker</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/joe-cocker">Joe Cocker</a></td>
@@ -103,7 +103,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/03/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-03-23 08:00:10 +0100">23/03/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-03-23-25-or-6-to-4-de-chicago.html">25 or 6 to 4, de Chicago</a></td>
         <td class="archive-table__cell--song">25 or 6 to 4</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/chicago">Chicago</a></td>
@@ -112,7 +112,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">31/12/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-12-31 08:00:22 +0100">31/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-31-todo-tiene-su-fin-de-modulos.html">Todo tiene su fin, de Módulos</a></td>
         <td class="archive-table__cell--song">Todo tiene su fin</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/modulos">Módulos</a></td>
@@ -121,7 +121,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-08 08:00:51 +0100">08/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-08-who-loves-the-sun-de-the-velvet-underground.html">Who Loves The Sun, de The Velvet Underground</a></td>
         <td class="archive-table__cell--song">Who Loves The Sun</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-velvet-underground">The Velvet Underground</a></td>
@@ -130,7 +130,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/ferdinando">ferdinando</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/02/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-02-14 08:00:57 +0100">14/02/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-02-14-since-ive-been-loving-you-de-led-zeppelin.html">Since I&#39;ve Been Loving You, de Led Zeppelin</a></td>
         <td class="archive-table__cell--song">Since I&#39;ve Been Loving You</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin">Led Zeppelin</a></td>
@@ -139,7 +139,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-03 08:00:04 +0200">03/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-03-maybe-im-amazed-de-paul-mccartney.html">Maybe I&#39;m Amazed, de Paul McCartney</a></td>
         <td class="archive-table__cell--song">Maybe I&#39;m Amazed</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/paul-mccartney">Paul McCartney</a></td>
@@ -148,7 +148,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/monty">Monty</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">13/07/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-07-13 08:00:14 +0200">13/07/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-07-13-one-of-these-things-first-de-nick-drake.html">One Of These Things First, de Nick Drake</a></td>
         <td class="archive-table__cell--song">One Of These Things First</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nick-drake">Nick Drake</a></td>
@@ -157,7 +157,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">07/10/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-10-07 08:00:51 +0200">07/10/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-10-07-oye-como-va-de-santana.html">Oye Cómo Va, de Santana</a></td>
         <td class="archive-table__cell--song">Oye Cómo Va</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/santana">Santana</a></td>
@@ -168,6 +168,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

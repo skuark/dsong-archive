@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 1965</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">11/12/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-12-11 09:00:27 +0100">11/12/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-12-11-milk-and-honey-de-jackson-c-frank.html">Jackson C. Frank, de Jackson C. Frank</a></td>
         <td class="archive-table__cell--song"></td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jackson-c-frank">Jackson C. Frank</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">16/12/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-12-16 08:00:39 +0100">16/12/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-12-16-play-with-fire-de-the-rolling-stones.html">Play with fire, de The Rolling Stones</a></td>
         <td class="archive-table__cell--song">Play with fire</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-rolling-stones">The Rolling Stones</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/luizk">luizk</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/02/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-02-23 09:00:22 +0100">23/02/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-02-23-i-put-a-spell-on-you-de-nina-simone.html">I put a spell on you, de Nina Simone</a></td>
         <td class="archive-table__cell--song">I put a spell on you</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nina-simone">Nina Simone</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">03/10/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-10-03 09:00:11 +0200">03/10/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-10-03-la-boheme-de-charles-aznavour.html">La Bohème, de Charles Aznavour</a></td>
         <td class="archive-table__cell--song">La Bohème</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/charles-aznavour">Charles Aznavour</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">15/05/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-05-15 08:00:54 +0200">15/05/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-05-15-queen-of-the-house-de-jody-miller.html">Queen of the house, de Jody Miller</a></td>
         <td class="archive-table__cell--song">Queen of the House</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/jody-miller">Jody Miller</a></td>
@@ -94,7 +94,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/02/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-02-21 03:00:18 +0100">21/02/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-02-21-starsfeelings-de-nina-simone.html">Sinnerman, de Nina Simone</a></td>
         <td class="archive-table__cell--song">Sinnerman</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/nina-simone">Nina Simone</a></td>
@@ -103,7 +103,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/brian-edward-hyde">Brian Edward Hyde</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">08/11/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-11-08 08:00:00 +0100">08/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-08-ya-me-voy-a-retirar-de-carlos-guastavino.html">Ya me voy a retirar, de Carlos Guastavino</a></td>
         <td class="archive-table__cell--song">Ya me voy a retirar</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/carlos-guastavino">Carlos Guastavino</a></td>
@@ -112,7 +112,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">04/12/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-12-04 08:00:00 +0100">04/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-04-poupee-de-cire-poupee-de-son-de-france-gall.html">Poupée de cire, poupée de son, de France Gall</a></td>
         <td class="archive-table__cell--song">Poupée de cire, poupée de son</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/france-gall">France Gall</a></td>
@@ -123,6 +123,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

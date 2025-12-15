@@ -35,21 +35,21 @@
 <h2 class="archive-title">Publicaciones del artista Iván Ferreiro</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">20/07/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-07-20 09:00:35 +0200">20/07/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-07-20-soldado-229-de-antonio-orozco-e-ivan-ferreiro.html">Soldado 229, de Antonio Orozco e Iván Ferreiro</a></td>
         <td class="archive-table__cell--song">Soldado 229</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ivan-ferreiro">Iván Ferreiro</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">14/04/2010</td>
+        <td class="archive-table__cell--published-at" data-value="2010-04-14 09:00:04 +0200">14/04/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-04-14-ciudadano-a-de-ivan-ferreiro.html">Ciudadano A, de Iván Ferreiro</a></td>
         <td class="archive-table__cell--song">Ciudadano A</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ivan-ferreiro">Iván Ferreiro</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">06/11/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-11-06 08:00:00 +0100">06/11/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-11-06-confesiones-de-un-artista-de-mierda-de-ivan-ferreiro.html">Confesiones de un artista de mierda, de Iván Ferreiro</a></td>
         <td class="archive-table__cell--song">Santa Adrenalina</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ivan-ferreiro">Iván Ferreiro</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/albumes">Álbumes</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">18/10/2013</td>
+        <td class="archive-table__cell--published-at" data-value="2013-10-18 08:00:28 +0200">18/10/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-10-18-como-conoci-a-vuestra-madre-de-ivan-ferreiro.html">Cómo conocí a vuestra madre, de Iván Ferreiro</a></td>
         <td class="archive-table__cell--song">Cómo conocí a vuestra madre</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ivan-ferreiro">Iván Ferreiro</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo">Johnbo</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">21/09/2014</td>
+        <td class="archive-table__cell--published-at" data-value="2014-09-21 10:00:00 +0200">21/09/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-09-21-material-de-diseccion-de-alis.html">Material de disección, de Alis</a></td>
         <td class="archive-table__cell--song">Material de disección</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/ivan-ferreiro">Iván Ferreiro</a></td>
@@ -96,6 +96,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

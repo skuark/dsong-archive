@@ -35,21 +35,21 @@
 <h2 class="archive-title">Música del año 1968</h2>
 
 <div class="archive">
-  <table class="archive-table">
+  <table class="archive-table" id="archive-table">
     <thead>
       <tr>
-        <th class="archive-table__cell--published-at">Fecha</th>
-        <th class="archive-table__cell--title">Publicación</th>
-        <th class="archive-table__cell--song">Canción</th>
-        <th class="archive-table__cell--artist">Artista</th>
-        <th class="archive-table__cell--album">Álbum</th>
-        <th class="archive-table__cell--year">Año</th>
-        <th class="archive-table__cell--category">Categoría</th>
-        <th class="archive-table__cell--editor">Autor</th>
+        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
+        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody><tr>
-        <td class="archive-table__cell--published-at">17/12/2009</td>
+        <td class="archive-table__cell--published-at" data-value="2009-12-17 09:00:14 +0100">17/12/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-12-17-all-along-the-watchtower-de-the-jimi-hendrix-experience.html">All Along the Watchtower, de The Jimi Hendrix Experience</a></td>
         <td class="archive-table__cell--song">All along the watchtower</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-jimi-hendrix-experience">The Jimi Hendrix Experience</a></td>
@@ -58,7 +58,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/luizk">luizk</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/10/2011</td>
+        <td class="archive-table__cell--published-at" data-value="2011-10-05 09:00:29 +0200">05/10/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-10-05-white-room-de-cream.html">White Room, de Cream</a></td>
         <td class="archive-table__cell--song">White Room</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/cream">Cream</a></td>
@@ -67,7 +67,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/skuark">skuark</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">05/03/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-03-05 08:00:00 +0100">05/03/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-03-05-stephanie-says-de-the-velvet-underground.html">Stephanie Says, de The Velvet Underground</a></td>
         <td class="archive-table__cell--song">Stephanie Says</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/the-velvet-underground">The Velvet Underground</a></td>
@@ -76,7 +76,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr">jesusr</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">23/11/2012</td>
+        <td class="archive-table__cell--published-at" data-value="2012-11-23 09:00:08 +0100">23/11/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-11-23-the-way-young-lovers-do-de-van-morrison.html">The way young lovers do, de Van Morrison</a></td>
         <td class="archive-table__cell--song">The way young lovers do</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/van-morrison">Van Morrison</a></td>
@@ -85,7 +85,7 @@
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones">Canciones</a></td>
         <td class="archive-table__cell--editor"><a href="/archive/editors/silvia">Silvia</a></td>
       </tr><tr>
-        <td class="archive-table__cell--published-at">01/04/2015</td>
+        <td class="archive-table__cell--published-at" data-value="2015-04-01 10:00:00 +0200">01/04/2015</td>
         <td class="archive-table__cell--title"><a href="/archive/2015-04-01-merry-go-round-de-wild-man-fischer.html">Merry go round, de Wild Man Fischer</a></td>
         <td class="archive-table__cell--song">Merry go round</td>
         <td class="archive-table__cell--artist"><a href="/archive/artists/wild-man-fischer">Wild Man Fischer</a></td>
@@ -96,6 +96,8 @@
       </tr></tbody>
   </table>
 </div>
+
+<script src="/js/archive-table-sort.js"></script>
 
 
     </div>

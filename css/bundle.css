@@ -148,6 +148,26 @@ a {
   top: -2px;
 }
 
+.archive-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.archive-table th.sortable:hover {
+  background: #333;
+}
+
+.archive-table th.sort-asc,
+.archive-table th.sort-desc {
+  background: #1a1a1a;
+}
+
+.archive-table th .sort-indicator {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
 .archive-table th a {
   color: #fff;
 }
