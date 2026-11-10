@@ -45,41 +45,45 @@ permalink: "archive/{{ post.id }}.html"
     {{ post.content | markdown | safe }}
   </div>
 
-  {% if post.metadata.podcast_file %}
-    <div class="post-view__media post-view__media--podcast">
-      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/{{ post.metadata.podcast_file }}">Tu navegador no soporta este tipo de reproductor</audio>
-    </div>
-  {% endif %}
+  {#- Players available for this post, in display order -#}
+  {%- set m = post.metadata %}
+  {%- set players = [] %}
+  {%- if m.podcast_file %}{% set players = players.concat([{ id: "podcast", label: "Podcast UniRadio", type: "audio", src: "https://dsongstatic.jesusmagamu.dev/mp3/podcast/" + m.podcast_file }]) %}{% endif %}
+  {%- if m.youtube_code %}{% set players = players.concat([{ id: "youtube", label: "YouTube", type: "video", src: "https://www.youtube.com/embed/" + m.youtube_code, title: "Vídeo de YouTube" }]) %}{% endif %}
+  {%- if m.spotify_url %}{% set players = players.concat([{ id: "spotify", label: "Spotify", type: "iframe", src: m.spotify_url, height: 80, title: "Reproductor de Spotify" }]) %}{% endif %}
+  {#- Apple song embeds (?i=<track>) are compact; album embeds show the tracklist #}
+  {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
 
-  {% if post.metadata.youtube_code %}
-    <div class="post-view__media post-view__media--youtube">
-      <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
+  {%- if players | length %}
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      {%- for player in players %}
+      <button class="players__tab" type="button" role="tab" id="tab-{{ player.id }}" aria-controls="panel-{{ player.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}"{% if not loop.first %} tabindex="-1"{% endif %}>{{ player.label }}</button>
+      {%- endfor %}
+    </div>
+
+    {%- for player in players %}
+    {#- Only the active panel loads its player; others keep the URL in data-src until shown #}
+    {%- set srcAttr = ("src" if loop.first else "data-src") %}
+    <div class="players__panel players__panel--{{ player.id }}" role="tabpanel" id="panel-{{ player.id }}" aria-labelledby="tab-{{ player.id }}"{% if not loop.first %} hidden{% endif %}>
+      {%- if player.type == "audio" %}
+      <audio controls preload="none" {{ srcAttr }}="{{ player.src }}">Tu navegador no soporta este tipo de reproductor</audio>
+      {%- elif player.type == "video" %}
       <div class="post-view__media-container">
-        <iframe loading="lazy" title="Vídeo de YouTube" src="https://www.youtube.com/embed/{{ post.metadata.youtube_code }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe title="{{ player.title }}" {{ srcAttr }}="{{ player.src }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      {%- elif player.id == "apple-music" %}
+      <iframe title="{{ player.title }}" {{ srcAttr }}="{{ player.src }}" width="100%" height="{{ player.height }}" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+      {%- else %}
+      <iframe title="{{ player.title }}" {{ srcAttr }}="{{ player.src }}" width="100%" height="{{ player.height }}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      {%- endif %}
     </div>
-  {% endif %}
-
-  {% if post.metadata.spotify_url %}
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="{{ post.metadata.spotify_url }}" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
-    </div>
-  {% endif %}
-
-  {% if post.metadata.apple_music_url %}
-    {# Song embeds (?i=<track>) are compact; album embeds show the tracklist #}
-    {% set appleHeight = 175 if "?i=" in post.metadata.apple_music_url else 450 %}
-    <div class="post-view__media post-view__media--apple-music">
-      <h3 class="post-view__subtitle">Reproducir en Apple Music</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Apple Music" src="{{ post.metadata.apple_music_url }}" width="100%" height="{{ appleHeight }}" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-      </div>
-    </div>
-  {% endif %}
+    {%- endfor %}
+  </details>
+  <script src="/js/players.js?v={{ 'js/players.js' | assetVersion }}" defer></script>
+  {%- endif %}
 
   {% if post.comments and post.comments | length > 0 %}
     <div class="post-view__comments">

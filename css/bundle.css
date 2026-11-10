@@ -313,6 +313,77 @@ a {
   width: 100%;
 }
 
+/* Players: accordion (details) with one tab per player */
+.players {
+  border: 2px solid #000;
+  margin: 1.5rem 0;
+}
+
+.players__summary {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  list-style: none;
+  padding: .5rem 1rem;
+}
+
+.players__summary::-webkit-details-marker {
+  display: none;
+}
+
+.players__summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: .5rem;
+  transition: transform .2s ease;
+}
+
+.players[open] .players__summary::before {
+  transform: rotate(90deg);
+}
+
+.players__tabs {
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.players__tab {
+  background: #fff;
+  border: 0;
+  border-right: 1px solid #ccc;
+  color: #000;
+  cursor: pointer;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  transition: background-color .2s ease;
+}
+
+.players__tab:hover {
+  background: #eee;
+}
+
+.players__tab[aria-selected="true"] {
+  background: #000;
+  color: #fff;
+}
+
+.players__tab:focus-visible {
+  outline: 2px solid #03a9f4;
+  outline-offset: -4px;
+}
+
+.players__panel {
+  padding: 1rem;
+}
+
+.players__panel audio {
+  width: 100%;
+}
+
 .post-view__media-container {
   height: 0;
   padding-bottom: 56.25%;
