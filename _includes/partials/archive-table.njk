@@ -2,6 +2,12 @@
 <h2 class="archive-title">{{ heading }}</h2>
 {%- endif %}
 
+<div class="archive-search">
+  <label class="archive-search__label" for="archive-search">Buscar</label>
+  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
+  <span class="archive-search__count" id="archive-search-count" aria-live="polite">{{ posts | length }} {{ "publicación" if (posts | length) == 1 else "publicaciones" }}</span>
+</div>
+
 <div class="archive">
   <table class="archive-table" id="archive-table">
     <thead>
@@ -33,4 +39,5 @@
   </table>
 </div>
 
+<script src="/js/archive-table-search.js?v={{ 'js/archive-table-search.js' | assetVersion }}"></script>
 <script src="/js/archive-table-sort.js?v={{ 'js/archive-table-sort.js' | assetVersion }}"></script>
