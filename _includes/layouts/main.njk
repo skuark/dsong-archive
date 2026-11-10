@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
+  <title>{% if title %}{{ title }} – {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="/css/bundle.css">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
   {% if env.ELEVENTY_ENV == "production" %}
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiId }}"></script>
   {% else %}
   <!-- Umami analytics disabled in development -->
   {% endif %}
@@ -23,7 +23,7 @@
       <div class="header">
         <div class="header__logo-container">
           <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
+          <div class="header__logo-headline">{{ site.title }}</div>
         </div>
 
         <ul class="header__menu">

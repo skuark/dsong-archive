@@ -5,39 +5,39 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dsong.es/</loc>
+    <loc>{{ site.url }}/</loc>
   </url>
   <url>
-    <loc>https://dsong.es/archive/</loc>
+    <loc>{{ site.url }}/archive/</loc>
   </url>
   {%- for post in collections.posts %}
   <url>
-    <loc>https://dsong.es/archive/{{ post.id }}.html</loc>
+    <loc>{{ site.url }}/archive/{{ post.id }}.html</loc>
   </url>
   {%- endfor %}
   {%- for artist in archive.byArtist %}
   <url>
-    <loc>https://dsong.es/archive/artists/{{ artist.slug }}.html</loc>
+    <loc>{{ site.url }}/archive/artists/{{ artist.slug }}.html</loc>
   </url>
   {%- endfor %}
   {%- for album in archive.byAlbum %}
   <url>
-    <loc>https://dsong.es/archive/albums/{{ album.slug }}.html</loc>
+    <loc>{{ site.url }}/archive/albums/{{ album.slug }}.html</loc>
   </url>
   {%- endfor %}
   {%- for editor in archive.byEditor %}
   <url>
-    <loc>https://dsong.es/archive/editors/{{ editor.slug }}.html</loc>
+    <loc>{{ site.url }}/archive/editors/{{ editor.slug }}.html</loc>
   </url>
   {%- endfor %}
   {%- for year in archive.byYear %}
   <url>
-    <loc>https://dsong.es/archive/years/{{ year.slug }}.html</loc>
+    <loc>{{ site.url }}/archive/years/{{ year.slug }}.html</loc>
   </url>
   {%- endfor %}
   {%- for category in archive.byCategory %}
   <url>
-    <loc>https://dsong.es/archive/categories/{{ category.slug }}.html</loc>
+    <loc>{{ site.url }}/archive/categories/{{ category.slug }}.html</loc>
   </url>
   {%- endfor %}
 </urlset>
