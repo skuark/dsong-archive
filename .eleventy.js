@@ -1,5 +1,6 @@
 import MarkdownIt from "markdown-it";
 import { posts } from "./lib/posts.js";
+import { fontFiles } from "./lib/fonts.js";
 
 export default function(eleventyConfig) {
   eleventyConfig.addGlobalData("env", {
@@ -40,6 +41,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy(fontFiles());
 
   return {
     dir: {
