@@ -33,6 +33,15 @@ export default function(eleventyConfig) {
     return md.render(content);
   });
 
+  // Plain-text summary for meta descriptions, cut at a word boundary.
+  eleventyConfig.addFilter("excerpt", (content, length = 160) => {
+    if (!content) return "";
+    const html = md.render(content).replace(/<[^>]*>/g, " ");
+    const text = md.utils.unescapeAll(html).replace(/\s+/g, " ").trim();
+    if (text.length <= length) return text;
+    return text.slice(0, text.lastIndexOf(" ", length - 1)).replace(/[,;:.]$/, "") + "…";
+  });
+
   eleventyConfig.ignores.add("README.md");
 
   eleventyConfig.addPassthroughCopy("css");
