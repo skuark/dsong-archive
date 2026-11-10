@@ -5,11 +5,11 @@ pagination:
   size: 1
   alias: category
 eleventyComputed:
-  title: "Publicaciones de la categoría {{ category[0] }} – El Archivo de dSong"
-permalink: "/archive/categories/{{ category[0] | slugify }}.html"
+  title: "Publicaciones de la categoría {{ category.name }} – El Archivo de dSong"
+permalink: "/archive/categories/{{ category.slug }}.html"
 pageClass: archive
 ---
 
-{% set posts = category[1] %}
-{% set heading = "Publicaciones de la categoría " + category[0] %}
+{% set posts = category.posts %}
+{% set heading = "Publicaciones de la categoría " + category.name %}
 {% include "partials/archive-table.njk" %}

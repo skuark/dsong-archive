@@ -4,6 +4,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      # v3+ changes some slugs and would break existing URLs (see lib/posts.js)
+      - dependency-name: "@sindresorhus/slugify"
+        update-types: ["version-update:semver-major"]
     groups:
       npm-minor-patch:
         update-types: ["minor", "patch"]

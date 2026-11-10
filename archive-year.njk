@@ -5,11 +5,11 @@ pagination:
   size: 1
   alias: year
 eleventyComputed:
-  title: "Publicaciones del año {{ year[0] }} – El Archivo de dSong"
-permalink: "/archive/years/{{ year[0] }}.html"
+  title: "Publicaciones del año {{ year.name }} – El Archivo de dSong"
+permalink: "/archive/years/{{ year.slug }}.html"
 pageClass: archive
 ---
 
-{% set posts = year[1] %}
-{% set heading = "Música del año " + year[0] %}
+{% set posts = year.posts %}
+{% set heading = "Música del año " + year.name %}
 {% include "partials/archive-table.njk" %}

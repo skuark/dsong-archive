@@ -22,11 +22,11 @@
         <td class="archive-table__cell--published-at" data-value="{{ post.published_at }}">{{ post.published_at | formatDate("dd/MM/yyyy") }}</td>
         <td class="archive-table__cell--title"><a href="/archive/{{ post.id }}.html">{{ post.title }}</a></td>
         <td class="archive-table__cell--song">{{ post.metadata.song }}</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/{{ post.metadata.artist | slugify }}">{{ post.metadata.artist }}</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/{{ post.metadata.artist | slugify }}-{{ post.metadata.album | slugify }}">{{ post.metadata.album }}</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/{{ post.metadata.year }}">{{ post.metadata.year }}</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/{{ post.metadata.category | slugify }}">{{ post.metadata.category }}</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/{{ post.editor.name | slugify }}">{{ post.editor.name }}</a></td>
+        <td class="archive-table__cell--artist">{% if post.slugs.artist %}<a href="/archive/artists/{{ post.slugs.artist }}.html">{{ post.metadata.artist }}</a>{% endif %}</td>
+        <td class="archive-table__cell--album">{% if post.slugs.album %}<a href="/archive/albums/{{ post.slugs.album }}.html">{{ post.metadata.album }}</a>{% endif %}</td>
+        <td class="archive-table__cell--year">{% if post.slugs.year %}<a href="/archive/years/{{ post.slugs.year }}.html">{{ post.metadata.year }}</a>{% endif %}</td>
+        <td class="archive-table__cell--category">{% if post.slugs.category %}<a href="/archive/categories/{{ post.slugs.category }}.html">{{ post.metadata.category }}</a>{% endif %}</td>
+        <td class="archive-table__cell--editor">{% if post.slugs.editor %}<a href="/archive/editors/{{ post.slugs.editor }}.html">{{ post.editor.name }}</a>{% endif %}</td>
       </tr>
       {%- endfor -%}
     </tbody>

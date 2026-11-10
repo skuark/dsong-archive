@@ -5,11 +5,11 @@ pagination:
   size: 1
   alias: artist
 eleventyComputed:
-  title: "Publicaciones del artista {{ artist[0] }} – El Archivo de dSong"
-permalink: "/archive/artists/{{ artist[0] | slugify }}.html"
+  title: "Publicaciones del artista {{ artist.name }} – El Archivo de dSong"
+permalink: "/archive/artists/{{ artist.slug }}.html"
 pageClass: archive
 ---
 
-{% set posts = artist[1] %}
-{% set heading = "Publicaciones del artista " + artist[0] %}
+{% set posts = artist.posts %}
+{% set heading = "Publicaciones del artista " + artist.name %}
 {% include "partials/archive-table.njk" %}

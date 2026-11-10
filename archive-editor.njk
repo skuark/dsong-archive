@@ -5,11 +5,11 @@ pagination:
   size: 1
   alias: editor
 eleventyComputed:
-  title: "Publicaciones del editor {{ editor[0] }} – El Archivo de dSong"
-permalink: "/archive/editors/{{ editor[0] | slugify }}.html"
+  title: "Publicaciones del editor {{ editor.name }} – El Archivo de dSong"
+permalink: "/archive/editors/{{ editor.slug }}.html"
 pageClass: archive
 ---
 
-{% set posts = editor[1] %}
-{% set heading = "Publicaciones del editor " + editor[0] %}
+{% set posts = editor.posts %}
+{% set heading = "Publicaciones del editor " + editor.name %}
 {% include "partials/archive-table.njk" %}
