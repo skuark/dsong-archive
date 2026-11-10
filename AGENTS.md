@@ -54,5 +54,6 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs.
 - **Post ids must be lowercase ASCII** (`validate` enforces it): percent-encoded ids 404 on GitHub Pages.
 - **Redirects are a frozen JSON**, not computed from posts: old URLs must keep working even when data changes.
 - **Media fields** in `metadata`: `youtube_code`, `spotify_url`, `apple_music_url` (embed URL; `?i=` = song, otherwise album), `podcast_file`. Broken embeds are removed from the data (history keeps them); Apple Music URLs were matched via the iTunes Search API.
+- **dSong's own Spotify playlists are kept even though they're broken** (`user/dsong2009`, `user/skuark`, `user/jesusr`: 18 posts). `check-media` reports them; don't remove them.
 - **Rewriting posts.json from a script**: `JSON.stringify(data, null, 2) + "\n"`, escaping U+007F–U+009F as `\uXXXX`, keeps the file byte-identical.
 - Refactors are verified by building before/after and running `diff -rq` on `_site`.
