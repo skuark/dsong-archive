@@ -7,7 +7,8 @@
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "validate": "node scripts/validate-data.mjs",
-    "check-links": "node scripts/check-links.mjs"
+    "check-links": "node scripts/check-links.mjs",
+    "check-media": "node scripts/check-media.mjs"
   },
   "keywords": [],
   "author": "",
