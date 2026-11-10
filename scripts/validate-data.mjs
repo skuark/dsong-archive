@@ -19,6 +19,9 @@ for (const [i, post] of data.posts.entries()) {
   if (!post.editor?.name) errors.push(`${where}: missing editor.name`);
   if (!post.metadata?.category) errors.push(`${where}: missing metadata.category`);
 
+  const spotify = post.metadata?.spotify_url;
+  if (spotify && !/^https:\/\/open\.spotify\.com\/embed\//.test(spotify)) errors.push(`${where}: spotify_url must be an embed URL (https://open.spotify.com/embed/...)`);
+
   for (const field of ["artist", "album", "year", "song"]) {
     if (!post.metadata?.[field]) warn(`metadata.${field}`);
   }
