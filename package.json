@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve"
+    "serve": "npx @11ty/eleventy --serve",
+    "validate": "node scripts/validate-data.mjs",
+    "check-links": "node scripts/check-links.mjs"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +16,9 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.8",
     "@sindresorhus/slugify": "~2.2.1",
-    "clean-css": "^5.3.3",
-    "date-fns": "^4.4.0",
-    "markdown-it": "^15.0.3",
-    "slugify": "^1.6.9"
+    "markdown-it": "^15.0.3"
+  },
+  "engines": {
+    "node": ">=26"
   }
 }

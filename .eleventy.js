@@ -1,4 +1,3 @@
-import { format, parse } from "date-fns";
 import MarkdownIt from "markdown-it";
 import { posts } from "./lib/posts.js";
 
@@ -11,20 +10,14 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addWatchTarget("lib/");
 
+  // Formats "yyyy-MM-dd HH:mm:ss +ZZZZ" keeping the original local time
+  // (no Date parsing, so the result doesn't depend on the build machine's timezone).
   eleventyConfig.addFilter("formatDate", (dateString, dateFormat) => {
-    if (!dateString) {
-      return "";
-    }
-    try {
-      const date = parse(dateString, "yyyy-MM-dd HH:mm:ss XX", new Date());
-      if (isNaN(date.getTime())) {
-        return `Invalid date: ${dateString}`;
-      }
-      return format(date, dateFormat);
-    } catch (e) {
-      console.error(`Error formatting date: ${dateString}`, e);
-      return `Error with date: ${dateString}`;
-    }
+    const match = /^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/.exec(dateString ?? "");
+    if (!match) return dateString ?? "";
+    const [, yyyy, MM, dd, HH, mm] = match;
+    const parts = { yyyy, MM, dd, HH, mm };
+    return dateFormat.replace(/yyyy|MM|dd|HH|mm/g, (token) => parts[token]);
   });
 
   const md = new MarkdownIt({ html: true });
@@ -42,7 +35,7 @@ export default function(eleventyConfig) {
     return text.slice(0, text.lastIndexOf(" ", length - 1)).replace(/[,;:.]$/, "") + "…";
   });
 
-  eleventyConfig.ignores.add("README.md");
+  eleventyConfig.ignores.add("*.md");
 
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
