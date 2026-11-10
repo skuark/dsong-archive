@@ -8,7 +8,11 @@
   {%- set canonical = site.url + page.url %}
   <title>{{ fullTitle }}</title>
   <meta name="description" content="{{ description }}">
+  {%- if noIndex %}
+  <meta name="robots" content="noindex">
+  {%- else %}
   <link rel="canonical" href="{{ canonical }}">
+  {%- endif %}
   <meta property="og:type" content="{{ 'article' if post else 'website' }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="es_ES">
