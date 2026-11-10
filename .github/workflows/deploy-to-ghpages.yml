@@ -30,9 +30,13 @@ jobs:
 
       - run: npm ci
 
+      - run: npm run validate
+
       - run: npm run build
         env:
           ELEVENTY_ENV: production
+
+      - run: npm run check-links
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

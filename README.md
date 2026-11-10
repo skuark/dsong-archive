@@ -10,7 +10,7 @@ The original blog ended in early 2017. Rather than let all this content be lost 
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 26+ (see `.nvmrc`)
 
 ## Installation
 
@@ -36,12 +36,20 @@ Generate the static site in the `_site` folder:
 npm run build
 ```
 
+## Checks
+
+```bash
+npm run validate      # validate data/posts.json
+npm run check-links   # check internal links in _site (run after build)
+```
+
+Both run in CI before deploying.
+
 ## Technologies
 
 - [Eleventy](https://www.11ty.dev/) - Static site generator
 - [Nunjucks](https://mozilla.github.io/nunjucks/) - Template engine
 - [markdown-it](https://github.com/markdown-it/markdown-it) - Markdown parser
-- [date-fns](https://date-fns.org/) - Date utilities
 
 ## License
 
