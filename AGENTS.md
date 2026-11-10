@@ -10,6 +10,7 @@ Static archive of the dSong music blog (2009–2017), built with Eleventy 3 + Nu
 | `npm run build` | Build to `_site/` (`ELEVENTY_ENV=production` enables analytics) |
 | `npm run validate` | Validate `data/posts.json` (errors fail, warnings inform) |
 | `npm run check-links` | Check internal links in `_site/` (run after build) |
+| `npm run check-media [report.json]` | Check YouTube/Spotify embeds still exist (slow, external; run by hand, not in CI) |
 
 CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build → check-links → deploy (only from `main`). Node version comes from `.nvmrc`.
 
@@ -17,14 +18,18 @@ CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build 
 
 ```
 data/posts.json        Source data (~1,900 posts). Not in _data on purpose (see below).
+data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via redirect.njk).
 lib/posts.js           Loads posts once, adds `post.slugs`, exports `posts`, `groupBy`, `slugify`.
 _data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory.
 _data/site.js          Global `site`: url, title, description, umamiId.
+_data/redirects.js     Exposes data/redirects.json as `redirects`.
+lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only (fonts.11ty.js -> /css/fonts.css).
+js/                    archive-table-sort.js, archive-table-search.js (accent-insensitive filter, ?q=).
 .eleventy.js           Filters (formatDate, markdown, excerpt), `posts` collection, passthrough.
 *.njk                  Pages: index, archive, post, archive-<facet>, rand, sitemap, robots.
 _includes/layouts/     main.njk (head, SEO meta, header).
 _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js).
-scripts/               validate-data.mjs, check-links.mjs.
+scripts/               validate-data.mjs, check-links.mjs, check-media.mjs.
 ```
 
 ## Generated pages
@@ -35,6 +40,8 @@ scripts/               validate-data.mjs, check-links.mjs.
 | `archive-<facet>.njk` | `archive.by<Facet>` (`{ name, slug, posts }`) | `/archive/<facets>/<slug>.html` |
 | `archive.njk` | `collections.posts` | `/archive/` |
 | `rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
+| `redirect.njk` | `redirects` | each old URL (meta refresh + canonical) |
+| `404.njk` | — | `/404.html` (served by GitHub Pages) |
 
 ## Decisions (don't undo without a reason)
 
@@ -44,4 +51,7 @@ scripts/               validate-data.mjs, check-links.mjs.
 - **`formatDate` parses the string, not `Date`**: shows the original local time and doesn't depend on the build machine's timezone (CI runs in UTC).
 - **Posts missing artist/album/year** get no facet page and no link in the table.
 - **Post ids must be lowercase ASCII** (`validate` enforces it): percent-encoded ids 404 on GitHub Pages.
+- **Redirects are a frozen JSON**, not computed from posts: old URLs must keep working even when data changes.
+- **Media fields** in `metadata`: `youtube_code`, `spotify_url`, `apple_music_url` (embed URL; `?i=` = song, otherwise album), `podcast_file`. Broken embeds are removed from the data (history keeps them); Apple Music URLs were matched via the iTunes Search API.
+- **Rewriting posts.json from a script**: `JSON.stringify(data, null, 2) + "\n"`, escaping U+007F–U+009F as `\uXXXX`, keeps the file byte-identical.
 - Refactors are verified by building before/after and running `diff -rq` on `_site`.

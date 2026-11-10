@@ -41,9 +41,10 @@ npm run build
 ```bash
 npm run validate      # validate data/posts.json
 npm run check-links   # check internal links in _site (run after build)
+npm run check-media   # check YouTube/Spotify embeds still exist (slow, run by hand)
 ```
 
-Both run in CI before deploying.
+`validate` and `check-links` run in CI before deploying.
 
 ## Technologies
 
