@@ -1,6 +1,8 @@
 import MarkdownIt from "markdown-it";
 import { posts } from "./lib/posts.js";
 import { fontFiles } from "./lib/fonts.js";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 
 export default function(eleventyConfig) {
   eleventyConfig.addGlobalData("env", {
@@ -20,6 +22,16 @@ export default function(eleventyConfig) {
     const parts = { yyyy, MM, dd, HH, mm };
     return dateFormat.replace(/yyyy|MM|dd|HH|mm/g, (token) => parts[token]);
   });
+
+  // "2009-05-18 09:00:37 +0200" -> "2009-05-18T09:00:37+02:00"
+  eleventyConfig.addFilter("isoDate", (dateString) =>
+    (dateString ?? "").replace(/^(\S+) (\S+) ([+-]\d{2})(\d{2})$/, "$1T$2$3:$4")
+  );
+
+  // Content hash for cache busting: changes only when the file changes.
+  eleventyConfig.addFilter("assetVersion", (file) =>
+    createHash("md5").update(readFileSync(file)).digest("hex").slice(0, 8)
+  );
 
   const md = new MarkdownIt({ html: true });
   eleventyConfig.addFilter("markdown", (content) => {

@@ -1,5 +1,13 @@
-<script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>{{ site.title }}</title>
+  <script>
   const postIds = {{ archive.ids | dump | safe }};
   const randomPostId = postIds[Math.floor(Math.random() * postIds.length)];
   window.location.href = `/archive/${randomPostId}.html`;
 </script>
+</head>
+</html>
