@@ -13,7 +13,7 @@
   <meta property="og:description" content="Si te digo que el grupo que te traigo hoy tiene alrededor de 30 componentes, probablemente te descojones y me recomiendes un café o una inyección de b12 para…">
   <meta property="og:url" content="https://dsong.es/archive/2010-03-03-you-are-my-joy-de-the-reindeer-section.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,30 +71,21 @@
 <p>Aunque se formó en el año 2000 y desde el año 2002 no se tienen noticias de actividad, no creáis que no les dio tiempo a dejar buena huella en los escasos dos años y medio en activo que estuvieron: dos LP, &quot;Y'All Get Scared Now, Ya Hear!&quot; y <strong>&quot;Son of Evil Reindeer&quot;</strong> y dos tour para cada uno de los álbumes. Igualmente, la canción que os traigo hoy fue banda sonora de series como &quot;The OC&quot; o &quot;Grey's Anatomy&quot;, y se llama &quot;<strong><em>You are my joy</em></strong>&quot; perteneciente a su segundo disco. ¡A ver que os parece!</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/2K1JZacep9t7IaGkcFF1mR" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-  
-
-  
-    
-    
-    <div class="post-view__media post-view__media--apple-music">
-      <h3 class="post-view__subtitle">Reproducir en Apple Music</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Apple Music" src="https://embed.music.apple.com/es/album/273175524?i=273176145" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-      </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/2K1JZacep9t7IaGkcFF1mR" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-  
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/273175524?i=273176145" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
     <div class="post-view__comments">

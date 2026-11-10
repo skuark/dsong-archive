@@ -13,7 +13,7 @@
   <meta property="og:description" content="Desde Maryland nos llega uno de esos grupos cuya historia es un cúmulo de entradas y salidas. De componentes, quiero decir. En 1998 se formó en Baltimore…">
   <meta property="og:url" content="https://dsong.es/archive/2013-01-28-let-it-whip-de-sr-71.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -72,28 +72,21 @@
 <p>Finalmente, en 2007 decidieron dar un descanso a la banda, hecho con el cual Mitch se lanzó a una carrera en solitario que apenas ha dado algún fruto. Aunque antes de que todo esto ocurriera SR-71 dejó algunas perlas encuadradas en bandas sonoras de películas juveniles de la época, como es el caso de este tema, incluido como uno de los temas principales de la película The New Guy. Os dejo con Let it whip, un tema que reinterpretaron en la película con un tono más funk, pero que sigue siendo lo que pretendía: una forma de subir el ánimo y levantar los pies.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-    <div class="post-view__media post-view__media--podcast">
-      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20130128.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-podcast" aria-controls="panel-podcast" aria-selected="true">Podcast UniRadio</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-  
-
-  
-
-  
-
-  
-    
-    
-    <div class="post-view__media post-view__media--apple-music">
-      <h3 class="post-view__subtitle">Reproducir en Apple Music</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Apple Music" src="https://embed.music.apple.com/es/album/211450694?i=211452079" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-      </div>
+    <div class="players__panel players__panel--podcast" role="tabpanel" id="panel-podcast" aria-labelledby="tab-podcast">
+      <audio controls preload="none" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20130128.mp3">Tu navegador no soporta este tipo de reproductor</audio>
     </div>
-  
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/211450694?i=211452079" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

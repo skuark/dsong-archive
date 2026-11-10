@@ -13,7 +13,7 @@
   <meta property="og:description" content="Si juntamos dos cosas buenas, el resultado no siempre será bueno. Aunque hablando de música, dos grandes músicos suelen dar buenos temas. Aunque este tipo de…">
   <meta property="og:url" content="https://dsong.es/archive/2014-10-31-my-mistakes-were-made-for-you-de-the-last-shadow-puppets.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,30 +71,21 @@
 <p>Y es que no sé quien tuvo la maravillosa idea de juntar a Alex Turner, de Arctic Monkeys (que <a title="When the Sun Goes Down, de Arctic Monkeys" href="https://dsong.es/archive/2014-10-30-when-the-sun-goes-down-de-arctic-monkeys.html">ayer los teníamos en portada</a> en dSong) y <a title="Rearrange, de Miles Kane" href="https://dsong.es/archive/2013-12-02-rearrange-de-miles-kane.html">Miles Kane</a>, de The Rascals, pero hay que agradecérselo. De aquel maravilloso disco hoy quiero dejaros con My mistakes were made for you, un tema con un ambiente espectacular que te envuelve y te lleva en brazos con la voz de Alex Turner. Una delicia. Un disco que revisitar de vez en cuando, mientras esperamos, con cierta esperanza, que saquen nuevo material algún día.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/76qbPFZl51tlFnfZDu84rm" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-  
-
-  
-    
-    
-    <div class="post-view__media post-view__media--apple-music">
-      <h3 class="post-view__subtitle">Reproducir en Apple Music</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Apple Music" src="https://embed.music.apple.com/es/album/277075850?i=277075944" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-      </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/76qbPFZl51tlFnfZDu84rm" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-  
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/277075850?i=277075944" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

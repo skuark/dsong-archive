@@ -13,7 +13,7 @@
   <meta property="og:description" content="Finalmente, y tras un giro rocambolesco de acontecimientos ajenos al propio compositor alemán, la oportunidad de comandar este titánico proyecto del que en un…">
   <meta property="og:url" content="https://dsong.es/archive/2013-06-30-bso-man-of-steel.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -79,21 +79,17 @@
 Hasta la semana que viene.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/4HhinqNembckw2pMoDWAZ4" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
     </div>
-  
-
-  
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/4HhinqNembckw2pMoDWAZ4" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

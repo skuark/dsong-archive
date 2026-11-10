@@ -13,7 +13,7 @@
   <meta property="og:description" content="Días como hoy, un domingo cualquiera, pasan desapercibidos, se quedan hechos un ovillo y se pierden sin significar nada. Sin embargo, no tiene por que ser asi…">
   <meta property="og:url" content="https://dsong.es/archive/2011-01-30-especial-album-youve-come-a-long-way-baby-de-fatboy-slim.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -74,21 +74,17 @@
 <p>¡A levantar el domingo!</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/5dbW25KDJWBkv2gtaQdmxJ" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
     </div>
-  
-
-  
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/5dbW25KDJWBkv2gtaQdmxJ" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

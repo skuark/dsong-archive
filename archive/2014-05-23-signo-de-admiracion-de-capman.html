@@ -13,7 +13,7 @@
   <meta property="og:description" content="Son siete artistas, aunque al que probablemente conozcáis sea a Nacho Aldeguer, actor, actor de doblaje, poeta y músico, entre otras cosas. Pero Capman es…">
   <meta property="og:url" content="https://dsong.es/archive/2014-05-23-signo-de-admiracion-de-capman.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,28 +71,23 @@
 <p>Personalmente, creo que pusieron el listón muy alto con su disco de debut, y aún nos costará adaptarnos a esta evolución, y es por eso que os traigo &quot;Signo de admiración&quot;, el tema más popular de <em>Lecciones de vida</em>, y no es para menos: combinación ideal de rap, jazz y poesía, pues cuentan con la colaboración de Daniel Orviz, poeta madrileño que se marca en mitad del tema un recital de su poema &quot;<a title="Quiéreme, Daniel Orviz" href="http://poemaquiereme.blogspot.pt/" target="_blank">Quiéreme</a>&quot;. Y es que tanto Orviz como Aldeguer son conocidos en los circuitos de <em>slam poetry</em>, disciplina, por cierto, bastante asentada en Jaén, donde se celebró la final del campeonato nacional. Os dejo hoy, en definitiva, un tema único que bebe de la nostalgia de la infancia perdida, pasa por el amor hasta lanzarse de lleno en el resbaladizo terreno de los sentimientos. Os animo a conocer la original propuesta de Capman en sus dos trabajos: disfrutad del viaje.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-    <div class="post-view__media post-view__media--youtube">
-      <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
       <div class="post-view__media-container">
-        <iframe loading="lazy" title="Vídeo de YouTube" src="https://www.youtube.com/embed/WqSW7dxCeQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/WqSW7dxCeQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/3nMEC3nwNEWnN1bBMbC7Sd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/3nMEC3nwNEWnN1bBMbC7Sd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-  
-
-  
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

@@ -13,7 +13,7 @@
   <meta property="og:description" content="Viernes. Vuelvo a casa cansado del trabajo y lo único que me apetece es dormir. El teléfono empieza a sonar ofreciéndome un plan inocente difícil de rechazar…">
   <meta property="og:url" content="https://dsong.es/archive/2012-03-30-nothing-de-the-egg-remix-cicada.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,19 +71,17 @@
 <p>Con letras que rozan la locura de lo absurdo y el sin sentido, el remix de Nothing invita a la típica noche de viernes descrita al comienzo de este artículo. En nuestras manos queda el tener el spirit suficiente para no quedarse en casa esta noche.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-    <div class="post-view__media post-view__media--podcast">
-      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120330.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-podcast" aria-controls="panel-podcast" aria-selected="true">Podcast UniRadio</button>
     </div>
-  
-
-  
-
-  
-
-  
+    <div class="players__panel players__panel--podcast" role="tabpanel" id="panel-podcast" aria-labelledby="tab-podcast">
+      <audio controls preload="none" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120330.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

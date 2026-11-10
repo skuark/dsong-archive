@@ -13,7 +13,7 @@
   <meta property="og:description" content="No son buenos tiempos los que vivimos, amigos. Mucha desilusión con esos gobernantes que nos engañan descaradamente y nos empujan hacia un futuro negro. Creo…">
   <meta property="og:url" content="https://dsong.es/archive/2012-05-16-know-your-enemy-de-rage-against-the-machine.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,28 +71,23 @@
 <p>El inicio de la canción (quizás) es lo más conocido. Tom Morello utiliza un interruptor momentáneo de desconexión para crear un efecto tremolo para imitar a los sintetizadores de rock clásico. Un inicio que nos deja los pelos de punta. A esto le siguen una alternancia entre ritmos rápidos y lentos. Pero bueno, aunque podría pasarme describiendo y hablando del tema una hora (al menos), mejor os dejo con él. Disfrutad.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-    <div class="post-view__media post-view__media--youtube">
-      <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
       <div class="post-view__media-container">
-        <iframe loading="lazy" title="Vídeo de YouTube" src="https://www.youtube.com/embed/0y-7fl1nJfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/0y-7fl1nJfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/66jNN4DZ15cIdihmqMGWG5" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/66jNN4DZ15cIdihmqMGWG5" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-  
-
-  
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

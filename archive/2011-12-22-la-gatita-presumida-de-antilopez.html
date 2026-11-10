@@ -13,7 +13,7 @@
   <meta property="og:description" content="En Jaén aún no tenemos la suerte de tener una sala de conciertos como esta ciudad se merece, de todos modos, de vez en cuando nos llegan grupos buenos, pero…">
   <meta property="og:url" content="https://dsong.es/archive/2011-12-22-la-gatita-presumida-de-antilopez.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -72,30 +72,23 @@
 <p>El tema que hoy recomiendo es <strong>&quot;La gatita presumida&quot;</strong>, para mí, uno de los mejores de su primer disco, <em><strong>&quot;Ser músico&quot;</strong></em>, el cual se puede descargar desde su página web de forma gratuita, por si os gusta.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-    <div class="post-view__media post-view__media--youtube">
-      <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
       <div class="post-view__media-container">
-        <iframe loading="lazy" title="Vídeo de YouTube" src="https://www.youtube.com/embed/h8uNHvR2Gh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/h8uNHvR2Gh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  
-
-  
-
-  
-    
-    
-    <div class="post-view__media post-view__media--apple-music">
-      <h3 class="post-view__subtitle">Reproducir en Apple Music</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Apple Music" src="https://embed.music.apple.com/es/album/1699253263?i=1699253483" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-      </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1699253263?i=1699253483" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
     </div>
-  
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

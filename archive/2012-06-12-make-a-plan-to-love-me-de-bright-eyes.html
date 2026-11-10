@@ -13,7 +13,7 @@
   <meta property="og:description" content="Del indie rock producido por el propio músico. De la música alternativa protagonizada por un estribillo coral. De las formaciones rotativas. Total, que no hay…">
   <meta property="og:url" content="https://dsong.es/archive/2012-06-12-make-a-plan-to-love-me-de-bright-eyes.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,26 +71,21 @@
 <p>El caso es que dentro de su estilo positivista y coral en ocasiones, encontramos joyas llenas de polifonías y ritmos que recuerdan a tiempos pasados, a aquellas canciones de los años 60 y su atmósfera envolvente y tranquila. Por eso os dejamos con Make a plan to love me, un tema que es al mismo tiempo una declaración y un ruego, una bonita petición para empezar el día.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-    <div class="post-view__media post-view__media--podcast">
-      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120612.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-podcast" aria-controls="panel-podcast" aria-selected="true">Podcast UniRadio</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
     </div>
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/3pzSuInyu7QCOOqxZAh31S" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__panel players__panel--podcast" role="tabpanel" id="panel-podcast" aria-labelledby="tab-podcast">
+      <audio controls preload="none" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120612.mp3">Tu navegador no soporta este tipo de reproductor</audio>
     </div>
-  
-
-  
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/3pzSuInyu7QCOOqxZAh31S" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

@@ -13,7 +13,7 @@
   <meta property="og:description" content="No pocas veces una canción nos hace sentirnos como en casa. Puede llegar a crear un ambiente especial del que poco a poco se impregna cada uno de los rincones…">
   <meta property="og:url" content="https://dsong.es/archive/2010-09-06-miles-stone-de-miles-davis.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,21 +71,17 @@
 <p>Os quiero recomendar este lunes-lunesalsol un tema que personalmente a mi me fascina, <strong>Miles Stone</strong>. Podría hablaros del gran fondo de saxo del tema o de cómo Miles tiene un par de momentos estelares en este corte, pero lo que me gusta más es que es capaz de llenar de música una habitación, hacerla incluso cálida y por tanto más habitable. ¡Espero que disfruteis dsongeretes! ¡¡Por el calor y la buena música!!</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/1ijHdyp5Xe23eQDXlJhsuE" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
     </div>
-  
-
-  
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/1ijHdyp5Xe23eQDXlJhsuE" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

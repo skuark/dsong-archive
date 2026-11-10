@@ -13,7 +13,7 @@
   <meta property="og:description" content="La música comenzó una noche en las cavernas con una madre neandertal u homo sapiens, no sé bien, murmurando por lo bajo para hacer callar al recién nacido. Ese…">
   <meta property="og:url" content="https://dsong.es/archive/2012-06-07-escondida-de-elena-bugedo.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -72,26 +72,23 @@ Te doy una canción, que diría Silvio, donde la voz lo es todo.</p>
 <p>La canción, decía, es &quot;Escondida&quot;, perteneciente al disco <em>Mira como tiemblo</em> -junto al cantautor argentino Fede Comín- y en ella Elena habla de su cuerpo como de un templo donde ocultarse cuando no quiere que la busquen. Sencilla, melódica, toda la fuerza de la canción recae en la voz de esta granaína. Cuando sube al escenario, se convierte en un monstruo capaz de arrastrar consigo al público. El espectáculo entra y sale de la zona de confort de la artista, se alimenta del público. Elena Bugedo brilla, y &quot;Escondida&quot; es sólo una muestra. Habrá que buscarla, sobre todo ahora que publica nuevo álbum autoproducido. Mientras tanto, estoy convencido de que el primer murmullo de la madre neandertal seguirá retumbando en las voces que no se venden a la industria.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-    <div class="post-view__media post-view__media--podcast">
-      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120607.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-podcast" aria-controls="panel-podcast" aria-selected="true">Podcast UniRadio</button>
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="false" tabindex="-1">YouTube</button>
     </div>
-  
-
-  
-    <div class="post-view__media post-view__media--youtube">
-      <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
+    <div class="players__panel players__panel--podcast" role="tabpanel" id="panel-podcast" aria-labelledby="tab-podcast">
+      <audio controls preload="none" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120607.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube" hidden>
       <div class="post-view__media-container">
-        <iframe loading="lazy" title="Vídeo de YouTube" src="https://www.youtube.com/embed/PT4DS0p9tt0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe title="Vídeo de YouTube" data-src="https://www.youtube.com/embed/PT4DS0p9tt0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  
-
-  
-
-  
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

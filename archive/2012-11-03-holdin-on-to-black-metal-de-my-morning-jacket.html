@@ -13,7 +13,7 @@
   <meta property="og:description" content="Decía Sigmund Freud que si la inspiración no le venía, salía él a su encuentro; así podía verle la cara a mitad del camino. No sabemos si los chicos de My…">
   <meta property="og:url" content="https://dsong.es/archive/2012-11-03-holdin-on-to-black-metal-de-my-morning-jacket.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,33 +71,27 @@
 <p>Siempre que un grupo saca nuevo trabajo se alzan voces críticas con la senda que han tomado, de ahí que en el caso de <strong>My Morning Jacket</strong> se les acuse de perder la esencia de discos tan aplaudidos como <em>&quot;Z&quot;</em> o <em>&quot;It still moves&quot;</em>. Ya en su momento Jesusr nos trajo la canción <em><a href="https://dsong.es/archive/2011-07-05-touch-me-im-going-to-scream-pt-2-de-my-morning-jacket.html" target="_blank">&quot;Touch me I'm going to scream Pt. 2&quot;</a>, </em>así que tienen la oportunidad de escuchar el antes y el después del quinteto de Kentucky para valorar su evolución. Y bien, ¿qué les parece?</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-    <div class="post-view__media post-view__media--podcast">
-      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20121103.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-podcast" aria-controls="panel-podcast" aria-selected="true">Podcast UniRadio</button>
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="false" tabindex="-1">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
     </div>
-  
-
-  
-    <div class="post-view__media post-view__media--youtube">
-      <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
+    <div class="players__panel players__panel--podcast" role="tabpanel" id="panel-podcast" aria-labelledby="tab-podcast">
+      <audio controls preload="none" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20121103.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube" hidden>
       <div class="post-view__media-container">
-        <iframe loading="lazy" title="Vídeo de YouTube" src="https://www.youtube.com/embed/pVrJ1mqgqQA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe title="Vídeo de YouTube" data-src="https://www.youtube.com/embed/pVrJ1mqgqQA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/5AXN6D1mdjALAr3qWUCqME" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/5AXN6D1mdjALAr3qWUCqME" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-  
-
-  
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

@@ -13,7 +13,7 @@
   <meta property="og:description" content="Ya hemos pasado la primera fecha importante de esta Navidad del año 2010. Espero que la hayáis pasado en compañía de grandes personas. Para hoy he escogido una…">
   <meta property="og:url" content="https://dsong.es/archive/2010-12-27-dream-a-little-dream-of-me-de-michael-buble.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,30 +71,21 @@
 <p>Elegir un interprete para la misma es difícil, como he mencionado antes. Grandes genios de la música la han incluido en sus repertorios. Gente como <em>Louis Amstrong</em>, <em>The Mamas &amp; The Papas</em> o la gran <em>Ella Fitzgerald</em>. En esta ocasión he seleccionado la interpretación que ha realizado <a class="vt-p" href="http://en.wikipedia.org/wiki/Michael_Bubl%C3%A9">Michael Bublé</a> y lo he hecho simplemente por que un amigo me ha hecho valorar las canciones de este genial cantante. Este canadiense de 35 años ha sabido labrarse un futuro en esto de la música muy prometedor. La canción de hoy la ha incluido en su último trabajo titulado &quot;<strong>Special Delibery</strong>&quot; (<strong>2010</strong>),</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/2vfINZ5Xnf1HggzoQKgqps" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-  
-
-  
-    
-    
-    <div class="post-view__media post-view__media--apple-music">
-      <h3 class="post-view__subtitle">Reproducir en Apple Music</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Apple Music" src="https://embed.music.apple.com/es/album/1826216531?i=1826217155" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-      </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/2vfINZ5Xnf1HggzoQKgqps" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-  
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1826216531?i=1826217155" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
     <div class="post-view__comments">

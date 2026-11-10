@@ -13,7 +13,7 @@
   <meta property="og:description" content="“El problema de los tres cuerpos” , además de un problema matemático que hunde sus raíces en la Ley de la Gravitación Universal de Newton, es el nombre del…">
   <meta property="og:url" content="https://dsong.es/archive/2013-03-30-las-viejas-luces-de-the-new-raemon-francisco-nixon-ricardo-vicente.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,26 +71,21 @@
 <p><em>&quot;Todos tus caballos de carreras&quot;</em>, canción que sirvió de adelanto del disco, lleva la firma de Ricardo Vicente. <em>&quot;Bares de taxistas&quot;</em> o <em>&quot;El novio de tu hermana&quot; </em>son de Francisco Nixon. Mientras continuáis resolviendo el problema de los tres cuerpos, os dejamos con <em><strong>&quot;Las viejas</strong></em><strong> luces&quot;. </strong>Feliz sábado.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-    <div class="post-view__media post-view__media--podcast">
-      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20130330.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-podcast" aria-controls="panel-podcast" aria-selected="true">Podcast UniRadio</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
     </div>
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/6gmUqybklmNyXlyX8FBHXd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__panel players__panel--podcast" role="tabpanel" id="panel-podcast" aria-labelledby="tab-podcast">
+      <audio controls preload="none" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20130330.mp3">Tu navegador no soporta este tipo de reproductor</audio>
     </div>
-  
-
-  
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/6gmUqybklmNyXlyX8FBHXd" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

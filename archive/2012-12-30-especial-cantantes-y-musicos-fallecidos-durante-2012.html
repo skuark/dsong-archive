@@ -13,7 +13,7 @@
   <meta property="og:description" content="Este post trata de ser un recuerdo de los cantantes y músicos que fallecieron a lo largo del año 2012. Seguramente me dejaré muchos en el tintero, es por falta…">
   <meta property="og:url" content="https://dsong.es/archive/2012-12-30-especial-cantantes-y-musicos-fallecidos-durante-2012.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -82,14 +82,17 @@
 <p>Ya no estarán entre nosotros, pero siempre nos quedará su voz y su música para disfrutar de ellos.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-
-  
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/user/dsong2009/playlist/0PxM1pgnvD9XcFzHubsn4r" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
     <div class="post-view__comments">

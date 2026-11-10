@@ -13,7 +13,7 @@
   <meta property="og:description" content="Últimamente siempre que leo las noticias me maravillo con la cantidad de tonterías a las que llegamos. Que si cambiar el nombre de las letras del alfabeto, el…">
   <meta property="og:url" content="https://dsong.es/archive/2010-11-06-answer-to-yourself-de-the-soft-pack.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -72,21 +72,17 @@
 <p>Su puesta de largo, su auténtico debut fue el disco <strong>The soft pack, </strong>(originales ellos) que fue publicado a principios de año, junto a su cambio de nombre oficial. Es un disco con contrastes: tiene pistas muy buenas, y pistas que no lo son tanto. Se nota que es un primer disco, un primer intento. Habrá que darles tiempo. Y de ahí os traigo <em>&quot;Answer yourself&quot;, </em>una canción que se te pega desde la primera escucha. ¡Disfrutadla!</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/64vfG1RwkJVZNrsyJzpz4t" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
     </div>
-  
-
-  
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/64vfG1RwkJVZNrsyJzpz4t" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

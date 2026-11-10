@@ -13,7 +13,7 @@
   <meta property="og:description" content="Daft Punk está formado por Thomas Bangalter y Guy-Manuel de Homem-Christo, unos franceses naturales de París que hacen música electrónica desde 1987. Esto lo…">
   <meta property="og:url" content="https://dsong.es/archive/2009-12-10-harder-better-faster-stronger-de-daft-punk.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -70,30 +70,21 @@
 <p>La canción <strong><em>Harder, Better, Faster, Stron</em><em>ge</em></strong><em><strong>r</strong></em> (por decir algo de ella) es del 2001 y pertenece al álbum Discovery. Esta canción se ha utilizado en <a href="http://es.wikipedia.org/wiki/Harder,_Better,_Faster,_Stronger">cantidad de cosas</a>, y las que no sabemos. No me extraña, ya que sin compartir mucho este estilo de música, he de reconocer que es muy pegadiza. Otro vídeo muy conocido y que quizás también hayáis visto trata de <a href="http://www.youtube.com/watch?v=K2cYWfq--Nw">unas manos que cantan la canción</a>. Vídeos que quitan protagonismo al propio videoclip original de la canción, fragmento del anime <a href="http://es.wikipedia.org/wiki/Interstella_5555_-_The_5tory_of_the_5ecret_5tar_5ystem">&quot;Interstella 5555&quot;</a>. A ver cuanto tardáis en quitaros la canción de la cabeza</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/2cJz1loJp5EZM6shmQpLZN" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-  
-
-  
-    
-    
-    <div class="post-view__media post-view__media--apple-music">
-      <h3 class="post-view__subtitle">Reproducir en Apple Music</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Apple Music" src="https://embed.music.apple.com/es/album/697194953?i=697195787" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-      </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/2cJz1loJp5EZM6shmQpLZN" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-  
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/697194953?i=697195787" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

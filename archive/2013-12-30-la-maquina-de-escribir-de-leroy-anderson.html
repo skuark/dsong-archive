@@ -13,7 +13,7 @@
   <meta property="og:description" content="Para acercar la música clásica a los más pequeños hay que tratar de buscar elementos llamativos que puedan captar su atención y que puedan poner una imagen a…">
   <meta property="og:url" content="https://dsong.es/archive/2013-12-30-la-maquina-de-escribir-de-leroy-anderson.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -72,21 +72,17 @@
 <p>Lo bueno de esta pieza es que si se puede enseñar cómo la tocan, garantizo que el niño quedará hipnotizado, pues el ver como una vieja máquina de escribir hace de percusión es cuanto menos curioso y una genialidad que hace que la música clásica parezca menos seria de lo que en ocasiones puede llegar a parecerle a un pequeño.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/4VVU7vZh4GAq6Hcc1zxqJy" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
     </div>
-  
-
-  
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/4VVU7vZh4GAq6Hcc1zxqJy" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

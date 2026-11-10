@@ -13,7 +13,7 @@
   <meta property="og:description" content="Una de las cosas que hacen grande a la música es que esta no entiende de fronteras, y aunque con demasiada frecuencia nos empeñemos en etiquetar sonidos por el…">
   <meta property="og:url" content="https://dsong.es/archive/2012-03-14-black-roses-de-son-the-holy-ghosts.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -71,26 +71,23 @@
 <p><em><strong>&quot;Shadows &amp; Monsters&quot;</strong></em> es su nuevo trabajo, un EP autoeditado en el pasado mes de diciembre que empieza a dejarse escuchar, y a cautivar, y que seguro sonará bastante en este 2012. Este EP lo componen 6 temas, dos de ellos también en directo, temas que seguro te sorprenderán si te gustan estilos como el rock &amp; roll, el folk, el country, o incluso el grunge. Además, está <a href="http://sontheholyghosts.bandcamp.com/album/shadows-monsters">disponible para escucha y descarga gratuíta</a>, junto a <a href="http://sontheholyghosts.bandcamp.com/album/lyrics-songs">su anterior trabajo</a>.</p>
 
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-    <div class="post-view__media post-view__media--podcast">
-      <h3 class="post-view__subtitle">Reproducir el podcast de UniRadio Jaén</h3>
-      <audio controls src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120314.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-podcast" aria-controls="panel-podcast" aria-selected="true">Podcast UniRadio</button>
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="false" tabindex="-1">YouTube</button>
     </div>
-  
-
-  
-    <div class="post-view__media post-view__media--youtube">
-      <h3 class="post-view__subtitle">Reproducir en YouTube</h3>
+    <div class="players__panel players__panel--podcast" role="tabpanel" id="panel-podcast" aria-labelledby="tab-podcast">
+      <audio controls preload="none" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120314.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube" hidden>
       <div class="post-view__media-container">
-        <iframe loading="lazy" title="Vídeo de YouTube" src="https://www.youtube.com/embed/Hq6LH4_G_xI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe title="Vídeo de YouTube" data-src="https://www.youtube.com/embed/Hq6LH4_G_xI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  
-
-  
-
-  
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
 </div>

@@ -13,7 +13,7 @@
   <meta property="og:description" content="Para hoy tenemos una recomendación de nuestro &quot;estimado compañero&quot; Juanma que nos invita a escuchar el mítico tema &quot;Smooth Criminal&quot; , de Michael Jackson …">
   <meta property="og:url" content="https://dsong.es/archive/2010-01-23-smooth-criminal-de-alien-ant-farm.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=288de469">
+  <link rel="stylesheet" href="/css/bundle.css?v=5ed9e893">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -70,30 +70,21 @@
 <p style="padding-left: 30px;">Estaba yo una mañana aquí sin mucho que hacer hablando con Jose y dije: hoy voy a hacer una recomendación para dSong que ando aburrido. De primeras pensé en hacer una recomendación de algún clásico de The Offspring ya que vi que no había ninguna en el buscador y pensé en ese gran <em>"Want you bad"</em> que nos acompañó en nuestra adolescencia en esas míticas American Pies pero de pronto pensé: bah, si The Offspring está muerto para que molestarme en intentar resucitar 4 cadáveres rubios y pensando en eso de American Pie me vino a la mente aquel momento mítico en American Pie 2 en el que Jim (Jason Biggs) está en su cuarto y va a usar los "complementos" que trajo Stifler y confunde el lubricante con el pegamento de contacto y empieza su andadura en busca del disolvente a ritmo de <em><strong>"Alien Ant Farm"</strong></em> y su cover de <strong>Smooth Criminal</strong>.</p>
 <p style="padding-left: 30px;">Bueno pues como estaréis deseando escuchar la canción y dejar de leer tonterías de un señor del intersneter aquí os dejo con el tema.</p>
   </div>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
 
-  
-
-  
-
-  
-    <div class="post-view__media post-view__media--spotify">
-      <h3 class="post-view__subtitle">Reproducir en Spotify</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/41o2aPGFlkzVU0o23jtSwu" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-  
-
-  
-    
-    
-    <div class="post-view__media post-view__media--apple-music">
-      <h3 class="post-view__subtitle">Reproducir en Apple Music</h3>
-      <div>
-        <iframe loading="lazy" title="Reproductor de Apple Music" src="https://embed.music.apple.com/es/album/6790972695?i=6790973053" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-      </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/41o2aPGFlkzVU0o23jtSwu" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-  
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/6790972695?i=6790973053" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+  </details>
+  <script src="/js/players.js?v=183a16c4" defer></script>
 
   
     <div class="post-view__comments">
