@@ -1,62 +1,15 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
 import { format, parse } from "date-fns";
 import MarkdownIt from "markdown-it";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-function loadPosts() {
-  const postPath = path.resolve(__dirname, "data/posts.json");
-  const content = fs.readFileSync(postPath, "utf8");
-  const data = JSON.parse(content);
-  return data.posts;
-}
-
-function groupPostsBy(keyFn) {
-  const posts = loadPosts();
-  const grouped = {};
-
-  for (const post of posts) {
-    const key = keyFn(post);
-    if (!grouped[key]) {
-      grouped[key] = [];
-    }
-    grouped[key].push(post);
-  }
-
-  return Object.entries(grouped);
-}
+import { posts } from "./lib/posts.js";
 
 export default function(eleventyConfig) {
   eleventyConfig.addGlobalData("env", {
     ELEVENTY_ENV: process.env.ELEVENTY_ENV || "development"
   });
 
-  eleventyConfig.addCollection("posts", function() {
-    return loadPosts();
-  });
+  eleventyConfig.addCollection("posts", () => posts);
 
-  eleventyConfig.addCollection("postsByEditor", () =>
-    groupPostsBy(post => post.editor.name)
-  );
-
-  eleventyConfig.addCollection("postsByArtist", () =>
-    groupPostsBy(post => post.metadata.artist)
-  );
-
-  eleventyConfig.addCollection("postsByAlbum", () =>
-    groupPostsBy(post => `${post.metadata.artist}-${post.metadata.album}`)
-  );
-
-  eleventyConfig.addCollection("postsByYear", () =>
-    groupPostsBy(post => post.metadata.year)
-  );
-
-  eleventyConfig.addCollection("postsByCategory", () =>
-    groupPostsBy(post => post.metadata.category)
-  );
+  eleventyConfig.addWatchTarget("lib/");
 
   eleventyConfig.addFilter("formatDate", (dateString, dateFormat) => {
     if (!dateString) {

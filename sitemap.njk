@@ -15,27 +15,27 @@ eleventyExcludeFromCollections: true
     <loc>https://dsong.es/archive/{{ post.id }}.html</loc>
   </url>
   {%- endfor %}
-  {%- for artist in collections.postsByArtist %}
+  {%- for artist in archive.byArtist %}
   <url>
     <loc>https://dsong.es/archive/artists/{{ artist[0] | slugify }}.html</loc>
   </url>
   {%- endfor %}
-  {%- for album in collections.postsByAlbum %}
+  {%- for album in archive.byAlbum %}
   <url>
     <loc>https://dsong.es/archive/albums/{{ album[0] | slugify }}.html</loc>
   </url>
   {%- endfor %}
-  {%- for editor in collections.postsByEditor %}
+  {%- for editor in archive.byEditor %}
   <url>
     <loc>https://dsong.es/archive/editors/{{ editor[0] | slugify }}.html</loc>
   </url>
   {%- endfor %}
-  {%- for year in collections.postsByYear %}
+  {%- for year in archive.byYear %}
   <url>
     <loc>https://dsong.es/archive/years/{{ year[0] }}.html</loc>
   </url>
   {%- endfor %}
-  {%- for category in collections.postsByCategory %}
+  {%- for category in archive.byCategory %}
   <url>
     <loc>https://dsong.es/archive/categories/{{ category[0] | slugify }}.html</loc>
   </url>
