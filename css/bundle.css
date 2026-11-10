@@ -105,7 +105,7 @@ a {
   border-radius: .5rem;
 }
 
-.header__menu--item .router-link-exact-active {
+.header__menu--item [aria-current="page"] {
   background-color: #ff0;
 }
 
@@ -118,11 +118,51 @@ a {
   display: grid;
 }
 
+/* When the table doesn't fit, scroll it instead of widening the whole page
+   (on wide screens the page scrolls, which keeps the sticky header). */
+@media (max-width: 84rem) {
+  .archive {
+    overflow-x: auto;
+  }
+}
+
 .archive-title {
   font-family: Amaranth, sans-serif;
   font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+.archive-search {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.archive-search__label {
+  font-weight: 700;
+}
+
+.archive-search__input {
+  border: 2px solid #000;
+  flex: 1 1 12rem;
+  font: inherit;
+  min-width: 0;
+  font-size: .9rem;
+  max-width: 40rem;
+  padding: .4rem .6rem;
+}
+
+.archive-search__input:focus {
+  outline: 2px solid #03a9f4;
+  outline-offset: 1px;
+}
+
+.archive-search__count {
+  font-size: .8rem;
+  font-style: italic;
 }
 
 .archive-table {
@@ -311,4 +351,20 @@ a {
 .post-view__comment-date {
   vertical-align: middle;
   margin-right: 1rem;
+}
+
+/* GitHub corner */
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%, 100% { transform: rotate(0); }
+  20%, 60% { transform: rotate(-25deg); }
+  40%, 80% { transform: rotate(10deg); }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm { animation: none; }
+  .github-corner .octo-arm { animation: octocat-wave 560ms ease-in-out; }
 }
