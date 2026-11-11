@@ -1,9 +1,119 @@
 ---
 layout: layouts/main.njk
-title: Todas las publicaciones
-pageClass: archive
+title: Archivo
+permalink: /archive/
+pageClass: stats
 ---
+{#- Top `top` rows; the rest (if any) behind a "Ver más" toggle, on the same scale -#}
+{%- macro bars(items, base = "", top = 0) -%}
+{%- set shown = items.slice(0, top) if top else items %}
+{%- set rest = items.slice(top) if top else [] %}
+{{ barList(shown, base) }}
+{%- if rest.length %}
+<details class="bars-more">
+  <summary>Ver {{ rest.length }} más</summary>
+  {{ barList(rest, base, top + 1) }}
+</details>
+{%- endif %}
+{%- endmacro -%}
+{%- macro barList(items, base, start = 1) -%}
+<ol class="bars" start="{{ start }}">
+  {%- for item in items %}
+  <li class="bars__row">
+    <span class="bars__label">{% if base and item.slug %}<a href="{{ base }}{{ item.slug }}.html">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</span>
+    <span class="bars__track"><span class="bars__fill" style="width: {{ item.pct }}%"></span></span>
+    <span class="bars__value">{{ item.count | thousands }}</span>
+  </li>
+  {%- endfor %}
+</ol>
+{%- endmacro -%}
+{%- macro columns(items, label) -%}
+<ol class="columns" aria-label="{{ label }}">
+  {%- for item in items %}
+  <li class="columns__col" title="{{ item.name }}: {{ item.count | thousands }}">
+    <span class="columns__value">{{ item.count | thousands }}</span>
+    <span class="columns__bar" style="height: {{ item.pct }}%"></span>
+    <span class="columns__label">{{ item.name }}</span>
+  </li>
+  {%- endfor %}
+</ol>
+{%- endmacro -%}
 
-{% set posts = collections.posts %}
-{% set heading = "Todas las publicaciones del archivo" %}
-{% include "partials/archive-table.njk" %}
+{#- Old table links (/archive/?q=…, the search used to live here) go to the table with the same search -#}
+<script>if (new URLSearchParams(location.search).has("q")) location.replace("/archive/all/" + location.search);</script>
+
+<h2 class="archive-title">Archivo</h2>
+
+<form class="archive-search" action="/archive/all/" method="get" role="search">
+  <label class="archive-search__label" for="archive-search">Buscar</label>
+  <input class="archive-search__input" id="archive-search" name="q" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
+  <button class="archive-search__button" type="submit">Buscar</button>
+  <a class="archive-search__all" href="/archive/all/">Ver las {{ stats.totals.posts | thousands }} publicaciones →</a>
+</form>
+
+<h3 class="stats-heading">dSong en cifras</h3>
+
+<ul class="stats-totals">
+  <li><a href="/archive/all/"><strong>{{ stats.totals.posts | thousands }}</strong> publicaciones →</a></li>
+  <li><a href="/archive/editors/"><strong>{{ stats.totals.editors }}</strong> autores →</a></li>
+  <li><a href="/archive/artists/"><strong>{{ stats.totals.artists | thousands }}</strong> artistas →</a></li>
+  <li><a href="/mapa/"><strong>{{ stats.totals.countries }}</strong> países →</a></li>
+  <li><a href="/archive/podcasts/"><strong>{{ stats.totals.podcasts }}</strong> podcasts →</a></li>
+</ul>
+
+<section class="stats-section">
+  <h3>Publicaciones por año</h3>
+  <p>Una canción al día de 2010 a 2014; en 2015 el blog fue apagándose.</p>
+  {{ columns(stats.byYear, "Publicaciones por año") }}
+</section>
+
+<section class="stats-section">
+  <h3>Los autores más prolíficos</h3>
+  <p>Los diez que más escribieron, de {{ stats.totals.editors }}.</p>
+  {{ bars(stats.editors, "/archive/editors/", 10) }}
+</section>
+
+<section class="stats-section">
+  <h3>Géneros</h3>
+  <p>Los {{ stats.genreTotal | thousands }} posts con género, agrupados en grandes familias.</p>
+  {{ bars(stats.genres) }}
+</section>
+
+<section class="stats-section">
+  <h3>Artistas más repetidos</h3>
+  <p>Los diez con más publicaciones; en «Ver más», todos los que tienen al menos tres.</p>
+  {{ bars(stats.artists, "/archive/artists/", 10) }}
+</section>
+
+<section class="stats-section">
+  <h3>¿De qué década eran las canciones?</h3>
+  <p>Al publicarse, una canción tenía de mediana {{ stats.medianAge }} años. La más antigua: <a href="/archive/{{ stats.oldest.id }}.html">{{ stats.oldest.title }}</a> ({{ stats.oldest.year }}).</p>
+  {{ columns(stats.decades, "Canciones por década") }}
+</section>
+
+<section class="stats-section">
+  <h3>Década de la canción según el año de publicación</h3>
+  <p>Porcentaje de las canciones de cada año que venían de cada década: con los años, el blog fue recomendando música más reciente.</p>
+  <div class="heatmap-wrapper">
+    <table class="heatmap">
+      <thead>
+        <tr>
+          <th scope="col">Publicado</th>
+          {%- for cell in stats.heatmap[0].cells %}
+          <th scope="col">{{ cell.decade }}</th>
+          {%- endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {%- for row in stats.heatmap %}
+        <tr>
+          <th scope="row">{{ row.period }}</th>
+          {%- for cell in row.cells %}
+          <td class="map-level-{{ cell.level }}" title="{{ cell.count }} de {{ row.total }} canciones">{{ cell.pct }} %</td>
+          {%- endfor %}
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

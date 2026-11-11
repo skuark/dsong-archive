@@ -1,0 +1,19 @@
+{#- Index of a facet (authors, artists): searchable cards with each name and its number of posts,
+    most posts first. Expects `items` ([{ name, slug, posts }]), `base` (URL prefix), `heading` and
+    `noun` ("artista|artistas"). The search (js/archive-table-search.js) also filters card lists. -#}
+{%- set nouns = noun.split("|") %}
+<h2 class="archive-title">{{ heading }}</h2>
+
+<div class="archive-search">
+  <label class="archive-search__label" for="archive-search">Buscar</label>
+  <input class="archive-search__input" id="archive-search" type="search" autocomplete="off">
+  <span class="archive-search__count" id="archive-search-count" data-noun="{{ noun }}" aria-live="polite">{{ items | length | thousands }} {{ nouns[0] if (items | length) == 1 else nouns[1] }}</span>
+</div>
+
+<ol class="facet-cards" id="archive-table">
+  {%- for item in items | sort(true, false, "posts.length") %}
+  <li><a class="facet-cards__card" href="{{ base }}{{ item.slug }}.html"><span class="facet-cards__name">{{ item.name }}</span> <span class="facet-cards__count">{{ item.posts.length }} {{ "publicación" if item.posts.length == 1 else "publicaciones" }}</span></a></li>
+  {%- endfor %}
+</ol>
+
+<script src="/js/archive-table-search.js?v={{ 'js/archive-table-search.js' | assetVersion }}"></script>

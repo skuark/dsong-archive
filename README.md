@@ -10,11 +10,12 @@ The original blog ended in early 2017. Rather than let all this content be lost 
 
 ## Features
 
-- **Archive**: every post in a sortable, searchable table, with pages per artist, album, year, category, author and country.
+- **Archive**: `/archive/` shows dSong in numbers (posts per year, top authors, artists and genres, decade of the songs by year of publication) and leads to every post in a sortable, searchable table (`/archive/all/`), with pages per artist, album, year, category, author and country.
+- **Authors and artists**: `/archive/editors/` and `/archive/artists/` list every author and artist as searchable cards, most posts first.
 - **Music map**: `/mapa/` shows a world map colored by the artists' nationality; click a country to see its posts.
 - **Posts**: split view on desktop (text on the left, players on the right) with YouTube, Spotify and Apple Music players, and previous/next/random navigation.
 - **Radio mode**: plays post after post (YouTube, or Spotify when there's no video) without reloading the page, so the text of each song is shown next to it. In chronological or random order; `/radio/` starts on a random post.
-- **Podcast**: the 335 UniRadio Jaén episodes with their own player on each post, and an RSS feed (`/podcast.xml`) to subscribe from any podcast app.
+- **Podcast**: the 335 UniRadio Jaén episodes with their own player on each post, listed at `/archive/podcasts/`, and an RSS feed (`/podcast.xml`) to subscribe from any podcast app.
 - **On this day**: the home page lists the posts published on today's date in previous years.
 - **Random post**: `/rand/` opens a random post.
 

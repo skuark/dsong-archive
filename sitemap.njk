@@ -13,6 +13,14 @@ eleventyExcludeFromCollections: true
   <url>
     <loc>{{ site.url }}/mapa/</loc>
   </url>
+  <url>
+    <loc>{{ site.url }}/archive/all/</loc>
+  </url>
+  {%- for index in ["editors", "artists", "podcasts"] %}
+  <url>
+    <loc>{{ site.url }}/archive/{{ index }}/</loc>
+  </url>
+  {%- endfor %}
   {%- for post in collections.posts %}
   <url>
     <loc>{{ site.url }}/archive/{{ post.id }}.html</loc>

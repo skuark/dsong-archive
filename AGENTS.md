@@ -24,9 +24,11 @@ data/posts.json        Source data (~1,900 posts). Not in _data on purpose (see 
 data/podcast-sizes.json Byte size of each podcast mp3 (RSS <enclosure> needs it).
 data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via redirect.njk).
 lib/posts.js           Loads posts once, adds `post.slugs`, exports `posts`, `groupBy`, `slugify`.
+lib/genres.js          metadata.genre (243 free-text values) -> broad family (Rock, Indie y alternativo…), for the archive landing (/archive/).
 lib/countries.js       artist_nationality (free text, EN/ES) -> country { code (ISO numeric), name (Spanish) }.
 _data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory/byCountry + byDay ("MM-DD") + radio.
 _data/worldMap.js      Global `worldMap`: country SVG paths (visionscarto-world-atlas 110m, d3-geo) + post counts, for /mapa/.
+_data/stats.js         Global `stats`: totals, rankings, decades and decade x year heatmap for the archive landing (/archive/).
 _data/site.js          Global `site`: url, title, description, umamiId.
 _data/redirects.js     Exposes data/redirects.json as `redirects`.
 lib/validate-post.js   Per-post rules + byte-identical posts.json writer (validate-data and the editor).
@@ -51,7 +53,10 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 |---|---|---|
 | `post.njk` | `collections.posts` | `/archive/<id>.html` |
 | `archive-<facet>.njk` | `archive.by<Facet>` (`{ name, slug, posts }`) | `/archive/<facets>/<slug>.html` |
-| `archive.njk` | `collections.posts` | `/archive/` |
+| `archive-editors.njk`, `archive-artists.njk` | `archive.byEditor`, `stats.artistGroups` | `/archive/editors/`, `/archive/artists/` (indexes: searchable cards with name + count, partials/facet-index.njk) |
+| `archive-podcasts.njk` | `archive.podcastPosts` | `/archive/podcasts/` (table of the podcast posts) |
+| `archive-all.njk` | `collections.posts` | `/archive/all/` (the full table) |
+| `archive.njk` | `stats` | `/archive/` (landing: search form + "dSong en cifras", static HTML/CSS charts, top 10s with a "Ver más" <details>) |
 | `map.njk` | `worldMap`, `archive.byCountry` | `/mapa/` (static SVG world map by artist nationality) |
 | `rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
 | `radio.njk` | `archive.radio` | `/radio.json` (posts with YouTube, or else a playable Spotify embed, for radio mode) |
@@ -69,6 +74,7 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 - **Posts missing artist/album/year** get no facet page and no link in the table.
 - **Post ids must be lowercase ASCII** (`validate` enforces it): percent-encoded ids 404 on GitHub Pages.
 - **Nationalities are normalized at build time** (`lib/countries.js`), not in posts.json: regions and compound values go to one country (English/Scottish → UK, Catalan → Spain). `validate` warns about unmapped values; countries too small for the 110m map (Gibraltar, Feroe, Cabo Verde) are drawn as dots.
+- **The full table lives at `/archive/all/`**, `/archive/` is the stats landing: it forwards old `/archive/?q=…` search links to the table.
 - **Redirects are a frozen JSON**, not computed from posts: old URLs must keep working even when data changes.
 - **Radio mode swaps the post in place** (js/radio.js): a page load would stop the music. The live YouTube and Spotify panels must never move in the DOM (iframes reload when moved); YouTube embeds carry `enablejsapi=1`. Posts without YouTube play Spotify (30 s previews without a Spotify session); dSong's broken playlists are left out.
 - **Media fields** in `metadata`: `youtube_code`, `spotify_url`, `apple_music_url` (embed URL; `?i=` = song, otherwise album), `podcast_file`. Broken embeds are removed from the data (history keeps them); Apple Music URLs were matched via the iTunes Search API.

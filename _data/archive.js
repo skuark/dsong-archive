@@ -32,6 +32,8 @@ export default function () {
     radio,
     radioIds: radio.map((entry) => entry[0]),
     radioById: Object.fromEntries(radio.map((entry) => [entry[0], true])),
+    // Podcast index (/archive/podcasts/): chronological, like the other tables
+    podcastPosts: posts.filter((post) => post.metadata.podcast_file),
     // Podcast feed (/podcast.xml): posts with a UniRadio Jaén podcast, newest first
     podcast: posts.filter((post) => post.metadata.podcast_file)
       .map((post) => ({ post, file: post.metadata.podcast_file, length: podcastSizes[post.metadata.podcast_file] ?? 0 }))

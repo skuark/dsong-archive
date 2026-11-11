@@ -1,0 +1,11 @@
+---
+layout: layouts/main.njk
+title: Autores
+permalink: /archive/editors/
+pageClass: archive
+---
+{%- set items = archive.byEditor %}
+{%- set base = "/archive/editors/" %}
+{%- set heading = "Los " + (items | length) + " autores de dSong" %}
+{%- set noun = "autor|autores" %}
+{% include "partials/facet-index.njk" %}

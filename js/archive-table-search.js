@@ -7,9 +7,15 @@
   // Lowercase, without accents: "Björk" -> "bjork"
   const normalize = (text) => text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
-  const rows = Array.from(table.tBodies[0].rows).map((row) => ({ row, text: normalize(row.textContent) }));
+  // Table rows, or the items of a card list (facet indexes: partials/facet-index.njk)
+  const items = table.tBodies ? table.tBodies[0].rows : table.children;
+  const rows = Array.from(items).map((row) => ({ row, text: normalize(row.textContent) }));
   const total = rows.length;
-  const plural = (n) => n === 1 ? 'publicación' : 'publicaciones';
+  // Counted noun, "singular|plural" (data-noun on the counter; facet indexes count artists, authors…)
+  const [one, many] = (count.dataset.noun || 'publicación|publicaciones').split('|');
+  const plural = (n) => n === 1 ? one : many;
+  // 1891 -> "1.891" (same as the `thousands` filter)
+  const thousands = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
   function filter() {
     const words = normalize(input.value).split(/\s+/).filter(Boolean);
@@ -20,8 +26,8 @@
       if (match) visible++;
     }
     count.textContent = words.length
-      ? `${visible} de ${total} ${plural(total)}`
-      : `${total} ${plural(total)}`;
+      ? `${thousands(visible)} de ${thousands(total)} ${plural(total)}`
+      : `${thousands(total)} ${plural(total)}`;
 
     const url = new URL(window.location);
     if (input.value.trim()) url.searchParams.set('q', input.value.trim());

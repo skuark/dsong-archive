@@ -1,0 +1,11 @@
+---
+layout: layouts/main.njk
+title: Podcasts
+permalink: /archive/podcasts/
+pageClass: archive
+---
+
+{% set posts = archive.podcastPosts %}
+<h2 class="archive-title">Los podcasts con UniRadio Jaén</h2>
+<p>Cada publicación tiene su episodio. También puedes <a href="/podcast.xml">suscribirte a todos con RSS</a>.</p>
+{% include "partials/archive-table.njk" %}
