@@ -1,0 +1,38 @@
+---
+layout: layouts/main.njk
+title: Mapa musical
+permalink: /mapa/
+pageClass: map
+---
+{%- set countries = archive.byCountry | sort(true, false, "posts.length") %}
+
+<h2 class="archive-title">Mapa musical</h2>
+<p class="map-intro">De dónde son los artistas del archivo. Elige un país para ver sus canciones.</p>
+
+<figure class="map">
+  <svg class="map__svg" viewBox="0 0 {{ worldMap.width }} {{ worldMap.height }}" role="img" aria-labelledby="map-title">
+    <title id="map-title">Mapa mundial con el número de publicaciones por país del artista</title>
+    {%- for c in worldMap.countries %}
+    {%- if c.slug %}
+    <a href="/archive/countries/{{ c.slug }}.html"><path class="map__country map-level-{{ c.level }}" d="{{ c.d }}"><title>{{ c.name }}: {{ c.count }} {{ "publicación" if c.count == 1 else "publicaciones" }}</title></path></a>
+    {%- else %}
+    <path class="map__country" d="{{ c.d }}"/>
+    {%- endif %}
+    {%- endfor %}
+    {%- for c in worldMap.dots %}
+    <a href="/archive/countries/{{ c.slug }}.html"><circle class="map__country map__dot map-level-{{ c.level }}" cx="{{ c.x }}" cy="{{ c.y }}" r="4"><title>{{ c.name }}: {{ c.count }} {{ "publicación" if c.count == 1 else "publicaciones" }}</title></circle></a>
+    {%- endfor %}
+  </svg>
+  <figcaption class="map__legend">
+    <span>Publicaciones:</span>
+    {%- for min in worldMap.levels %}
+    <span class="map__legend-item"><span class="map__swatch map-level-{{ loop.index }}"></span>{{ min }}{% if loop.last %} o más{% else %}–{{ worldMap.levels[loop.index] - 1 }}{% endif %}</span>
+    {%- endfor %}
+  </figcaption>
+</figure>
+
+<ol class="map-countries">
+  {%- for country in countries %}
+  <li><a href="/archive/countries/{{ country.slug }}.html">{{ country.name }}</a> <span class="map-countries__count">{{ country.posts.length }}</span></li>
+  {%- endfor %}
+</ol>

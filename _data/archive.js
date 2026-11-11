@@ -26,6 +26,7 @@ export default function () {
     byAlbum: groupBy("album"),
     byYear: groupBy("year"),
     byCategory: groupBy("category"),
+    byCountry: groupBy("country"),
     // Radio mode: posts with a YouTube video or, failing that, a Spotify embed (30 s previews without a
     // Spotify session), chronological, as [id, title, youtubeCode, spotifyUri].
     radio,

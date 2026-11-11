@@ -1,0 +1,15 @@
+---
+layout: layouts/main.njk
+pagination:
+  data: archive.byCountry
+  size: 1
+  alias: country
+eleventyComputed:
+  title: "Música de {{ country.name | safe }}"
+permalink: "/archive/countries/{{ country.slug }}.html"
+pageClass: archive
+---
+
+{% set posts = country.posts %}
+{% set heading = "Música de " + country.name %}
+{% include "partials/archive-table.njk" %}

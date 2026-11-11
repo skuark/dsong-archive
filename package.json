@@ -22,7 +22,10 @@
     "@fontsource/amaranth": "^5.3.0",
     "@fontsource/titillium-web": "^5.3.0",
     "@sindresorhus/slugify": "~2.2.1",
-    "markdown-it": "^15.0.3"
+    "d3-geo": "^3.1.2",
+    "markdown-it": "^15.0.3",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   },
   "engines": {
     "node": ">=26"

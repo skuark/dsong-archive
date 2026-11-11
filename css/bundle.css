@@ -226,6 +226,76 @@ a:hover {
   margin-bottom: 1.25rem;
 }
 
+/* Music map (/mapa/): countries colored by number of posts, from pale to strong yellow */
+.map {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  margin: 0 0 2rem;
+  padding: 1rem;
+}
+
+.map__svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.map__country {
+  fill: #eee;
+  stroke: var(--paper);
+  stroke-width: .5;
+}
+
+.map__dot {
+  stroke: var(--ink);
+}
+
+.map-level-1 { fill: #fffbc2; background: #fffbc2; }
+.map-level-2 { fill: #fff27a; background: #fff27a; }
+.map-level-3 { fill: #ffe100; background: #ffe100; }
+.map-level-4 { fill: #ffb800; background: #ffb800; }
+.map-level-5 { fill: #ff8c00; background: #ff8c00; }
+
+.map a:hover .map__country,
+.map a:focus-visible .map__country {
+  fill: var(--ink);
+}
+
+.map a:focus-visible {
+  outline: none;
+}
+
+.map__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1rem;
+  margin-top: .75rem;
+}
+
+.map__legend-item {
+  align-items: center;
+  display: inline-flex;
+  gap: .35rem;
+}
+
+.map__swatch {
+  border: 1px solid var(--ink);
+  display: inline-block;
+  height: .9rem;
+  width: .9rem;
+}
+
+.map-countries {
+  columns: 12rem;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.map-countries__count {
+  color: var(--muted);
+}
+
 .archive-search {
   align-items: center;
   display: flex;

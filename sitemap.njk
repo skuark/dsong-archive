@@ -10,6 +10,9 @@ eleventyExcludeFromCollections: true
   <url>
     <loc>{{ site.url }}/archive/</loc>
   </url>
+  <url>
+    <loc>{{ site.url }}/mapa/</loc>
+  </url>
   {%- for post in collections.posts %}
   <url>
     <loc>{{ site.url }}/archive/{{ post.id }}.html</loc>
@@ -33,6 +36,11 @@ eleventyExcludeFromCollections: true
   {%- for year in archive.byYear %}
   <url>
     <loc>{{ site.url }}/archive/years/{{ year.slug }}.html</loc>
+  </url>
+  {%- endfor %}
+  {%- for country in archive.byCountry %}
+  <url>
+    <loc>{{ site.url }}/archive/countries/{{ country.slug }}.html</loc>
   </url>
   {%- endfor %}
   {%- for category in archive.byCategory %}
