@@ -1,4 +1,8 @@
+import { readFileSync } from "node:fs";
 import { groupBy, posts } from "../lib/posts.js";
+
+// Byte size of each podcast mp3 (scripts/podcast-sizes.mjs), for the RSS <enclosure>
+const podcastSizes = JSON.parse(readFileSync("data/podcast-sizes.json", "utf8"));
 
 // "https://open.spotify.com/embed/user/x/playlist/ID" -> "spotify:playlist:ID" (for the embed API)
 const spotifyUri = (url) => {
@@ -24,6 +28,10 @@ export default {
   radio,
   radioIds: radio.map((entry) => entry[0]),
   radioById: Object.fromEntries(radio.map((entry) => [entry[0], true])),
+  // Podcast feed (/podcast.xml): posts with a UniRadio Jaén podcast, newest first
+  podcast: posts.filter((post) => post.metadata.podcast_file)
+    .map((post) => ({ post, file: post.metadata.podcast_file, length: podcastSizes[post.metadata.podcast_file] ?? 0 }))
+    .reverse(),
   // "On this day" on the home page: posts by publication day ("MM-DD"), oldest year first.
   byDay: Object.entries(Object.groupBy(posts, (post) => post.published_at.slice(5, 10)))
     .map(([day, list]) => ({

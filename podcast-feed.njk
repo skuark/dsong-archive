@@ -1,0 +1,40 @@
+---
+permalink: /podcast.xml
+eleventyExcludeFromCollections: true
+---
+{#- Podcast feed (RSS 2.0 + iTunes tags): the 335 UniRadio Jaén podcasts, newest first -#}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dSong en UniRadio Jaén</title>
+    <link>{{ site.url }}/</link>
+    <atom:link href="{{ site.url }}/podcast.xml" rel="self" type="application/rss+xml"/>
+    <description>Los {{ archive.podcast | length }} podcasts que dSong grabó con UniRadio Jaén (2011–2013), narrando algunas de las recomendaciones musicales del blog.</description>
+    <language>es-es</language>
+    <copyright>CC BY-NC-SA 3.0 ES</copyright>
+    <lastBuildDate>{{ archive.podcast[0].post.published_at | rfc822 }}</lastBuildDate>
+    <image>
+      <url>{{ site.url }}/images/uniradio-jaen.jpg</url>
+      <title>dSong en UniRadio Jaén</title>
+      <link>{{ site.url }}/</link>
+    </image>
+    <itunes:author>dSong</itunes:author>
+    <itunes:image href="{{ site.url }}/images/uniradio-jaen.jpg"/>
+    <itunes:category text="Music"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:complete>Yes</itunes:complete>
+    {%- for episode in archive.podcast %}
+    {%- set url = site.url + "/archive/" + episode.post.id + ".html" %}
+    <item>
+      <title>{{ episode.post.title }}</title>
+      <link>{{ url }}</link>
+      <guid isPermaLink="true">{{ url }}</guid>
+      <pubDate>{{ episode.post.published_at | rfc822 }}</pubDate>
+      <description>{{ episode.post.content | excerpt(400) }}</description>
+      <itunes:author>{{ episode.post.editor.name }}</itunes:author>
+      <enclosure url="https://dsongstatic.jesusmagamu.dev/mp3/podcast/{{ episode.file }}" length="{{ episode.length }}" type="audio/mpeg"/>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

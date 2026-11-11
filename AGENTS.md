@@ -20,6 +20,7 @@ CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build 
 
 ```
 data/posts.json        Source data (~1,900 posts). Not in _data on purpose (see below).
+data/podcast-sizes.json Byte size of each podcast mp3 (RSS <enclosure> needs it).
 data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via redirect.njk).
 lib/posts.js           Loads posts once, adds `post.slugs`, exports `posts`, `groupBy`, `slugify`.
 _data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory + byDay ("MM-DD") + radio.
@@ -35,7 +36,8 @@ js/                    archive-table-sort.js, archive-table-search.js (accent-in
 *.njk                  Pages: index, archive, post, archive-<facet>, rand, sitemap, robots.
 _includes/layouts/     main.njk (head, SEO meta, header).
 _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js).
-scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, review-youtube.mjs (+ .html).
+scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, review-youtube.mjs (+ .html),
+                       podcast-sizes.mjs (mp3 sizes -> data/podcast-sizes.json, for the feed; run by hand).
 ```
 
 ## Generated pages
@@ -47,6 +49,7 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 | `archive.njk` | `collections.posts` | `/archive/` |
 | `rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
 | `radio.njk` | `archive.radio` | `/radio.json` (posts with YouTube, or else a playable Spotify embed, for radio mode) |
+| `podcast-feed.njk` | `archive.podcast` | `/podcast.xml` (RSS + iTunes tags for the 335 UniRadio podcasts) |
 | `on-this-day.njk` | `archive.byDay` | `/tal-dia-como-hoy/<MM-DD>.json` (only days with posts) |
 | `redirect.njk` | `redirects` | each old URL (meta refresh + canonical) |
 | `404.njk` | — | `/404.html` (served by GitHub Pages) |

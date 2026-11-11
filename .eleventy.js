@@ -34,6 +34,18 @@ export default function(eleventyConfig) {
     return withTime ? `${date}, ${HH}:${mm}` : date;
   });
 
+  // RFC 822 date for RSS from the same string: "2013-04-25 09:00:00 +0200" -> "Thu, 25 Apr 2013 09:00:00 +0200"
+  // (weekday from the calendar date via Date.UTC, so it doesn't depend on the build machine's timezone)
+  const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const MONTHS_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  eleventyConfig.addFilter("rfc822", (dateString) => {
+    const match = /^(\d{4})-(\d{2})-(\d{2}) (\d{2}:\d{2}:\d{2}) ([+-]\d{4})$/.exec(dateString ?? "");
+    if (!match) return dateString ?? "";
+    const [, yyyy, MM, dd, time, zone] = match;
+    const day = DAYS[new Date(Date.UTC(yyyy, MM - 1, dd)).getUTCDay()];
+    return `${day}, ${dd} ${MONTHS_EN[MM - 1]} ${yyyy} ${time} ${zone}`;
+  });
+
   // 1891 -> "1.891" (Spanish thousands separator, also for 4-digit numbers)
   eleventyConfig.addFilter("thousands", (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."));
 
