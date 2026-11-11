@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: year
 eleventyComputed:
-  title: "Publicaciones del año {{ year.name }}"
+  title: "Publicaciones del año {{ year.name | safe }}"
 permalink: "/archive/years/{{ year.slug }}.html"
 pageClass: archive
 ---

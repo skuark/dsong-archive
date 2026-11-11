@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: artist
 eleventyComputed:
-  title: "Publicaciones del artista {{ artist.name }}"
+  title: "Publicaciones del artista {{ artist.name | safe }}"
 permalink: "/archive/artists/{{ artist.slug }}.html"
 pageClass: archive
 ---

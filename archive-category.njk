@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: category
 eleventyComputed:
-  title: "Publicaciones de la categoría {{ category.name }}"
+  title: "Publicaciones de la categoría {{ category.name | safe }}"
 permalink: "/archive/categories/{{ category.slug }}.html"
 pageClass: archive
 ---
