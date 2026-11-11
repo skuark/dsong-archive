@@ -1391,8 +1391,14 @@ a:hover {
 .home__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: .75rem;
   margin-bottom: 1.5rem;
+}
+
+/* Compact enough for the home buttons to fit on one line on usual desktop widths */
+.home__actions .button {
+  letter-spacing: .06em;
+  padding: .6rem .8rem;
 }
 
 .button {
@@ -1416,30 +1422,9 @@ a:hover {
   transform: translate(2px, 2px);
 }
 
-.home__stats {
-  border-bottom: 3px solid var(--ink);
-  border-top: 3px solid var(--ink);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 1.5rem;
-  padding: 1rem 0;
-}
 
-.home__stat {
-  display: flex;
-  flex-direction: column-reverse;
-}
 
-.home__stat + .home__stat {
-  border-left: 1px solid var(--rule);
-  padding-left: 1rem;
-}
 
-.home__stat dd {
-  font-family: var(--font-display);
-  font-size: 3rem;
-  line-height: 1;
-}
 
 .home__note {
   border-bottom: 1px dotted var(--rule);
@@ -1466,10 +1451,6 @@ a:hover {
   .home__lead {
     font-size: 1.5rem;
   }
-
-  .home__stat dd {
-    font-size: 2.2rem;
-  }
 }
 
 /* Desktop: text on the left, "Tal día como hoy" in the free space on the right */
@@ -1477,7 +1458,13 @@ a:hover {
   .home {
     column-gap: 3rem;
     display: grid;
-    grid-template-columns: minmax(0, 40rem) minmax(20rem, 1fr);
+    /* The intro takes the free width (up to a readable 56rem); "Tal día como hoy" is capped at 24rem */
+    grid-template-columns: minmax(0, 56rem) minmax(18rem, 24rem);
+    justify-content: space-between;
+  }
+
+  .home__intro {
+    max-width: none;
   }
 
   /* Sticky while scrolling the intro (desktop only, where it sits in its own column) */
