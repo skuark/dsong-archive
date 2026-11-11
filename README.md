@@ -10,7 +10,8 @@ The original blog ended in early 2017. Rather than let all this content be lost 
 
 ## Features
 
-- **Archive**: every post in a sortable, searchable table, with pages per artist, album, year, category and author.
+- **Archive**: every post in a sortable, searchable table, with pages per artist, album, year, category, author and country.
+- **Music map**: `/mapa/` shows a world map colored by the artists' nationality; click a country to see its posts.
 - **Posts**: split view on desktop (text on the left, players on the right) with YouTube, Spotify and Apple Music players, and previous/next/random navigation.
 - **Radio mode**: plays post after post (YouTube, or Spotify when there's no video) without reloading the page, so the text of each song is shown next to it. In chronological or random order; `/radio/` starts on a random post.
 - **Podcast**: the 335 UniRadio Jaén episodes with their own player on each post, and an RSS feed (`/podcast.xml`) to subscribe from any podcast app.
@@ -91,6 +92,7 @@ See [`AGENTS.md`](AGENTS.md) for the project structure and design decisions.
 - [Eleventy](https://www.11ty.dev/) - Static site generator
 - [Nunjucks](https://mozilla.github.io/nunjucks/) - Template engine
 - [markdown-it](https://github.com/markdown-it/markdown-it) - Markdown parser
+- [d3-geo](https://d3js.org/d3-geo) + [world-atlas](https://github.com/topojson/world-atlas) - World map, projected at build time
 
 ## License
 
