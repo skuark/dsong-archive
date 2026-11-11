@@ -22,13 +22,14 @@ CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build 
 data/posts.json        Source data (~1,900 posts). Not in _data on purpose (see below).
 data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via redirect.njk).
 lib/posts.js           Loads posts once, adds `post.slugs`, exports `posts`, `groupBy`, `slugify`.
-_data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory.
+_data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory + byDay ("MM-DD").
 _data/site.js          Global `site`: url, title, description, umamiId.
 _data/redirects.js     Exposes data/redirects.json as `redirects`.
 lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only (fonts.11ty.js -> /css/fonts.css).
 js/                    archive-table-sort.js, archive-table-search.js (accent-insensitive filter, ?q=),
                        players.js (post players as tabs inside a <details>; lazy-loads via data-src).
-                       post-header.js (sticky post header height -> --post-header-height for the split view).
+                       post-header.js (sticky post header height -> --post-header-height for the split view),
+                       on-this-day.js (home "Tal día como hoy": fetches today's JSON in the browser).
 .eleventy.js           Filters (formatDate, markdown, excerpt), `posts` collection, passthrough.
 *.njk                  Pages: index, archive, post, archive-<facet>, rand, sitemap, robots.
 _includes/layouts/     main.njk (head, SEO meta, header).
@@ -44,6 +45,7 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 | `archive-<facet>.njk` | `archive.by<Facet>` (`{ name, slug, posts }`) | `/archive/<facets>/<slug>.html` |
 | `archive.njk` | `collections.posts` | `/archive/` |
 | `rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
+| `on-this-day.njk` | `archive.byDay` | `/tal-dia-como-hoy/<MM-DD>.json` (only days with posts) |
 | `redirect.njk` | `redirects` | each old URL (meta refresh + canonical) |
 | `404.njk` | — | `/404.html` (served by GitHub Pages) |
 

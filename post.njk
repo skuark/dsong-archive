@@ -34,6 +34,11 @@ permalink: "archive/{{ post.id }}.html"
 
 <div class="post-view">
   <header class="post-view__header">
+  {%- if post.metadata.category %}
+  <span class="kicker post-view__kicker">
+    {%- if post.slugs.category %}<a href="/archive/categories/{{ post.slugs.category }}.html">{{ post.metadata.category }}</a>{% else %}{{ post.metadata.category }}{% endif -%}
+  </span>
+  {%- endif %}
   <h2 class="post-view__title">{{ post.title }}</h2>
 
   <div class="post-view__meta">

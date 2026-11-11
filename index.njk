@@ -3,30 +3,67 @@ layout: layouts/main.njk
 pageClass: index
 ---
 
-<p>🎧 dSong fue un proyecto web sin ánimo de lucro fundado el 18 de Mayo de 2009, en el que un grupo de amigos nos
-  propusimos escribir una recomendación musical diaria.</p>
+<div class="home">
+  <div class="home__intro">
+    <p class="kicker home__kicker">Una recomendación musical diaria · 2009–2017</p>
 
-<p>✍🏼 A lo largo de 8 años publicamos cerca de 2.000 artículos. Durante un tiempo también colaboramos con <a
-    href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>, grabando 335 podcasts narrando algunas de las
-  recomendaciones de la web.</p>
+    <p class="home__lead">dSong fue un proyecto web sin ánimo de lucro fundado el 18 de Mayo de 2009, en el que un
+      grupo de amigos nos propusimos escribir <mark>una recomendación musical diaria</mark>.</p>
 
-<p>⌛️ A principios de 2017 publicamos el último artículo. En <a
-    href="https://web.archive.org/web/20170501000000*/http://www.dsong.es" target="_blank">archive.org</a> se pueden
-  seguir consultando algunas capturas de la web original.</p>
+    <dl class="home__stats">
+      <div class="home__stat"><dt class="kicker">Años</dt><dd>8</dd></div>
+      <div class="home__stat"><dt class="kicker">Artículos</dt><dd>{{ collections.posts | length | thousands }}</dd></div>
+      <div class="home__stat"><dt class="kicker">Podcasts</dt><dd>335</dd></div>
+    </dl>
 
-<p>💻 Era una pena que todo este contenido se perdiese en un disco duro de copias de seguridad, así que hemos creado
-  este pequeño proyecto para que se pueda seguir consultando más allá del típico formato blog que un día fue. En el
-  <a href="/archive/">Archivo</a> puedes encontrar una tabla con todo el contenido,
-  filtrarlo y ordenarlo por distintos criterios. También puedes <a href="/rand/"><img
-      src="/images/dices.png" alt="Dados" class="header__menu--dices"> navegar a tu suerte</a>, y ver qué te
-  vamos recomendando de entre todo el histórico de publicaciones.</p>
+    <ul class="home__notes">
+      <li class="home__note">
+        <span class="home__emoji" aria-hidden="true">✍🏼</span>
+        <p>A lo largo de 8 años publicamos cerca de 2.000 artículos. Durante un tiempo también colaboramos con <a
+            href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>, grabando 335 podcasts narrando algunas
+          de las recomendaciones de la web.</p>
+      </li>
+      <li class="home__note">
+        <span class="home__emoji" aria-hidden="true">⌛️</span>
+        <p>A principios de 2017 publicamos el último artículo. En <a
+            href="https://web.archive.org/web/20170501000000*/http://www.dsong.es" target="_blank">archive.org</a> se
+          pueden seguir consultando algunas capturas de la web original.</p>
+      </li>
+      <li class="home__note">
+        <span class="home__emoji" aria-hidden="true">💻</span>
+        <p>Era una pena que todo este contenido se perdiese en un disco duro de copias de seguridad, así que hemos
+          creado este pequeño proyecto para que se pueda seguir consultando más allá del típico formato blog que un día
+          fue. En el <a href="/archive/">Archivo</a> puedes encontrar una tabla con todo el contenido, filtrarlo y
+          ordenarlo por distintos criterios. También puedes <a href="/rand/"><img src="/images/dices.png" alt="Dados"
+              class="header__menu--dices"> navegar a tu suerte</a>, y ver qué te vamos recomendando de entre todo el
+          histórico de publicaciones.</p>
+      </li>
+      <li class="home__note">
+        <span class="home__emoji" aria-hidden="true">🤝</span>
+        <p>Todos los contenidos de este sitio continuan estando publicados bajo una licencia <a
+            href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">«Creative Commons
+            Reconocimiento-No comercial-Compartir bajo la misma licencia 3.0 España»</a>. Puedes darle un uso no
+          comercial, siempre y cuando reconozcas la autoría y compartas con el mismo tipo de licencia.</p>
+      </li>
+      <li class="home__note">
+        <span class="home__emoji" aria-hidden="true">📨</span>
+        <p>Si encuentras alguna errata, una publicación mal formateada, enlaces rotos o algún reproductor que no
+          funciona puedes <a href="mailto:dsong@jesusmagamu.dev">escribir un email a dsong@jesusmagamu.dev</a>, <a
+            href="https://github.com/skuark/dsong-archive" target="_blank">abrir una issue en GitHub</a> o mandar un PR
+          con la corrección.</p>
+      </li>
+    </ul>
+  </div>
 
-<p>🤝 Todos los contenidos de este sitio continuan estando publicados bajo una licencia <a
-    href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">«Creative Commons Reconocimiento-No
-    comercial-Compartir bajo la misma licencia 3.0 España»</a>. Puedes darle un uso no comercial, siempre y cuando
-  reconozcas la autoría y compartas con el mismo tipo de licencia.</p>
-
-<p>📨 Si encuentras alguna errata, una publicación mal formateada, enlaces rotos o algún reproductor que no funciona
-  puedes <a href="mailto:dsong@jesusmagamu.dev">escribir un email a dsong@jesusmagamu.dev</a>, <a
-    href="https://github.com/skuark/dsong-archive" target="_blank">abrir una issue en GitHub</a> o mandar un PR con la
-  corrección.</p>
+  {#- Filled by js/on-this-day.js with the visitor's date (the site is static) #}
+  <aside class="on-this-day" aria-labelledby="on-this-day-title" hidden>
+    <h2 class="on-this-day__header" id="on-this-day-title">
+      <span class="on-this-day__kicker">Tal día como hoy</span>
+      <span class="on-this-day__day"></span>
+      <span class="on-this-day__month"></span>
+    </h2>
+    <p class="on-this-day__note" hidden></p>
+    <ol class="on-this-day__list"></ol>
+  </aside>
+</div>
+<script src="/js/on-this-day.js?v={{ 'js/on-this-day.js' | assetVersion }}" defer></script>

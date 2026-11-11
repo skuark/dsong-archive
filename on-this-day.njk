@@ -1,0 +1,9 @@
+---
+pagination:
+  data: archive.byDay
+  size: 1
+  alias: entry
+permalink: "tal-dia-como-hoy/{{ entry.day }}.json"
+eleventyExcludeFromCollections: true
+---
+{{ entry.posts | dump | safe }}

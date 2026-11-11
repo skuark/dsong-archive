@@ -34,6 +34,9 @@ export default function(eleventyConfig) {
     return withTime ? `${date}, ${HH}:${mm}` : date;
   });
 
+  // 1891 -> "1.891" (Spanish thousands separator, also for 4-digit numbers)
+  eleventyConfig.addFilter("thousands", (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."));
+
   // "2009-05-18 09:00:37 +0200" -> "2009-05-18T09:00:37+02:00"
   eleventyConfig.addFilter("isoDate", (dateString) =>
     (dateString ?? "").replace(/^(\S+) (\S+) ([+-]\d{2})(\d{2})$/, "$1T$2$3:$4")
