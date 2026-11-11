@@ -62,6 +62,10 @@ permalink: "archive/{{ post.id }}.html"
       </span>
 
       <time class="post-view__date" datetime="{{ post.published_at | isoDate }}">{{ post.published_at | longDate }}</time>
+      {#- Local builds only (CI builds with ELEVENTY_ENV=production): opens the post in the local editor (npm run edit) -#}
+      {%- if env.ELEVENTY_ENV != "production" %}
+      <a class="post-view__edit" href="http://localhost:8082/#{{ post.id }}" target="dsong-editor">✏️ Editar</a>
+      {%- endif %}
     </span>
   </div>
   </header>

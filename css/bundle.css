@@ -709,6 +709,12 @@ a:hover {
   margin-right: 1rem;
 }
 
+/* Local builds only: link to the post in the local editor */
+.post-view__edit {
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
 /* Author links wrap avatar + name with whitespace around: underline and highlight only the name */
 .post-view__editor a,
 .post-view__comment-editor a {
