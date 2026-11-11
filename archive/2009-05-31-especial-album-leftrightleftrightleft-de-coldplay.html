@@ -14,7 +14,7 @@
   <meta property="og:description" content="Coldplay es hoy por hoy una banda que no debería necesitar carta de presentación. El grupo liderado por el cantante, compositor, pianista y guitarrista Chris…">
   <meta property="og:url" content="https://dsong.es/archive/2009-05-31-especial-album-leftrightleftrightleft-de-coldplay.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=506f333b">
+  <link rel="stylesheet" href="/css/bundle.css?v=ea9137b8">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -99,8 +99,25 @@
 	<li>Fix You</li>
 	<li>Death and All His Friends</li>
 </ol>
-  </div>
+  </div><aside class="post-view__side">
+  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/P4ycqk7_HOo?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=104ce4d4" defer></script>
   <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </aside>
 
   
     <details class="post-view__comments">
