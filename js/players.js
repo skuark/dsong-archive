@@ -1,10 +1,9 @@
 // Tabs for post players (WAI-ARIA tabs pattern). Players load when their tab is first shown,
 // and switching tabs stops whatever was playing.
+// Events are delegated from the document, so tabs replaced later (radio mode swaps them) keep working.
 (function() {
-  const tablist = document.querySelector('.players__tabs');
-  if (!tablist) return;
-  const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
   const panelOf = (tab) => document.getElementById(tab.getAttribute('aria-controls'));
+  const tabsOf = (tab) => Array.from(tab.closest('.players__tabs').querySelectorAll('[role="tab"]'));
 
   function stop(panel) {
     const audio = panel.querySelector('audio');
@@ -15,7 +14,7 @@
   }
 
   function select(tab) {
-    for (const other of tabs) {
+    for (const other of tabsOf(tab)) {
       const active = other === tab;
       const panel = panelOf(other);
       if (!active && !panel.hidden) stop(panel);
@@ -30,15 +29,21 @@
     }
   }
 
-  tabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => select(tab));
-    tab.addEventListener('keydown', (e) => {
-      const keys = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
-      if (!(e.key in keys)) return;
-      e.preventDefault();
-      const next = tabs[(keys[e.key] + tabs.length) % tabs.length];
-      next.focus();
-      select(next);
-    });
+  document.addEventListener('click', (e) => {
+    const tab = e.target.closest('.players__tabs [role="tab"]');
+    if (tab) select(tab);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const tab = e.target.closest('.players__tabs [role="tab"]');
+    if (!tab) return;
+    const tabs = tabsOf(tab);
+    const i = tabs.indexOf(tab);
+    const keys = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
+    if (!(e.key in keys)) return;
+    e.preventDefault();
+    const next = tabs[(keys[e.key] + tabs.length) % tabs.length];
+    next.focus();
+    select(next);
   });
 })();

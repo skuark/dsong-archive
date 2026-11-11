@@ -49,7 +49,23 @@ table {
 
 /* Custom styles */
 
+/* Design language (from the home "Tal día como hoy" sheet): black ink on white paper, yellow
+   highlight, solid offset black shadows, Amaranth display type and small uppercase kickers. */
+:root {
+  --ink: #000;
+  --paper: #fff;
+  --accent: #ff0;
+  --muted: #666;
+  --rule: #ccc;
+  --shadow: .5rem .5rem 0 var(--ink);
+  --shadow-small: .25rem .25rem 0 var(--ink);
+  --font-display: Amaranth, sans-serif;
+}
+
+/* Font on body (not only .app): the radio bar is appended to <body>, outside .app */
 body {
+  color: var(--ink);
+  font-family: Titillium Web, sans-serif;
   line-height: 1.6;
 }
 
@@ -57,23 +73,54 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Links: ink, underlined, highlighted in yellow on hover */
 a {
-  color: #03a9f4;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  background: var(--accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Small uppercase label used above titles and as section headings */
+.kicker,
+.archive-search__label,
+.archive-search__count,
+.post-nav__label,
+.post-view__comments-summary,
+.players__summary,
+.players__tab {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 .app {
-  font-family: Titillium Web, sans-serif;
   min-height: 100vh;
 }
 
+/* Same content width on every page (the archive table's min-width is 80rem = 84rem - padding) */
 .app-wrapper {
-  max-width: 40rem;
+  max-width: 84rem;
   margin: 0 auto;
   padding: 2rem;
 }
 
-.page-archive .app-wrapper {
-  max-width: 120rem;
+/* Running text keeps a comfortable line length inside the wider page */
+.page-index .app-wrapper > p,
+.home__intro,
+.post-view__content,
+.post-view__comments {
+  max-width: 40rem;
 }
 
 .header {
@@ -85,9 +132,15 @@ a {
   width: 110px !important;
 }
 
+.header__logo-container a:hover {
+  background: none;
+}
+
 .header__logo-headline {
-  font-size: .8rem;
-  font-style: italic;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 .header__menu {
@@ -95,23 +148,63 @@ a {
 }
 
 .header__menu--item {
-  display: inline;
-  padding: .5rem;
+  display: inline-block;
+  padding: .25rem;
   vertical-align: middle;
 }
 
+/* Menu: uppercase labels; the current page is a yellow tag with a small shadow */
 .header__menu--item a {
-  padding: .2rem .5rem;
-  border-radius: .5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: .3rem .6rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .header__menu--item [aria-current="page"] {
-  background-color: #ff0;
+  background: var(--accent);
+  box-shadow: var(--shadow-small);
 }
 
 .header__menu--dices {
   width: 16px;
   vertical-align: middle;
+}
+
+.footer {
+  border-top: 3px solid var(--ink);
+  font-size: .85rem;
+  line-height: 1.5;
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: .25rem 0;
+}
+
+/* From tablet up: logo on the left, menu on the right (on phones it stays centered and stacked) */
+@media (min-width: 40rem) {
+  .header {
+    align-items: center;
+    border-bottom: 3px solid var(--ink);
+    display: flex;
+    gap: 1rem 2rem;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+
+  .header__menu {
+    margin: 0;
+  }
+
+  .header__menu--item:last-child {
+    padding-right: 0;
+  }
 }
 
 .archive {
@@ -127,10 +220,10 @@ a {
 }
 
 .archive-title {
-  font-family: Amaranth, sans-serif;
-  font-size: 2rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1.25rem;
 }
 
 .archive-search {
@@ -141,12 +234,9 @@ a {
   margin-bottom: 1rem;
 }
 
-.archive-search__label {
-  font-weight: 700;
-}
-
 .archive-search__input {
-  border: 2px solid #000;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-small);
   flex: 1 1 12rem;
   font: inherit;
   min-width: 0;
@@ -156,17 +246,17 @@ a {
 }
 
 .archive-search__input:focus {
-  outline: 2px solid #03a9f4;
-  outline-offset: 1px;
+  background: var(--accent);
+  outline: none;
 }
 
 .archive-search__count {
-  font-size: .8rem;
-  font-style: italic;
+  color: var(--muted);
 }
 
 .archive-table {
-  border: 2px solid #000;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
   font-size: .8rem;
   margin-bottom: 1rem;
   min-width: 80rem;
@@ -203,17 +293,32 @@ a {
   background: #1a1a1a;
 }
 
+/* Sorted column: yellow label */
+.archive-table th.sort-asc,
+.archive-table th.sort-desc {
+  color: var(--accent);
+}
+
 .archive-table th .sort-indicator {
   font-size: 0.75rem;
   opacity: 0.8;
 }
 
 .archive-table th a {
-  color: #fff;
+  color: var(--paper);
+}
+
+.archive-table tbody tr:hover {
+  background: var(--accent);
+}
+
+.archive-table tbody a:hover {
+  background: var(--ink);
+  color: var(--accent);
 }
 
 .archive-table tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--rule);
 }
 
 .archive-table tr:last-child {
@@ -247,10 +352,19 @@ a {
   width: 8%;
 }
 
+.post-view__kicker {
+  display: block;
+  margin-bottom: .25rem;
+}
+
+.post-view__kicker a {
+  text-decoration: none;
+}
+
 .post-view__title {
-  font-family: Amaranth, sans-serif;
-  font-size: 2rem;
-  line-height: 1.2;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1.05;
   margin-bottom: 1rem;
 }
 
@@ -271,7 +385,31 @@ a {
   margin-right: 1rem;
 }
 
+/* Author links wrap avatar + name with whitespace around: underline and highlight only the name */
+.post-view__editor a,
+.post-view__comment-editor a {
+  text-decoration: none;
+}
+
+.post-view__editor a:hover,
+.post-view__comment-editor a:hover {
+  background: none;
+}
+
+.post-view__editor a .post-view__editor-name,
+.post-view__comment-editor a .post-view__comment-editor-name {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.post-view__editor a:hover .post-view__editor-name,
+.post-view__comment-editor a:hover .post-view__comment-editor-name {
+  background: var(--accent);
+}
+
 .post-view__editor-image {
+  border: 2px solid var(--ink);
   border-radius: 1rem;
   margin-right: .5rem;
   width: 20px;
@@ -283,7 +421,6 @@ a {
   vertical-align: middle;
 }
 
-.post-view__comments-count,
 .post-view__date {
   vertical-align: middle;
   margin-right: 1rem;
@@ -299,10 +436,55 @@ a {
   margin-top: 1rem;
 }
 
-.post-view__subtitle {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+/* Lists inside articles (tracklists, etc.): the reset removes their markers */
+.post-view__content ol,
+.post-view__content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.post-view__content ol {
+  list-style: decimal;
+}
+
+.post-view__content ul {
+  list-style: disc;
+}
+
+/* Comments: closed accordion, same look as the players one */
+.post-view__comments {
+  border: 2px solid var(--ink);
+  margin: 2rem 0;
+}
+
+.post-view__comments-summary {
+  cursor: pointer;
+  list-style: none;
+  padding: .75rem 1rem;
+}
+
+.post-view__comments-summary:hover {
+  background: var(--accent);
+}
+
+.post-view__comments-summary::-webkit-details-marker {
+  display: none;
+}
+
+.post-view__comments-summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: .5rem;
+  transition: transform .2s ease;
+}
+
+.post-view__comments[open] .post-view__comments-summary::before {
+  transform: rotate(90deg);
+}
+
+.post-view__comments ul {
+  border-top: 2px solid var(--ink);
+  padding: 1.25rem 1rem;
 }
 
 .post-view__media {
@@ -315,16 +497,19 @@ a {
 
 /* Players: accordion (details) with one tab per player */
 .players {
-  border: 2px solid #000;
-  margin: 1.5rem 0;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  margin: 2rem .5rem 2rem 0;
 }
 
 .players__summary {
   cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 700;
   list-style: none;
-  padding: .5rem 1rem;
+  padding: .75rem 1rem;
+}
+
+.players__summary:hover {
+  background: var(--accent);
 }
 
 .players__summary::-webkit-details-marker {
@@ -343,37 +528,35 @@ a {
 }
 
 .players__tabs {
-  border-bottom: 2px solid #000;
-  border-top: 2px solid #000;
+  border-bottom: 2px solid var(--ink);
+  border-top: 2px solid var(--ink);
   display: flex;
   flex-wrap: wrap;
 }
 
 .players__tab {
-  background: #fff;
+  background: var(--paper);
   border: 0;
-  border-right: 1px solid #ccc;
-  color: #000;
+  border-right: 2px solid var(--ink);
+  color: var(--ink);
   cursor: pointer;
-  font: inherit;
-  font-size: .9rem;
-  font-weight: 700;
-  padding: .5rem 1rem;
+  font-family: inherit;
+  padding: .6rem 1rem;
   transition: background-color .2s ease;
 }
 
 .players__tab:hover {
-  background: #eee;
+  background: var(--accent);
 }
 
 .players__tab[aria-selected="true"] {
-  background: #000;
-  color: #fff;
+  background: var(--ink);
+  color: var(--accent);
 }
 
 .players__tab:focus-visible {
-  outline: 2px solid #03a9f4;
-  outline-offset: -4px;
+  outline: 3px solid var(--accent);
+  outline-offset: -5px;
 }
 
 .players__panel {
@@ -399,10 +582,673 @@ a {
   width: 100%;
 }
 
-.post-view__comment {
-  border-bottom: 1px dotted #ccc;
+/* UniRadio Jaén podcast: own block above the players */
+.podcast {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  margin: 2rem .5rem 2rem 0;
+  padding: 1rem;
+}
+
+.podcast__header {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+
+.podcast__logo-link:hover {
+  background: none;
+}
+
+.podcast__logo {
+  display: block;
+  height: 4rem;
+  width: auto;
+}
+
+.podcast__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.podcast__audio {
+  display: block;
+  width: 100%;
+}
+
+/* Own controls (js/podcast.js): ink play button with a yellow icon, flat ink/yellow seek bar */
+.podcast-player {
+  display: none;
+}
+
+.podcast-js .podcast__audio {
+  display: none;
+}
+
+.podcast-js .podcast-player {
+  align-items: center;
+  border-top: 2px solid var(--ink);
+  display: flex;
+  gap: .75rem;
+  padding-top: .75rem;
+}
+
+.podcast-player button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.podcast-player__play {
+  align-items: center;
+  background: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-small);
+  color: var(--accent);
+  display: flex;
+  flex: none;
+  height: 2.75rem;
+  justify-content: center;
+  width: 2.75rem;
+}
+
+.podcast-player__play:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.podcast-player__play:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+/* Play triangle; two bars while playing */
+.podcast-player__icon {
+  background: currentColor;
+  clip-path: polygon(15% 0, 100% 50%, 15% 100%);
+  height: 1rem;
+  width: 1rem;
+}
+
+.podcast-player__play[aria-pressed="true"] .podcast-player__icon {
+  clip-path: polygon(10% 0, 40% 0, 40% 100%, 10% 100%, 10% 0, 60% 0, 90% 0, 90% 100%, 60% 100%, 60% 0);
+}
+
+.podcast-player__seek {
+  --progress: 0%;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  flex: 1;
+  height: 1.5rem;
+  min-width: 4rem;
+}
+
+.podcast-player__seek::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, var(--ink) var(--progress), var(--rule) var(--progress));
+  height: 4px;
+}
+
+.podcast-player__seek::-webkit-slider-thumb {
+  appearance: none;
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  height: 1rem;
+  margin-top: calc(2px - .5rem);
+  width: 1rem;
+}
+
+.podcast-player__seek::-moz-range-track {
+  background: var(--rule);
+  height: 4px;
+}
+
+.podcast-player__seek::-moz-range-progress {
+  background: var(--ink);
+  height: 4px;
+}
+
+.podcast-player__seek::-moz-range-thumb {
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  height: .75rem;
+  width: .75rem;
+}
+
+.podcast-player__seek:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.podcast-player__time {
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.podcast-player__speed {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  font-size: .75rem;
+  font-weight: 700;
+  min-width: 3.25rem;
+  padding: .3rem .4rem;
+}
+
+.podcast-player__speed:hover {
+  background: var(--accent);
+}
+
+/* Radio mode toggle (above the players) and bar (fixed at the bottom while it plays) */
+.radio-toggle {
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-small);
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  margin: 0 .25rem 1rem 0;
+  padding: .5rem .75rem;
+  text-align: left;
+  text-transform: uppercase;
+  transition: transform .1s ease, box-shadow .1s ease;
+  width: calc(100% - .25rem);
+}
+
+.radio-toggle:hover {
+  box-shadow: none;
+  transform: translate(.25rem, .25rem);
+}
+
+.radio-toggle[hidden] {
+  display: none;
+}
+
+.radio-toggle__hint {
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.radio-bar {
+  align-items: center;
+  background: var(--accent);
+  border-top: 3px solid var(--ink);
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  left: 0;
+  padding: .75rem 2rem;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+}
+
+.radio-bar__next {
+  flex: 1 1 16rem;
+  font-size: .9rem;
+  min-width: 0;
+}
+
+.radio-bar__next a:hover {
+  background: var(--ink);
+  color: var(--accent);
+}
+
+.radio-bar__actions {
+  display: flex;
+  gap: .5rem;
+}
+
+.radio-bar__button {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .3rem .7rem;
+}
+
+.radio-bar__button:hover {
+  background: var(--ink);
+  color: var(--accent);
+}
+
+.radio-bar__button[aria-pressed="true"],
+.radio-bar__button--start {
+  background: var(--ink);
+  color: var(--accent);
+}
+
+.radio-bar__button[hidden] {
+  display: none;
+}
+
+.radio-bar__button:disabled {
+  cursor: default;
+  opacity: .4;
+}
+
+.radio-bar__button:disabled:hover {
+  background: var(--paper);
+  color: inherit;
+}
+
+/* Room for the bar so it doesn't cover the end of the page */
+.radio-on {
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 500px) {
+  .radio-bar {
+    padding: .75rem 1rem;
+  }
+}
+
+/* Previous / next post: plain text links under a thin rule */
+.post-nav {
+  border-top: 3px solid var(--ink);
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: 1fr auto 1fr;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+/* Above the post: rule below instead of above */
+.post-nav--top {
+  border-bottom: 3px solid var(--ink);
+  border-top: 0;
+  margin: 0 0 1rem;
+  padding: 0 0 1rem;
+}
+
+.post-nav__link {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  text-decoration: none;
+}
+
+.post-nav__link:hover {
+  background: none;
+}
+
+.post-nav__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.post-nav__link:hover .post-nav__title {
+  background: var(--accent);
+}
+
+.post-nav__link--prev {
+  grid-column: 1;
+}
+
+.post-nav__link--next {
+  grid-column: 3;
+  text-align: right;
+}
+
+/* Random post, between previous and next (same label + title shape) */
+.post-nav__link--random {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.post-nav__label {
+  color: var(--muted);
+}
+
+@media (max-width: 500px) {
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-nav__link--prev,
+  .post-nav__link--next {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .post-nav__link--random {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: left;
+  }
+}
+
+/* Home: "Tal día como hoy" as a calendar sheet (posts published on today's date in past years),
+   filled by js/on-this-day.js */
+.on-this-day {
+  background: var(--accent);
+  box-shadow: var(--shadow);
+  margin: 2rem .5rem 1rem 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  transform: rotate(-2deg);
+  transition: transform .2s ease;
+}
+
+.on-this-day:hover,
+.on-this-day:focus-within {
+  transform: rotate(0);
+}
+
+.on-this-day__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.on-this-day__kicker {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.on-this-day__day {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: .9;
+}
+
+.on-this-day__month {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.on-this-day__note {
+  font-size: .8rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Timeline: a black line with a dot per year */
+.on-this-day__list {
+  border-left: 2px solid #000;
+  margin-left: .35rem;
+}
+
+.on-this-day__item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 .9rem 1.1rem;
+  position: relative;
+}
+
+.on-this-day__item:last-child {
+  padding-bottom: 0;
+}
+
+.on-this-day__item::before {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  height: .7rem;
+  left: -.45rem;
+  position: absolute;
+  top: .3rem;
+  width: .7rem;
+}
+
+.on-this-day__meta {
+  font-size: .8rem;
+}
+
+.on-this-day__year {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.on-this-day__item a {
+  color: #000;
+  line-height: 1.3;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.on-this-day__item a:hover {
+  background: #000;
+  color: #ff0;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .on-this-day {
+    transition: none;
+  }
+}
+
+/* Home intro: magazine-like lead, big figures and notes with hanging emoji */
+.home__kicker {
+  margin-bottom: .5rem;
+}
+
+.home__lead {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  line-height: 1.2;
   margin-bottom: 2rem;
-  padding-bottom: 1rem;
+}
+
+.home__lead mark {
+  background: var(--accent);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: inherit;
+  padding: 0 .2em;
+}
+
+/* Home calls to action: bordered buttons with the site's hard shadow */
+.home__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-small);
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: .6rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: var(--accent);
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+.home__stats {
+  border-bottom: 3px solid var(--ink);
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+}
+
+.home__stat {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.home__stat + .home__stat {
+  border-left: 1px solid var(--rule);
+  padding-left: 1rem;
+}
+
+.home__stat dd {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.home__note {
+  border-bottom: 1px dotted var(--rule);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2rem 1fr;
+  padding: 1rem 0;
+}
+
+.home__note:last-child {
+  border-bottom: 0;
+}
+
+.home__note p {
+  margin: 0;
+}
+
+.home__emoji {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 500px) {
+  .home__lead {
+    font-size: 1.5rem;
+  }
+
+  .home__stat dd {
+    font-size: 2.2rem;
+  }
+}
+
+/* Desktop: text on the left, "Tal día como hoy" in the free space on the right */
+@media (min-width: 64rem) {
+  .home {
+    column-gap: 3rem;
+    display: grid;
+    grid-template-columns: minmax(0, 40rem) minmax(20rem, 1fr);
+  }
+
+  /* Sticky while scrolling the intro (desktop only, where it sits in its own column) */
+  .on-this-day {
+    align-self: start;
+    margin-top: 0;
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+/* Desktop: the post header (title + author/date) stays at the top while reading */
+@media (min-width: 64rem) {
+  .post-view__header {
+    background: var(--paper);
+    border-bottom: 3px solid var(--ink);
+    padding: .75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .post-view__header .post-view__title {
+    margin-bottom: .5rem;
+  }
+
+  /* Same 1rem gap under the header before and after it sticks (the players column uses
+     top: header height + 1rem); in the grid, margins don't collapse, so the text drops its own */
+  .post-view__header {
+    margin-bottom: 1rem;
+  }
+
+  .post-view__header + .post-view__content {
+    margin-top: 0;
+  }
+}
+
+/* Desktop split view: text on the left, players sticky on the right so the video stays in view
+   while reading. Only for posts with players (mobile stays one column). */
+@media (min-width: 64rem) {
+  .post-view:has(.post-view__side) {
+    column-gap: 3rem;
+    display: grid;
+    grid-template-columns: minmax(0, 40rem) minmax(24rem, 1fr);
+  }
+
+  .post-view:has(.post-view__side) > * {
+    grid-column: 1;
+  }
+
+  /* Side column with the players, sticky so the video stays in view while reading */
+  .post-view:has(.post-view__side) > .post-view__side {
+    align-self: start;
+    grid-column: 2;
+    /* Spans every row under the header, so sticky can travel along the whole article */
+    grid-row: 2 / span 50;
+    position: sticky;
+    /* Right under the sticky header (its height is set by js/post-header.js) */
+    top: calc(var(--post-header-height, 6rem) + 1rem);
+  }
+
+  /* Post header (title + author/date) across both columns */
+  .post-view:has(.post-view__side) > .post-view__header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  /* Room on the right for the offset shadow */
+  .post-view__side > .players,
+  .post-view__side > .podcast {
+    margin: 0 .5rem 0 0;
+  }
+
+  /* Podcast first, as its own block: room before the radio toggle / players */
+  .post-view__side > .podcast {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Always open in the side column: hide the accordion toggle */
+  .post-view:has(.post-view__side) .players__summary {
+    display: none;
+  }
+
+  .post-view:has(.post-view__side) .players__tabs {
+    border-top: 0;
+  }
+}
+
+/* Same space above and below each separator */
+.post-view__comment {
+  border-bottom: 1px dotted var(--rule);
+  padding: 1.25rem 0;
+}
+
+.post-view__comment:first-child {
+  padding-top: 0;
+}
+
+.post-view__comment:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .post-view__comment-meta {
@@ -422,20 +1268,4 @@ a {
 .post-view__comment-date {
   vertical-align: middle;
   margin-right: 1rem;
-}
-
-/* GitHub corner */
-.github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
-}
-
-@keyframes octocat-wave {
-  0%, 100% { transform: rotate(0); }
-  20%, 60% { transform: rotate(-25deg); }
-  40%, 80% { transform: rotate(10deg); }
-}
-
-@media (max-width: 500px) {
-  .github-corner:hover .octo-arm { animation: none; }
-  .github-corner .octo-arm { animation: octocat-wave 560ms ease-in-out; }
 }
