@@ -75,6 +75,7 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.ignores.add("*.md");
+  eleventyConfig.ignores.add("scripts/**");   // local tools (review/editor UIs), not site pages
 
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
