@@ -614,6 +614,12 @@ a:hover {
   line-height: 1.1;
 }
 
+.podcast__feed {
+  display: inline-block;
+  font-size: .8rem;
+  margin-top: .25rem;
+}
+
 .podcast__audio {
   display: block;
   width: 100%;
