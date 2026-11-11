@@ -8,7 +8,9 @@
     "serve": "npx @11ty/eleventy --serve",
     "validate": "node scripts/validate-data.mjs",
     "check-links": "node scripts/check-links.mjs",
-    "check-media": "node scripts/check-media.mjs"
+    "check-media": "node scripts/check-media.mjs",
+    "find-youtube": "node scripts/find-youtube.mjs",
+    "review-youtube": "node scripts/review-youtube.mjs"
   },
   "keywords": [],
   "author": "",

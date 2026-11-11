@@ -11,6 +11,8 @@ Static archive of the dSong music blog (2009–2017), built with Eleventy 3 + Nu
 | `npm run validate` | Validate `data/posts.json` (errors fail, warnings inform) |
 | `npm run check-links` | Check internal links in `_site/` (run after build) |
 | `npm run check-media [report.json]` | Check YouTube/Spotify embeds still exist (slow, external; run by hand, not in CI) |
+| `npm run find-youtube [-- --apply]` | Find YouTube videos for posts without one via yt-dlp (no API key) into `youtube-candidates.json`; review, then `--apply` |
+| `npm run review-youtube` | Local UI (`http://localhost:8081`) to review those candidates; decisions go to `youtube-review.json` and win on `--apply` |
 
 CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build → check-links → deploy (only from `main`). Node version comes from `.nvmrc`.
 
@@ -30,7 +32,7 @@ js/                    archive-table-sort.js, archive-table-search.js (accent-in
 *.njk                  Pages: index, archive, post, archive-<facet>, rand, sitemap, robots.
 _includes/layouts/     main.njk (head, SEO meta, header).
 _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js).
-scripts/               validate-data.mjs, check-links.mjs, check-media.mjs.
+scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, review-youtube.mjs (+ .html).
 ```
 
 ## Generated pages
