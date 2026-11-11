@@ -9,12 +9,12 @@
     <copyright>CC BY-NC-SA 3.0 ES</copyright>
     <lastBuildDate>Fri, 29 Nov 2013 08:00:24 +0100</lastBuildDate>
     <image>
-      <url>https://dsong.es/images/uniradio-jaen.jpg</url>
+      <url>https://dsong.es/images/podcast-cover.png</url>
       <title>dSong en UniRadio Jaén</title>
       <link>https://dsong.es/</link>
     </image>
     <itunes:author>dSong</itunes:author>
-    <itunes:image href="https://dsong.es/images/uniradio-jaen.jpg"/>
+    <itunes:image href="https://dsong.es/images/podcast-cover.png"/>
     <itunes:category text="Music"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
