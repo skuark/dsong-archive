@@ -92,7 +92,7 @@ See [`AGENTS.md`](AGENTS.md) for the project structure and design decisions.
 - [Eleventy](https://www.11ty.dev/) - Static site generator
 - [Nunjucks](https://mozilla.github.io/nunjucks/) - Template engine
 - [markdown-it](https://github.com/markdown-it/markdown-it) - Markdown parser
-- [d3-geo](https://d3js.org/d3-geo) + [world-atlas](https://github.com/topojson/world-atlas) - World map, projected at build time
+- [d3-geo](https://d3js.org/d3-geo) + [visionscarto-world-atlas](https://github.com/Fil/visionscarto-world-atlas) - World map, projected at build time
 
 ## License
 

@@ -5,9 +5,9 @@ import { groupBy } from "../lib/posts.js";
 import { countryOf } from "../lib/countries.js";
 
 // World map for /mapa/ (map.njk): a static SVG of countries colored by number of posts per
-// artist nationality. Geometry from world-atlas (Natural Earth 1:110m), projected at build time.
+// artist nationality. Geometry from visionscarto-world-atlas (Natural Earth 1:110m with border fixes), projected at build time.
 const WIDTH = 960;
-const atlas = JSON.parse(readFileSync(new URL("../node_modules/world-atlas/countries-110m.json", import.meta.url), "utf8"));
+const atlas = JSON.parse(readFileSync(new URL("../node_modules/visionscarto-world-atlas/world/110m.json", import.meta.url), "utf8"));
 const land = feature(atlas, atlas.objects.countries).features.filter((f) => f.id !== "010");   // without Antarctica
 const projection = geoNaturalEarth1().fitWidth(WIDTH, { type: "FeatureCollection", features: land });
 const path = geoPath(projection).digits(1);

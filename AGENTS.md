@@ -26,7 +26,7 @@ data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via
 lib/posts.js           Loads posts once, adds `post.slugs`, exports `posts`, `groupBy`, `slugify`.
 lib/countries.js       artist_nationality (free text, EN/ES) -> country { code (ISO numeric), name (Spanish) }.
 _data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory/byCountry + byDay ("MM-DD") + radio.
-_data/worldMap.js      Global `worldMap`: country SVG paths (world-atlas 110m, d3-geo) + post counts, for /mapa/.
+_data/worldMap.js      Global `worldMap`: country SVG paths (visionscarto-world-atlas 110m, d3-geo) + post counts, for /mapa/.
 _data/site.js          Global `site`: url, title, description, umamiId.
 _data/redirects.js     Exposes data/redirects.json as `redirects`.
 lib/validate-post.js   Per-post rules + byte-identical posts.json writer (validate-data and the editor).
