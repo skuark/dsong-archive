@@ -226,6 +226,330 @@ a:hover {
   margin-bottom: 1.25rem;
 }
 
+/* Music map (/mapa/): countries colored by number of posts, from pale to strong yellow */
+.map {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  margin: 0 0 2rem;
+  padding: 1rem;
+}
+
+.map__svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.map__country {
+  fill: #eee;
+  stroke: var(--paper);
+  stroke-width: .5;
+}
+
+.map__dot {
+  stroke: var(--ink);
+}
+
+.map-level-1 { fill: #fffbc2; background: #fffbc2; }
+.map-level-2 { fill: #fff27a; background: #fff27a; }
+.map-level-3 { fill: #ffe100; background: #ffe100; }
+.map-level-4 { fill: #ffb800; background: #ffb800; }
+.map-level-5 { fill: #ff8c00; background: #ff8c00; }
+
+.map a:hover .map__country,
+.map a:focus-visible .map__country {
+  fill: var(--ink);
+}
+
+.map a:focus-visible {
+  outline: none;
+}
+
+.map__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1rem;
+  margin-top: .75rem;
+}
+
+.map__legend-item {
+  align-items: center;
+  display: inline-flex;
+  gap: .35rem;
+}
+
+.map__swatch {
+  border: 1px solid var(--ink);
+  display: inline-block;
+  height: .9rem;
+  width: .9rem;
+}
+
+.map-countries {
+  columns: 12rem;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.map-countries__count {
+  color: var(--muted);
+}
+
+/* Archive landing (/archive/): search form that submits to the table, then the stats */
+.archive-search__button {
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-small);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: .35rem .9rem;
+}
+
+.archive-search__all {
+  font-weight: 700;
+}
+
+.page-stats .archive-search {
+  margin-bottom: 2.5rem;
+}
+
+/* Facet indexes (/archive/editors/, /archive/artists/): one card per name, with its number of posts */
+.facet-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.facet-cards li {
+  margin: 0;
+}
+
+.facet-cards li[hidden] {
+  display: none;
+}
+
+.facet-cards__card {
+  border: 2px solid var(--ink);
+  box-sizing: border-box;
+  box-shadow: var(--shadow-small);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: .6rem .8rem;
+  text-decoration: none;
+}
+
+.facet-cards__card:hover,
+.facet-cards__card:focus-visible {
+  background: var(--accent);
+}
+
+.facet-cards__name {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.facet-cards__count {
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+/* dSong en cifras (/archive/): totals, bar and column charts, decade heatmap */
+.stats-heading {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.stats-totals {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  list-style: none;
+  margin: 0 0 3rem;
+  padding: 0;
+}
+
+.stats-totals li {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-small);
+  padding: .75rem 1rem;
+}
+
+/* Linked tiles (posts -> table, countries -> map): the whole block is the link */
+.stats-totals li:has(a) {
+  padding: 0;
+}
+
+.stats-totals a {
+  display: block;
+  padding: .75rem 1rem;
+  text-decoration: none;
+}
+
+.stats-totals a:hover,
+.stats-totals a:focus-visible {
+  background: var(--accent);
+}
+
+.stats-totals strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+.stats-section {
+  margin-bottom: 3rem;
+}
+
+.stats-section h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1.1;
+  margin-bottom: .5rem;
+}
+
+.bars {
+  align-items: center;
+  display: grid;
+  gap: .35rem 1rem;
+  /* Fixed columns, so the top 10 and its "Ver más" list line up */
+  grid-template-columns: 12rem 1fr 3rem;
+  list-style: none;
+  margin: 0;
+  max-width: 48rem;
+  padding: 0;
+}
+
+.bars__row {
+  display: contents;
+}
+
+.bars-more {
+  margin-top: .75rem;
+  max-width: 48rem;
+}
+
+.bars-more summary {
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.bars-more[open] summary {
+  margin-bottom: .75rem;
+}
+
+.bars__label {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 500px) {
+  .bars {
+    gap: .35rem .5rem;
+    grid-template-columns: 8rem 1fr 2.25rem;
+  }
+}
+
+.bars__fill,
+.columns__bar {
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  display: block;
+}
+
+.bars__fill {
+  border-radius: 0 4px 4px 0;
+  height: 1.1rem;
+  min-width: 4px;
+}
+
+.bars__value {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.columns {
+  align-items: end;
+  display: grid;
+  gap: .5rem;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  height: 14rem;
+  list-style: none;
+  margin: 0;
+  max-width: 48rem;
+  padding: 0;
+}
+
+.columns__col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  min-width: 0;
+  text-align: center;
+}
+
+.columns__bar {
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+}
+
+.columns__value,
+.columns__label {
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.3;
+}
+
+@media (max-width: 500px) {
+  .columns {
+    gap: .25rem;
+  }
+
+  .columns__value,
+  .columns__label {
+    font-size: .65rem;
+  }
+}
+
+.columns__label {
+  border-top: 2px solid var(--ink);
+  margin-top: -2px;
+  padding-top: .25rem;
+}
+
+.heatmap-wrapper {
+  overflow-x: auto;
+}
+
+.heatmap {
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.heatmap th,
+.heatmap td {
+  padding: .35rem .6rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.heatmap td {
+  border: 1px solid var(--rule);
+}
+
 .archive-search {
   align-items: center;
   display: flex;
@@ -1067,8 +1391,14 @@ a:hover {
 .home__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: .75rem;
   margin-bottom: 1.5rem;
+}
+
+/* Compact enough for the home buttons to fit on one line on usual desktop widths */
+.home__actions .button {
+  letter-spacing: .06em;
+  padding: .6rem .8rem;
 }
 
 .button {
@@ -1092,30 +1422,9 @@ a:hover {
   transform: translate(2px, 2px);
 }
 
-.home__stats {
-  border-bottom: 3px solid var(--ink);
-  border-top: 3px solid var(--ink);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 1.5rem;
-  padding: 1rem 0;
-}
 
-.home__stat {
-  display: flex;
-  flex-direction: column-reverse;
-}
 
-.home__stat + .home__stat {
-  border-left: 1px solid var(--rule);
-  padding-left: 1rem;
-}
 
-.home__stat dd {
-  font-family: var(--font-display);
-  font-size: 3rem;
-  line-height: 1;
-}
 
 .home__note {
   border-bottom: 1px dotted var(--rule);
@@ -1142,10 +1451,6 @@ a:hover {
   .home__lead {
     font-size: 1.5rem;
   }
-
-  .home__stat dd {
-    font-size: 2.2rem;
-  }
 }
 
 /* Desktop: text on the left, "Tal día como hoy" in the free space on the right */
@@ -1153,7 +1458,13 @@ a:hover {
   .home {
     column-gap: 3rem;
     display: grid;
-    grid-template-columns: minmax(0, 40rem) minmax(20rem, 1fr);
+    /* The intro takes the free width (up to a readable 56rem); "Tal día como hoy" is capped at 24rem */
+    grid-template-columns: minmax(0, 56rem) minmax(18rem, 24rem);
+    justify-content: space-between;
+  }
+
+  .home__intro {
+    max-width: none;
   }
 
   /* Sticky while scrolling the intro (desktop only, where it sits in its own column) */
