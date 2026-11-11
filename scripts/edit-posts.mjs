@@ -1,0 +1,100 @@
+// Local editor for data/posts.json (text, metadata, players and comments) in the browser.
+// Usage: npm run edit  ->  http://localhost:8082 (listens on 127.0.0.1 only)
+// Each save validates the post (same rules as `npm run validate`) and rewrites posts.json
+// byte-identically; a post changed on disk since it was opened is not overwritten.
+import { createServer } from "node:http";
+import { createHash } from "node:crypto";
+import { readFileSync, writeFileSync } from "node:fs";
+import MarkdownIt from "markdown-it";
+import { serializePosts, validatePost } from "../lib/validate-post.js";
+
+const PORT = Number(process.env.PORT) || 8082;
+const FILE = new URL("../data/posts.json", import.meta.url);
+const html = new URL("./edit-posts.html", import.meta.url);
+const md = new MarkdownIt({ html: true });   // same as the site's `markdown` filter
+
+const load = () => JSON.parse(readFileSync(FILE, "utf8"));
+const hash = (post) => createHash("sha1").update(JSON.stringify(post)).digest("hex");
+const distinct = (values) => [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
+
+function summary(post) {
+  const m = post.metadata;
+  return {
+    id: post.id, title: post.title, date: post.published_at.slice(0, 10), editor: post.editor.name,
+    category: m.category, artist: m.artist ?? "",
+    youtube: !!m.youtube_code, spotify: !!m.spotify_url, apple: !!m.apple_music_url, podcast: !!m.podcast_file,
+    genre: !!m.genre, country: !!m.artist_nationality, song: !!m.song, comments: post.comments.length,
+    reviewed: post.reviewed_at ?? "",
+  };
+}
+
+// Field values: trimmed; empty metadata fields are removed (the data has no empty keys)
+function clean(post) {
+  const metadata = {};
+  for (const [key, value] of Object.entries(post.metadata ?? {})) {
+    const v = typeof value === "string" ? value.trim() : value;
+    if (v !== "" && v != null) metadata[key] = v;
+  }
+  return { ...post, title: post.title.trim(), published_at: post.published_at.trim(), metadata };
+}
+
+async function body(req) {
+  let text = "";
+  for await (const chunk of req) text += chunk;
+  return JSON.parse(text);
+}
+
+createServer(async (req, res) => {
+  const send = (code, value, type = "application/json") => {
+    res.writeHead(code, { "content-type": type });
+    res.end(type === "application/json" ? JSON.stringify(value) : value);
+  };
+  try {
+    const url = new URL(req.url, "http://localhost");
+    if (req.method === "GET" && url.pathname === "/") return send(200, readFileSync(html), "text/html; charset=utf-8");
+
+    if (req.method === "GET" && url.pathname === "/api/posts") {
+      const { posts } = load();
+      const editors = [...new Map(posts.map((p) => [p.editor.name, p.editor])).values()].sort((a, b) => a.name.localeCompare(b.name, "es"));
+      return send(200, {
+        posts: posts.map(summary),
+        options: {
+          categories: distinct(posts.map((p) => p.metadata.category)),
+          genres: distinct(posts.map((p) => p.metadata.genre)),
+          countries: distinct(posts.map((p) => p.metadata.artist_nationality)),
+          editors,
+        },
+      });
+    }
+
+    const match = url.pathname.match(/^\/api\/posts\/([a-z0-9-]+)$/);
+    if (match && req.method === "GET") {
+      const post = load().posts.find((p) => p.id === match[1]);
+      return post ? send(200, { post, hash: hash(post) }) : send(404, { error: "No existe" });
+    }
+
+    if (match && req.method === "POST") {
+      const { post: edited, hash: original } = await body(req);
+      const data = load();
+      const i = data.posts.findIndex((p) => p.id === match[1]);
+      if (i < 0) return send(404, { error: "No existe" });
+      if (hash(data.posts[i]) !== original) return send(409, { error: "El artículo ha cambiado en disco desde que lo abriste. Recárgalo antes de guardar." });
+      if (edited.id !== match[1]) return send(400, { errors: ["El id no se puede cambiar (las URLs dependen de él)"] });
+      const post = clean(edited);
+      const { errors, missing } = validatePost(post);
+      if (errors.length) return send(400, { errors });
+      data.posts[i] = post;
+      writeFileSync(FILE, serializePosts(data));
+      return send(200, { post, hash: hash(post), summary: summary(post), missing });
+    }
+
+    if (req.method === "POST" && url.pathname === "/api/preview") {
+      const { content } = await body(req);
+      return send(200, { html: md.render(content ?? "") });
+    }
+
+    send(404, { error: "Not found" });
+  } catch (error) {
+    send(500, { error: error.message });
+  }
+}).listen(PORT, "127.0.0.1", () => console.log(`Editor at http://localhost:${PORT}`));

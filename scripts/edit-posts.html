@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor · dSong</title>
+<style>
+  :root {
+    --ink: #000; --paper: #fff; --accent: #ff0; --muted: #666; --rule: #ccc; --soft: #f4f4f4;
+    --error: #c00; --ok: #070;
+    font-family: -apple-system, BlinkMacSystemFont, "Titillium Web", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); margin: 0; }
+  a { color: inherit; }
+  button, input, select, textarea { color: inherit; font: inherit; }
+
+  .app { display: grid; grid-template-columns: 24rem 1fr; height: 100vh; }
+
+  /* List */
+  .list { border-right: 3px solid var(--ink); display: flex; flex-direction: column; min-height: 0; }
+  .list__tools { border-bottom: 2px solid var(--ink); display: grid; gap: .5rem; padding: .75rem; }
+  .list__tools h1 { font-size: 1rem; letter-spacing: .1em; margin: 0; text-transform: uppercase; }
+  .list__count { color: var(--muted); font-size: .8rem; }
+  .list__items { list-style: none; margin: 0; overflow-y: auto; padding: 0; }
+  .list__item { border-bottom: 1px solid var(--rule); cursor: pointer; padding: .5rem .75rem; }
+  .list__item:hover { background: var(--soft); }
+  .list__item[aria-current="true"] { background: var(--accent); }
+  .list__title { display: block; font-weight: 600; line-height: 1.25; }
+  .list__meta { color: var(--muted); display: block; font-size: .75rem; margin-top: .15rem; }
+  .badge--done { background: var(--ok); border-color: var(--ok); color: var(--paper); margin-left: 0; }
+  .reviewed { align-items: center; display: inline-flex; font-size: .8rem; font-weight: 700; gap: .35rem; }
+  .reviewed input { width: auto; }
+  .badge { border: 1px solid var(--ink); display: inline-block; font-size: .6rem; font-weight: 700; letter-spacing: .05em; margin-left: .25rem; padding: 0 .25rem; }
+
+  /* Editor */
+  .editor { min-height: 0; overflow-y: auto; }
+  .editor__bar { align-items: center; background: var(--paper); border-bottom: 2px solid var(--ink); display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding: .75rem 1.25rem; position: sticky; top: 0; z-index: 2; }
+  .editor__id { color: var(--muted); flex: 1; font-family: ui-monospace, monospace; font-size: .8rem; min-width: 12rem; overflow-wrap: anywhere; }
+  .editor__status { font-size: .8rem; }
+  .editor__status--dirty { color: var(--error); font-weight: 700; }
+  .editor__status--ok { color: var(--ok); }
+  .editor__body { display: grid; gap: 1.5rem; max-width: 70rem; padding: 1.25rem; }
+  .empty { color: var(--muted); padding: 2rem 1.25rem; }
+
+  .errors { background: #fee; border: 2px solid var(--error); margin: 0; padding: .75rem 1rem .75rem 2rem; }
+
+  fieldset { border: 2px solid var(--ink); margin: 0; padding: 1rem; }
+  legend { padding: 0 .25rem; }
+  /* Collapsible blocks: the legend is the toggle; closed blocks show only their title line */
+  .block__toggle { background: none; border: 0; cursor: pointer; font-size: .75rem; font-weight: 700; letter-spacing: .12em; padding: .1rem .2rem; text-transform: uppercase; }
+  .block__toggle::before { content: "▸"; display: inline-block; margin-right: .4rem; transition: transform .15s; }
+  .block__toggle[aria-expanded="true"]::before { transform: rotate(90deg); }
+  .block__toggle:hover { background: var(--accent); }
+  .block:not(.block--open) { padding-bottom: .25rem; padding-top: .25rem; }
+  .block:not(.block--open) > .block__body { display: none; }
+  .grid { display: grid; gap: .75rem 1rem; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); }
+  /* Label, control and hint stacked at the top (cells don't stretch to the tallest one in the row) */
+  .field { align-content: start; display: grid; gap: .25rem; }
+  .field--wide { grid-column: 1 / -1; }
+  .field > span { font-size: .75rem; font-weight: 700; }
+  .field small { color: var(--muted); font-size: .7rem; }
+  input, select, textarea { background: var(--paper); border: 2px solid var(--ink); border-radius: 0; padding: .4rem .5rem; width: 100%; }
+  /* Inputs and selects with the same height; selects without the native look, with a plain arrow */
+  input:not([type="checkbox"]), select { height: 2.4rem; }
+  select {
+    appearance: none;
+    background: var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E") no-repeat right .6rem center;
+    padding-right: 2rem;
+  }
+  input:focus, select:focus, textarea:focus { outline: 3px solid var(--accent); outline-offset: 0; }
+  input:invalid { border-color: var(--error); }
+
+  .player { display: grid; gap: .4rem; }
+  .player__row { display: flex; gap: .5rem; }
+  .player__row input { flex: 1; }
+  .player__preview:empty { display: none; }
+  .player__preview iframe { border: 0; display: block; width: 100%; }
+  .player__preview .video { aspect-ratio: 16 / 9; }
+
+  .content { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+  .content textarea { font-family: ui-monospace, monospace; font-size: .85rem; line-height: 1.5; min-height: 28rem; resize: vertical; }
+  .preview { border: 2px dashed var(--rule); font-family: Georgia, serif; line-height: 1.6; max-height: 40rem; overflow-y: auto; padding: 0 1rem; }
+  .preview img { max-width: 100%; }
+
+  .comment { border-top: 1px solid var(--rule); display: grid; gap: .5rem; grid-template-columns: 12rem 14rem 1fr auto; padding: .75rem 0; }
+  .comment:first-of-type { border-top: 0; padding-top: 0; }
+  .comment textarea { min-height: 4rem; resize: vertical; }
+
+  .button { background: var(--paper); border: 2px solid var(--ink); box-shadow: .2rem .2rem 0 var(--ink); cursor: pointer; font-size: .8rem; font-weight: 700; padding: .35rem .7rem; text-decoration: none; white-space: nowrap; }
+  .button:hover { background: var(--accent); }
+  .button:active { box-shadow: none; transform: translate(2px, 2px); }
+  .button--primary { background: var(--ink); color: var(--accent); }
+  .button--primary:hover { color: var(--ink); }
+  .button--danger:hover { background: var(--error); color: var(--paper); }
+  .button:disabled { cursor: default; opacity: .4; }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="list">
+    <div class="list__tools">
+      <h1>✏️ Editor dSong</h1>
+      <input id="search" type="search" placeholder="Buscar título, artista o id…" autocomplete="off">
+      <select id="filter">
+        <option value="pending">Pendientes de revisar</option>
+        <option value="reviewed">Revisados</option>
+        <option value="all">Todos</option>
+        <option value="anyPlayer">Falta algún reproductor</option>
+        <option value="noYoutube">Sin YouTube</option>
+        <option value="noSpotify">Sin Spotify</option>
+        <option value="noApple">Sin Apple Music</option>
+        <option value="noPlayer">Sin ningún reproductor</option>
+        <option value="noSong">Sin canción</option>
+        <option value="noGenre">Sin género</option>
+        <option value="noCountry">Sin país</option>
+        <option value="podcast">Con podcast</option>
+        <option value="comments">Con comentarios</option>
+      </select>
+      <span class="list__count" id="count"></span>
+    </div>
+    <ul class="list__items" id="items"></ul>
+  </aside>
+
+  <main class="editor" id="editor">
+    <p class="empty">Elige un artículo de la lista. <kbd>⌘S</kbd> guarda, <kbd>⌘↵</kbd> guarda y pasa al siguiente de la lista.</p>
+  </main>
+</div>
+
+<template id="form">
+  <div class="editor__bar">
+    <span class="editor__id" data-id></span>
+    <span class="editor__status" data-status></span>
+    <label class="reviewed" title="Se guarda con la fecha de hoy"><input type="checkbox" name="reviewed"> Revisado</label>
+    <a class="button" data-view target="_blank">Ver en la web ↗</a>
+    <button class="button" type="button" data-action="revert">Deshacer cambios</button>
+    <button class="button" type="button" data-action="save">Guardar</button>
+    <button class="button button--primary" type="button" data-action="save-next">Guardar y siguiente →</button>
+  </div>
+  <div class="editor__body">
+    <ul class="errors" data-errors hidden></ul>
+
+    <fieldset class="block" data-block="general">
+      <legend><button class="block__toggle" type="button" aria-expanded="false">General</button></legend>
+      <div class="block__body">
+      <div class="grid">
+        <label class="field field--wide"><span>Título</span><input name="title" required></label>
+        <label class="field"><span>Fecha de publicación</span><input name="published_at" required pattern="\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}"><small>aaaa-mm-dd hh:mm:ss, hora de Madrid</small></label>
+        <label class="field"><span>Categoría</span><select name="m.category" data-options="categories" required></select></label>
+        <label class="field"><span>Autor</span><select name="editor" data-options="editors"></select></label>
+        <label class="field"><span>Lector invitado</span><input name="m.lector"><small>Artículos escritos por lectores (2009–2011)</small></label>
+        <label class="field"><span>Web del lector invitado</span><input name="m.lector_web" type="url"></label>
+      </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="block" data-block="music">
+      <legend><button class="block__toggle" type="button" aria-expanded="false">Música</button></legend>
+      <div class="block__body">
+      <div class="grid">
+        <label class="field"><span>Canción</span><input name="m.song"></label>
+        <label class="field"><span>Artista</span><input name="m.artist"></label>
+        <label class="field"><span>Álbum</span><input name="m.album"></label>
+        <label class="field"><span>Año</span><input name="m.year" pattern="\d{4}"></label>
+        <label class="field"><span>Género</span><input name="m.genre" list="genres"></label>
+        <label class="field"><span>Nacionalidad del artista</span><input name="m.artist_nationality" list="countries"></label>
+        <label class="field field--wide"><span>Web del artista</span><input name="m.artist_url" type="url"></label>
+      </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="block" data-block="players">
+      <legend><button class="block__toggle" type="button" aria-expanded="false">Reproductores</button></legend>
+      <div class="block__body">
+      <div class="grid">
+        <div class="field field--wide player" data-player="youtube">
+          <span>YouTube (código del vídeo)</span>
+          <div class="player__row">
+            <input name="m.youtube_code" pattern="[\w\-]{11}" placeholder="Pega el código o la URL del vídeo">
+            <button class="button" type="button" data-action="try">▶ Probar</button>
+            <a class="button" data-search target="_blank">Buscar ↗</a>
+          </div>
+          <div class="player__preview"></div>
+        </div>
+        <div class="field field--wide player" data-player="spotify">
+          <span>Spotify (URL de embed)</span>
+          <div class="player__row">
+            <input name="m.spotify_url" pattern="https://open\.spotify\.com/embed/.+" placeholder="Pega la URL de Spotify (se convierte a embed)">
+            <button class="button" type="button" data-action="try">▶ Probar</button>
+            <a class="button" data-search target="_blank">Buscar ↗</a>
+          </div>
+          <div class="player__preview"></div>
+        </div>
+        <div class="field field--wide player" data-player="apple">
+          <span>Apple Music (URL de embed; <code>?i=</code> = canción)</span>
+          <div class="player__row">
+            <input name="m.apple_music_url" pattern="https://embed\.music\.apple\.com/.+" placeholder="Pega la URL de Apple Music (se convierte a embed)">
+            <button class="button" type="button" data-action="try">▶ Probar</button>
+            <a class="button" data-search target="_blank">Buscar ↗</a>
+          </div>
+          <div class="player__preview"></div>
+        </div>
+      </div>
+      <div class="grid" data-extra></div>
+      </div>
+    </fieldset>
+
+    <fieldset class="block" data-block="podcast">
+      <legend><button class="block__toggle" type="button" aria-expanded="false">Podcast UniRadio</button></legend>
+      <div class="block__body">
+      <div class="grid">
+        <div class="field field--wide player" data-player="podcast">
+          <span>Archivo mp3</span>
+          <div class="player__row">
+            <input name="m.podcast_file">
+            <button class="button" type="button" data-action="try">▶ Probar</button>
+          </div>
+          <div class="player__preview"></div>
+        </div>
+      </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="block" data-block="text">
+      <legend><button class="block__toggle" type="button" aria-expanded="false">Texto</button></legend>
+      <div class="block__body">
+      <div class="content">
+        <label class="field"><span>Contenido (HTML / Markdown)</span><textarea name="content" spellcheck="true"></textarea></label>
+        <div class="field"><span>Vista previa</span><div class="preview" data-preview></div></div>
+      </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="block" data-block="comments">
+      <legend><button class="block__toggle" type="button" aria-expanded="false" data-comments-title>Comentarios</button></legend>
+      <div class="block__body">
+      <div data-comments></div>
+      </div>
+    </fieldset>
+  </div>
+</template>
+
+<datalist id="genres"></datalist>
+<datalist id="countries"></datalist>
+
+<script>
+const PODCAST = 'https://dsongstatic.jesusmagamu.dev/mp3/podcast/';
+// Metadata order for fields a post didn't have (keeps existing keys where they are)
+const KNOWN = ['album', 'artist', 'artist_nationality', 'artist_url', 'category', 'genre', 'song', 'spotify_url', 'year', 'apple_music_url', 'youtube_code', 'lector', 'lector_web', 'podcast_file'];
+
+let posts = [];          // summaries
+let options = {};
+let current = null;      // { post, hash }
+let pristine = '';       // JSON of the form as loaded, to detect changes
+let visible = [];
+const $ = (sel, root = document) => root.querySelector(sel);
+const norm = (s) => (s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const api = async (url, body) => {
+  const res = await fetch(url, body ? { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) } : {});
+  const data = await res.json();
+  if (!res.ok) throw Object.assign(new Error(data.error || 'Error'), { data });
+  return data;
+};
+
+// ---------- List ----------
+const FILTERS = {
+  pending: (p) => !p.reviewed,
+  reviewed: (p) => !!p.reviewed,
+  all: () => true,
+  anyPlayer: (p) => !p.youtube || !p.spotify || !p.apple,
+  noYoutube: (p) => !p.youtube,
+  noSpotify: (p) => !p.spotify,
+  noApple: (p) => !p.apple,
+  noPlayer: (p) => !p.youtube && !p.spotify && !p.apple,
+  noSong: (p) => !p.song,
+  noGenre: (p) => !p.genre,
+  noCountry: (p) => !p.country,
+  podcast: (p) => p.podcast,
+  comments: (p) => p.comments > 0,
+};
+
+function renderList() {
+  const q = norm($('#search').value).trim();
+  const filter = FILTERS[$('#filter').value];
+  visible = posts.filter((p) => filter(p) && (!q || norm(`${p.title} ${p.artist} ${p.id}`).includes(q)));
+  const reviewed = posts.filter((p) => p.reviewed).length;
+  $('#count').textContent = `${visible.length} en la lista · ${reviewed} de ${posts.length} revisados (${Math.round((reviewed / posts.length) * 100)} %)`;
+  const items = $('#items');
+  items.textContent = '';
+  for (const p of visible) {
+    const li = document.createElement('li');
+    li.className = 'list__item';
+    li.dataset.id = p.id;
+    if (current?.post.id === p.id) li.setAttribute('aria-current', 'true');
+    const title = document.createElement('span');
+    title.className = 'list__title';
+    title.textContent = p.title;
+    const meta = document.createElement('span');
+    meta.className = 'list__meta';
+    meta.textContent = `${p.date} · ${p.editor}${p.artist ? ' · ' + p.artist : ''}`;
+    for (const [has, label] of [[p.youtube, 'YT'], [p.spotify, 'SP'], [p.apple, 'AM']]) {
+      if (has) continue;
+      const badge = document.createElement('span');
+      badge.className = 'badge';
+      badge.title = 'Falta este reproductor';
+      badge.textContent = label;
+      meta.append(badge);
+    }
+    if (p.reviewed) {
+      const done = document.createElement('span');
+      done.className = 'badge badge--done';
+      done.title = `Revisado el ${p.reviewed}`;
+      done.textContent = '✓';
+      meta.prepend(done, ' ');
+    }
+    li.append(title, meta);
+    items.append(li);
+  }
+}
+
+$('#items').addEventListener('click', (e) => {
+  const li = e.target.closest('.list__item');
+  if (li) open(li.dataset.id);
+});
+$('#search').addEventListener('input', renderList);
+$('#filter').addEventListener('change', renderList);
+
+// ---------- Blocks ----------
+let openBlocks = new Set(['general']);
+try { const saved = JSON.parse(localStorage.getItem('editor-open-blocks')); if (Array.isArray(saved)) openBlocks = new Set(saved); } catch {}
+function applyBlocks() {
+  for (const block of document.querySelectorAll('.block')) {
+    const open = openBlocks.has(block.dataset.block);
+    block.classList.toggle('block--open', open);
+    $('.block__toggle', block).setAttribute('aria-expanded', String(open));
+  }
+}
+function toggleBlock(block) {
+  const key = block.dataset.block;
+  if (openBlocks.has(key)) openBlocks.delete(key); else openBlocks.add(key);
+  try { localStorage.setItem('editor-open-blocks', JSON.stringify([...openBlocks])); } catch {}
+  applyBlocks();
+}
+
+// ---------- Editor ----------
+const isDirty = () => current && JSON.stringify(build()) !== pristine;
+
+async function open(id, { force = false } = {}) {
+  if (!force && isDirty() && !confirm('Hay cambios sin guardar. ¿Descartarlos?')) return;
+  const data = await api(`/api/posts/${id}`);
+  current = data;
+  if (location.hash !== `#${id}`) history.replaceState(null, '', `#${id}`);
+  fill(data.post);
+  document.querySelectorAll('.list__item').forEach((li) => li.toggleAttribute('aria-current', li.dataset.id === id));
+  document.querySelector(`.list__item[data-id="${id}"]`)?.scrollIntoView({ block: 'nearest' });
+}
+
+function fill(post) {
+  const editor = $('#editor');
+  editor.textContent = '';
+  editor.append($('#form').content.cloneNode(true));
+  editor.scrollTop = 0;
+  $('[data-id]', editor).textContent = post.id;
+  $('[data-view]', editor).href = `http://localhost:8080/archive/${post.id}.html`;
+
+  for (const select of editor.querySelectorAll('[data-options]')) {
+    for (const value of options[select.dataset.options]) {
+      const name = typeof value === 'string' ? value : value.name;
+      select.append(new Option(name, name));
+    }
+  }
+  const field = (name) => editor.querySelector(`[name="${name}"]`);
+  field('title').value = post.title;
+  field('published_at').value = withoutZone(post.published_at);
+  field('editor').value = post.editor.name;
+  field('content').value = post.content ?? '';
+  field('reviewed').checked = !!post.reviewed_at;
+  field('reviewed').parentElement.title = post.reviewed_at ? `Revisado el ${post.reviewed_at}` : 'Se guarda con la fecha de hoy';
+  for (const input of editor.querySelectorAll('[name^="m."]')) input.value = post.metadata[input.name.slice(2)] ?? '';
+
+  // Metadata the form doesn't know (e.g. info_spotify): plain text fields
+  const extra = $('[data-extra]', editor);
+  for (const key of Object.keys(post.metadata)) {
+    if (field(`m.${key}`)) continue;
+    const label = document.createElement('label');
+    label.className = 'field';
+    label.innerHTML = `<span></span><input>`;
+    label.firstChild.textContent = key;
+    label.lastChild.name = `m.${key}`;
+    label.lastChild.value = post.metadata[key];
+    extra.append(label);
+  }
+
+  renderComments(post.comments);
+  applyBlocks();
+  updateSearchLinks();
+  preview();
+  pristine = JSON.stringify(build());
+  status();
+}
+
+function renderComments(comments) {
+  const box = $('[data-comments]');
+  box.textContent = '';
+  $('[data-comments-title]').textContent = `Comentarios (${comments.length})`;
+  if (!comments.length) box.innerHTML = '<p class="list__count">Sin comentarios.</p>';
+  comments.forEach((comment, i) => {
+    const row = document.createElement('div');
+    row.className = 'comment';
+    row.dataset.index = i;
+    row.innerHTML = `
+      <label class="field"><span>Autor</span><input data-c="author"></label>
+      <label class="field"><span>Fecha</span><input data-c="published_at" required pattern="\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}" title="aaaa-mm-dd hh:mm:ss, hora de Madrid"></label>
+      <label class="field"><span>Comentario</span><textarea data-c="content"></textarea></label>
+      <div class="field"><span>&nbsp;</span><button class="button button--danger" type="button" data-action="delete-comment" title="Borrar comentario">✕</button></div>`;
+    $('[data-c="author"]', row).value = comment.author?.name ?? '';
+    $('[data-c="published_at"]', row).value = withoutZone(comment.published_at);
+    $('[data-c="content"]', row).value = comment.content;
+    box.append(row);
+  });
+}
+
+// Browsers turn \r\n into \n in textareas: texts that used \r\n keep it, so an untouched
+// text (or one edited without adding line breaks of another kind) doesn't change on save
+const lineBreaks = (value, original) => (original?.includes('\r\n') && !value.includes('\r') ? value.replace(/\n/g, '\r\n') : value);
+
+// Dates: the data stores "yyyy-mm-dd hh:mm:ss +zzzz" and the zone is always Madrid's (+0100 in
+// winter, +0200 in summer), so the form shows the date without it and adds it back on save
+const withoutZone = (date) => (date ?? '').replace(/ [+-]\d{4}$/, '');
+function madridOffset(wall) {
+  // Offset for that wall-clock time in Madrid: try +01:00 and +02:00, keep the one that matches
+  const zone = (date) => new Intl.DateTimeFormat('en', { timeZone: 'Europe/Madrid', timeZoneName: 'longOffset' })
+    .formatToParts(date).find((part) => part.type === 'timeZoneName').value.replace(/GMT|:/g, '');
+  for (const offset of ['+0100', '+0200']) {
+    const date = new Date(`${wall.replace(' ', 'T')}${offset.slice(0, 3)}:${offset.slice(3)}`);
+    if (!Number.isNaN(date.getTime()) && zone(date) === offset) return offset;
+  }
+  return '+0100';
+}
+function withZone(value, original) {
+  const wall = value.trim();
+  if (wall === withoutZone(original)) return original;   // unchanged: keep it exactly
+  return /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(wall) ? `${wall} ${madridOffset(wall)}` : wall;
+}
+
+// The post as it would be saved, from the loaded one plus the form
+function build() {
+  const post = structuredClone(current.post);
+  const editor = $('#editor');
+  const value = (name) => editor.querySelector(`[name="${name}"]`)?.value ?? '';
+  post.title = value('title');
+  post.published_at = withZone(value('published_at'), current.post.published_at);
+  post.content = lineBreaks(value('content'), current.post.content);
+  // Reviewed: keeps the original date; checking it now stores today's
+  if (!editor.querySelector('[name="reviewed"]').checked) delete post.reviewed_at;
+  else post.reviewed_at = current.post.reviewed_at ?? new Date().toLocaleDateString('sv-SE');
+  const author = options.editors.find((e) => e.name === value('editor'));
+  if (author && author.name !== post.editor.name) post.editor = structuredClone(author);
+
+  const metadata = {};
+  const keys = [...Object.keys(current.post.metadata), ...KNOWN.filter((k) => !(k in current.post.metadata))];
+  for (const key of keys) {
+    const v = editor.querySelector(`[name="m.${key}"]`) ? value(`m.${key}`).trim() : current.post.metadata[key];
+    if (v) metadata[key] = v;
+  }
+  post.metadata = metadata;
+
+  post.comments = [...editor.querySelectorAll('.comment')].map((row) => {
+    const comment = structuredClone(current.post.comments[row.dataset.index]);
+    comment.published_at = withZone($('[data-c="published_at"]', row).value, comment.published_at);
+    comment.content = lineBreaks($('[data-c="content"]', row).value, comment.content);
+    comment.author = { ...comment.author, name: $('[data-c="author"]', row).value };
+    return comment;
+  });
+  return post;
+}
+
+function status(text, kind) {
+  const el = $('[data-status]');
+  if (!el) return;
+  const dirty = isDirty();
+  el.className = 'editor__status' + (dirty ? ' editor__status--dirty' : kind ? ` editor__status--${kind}` : '');
+  el.textContent = dirty ? '● Cambios sin guardar' : text ?? '';
+}
+
+function showErrors(errors) {
+  const box = $('[data-errors]');
+  box.textContent = '';
+  for (const error of errors ?? []) {
+    const li = document.createElement('li');
+    li.textContent = error;
+    box.append(li);
+  }
+  box.hidden = !errors?.length;
+  if (errors?.length) { document.querySelectorAll('.block').forEach((b) => b.classList.add('block--open')); }
+}
+
+async function save({ next = false } = {}) {
+  if (!current) return;
+  const following = visible[visible.findIndex((p) => p.id === current.post.id) + 1];
+  if (isDirty()) {
+    try {
+      const data = await api(`/api/posts/${current.post.id}`, { post: build(), hash: current.hash });
+      current = { post: data.post, hash: data.hash };
+      posts[posts.findIndex((p) => p.id === data.post.id)] = data.summary;
+      fill(data.post);
+      showErrors([]);
+      status(`✓ Guardado${data.missing.length ? ` (faltan: ${data.missing.join(', ')})` : ''}`, 'ok');
+      renderList();
+    } catch (error) {
+      showErrors(error.data?.errors ?? [error.message]);
+      return;
+    }
+  }
+  if (next && following) open(following.id, { force: true });
+}
+
+// ---------- Players ----------
+// Pasted links become what the data stores (YouTube code, Spotify/Apple embed URLs)
+const NORMALIZE = {
+  'm.youtube_code': (v) => (v.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/) || [])[1] || v,
+  'm.spotify_url': (v) => {
+    const m = v.match(/open\.spotify\.com\/(?:intl-[a-z]+\/)?(?:embed\/)?(track|album|playlist|artist|episode)\/(\w+)/);
+    return m ? `https://open.spotify.com/embed/${m[1]}/${m[2]}` : v;
+  },
+  'm.apple_music_url': (v) => {
+    const m = v.match(/music\.apple\.com\/([a-z]{2})\/album\/(?:[^/?]+\/)?(\d+)(\?i=\d+)?/);
+    return m ? `https://embed.music.apple.com/${m[1]}/album/${m[2]}${m[3] ?? ''}` : v.replace('//music.apple.com/', '//embed.music.apple.com/');
+  },
+};
+
+function tryPlayer(box) {
+  const preview = $('.player__preview', box);
+  const value = $('input', box).value.trim();
+  preview.textContent = '';
+  if (!value) return;
+  const kind = box.dataset.player;
+  if (kind === 'podcast') {
+    const audio = document.createElement('audio');
+    audio.controls = true;
+    audio.src = PODCAST + value;
+    preview.append(audio);
+    return;
+  }
+  const iframe = document.createElement('iframe');
+  iframe.allow = 'autoplay; encrypted-media; clipboard-write';
+  if (kind === 'youtube') { iframe.src = `https://www.youtube.com/embed/${value}`; iframe.className = 'video'; }
+  if (kind === 'spotify') { iframe.src = value; iframe.height = value.includes('/track/') ? 80 : 352; }
+  if (kind === 'apple') { iframe.src = value; iframe.height = value.includes('?i=') ? 175 : 450; }
+  preview.append(iframe);
+}
+
+function updateSearchLinks() {
+  const editor = $('#editor');
+  const value = (name) => editor.querySelector(`[name="${name}"]`)?.value.trim() ?? '';
+  const terms = [value('m.artist'), value('m.song') || value('m.album')].filter(Boolean).join(' ') || value('title');
+  const q = encodeURIComponent(terms);
+  const links = {
+    youtube: `https://www.youtube.com/results?search_query=${q}`,
+    spotify: `https://open.spotify.com/search/${q}`,
+    apple: `https://music.apple.com/es/search?term=${q}`,
+  };
+  for (const [kind, href] of Object.entries(links)) {
+    const a = editor.querySelector(`[data-player="${kind}"] [data-search]`);
+    if (a) a.href = href;
+  }
+}
+
+// ---------- Text preview ----------
+let previewTimer = null;
+function preview() {
+  clearTimeout(previewTimer);
+  previewTimer = setTimeout(async () => {
+    const box = $('[data-preview]');
+    if (!box) return;
+    const { html } = await api('/api/preview', { content: $('[name="content"]').value });
+    box.innerHTML = html;
+  }, 250);
+}
+
+// ---------- Events ----------
+const editorEl = $('#editor');
+editorEl.addEventListener('input', (e) => {
+  if (e.target.name === 'content') preview();
+  if (['m.artist', 'm.song', 'm.album', 'title'].includes(e.target.name)) updateSearchLinks();
+  status();
+});
+editorEl.addEventListener('change', (e) => {
+  const normalize = NORMALIZE[e.target.name];
+  if (normalize && e.target.value.trim()) e.target.value = normalize(e.target.value.trim());
+  status();
+});
+editorEl.addEventListener('click', (e) => {
+  const toggle = e.target.closest('.block__toggle');
+  if (toggle) { toggleBlock(toggle.closest('.block')); return; }
+  const action = e.target.closest('[data-action]')?.dataset.action;
+  if (action === 'save') save();
+  if (action === 'save-next') save({ next: true });
+  if (action === 'revert' && current) { fill(current.post); showErrors([]); }
+  if (action === 'try') tryPlayer(e.target.closest('.player'));
+  if (action === 'delete-comment') { e.target.closest('.comment').remove(); status(); }
+});
+document.addEventListener('keydown', (e) => {
+  if (!(e.metaKey || e.ctrlKey)) return;
+  if (e.key === 's') { e.preventDefault(); save(); }
+  if (e.key === 'Enter') { e.preventDefault(); save({ next: true }); }
+});
+window.addEventListener('beforeunload', (e) => { if (isDirty()) e.preventDefault(); });
+window.addEventListener('hashchange', () => { const id = location.hash.slice(1); if (id && id !== current?.post.id) open(id); });
+
+(async () => {
+  const data = await api('/api/posts');
+  posts = data.posts;
+  options = data.options;
+  for (const [id, values] of [['genres', options.genres], ['countries', options.countries]]) {
+    $(`#${id}`).append(...values.map((v) => new Option(v)));
+  }
+  renderList();
+  const id = location.hash.slice(1);
+  if (id) open(id);
+})();
+</script>
+</body>
+</html>

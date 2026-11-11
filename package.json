@@ -10,7 +10,8 @@
     "check-links": "node scripts/check-links.mjs",
     "check-media": "node scripts/check-media.mjs",
     "find-youtube": "node scripts/find-youtube.mjs",
-    "review-youtube": "node scripts/review-youtube.mjs"
+    "review-youtube": "node scripts/review-youtube.mjs",
+    "edit": "node scripts/edit-posts.mjs"
   },
   "keywords": [],
   "author": "",
