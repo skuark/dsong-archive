@@ -76,11 +76,17 @@
 
     <div class="players__tabs" role="tablist" aria-label="Reproductores">
       <button class="players__tab" type="button" role="tab" id="tab-podcast" aria-controls="panel-podcast" aria-selected="true">Podcast UniRadio</button>
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="false" tabindex="-1">YouTube</button>
       <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
       <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
     <div class="players__panel players__panel--podcast" role="tabpanel" id="panel-podcast" aria-labelledby="tab-podcast">
       <audio controls preload="none" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20121119.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube" hidden>
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" data-src="https://www.youtube.com/embed/H4ST7-Ln4x0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
     <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
       <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/6MgAQOrgPJx9ldOTd3JnFE" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
