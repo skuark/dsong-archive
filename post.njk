@@ -69,14 +69,34 @@ permalink: "archive/{{ post.id }}.html"
   {#- Players available for this post, in display order -#}
   {%- set m = post.metadata %}
   {%- set players = [] %}
-  {%- if m.podcast_file %}{% set players = players.concat([{ id: "podcast", label: "Podcast UniRadio", type: "audio", src: "https://dsongstatic.jesusmagamu.dev/mp3/podcast/" + m.podcast_file }]) %}{% endif %}
-  {%- if m.youtube_code %}{% set players = players.concat([{ id: "youtube", label: "YouTube", type: "video", src: "https://www.youtube.com/embed/" + m.youtube_code, title: "Vídeo de YouTube" }]) %}{% endif %}
+  {%- if m.youtube_code %}{% set players = players.concat([{ id: "youtube", label: "YouTube", type: "video", src: "https://www.youtube.com/embed/" + m.youtube_code + "?enablejsapi=1", title: "Vídeo de YouTube" }]) %}{% endif %}
   {%- if m.spotify_url %}{% set players = players.concat([{ id: "spotify", label: "Spotify", type: "iframe", src: m.spotify_url, height: 80, title: "Reproductor de Spotify" }]) %}{% endif %}
   {#- Apple song embeds (?i=<track>) are compact; album embeds show the tracklist #}
   {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
 
-  {#- Side column in the desktop split view: players (sticky) #}
-  {%- if players | length %}<aside class="post-view__side">{% endif %}
+  {#- Side column in the desktop split view: players and podcast (sticky) #}
+  {%- set hasSide = (players | length) or m.podcast_file %}
+  {%- if hasSide %}<aside class="post-view__side">{% endif %}
+  {#- UniRadio Jaén podcast: its own block, above the players #}
+  {%- if m.podcast_file %}
+  <section class="podcast" aria-labelledby="podcast-title">
+    <div class="podcast__header">
+      <a class="podcast__logo-link" href="https://uniradio.ujaen.es/" target="_blank"><img class="podcast__logo" src="/images/uniradio-jaen.jpg" alt="UniRadio Jaén"></a>
+      <div>
+        <span class="kicker">Podcast</span>
+        <h3 class="podcast__title" id="podcast-title">Escúchalo en UniRadio Jaén</h3>
+      </div>
+    </div>
+    <audio class="podcast__audio" controls preload="metadata" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/{{ m.podcast_file }}">Tu navegador no soporta este tipo de reproductor</audio>
+    {#- Own controls (js/podcast.js); without JS the native ones above stay #}
+    <div class="podcast-player">
+      <button class="podcast-player__play" type="button" aria-label="Reproducir" aria-pressed="false"><span class="podcast-player__icon" aria-hidden="true"></span></button>
+      <input class="podcast-player__seek" type="range" min="0" max="0" step="1" value="0" aria-label="Posición del podcast">
+      <span class="podcast-player__time"><span class="podcast-player__current">0:00</span> / <span class="podcast-player__duration">--:--</span></span>
+      <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
+    </div>
+  </section>
+  {%- endif %}
   {%- if players | length %}
   <details class="players" open>
     <summary class="players__summary">Escuchar</summary>
@@ -106,9 +126,13 @@ permalink: "archive/{{ post.id }}.html"
     {%- endfor %}
   </details>
   <script src="/js/players.js?v={{ 'js/players.js' | assetVersion }}" defer></script>
-  <script src="/js/post-header.js?v={{ 'js/post-header.js' | assetVersion }}" defer></script>
   {%- endif %}
-  {%- if players | length %}</aside>{% endif %}
+
+  <script src="/js/podcast.js?v={{ 'js/podcast.js' | assetVersion }}" defer></script>
+  {%- if hasSide %}
+  <script src="/js/post-header.js?v={{ 'js/post-header.js' | assetVersion }}" defer></script>
+  </aside>
+  {%- endif %}
 
   {% if post.comments and post.comments | length > 0 %}
     <details class="post-view__comments">

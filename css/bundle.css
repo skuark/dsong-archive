@@ -581,6 +581,166 @@ a:hover {
   width: 100%;
 }
 
+/* UniRadio Jaén podcast: own block above the players */
+.podcast {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  margin: 2rem .5rem 2rem 0;
+  padding: 1rem;
+}
+
+.podcast__header {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+
+.podcast__logo-link:hover {
+  background: none;
+}
+
+.podcast__logo {
+  display: block;
+  height: 4rem;
+  width: auto;
+}
+
+.podcast__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.podcast__audio {
+  display: block;
+  width: 100%;
+}
+
+/* Own controls (js/podcast.js): ink play button with a yellow icon, flat ink/yellow seek bar */
+.podcast-player {
+  display: none;
+}
+
+.podcast-js .podcast__audio {
+  display: none;
+}
+
+.podcast-js .podcast-player {
+  align-items: center;
+  border-top: 2px solid var(--ink);
+  display: flex;
+  gap: .75rem;
+  padding-top: .75rem;
+}
+
+.podcast-player button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.podcast-player__play {
+  align-items: center;
+  background: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-small);
+  color: var(--accent);
+  display: flex;
+  flex: none;
+  height: 2.75rem;
+  justify-content: center;
+  width: 2.75rem;
+}
+
+.podcast-player__play:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.podcast-player__play:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+/* Play triangle; two bars while playing */
+.podcast-player__icon {
+  background: currentColor;
+  clip-path: polygon(15% 0, 100% 50%, 15% 100%);
+  height: 1rem;
+  width: 1rem;
+}
+
+.podcast-player__play[aria-pressed="true"] .podcast-player__icon {
+  clip-path: polygon(10% 0, 40% 0, 40% 100%, 10% 100%, 10% 0, 60% 0, 90% 0, 90% 100%, 60% 100%, 60% 0);
+}
+
+.podcast-player__seek {
+  --progress: 0%;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  flex: 1;
+  height: 1.5rem;
+  min-width: 4rem;
+}
+
+.podcast-player__seek::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, var(--ink) var(--progress), var(--rule) var(--progress));
+  height: 4px;
+}
+
+.podcast-player__seek::-webkit-slider-thumb {
+  appearance: none;
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  height: 1rem;
+  margin-top: calc(2px - .5rem);
+  width: 1rem;
+}
+
+.podcast-player__seek::-moz-range-track {
+  background: var(--rule);
+  height: 4px;
+}
+
+.podcast-player__seek::-moz-range-progress {
+  background: var(--ink);
+  height: 4px;
+}
+
+.podcast-player__seek::-moz-range-thumb {
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  height: .75rem;
+  width: .75rem;
+}
+
+.podcast-player__seek:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.podcast-player__time {
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.podcast-player__speed {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  font-size: .75rem;
+  font-weight: 700;
+  min-width: 3.25rem;
+  padding: .3rem .4rem;
+}
+
+.podcast-player__speed:hover {
+  background: var(--accent);
+}
+
 /* Previous / next post: plain text links under a thin rule */
 .post-nav {
   border-top: 3px solid var(--ink);
@@ -868,18 +1028,18 @@ a:hover {
 /* Desktop split view: text on the left, players sticky on the right so the video stays in view
    while reading. Only for posts with players (mobile stays one column). */
 @media (min-width: 64rem) {
-  .post-view:has(.players) {
+  .post-view:has(.post-view__side) {
     column-gap: 3rem;
     display: grid;
     grid-template-columns: minmax(0, 40rem) minmax(24rem, 1fr);
   }
 
-  .post-view:has(.players) > * {
+  .post-view:has(.post-view__side) > * {
     grid-column: 1;
   }
 
   /* Side column with the players, sticky so the video stays in view while reading */
-  .post-view:has(.players) > .post-view__side {
+  .post-view:has(.post-view__side) > .post-view__side {
     align-self: start;
     grid-column: 2;
     /* Spans every row under the header, so sticky can travel along the whole article */
@@ -890,22 +1050,28 @@ a:hover {
   }
 
   /* Post header (title + author/date) across both columns */
-  .post-view:has(.players) > .post-view__header {
+  .post-view:has(.post-view__side) > .post-view__header {
     grid-column: 1 / -1;
     grid-row: 1;
   }
 
   /* Room on the right for the offset shadow */
-  .post-view__side > .players {
+  .post-view__side > .players,
+  .post-view__side > .podcast {
     margin: 0 .5rem 0 0;
   }
 
+  /* Podcast first, as its own block: room before the radio toggle / players */
+  .post-view__side > .podcast {
+    margin-bottom: 1.5rem;
+  }
+
   /* Always open in the side column: hide the accordion toggle */
-  .post-view:has(.players) .players__summary {
+  .post-view:has(.post-view__side) .players__summary {
     display: none;
   }
 
-  .post-view:has(.players) .players__tabs {
+  .post-view:has(.post-view__side) .players__tabs {
     border-top: 0;
   }
 }
