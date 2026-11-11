@@ -131,7 +131,7 @@
     const target = document.createElement('div');
     document.querySelector('#panel-spotify iframe').replaceWith(target);
     return new Promise((resolve) => {
-      api.createController(target, { uri, width: '100%', height: 80 }, (controller) => {
+      api.createController(target, { uri, width: '100%', height: uri.startsWith('spotify:track:') ? 80 : 352 }, (controller) => {
         controller.addListener('playback_update', onSpotifyUpdate);
         spotify = controller;
         resolve(controller);
@@ -208,7 +208,12 @@
       last = { position: 0, duration: 0 };
       clearTimeout(endTimer);
       spotifyUri = entry[3];
-      if (!fresh) controller.loadUri(entry[3]);
+      if (!fresh) {
+        // Same player, maybe another kind: albums and playlists show their track list
+        const iframe = document.querySelector('#panel-spotify iframe');
+        if (iframe) iframe.height = entry[3].startsWith('spotify:track:') ? 80 : 352;
+        controller.loadUri(entry[3]);
+      }
       controller.play();
       // play() may arrive before the new URI has loaded: try once more
       const id = entry[0];

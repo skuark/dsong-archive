@@ -74,7 +74,8 @@ permalink: "archive/{{ post.id }}.html"
   {%- set m = post.metadata %}
   {%- set players = [] %}
   {%- if m.youtube_code %}{% set players = players.concat([{ id: "youtube", label: "YouTube", type: "video", src: "https://www.youtube.com/embed/" + m.youtube_code + "?enablejsapi=1", title: "Vídeo de YouTube" }]) %}{% endif %}
-  {%- if m.spotify_url %}{% set players = players.concat([{ id: "spotify", label: "Spotify", type: "iframe", src: m.spotify_url, height: 80, title: "Reproductor de Spotify" }]) %}{% endif %}
+  {#- Spotify tracks are compact; albums, playlists and artists show their track list #}
+  {%- if m.spotify_url %}{% set players = players.concat([{ id: "spotify", label: "Spotify", type: "iframe", src: m.spotify_url, height: (80 if "/track/" in m.spotify_url else 352), title: "Reproductor de Spotify" }]) %}{% endif %}
   {#- Apple song embeds (?i=<track>) are compact; album embeds show the tracklist #}
   {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
 
