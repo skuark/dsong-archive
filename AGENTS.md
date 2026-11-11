@@ -22,14 +22,15 @@ CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build 
 data/posts.json        Source data (~1,900 posts). Not in _data on purpose (see below).
 data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via redirect.njk).
 lib/posts.js           Loads posts once, adds `post.slugs`, exports `posts`, `groupBy`, `slugify`.
-_data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory + byDay ("MM-DD").
+_data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory + byDay ("MM-DD") + radio.
 _data/site.js          Global `site`: url, title, description, umamiId.
 _data/redirects.js     Exposes data/redirects.json as `redirects`.
 lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only (fonts.11ty.js -> /css/fonts.css).
 js/                    archive-table-sort.js, archive-table-search.js (accent-insensitive filter, ?q=),
                        players.js (post players as tabs inside a <details>; lazy-loads via data-src).
                        post-header.js (sticky post header height -> --post-header-height for the split view),
-                       on-this-day.js (home "Tal día como hoy": fetches today's JSON in the browser).
+                       on-this-day.js (home "Tal día como hoy": fetches today's JSON in the browser),
+                       radio.js (radio mode: swaps posts in place keeping the live YouTube/Spotify players, their iframe APIs).
 .eleventy.js           Filters (formatDate, markdown, excerpt), `posts` collection, passthrough.
 *.njk                  Pages: index, archive, post, archive-<facet>, rand, sitemap, robots.
 _includes/layouts/     main.njk (head, SEO meta, header).
@@ -45,6 +46,7 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 | `archive-<facet>.njk` | `archive.by<Facet>` (`{ name, slug, posts }`) | `/archive/<facets>/<slug>.html` |
 | `archive.njk` | `collections.posts` | `/archive/` |
 | `rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
+| `radio.njk` | `archive.radio` | `/radio.json` (posts with YouTube, or else a playable Spotify embed, for radio mode) |
 | `on-this-day.njk` | `archive.byDay` | `/tal-dia-como-hoy/<MM-DD>.json` (only days with posts) |
 | `redirect.njk` | `redirects` | each old URL (meta refresh + canonical) |
 | `404.njk` | — | `/404.html` (served by GitHub Pages) |
@@ -58,6 +60,7 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 - **Posts missing artist/album/year** get no facet page and no link in the table.
 - **Post ids must be lowercase ASCII** (`validate` enforces it): percent-encoded ids 404 on GitHub Pages.
 - **Redirects are a frozen JSON**, not computed from posts: old URLs must keep working even when data changes.
+- **Radio mode swaps the post in place** (js/radio.js): a page load would stop the music. The live YouTube and Spotify panels must never move in the DOM (iframes reload when moved); YouTube embeds carry `enablejsapi=1`. Posts without YouTube play Spotify (30 s previews without a Spotify session); dSong's broken playlists are left out.
 - **Media fields** in `metadata`: `youtube_code`, `spotify_url`, `apple_music_url` (embed URL; `?i=` = song, otherwise album), `podcast_file`. Broken embeds are removed from the data (history keeps them); Apple Music URLs were matched via the iTunes Search API.
 - **dSong's own Spotify playlists are kept even though they're broken** (`user/dsong2009`, `user/skuark`, `user/jesusr`: 18 posts). `check-media` reports them; don't remove them.
 - **Rewriting posts.json from a script**: `JSON.stringify(data, null, 2) + "\n"`, escaping U+007F–U+009F as `\uXXXX`, keeps the file byte-identical.

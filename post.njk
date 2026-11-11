@@ -98,6 +98,11 @@ permalink: "archive/{{ post.id }}.html"
   </section>
   {%- endif %}
   {%- if players | length %}
+  {#- Radio mode (js/radio.js): plays the next posts' YouTube (or Spotify) with their text; hidden without JS #}
+  {%- set inRadio = archive.radioById[post.id] %}
+  {%- if inRadio %}
+  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
+  {%- endif %}
   <details class="players" open>
     <summary class="players__summary">Escuchar</summary>
 
@@ -126,8 +131,12 @@ permalink: "archive/{{ post.id }}.html"
     {%- endfor %}
   </details>
   <script src="/js/players.js?v={{ 'js/players.js' | assetVersion }}" defer></script>
+  {%- if inRadio %}
+  <script src="/js/radio.js?v={{ 'js/radio.js' | assetVersion }}" defer></script>
+  {%- endif %}
   {%- endif %}
 
+  {#- On every post: radio mode may bring in a podcast block from another post #}
   <script src="/js/podcast.js?v={{ 'js/podcast.js' | assetVersion }}" defer></script>
   {%- if hasSide %}
   <script src="/js/post-header.js?v={{ 'js/post-header.js' | assetVersion }}" defer></script>

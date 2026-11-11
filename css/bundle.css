@@ -62,8 +62,10 @@ table {
   --font-display: Amaranth, sans-serif;
 }
 
+/* Font on body (not only .app): the radio bar is appended to <body>, outside .app */
 body {
   color: var(--ink);
+  font-family: Titillium Web, sans-serif;
   line-height: 1.6;
 }
 
@@ -103,7 +105,6 @@ a:hover {
 }
 
 .app {
-  font-family: Titillium Web, sans-serif;
   min-height: 100vh;
 }
 
@@ -739,6 +740,117 @@ a:hover {
 
 .podcast-player__speed:hover {
   background: var(--accent);
+}
+
+/* Radio mode toggle (above the players) and bar (fixed at the bottom while it plays) */
+.radio-toggle {
+  background: var(--accent);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-small);
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  margin: 0 .25rem 1rem 0;
+  padding: .5rem .75rem;
+  text-align: left;
+  text-transform: uppercase;
+  transition: transform .1s ease, box-shadow .1s ease;
+  width: calc(100% - .25rem);
+}
+
+.radio-toggle:hover {
+  box-shadow: none;
+  transform: translate(.25rem, .25rem);
+}
+
+.radio-toggle[hidden] {
+  display: none;
+}
+
+.radio-toggle__hint {
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.radio-bar {
+  align-items: center;
+  background: var(--accent);
+  border-top: 3px solid var(--ink);
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  left: 0;
+  padding: .75rem 2rem;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+}
+
+.radio-bar__next {
+  flex: 1 1 16rem;
+  font-size: .9rem;
+  min-width: 0;
+}
+
+.radio-bar__next a:hover {
+  background: var(--ink);
+  color: var(--accent);
+}
+
+.radio-bar__actions {
+  display: flex;
+  gap: .5rem;
+}
+
+.radio-bar__button {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .3rem .7rem;
+}
+
+.radio-bar__button:hover {
+  background: var(--ink);
+  color: var(--accent);
+}
+
+.radio-bar__button[aria-pressed="true"],
+.radio-bar__button--start {
+  background: var(--ink);
+  color: var(--accent);
+}
+
+.radio-bar__button[hidden] {
+  display: none;
+}
+
+.radio-bar__button:disabled {
+  cursor: default;
+  opacity: .4;
+}
+
+.radio-bar__button:disabled:hover {
+  background: var(--paper);
+  color: inherit;
+}
+
+/* Room for the bar so it doesn't cover the end of the page */
+.radio-on {
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 500px) {
+  .radio-bar {
+    padding: .75rem 1rem;
+  }
 }
 
 /* Previous / next post: plain text links under a thin rule */

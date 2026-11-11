@@ -1,0 +1,18 @@
+---
+permalink: /radio/
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>Radio · {{ site.title }}</title>
+  {#- Menu "Radio": a random post with a video, with radio mode in random order (js/radio.js) #}
+  <script>
+  const radioIds = {{ archive.radioIds | dump | safe }};
+  const randomId = radioIds[Math.floor(Math.random() * radioIds.length)];
+  window.location.href = `/archive/${randomId}.html?radio=aleatoria`;
+</script>
+</head>
+</html>
