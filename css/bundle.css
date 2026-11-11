@@ -114,6 +114,40 @@ a {
   vertical-align: middle;
 }
 
+.footer {
+  border-top: 2px solid #000;
+  font-size: .85rem;
+  line-height: 1.5;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: .25rem 0;
+}
+
+/* From tablet up: logo on the left, menu on the right (on phones it stays centered and stacked) */
+@media (min-width: 40rem) {
+  .header {
+    align-items: center;
+    border-bottom: 2px solid #000;
+    display: flex;
+    gap: 1rem 2rem;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+
+  .header__menu {
+    margin: 0;
+  }
+
+  .header__menu--item:last-child {
+    padding-right: 0;
+  }
+}
+
 .archive {
   display: grid;
 }
@@ -283,7 +317,6 @@ a {
   vertical-align: middle;
 }
 
-.post-view__comments-count,
 .post-view__date {
   vertical-align: middle;
   margin-right: 1rem;
@@ -299,10 +332,53 @@ a {
   margin-top: 1rem;
 }
 
-.post-view__subtitle {
+/* Lists inside articles (tracklists, etc.): the reset removes their markers */
+.post-view__content ol,
+.post-view__content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.post-view__content ol {
+  list-style: decimal;
+}
+
+.post-view__content ul {
+  list-style: disc;
+}
+
+/* Comments: closed accordion, same look as the players one */
+.post-view__comments {
+  border: 2px solid #000;
+  margin: 1.5rem 0;
+}
+
+.post-view__comments-summary {
+  cursor: pointer;
   font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  list-style: none;
+  padding: .5rem 1rem;
+}
+
+.post-view__comments-summary::-webkit-details-marker {
+  display: none;
+}
+
+.post-view__comments-summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: .5rem;
+  transition: transform .2s ease;
+}
+
+.post-view__comments[open] .post-view__comments-summary::before {
+  transform: rotate(90deg);
+}
+
+.post-view__comments ul {
+  border-top: 2px solid #000;
+  padding: 1.25rem 1rem;
 }
 
 .post-view__media {
@@ -377,6 +453,7 @@ a {
 }
 
 .players__panel {
+  background: #000;
   padding: 1rem;
 }
 
@@ -399,10 +476,143 @@ a {
   width: 100%;
 }
 
+/* Previous / next post: plain text links under a thin rule */
+.post-nav {
+  border-top: 1px solid #ccc;
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+/* Above the post: rule below instead of above */
+.post-nav--top {
+  border-bottom: 1px solid #ccc;
+  border-top: 0;
+  margin: 0 0 1rem;
+  padding: 0 0 1rem;
+}
+
+.post-nav__link {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  text-decoration: none;
+}
+
+.post-nav__link:hover .post-nav__title {
+  text-decoration: underline;
+}
+
+.post-nav__link--next {
+  grid-column: 2;
+  text-align: right;
+}
+
+.post-nav__label {
+  color: #777;
+  font-size: .8rem;
+}
+
+@media (max-width: 500px) {
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-nav__link--next {
+    grid-column: 1;
+    text-align: left;
+  }
+}
+
+/* Desktop: the post header (title + author/date) stays at the top while reading */
+@media (min-width: 64rem) {
+  .post-view__header {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: .75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .post-view__header .post-view__title {
+    margin-bottom: .5rem;
+  }
+
+  /* Same 1rem gap under the header before and after it sticks (the players column uses
+     top: header height + 1rem); in the grid, margins don't collapse, so the text drops its own */
+  .post-view__header {
+    margin-bottom: 1rem;
+  }
+
+  .post-view__header + .post-view__content {
+    margin-top: 0;
+  }
+}
+
+/* Desktop split view: text on the left, players sticky on the right so the video stays in view
+   while reading. Only for posts with players (mobile stays one column). */
+@media (min-width: 64rem) {
+  .app-wrapper:has(.post-view .players) {
+    max-width: 84rem;
+  }
+
+  .post-view:has(.players) {
+    column-gap: 3rem;
+    display: grid;
+    grid-template-columns: minmax(0, 40rem) minmax(24rem, 1fr);
+  }
+
+  .post-view:has(.players) > * {
+    grid-column: 1;
+  }
+
+  /* Side column with the players, sticky so the video stays in view while reading */
+  .post-view:has(.players) > .post-view__side {
+    align-self: start;
+    grid-column: 2;
+    /* Spans every row under the header, so sticky can travel along the whole article */
+    grid-row: 2 / span 50;
+    position: sticky;
+    /* Right under the sticky header (its height is set by js/post-header.js) */
+    top: calc(var(--post-header-height, 6rem) + 1rem);
+  }
+
+  /* Post header (title + author/date) across both columns */
+  .post-view:has(.players) > .post-view__header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .post-view__side > .players {
+    margin: 0;
+  }
+
+  /* Always open in the side column: hide the accordion toggle */
+  .post-view:has(.players) .players__summary {
+    display: none;
+  }
+
+  .post-view:has(.players) .players__tabs {
+    border-top: 0;
+  }
+}
+
+/* Same space above and below each separator */
 .post-view__comment {
   border-bottom: 1px dotted #ccc;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  padding: 1.25rem 0;
+}
+
+.post-view__comment:first-child {
+  padding-top: 0;
+}
+
+.post-view__comment:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .post-view__comment-meta {

@@ -23,6 +23,17 @@ export default function(eleventyConfig) {
     return dateFormat.replace(/yyyy|MM|dd|HH|mm/g, (token) => parts[token]);
   });
 
+  // Long Spanish date from the same string, e.g. "29 de Mayo de 2009" (", 13:45" with withTime).
+  // Months capitalized, as in the home page text.
+  const MONTHS = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+  eleventyConfig.addFilter("longDate", (dateString, withTime = false) => {
+    const match = /^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/.exec(dateString ?? "");
+    if (!match) return dateString ?? "";
+    const [, yyyy, MM, dd, HH, mm] = match;
+    const date = `${Number(dd)} de ${MONTHS[Number(MM) - 1]} de ${yyyy}`;
+    return withTime ? `${date}, ${HH}:${mm}` : date;
+  });
+
   // "2009-05-18 09:00:37 +0200" -> "2009-05-18T09:00:37+02:00"
   eleventyConfig.addFilter("isoDate", (dateString) =>
     (dateString ?? "").replace(/^(\S+) (\S+) ([+-]\d{2})(\d{2})$/, "$1T$2$3:$4")

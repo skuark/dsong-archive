@@ -9,7 +9,31 @@ eleventyComputed:
 permalink: "archive/{{ post.id }}.html"
 ---
 
+{#- Linear navigation (above and below the post): the collection is in chronological order (oldest first).
+    It lives outside .post-view: the sticky side column can travel to the end of .post-view and would overlap it. #}
+{%- set prevPost = collections.posts[pagination.pageNumber - 1] if pagination.pageNumber > 0 %}
+{%- set nextPost = collections.posts[pagination.pageNumber + 1] %}
+{%- macro postNav(position, prevPost, nextPost) %}
+<nav class="post-nav post-nav--{{ position }}" aria-label="Navegación entre artículos">
+  {%- if prevPost %}
+  <a class="post-nav__link post-nav__link--prev" href="/archive/{{ prevPost.id }}.html" rel="prev">
+    <span class="post-nav__label">← Anterior</span>
+    <span class="post-nav__title">{{ prevPost.title }}</span>
+  </a>
+  {%- endif %}
+  {%- if nextPost %}
+  <a class="post-nav__link post-nav__link--next" href="/archive/{{ nextPost.id }}.html" rel="next">
+    <span class="post-nav__label">Siguiente →</span>
+    <span class="post-nav__title">{{ nextPost.title }}</span>
+  </a>
+  {%- endif %}
+</nav>
+{%- endmacro %}
+
+{{ postNav("top", prevPost, nextPost) }}
+
 <div class="post-view">
+  <header class="post-view__header">
   <h2 class="post-view__title">{{ post.title }}</h2>
 
   <div class="post-view__meta">
@@ -28,18 +52,10 @@ permalink: "archive/{{ post.id }}.html"
         {% endif %}
       </span>
 
-      <span class="post-view__date">{{ post.published_at | formatDate("dd/MM/yyyy") }}</span>
-
-      {% set commentsCount = post.comments | length %}
-      {% if commentsCount == 0 %}
-        <span class="post-view__comments-count">Sin comentarios</span>
-      {% elif commentsCount == 1 %}
-        <span class="post-view__comments-count">{{ commentsCount }} comentario</span>
-      {% else %}
-        <span class="post-view__comments-count">{{ commentsCount }} comentarios</span>
-      {% endif %}
+      <time class="post-view__date" datetime="{{ post.published_at | isoDate }}">{{ post.published_at | longDate }}</time>
     </span>
   </div>
+  </header>
 
   <div class="post-view__content">
     {{ post.content | markdown | safe }}
@@ -54,6 +70,8 @@ permalink: "archive/{{ post.id }}.html"
   {#- Apple song embeds (?i=<track>) are compact; album embeds show the tracklist #}
   {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
 
+  {#- Side column in the desktop split view: players (sticky) #}
+  {%- if players | length %}<aside class="post-view__side">{% endif %}
   {%- if players | length %}
   <details class="players" open>
     <summary class="players__summary">Escuchar</summary>
@@ -83,11 +101,13 @@ permalink: "archive/{{ post.id }}.html"
     {%- endfor %}
   </details>
   <script src="/js/players.js?v={{ 'js/players.js' | assetVersion }}" defer></script>
+  <script src="/js/post-header.js?v={{ 'js/post-header.js' | assetVersion }}" defer></script>
   {%- endif %}
+  {%- if players | length %}</aside>{% endif %}
 
   {% if post.comments and post.comments | length > 0 %}
-    <div class="post-view__comments">
-      <h3 class="post-view__subtitle">Comentarios</h3>
+    <details class="post-view__comments">
+      <summary class="post-view__comments-summary">Comentarios ({{ post.comments | length }})</summary>
       <ul>
         {% for comment in post.comments %}
           <li class="post-view__comment">
@@ -105,11 +125,13 @@ permalink: "archive/{{ post.id }}.html"
                   </span>
                 {% endif %}
               </span>
-              <span class="post-view__comment-date">{{ comment.published_at | formatDate("dd/MM/yyyy HH:mm") }}</span>
+              <time class="post-view__comment-date" datetime="{{ comment.published_at | isoDate }}">{{ comment.published_at | longDate(true) }}</time>
             </div>
           </li>
         {% endfor %}
       </ul>
-    </div>
+    </details>
   {% endif %}
 </div>
+
+{{ postNav("bottom", prevPost, nextPost) }}

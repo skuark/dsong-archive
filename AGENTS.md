@@ -28,6 +28,7 @@ _data/redirects.js     Exposes data/redirects.json as `redirects`.
 lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only (fonts.11ty.js -> /css/fonts.css).
 js/                    archive-table-sort.js, archive-table-search.js (accent-insensitive filter, ?q=),
                        players.js (post players as tabs inside a <details>; lazy-loads via data-src).
+                       post-header.js (sticky post header height -> --post-header-height for the split view).
 .eleventy.js           Filters (formatDate, markdown, excerpt), `posts` collection, passthrough.
 *.njk                  Pages: index, archive, post, archive-<facet>, rand, sitemap, robots.
 _includes/layouts/     main.njk (head, SEO meta, header).
