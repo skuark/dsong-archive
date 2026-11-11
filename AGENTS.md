@@ -56,7 +56,7 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 
 ## Decisions (don't undo without a reason)
 
-- **posts.json lives in `data/`, not `_data/`**: avoids an automatic global `posts` that clashes with `{% set posts %}` in templates; it's imported once in `lib/posts.js`.
+- **posts.json lives in `data/`, not `_data/`**: avoids an automatic global `posts` that clashes with `{% set posts %}` in templates; it's read in `lib/posts.js` (`loadPosts()`, with fs and re-parsed only when the file changes, so `npm run serve` rebuilds on edits; `_data/archive.js` is a function for the same reason).
 - **Slugs are precomputed and memoized** in `lib/posts.js` (slugify costs ~0.3 ms/call).
 - **`@sindresorhus/slugify` pinned to v2** (same as Eleventy's filter). v4 changes some slugs and would break URLs; Dependabot ignores its majors.
 - **`formatDate` parses the string, not `Date`**: shows the original local time and doesn't depend on the build machine's timezone (CI runs in UTC).

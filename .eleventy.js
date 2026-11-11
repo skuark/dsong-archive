@@ -1,5 +1,5 @@
 import MarkdownIt from "markdown-it";
-import { posts } from "./lib/posts.js";
+import { loadPosts } from "./lib/posts.js";
 import { fontFiles } from "./lib/fonts.js";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
@@ -9,9 +9,10 @@ export default function(eleventyConfig) {
     ELEVENTY_ENV: process.env.ELEVENTY_ENV || "development"
   });
 
-  eleventyConfig.addCollection("posts", () => posts);
+  eleventyConfig.addCollection("posts", () => loadPosts());
 
   eleventyConfig.addWatchTarget("lib/");
+  eleventyConfig.addWatchTarget("data/");   // posts.json is imported from lib/posts.js (e.g. saves from npm run edit)
 
   // Formats "yyyy-MM-dd HH:mm:ss +ZZZZ" keeping the original local time
   // (no Date parsing, so the result doesn't depend on the build machine's timezone).
