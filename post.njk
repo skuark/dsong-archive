@@ -21,6 +21,10 @@ permalink: "archive/{{ post.id }}.html"
     <span class="post-nav__title">{{ prevPost.title }}</span>
   </a>
   {%- endif %}
+  <a class="post-nav__link post-nav__link--random" href="/rand/">
+    <span class="post-nav__label">🎲 Al azar</span>
+    <span class="post-nav__title">Cualquier artículo</span>
+  </a>
   {%- if nextPost %}
   <a class="post-nav__link post-nav__link--next" href="/archive/{{ nextPost.id }}.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
