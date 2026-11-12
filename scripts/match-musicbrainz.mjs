@@ -11,7 +11,7 @@
 // "auto" = a candidate with the same name credited on one of them; otherwise "review"
 // (decide in `npm run review-musicbrainz`, whose decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
-import { ALPHA2, get, mentions, norm, phrase as q, plain, readData, readJson as read, search as mb, splitArtists, writeData } from "../lib/musicbrainz.js";
+import { ALPHA2, get, mentions, norm, phrase as q, plain, readData, readJson as read, search as mb, splitArtists, writeData, bareTitle } from "../lib/musicbrainz.js";
 import { countryOf } from "../lib/countries.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
@@ -32,7 +32,7 @@ for (const { metadata: m, content } of posts) {
   a.names.add(m.artist);
   a.posts++;
   if (m.song) a.songs.add(m.song);
-  if (m.album) a.albums.add(m.album);
+  if (m.album) a.albums.add(bareTitle(m.album));
   if (m.artist_nationality) a.nationality.add(m.artist_nationality);
 }
 
@@ -40,8 +40,9 @@ if (apply) {
   // Output: exact artist name (as in posts.json) -> MBID. Review decisions ({ mbid: null } = no match) win.
   const decisions = read(DECISIONS);
   const out = {};
-  for (const [key, r] of Object.entries(results)) {
-    const mbid = key in decisions ? decisions[key].mbid : r.status === "auto" ? r.pick : null;
+  for (const key of new Set([...Object.keys(results), ...Object.keys(decisions)])) {
+    const r = results[key];
+    const mbid = key in decisions ? decisions[key].mbid : r?.status === "auto" ? r.pick : null;
     if (!mbid) continue;
     for (const name of artists[key]?.names ?? []) out[name] = mbid;
   }
@@ -106,6 +107,12 @@ if (process.argv.includes("--recheck")) {
     const named = pool.filter((c) => fits(c) && c.mentioned?.length && c.countryMatch !== false);
     if (confirmed.length === 1 && fits(confirmed[0])) { r.pick = confirmed[0].mbid; r.status = "auto"; r.via = "recheck"; }
     else if (!confirmed.length && named.length === 1) { r.pick = named[0].mbid; r.status = "auto"; r.via = "content"; }
+    // Failing both: one same-name candidate from the post's country, and every other same-name one from elsewhere.
+    else if (!confirmed.length && !named.length && r.candidates.filter((c) => c.sameName).length > 1
+      && r.candidates.filter((c) => c.sameName && c.countryMatch === true).length === 1
+      && r.candidates.every((c) => !c.sameName || typeof c.countryMatch === "boolean")) {
+      r.pick = r.candidates.find((c) => c.sameName && c.countryMatch === true).mbid; r.status = "auto"; r.via = "country";
+    }
     else if (confirmed.length) r.pick = confirmed.sort((x, y) => y.confirmed.length - x.confirmed.length || (y.mentioned?.length ?? 0) - (x.mentioned?.length ?? 0))[0].mbid;
     else if (named.length) r.pick = named.sort((x, y) => y.mentioned.length - x.mentioned.length)[0].mbid;
     r.rechecked = true;

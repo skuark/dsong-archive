@@ -9,7 +9,7 @@
 // "auto" = same title, a studio version and (if the post names one) the same album; otherwise "review"
 // (decide in `npm run review-musicbrainz`, tab "Canciones"; decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
-import { get, mentions, norm, phrase, plain, readData, readJson, search, similar, writeData, arid as aridOf, sameMbid } from "../lib/musicbrainz.js";
+import { get, mentions, norm, phrase, plain, readData, readJson, search, similar, writeData, arid as aridOf, sameMbid, bareTitle } from "../lib/musicbrainz.js";
 import { isVersion, KIND } from "../lib/versions.js";
 const VERSION = { test: isVersion };
 
@@ -33,9 +33,10 @@ const save = () => writeFileSync(report, JSON.stringify(results, null, 2) + "\n"
 async function lookupDates() {
   const decisions = readJson(DECISIONS);
   const picked = new Set();
-  for (const [id, r] of Object.entries(results)) {
-    const pick = id in decisions ? decisions[id].pick : r.status === "auto" ? r.pick : null;
-    const c = pick && (r.candidates.find((c) => c.key === pick) ?? decisions[id]?.candidate);
+  for (const id of new Set([...Object.keys(results), ...Object.keys(decisions)])) {
+    const r = results[id];
+    const pick = id in decisions ? decisions[id].pick : r?.status === "auto" ? r.pick : null;
+    const c = pick && (r?.candidates.find((c) => c.key === pick) ?? decisions[id]?.candidate);
     if (c?.release_group && !(c.release_group in groups)) picked.add(c.release_group);
   }
   if (picked.size) console.log(`${picked.size} album dates to look up`);
@@ -52,10 +53,12 @@ if (apply) {
   const decisions = readJson(DECISIONS);
   const out = {};
   for (const post of posts) {
-    const r = results[post.id];
-    if (!r || !sameMbid(r.arid, data.artists[post.metadata.artist])) continue;   // artist changed since: stale
-    const pick = post.id in decisions ? decisions[post.id].pick : r.status === "auto" ? r.pick : null;
-    const c = pick && (r.candidates.find((c) => c.key === pick) ?? decisions[post.id]?.candidate);
+    // A human decision (review UI or the editor, which stores the chosen candidate) always applies;
+    // an automatic pick only while the post's artist id is still the one it was searched in.
+    const r = results[post.id], d = decisions[post.id];
+    if (!d && (!r || !sameMbid(r.arid, data.artists[post.metadata.artist]))) continue;
+    const pick = d ? d.pick : r.status === "auto" ? r.pick : null;
+    const c = pick && (r?.candidates.find((c) => c.key === pick) ?? d?.candidate);
     if (!c) continue;
     out[post.id] = Object.fromEntries(Object.entries({
       recording: c.recording, release_group: c.release_group, isrcs: c.isrcs?.length ? c.isrcs : undefined, first_release: (c.release_group && groups[c.release_group]) || undefined,
@@ -130,7 +133,7 @@ const todo = posts.filter((p) => data.artists[p.metadata.artist] && (p.metadata.
 console.log(`${todo.length} posts to search (${Object.keys(results).length} already in ${report})`);
 let done = 0;
 for (const post of todo) {
-  const { artist, song, album: metaAlbum } = post.metadata;
+  const { artist, song } = post.metadata, metaAlbum = bareTitle(post.metadata.album);
   const arid = data.artists[artist];
   const text = plain(post.content);
   const ctx = CONTEXT[post.id] ?? {};
@@ -160,7 +163,7 @@ for (const post of todo) {
   const contextOk = !["podcast", "other"].includes(ctx.subject) && !coverConflict;
   candidates = candidates.slice(0, 12).map((c) => ({ ...c, mentioned: !!(c.album && mentions(text, c.album)) }));
   results[post.id] = {
-    arid, artist, song: song ?? null, album: metaAlbum ?? null, year: post.metadata.year ?? null, title: post.title, context: CONTEXT[post.id] ?? null,
+    arid, artist, song: song ?? null, album: post.metadata.album ?? null, year: post.metadata.year ?? null, title: post.title, context: CONTEXT[post.id] ?? null,
     pick: top?.key ?? null, status: top && titleOk && albumOk && contextOk && (song ? top.recording : top.release_group) ? "auto" : "review", candidates,
   };
   if (++done % 10 === 0) { save(); console.log(`${done}/${todo.length}`); }

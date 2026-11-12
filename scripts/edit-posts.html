@@ -94,6 +94,37 @@
   .button--primary:hover { color: var(--ink); }
   .button--danger:hover { background: var(--error); color: var(--paper); }
   .button:disabled { cursor: default; opacity: .4; }
+
+  /* Context of the post (data/post-context.json) and sources (MusicBrainz, player searches) */
+  .context { background: var(--soft); border: 2px solid var(--ink); display: grid; gap: .35rem; font-size: .85rem; padding: .75rem 1rem; }
+  .context:empty { display: none; }
+  .context dl { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0; }
+  .context dt { color: var(--muted); font-size: .7rem; font-weight: 700; text-transform: uppercase; }
+  .context dd { margin: 0 0 0 .35rem; }
+  .context div { align-items: baseline; display: flex; }
+  .context .warn { color: var(--error); }
+  .source { display: grid; gap: .5rem; }
+  .source + .source { border-top: 2px solid var(--ink); margin-top: 1rem; padding-top: 1rem; }
+  .source h3 { font-size: .8rem; letter-spacing: .08em; margin: 0; text-transform: uppercase; }
+  .source__current { font-size: .85rem; }
+  .source__search { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .source__search input[type="search"] { flex: 1 1 12rem; width: auto; }
+  .source__search label { align-items: center; display: inline-flex; font-size: .8rem; gap: .3rem; }
+  .source__search label input { width: auto; }
+  .results { border: 1px solid var(--rule); list-style: none; margin: 0; max-height: 26rem; overflow-y: auto; padding: 0; }
+  .results:empty { display: none; }
+  .results li { align-items: center; border-bottom: 1px solid var(--rule); display: grid; gap: .25rem .75rem; grid-template-columns: 1fr auto; padding: .4rem .6rem; }
+  .results li[aria-current="true"] { background: var(--accent); }
+  .results .r-title { font-weight: 600; }
+  .results .r-meta { color: var(--muted); display: block; font-size: .75rem; }
+  .results .r-actions { display: flex; gap: .35rem; }
+  .results .r-preview { grid-column: 1 / -1; }
+  .results .r-preview iframe { border: 0; display: block; width: 100%; }
+  .results .r-preview .video { aspect-ratio: 16 / 9; max-width: 32rem; }
+  .hit { background: #dfd; border: 1px solid var(--ok); font-size: .65rem; font-weight: 700; margin-left: .3rem; padding: 0 .25rem; }
+  .miss { background: #fee; border: 1px solid var(--error); font-size: .65rem; font-weight: 700; margin-left: .3rem; padding: 0 .25rem; }
+  .flag { color: var(--error); font-size: .8rem; }
+  .msg { color: var(--muted); font-size: .8rem; }
 </style>
 </head>
 <body>
@@ -116,6 +147,15 @@
         <option value="noCountry">Sin país</option>
         <option value="podcast">Con podcast</option>
         <option value="comments">Con comentarios</option>
+        <optgroup label="Fuentes">
+          <option value="mbArtist">MusicBrainz: artista por revisar</option>
+          <option value="mbRecord">MusicBrainz: canción/álbum por revisar</option>
+          <option value="mbNone">MusicBrainz: canción/álbum sin encontrar</option>
+          <option value="mbLinked">MusicBrainz: enlazados</option>
+          <option value="conflict">Texto ≠ metadatos</option>
+          <option value="version">El texto presenta otra versión (directo, cover…)</option>
+          <option value="flagged">Reproductor dudoso (auditoría)</option>
+        </optgroup>
       </select>
       <span class="list__count" id="count"></span>
     </div>
@@ -139,6 +179,7 @@
   </div>
   <div class="editor__body">
     <ul class="errors" data-errors hidden></ul>
+    <div class="context" data-context></div>
 
     <fieldset class="block" data-block="general">
       <legend><button class="block__toggle" type="button" aria-expanded="false">General</button></legend>
@@ -169,6 +210,39 @@
       </div>
     </fieldset>
 
+    <fieldset class="block" data-block="musicbrainz">
+      <legend><button class="block__toggle" type="button" aria-expanded="false" data-mb-title>MusicBrainz</button></legend>
+      <div class="block__body">
+        <div class="source" data-source="artist">
+          <h3>Artista</h3>
+          <div class="source__current" data-current></div>
+          <div class="source__search">
+            <input type="search" data-q placeholder="Nombre del artista">
+            <button class="button" type="button" data-action="mb-artist-search">Buscar en MusicBrainz</button>
+            <button class="button button--danger" type="button" data-action="mb-artist-none">No está en MusicBrainz</button>
+            <button class="button" type="button" data-action="mb-artist-undo" hidden>Deshacer decisión</button>
+          </div>
+          <p class="msg" data-msg></p>
+          <ul class="results" data-results></ul>
+        </div>
+        <div class="source" data-source="record">
+          <h3>Canción / álbum</h3>
+          <div class="source__current" data-current></div>
+          <div class="source__search">
+            <input type="search" data-q placeholder="Canción">
+            <input type="search" data-album placeholder="Álbum (opcional)">
+            <label><input type="checkbox" data-in-artist checked> Solo de este artista</label>
+            <button class="button" type="button" data-action="mb-record-search">Buscar canción</button>
+            <button class="button" type="button" data-action="mb-album-search">Buscar álbum</button>
+            <button class="button button--danger" type="button" data-action="mb-record-none">Sin coincidencia</button>
+            <button class="button" type="button" data-action="mb-record-undo" hidden>Deshacer decisión</button>
+          </div>
+          <p class="msg" data-msg></p>
+          <ul class="results" data-results></ul>
+        </div>
+      </div>
+    </fieldset>
+
     <fieldset class="block" data-block="players">
       <legend><button class="block__toggle" type="button" aria-expanded="false">Reproductores</button></legend>
       <div class="block__body">
@@ -181,9 +255,12 @@
             <a class="button" data-search target="_blank">Buscar ↗</a>
           </div>
           <div class="player__preview"></div>
+          <div class="source__search"><input type="search" data-q><button class="button" type="button" data-action="player-search">Buscar aquí</button></div>
+          <p class="msg" data-msg></p>
+          <ul class="results" data-results></ul>
         </div>
         <div class="field field--wide player" data-player="spotify">
-          <span>Spotify (URL de embed)</span>
+          <span>Spotify (URL de embed; sin búsqueda aquí: la API de Spotify pide Premium)</span>
           <div class="player__row">
             <input name="m.spotify_url" pattern="https://open\.spotify\.com/embed/.+" placeholder="Pega la URL de Spotify (se convierte a embed)">
             <button class="button" type="button" data-action="try">▶ Probar</button>
@@ -199,6 +276,9 @@
             <a class="button" data-search target="_blank">Buscar ↗</a>
           </div>
           <div class="player__preview"></div>
+          <div class="source__search"><input type="search" data-q><label><input type="checkbox" data-albums> Álbumes</label><button class="button" type="button" data-action="player-search">Buscar aquí</button></div>
+          <p class="msg" data-msg></p>
+          <ul class="results" data-results></ul>
         </div>
       </div>
       <div class="grid" data-extra></div>
@@ -277,6 +357,13 @@ const FILTERS = {
   noCountry: (p) => !p.country,
   podcast: (p) => p.podcast,
   comments: (p) => p.comments > 0,
+  mbArtist: (p) => ['review', 'none'].includes(p.mb?.artist),
+  mbRecord: (p) => p.mb?.record === 'review',
+  mbNone: (p) => ['none', 'noartist'].includes(p.mb?.record),
+  mbLinked: (p) => p.mb?.artist === 'ok' && p.mb?.record === 'ok',
+  conflict: (p) => p.conflict,
+  version: (p) => !!p.version,
+  flagged: (p) => p.flagged,
 };
 
 function renderList() {
@@ -304,6 +391,13 @@ function renderList() {
       badge.className = 'badge';
       badge.title = 'Falta este reproductor';
       badge.textContent = label;
+      meta.append(badge);
+    }
+    if (['review', 'none'].includes(p.mb?.artist) || ['review', 'none'].includes(p.mb?.record)) {
+      const badge = document.createElement('span');
+      badge.className = 'badge';
+      badge.title = 'MusicBrainz por revisar';
+      badge.textContent = 'MB?';
       meta.append(badge);
     }
     if (p.reviewed) {
@@ -392,6 +486,7 @@ function fill(post) {
   }
 
   renderComments(post.comments);
+  if (current.sources) renderSources();
   applyBlocks();
   updateSearchLinks();
   preview();
@@ -501,7 +596,7 @@ async function save({ next = false } = {}) {
   if (isDirty()) {
     try {
       const data = await api(`/api/posts/${current.post.id}`, { post: build(), hash: current.hash });
-      current = { post: data.post, hash: data.hash };
+      current = { post: data.post, hash: data.hash, sources: current.sources };
       posts[posts.findIndex((p) => p.id === data.post.id)] = data.summary;
       fill(data.post);
       showErrors([]);
@@ -566,6 +661,240 @@ function updateSearchLinks() {
   }
 }
 
+// ---------- Sources: context, MusicBrainz, player searches ----------
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const MB = 'https://musicbrainz.org/';
+const SUBJECT = { song: 'canción', album: 'álbum', artist: 'artista', podcast: 'podcast', other: 'otro' };
+const VERSION_ES = { original: 'original', live: 'directo', acoustic: 'acústica', remix: 'remix', cover: 'cover', demo: 'demo', orchestral: 'orquestal' };
+// Same markers as lib/versions.js, to flag candidates that are the version the post presents
+const KIND_RE = {
+  live: /\b(live|en directo|en vivo|directo|concert|concierto|ao vivo)\b|\s@\s/i, acoustic: /\b(acoustic|acustic|acústic[oa]|unplugged|stripped)\b/i,
+  remix: /\b(remix|mix)\b/i, demo: /\bdemo\b/i, orchestral: /\b(orchestra|orchestral|symphon\w*|orquesta\w*|sinf[oó]nic\w*)\b/i,
+};
+const KIND_TYPE = { live: 'Live', remix: 'Remix', demo: 'Demo' };
+const KEYWORD = { live: 'live', acoustic: 'acoustic', remix: 'remix', orchestral: 'orchestra', demo: 'demo' };
+const AUDIT = { performer: 'otro intérprete', original: 'es el original y el post va de un cover', version: 'no parece la versión que presenta el post', studio: 'parece otra versión y el post presenta la original', gone: 'ya no existe' };
+const STATUS = { ok: '✓ enlazado', review: 'por revisar', none: 'sin encontrar', nomatch: 'no está en MusicBrainz (decidido)', noartist: 'falta enlazar el artista' };
+const bare = (s) => (s ?? '').replace(/^\s*(?:b\.?s\.?o\.?|o\.?s\.?t\.?|banda sonora(?: original)?(?: de)?)(?:\s*[:\-–]\s*|\s+)/i, '').trim();
+const mmss = (s) => (s ? `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}` : '');
+const ctx = () => current.sources?.context ?? {};
+const meta = () => current.post.metadata;
+const performer = () => ctx().performer || meta().artist || '';
+
+function renderContext() {
+  const box = $('[data-context]');
+  const c = current.sources?.context;
+  if (!c) { box.textContent = ''; return; }
+  const item = (label, value) => (value ? `<div><dt>${label}</dt><dd>${esc(value)}</dd></div>` : '');
+  const version = c.version ? (VERSION_ES[c.version] ?? c.version) + (c.version_detail ? ` (${c.version_detail})` : '') : '';
+  box.innerHTML = `<dl>
+    ${item('El post presenta', SUBJECT[c.subject] ?? c.subject)}${item('Intérprete', c.performer)}${item('Canción', c.song)}${item('Álbum', c.album)}${item('Año', c.year)}
+    ${item('Versión', version)}${c.is_cover ? item('Cover de', c.original_artist || '¿?') : ''}${item('Con', Array.isArray(c.featuring) ? c.featuring.join(', ') : c.featuring)}
+    ${item('Banda sonora de', c.soundtrack_of)}${item('Fiabilidad', { high: 'alta', medium: 'media', low: 'baja' }[c.confidence] ?? c.confidence)}</dl>
+    ${c.metadata_conflict ? `<div class="warn">⚠ ${esc(c.metadata_conflict)}</div>` : ''}`;
+}
+
+function renderSources() {
+  renderContext();
+  const s = current.sources;
+  $('[data-mb-title]').textContent = `MusicBrainz · ${s.status.artist ? 'artista ' + STATUS[s.status.artist] : 'sin artista'}${s.status.record ? ' · canción/álbum ' + STATUS[s.status.record] : ''}`;
+  renderArtist();
+  renderRecord();
+  // Player audit flags, inside the players block
+  const players = $('[data-block="players"] .block__body');
+  players.querySelector('[data-audit]')?.remove();
+  if (s.audit.length) {
+    const ul = document.createElement('ul');
+    ul.dataset.audit = '';
+    ul.className = 'flag';
+    ul.innerHTML = s.audit.map((a) => `<li>${esc(a.player)}: ${esc(AUDIT[a.kind] ?? a.kind)}${a.info ? ` — ahora: ${esc(a.info.title ?? '')}${a.info.artist ? ' · ' + esc(a.info.artist) : ''}` : ''}</li>`).join('');
+    players.prepend(ul);
+  }
+  for (const box of document.querySelectorAll('[data-player="youtube"], [data-player="apple"]')) {
+    const q = $('[data-q]', box);
+    if (!q.value) q.value = playerQuery(box.dataset.player);
+    if (box.dataset.player === 'apple') $('[data-albums]', box).checked = ctx().subject === 'album' || !meta().song;
+  }
+}
+
+const artistLinks = (v) => (Array.isArray(v) ? v : v ? [{ name: '', mbid: v }] : [])
+  .map((p) => `<a href="${MB}artist/${p.mbid}" target="_blank" rel="noopener">${esc(p.name || 'Ver en MusicBrainz')} ↗</a>`).join(' · ');
+
+function artistItem(c, chosen) {
+  const life = c.begin || c.end ? `${c.begin ?? '?'}–${c.end ?? ''}` : '';
+  const facts = [c.type, c.country || c.area, life, c.score != null ? `${c.score} %` : ''].filter(Boolean).join(' · ');
+  const badges = (c.sameName ? '<span class="hit">mismo nombre</span>' : '')
+    + (c.confirmed?.length ? `<span class="hit">sus temas: ${esc(c.confirmed.join(', '))}</span>` : '')
+    + (c.mentioned?.length ? `<span class="hit">el texto nombra: ${esc(c.mentioned.join(', '))}</span>` : '')
+    + (c.countryMatch === false ? '<span class="miss">otro país</span>' : c.countryMatch ? '<span class="hit">mismo país</span>' : '');
+  return `<li${chosen ? ' aria-current="true"' : ''}><div><span class="r-title">${esc(c.name)}</span>${c.disambiguation ? ` <span class="r-meta" style="display:inline">(${esc(c.disambiguation)})</span>` : ''}${badges}
+    <span class="r-meta">${esc(facts)}</span></div>
+    <div class="r-actions"><a class="button" href="${MB}artist/${c.mbid}" target="_blank" rel="noopener">Ver ↗</a><button class="button" type="button" data-pick="${c.mbid}">Elegir</button></div></li>`;
+}
+
+function renderArtist(results) {
+  const box = $('[data-source="artist"]'), a = current.sources.artist;
+  if (!a) { box.hidden = true; return; }
+  box.hidden = false;
+  $('[data-current]', box).innerHTML = `${esc(a.name)}: <strong>${a.value ? artistLinks(a.value) : 'sin enlazar'}</strong> · ${STATUS[current.sources.status.artist]}${a.decided ? ' (a mano)' : a.via ? ` (auto: ${esc(a.via)})` : ''}`;
+  $('[data-action="mb-artist-undo"]', box).hidden = !a.decided;
+  const q = $('[data-q]', box);
+  if (!q.value) q.value = a.name;
+  const list = results ?? a.candidates;
+  $('[data-results]', box).innerHTML = list.map((c) => artistItem(c, typeof a.value === 'string' && c.mbid === a.value)).join('');
+  $('[data-msg]', box).textContent = results ? `${results.length} resultados de MusicBrainz` : a.candidates.length ? 'Candidatos de la búsqueda automática' : '';
+}
+
+function recordItem(c, chosen) {
+  const want = ctx(), kind = KIND_RE[want.version];
+  const text = `${c.title ?? ''} ${c.disambiguation ?? ''} ${c.album ?? ''}`;
+  const versionHit = kind && (kind.test(text) || (c.secondary ?? []).includes(KIND_TYPE[want.version]));
+  const albums = [want.album, bare(meta().album)].filter(Boolean).map(norm);
+  const badges = (versionHit ? `<span class="hit">${esc(VERSION_ES[want.version])}</span>` : '')
+    + (c.album && albums.includes(norm(c.album)) ? '<span class="hit">mismo álbum</span>' : '')
+    + (c.mentioned ? '<span class="hit">el texto nombra el álbum</span>' : '')
+    + (c.isrcs?.length ? `<span class="hit">ISRC</span>` : '');
+  const facts = [c.artist, c.album, [c.type, ...(c.secondary ?? [])].filter(Boolean).join(' + '), c.date, mmss(c.length ? c.length / 1000 : 0), c.status].filter(Boolean).join(' · ');
+  const links = (c.recording ? `<a class="button" href="${MB}recording/${c.recording}" target="_blank" rel="noopener">Tema ↗</a>` : '')
+    + (c.release_group ? `<a class="button" href="${MB}release-group/${c.release_group}" target="_blank" rel="noopener">Álbum ↗</a>` : '');
+  return `<li${chosen ? ' aria-current="true"' : ''}><div><span class="r-title">${esc(c.title ?? c.album)}</span>${c.disambiguation ? ` <span class="r-meta" style="display:inline">(${esc(c.disambiguation)})</span>` : ''}${badges}
+    <span class="r-meta">${esc(facts)}</span></div>
+    <div class="r-actions">${links}<button class="button" type="button" data-pick="${esc(c.key)}">Elegir</button></div></li>`;
+}
+
+let recordList = [];
+function renderRecord(results) {
+  const box = $('[data-source="record"]'), r = current.sources.record, st = current.sources.status.record;
+  if (!st) { box.hidden = true; return; }
+  box.hidden = false;
+  const v = r.value;
+  $('[data-current]', box).innerHTML = v
+    ? `<strong>${v.recording ? `<a href="${MB}recording/${v.recording}" target="_blank" rel="noopener">Tema ↗</a>` : ''} ${v.release_group ? `<a href="${MB}release-group/${v.release_group}" target="_blank" rel="noopener">Álbum ↗</a>` : ''}</strong>${v.first_release ? ` · primera edición del álbum: ${esc(v.first_release)}` : ''}${v.isrcs ? ` · ISRC ${esc(v.isrcs.join(', '))}` : ''} · ${STATUS[st]}${r.decided ? ' (a mano)' : ''}`
+    : STATUS[st] + (r.decided ? ' (a mano)' : '');
+  $('[data-action="mb-record-undo"]', box).hidden = !r.decided;
+  const q = $('[data-q]', box);
+  if (!q.value) q.value = ctx().song || meta().song || '';
+  const inArtist = $('[data-in-artist]', box);
+  inArtist.disabled = !current.sources.artist?.value;
+  if (inArtist.disabled) inArtist.checked = false;
+  recordList = results ?? r.candidates;
+  $('[data-results]', box).innerHTML = recordList.map((c) => recordItem(c, c.key === r.pick)).join('');
+  $('[data-msg]', box).textContent = results ? `${results.length} resultados de MusicBrainz` : r.candidates.length ? 'Candidatos de la búsqueda automática' : '';
+}
+
+async function refreshSources() {
+  const data = await api(`/api/sources/${current.post.id}`);
+  current.sources = data.sources;
+  const i = posts.findIndex((p) => p.id === current.post.id);
+  if (i >= 0) posts[i] = { ...posts[i], ...pick(data.summary, ['mb', 'conflict', 'version', 'flagged']) };
+  renderSources();
+  renderList();
+}
+const pick = (o, keys) => Object.fromEntries(keys.map((k) => [k, o[k]]));
+
+async function sourceSearch(box, url) {
+  const msg = $('[data-msg]', box);
+  msg.textContent = 'Buscando…';
+  try { const { results } = await api(url); return results; }
+  catch (error) { msg.textContent = `Error: ${error.message}`; return null; }
+}
+
+function playerQuery(kind) {
+  const c = ctx(), m = meta();
+  const title = (c.subject === 'album' || !(c.song || m.song)) ? (c.album || bare(m.album)) : (c.song || m.song);
+  return [performer(), title, KEYWORD[c.version] ?? ''].filter(Boolean).join(' ');
+}
+
+function playerItem(kind, r, value) {
+  const want = norm(performer()), kw = KIND_RE[ctx().version];
+  const who = kind === 'youtube' ? r.channel : r.artist;
+  const badges = (want && norm(who ?? '').includes(want.replace(/^the /, '')) ? '<span class="hit">artista</span>' : '')
+    + (kw && kw.test(`${r.title} ${r.album ?? ''}`) ? `<span class="hit">${esc(VERSION_ES[ctx().version])}</span>` : '')
+    + (/karaoke|cover|tribute|tributo|originally performed|in the style of|8d|sped up|reaction/i.test(`${r.title} ${who}`) ? '<span class="miss">cover/karaoke?</span>' : '');
+  const id = kind === 'youtube' ? r.id : r.url;
+  const facts = kind === 'youtube' ? [r.channel, mmss(r.duration)] : [r.artist, r.album, r.year, mmss(r.seconds)];
+  return `<li${id === value ? ' aria-current="true"' : ''}><div><span class="r-title">${esc(r.title)}</span>${badges}<span class="r-meta">${esc(facts.filter(Boolean).join(' · '))}</span></div>
+    <div class="r-actions"><button class="button" type="button" data-listen="${esc(id)}">▶</button><button class="button" type="button" data-use="${esc(id)}">Usar</button></div><div class="r-preview"></div></li>`;
+}
+
+async function playerSearch(box) {
+  const kind = box.dataset.player, q = $('[data-q]', box).value.trim();
+  if (!q) return;
+  const url = kind === 'youtube' ? `/api/search/youtube?q=${encodeURIComponent(q)}`
+    : `/api/search/apple?entity=${$('[data-albums]', box).checked ? 'album' : 'song'}&q=${encodeURIComponent(q)}`;
+  const results = await sourceSearch(box, url);
+  if (!results) return;
+  $('[data-msg]', box).textContent = `${results.length} resultados`;
+  $('[data-results]', box).innerHTML = results.map((r) => playerItem(kind, r, $('input[name^="m."]', box).value.trim())).join('');
+}
+
+async function sourcesClick(e) {
+  const box = e.target.closest('[data-source], .player');
+  if (!box || !current) return false;
+  const action = e.target.closest('[data-action]')?.dataset.action;
+  const a = current.sources?.artist;
+  if (action === 'mb-artist-search') {
+    const results = await sourceSearch(box, `/api/search/mb-artist?q=${encodeURIComponent($('[data-q]', box).value)}`);
+    if (results) renderArtist(results);
+    return true;
+  }
+  if (action === 'mb-artist-none' || action === 'mb-artist-undo') {
+    await api('/api/musicbrainz/artist', { name: a.name, ...(action === 'mb-artist-none' ? { value: null } : {}) });
+    await refreshSources();
+    return true;
+  }
+  if (action === 'mb-record-search' || action === 'mb-album-search') {
+    const params = new URLSearchParams();
+    const album = $('[data-album]', box).value.trim();
+    if (action === 'mb-record-search') { params.set('q', $('[data-q]', box).value.trim()); if (album) params.set('album', album); }
+    else params.set('q', album || ctx().album || bare(meta().album));
+    if ($('[data-in-artist]', box).checked && a?.value) params.set('arid', JSON.stringify(a.value));
+    const results = await sourceSearch(box, `/api/search/${action === 'mb-record-search' ? 'mb-recording' : 'mb-release-group'}?${params}`);
+    if (results) renderRecord(results);
+    return true;
+  }
+  if (action === 'mb-record-none' || action === 'mb-record-undo') {
+    await api('/api/musicbrainz/record', { id: current.post.id, ...(action === 'mb-record-none' ? { candidate: null } : {}) });
+    await refreshSources();
+    return true;
+  }
+  if (action === 'player-search') { await playerSearch(box); return true; }
+  const chosen = e.target.closest('[data-pick]')?.dataset.pick;
+  if (chosen && box.dataset.source === 'artist') {
+    $('[data-msg]', box).textContent = 'Guardando…';
+    await api('/api/musicbrainz/artist', { name: a.name, value: chosen });
+    await refreshSources();
+    return true;
+  }
+  if (chosen && box.dataset.source === 'record') {
+    $('[data-msg]', box).textContent = 'Guardando (buscando ISRC y fecha del álbum)…';
+    const { isrcs, recording, release_group, key, title, album, type, secondary, date, disambiguation, length, artist } = recordList.find((c) => c.key === chosen);
+    await api('/api/musicbrainz/record', { id: current.post.id, candidate: { key, recording, release_group, isrcs, title, album, type, secondary, date, disambiguation, length, artist, manual: true } });
+    await refreshSources();
+    return true;
+  }
+  const listen = e.target.closest('[data-listen]')?.dataset.listen;
+  if (listen) {
+    const li = e.target.closest('li'), preview = $('.r-preview', li);
+    if (preview.firstChild) { preview.textContent = ''; return true; }
+    const iframe = document.createElement('iframe');
+    iframe.allow = 'autoplay; encrypted-media; clipboard-write';
+    if (box.dataset.player === 'youtube') { iframe.src = `https://www.youtube.com/embed/${listen}`; iframe.className = 'video'; }
+    else { iframe.src = listen; iframe.height = listen.includes('?i=') ? 175 : 450; }
+    preview.append(iframe);
+    return true;
+  }
+  const use = e.target.closest('[data-use]')?.dataset.use;
+  if (use) {
+    $('input[name^="m."]', box).value = use;
+    box.querySelectorAll('.results li').forEach((li) => li.toggleAttribute('aria-current', li.querySelector('[data-use]')?.dataset.use === use));
+    tryPlayer(box);
+    status();
+    return true;
+  }
+  return false;
+}
+
 // ---------- Text preview ----------
 let previewTimer = null;
 function preview() {
@@ -590,7 +919,11 @@ editorEl.addEventListener('change', (e) => {
   if (normalize && e.target.value.trim()) e.target.value = normalize(e.target.value.trim());
   status();
 });
-editorEl.addEventListener('click', (e) => {
+editorEl.addEventListener('click', async (e) => {
+  if (e.target.closest('[data-source] [data-action], [data-source] [data-pick], .player [data-action="player-search"], .player [data-listen], .player [data-use]')) {
+    await sourcesClick(e);
+    return;
+  }
   const toggle = e.target.closest('.block__toggle');
   if (toggle) { toggleBlock(toggle.closest('.block')); return; }
   const action = e.target.closest('[data-action]')?.dataset.action;
@@ -601,6 +934,11 @@ editorEl.addEventListener('click', (e) => {
   if (action === 'delete-comment') { e.target.closest('.comment').remove(); status(); }
 });
 document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !(e.metaKey || e.ctrlKey) && e.target.matches('[data-q], [data-album]')) {
+    e.preventDefault();
+    e.target.closest('.source__search').querySelector('[data-action]').click();
+    return;
+  }
   if (!(e.metaKey || e.ctrlKey)) return;
   if (e.key === 's') { e.preventDefault(); save(); }
   if (e.key === 'Enter') { e.preventDefault(); save({ next: true }); }

@@ -1,5 +1,7 @@
 // Local editor for data/posts.json (text, metadata, players and comments) in the browser.
 // Usage: npm run edit  ->  http://localhost:8082 (listens on 127.0.0.1 only)
+// The "Fuentes" block (scripts/edit-sources.mjs) shows what the post says it presents and its MusicBrainz
+// match, and searches MusicBrainz / YouTube / Apple Music without leaving the editor.
 // Each save validates the post (same rules as `npm run validate`) and rewrites posts.json
 // byte-identically; a post changed on disk since it was opened is not overwritten.
 import { createServer } from "node:http";
@@ -7,6 +9,7 @@ import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import MarkdownIt from "markdown-it";
 import { serializePosts, validatePost } from "../lib/validate-post.js";
+import { chooseArtist, chooseRecord, details, searchSource, summaries } from "./edit-sources.mjs";
 
 const PORT = Number(process.env.PORT) || 8082;
 const FILE = new URL("../data/posts.json", import.meta.url);
@@ -17,9 +20,10 @@ const load = () => JSON.parse(readFileSync(FILE, "utf8"));
 const hash = (post) => createHash("sha1").update(JSON.stringify(post)).digest("hex");
 const distinct = (values) => [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
 
-function summary(post) {
+function summary(post, extra = summaries([post])[post.id]) {
   const m = post.metadata;
   return {
+    ...extra,
     id: post.id, title: post.title, date: post.published_at.slice(0, 10), editor: post.editor.name,
     category: m.category, artist: m.artist ?? "",
     youtube: !!m.youtube_code, spotify: !!m.spotify_url, apple: !!m.apple_music_url, podcast: !!m.podcast_file,
@@ -56,8 +60,9 @@ createServer(async (req, res) => {
     if (req.method === "GET" && url.pathname === "/api/posts") {
       const { posts } = load();
       const editors = [...new Map(posts.map((p) => [p.editor.name, p.editor])).values()].sort((a, b) => a.name.localeCompare(b.name, "es"));
+      const extra = summaries(posts);
       return send(200, {
-        posts: posts.map(summary),
+        posts: posts.map((p) => summary(p, extra[p.id])),
         options: {
           categories: distinct(posts.map((p) => p.metadata.category)),
           genres: distinct(posts.map((p) => p.metadata.genre)),
@@ -70,7 +75,27 @@ createServer(async (req, res) => {
     const match = url.pathname.match(/^\/api\/posts\/([a-z0-9-]+)$/);
     if (match && req.method === "GET") {
       const post = load().posts.find((p) => p.id === match[1]);
-      return post ? send(200, { post, hash: hash(post) }) : send(404, { error: "No existe" });
+      return post ? send(200, { post, hash: hash(post), sources: details(post) }) : send(404, { error: "No existe" });
+    }
+
+    // Context, MusicBrainz match and player audit of a post (refreshed after a choice)
+    const sources = url.pathname.match(/^\/api\/sources\/([a-z0-9-]+)$/);
+    if (sources && req.method === "GET") {
+      const post = load().posts.find((p) => p.id === sources[1]);
+      return post ? send(200, { sources: details(post), summary: summary(post) }) : send(404, { error: "No existe" });
+    }
+    // Live searches: mb-artist, mb-recording, mb-release-group, youtube, apple
+    const searchMatch = url.pathname.match(/^\/api\/search\/([a-z-]+)$/);
+    if (searchMatch && req.method === "GET") return send(200, { results: await searchSource(searchMatch[1], url.searchParams) });
+    // MusicBrainz choices: saved at once to data/musicbrainz.json and the review decisions
+    if (req.method === "POST" && url.pathname === "/api/musicbrainz/artist") {
+      const { name, value } = await body(req);
+      chooseArtist(load().posts, name, value);
+      return send(200, {});
+    }
+    if (req.method === "POST" && url.pathname === "/api/musicbrainz/record") {
+      const { id, candidate } = await body(req);
+      return send(200, { value: await chooseRecord(id, candidate) });
     }
 
     if (match && req.method === "POST") {

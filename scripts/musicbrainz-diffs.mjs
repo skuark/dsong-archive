@@ -2,7 +2,7 @@
 // year vs the album's first release, and song/album titles that differ (typos, missing words).
 // Read-only. Usage: node scripts/musicbrainz-diffs.mjs [out.md]  (default musicbrainz-diffs.md)
 import { readFileSync, writeFileSync } from "node:fs";
-import { norm, readData, readJson } from "../lib/musicbrainz.js";
+import { bareTitle, norm, readData, readJson } from "../lib/musicbrainz.js";
 
 const out = process.argv[2] ?? "musicbrainz-diffs.md";
 const posts = JSON.parse(readFileSync(new URL("../data/posts.json", import.meta.url), "utf8")).posts;
@@ -21,7 +21,7 @@ for (const post of posts) {
   const mbYear = m.first_release?.slice(0, 4);
   if (year && mbYear && year !== mbYear) rows.year.push(`| ${link} | ${album ?? ""} | ${year} | ${mbYear} |`);
   if (song && c?.title && norm(c.title) !== norm(song)) rows.song.push(`| ${link} | ${song} | ${c.title} |`);
-  if (album && c?.album && norm(c.album) !== norm(album)) rows.album.push(`| ${link} | ${album} | ${c.album} |`);
+  if (album && c?.album && norm(c.album) !== norm(bareTitle(album))) rows.album.push(`| ${link} | ${album} | ${c.album} |`);
 }
 
 const md = [
