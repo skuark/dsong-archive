@@ -1560,6 +1560,19 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+/* Anniversaries: albums that came out on this day (below the posts, if any) */
+.on-this-day__subhead {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  margin: 1.25rem 0 .75rem;
+  text-transform: uppercase;
+}
+
+.on-this-day__list[hidden] + .on-this-day__subhead {
+  margin-top: 0;
+}
+
 /* Timeline: a black line with a dot per year */
 .on-this-day__list {
   border-left: 2px solid #000;
