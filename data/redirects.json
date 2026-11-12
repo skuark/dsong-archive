@@ -374,5 +374,9 @@
   {
     "from": "/archive/albums/faith-no-more-undefined.html",
     "to": "/archive/artists/faith-no-more.html"
+  },
+  {
+    "from": "/archive/2011-02-14-yellow-de-cold-play.html",
+    "to": "/archive/2011-02-14-strange-currencies-de-r-e-m.html"
   }
 ]
