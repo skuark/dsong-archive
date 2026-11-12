@@ -12,6 +12,7 @@ import { norm, readData, readJson, similar } from "../lib/musicbrainz.js";
 import { isVersion, kindsIn } from "../lib/versions.js";
 import { serializePosts } from "../lib/validate-post.js";
 import { report as reportFile } from "../lib/reports.js";
+import { effective, setPlayer } from "../lib/metadata.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
 const REPORT = reportFile("spotify-candidates.json");
@@ -25,9 +26,9 @@ if (process.argv.includes("--apply")) {
   for (const post of data.posts) {
     const r = results[post.id];
     const pick = post.id in decisions ? decisions[post.id] : r?.pick && ["auto", "ok"].includes(r.status) ? r.pick : null;
-    if (!pick || post.editorMetadata.spotify_url) continue;
+    if (!pick || effective(post).spotify_url) continue;
     if (!/^https:\/\/open\.spotify\.com\/embed\/(track|album)\/\w{22}$/.test(pick)) throw new Error(`Bad Spotify URL ${pick}`);
-    post.editorMetadata.spotify_url = pick;
+    setPlayer(post, "spotify_url", pick);
     applied++;
   }
   writeFileSync(POSTS, serializePosts(data));
@@ -92,11 +93,11 @@ function rank(item, { performer, title, kind, albumPost }, via) {
 
 const VERSION = { live: "live", acoustic: "acoustic", remix: "remix", demo: "demo", orchestral: "orchestral" };
 const limit = Number(process.argv.find((a) => a.startsWith("--limit="))?.split("=")[1]) || Infinity;
-const todo = data.posts.filter((p) => !p.editorMetadata.spotify_url && !p.editorMetadata.podcast_file && !results[p.id]).slice(0, limit);
+const todo = data.posts.filter((p) => !effective(p).spotify_url && !p.editorMetadata.podcast_file && !results[p.id]).slice(0, limit);
 console.log(`${todo.length} posts to search`);
 let n = 0;
 for (const post of todo) {
-  const m = post.editorMetadata, c = context[post.id] ?? {};
+  const m = effective(post), c = context[post.id] ?? {};
   const performer = c.performer ?? m.artist, song = c.song ?? m.song, album = c.album ?? m.album;
   const albumPost = c.subject === "album" || !song;
   const title = albumPost ? album : song;

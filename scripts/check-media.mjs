@@ -2,11 +2,12 @@
 // Usage: node scripts/check-media.mjs [report.json]
 import { writeFileSync } from "node:fs";
 import data from "../data/posts.json" with { type: "json" };
+import { effective } from "../lib/metadata.js";
 
 const CONCURRENCY = 3;
 const checks = [];
 for (const post of data.posts) {
-  const { youtube_code: youtube, spotify_url: spotify } = post.editorMetadata;
+  const { youtube_code: youtube, spotify_url: spotify } = effective(post);
   if (youtube) checks.push({ id: post.id, type: "youtube", value: youtube,
     url: `https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${youtube}`)}` });
   if (spotify) checks.push({ id: post.id, type: "spotify", value: spotify,

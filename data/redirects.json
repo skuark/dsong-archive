@@ -1090,5 +1090,17 @@
   {
     "from": "/archive/countries/trinidad-y-tobago.html",
     "to": "/archive/countries/estados-unidos.html"
+  },
+  {
+    "from": "/archive/albums/astor-piazzolla-piazzolla-en-suite.html",
+    "to": "/archive/albums/astor-piazzolla-henri-iv.html"
+  },
+  {
+    "from": "/archive/albums/florence-the-machine-between-two-lungs.html",
+    "to": "/archive/albums/florence-the-machine-you-ve-got-the-love.html"
+  },
+  {
+    "from": "/archive/albums/colin-mutchler-activefreedom.html",
+    "to": "/archive/artists/colin-mutchler.html"
   }
 ]

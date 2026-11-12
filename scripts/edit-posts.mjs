@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import MarkdownIt from "markdown-it";
 import { serializePosts, validatePost } from "../lib/validate-post.js";
 import { withMusicbrainz } from "../lib/musicbrainz.js";
+import { PLAYERS, effective } from "../lib/metadata.js";
 import { chooseArtist, chooseRecord, details, searchSource, summaries } from "./edit-sources.mjs";
 
 const PORT = Number(process.env.PORT) || 8082;
@@ -24,7 +25,7 @@ const hash = ({ musicbrainzMetadata, ...post }) => createHash("sha1").update(JSO
 const distinct = (values) => [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
 
 function summary(post, extra = summaries([post])[post.id]) {
-  const m = post.editorMetadata;
+  const m = effective(post);
   return {
     ...extra,
     id: post.id, title: post.title, date: post.published_at.slice(0, 10), editor: post.editor.name,
@@ -33,6 +34,30 @@ function summary(post, extra = summaries([post])[post.id]) {
     genre: !!m.genre, country: !!m.artist_nationality, song: !!m.song, comments: post.comments.length,
     reviewed: post.reviewed_at ?? "",
   };
+}
+
+// The editor shows (and edits) the players the post actually has: the editor's with the automatic changes
+// (playersMetadata) on top. On save, a player left as shown keeps the data as it was; one changed by hand
+// goes to editorMetadata and drops its automatic change (a human choice wins).
+const forEditor = (post) => ({ ...post, editorMetadata: effective(post) });
+function fromEditor(post, disk) {
+  const shown = effective(disk), editorMetadata = { ...post.editorMetadata }, auto = { ...disk.playersMetadata };
+  for (const field of PLAYERS) {
+    if ((editorMetadata[field] ?? null) === (shown[field] ?? null)) {
+      if (disk.editorMetadata[field] === undefined) delete editorMetadata[field]; else editorMetadata[field] = disk.editorMetadata[field];
+    } else delete auto[field];
+  }
+  // Same key order as on disk (new fields at the end).
+  const ordered = {};
+  for (const k of Object.keys(disk.editorMetadata)) if (k in editorMetadata) ordered[k] = editorMetadata[k];
+  Object.assign(ordered, editorMetadata);
+  const out = {};
+  for (const [k, v] of Object.entries({ ...post, editorMetadata: ordered })) {
+    if (k === "playersMetadata") continue;
+    out[k] = v;
+    if (k === "editorMetadata" && Object.keys(auto).length) out.playersMetadata = auto;
+  }
+  return out;
 }
 
 // Field values: trimmed; empty metadata fields are removed (the data has no empty keys)
@@ -78,7 +103,7 @@ createServer(async (req, res) => {
     const match = url.pathname.match(/^\/api\/posts\/([a-z0-9-]+)$/);
     if (match && req.method === "GET") {
       const post = load().posts.find((p) => p.id === match[1]);
-      return post ? send(200, { post, hash: hash(post), sources: details(post) }) : send(404, { error: "No existe" });
+      return post ? send(200, { post: forEditor(post), hash: hash(post), sources: details(post) }) : send(404, { error: "No existe" });
     }
 
     // Context, MusicBrainz match and player audit of a post (refreshed after a choice)
@@ -108,12 +133,12 @@ createServer(async (req, res) => {
       if (i < 0) return send(404, { error: "No existe" });
       if (hash(data.posts[i]) !== original) return send(409, { error: "El artículo ha cambiado en disco desde que lo abriste. Recárgalo antes de guardar." });
       if (edited.id !== match[1]) return send(400, { errors: ["El id no se puede cambiar (las URLs dependen de él)"] });
-      const post = clean(edited);
+      const post = fromEditor(clean(edited), data.posts[i]);
       const { errors, missing } = validatePost(post);
       if (errors.length) return send(400, { errors });
       data.posts[i] = withMusicbrainz(post, data.posts[i].musicbrainzMetadata);
       writeFileSync(FILE, serializePosts(data));
-      return send(200, { post, hash: hash(post), summary: summary(post), missing });
+      return send(200, { post: forEditor(post), hash: hash(post), summary: summary(post), missing });
     }
 
     if (req.method === "POST" && url.pathname === "/api/preview") {

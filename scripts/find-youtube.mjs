@@ -8,6 +8,7 @@ import { execFile } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { promisify } from "node:util";
 import { report as reportFile } from "../lib/reports.js";
+import { effective, setPlayer } from "../lib/metadata.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
 const apply = process.argv.includes("--apply");
@@ -26,8 +27,8 @@ if (apply) {
   for (const post of data.posts) {
     const r = results[post.id], d = decisions[post.id];
     const pick = d ? d.pick : r?.pick && ["auto", "ok"].includes(r.status) ? r.pick : null;
-    if (!pick || post.editorMetadata.youtube_code) continue;
-    post.editorMetadata.youtube_code = pick;
+    if (!pick || effective(post).youtube_code) continue;
+    setPlayer(post, "youtube_code", pick);
     applied++;
   }
   // Same serialization as the original file (see AGENTS.md).
@@ -112,7 +113,7 @@ if (process.argv.includes("--deep")) {
 
   let accepted = 0, done = 0;
   for (const id of pending) {
-    const r = results[id], m = byId[id].editorMetadata;
+    const r = results[id], m = effective(byId[id]);
     const { artist, song, album = "" } = m;
     const soundtrack = m.category === "Bandas Sonoras Originales" || /^(varios|desconocido)$/i.test(artist);
     let track = known(r.spotify) ?? known(r.itunes);
@@ -197,7 +198,7 @@ if (process.argv.includes("--clues")) {
   let done = 0;
   for (const id of pending) {
     const post = byId[id];
-    const { artist, song, spotify_url: spotify } = post.editorMetadata;
+    const { artist, song, spotify_url: spotify } = effective(post);
     // The post's context says whether it presents a live version; without it, any mention in the text.
     const liveMention = context[id] ? context[id].version === "live" : /en directo|concierto|en vivo|\blive\b/i.test(post.content);
 
@@ -357,7 +358,7 @@ if (process.argv.includes("--refine")) {
   process.exit(0);
 }
 
-const queue = data.posts.filter((p) => !p.editorMetadata.youtube_code && p.editorMetadata.artist && p.editorMetadata.song && !results[p.id]);
+const queue = data.posts.filter((p) => !effective(p).youtube_code && p.editorMetadata.artist && p.editorMetadata.song && !results[p.id]);
 const limit = Number(process.argv.find((a) => a.startsWith("--limit="))?.slice(8));
 if (limit) queue.splice(limit);
 const total = queue.length;

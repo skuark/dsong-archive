@@ -28,11 +28,18 @@ for (const facet of FACETS) {
     const earlier = redirects.find((r) => r.from === from);
     if (earlier && !(earlier.to.startsWith(`/archive/${facet}/`) && !nowPosts.has(earlier.to.split("/").pop()))) continue;
     const old = postsIn(join(dir, f));
-    let best = null, most = 0;
+    let best = null, most = 0, to = null;
     for (const [g, posts] of nowPosts) { const n = [...old].filter((id) => posts.has(id)).length; if (n > most) { best = g; most = n; } }
-    if (!best) { lost.push(from); continue; }
-    if (earlier) earlier.to = `/archive/${facet}/${best}`;
-    else redirects.push({ from, to: `/archive/${facet}/${best}` });
+    if (best) to = `/archive/${facet}/${best}`;
+    // An album whose posts no longer have an album: their artist's page.
+    else if (facet === "albums") {
+      const artists = readdirSync("_site/archive/artists").filter((g) => g.endsWith(".html") && !redirected.has(`/archive/artists/${g}`));
+      for (const g of artists) { const n = [...old].filter((id) => postsIn(join("_site/archive/artists", g)).has(id)).length; if (n > most) { best = g; most = n; } }
+      if (best) to = `/archive/artists/${best}`;
+    }
+    if (!to) { lost.push(from); continue; }
+    if (earlier) earlier.to = to;
+    else redirects.push({ from, to });
     added.push(`${from} -> ${best} (${most}/${old.size} posts)${earlier ? " (retargeted)" : ""}`);
   }
 }

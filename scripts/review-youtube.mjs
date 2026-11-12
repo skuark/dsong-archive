@@ -4,6 +4,7 @@
 import { createServer } from "node:http";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { report as reportFile } from "../lib/reports.js";
+import { effective } from "../lib/metadata.js";
 
 const PORT = 8081;
 const report = process.argv[2] ?? reportFile("youtube-candidates.json");
@@ -14,7 +15,7 @@ const decisions = read(DECISIONS);
 // Reference players for each post (same sources as post.njk), to compare against the candidates.
 const PODCAST = "https://dsongstatic.jesusmagamu.dev/mp3/podcast/";
 const posts = JSON.parse(readFileSync(new URL("../data/posts.json", import.meta.url), "utf8")).posts;
-const players = Object.fromEntries(posts.map(({ id, editorMetadata: m }) => [id, [
+const players = Object.fromEntries(posts.map((p) => [p.id, p]).map(([id, p, m = effective(p)]) => [id, [
   m.spotify_url && { label: "Spotify", type: "iframe", src: m.spotify_url, height: 80 },
   m.apple_music_url && { label: "Apple Music", type: "iframe", src: m.apple_music_url, height: m.apple_music_url.includes("?i=") ? 175 : 450 },
   m.podcast_file && { label: "Podcast", type: "audio", src: PODCAST + m.podcast_file },

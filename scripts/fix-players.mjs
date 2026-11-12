@@ -13,6 +13,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { promisify } from "node:util";
 import { serializePosts } from "../lib/validate-post.js";
 import { report as reportFile } from "../lib/reports.js";
+import { effective, setPlayer } from "../lib/metadata.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
 const read = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : null);
@@ -56,7 +57,7 @@ if (process.argv.includes("--candidates")) {
   console.log(`${todo.length} flagged players to find alternatives for`);
   let n = 0;
   for (const [key, g] of todo) {
-    const post = byId[g.id], m = post.editorMetadata, c = context[g.id] ?? {};
+    const post = byId[g.id], m = effective(post), c = context[g.id] ?? {};
     const performer = c.performer ?? m.artist ?? "", song = c.song ?? m.song ?? "", album = c.album ?? m.album ?? "";
     const kw = KEYWORD[c.version] ?? "";
     const album_post = c.subject === "album" || !song;
@@ -85,14 +86,14 @@ if (process.argv.includes("--apply")) {
   for (const d of decisions) {
     const post = byId[d.id], field = FIELD[d.player];
     if (!post || !field) throw new Error(`Bad decision ${JSON.stringify(d)}`);
-    const before = post.editorMetadata[field];
+    const before = effective(post)[field];
     if (d.action === "keep") { log.keep++; continue; }
-    if (d.action === "remove") { delete post.editorMetadata[field]; log.remove.push(`| ${d.id} | ${d.player} | \`${before}\` | ${d.reason ?? ""} |`); continue; }
+    if (d.action === "remove") { setPlayer(post, field, null); log.remove.push(`| ${d.id} | ${d.player} | \`${before}\` | ${d.reason ?? ""} |`); continue; }
     if (d.action !== "replace" || !d.pick) throw new Error(`Bad decision ${JSON.stringify(d)}`);
     if (d.player === "Spotify") throw new Error(`No Spotify search: can't replace ${d.id}`);
     if (d.player === "YouTube" && !/^[\w-]{11}$/.test(d.pick)) throw new Error(`Bad YouTube id ${d.pick}`);
     if (d.player === "Apple Music" && !/^https:\/\/embed\.music\.apple\.com\/es\/album\/\d+(\?i=\d+)?$/.test(d.pick)) throw new Error(`Bad Apple Music URL ${d.pick}`);
-    post.editorMetadata[field] = d.pick;
+    setPlayer(post, field, d.pick);
     log.replace.push(`| ${d.id} | ${d.player} | \`${before ?? ""}\` → \`${d.pick}\` | ${d.reason ?? ""} |`);
   }
   writeFileSync(POSTS, serializePosts(data));
