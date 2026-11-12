@@ -3,10 +3,11 @@
 // Decisions go to youtube-review.json (not the report, which find-youtube rewrites while it runs).
 import { createServer } from "node:http";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { report as reportFile } from "../lib/reports.js";
 
 const PORT = 8081;
-const report = process.argv[2] ?? "youtube-candidates.json";
-const DECISIONS = "youtube-review.json";
+const report = process.argv[2] ?? reportFile("youtube-candidates.json");
+const DECISIONS = reportFile("youtube-review.json");
 const html = new URL("./review-youtube.html", import.meta.url);
 const read = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : {});
 const decisions = read(DECISIONS);

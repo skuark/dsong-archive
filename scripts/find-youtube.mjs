@@ -7,10 +7,11 @@
 import { execFile } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { promisify } from "node:util";
+import { report as reportFile } from "../lib/reports.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
 const apply = process.argv.includes("--apply");
-const report = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? "youtube-candidates.json";
+const report = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? reportFile("youtube-candidates.json");
 const data = JSON.parse(readFileSync(POSTS, "utf8"));
 // What each post says it presents (data/post-context.json): a live version, a cover by someone else…
 const CONTEXT_FILE = new URL("../data/post-context.json", import.meta.url);
@@ -20,7 +21,7 @@ const save = () => writeFileSync(report, JSON.stringify(results, null, 2) + "\n"
 
 if (apply) {
   // Decisions from review-youtube.mjs win over the report ({ pick: null } = rejected).
-  const decisions = existsSync("youtube-review.json") ? JSON.parse(readFileSync("youtube-review.json", "utf8")) : {};
+  const decisions = existsSync(reportFile("youtube-review.json")) ? JSON.parse(readFileSync(reportFile("youtube-review.json"), "utf8")) : {};
   let applied = 0;
   for (const post of data.posts) {
     const r = results[post.id], d = decisions[post.id];
@@ -86,7 +87,7 @@ async function search(query, count = 5) {
 // a ±4 s match plus a similar title is enough; otherwise the usual score >= 5 with any artist variant.
 // New candidates are added to the entry either way, so manual review gets better options.
 if (process.argv.includes("--deep")) {
-  const decisions = existsSync("youtube-review.json") ? JSON.parse(readFileSync("youtube-review.json", "utf8")) : {};
+  const decisions = existsSync(reportFile("youtube-review.json")) ? JSON.parse(readFileSync(reportFile("youtube-review.json"), "utf8")) : {};
   const byId = Object.fromEntries(data.posts.map((p) => [p.id, p]));
   const pending = Object.keys(results).filter((id) => results[id].status === "review" && !decisions[id] && byId[id]);
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -163,7 +164,7 @@ if (process.argv.includes("--deep")) {
 //   2. the exact title + duration of the post's Spotify track (embed page, no API key), ±5 s;
 //   3. if the article talks about a live performance, rescore without penalizing live videos.
 if (process.argv.includes("--clues")) {
-  const decisions = existsSync("youtube-review.json") ? JSON.parse(readFileSync("youtube-review.json", "utf8")) : {};
+  const decisions = existsSync(reportFile("youtube-review.json")) ? JSON.parse(readFileSync(reportFile("youtube-review.json"), "utf8")) : {};
   const byId = Object.fromEntries(data.posts.map((p) => [p.id, p]));
   const pending = Object.keys(results).filter((id) => results[id].status === "review" && !decisions[id] && byId[id]);
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -245,7 +246,7 @@ if (process.argv.includes("--clues")) {
 // Search API, search YouTube again with that name, and accept a video whose title matches and whose
 // duration is within ±5 s of the studio track (rules out live versions, covers and edits).
 if (process.argv.includes("--itunes")) {
-  const decisions = existsSync("youtube-review.json") ? JSON.parse(readFileSync("youtube-review.json", "utf8")) : {};
+  const decisions = existsSync(reportFile("youtube-review.json")) ? JSON.parse(readFileSync(reportFile("youtube-review.json"), "utf8")) : {};
   const byId = Object.fromEntries(data.posts.map((p) => [p.id, p]));
   const pending = Object.keys(results).filter((id) => results[id].status === "review" && !decisions[id] && byId[id]);
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -302,7 +303,7 @@ if (process.argv.includes("--itunes")) {
 
 // --rescore: recompute scores of stored candidates for undecided "review" entries (no new searches).
 if (process.argv.includes("--rescore")) {
-  const decisions = existsSync("youtube-review.json") ? JSON.parse(readFileSync("youtube-review.json", "utf8")) : {};
+  const decisions = existsSync(reportFile("youtube-review.json")) ? JSON.parse(readFileSync(reportFile("youtube-review.json"), "utf8")) : {};
   const byId = Object.fromEntries(data.posts.map((p) => [p.id, p]));
   let promoted = 0;
   for (const [id, r] of Object.entries(results)) {
@@ -324,7 +325,7 @@ if (process.argv.includes("--rescore")) {
 // --refine: for "review" entries not yet decided by hand, look for an official art track
 // (a "<Artist> - Topic" channel: official audio over the cover) and accept it if title and artist match.
 if (process.argv.includes("--refine")) {
-  const decisions = existsSync("youtube-review.json") ? JSON.parse(readFileSync("youtube-review.json", "utf8")) : {};
+  const decisions = existsSync(reportFile("youtube-review.json")) ? JSON.parse(readFileSync(reportFile("youtube-review.json"), "utf8")) : {};
   const byId = Object.fromEntries(data.posts.map((p) => [p.id, p]));
   const pending = Object.keys(results).filter((id) => results[id].status === "review" && !decisions[id] && byId[id]);
   let accepted = 0, done = 0;

@@ -11,15 +11,16 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { get, mentions, norm, phrase, plain, readData, readJson, search, similar, writeData, arid as aridOf, sameMbid, bareTitle, filmTitle } from "../lib/musicbrainz.js";
 import { isVersion, KIND } from "../lib/versions.js";
+import { report as reportFile } from "../lib/reports.js";
 const VERSION = { test: isVersion };
 
-const DECISIONS = "musicbrainz-posts-review.json";
+const DECISIONS = reportFile("musicbrainz-posts-review.json");
 // Release group id -> first release date (lookups; recording dates are unreliable: songs get re-released).
-const GROUPS = "musicbrainz-release-groups.json";
+const GROUPS = reportFile("musicbrainz-release-groups.json");
 const groups = readJson(GROUPS);
 const apply = process.argv.includes("--apply");
 const limit = Number(process.argv.find((a) => a.startsWith("--limit="))?.slice(8)) || Infinity;
-const report = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? "musicbrainz-posts-candidates.json";
+const report = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? reportFile("musicbrainz-posts-candidates.json");
 const posts = JSON.parse(readFileSync(new URL("../data/posts.json", import.meta.url), "utf8")).posts;
 const data = readData();
 const results = readJson(report);

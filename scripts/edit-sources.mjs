@@ -7,11 +7,12 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { writeFileSync } from "node:fs";
 import { get, norm, phrase, readData, readJson, search, writeData } from "../lib/musicbrainz.js";
+import { report as reportFile } from "../lib/reports.js";
 
 const FILES = {
-  artists: "musicbrainz-candidates.json", artistDecisions: "musicbrainz-review.json",
-  posts: "musicbrainz-posts-candidates.json", postDecisions: "musicbrainz-posts-review.json",
-  groups: "musicbrainz-release-groups.json", audit: "players-audit.json",
+  artists: reportFile("musicbrainz-candidates.json"), artistDecisions: reportFile("musicbrainz-review.json"),
+  posts: reportFile("musicbrainz-posts-candidates.json"), postDecisions: reportFile("musicbrainz-posts-review.json"),
+  groups: reportFile("musicbrainz-release-groups.json"), audit: reportFile("players-audit.json"),
 };
 const CONTEXT = new URL("../data/post-context.json", import.meta.url);
 const run = promisify(execFile);

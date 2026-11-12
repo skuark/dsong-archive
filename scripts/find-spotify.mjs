@@ -11,15 +11,16 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { norm, readData, readJson, similar } from "../lib/musicbrainz.js";
 import { isVersion, kindsIn } from "../lib/versions.js";
 import { serializePosts } from "../lib/validate-post.js";
+import { report as reportFile } from "../lib/reports.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
-const REPORT = "spotify-candidates.json";
+const REPORT = reportFile("spotify-candidates.json");
 const data = JSON.parse(readFileSync(POSTS, "utf8"));
 const results = readJson(REPORT);
 const save = () => writeFileSync(REPORT, JSON.stringify(results, null, 2) + "\n");
 
 if (process.argv.includes("--apply")) {
-  const decisions = readJson("spotify-review.json");
+  const decisions = readJson(reportFile("spotify-review.json"));
   let applied = 0;
   for (const post of data.posts) {
     const r = results[post.id];

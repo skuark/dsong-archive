@@ -7,10 +7,11 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { norm } from "../lib/musicbrainz.js";
 import { kindsIn } from "../lib/versions.js";
+import { report as reportFile } from "../lib/reports.js";
 
 const cached = process.argv.includes("--cached");
-const out = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? "players-audit.md";
-const CACHE = "players-cache.json";
+const out = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? reportFile("players-audit.md");
+const CACHE = reportFile("players-cache.json");
 const read = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : {});
 const posts = JSON.parse(readFileSync(new URL("../data/posts.json", import.meta.url), "utf8")).posts;
 const context = read(new URL("../data/post-context.json", import.meta.url));

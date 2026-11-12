@@ -13,12 +13,13 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { ALPHA2, get, mentions, norm, phrase as q, plain, readData, readJson as read, search as mb, splitArtists, writeData, bareTitle, filmTitle } from "../lib/musicbrainz.js";
 import { countryOf } from "../lib/countries.js";
+import { report as reportFile } from "../lib/reports.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
-const DECISIONS = "musicbrainz-review.json";
+const DECISIONS = reportFile("musicbrainz-review.json");
 const apply = process.argv.includes("--apply");
 const limit = Number(process.argv.find((a) => a.startsWith("--limit="))?.slice(8)) || Infinity;
-const report = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? "musicbrainz-candidates.json";
+const report = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? reportFile("musicbrainz-candidates.json");
 const posts = JSON.parse(readFileSync(POSTS, "utf8")).posts;
 const results = read(report);
 const CONTEXT = read(new URL("../data/post-context.json", import.meta.url));

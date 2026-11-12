@@ -4,8 +4,9 @@
 // Usage: node scripts/musicbrainz-artists.mjs [--refresh]   (resumable: skips artists already fetched)
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { get, mbidsOf, readData } from "../lib/musicbrainz.js";
+import { report as reportFile } from "../lib/reports.js";
 
-const OUT = "musicbrainz-artists.json";
+const OUT = reportFile("musicbrainz-artists.json");
 const info = existsSync(OUT) && !process.argv.includes("--refresh") ? JSON.parse(readFileSync(OUT, "utf8")) : {};
 const save = () => writeFileSync(OUT, JSON.stringify(info, null, 2) + "\n");
 const ids = [...new Set(Object.values(readData().artists).flatMap(mbidsOf))].filter((id) => !info[id]);

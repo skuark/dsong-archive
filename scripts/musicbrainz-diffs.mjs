@@ -6,12 +6,13 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { ALPHA2, bareTitle, filmTitle, norm, readData, readJson } from "../lib/musicbrainz.js";
 import { COUNTRIES, countryOf } from "../lib/countries.js";
+import { report as reportFile } from "../lib/reports.js";
 
-const out = process.argv[2] ?? "musicbrainz-diffs.md";
+const out = process.argv[2] ?? reportFile("musicbrainz-diffs.md");
 const posts = JSON.parse(readFileSync(new URL("../data/posts.json", import.meta.url), "utf8")).posts;
 const { posts: matched, artists: linked } = readData();
-const report = readJson("musicbrainz-posts-candidates.json");
-const decisions = readJson("musicbrainz-posts-review.json");
+const report = readJson(reportFile("musicbrainz-posts-candidates.json"));
+const decisions = readJson(reportFile("musicbrainz-posts-review.json"));
 
 const rows = { year: [], song: [], album: [] };
 for (const post of posts) {
@@ -28,7 +29,7 @@ for (const post of posts) {
 }
 
 // ---------- Artists ----------
-const info = readJson("musicbrainz-artists.json");
+const info = readJson(reportFile("musicbrainz-artists.json"));
 const artistRows = { name: [], country: [], countryMissing: [], url: [], urlMissing: [], genre: [] };
 const NAME_OF = Object.fromEntries(Object.entries(ALPHA2).map(([code, a2]) => [a2, COUNTRIES[code] ?? a2]));
 const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };

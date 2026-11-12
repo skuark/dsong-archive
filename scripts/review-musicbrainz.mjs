@@ -4,11 +4,12 @@
 // musicbrainz-posts-review.json ({ pick } or { pick: null }); they win on each script's --apply.
 import { createServer } from "node:http";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { report as reportFile } from "../lib/reports.js";
 
 const PORT = 8083;
 const FILES = {
-  artists: { report: "musicbrainz-candidates.json", decisions: "musicbrainz-review.json", field: "mbid" },
-  posts: { report: "musicbrainz-posts-candidates.json", decisions: "musicbrainz-posts-review.json", field: "pick" },
+  artists: { report: reportFile("musicbrainz-candidates.json"), decisions: reportFile("musicbrainz-review.json"), field: "mbid" },
+  posts: { report: reportFile("musicbrainz-posts-candidates.json"), decisions: reportFile("musicbrainz-posts-review.json"), field: "pick" },
 };
 const html = new URL("./review-musicbrainz.html", import.meta.url);
 const read = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : {});

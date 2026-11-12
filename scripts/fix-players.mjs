@@ -12,6 +12,7 @@ import { execFile } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { promisify } from "node:util";
 import { serializePosts } from "../lib/validate-post.js";
+import { report as reportFile } from "../lib/reports.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
 const read = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : null);
@@ -22,9 +23,9 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const FIELD = { YouTube: "youtube_code", Spotify: "spotify_url", "Apple Music": "apple_music_url" };
 
 if (process.argv.includes("--candidates")) {
-  const issues = read("players-audit.json");
+  const issues = read(reportFile("players-audit.json"));
   if (!issues) throw new Error("Run `npm run audit-players` first (players-audit.json)");
-  const OUT = "players-fix-candidates.json";
+  const OUT = reportFile("players-fix-candidates.json");
   const out = read(OUT) ?? {};
   const run = promisify(execFile);
   // Words that steer the search to the version the post presents.
@@ -78,7 +79,7 @@ if (process.argv.includes("--candidates")) {
 }
 
 if (process.argv.includes("--apply")) {
-  const decisions = read("players-fix-decisions.json");
+  const decisions = read(reportFile("players-fix-decisions.json"));
   if (!decisions) throw new Error("No players-fix-decisions.json");
   const log = { replace: [], remove: [], keep: 0 };
   for (const d of decisions) {
@@ -98,7 +99,7 @@ if (process.argv.includes("--apply")) {
   const md = [`# Player fixes`, ``, `${log.replace.length} replaced, ${log.remove.length} removed, ${log.keep} kept.`, ``,
     `## Replaced`, ``, `| Post | Player | Change | Why |`, `|---|---|---|---|`, ...log.replace, ``,
     `## Removed`, ``, `| Post | Player | Was | Why |`, `|---|---|---|---|`, ...log.remove, ``].join("\n");
-  writeFileSync("players-fix-log.md", md);
+  writeFileSync(reportFile("players-fix-log.md"), md);
   console.log(`${log.replace.length} replaced, ${log.remove.length} removed, ${log.keep} kept -> players-fix-log.md`);
   process.exit(0);
 }
