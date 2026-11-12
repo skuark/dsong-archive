@@ -941,9 +941,10 @@ button.chip {
   width: 22px;
 }
 
+/* Told milestones: paper like the rest, a yellow band on the left (yellow stays a highlight) */
 .history__item--contado {
-  background: var(--accent);
-  box-shadow: var(--shadow);
+  box-shadow: inset 10px 0 0 var(--accent), var(--shadow);
+  padding-left: 1.875rem;
 }
 
 .history__item--contado::before {
@@ -2301,6 +2302,24 @@ button.chip {
 
 .players__panel {
   line-height: 0;
+}
+
+/* Spotify and Apple Music draw rounded cards: a margin of paper around them, so the corners sit inside the
+   square frame on purpose */
+.players__panel--spotify,
+.players__panel--apple-music {
+  background: var(--paper);
+  padding: .625rem;
+}
+
+/* A single player: its tab is a plain label, not a big yellow button */
+.players__tab:only-child {
+  background: var(--paper);
+  cursor: default;
+  flex: none;
+  min-height: 36px;
+  padding: 0 .875rem;
+  text-align: left;
 }
 
 .players__panel audio {
