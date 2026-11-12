@@ -167,6 +167,7 @@
           <option value="mbRecord">MusicBrainz: canción/álbum por revisar</option>
           <option value="mbNone">MusicBrainz: no está (artista o canción/álbum)</option>
           <option value="mbLinked">MusicBrainz: enlazados</option>
+          <option value="mbNoDate">MusicBrainz: enlazado sin fecha</option>
           <option value="conflict">Texto ≠ metadatos</option>
           <option value="version">El texto presenta otra versión (directo, cover…)</option>
           <option value="flagged">Reproductor dudoso (auditoría)</option>
@@ -383,6 +384,7 @@ const FILTERS = {
   mbRecord: (p) => p.mb?.record === 'review',
   mbNone: (p) => ['none', 'noartist', 'notfound', 'nomatch'].includes(p.mb?.record) || ['none', 'notfound', 'nomatch'].includes(p.mb?.artist),
   mbLinked: (p) => p.mb?.artist === 'ok' && p.mb?.record === 'ok',
+  mbNoDate: (p) => p.noDate,
   conflict: (p) => p.conflict,
   version: (p) => !!p.version,
   flagged: (p) => p.flagged,

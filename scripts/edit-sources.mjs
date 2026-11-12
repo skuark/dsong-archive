@@ -41,7 +41,9 @@ export function summaries(posts) {
   const flagged = new Set(Array.isArray(s.audit) ? s.audit.map((i) => i.id) : []);
   return Object.fromEntries(posts.map((post) => {
     const c = s.context[post.id] ?? {};
-    return [post.id, { mb: status(post, s), conflict: !!c.metadata_conflict, version: c.version && c.version !== "original" ? c.version : "", flagged: flagged.has(post.id) }];
+    return [post.id, { mb: status(post, s), conflict: !!c.metadata_conflict, version: c.version && c.version !== "original" ? c.version : "", flagged: flagged.has(post.id),
+      // matched in MusicBrainz but without a first_release (no album, or an album without a date: likely a wrong match)
+      noDate: !!(post.musicbrainzMetadata?.recording || post.musicbrainzMetadata?.release_group) && !post.musicbrainzMetadata?.first_release }];
   }));
 }
 
