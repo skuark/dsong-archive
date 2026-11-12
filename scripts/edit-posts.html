@@ -37,9 +37,12 @@
   .editor__status { font-size: .8rem; }
   .editor__status--dirty { color: var(--error); font-weight: 700; }
   .editor__status--ok { color: var(--ok); }
-  /* The whole viewport: blocks side by side in two columns when there's room; text and comments full width */
-  .editor__body { align-items: start; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 38rem), 1fr)); padding: 1.25rem; }
-  .editor__body > .errors, .editor__body > .context, .editor__body > [data-block="text"], .editor__body > [data-block="comments"] { grid-column: 1 / -1; }
+  /* The whole viewport: data and players on the left, MusicBrainz on the right, each column as tall as its own
+     blocks (no gaps); text and comments below at full width. One column on narrow screens. */
+  .editor__body { display: grid; gap: 1.5rem; padding: 1.25rem; }
+  .editor__cols { align-items: start; display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .editor__col { display: grid; gap: 1.5rem; min-width: 0; }
+  @media (max-width: 90rem) { .editor__cols { grid-template-columns: minmax(0, 1fr); } }
   /* What the site shows when it isn't the editor's value (MusicBrainz, yt-dlp…), and hidden players */
   .site { background: var(--soft); border-left: 3px solid var(--muted); display: block; font-size: .75rem; overflow-wrap: anywhere; padding: .2rem .4rem; }
   .site--other { border-left-color: var(--accent); background: #ffffe0; }
@@ -184,6 +187,8 @@
     <ul class="errors" data-errors hidden></ul>
     <div class="context" data-context></div>
 
+    <div class="editor__cols">
+      <div class="editor__col">
     <fieldset class="block" data-block="general">
       <legend><button class="block__toggle" type="button" aria-expanded="false">General</button></legend>
       <div class="block__body">
@@ -197,7 +202,6 @@
       </div>
       </div>
     </fieldset>
-
     <fieldset class="block" data-block="music">
       <legend><button class="block__toggle" type="button" aria-expanded="false">Música</button></legend>
       <div class="block__body">
@@ -212,40 +216,6 @@
       </div>
       </div>
     </fieldset>
-
-    <fieldset class="block" data-block="musicbrainz">
-      <legend><button class="block__toggle" type="button" aria-expanded="false" data-mb-title>MusicBrainz</button></legend>
-      <div class="block__body">
-        <div class="source" data-source="artist">
-          <h3>Artista</h3>
-          <div class="source__current" data-current></div>
-          <div class="source__search">
-            <input type="search" data-q placeholder="Nombre del artista">
-            <button class="button" type="button" data-action="mb-artist-search">Buscar en MusicBrainz</button>
-            <button class="button button--danger" type="button" data-action="mb-artist-none">No está en MusicBrainz</button>
-            <button class="button" type="button" data-action="mb-artist-undo" hidden>Deshacer decisión</button>
-          </div>
-          <p class="msg" data-msg></p>
-          <ul class="results" data-results></ul>
-        </div>
-        <div class="source" data-source="record">
-          <h3>Canción / álbum</h3>
-          <div class="source__current" data-current></div>
-          <div class="source__search">
-            <input type="search" data-q placeholder="Canción">
-            <input type="search" data-album placeholder="Álbum (opcional)">
-            <label><input type="checkbox" data-in-artist checked> Solo de este artista</label>
-            <button class="button" type="button" data-action="mb-record-search">Buscar canción</button>
-            <button class="button" type="button" data-action="mb-album-search">Buscar álbum</button>
-            <button class="button button--danger" type="button" data-action="mb-record-none">Sin coincidencia</button>
-            <button class="button" type="button" data-action="mb-record-undo" hidden>Deshacer decisión</button>
-          </div>
-          <p class="msg" data-msg></p>
-          <ul class="results" data-results></ul>
-        </div>
-      </div>
-    </fieldset>
-
     <fieldset class="block" data-block="players">
       <legend><button class="block__toggle" type="button" aria-expanded="false">Reproductores</button></legend>
       <div class="block__body">
@@ -287,7 +257,6 @@
       <div class="grid" data-extra></div>
       </div>
     </fieldset>
-
     <fieldset class="block" data-block="podcast">
       <legend><button class="block__toggle" type="button" aria-expanded="false">Podcast UniRadio</button></legend>
       <div class="block__body">
@@ -303,6 +272,42 @@
       </div>
       </div>
     </fieldset>
+      </div>
+      <div class="editor__col">
+    <fieldset class="block" data-block="musicbrainz">
+      <legend><button class="block__toggle" type="button" aria-expanded="false" data-mb-title>MusicBrainz</button></legend>
+      <div class="block__body">
+        <div class="source" data-source="artist">
+          <h3>Artista</h3>
+          <div class="source__current" data-current></div>
+          <div class="source__search">
+            <input type="search" data-q placeholder="Nombre del artista">
+            <button class="button" type="button" data-action="mb-artist-search">Buscar en MusicBrainz</button>
+            <button class="button button--danger" type="button" data-action="mb-artist-none">No está en MusicBrainz</button>
+            <button class="button" type="button" data-action="mb-artist-undo" hidden>Deshacer decisión</button>
+          </div>
+          <p class="msg" data-msg></p>
+          <ul class="results" data-results></ul>
+        </div>
+        <div class="source" data-source="record">
+          <h3>Canción / álbum</h3>
+          <div class="source__current" data-current></div>
+          <div class="source__search">
+            <input type="search" data-q placeholder="Canción">
+            <input type="search" data-album placeholder="Álbum (opcional)">
+            <label><input type="checkbox" data-in-artist checked> Solo de este artista</label>
+            <button class="button" type="button" data-action="mb-record-search">Buscar canción</button>
+            <button class="button" type="button" data-action="mb-album-search">Buscar álbum</button>
+            <button class="button button--danger" type="button" data-action="mb-record-none">Sin coincidencia</button>
+            <button class="button" type="button" data-action="mb-record-undo" hidden>Deshacer decisión</button>
+          </div>
+          <p class="msg" data-msg></p>
+          <ul class="results" data-results></ul>
+        </div>
+      </div>
+    </fieldset>
+      </div>
+    </div>
 
     <fieldset class="block" data-block="text">
       <legend><button class="block__toggle" type="button" aria-expanded="false">Texto</button></legend>
@@ -386,7 +391,7 @@ function renderList() {
     const meta = document.createElement('span');
     meta.className = 'list__meta';
     meta.textContent = `${p.date} · ${p.editor}${p.artist ? ' · ' + p.artist : ''}`;
-    for (const [has, label] of [[p.youtube, 'YT'], [p.spotify, 'SP'], [p.apple, 'AM']]) {
+    for (const [has, label] of [[p.youtube, 'YT'], [p.spotify, 'SP']]) {
       if (has) continue;
       const badge = document.createElement('span');
       badge.className = 'badge';
