@@ -69,12 +69,42 @@
     "Anouk": "5e8da504-c75b-4bf5-9dfc-119057c1a9c0",
     "Antílopez": "6a5b1dfb-8c80-45a6-adc7-dae1f166aba2",
     "Antoine": "ad8df21c-8d06-409c-9b3c-17a7b03ec218",
+    "Antonio Carlos Jobim & Elis Regina": [
+      {
+        "name": "Antonio Carlos Jobim",
+        "mbid": "7a8dbe84-f4c0-4457-bfa3-edced1f8cde0"
+      },
+      {
+        "name": "Elis Regina",
+        "mbid": "e9e85a54-074c-4d29-a886-bcaaa9d44f9f"
+      }
+    ],
     "Antonio Flores": "1884beb9-9e38-414e-94f9-cece1e93dcfd",
+    "Antonio Orozco y Arcángel": [
+      {
+        "name": "Antonio Orozco",
+        "mbid": "a6909831-bb84-4ed8-ab5e-df6cab95abb7"
+      },
+      {
+        "name": "Arcángel",
+        "mbid": "47e7833f-f1a7-4703-942d-9acf12f39a1d"
+      }
+    ],
     "Antonio Vega": "02a5c8da-cb9c-498a-8ec9-98bf7da4232d",
     "Antony & the Johnsons": "90cc2464-234e-4da0-b39b-576f36e633bc",
     "Apache": "868c8056-c6b0-4cbe-a8aa-b7b55cc79065",
     "Apollo 440": "1ff10dff-7ac7-4e53-bc02-d5c3cbd8448b",
     "Ara Malikian": "50d60dda-b9c3-46e3-8b75-cd5e7ea20f1c",
+    "Ara Malikian y Fernando Egozcue": [
+      {
+        "name": "Ara Malikian",
+        "mbid": "50d60dda-b9c3-46e3-8b75-cd5e7ea20f1c"
+      },
+      {
+        "name": "Fernando Egozcue",
+        "mbid": "a2914c58-63a9-44e5-8aca-4b9d85d3da39"
+      }
+    ],
     "Arcade Fire": "52074ba6-e495-4ef3-9bb4-0703888a9f68",
     "Arctic Monkeys": "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a",
     "Aretha Franklin": "2f9ecbed-27be-40e6-abca-6de49d50299e",
@@ -133,6 +163,16 @@
     "Birdy": "1b8bdee5-783a-4eca-88e5-3e9460739546",
     "Bishop Allen": "1043a3a9-6722-4cdb-a28a-6acbad217b38",
     "Björk": "87c5dedd-371d-4a53-9f7f-80522fb7f3cb",
+    "Björk Guðmundsdóttir & Tríó Guðmundar Ingólfssonar": [
+      {
+        "name": "Björk Guðmundsdóttir",
+        "mbid": "87c5dedd-371d-4a53-9f7f-80522fb7f3cb"
+      },
+      {
+        "name": "Tríó Guðmundar Ingólfssonar",
+        "mbid": "86e985e5-b755-4b93-86f2-f4f9aaaaebca"
+      }
+    ],
     "Black Rebel Motorcycle Club": "32b90c92-9978-4a07-90eb-caa4b22f4907",
     "Black Sabbath": "5182c1d9-c7d2-4dad-afa0-ccfeada921a8",
     "Bloc Party": "8c538f11-c141-4588-8ecb-931083524186",
@@ -337,6 +377,16 @@
     "Ennio Morricone": "a16e47f5-aa54-47fe-87e4-bb8af91a9fdd",
     "Enrique Bunbury": "9047fd95-770f-4a8a-a6e3-3b071a882e4d",
     "Enrique Morente": "779f54f8-732b-49b9-8fd8-2e9538a272ea",
+    "Enrique Morente y Lagartija Nick": [
+      {
+        "name": "Enrique Morente",
+        "mbid": "779f54f8-732b-49b9-8fd8-2e9538a272ea"
+      },
+      {
+        "name": "Lagartija Nick",
+        "mbid": "e635846c-fcab-479f-8740-8cfdb19938ba"
+      }
+    ],
     "Enya": "4967c0a1-b9f3-465e-8440-4598fd9fc33c",
     "Eskorzo Afrobeat Experience": "3f433a61-3f83-4a35-85be-df2c6ffc9a33",
     "Espaldamaceta": "b591024e-e9fe-4cb3-b58f-72589b705360",
@@ -364,6 +414,16 @@
     "Fernándo Esteso": "8cfc6f4b-6cca-4d55-ad35-b7d09bc0e130",
     "Fernando Velázquez": "4d529a14-0c10-4310-b0c3-e54ae7e8c3d6",
     "Fetén Fetén": "ada059f0-462a-49b8-a8ac-7ef440cfdffb",
+    "Finley Quaye y Beth Orton": [
+      {
+        "name": "Finley Quaye",
+        "mbid": "e6fbff56-aee6-4f80-8f6f-d8c345694074"
+      },
+      {
+        "name": "Beth Orton",
+        "mbid": "214d84a5-e9e5-4432-af95-8c84da7ba4c0"
+      }
+    ],
     "Fitz and The Tantrums": "8560d4e8-05e2-4c20-980b-ad2db445dd5d",
     "Five For Fighting": "23eeaeaf-423d-4859-8c91-2175ece74287",
     "Fleet Foxes": "fa97dd36-1b82-43d7-a6e4-2adeafd59cef",
@@ -384,6 +444,16 @@
     "Fran Fernandez": "9b4b7fe4-891b-4d71-a439-a18d2ecf3607",
     "France Gall": "385966f0-b912-4755-bad6-4780ebf3f4cd",
     "Francisco Nixon": "a493bb8c-5a6d-44c9-90e4-886e7063dd76",
+    "Francisco Nixon & Ricardo Vicente": [
+      {
+        "name": "Francisco Nixon",
+        "mbid": "a493bb8c-5a6d-44c9-90e4-886e7063dd76"
+      },
+      {
+        "name": "Ricardo Vicente",
+        "mbid": "5f67548b-f38a-485c-ab40-9005cf6238db"
+      }
+    ],
     "Francisco Tárrega": "59bdd84b-28dd-4aef-bb5b-2e2c98997b10",
     "Frank Sinatra": "197450cd-0124-4164-b723-3c22dd16494d",
     "Franz Ferdinand": "aa7a2827-f74b-473c-bd79-03d065835cf7",
@@ -393,6 +463,16 @@
     "Fundacion Tony Manero": "9ad449dc-cc7f-43d1-9f6d-e1eb3a24600b",
     "Funkadelic": "cf042013-3edd-46c4-9b0e-a62faac98d0b",
     "Garbage": "f9ef7a22-4262-4596-a2a8-1d19345b8e50",
+    "Gary Jules & Michael Andrews": [
+      {
+        "name": "Gary Jules",
+        "mbid": "3d65bead-6eae-4012-8665-d5f593ea4a62"
+      },
+      {
+        "name": "Michael Andrews",
+        "mbid": "ee6e8790-7123-40ab-b7e9-03c4fe6aa08f"
+      }
+    ],
     "Gary Moore": "a8806b5c-3ee0-4277-94d3-1a5427a7707c",
     "Gavin DeGraw": "3f2a12e9-6398-42fd-b257-2f6abd4aa5fc",
     "Genesis": "8e3fcd7d-bda1-4ca0-b987-b8528d2ee74e",
@@ -526,6 +606,16 @@
     "John Maus": "c6be66af-28b4-4b87-a8ba-3f46ec6fe986",
     "John Mayall": "18c1e06b-fe76-4802-b070-53a2f6b707bd",
     "John Mayer": "144ef525-85e9-40c3-8335-02c32d0861f3",
+    "John Petrucci & Jordan Rudess": [
+      {
+        "name": "John Petrucci",
+        "mbid": "556e6577-24b9-49df-944b-242c9c32bf08"
+      },
+      {
+        "name": "Jordan Rudess",
+        "mbid": "e1fae725-6396-4ea7-a047-03ef4d4502a1"
+      }
+    ],
     "John Williams": "8b8a38a9-a290-4560-84f6-3d4466e8d791",
     "Johnny Cash": "d43d12a1-2dc9-4257-a2fd-0a3bb1081b86",
     "Jónsi": "af00f655-402f-4d80-bb83-de525cde7a8d",
@@ -845,6 +935,16 @@
     "Perfume Genius": "c4ff10e0-ae5a-467d-a409-6e0b4bf241eb",
     "Perla Batalla": "3dbe74c1-a0e4-4345-99e7-8a5a9f1d3609",
     "Perry Como": "0182474b-8a1d-46d0-9d0f-e6df353335ea",
+    "Pete Doherty y Wolfman": [
+      {
+        "name": "Pete Doherty",
+        "mbid": "94f6def3-dbfe-403b-bb40-d324c8c13fbb"
+      },
+      {
+        "name": "Wolfman",
+        "mbid": "fdd356c9-e4d3-4c6d-993c-7ae261c3e575"
+      }
+    ],
     "Peter Bjorn and John": "32a83250-7e26-422d-b9ac-f4564343e9ce",
     "Phantogram": "dfe78af2-779e-4137-826a-3073a16e3278",
     "Pharrell Williams": "149f91ef-1287-46da-9a8e-87fee02f1471",
@@ -872,6 +972,16 @@
     "Primal Scream": "55704c38-224f-4b75-b29f-d43653f8bc9a",
     "Primary 1": "95fb8a11-e195-4249-9b80-1fa813c6707c",
     "Priscilla Ahn": "d4d3c818-005f-43bd-b0f8-89e74dfe4dca",
+    "Puff Daddy feat. Jimmy Page": [
+      {
+        "name": "Puff Daddy",
+        "mbid": "cabb4fcf-4067-4ba5-908d-76ee66fcf0c6"
+      },
+      {
+        "name": "Jimmy Page",
+        "mbid": "519774a4-3b18-4042-b8c0-927845a616c9"
+      }
+    ],
     "Pulp": "76b2e842-5e85-4c97-ab62-d5bc315595b5",
     "QOTSA": "7dc8f5bd-9d0b-4087-9f73-dc164950bbd8",
     "Queen": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
@@ -956,6 +1066,16 @@
     "Shania Twain": "faabb55d-3c9e-4c23-8779-732ac2ee2c0d",
     "Sharon Jones & the Dap Kings": "8d50cd20-34f2-4abe-ba16-0759ee0fb9f5",
     "Shinedown": "adc0f033-95c2-4e0b-87bc-c23ed3f26ce6",
+    "Shira Kammen y Cheryl Ann Fulton": [
+      {
+        "name": "Shira Kammen",
+        "mbid": "3736f006-1607-42e1-ba50-47c5090d68d0"
+      },
+      {
+        "name": "Cheryl Ann Fulton",
+        "mbid": "b0feb86b-e88d-4195-acaa-275ee9967085"
+      }
+    ],
     "Shout Out Louds": "25a757f1-9fbe-4c52-be2e-1a5294fb25b9",
     "Shuggie Otis": "ff9542ca-7859-4db2-8796-c1e3c39b9c0a",
     "Sia": "2f548675-008d-4332-876c-108b0c7ab9c5",
@@ -1064,6 +1184,16 @@
     "The Charlatans": "8434409e-baa9-4e12-b4aa-566a91c7d7cf",
     "The Christians": "4268556a-5e11-4b31-85be-abd5aaeec6f0",
     "The Cinematic Orchestra": "7c158ea8-c0aa-410e-bdc1-20bba9759577",
+    "The Cinematic Orchestra/London Metropolitan Orchestra": [
+      {
+        "name": "The Cinematic Orchestra",
+        "mbid": "7c158ea8-c0aa-410e-bdc1-20bba9759577"
+      },
+      {
+        "name": "London Metropolitan Orchestra",
+        "mbid": "85a04682-f056-43e7-af33-848b18391514"
+      }
+    ],
     "The Clash": "8f92558c-2baa-4758-8c38-615519e9deda",
     "The Corrs": "acf6c776-d0f6-4239-b5a2-a45a613ffa52",
     "The Cranberries": "c98d40fd-f6cf-4b26-883e-eaa515ee2851",
@@ -1176,6 +1306,16 @@
     "Transvision Vamp": "968f61f8-c6e1-400a-95cb-114c9d67dd8e",
     "Travis": "22a40b75-affc-4e69-8884-266d087e4751",
     "Trentemøller": "95e9aba6-f85c-48a0-9ec9-395d4f0e3875",
+    "Trevor Jones & Randy Edelman": [
+      {
+        "name": "Trevor Jones",
+        "mbid": "961f31f2-31bf-4469-bc66-f6a2fda12db5"
+      },
+      {
+        "name": "Randy Edelman",
+        "mbid": "7cbdfc61-30a9-4f17-b2fc-dcae3757adba"
+      }
+    ],
     "Triana": "035813fb-7e1b-4a32-a066-ca280a5a425c",
     "Trio": "b013686b-0fa5-4e88-a5bc-f941efc7855a",
     "TV on the radio": "eb872766-98f6-453d-883f-2ae908a18315",
@@ -1235,6 +1375,16 @@
     "Yodelice": "c250041c-a4d5-49f9-8400-c9575721b2dc",
     "Yoko Ono": "b0b33754-a664-43b7-ba00-be0dc4ec2396",
     "Youn Sun Nah": "79de65f4-4f6e-4118-9f1d-87787d15d247",
+    "Youssou N'Dour & Neneh Cherry": [
+      {
+        "name": "Youssou N'Dour",
+        "mbid": "af081ea2-7a2c-4fbd-8200-92d62056b5f5"
+      },
+      {
+        "name": "Neneh Cherry",
+        "mbid": "527c65d1-9fdb-4482-8796-dde2980bd63a"
+      }
+    ],
     "YUI": "80d1d7e0-fdab-4009-8375-54bd63d74c0e",
     "Zahara": "fe4cc36c-cfc5-45d1-90f9-d61ebf40559f",
     "Zaz": "e3214827-bd09-4d53-a88c-893d61556352",
@@ -1667,6 +1817,11 @@
       "release_group": "0a4bcdfd-3eb1-4d5e-aa5a-266423bd54e8",
       "first_release": "2003-10-14"
     },
+    "2009-07-30-viejos-aires-de-ara-malikian-y-fernando-egozcue": {
+      "recording": "2ae7aebf-4330-47a9-b743-972796ab9d9c",
+      "release_group": "7984a811-a0a4-4cfa-8e9b-105144ae5c5d",
+      "first_release": "2007"
+    },
     "2009-09-01-chicago-de-sufjan-stevens": {
       "recording": "5efb8ca9-6f8a-4140-9713-13398178cb4d",
       "release_group": "1fb75447-c513-38c4-ad8f-1bfc441aa74c",
@@ -1675,6 +1830,14 @@
         "USLS50686508"
       ],
       "first_release": "2005-07-04"
+    },
+    "2009-09-02-7-seconds-de-youssou-ndour-y-neneh-cherry": {
+      "recording": "ecf4b42b-1aec-4a3c-a935-49dbb725cc70",
+      "release_group": "43c86a8b-ddab-3a9e-b56b-78a23e2133b3",
+      "isrcs": [
+        "USSM10021897"
+      ],
+      "first_release": "1994-06"
     },
     "2009-09-03-save-tonight-de-eagle-eye-cherry": {
       "recording": "69e80c41-4aa3-4297-b77d-90157f92ab14",
@@ -3270,6 +3433,11 @@
       ],
       "first_release": "2005-04-19"
     },
+    "2010-06-18-estoy-hecho-de-pedacitos-de-ti-de-antonio-orozco-y-arcangel": {
+      "recording": "928a3f98-6727-494f-830f-c354734852a0",
+      "release_group": "aebd4b38-61a1-4f4e-988a-bc3654239283",
+      "first_release": "2005-10-31"
+    },
     "2010-06-19-thats-the-way-de-led-zeppelin": {
       "recording": "2121c65a-4efb-4858-907d-3bb47cab4c52",
       "release_group": "53f80f76-f8af-3558-bfd5-e7221e055c75",
@@ -3556,6 +3724,14 @@
       "recording": "992c9321-bd8a-4103-a5a1-7676e9b9b31a",
       "release_group": "b32535ca-64d9-32c3-bf12-84f1a1196db0",
       "first_release": "1995"
+    },
+    "2010-09-17-for-lovers-de-wolfman-y-pete-doherty": {
+      "recording": "501b6d55-5a0c-4047-a453-70a4b9a4dd2a",
+      "release_group": "0197c76f-150e-3af8-ae3f-aa9980e7a67b",
+      "isrcs": [
+        "GBCVZ0400777"
+      ],
+      "first_release": "2004-04-12"
     },
     "2010-09-18-chan-chan-de-compay-segundo": {
       "recording": "3b45d640-10e7-4fa2-b209-58ffe0114781",
@@ -3940,6 +4116,14 @@
       ],
       "first_release": "1993-12"
     },
+    "2010-11-23-dice-de-finley-quaye-y-beth-orton": {
+      "recording": "37064bcd-392e-46b6-88bf-1a56be6d8fa0",
+      "release_group": "54ef402b-2f26-321c-a110-cb28c6b47bd0",
+      "isrcs": [
+        "GBBBN0300136"
+      ],
+      "first_release": "2003"
+    },
     "2010-11-26-le-vent-nous-portera-de-sophie-hunger": {
       "recording": "f6cdcc4e-ac9d-4a8b-a058-2ce1aecc5a8f",
       "release_group": "ec212e03-7221-422d-bd85-4c1ad1f06b3d",
@@ -4024,6 +4208,14 @@
       ],
       "first_release": "2009-08-14"
     },
+    "2010-12-12-especial-album-an-evening-with-de-john-petrucci-jordan-rudess": {
+      "recording": "2604b5fb-7798-4e3c-95b3-043a7fcd36f5",
+      "release_group": "36a053dd-2e0c-3c1a-ae8e-fef42c343a3c",
+      "isrcs": [
+        "USFN10422700"
+      ],
+      "first_release": "2000-12-11"
+    },
     "2010-12-13-jump-de-madonna": {
       "recording": "7a6094ca-50e5-4973-bfb0-2c114d574577",
       "release_group": "122677be-e664-362d-95eb-be3ae126ec03",
@@ -4078,6 +4270,11 @@
         "GBBBM8700012"
       ],
       "first_release": "1987-10-30"
+    },
+    "2010-12-20-aleluya-de-enrique-morente-y-lagartija-nick": {
+      "recording": "81a31ab0-93aa-48d2-943e-50e71c30f39e",
+      "release_group": "15cd32e1-8371-3681-9973-92bc9a2c03d1",
+      "first_release": "1996"
     },
     "2010-12-21-la-libertad-de-andres-calamaro": {
       "recording": "d61c1cc1-dc88-460c-b5a3-ca93688e247e",
@@ -4134,6 +4331,15 @@
     "2011-01-02-especial-album-la-herida-universal-de-julio-de-la-rosa": {
       "release_group": "2c4103c9-2a1a-4430-af7f-7ffc5d590dc7",
       "first_release": "2010-09"
+    },
+    "2011-01-03-gling-glo-de-bjork-gudmundsdottir-trio-gudmundar-ingolfssonar": {
+      "recording": "2330e15e-b7f3-482e-9e3d-297f9d1f3e2d",
+      "release_group": "7b0e60ce-ad06-3578-ad5e-5d5ca4353379",
+      "isrcs": [
+        "ISC109002701",
+        "GBBTF0300191"
+      ],
+      "first_release": "1990-10"
     },
     "2011-01-04-hometown-glory-de-adele": {
       "recording": "3fd5c4cc-a5a7-4bbf-be17-065769561468",
@@ -4986,6 +5192,17 @@
       "release_group": "5ff2415d-73f3-3bbb-82b6-14c8cf80793b",
       "first_release": "1992-10-08"
     },
+    "2011-06-10-aguas-de-marco-de-antonio-carlos-jobim-elis-regina": {
+      "recording": "9f39e105-448f-48f8-8d7b-c01e47d84ad6",
+      "release_group": "f9520003-6075-310e-b650-bbaa8aaeab4d",
+      "isrcs": [
+        "BRJ9B0500021",
+        "USPR39400714",
+        "USPR37400056",
+        "BRPGD7400001"
+      ],
+      "first_release": "1974-01-01"
+    },
     "2011-06-11-the-story-de-brandi-carlile": {
       "recording": "e4cc4cf8-b087-4ed1-bea3-69279a81fcba",
       "release_group": "9b5a7bd8-7f2d-35a5-8a12-bb73264f37d0",
@@ -5103,6 +5320,10 @@
       "recording": "37fab0c4-699c-4724-ba5a-e32a8db716f6",
       "release_group": "1eaa57f2-caaa-350f-a5fa-621dc48176be",
       "first_release": "1979"
+    },
+    "2011-07-10-especial-bso-braid": {
+      "release_group": "70ab1f74-0ce1-3112-ba56-a0a9ed98d3ee",
+      "first_release": "2009-04-09"
     },
     "2011-07-12-carmina-burana-de-carl-orff": {
       "recording": "1584ef8c-37cd-4cbd-abbb-ea2ba622a426",
@@ -6454,6 +6675,11 @@
         "IEABD0100003"
       ],
       "first_release": "2002-02-01"
+    },
+    "2012-04-14-pequeno-vals-vienes-de-enrique-morente-y-lagartija-nick": {
+      "recording": "665993e1-d166-42bb-94ee-4d5ccaaab108",
+      "release_group": "15cd32e1-8371-3681-9973-92bc9a2c03d1",
+      "first_release": "1996"
     },
     "2012-04-16-dentro-de-ti-de-guerrero-garcia": {
       "recording": "6c9e64f3-3db8-413e-9985-e4062d976dd5",
@@ -7888,6 +8114,11 @@
       "release_group": "b5679518-f45c-3a5f-b360-7a877a24af66",
       "first_release": "1997-08-25"
     },
+    "2013-03-30-las-viejas-luces-de-the-new-raemon-francisco-nixon-ricardo-vicente": {
+      "recording": "8da73174-ae3a-43b6-9545-13630fbd3a6f",
+      "release_group": "b2330c58-2337-4482-b920-a4d528c02fb5",
+      "first_release": "2011"
+    },
     "2013-03-31-album-bloodsports-de-suede": {
       "release_group": "58f1a60f-6b86-449a-8f4d-dd481b70db5c",
       "first_release": "2013-03-10"
@@ -8758,6 +8989,14 @@
         "GB7TP0900044"
       ],
       "first_release": "2010-05-31"
+    },
+    "2013-10-25-arrival-of-the-birds-de-the-cinematic-orchestralondon-metropolitan-orchestra": {
+      "recording": "d3c02eaf-bea0-42ba-ad75-3ad30d3353b0",
+      "release_group": "ac47f333-7406-41d2-89d2-032c3b304d86",
+      "isrcs": [
+        "USWD10835201"
+      ],
+      "first_release": "2008-12-08"
     },
     "2013-10-26-turn-my-way-de-new-order": {
       "recording": "1d470d2a-2b19-49aa-b0f0-eb5ba3025f2f",
@@ -9656,6 +9895,11 @@
     "2014-04-13-introducing-de-the-slim-moore-the-mar-kays": {
       "release_group": "227f64aa-9a0b-4775-bc88-50e828575706",
       "first_release": "2011-10-04"
+    },
+    "2014-04-14-la-aurora-de-nueva-york-de-enrique-morente": {
+      "recording": "185c0543-ea84-4c91-ab5c-5c102755c196",
+      "release_group": "15cd32e1-8371-3681-9973-92bc9a2c03d1",
+      "first_release": "1996"
     },
     "2014-04-16-falling-in-love-de-us": {
       "recording": "1b4a60fc-4d5a-461e-a1b4-245fa8d706ef",

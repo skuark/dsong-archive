@@ -12,5 +12,5 @@ pageClass: archive
 
 {% set posts = artist.posts %}
 {% set heading = "Publicaciones del artista " + artist.name %}
-{%- if artist.mbid %}{% set headingLinks = [{ label: "MusicBrainz", url: "https://musicbrainz.org/artist/" + artist.mbid }] %}{% endif %}
+{%- if artist.musicbrainz %}{% set headingLinks = artist.musicbrainz %}{% endif %}
 {% include "partials/archive-table.njk" %}

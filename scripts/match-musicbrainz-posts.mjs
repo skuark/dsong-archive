@@ -9,7 +9,7 @@
 // "auto" = same title, a studio version and (if the post names one) the same album; otherwise "review"
 // (decide in `npm run review-musicbrainz`, tab "Canciones"; decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
-import { get, mentions, norm, phrase, plain, readData, readJson, search, similar, writeData } from "../lib/musicbrainz.js";
+import { get, mentions, norm, phrase, plain, readData, readJson, search, similar, writeData, arid as aridOf, sameMbid } from "../lib/musicbrainz.js";
 import { isVersion, KIND } from "../lib/versions.js";
 const VERSION = { test: isVersion };
 
@@ -53,7 +53,7 @@ if (apply) {
   const out = {};
   for (const post of posts) {
     const r = results[post.id];
-    if (!r || r.arid !== data.artists[post.metadata.artist]) continue;   // artist changed since: stale
+    if (!r || !sameMbid(r.arid, data.artists[post.metadata.artist])) continue;   // artist changed since: stale
     const pick = post.id in decisions ? decisions[post.id].pick : r.status === "auto" ? r.pick : null;
     const c = pick && (r.candidates.find((c) => c.key === pick) ?? decisions[post.id]?.candidate);
     if (!c) continue;
@@ -95,8 +95,8 @@ function rank(c, song, album, text = "", kind = null) {
 // Recording search: one candidate per (recording, release group) pair.
 // Exact phrase first; if nothing matches, unquoted terms (typos in the data) kept only when close.
 async function recordings(arid, song, album, text, kind) {
-  let found = (await search("recording", `recording:${phrase(song)} AND arid:${arid}`, 25))?.recordings ?? [];
-  if (!found.length) found = ((await search("recording", `recording:${terms(song)} AND arid:${arid}`, 25))?.recordings ?? []).filter((r) => close(r.title, song));
+  let found = (await search("recording", `recording:${phrase(song)} AND arid:${aridOf(arid)}`, 25))?.recordings ?? [];
+  if (!found.length) found = ((await search("recording", `recording:${terms(song)} AND arid:${aridOf(arid)}`, 25))?.recordings ?? []).filter((r) => close(r.title, song));
   const out = [];
   for (const r of found) {
     if (norm(r.title) !== norm(song) && !close(r.title, song)) continue;
@@ -117,8 +117,8 @@ async function recordings(arid, song, album, text, kind) {
 
 // Release group search, for posts about an album (no song) or when the song's releases miss the album.
 async function releaseGroups(arid, album, text, kind) {
-  let found = (await search("release-group", `releasegroup:${phrase(album)} AND arid:${arid}`, 10))?.["release-groups"] ?? [];
-  if (!found.length) found = (await search("release-group", `releasegroup:${terms(album)} AND arid:${arid}`, 10))?.["release-groups"] ?? [];
+  let found = (await search("release-group", `releasegroup:${phrase(album)} AND arid:${aridOf(arid)}`, 10))?.["release-groups"] ?? [];
+  if (!found.length) found = (await search("release-group", `releasegroup:${terms(album)} AND arid:${aridOf(arid)}`, 10))?.["release-groups"] ?? [];
   return found.filter((g) => close(g.title, album)).map((g) => ({
     key: `|${g.id}`, recording: null, release_group: g.id, title: null, disambiguation: g.disambiguation ?? null, length: null, isrcs: [],
     date: g["first-release-date"] ?? null, album: g.title, type: g["primary-type"] ?? null, secondary: g["secondary-types"] ?? [], status: null,
@@ -126,7 +126,7 @@ async function releaseGroups(arid, album, text, kind) {
 }
 
 const todo = posts.filter((p) => data.artists[p.metadata.artist] && (p.metadata.song || p.metadata.album)
-  && results[p.id]?.arid !== data.artists[p.metadata.artist]).slice(0, limit);
+  && !sameMbid(results[p.id]?.arid, data.artists[p.metadata.artist])).slice(0, limit);
 console.log(`${todo.length} posts to search (${Object.keys(results).length} already in ${report})`);
 let done = 0;
 for (const post of todo) {

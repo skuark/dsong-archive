@@ -5,12 +5,13 @@
 //   node scripts/match-musicbrainz.mjs --limit=N [report.json] search only N artists (for testing)
 //   node scripts/match-musicbrainz.mjs --recheck [report.json] second pass for "review" artists: confirm each
 //                                                              candidate by its id (catches "Enrique Bunbury" = "Bunbury")
+//   node scripts/match-musicbrainz.mjs --split [report.json]   collaborations ("X y Y"): match each artist apart
 //   node scripts/match-musicbrainz.mjs --apply [report.json]  write matches to data/musicbrainz.json
 // Each artist gets candidates from an artist search, confirmed by searching its songs and albums:
 // "auto" = a candidate with the same name credited on one of them; otherwise "review"
 // (decide in `npm run review-musicbrainz`, whose decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
-import { ALPHA2, get, mentions, norm, phrase as q, plain, readData, readJson as read, search as mb, writeData } from "../lib/musicbrainz.js";
+import { ALPHA2, get, mentions, norm, phrase as q, plain, readData, readJson as read, search as mb, splitArtists, writeData } from "../lib/musicbrainz.js";
 import { countryOf } from "../lib/countries.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
@@ -112,6 +113,46 @@ if (process.argv.includes("--recheck")) {
   }
   save();
   console.log(`Recheck done: ${todo.filter(([, r]) => r.status === "auto").length} of ${todo.length} now auto`);
+  process.exit(0);
+}
+
+if (process.argv.includes("--split")) {
+  // Collaborations credited as one name ("Enrique Morente y Lagartija Nick"), not an artist in MusicBrainz:
+  // each part becomes its own artist (an already matched one, or a same-name search hit), stored as
+  // [{ name, mbid }]. Auto when every part is found and a song/album of the posts is credited to them.
+  const decisions = read(DECISIONS);
+  const todo = Object.entries(results).filter(([key, r]) => r.status !== "auto" && !(key in decisions) && !r.split
+    && splitArtists(r.names[0]).length > 1).slice(0, limit);
+  console.log(`${todo.length} collaborations to split`);
+  for (const [key, r] of todo) {
+    const a = artists[key], parts = [];
+    const titles = [["recording", "recording", [...(a?.songs ?? [])].slice(0, 3)], ["release-group", "releasegroup", [...(a?.albums ?? [])].slice(0, 3)]];
+    const credited = async (ids) => {
+      for (const [entity, field, list] of titles) for (const title of list) {
+        const data = await mb(entity, `${field}:${q(title)} AND arid:${ids.length > 1 ? `(${ids.join(" OR ")})` : ids[0]}`, 5);
+        if ((data?.[entity === "recording" ? "recordings" : "release-groups"] ?? []).some((i) => norm(i.title) === norm(title))) return title;
+      }
+      return null;
+    };
+    for (const name of splitArtists(r.names[0])) {
+      const pk = norm(name);
+      const known = decisions[pk]?.mbid ?? (results[pk]?.status === "auto" ? results[pk].pick : null);
+      if (known && typeof known === "string") { parts.push({ name, mbid: known }); continue; }
+      const same = ((await mb("artist", `artist:${q(name)} OR alias:${q(name)}`, 8))?.artists ?? []).filter((c) => sameName(c, pk));
+      let hit = same.length === 1 ? same[0] : null;
+      if (same.length > 1) { const ok = []; for (const c of same.slice(0, 4)) if (await credited([c.id])) ok.push(c); if (ok.length === 1) hit = ok[0]; }
+      parts.push({ name, mbid: hit?.id ?? null });
+    }
+    r.split = parts;
+    if (parts.every((p) => p.mbid)) {
+      r.pick = parts;
+      r.confirmedBy = await credited(parts.map((p) => p.mbid));
+      if (r.confirmedBy) { r.status = "auto"; r.via = "split"; }
+    }
+    console.log(`${r.names[0]}: ${parts.map((p) => `${p.name}=${p.mbid ?? "?"}`).join(", ")} -> ${r.status}`);
+  }
+  save();
+  console.log(`Split done: ${todo.filter(([, r]) => r.status === "auto").length} of ${todo.length} now auto`);
   process.exit(0);
 }
 

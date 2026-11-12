@@ -15,7 +15,7 @@ Static archive of the dSong music blog (2009–2017), built with Eleventy 3 + Nu
 | `npm run edit` | Local editor (`http://localhost:8082`, 127.0.0.1 only) for text, metadata, players and comments; validates and writes `data/posts.json` byte-identically |
 | `npm run find-spotify [-- --apply]` | Find Spotify tracks/albums for posts without one via the Web API (`.env`: `SPOTIFY_CLIENT_ID`, `SPOTIFY_CLIENT_SECRET`; app owner needs Premium): by MusicBrainz ISRC first, then performer + title, with the post's version; into `spotify-candidates.json`, `--apply` writes `auto`/`ok` picks (`spotify-review.json` wins). Never touches existing players |
 | `npm run review-youtube` | Local UI (`http://localhost:8081`) to review those candidates; decisions go to `youtube-review.json` and win on `--apply` |
-| `npm run match-musicbrainz [-- --recheck\|--apply]` | Phase 1: match each artist to a MusicBrainz artist (MBID; no key, 1 req/s, ~2 h) into `musicbrainz-candidates.json`, confirmed by its songs/albums; `--recheck` retries unconfirmed ones by artist id; `--apply` writes `data/musicbrainz.json` (`artists`) |
+| `npm run match-musicbrainz [-- --recheck\|--apply]` | Phase 1: match each artist to a MusicBrainz artist (MBID; no key, 1 req/s, ~2 h) into `musicbrainz-candidates.json`, confirmed by its songs/albums; `--recheck` retries unconfirmed ones by artist id; `--split` matches each artist of a collaboration ("Enrique Morente y Lagartija Nick") apart; `--apply` writes `data/musicbrainz.json` (`artists`) |
 | `npm run match-musicbrainz-posts [-- --apply]` | Phase 2 (after phase 1 `--apply`): recording + release group of each post, searched inside its artist, into `musicbrainz-posts-candidates.json`; `--apply` writes `data/musicbrainz.json` (`posts`: recording, release_group, isrcs, first_release) |
 | `npm run review-musicbrainz` | Local UI (`http://localhost:8083`) to review both phases (tabs Artistas / Canciones); decisions go to `musicbrainz-review.json` / `musicbrainz-posts-review.json` and win on `--apply` |
 | `npm run audit-players` | Report (`players-audit.md`) of YouTube/Spotify/Apple Music players that don't match what the post says it presents (performer, cover, live/acoustic/remix vs studio); no keys, cached in `players-cache.json` |
@@ -29,7 +29,7 @@ CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build 
 ```
 data/posts.json        Source data (~1,900 posts). Not in _data on purpose (see below).
 data/podcast-sizes.json Byte size of each podcast mp3 (RSS <enclosure> needs it).
-data/musicbrainz.json  { artists: name (as in posts.json) -> MBID, posts: id -> { recording, release_group, isrcs, first_release } }.
+data/musicbrainz.json  { artists: name (as in posts.json) -> MBID, or [{ name, mbid }] for a collaboration ("X y Y"), posts: id -> { recording, release_group, isrcs, first_release } }.
 data/post-context.json What each post says it presents, read from its text by an LLM (Haiku): subject, performer, version
                        (original/live/acoustic/remix/cover…), cover of whom, album/year named, conflicts with metadata.
 data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via redirect.njk).
