@@ -21,6 +21,7 @@ Static archive of the dSong music blog (2009–2017), built with Eleventy 3 + Nu
 | `npm run audit-players` | Report (`reports/players-audit.md`) of YouTube/Spotify/Apple Music players that don't match what the post says it presents (performer, cover, live/acoustic/remix vs studio); no keys, cached in `reports/players-cache.json` |
 | `npm run fix-players -- --candidates\|--apply` | Alternatives for the players flagged by audit-players (YouTube via yt-dlp, Apple Music via iTunes Search) into `reports/players-fix-candidates.json`; `--apply` applies `reports/players-fix-decisions.json` (keep/replace/remove) to posts.json |
 | `npm run musicbrainz-artists` | Fetch each linked artist's MusicBrainz record (name, aliases, country, genres, official site) into `reports/musicbrainz-artists.json` (cache, ~25 min) |
+| `node scripts/rename-artists.mjs renames.json` | Rename artists in posts.json (`[{ from, to, mbid?, posts? }]`; `posts` splits one name into two artists): moves the MusicBrainz link and the review decision, and adds redirects from the old artist and album pages |
 | `npm run musicbrainz-diffs` | Report (`reports/musicbrainz-diffs.md`) of what differs between posts.json and MusicBrainz, for data cleanup: years, song/album titles and, with `musicbrainz-artists`, artist names, nationalities, websites and genre suggestions |
 
 CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build → check-links → deploy (only from `main`). Node version comes from `.nvmrc`.
@@ -61,7 +62,7 @@ _includes/layouts/     main.njk (head, SEO meta, header).
 _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js).
 scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, find-spotify.mjs, review-youtube.mjs (+ .html),
                        match-musicbrainz.mjs, match-musicbrainz-posts.mjs, review-musicbrainz.mjs (+ .html), musicbrainz-artists.mjs, musicbrainz-diffs.mjs, audit-players.mjs, fix-players.mjs,
-                       podcast-sizes.mjs (mp3 sizes -> data/podcast-sizes.json, for the feed; run by hand),
+                       rename-artists.mjs, podcast-sizes.mjs (mp3 sizes -> data/podcast-sizes.json, for the feed; run by hand),
                        edit-posts.mjs (+ .html, local editor; edit-sources.mjs: its context, MusicBrainz and player searches).
 ```
 
