@@ -9,7 +9,7 @@
 // "auto" = same title, a studio version and (if the post names one) the same album; otherwise "review"
 // (decide in `npm run review-musicbrainz`, tab "Canciones"; decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
-import { get, mentions, norm, phrase, plain, readData, readJson, search, writeData } from "../lib/musicbrainz.js";
+import { get, mentions, norm, phrase, plain, readData, readJson, search, similar, writeData } from "../lib/musicbrainz.js";
 import { isVersion, KIND } from "../lib/versions.js";
 const VERSION = { test: isVersion };
 
@@ -69,15 +69,6 @@ if (apply) {
 // Versions that aren't the studio original (unless the post's own title says so).
 const OTHER_TYPES = new Set(["Live", "Compilation", "Remix", "Demo", "DJ-mix", "Mixtape/Street", "Interview", "Spokenword", "Soundtrack"]);
 
-// Bigram similarity (0–1) of two normalized titles, tolerant of typos ("Devil & Dust" ~ "Devils & Dust").
-function similar(a, b) {
-  const grams = (s) => { const g = []; for (let i = 0; i < s.length - 1; i++) g.push(s.slice(i, i + 2)); return g; };
-  const x = grams(norm(a)), y = grams(norm(b));
-  if (!x.length || !y.length) return norm(a) === norm(b) ? 1 : 0;
-  let hits = 0; const pool = [...y];
-  for (const g of x) { const i = pool.indexOf(g); if (i >= 0) { hits++; pool.splice(i, 1); } }
-  return (2 * hits) / (x.length + y.length);
-}
 const close = (a, b) => similar(a, b) >= 0.8;
 // Unquoted terms for the fuzzy fallback search (Lucene syntax characters dropped).
 const terms = (s) => `(${norm(s) || s.replace(/[^\p{L}\p{N} ]/gu, " ")})`;

@@ -17,7 +17,8 @@
     "match-musicbrainz-posts": "node scripts/match-musicbrainz-posts.mjs",
     "musicbrainz-diffs": "node scripts/musicbrainz-diffs.mjs",
     "audit-players": "node scripts/audit-players.mjs",
-    "fix-players": "node scripts/fix-players.mjs"
+    "fix-players": "node scripts/fix-players.mjs",
+    "find-spotify": "node scripts/find-spotify.mjs"
   },
   "keywords": [],
   "author": "",

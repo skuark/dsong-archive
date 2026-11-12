@@ -13,6 +13,7 @@ Static archive of the dSong music blog (2009–2017), built with Eleventy 3 + Nu
 | `npm run check-media [report.json]` | Check YouTube/Spotify embeds still exist (slow, external; run by hand, not in CI) |
 | `npm run find-youtube [-- --apply]` | Find YouTube videos for posts without one via yt-dlp (no API key) into `youtube-candidates.json`; review, then `--apply` |
 | `npm run edit` | Local editor (`http://localhost:8082`, 127.0.0.1 only) for text, metadata, players and comments; validates and writes `data/posts.json` byte-identically |
+| `npm run find-spotify [-- --apply]` | Find Spotify tracks/albums for posts without one via the Web API (`.env`: `SPOTIFY_CLIENT_ID`, `SPOTIFY_CLIENT_SECRET`; app owner needs Premium): by MusicBrainz ISRC first, then performer + title, with the post's version; into `spotify-candidates.json`, `--apply` writes `auto`/`ok` picks (`spotify-review.json` wins). Never touches existing players |
 | `npm run review-youtube` | Local UI (`http://localhost:8081`) to review those candidates; decisions go to `youtube-review.json` and win on `--apply` |
 | `npm run match-musicbrainz [-- --recheck\|--apply]` | Phase 1: match each artist to a MusicBrainz artist (MBID; no key, 1 req/s, ~2 h) into `musicbrainz-candidates.json`, confirmed by its songs/albums; `--recheck` retries unconfirmed ones by artist id; `--apply` writes `data/musicbrainz.json` (`artists`) |
 | `npm run match-musicbrainz-posts [-- --apply]` | Phase 2 (after phase 1 `--apply`): recording + release group of each post, searched inside its artist, into `musicbrainz-posts-candidates.json`; `--apply` writes `data/musicbrainz.json` (`posts`: recording, release_group, isrcs, first_release) |
@@ -53,7 +54,7 @@ js/                    archive-table-sort.js, archive-table-search.js (accent-in
 *.njk                  Pages: index, archive, post, archive-<facet>, rand, sitemap, robots.
 _includes/layouts/     main.njk (head, SEO meta, header).
 _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js).
-scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, review-youtube.mjs (+ .html),
+scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, find-spotify.mjs, review-youtube.mjs (+ .html),
                        match-musicbrainz.mjs, match-musicbrainz-posts.mjs, review-musicbrainz.mjs (+ .html), musicbrainz-diffs.mjs, audit-players.mjs, fix-players.mjs,
                        podcast-sizes.mjs (mp3 sizes -> data/podcast-sizes.json, for the feed; run by hand),
                        edit-posts.mjs (+ .html, local editor).

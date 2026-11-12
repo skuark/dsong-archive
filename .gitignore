@@ -14,3 +14,6 @@ players-audit.json
 players-fix-candidates.json
 players-fix-decisions.json
 players-fix-log.md
+.env
+spotify-candidates.json
+spotify-review.json
