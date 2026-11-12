@@ -33,7 +33,7 @@ data/podcast-sizes.json Byte size of each podcast mp3 (RSS <enclosure> needs it)
 data/musicbrainz.json  { artists: name (as in posts.json) -> MBID, or [{ name, mbid }] for a collaboration ("X y Y"), posts: id -> { recording, release_group, isrcs, first_release } }.
 data/post-context.json What each post says it presents, read from its text by an LLM (Haiku): subject, performer, version
                        (original/live/acoustic/remix/cover…), cover of whom, album/year named, conflicts with metadata.
-data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via redirect.njk).
+data/redirects.json    Frozen list of old URL -> new URL (meta refresh pages via pages/redirect.njk).
 lib/posts.js           Loads posts once, adds `post.slugs`, exports `posts`, `groupBy`, `slugify`.
 lib/musicbrainz.js     MusicBrainz client for the scripts: norm(), rate-limited search/get (1 req/s, retries 503), data file I/O.
 lib/reports.js         report(name): path in reports/, where every script writes its generated files (candidates,
@@ -47,14 +47,16 @@ _data/stats.js         Global `stats`: totals, rankings, decades and decade x ye
 _data/site.js          Global `site`: url, title, description, umamiId.
 _data/redirects.js     Exposes data/redirects.json as `redirects`.
 lib/validate-post.js   Per-post rules + byte-identical posts.json writer (validate-data and the editor).
-lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only (fonts.11ty.js -> /css/fonts.css).
+lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only (pages/feeds/fonts.11ty.js -> /css/fonts.css).
 js/                    archive-table-sort.js, archive-table-search.js (accent-insensitive filter, ?q=),
                        players.js (post players as tabs inside a <details>; lazy-loads via data-src).
                        post-header.js (sticky post header height -> --post-header-height for the split view),
                        on-this-day.js (home "Tal día como hoy": fetches today's JSON in the browser),
                        radio.js (radio mode: swaps posts in place keeping the live YouTube/Spotify players, their iframe APIs).
 .eleventy.js           Filters (formatDate, markdown, excerpt), `posts` collection, passthrough.
-*.njk                  Pages: index, archive, post, archive-<facet>, rand, sitemap, robots.
+pages/                 Templates (permalinks set in each): index, 404, map, rand, radio-start, post, redirect;
+  archive/             the archive: archive (landing), all, podcasts, <facet> pages and their indexes (artists, editors);
+  feeds/               non-HTML outputs: sitemap, robots, podcast-feed (RSS), radio and on-this-day (JSON), fonts.11ty.js (CSS).
 _includes/layouts/     main.njk (head, SEO meta, header).
 _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js).
 scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, find-spotify.mjs, review-youtube.mjs (+ .html),
@@ -67,19 +69,19 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 
 | Template | Data | URL |
 |---|---|---|
-| `post.njk` | `collections.posts` | `/archive/<id>.html` |
-| `archive-<facet>.njk` | `archive.by<Facet>` (`{ name, slug, posts }`) | `/archive/<facets>/<slug>.html` |
-| `archive-editors.njk`, `archive-artists.njk` | `archive.byEditor`, `stats.artistGroups` | `/archive/editors/`, `/archive/artists/` (indexes: searchable cards with name + count, partials/facet-index.njk) |
-| `archive-podcasts.njk` | `archive.podcastPosts` | `/archive/podcasts/` (table of the podcast posts) |
-| `archive-all.njk` | `collections.posts` | `/archive/all/` (the full table) |
-| `archive.njk` | `stats` | `/archive/` (landing: search form + "dSong en cifras", static HTML/CSS charts, top 10s with a "Ver más" <details>) |
-| `map.njk` | `worldMap`, `archive.byCountry` | `/mapa/` (static SVG world map by artist nationality) |
-| `rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
-| `radio.njk` | `archive.radio` | `/radio.json` (posts with YouTube, or else a playable Spotify embed, for radio mode) |
-| `podcast-feed.njk` | `archive.podcast` | `/podcast.xml` (RSS + iTunes tags for the 335 UniRadio podcasts) |
-| `on-this-day.njk` | `archive.byDay` | `/tal-dia-como-hoy/<MM-DD>.json` (only days with posts) |
-| `redirect.njk` | `redirects` | each old URL (meta refresh + canonical) |
-| `404.njk` | — | `/404.html` (served by GitHub Pages) |
+| `pages/post.njk` | `collections.posts` | `/archive/<id>.html` |
+| `pages/archive/<facet>.njk` | `archive.by<Facet>` (`{ name, slug, posts }`) | `/archive/<facets>/<slug>.html` |
+| `pages/archive/editors.njk`, `pages/archive/artists.njk` | `archive.byEditor`, `stats.artistGroups` | `/archive/editors/`, `/archive/artists/` (indexes: searchable cards with name + count, partials/facet-index.njk) |
+| `pages/archive/podcasts.njk` | `archive.podcastPosts` | `/archive/podcasts/` (table of the podcast posts) |
+| `pages/archive/all.njk` | `collections.posts` | `/archive/all/` (the full table) |
+| `pages/archive/archive.njk` | `stats` | `/archive/` (landing: search form + "dSong en cifras", static HTML/CSS charts, top 10s with a "Ver más" <details>) |
+| `pages/map.njk` | `worldMap`, `archive.byCountry` | `/mapa/` (static SVG world map by artist nationality) |
+| `pages/rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
+| `pages/feeds/radio.njk` | `archive.radio` | `/radio.json` (posts with YouTube, or else a playable Spotify embed, for radio mode) |
+| `pages/feeds/podcast-feed.njk` | `archive.podcast` | `/podcast.xml` (RSS + iTunes tags for the 335 UniRadio podcasts) |
+| `pages/feeds/on-this-day.njk` | `archive.byDay` | `/tal-dia-como-hoy/<MM-DD>.json` (only days with posts) |
+| `pages/redirect.njk` | `redirects` | each old URL (meta refresh + canonical) |
+| `pages/404.njk` | — | `/404.html` (served by GitHub Pages) |
 
 ## Decisions (don't undo without a reason)
 
