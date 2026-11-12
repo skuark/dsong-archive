@@ -416,6 +416,7 @@
         "artist_url": "http://www.radiohead.com/",
         "category": "Canciones",
         "song": "Jigsaw Falling Into Place",
+        "spotify_url": "https://open.spotify.com/embed/track/6nB3rviYjrrg2IIltIStvs",
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1109714933?i=1109715469",
         "youtube_code": "GoLJJRIWCLU"
@@ -11107,6 +11108,7 @@
         "artist_url": "http://www.katiemelua.com/",
         "category": "Canciones",
         "song": "The Closest Thing to Crazy",
+        "spotify_url": "https://open.spotify.com/embed/track/0BM0tJcU7R1QEOHOJgM9yj",
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1702829366?i=1702829369",
         "youtube_code": "C-BnRZ52jHs"
@@ -12214,6 +12216,7 @@
         "artist": "Gladiator",
         "artist_url": "http://www.imdb.com/title/tt0172495/",
         "category": "Bandas Sonoras Originales",
+        "spotify_url": "https://open.spotify.com/embed/album/22UOVuCSJnESOxHBL7UJQN",
         "year": "2000"
       }
     },
@@ -15500,6 +15503,7 @@
         "artist": "Puff Daddy feat. Jimmy Page",
         "category": "Canciones",
         "song": "Come with me",
+        "spotify_url": "https://open.spotify.com/embed/track/4SCnjFSNQ56BmeamHqcOMA",
         "year": "1998"
       }
     },
@@ -23153,6 +23157,7 @@
         "artist_url": "http://www.acdc.com/",
         "category": "Canciones",
         "song": "Thunderstruck",
+        "spotify_url": "https://open.spotify.com/embed/track/4u9FaGP5sQT0j6xyLGpj9i",
         "year": "1990",
         "apple_music_url": "https://embed.music.apple.com/es/album/574049507?i=574051407",
         "youtube_code": "v2AC41dglnM"
@@ -28511,6 +28516,7 @@
         "category": "Canciones",
         "genre": "Indie",
         "song": "The Time is Now",
+        "spotify_url": "https://open.spotify.com/embed/track/0PvaFaGAKfaA1JcPKDI3A6",
         "year": "2011",
         "apple_music_url": "https://embed.music.apple.com/es/album/425143998?i=425144002",
         "youtube_code": "cBfClXEkmBU"
@@ -39471,7 +39477,8 @@
         "album": "Lady Halcon",
         "artist": "Andrew Powell",
         "category": "Bandas Sonoras Originales",
-        "genre": "bso"
+        "genre": "bso",
+        "spotify_url": "https://open.spotify.com/embed/track/3WEeXl4vPsCh15dNfgEgTr"
       }
     },
     {
@@ -40338,6 +40345,7 @@
         "category": "Canciones",
         "genre": "Rock",
         "song": "Christmas Is All Around",
+        "spotify_url": "https://open.spotify.com/embed/track/49FE3lHyo4yboBYHOeGG98",
         "year": "2003",
         "youtube_code": "bpmFletV_pU"
       }
@@ -48268,6 +48276,7 @@
         "artist_nationality": "american",
         "category": "Bandas Sonoras Originales",
         "genre": "bso",
+        "spotify_url": "https://open.spotify.com/embed/album/6ykKLW7CHfZjB4OyQYBDRl",
         "year": "2013"
       }
     },
@@ -51730,6 +51739,7 @@
         "category": "Canciones",
         "genre": "Folk",
         "song": "Falling in love",
+        "spotify_url": "https://open.spotify.com/embed/track/27vLoCnqzgXWV3UWhB29bD",
         "year": "2013",
         "youtube_code": "wkzXExY14wM"
       }
@@ -52679,6 +52689,7 @@
         "category": "Canciones",
         "genre": "Poesía",
         "song": "Signo de admiración",
+        "spotify_url": "https://open.spotify.com/embed/track/3nMEC3nwNEWnN1bBMbC7Sd",
         "year": "2010",
         "youtube_code": "WqSW7dxCeQo"
       }
@@ -54897,6 +54908,7 @@
         "category": "Canciones",
         "genre": "Caribbean",
         "song": "The Secret of Monkey Island (main theme)",
+        "spotify_url": "https://open.spotify.com/embed/track/3EQKvV0msZ7rkVu3Qsj7ub",
         "year": "1990",
         "youtube_code": "FoT5qK6hpbw"
       }
@@ -55516,6 +55528,7 @@
         "category": "Canciones",
         "genre": "klezmer",
         "song": "Hava Nagila",
+        "spotify_url": "https://open.spotify.com/embed/track/2TdLx0tdHO5AqBjn2Niolm",
         "year": "1914"
       }
     },
@@ -57501,6 +57514,7 @@
         "category": "Canciones",
         "genre": "Vals",
         "song": "Vals nº 2",
+        "spotify_url": "https://open.spotify.com/embed/track/0pjCsB0XNSyqM9UazlTODC",
         "year": "1956",
         "youtube_code": "vauo4o-ExoY"
       }
