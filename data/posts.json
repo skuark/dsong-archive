@@ -172,7 +172,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/1763748152?i=1763748292",
         "youtube_code": "9E9-L9_S3V0",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -219,7 +220,8 @@
         "year": "1993",
         "apple_music_url": "https://embed.music.apple.com/es/album/1442449109?i=1442449547",
         "youtube_code": "-oqAU5VxFWs",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -259,7 +261,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/403180313?i=403180407",
         "youtube_code": "1B89Osfj8dg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hard rock"
       }
     },
     {
@@ -283,7 +286,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/204285054?i=204285542",
         "youtube_code": "YqJkJpZvWpo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -312,7 +316,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/2LG4zoUVueg6iYQTHEQLx6",
         "year": "2005",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://brucespringsteen.net/"
+        "artist_url": "https://brucespringsteen.net/",
+        "genre": "Rock"
       }
     },
     {
@@ -345,7 +350,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/270776765?i=270776776",
         "youtube_code": "ompevuR1644",
-        "artist_nationality": "Finlandia"
+        "artist_nationality": "Finlandia",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -428,7 +434,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1109714933?i=1109715469",
         "youtube_code": "GoLJJRIWCLU",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -475,7 +482,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/250202362?i=250202445",
         "youtube_code": "4ASJBXu8tNo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -514,7 +522,8 @@
         "year": "1982",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440746337?i=1440746347",
         "youtube_code": "ewLkmDG6DeM",
-        "artist_nationality": "Irlanda"
+        "artist_nationality": "Irlanda",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -546,7 +555,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1045281848?i=1045283175",
         "youtube_code": "Lx58hXh4pVA",
-        "artist_nationality": "Italia"
+        "artist_nationality": "Italia",
+        "genre": "Gothic metal"
       }
     },
     {
@@ -667,7 +677,8 @@
         "category": "Álbumes",
         "year": "2009",
         "youtube_code": "P4ycqk7_HOo",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -735,7 +746,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/302987557?i=302987569",
         "youtube_code": "b8-tXG8KrWs",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -782,7 +794,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440895939?i=1440895946",
         "youtube_code": "7qH4qyi1-Ys",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Country"
       }
     },
     {
@@ -899,7 +912,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/1726654447?i=1726654453",
         "youtube_code": "JNJv-Ebi67I",
-        "artist_nationality": "Islandia"
+        "artist_nationality": "Islandia",
+        "genre": "Experimental"
       }
     },
     {
@@ -930,7 +944,8 @@
         "song": "Tus Huesos",
         "year": "2008",
         "youtube_code": "0UtgRNwhCGU",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -969,7 +984,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/690460472",
         "artist_nationality": "España",
-        "artist_url": "http://www.amaral.es/"
+        "artist_url": "http://www.amaral.es/",
+        "genre": "Latin ballad"
       }
     },
     {
@@ -1257,7 +1273,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/691878389?i=691878393",
         "youtube_code": "JWE0f70BbO0",
         "artist_nationality": "España",
-        "artist_url": "https://www.macaco.info/"
+        "artist_url": "https://www.macaco.info/",
+        "genre": "Flamenco"
       }
     },
     {
@@ -1373,7 +1390,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/1445668706?i=1445669387",
         "youtube_code": "mqFLXayD6e8",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Country"
       }
     },
     {
@@ -1427,7 +1445,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/961066938?i=961066945",
         "youtube_code": "-JJAXwAaA2w",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -1459,7 +1478,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1445841239?i=1445841250",
         "youtube_code": "zAUMEnAON8E",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Jazz"
       }
     },
     {
@@ -1566,7 +1586,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/81225477?i=81225371",
         "youtube_code": "X8s7WVHoGjQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Garage rock revival"
       }
     },
     {
@@ -1604,7 +1625,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443350084?i=1443350091",
         "youtube_code": "uLmrHVqyFGQ",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -1673,7 +1695,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1502424025?i=1502424026",
         "youtube_code": "7TMV0BzbDoc",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Pop"
       }
     },
     {
@@ -1726,7 +1749,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/2okCg9scHue9GNELoB8U9g",
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440885112",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -1787,7 +1811,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/255974310?i=255974314",
         "youtube_code": "e1tROpgjO7A",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -1841,7 +1866,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1596000685?i=1596001040",
         "youtube_code": "VK3Q4SLVkAU",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Britpop"
       }
     },
     {
@@ -1896,7 +1922,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/699609584?i=699609845",
         "youtube_code": "90GR25U8qtc",
-        "artist_nationality": "Noruega"
+        "artist_nationality": "Noruega",
+        "genre": "Electronic"
       }
     },
     {
@@ -1986,7 +2013,8 @@
         "year": "1989",
         "apple_music_url": "https://embed.music.apple.com/es/album/303183948?i=303183961",
         "youtube_code": "4D2qcbu26gs",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -2061,7 +2089,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1438988563?i=1438988564",
         "youtube_code": "mNcJEebwOuE",
-        "artist_nationality": "Noruega"
+        "artist_nationality": "Noruega",
+        "genre": "Classical crossover"
       }
     },
     {
@@ -2144,7 +2173,8 @@
         "year": "1995",
         "apple_music_url": "https://embed.music.apple.com/es/album/655260476?i=655264743",
         "youtube_code": "XAi3VTSdTxU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -2189,7 +2219,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/17E6xadfo6gCqThX3jwYNB",
         "year": "1975",
         "youtube_code": "vtthJjuEQuk",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -2325,7 +2356,8 @@
         "year": "1990",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440761157?i=1440761801",
         "youtube_code": "n4RjJKxsamQ",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Hard rock"
       }
     },
     {
@@ -2433,7 +2465,8 @@
         "year": "1987",
         "apple_music_url": "https://embed.music.apple.com/es/album/1377826053?i=1377826892",
         "youtube_code": "1w7OgIMMRc4",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hard rock"
       }
     },
     {
@@ -2480,7 +2513,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440811207?i=1440811252",
         "youtube_code": "8AHCfZTRGiI",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Country"
       }
     },
     {
@@ -2527,7 +2561,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/218555858?i=218556036",
         "youtube_code": "LdM-EMacV60",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -2596,7 +2631,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/186166282?i=186166358",
         "spotify_url": "https://open.spotify.com/embed/user/dsong2009/playlist/2V8uQewcdUDMluju6U8XXm",
         "youtube_code": "5X-Mrc2l1d0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -2707,7 +2743,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/313238787?i=313238965",
         "youtube_code": "yn043ArR98M",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -2739,7 +2776,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/1820544034?i=1820544433",
         "youtube_code": "6Ejga4kJUts",
-        "artist_nationality": "Irlanda"
+        "artist_nationality": "Irlanda",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -2800,7 +2838,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1831584251?i=1831584545",
         "youtube_code": "V3GA2d-J2_A",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Nu metal"
       }
     },
     {
@@ -2833,7 +2872,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/302788213?i=302788219",
         "youtube_code": "hDd2G_V1rzc",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Soul"
       }
     },
     {
@@ -2926,7 +2966,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/1vpvc2YPQM8iPk95be8Y3x",
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/1476889347",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -2959,7 +3000,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1872440620?i=1872440862",
         "year": "1991",
         "youtube_code": "FGWjM6XnC4w",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Indie rock"
       }
     },
     {
@@ -3040,7 +3082,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/726135795?i=726135965",
         "youtube_code": "ol6-W-_ixnU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -3086,7 +3129,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/64879507?i=64879341",
         "youtube_code": "ea2hja3hurM",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Eurodance"
       }
     },
     {
@@ -3133,7 +3177,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/5Nn2Dj7OQsGL6pgQ9iIzPp",
         "year": "2002",
         "youtube_code": "qVL3lvk7PzU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hip hop"
       }
     },
     {
@@ -3299,7 +3344,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/0lP4HYLmvowOKdsQ7CVkuq",
         "year": "2005",
         "youtube_code": "8yvGCAvOAfM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -3375,7 +3421,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/268422917?i=268422955",
         "youtube_code": "Y5gbJqQD8P4",
-        "artist_nationality": "Gibraltar"
+        "artist_nationality": "Gibraltar",
+        "genre": "Rock"
       }
     },
     {
@@ -3421,7 +3468,8 @@
         "year": "1992",
         "apple_music_url": "https://embed.music.apple.com/es/album/1667654799?i=1667656380",
         "youtube_code": "2C0sANgB9Qk",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -3476,7 +3524,8 @@
         "year": "1996",
         "apple_music_url": "https://embed.music.apple.com/es/album/1617670455?i=1617670938",
         "youtube_code": "zNBj4EV_hAo",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -3524,7 +3573,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1755481758?i=1755482008",
         "youtube_code": "UroPqMsr3UU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -3562,7 +3612,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/3Fml4pyjfuSDrz17hHiGQQ",
         "year": "1995",
         "youtube_code": "i9qZ4Tntg8I",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Progressive metal"
       }
     },
     {
@@ -3610,7 +3661,8 @@
         "year": "2008",
         "youtube_code": "I0Bc4suux70",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443933480?i=1443934614",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Indie pop"
       }
     },
     {
@@ -3641,7 +3693,8 @@
         "year": "1993",
         "apple_music_url": "https://embed.music.apple.com/es/album/6786008015?i=6786008283",
         "youtube_code": "NI9WOnO24b8",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -3837,7 +3890,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/328074546?i=328074588",
         "youtube_code": "tWX3El-slpY",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://asthmatickitty.com/artists/sufjan-stevens/"
+        "artist_url": "https://asthmatickitty.com/artists/sufjan-stevens/",
+        "genre": "Indie folk"
       }
     },
     {
@@ -3922,7 +3976,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440918859?i=1440918860",
         "youtube_code": "Nntd2fgMUYw",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Pop rock"
       }
     },
     {
@@ -3955,7 +4010,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/287484864?i=287484907",
         "youtube_code": "yvbuBQ5QzGg",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.benfolds.com/"
+        "artist_url": "http://www.benfolds.com/",
+        "genre": "Piano rock"
       }
     },
     {
@@ -4001,7 +4057,8 @@
         "year": "1993",
         "apple_music_url": "https://embed.music.apple.com/es/album/1731384161?i=1731384547",
         "youtube_code": "HEXWRTEbj1I",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Eurodance"
       }
     },
     {
@@ -4040,7 +4097,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/7fh6U3pYDTFZBjLaF2tyTp",
         "year": "1991",
         "youtube_code": "vabnZ9-ex7o",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Grunge"
       }
     },
     {
@@ -4161,7 +4219,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1564777811?i=1564777818",
         "youtube_code": "Ju7__CeJH7Y",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Power pop"
       }
     },
     {
@@ -4193,7 +4252,8 @@
         "year": "1983",
         "apple_music_url": "https://embed.music.apple.com/es/album/714861155?i=714861225",
         "youtube_code": "OlaTeXX3uH8",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Ambient"
       }
     },
     {
@@ -4223,7 +4283,8 @@
         "song": "The don't believe",
         "spotify_url": "https://open.spotify.com/embed/track/5fcSgMcjJVRaefPlXWEWTc",
         "youtube_code": "DkDmr7uqR7Q",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Folk"
       }
     },
     {
@@ -4264,7 +4325,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/407593152?i=407593225",
         "youtube_code": "iAP9AF6DCu4",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -4327,7 +4389,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/645684390",
         "youtube_code": "Z-oFNjfoAQU",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Indie rock"
       }
     },
     {
@@ -4374,7 +4437,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/951813018?i=951813394",
         "youtube_code": "fuklV6h40JE",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Classical"
       }
     },
     {
@@ -4421,7 +4485,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/1444021827?i=1444022025",
         "youtube_code": "BvAUQsbKnLI",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -4493,7 +4558,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/1453924216?i=1453925093",
         "youtube_code": "dLl4PZtxia8",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -4540,7 +4606,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/6OVMLPmUSGK5YssEwi2z95",
         "year": "1987",
         "youtube_code": "iLVLfL3QVQQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Funk"
       }
     },
     {
@@ -4595,7 +4662,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/7reivUOhA0dd6HFC0aC3RE",
         "year": "1994",
         "youtube_code": "98eIW6CN62k",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Blues rock"
       }
     },
     {
@@ -4628,7 +4696,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1553280562?i=1553280570",
         "song": "Memories",
         "youtube_code": "gsQIOgkZt68",
-        "artist_nationality": "Países Bajos"
+        "artist_nationality": "Países Bajos",
+        "genre": "Symphonic metal"
       }
     },
     {
@@ -4667,7 +4736,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443002950?i=1443003123",
         "youtube_code": "k1-HLztNQWw",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -4691,7 +4761,8 @@
         "year": "1988",
         "apple_music_url": "https://embed.music.apple.com/es/album/1746785430?i=1746785446",
         "youtube_code": "sD3E5y7bojg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Electronic"
       }
     },
     {
@@ -4836,7 +4907,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/991509751",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://muse.mu/"
+        "artist_url": "https://muse.mu/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -4860,7 +4932,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443462950?i=1443463346",
         "youtube_code": "Do5MMmEygsY",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Gangsta rap"
       }
     },
     {
@@ -4893,7 +4966,8 @@
         "year": "1996",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440644451?i=1440644599",
         "youtube_code": "6hYgc0fTONc",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Britpop"
       }
     },
     {
@@ -4917,7 +4991,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/282802902?i=282803081",
         "youtube_code": "naQ13ZwwcDo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Smooth jazz"
       }
     },
     {
@@ -5003,7 +5078,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/61077783?i=61077769",
         "youtube_code": "iWOZ0_0SfmY",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -5050,7 +5126,8 @@
         "year": "1989",
         "apple_music_url": "https://embed.music.apple.com/es/album/158618758?i=158619054",
         "youtube_code": "eFTLKWw542g",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Piano rock"
       }
     },
     {
@@ -5098,7 +5175,8 @@
         "year": "1990",
         "apple_music_url": "https://embed.music.apple.com/es/album/697634139",
         "youtube_code": "SzimletXB7M",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -5130,7 +5208,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/295599679?i=295599704",
         "youtube_code": "iSVc8-HlF8w",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Flamenco"
       }
     },
     {
@@ -5170,7 +5249,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/966379289?i=966379417",
         "youtube_code": "uizQVriWp8M",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -5202,7 +5282,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1573650006?i=1573650009",
         "youtube_code": "RvnkAtWcKYg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop rock"
       }
     },
     {
@@ -5250,7 +5331,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1450030107?i=1450030115",
         "youtube_code": "oKsxPW6i3pM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -5282,7 +5364,8 @@
         "year": "1991",
         "apple_music_url": "https://embed.music.apple.com/es/album/6781074383?i=6781074822",
         "youtube_code": "t99KH0TR-J4",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -5314,7 +5397,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/1442551726?i=1442551872",
         "youtube_code": "_W2jONIjrM0",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Rock"
       }
     },
     {
@@ -5338,7 +5422,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/6810407924",
         "youtube_code": "dpjz5uRCXTg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative metal"
       }
     },
     {
@@ -5394,7 +5479,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/597936899?i=597937190",
         "youtube_code": "0wrsZog8qXg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie pop"
       }
     },
     {
@@ -5434,7 +5520,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/79316103?i=79315984",
         "youtube_code": "s8QVGtpbVGA",
         "artist_nationality": "España",
-        "artist_url": "http://www.celtascortos.com/"
+        "artist_url": "http://www.celtascortos.com/",
+        "genre": "Celtic rock"
       }
     },
     {
@@ -5458,7 +5545,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443459847?i=1443460242",
         "youtube_code": "5WK-vRhz9xs",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -5529,7 +5617,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/254347531?i=254347632",
         "youtube_code": "k8mtXwtapX4",
         "artist_nationality": "Irlanda",
-        "artist_url": "https://glenhansard.com/"
+        "artist_url": "https://glenhansard.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -5568,7 +5657,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1699661076?i=1699661256",
         "youtube_code": "C4JGuZL4oKc",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Punk rock"
       }
     },
     {
@@ -5592,7 +5682,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1053727604",
         "youtube_code": "BEdO2q_LhNo",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.rockyvotolato.com/"
+        "artist_url": "https://www.rockyvotolato.com/",
+        "genre": "Alternative country"
       }
     },
     {
@@ -5616,7 +5707,8 @@
         "year": "1969",
         "apple_music_url": "https://embed.music.apple.com/es/album/266185619?i=266185727",
         "youtube_code": "I1xGr4n-ke0",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Contemporary folk"
       }
     },
     {
@@ -5648,7 +5740,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/696523807?i=696523911",
         "youtube_code": "YwaPTX5AuyM",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Folktronica"
       }
     },
     {
@@ -5710,7 +5803,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443572901?i=1443573016",
         "youtube_code": "IdJmjt7w0Bs",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Metal"
       }
     },
     {
@@ -5743,7 +5837,8 @@
         "year": "1986",
         "apple_music_url": "https://embed.music.apple.com/es/album/1040972118?i=1040972132",
         "youtube_code": "tkOr12AQpnU",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "New wave"
       }
     },
     {
@@ -5767,7 +5862,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/806224598?i=806224710",
         "youtube_code": "6Ux6SlOE9Qk",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Emo"
       }
     },
     {
@@ -5824,7 +5920,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/590431776",
         "youtube_code": "Gd9OhYroLN0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Nu metal"
       }
     },
     {
@@ -5881,7 +5978,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/220113867?i=220114180",
         "youtube_code": "vjd6yIn2zmk",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Folk rock"
       }
     },
     {
@@ -5935,7 +6033,8 @@
         "year": "1981",
         "apple_music_url": "https://embed.music.apple.com/es/album/1451208136?i=1451208220",
         "youtube_code": "0vq3qZwaXrw",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Flamenco"
       }
     },
     {
@@ -5959,7 +6058,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/721842544?i=721842676",
         "youtube_code": "EeiQ4CYFBP8",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -5991,7 +6091,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1710779822?i=1710779824",
         "year": "2007",
         "youtube_code": "VXlD9JO9we8",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative country"
       }
     },
     {
@@ -6031,7 +6132,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/970424341?i=970424540",
         "youtube_code": "_lMiIsQqLaE",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -6146,7 +6248,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/333369899?i=333370230",
         "youtube_code": "nYnLVWXmRm8",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Pop"
       }
     },
     {
@@ -6170,7 +6273,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/79331607?i=79331594",
         "youtube_code": "SB_uwZauxA0",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "New wave"
       }
     },
     {
@@ -6202,7 +6306,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/2aX3XAKGFt9hqDVVuMMgUX",
         "year": "1991",
         "youtube_code": "BIDJCuNVnZE",
-        "artist_nationality": "Grecia"
+        "artist_nationality": "Grecia",
+        "genre": "Jazz"
       }
     },
     {
@@ -6256,7 +6361,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440825451?i=1440826048",
         "youtube_code": "86LBxT4Qv6Y",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Nu metal"
       }
     },
     {
@@ -6316,7 +6422,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/2wnI6uz62Zbs3R1V4DqN6i",
         "year": "2003",
         "youtube_code": "r80kdhRSwg0",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Funk metal"
       }
     },
     {
@@ -6356,7 +6463,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440788031?i=1440788048",
         "youtube_code": "uptcolxSPiQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -6393,7 +6501,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/2BlCj6eq2zq6rtM9HuKo29",
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/184335550",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Blues rock"
       }
     },
     {
@@ -6487,7 +6596,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/734193506?i=734193711",
         "youtube_code": "UP4Z1X_6Peo",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -6585,7 +6695,8 @@
         "song": "They can't stop the spring",
         "year": "2007",
         "youtube_code": "VykUjEVVO-Q",
-        "artist_nationality": "Irlanda"
+        "artist_nationality": "Irlanda",
+        "genre": "Folk"
       }
     },
     {
@@ -6624,7 +6735,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/1778047969?i=1778047973",
         "youtube_code": "tuK6n2Lkza0",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Garage rock"
       }
     },
     {
@@ -6669,7 +6781,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/12orjZWbuGiQ725TVy6y93",
         "year": "1991",
         "youtube_code": "xk8mm1Qmt-Y",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Dance"
       }
     },
     {
@@ -6731,7 +6844,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1551851942?i=1551853656",
         "youtube_code": "ZiqWi6SpqOg",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Hamburger schule"
       }
     },
     {
@@ -6870,7 +6984,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1045561567?i=1045563966",
         "youtube_code": "4JsQRs3m0oM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Gothic metal"
       }
     },
     {
@@ -6902,7 +7017,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1445843658?i=1445843882",
         "youtube_code": "mrFQvGtRzYA",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Jazz"
       }
     },
     {
@@ -6926,7 +7042,8 @@
         "year": "1995",
         "apple_music_url": "https://embed.music.apple.com/es/album/1447107137?i=1447107151",
         "youtube_code": "lae_Bd_5rk4",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Classical"
       }
     },
     {
@@ -6949,7 +7066,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1280767800?i=1280767805",
         "youtube_code": "5H9vlmn3tJw",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Electronic"
       }
     },
     {
@@ -6973,7 +7091,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/373395021?i=373395103",
         "youtube_code": "sxAdbs_u8Sk",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -7027,7 +7146,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/386544563?i=386544565",
         "youtube_code": "gUxH1zN0yOc",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Hard rock"
       }
     },
     {
@@ -7064,7 +7184,8 @@
         "category": "Álbumes",
         "spotify_url": "https://open.spotify.com/embed/album/20oxZZVAY00WWltOeJL1zo",
         "year": "2006",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -7111,7 +7232,8 @@
         "year": "1996",
         "apple_music_url": "https://embed.music.apple.com/es/album/317893441?i=317893474",
         "youtube_code": "sKoK3XnTd3g",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Latin pop"
       }
     },
     {
@@ -7172,7 +7294,8 @@
         "year": "1977",
         "apple_music_url": "https://embed.music.apple.com/es/album/1625213430?i=1625213809",
         "youtube_code": "HNBCVM4KbUM",
-        "artist_nationality": "Jamaica"
+        "artist_nationality": "Jamaica",
+        "genre": "Reggae"
       }
     },
     {
@@ -7212,7 +7335,8 @@
         "year": "1993",
         "apple_music_url": "https://embed.music.apple.com/es/album/79382515?i=79381932",
         "youtube_code": "BUKHMGiW_rY",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -7260,7 +7384,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/1445126117?i=1445126118",
         "youtube_code": "neSQgkEy_xQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -7292,7 +7417,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1697149568?i=1697149778",
         "youtube_code": "2ulU08Se7Qs",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -7315,7 +7441,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/0m068JrkTjyTtbgyIRPYmQ",
         "year": "2006",
         "youtube_code": "dewzOxQ52kg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -7355,7 +7482,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443826325",
         "youtube_code": "aenfmDctRIY",
-        "artist_nationality": "Finlandia"
+        "artist_nationality": "Finlandia",
+        "genre": "Symphonic metal"
       }
     },
     {
@@ -7409,7 +7537,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/294582199?i=294582319",
         "youtube_code": "dLrKKV4tZpM",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Gothic metal"
       }
     },
     {
@@ -7472,7 +7601,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/897388189?i=897388834",
         "youtube_code": "CN9QEvMNSBs",
-        "artist_nationality": "Dinamarca"
+        "artist_nationality": "Dinamarca",
+        "genre": "Electronic"
       }
     },
     {
@@ -7496,7 +7626,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/220311706?i=220312045",
         "youtube_code": "E9ck_FhoDUc",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -7553,7 +7684,8 @@
         "year": "1982",
         "apple_music_url": "https://embed.music.apple.com/es/album/685585931?i=685585942",
         "youtube_code": "bJ9r8LMU9bQ",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Punk rock"
       }
     },
     {
@@ -7585,7 +7717,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/6805034240?i=6805034496",
         "youtube_code": "aWQBOsKHqpM",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -7638,7 +7771,8 @@
         "year": "1985",
         "apple_music_url": "https://embed.music.apple.com/es/album/1565391787?i=1565392081",
         "youtube_code": "jhdFe3evXpk",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -7662,7 +7796,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/254825683?i=254825686",
         "youtube_code": "XvziPPpryv0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Ska punk"
       }
     },
     {
@@ -7694,7 +7829,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/252495432?i=252496249",
         "youtube_code": "kX1xubB7xao",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -7718,7 +7854,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/697194953?i=697195787",
         "youtube_code": "gAjR4_CbPpQ",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Electronic"
       }
     },
     {
@@ -7866,7 +8003,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/906586710",
         "youtube_code": "gUhRKVIjJtw",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hip hop"
       }
     },
     {
@@ -7953,7 +8091,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1436070238?i=1436070246",
         "youtube_code": "4a4ScRBLUHg",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -7986,7 +8125,8 @@
         "year": "1968",
         "apple_music_url": "https://embed.music.apple.com/es/album/1435652266?i=1435652290",
         "youtube_code": "TLV4_xaYynY",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Psychedelic rock"
       }
     },
     {
@@ -8010,7 +8150,8 @@
         "year": "1993",
         "apple_music_url": "https://embed.music.apple.com/es/album/309226405?i=309226521",
         "youtube_code": "eTeg1txDv8w",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -8048,7 +8189,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/267551838",
         "youtube_code": "X07p8qT2ug4",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -8080,7 +8222,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/5qm0KiVKMXW1kq6VrnIhz5",
         "year": "1990",
         "youtube_code": "aiRn3Zlw3Rw",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Blues rock"
       }
     },
     {
@@ -8142,7 +8285,8 @@
         "year": "1978",
         "apple_music_url": "https://embed.music.apple.com/es/album/6781079346?i=6781079518",
         "youtube_code": "HgzGwKwLmgM",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -8182,7 +8326,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/6791727521?i=6791727769",
         "youtube_code": "hkUfOUjqdfo",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Indie folk"
       }
     },
     {
@@ -8229,7 +8374,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440812728?i=1440812944",
         "youtube_code": "smtGNj7b6xU",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Jazz"
       }
     },
     {
@@ -8252,7 +8398,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/26243329?i=26243589",
         "youtube_code": "b8WVlk-iRTo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Symphonic metal"
       }
     },
     {
@@ -8321,7 +8468,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/416319613",
         "youtube_code": "CsLkmyPg8bs",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Downtempo"
       }
     },
     {
@@ -8423,7 +8571,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/300855107?i=300855110",
         "youtube_code": "h_L4Rixya64",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -8462,7 +8611,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/4ePP9So5xRzspjLFVVbj90",
         "year": "1991",
         "youtube_code": "wsdy_rct6uo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -8494,7 +8644,8 @@
         "year": "1973",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440838012?i=1440838661",
         "youtube_code": "MQNRKX8GwPo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Southern rock"
       }
     },
     {
@@ -8542,7 +8693,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/09zheFUSQgyWef52CNMOkX",
         "year": "2008",
         "youtube_code": "8_2oDRiLYlc",
-        "artist_nationality": "Austria"
+        "artist_nationality": "Austria",
+        "genre": "Classical"
       }
     },
     {
@@ -8578,7 +8730,8 @@
         "category": "Álbumes",
         "spotify_url": "https://open.spotify.com/embed/album/029dnuRwPEn8biaR5QC59w",
         "year": "1991",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Grunge"
       }
     },
     {
@@ -8634,7 +8787,8 @@
         "year": "1971",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440850317?i=1440850320",
         "youtube_code": "x2KRpRMSu4g",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -8674,7 +8828,8 @@
         "year": "1985",
         "apple_music_url": "https://embed.music.apple.com/es/album/380907762?i=380907765",
         "youtube_code": "djV11Xbc914",
-        "artist_nationality": "Noruega"
+        "artist_nationality": "Noruega",
+        "genre": "New wave"
       }
     },
     {
@@ -8722,7 +8877,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/290302885?i=290303003",
         "youtube_code": "RF0HhrwIwp0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -8768,7 +8924,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/5njdVzhNvMNIK5Opyu4gLJ",
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/271455172?i=271455210",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -8832,7 +8989,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1597017127?i=1597017134",
         "youtube_code": "kxwsu8JfvVU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -8863,7 +9021,8 @@
         "song": "Kings of Medicine",
         "year": "2009",
         "youtube_code": "4nOVFDLtdyY",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -8933,7 +9092,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1wW7esFlI60dKHvCxeyXB3",
         "year": "2003",
         "youtube_code": "YsCs2fbRkBc",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Funk metal"
       }
     },
     {
@@ -8965,7 +9125,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1777034135?i=1777034147",
         "youtube_code": "L18tjO2GYnU",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Indie rock"
       }
     },
     {
@@ -9013,7 +9174,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/1474957019?i=1474957025",
         "youtube_code": "oVl4qvHuY8g",
-        "artist_nationality": "Noruega"
+        "artist_nationality": "Noruega",
+        "genre": "New wave"
       }
     },
     {
@@ -9044,7 +9206,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/3Rn6JiC7xYzvMupQLltyQC",
         "year": "2004",
         "youtube_code": "KqnVthrmdfQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Heavy metal"
       }
     },
     {
@@ -9146,7 +9309,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/1H81jGoWeLI8ufq42GfDPn",
         "year": "2009",
         "youtube_code": "5yR3jP_OxUU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Classical"
       }
     },
     {
@@ -9194,7 +9358,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1713147473?i=1713147480",
         "youtube_code": "_6rIks03cdM",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Folk"
       }
     },
     {
@@ -9258,7 +9423,8 @@
         "year": "1974",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440798820?i=1440799023",
         "youtube_code": "fW-lYTNW-P0",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -9299,7 +9465,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/20782605?i=20782595",
         "youtube_code": "MbiNFXNq7RE",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Folk"
       }
     },
     {
@@ -9409,7 +9576,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/6790972695?i=6790973053",
         "youtube_code": "CDl9ZMfj6aE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -9498,7 +9666,8 @@
         "year": "1991",
         "apple_music_url": "https://embed.music.apple.com/es/album/724471916?i=724472291",
         "youtube_code": "ag8XcMG1EX4",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -9554,7 +9723,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/216544035?i=216544545",
         "youtube_code": "penvn9VL32Y",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -9586,7 +9756,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/2migrb2mtM1MtVfCdzteth",
         "year": "2009",
         "youtube_code": "QipqQMsfx4g",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Pop"
       }
     },
     {
@@ -9618,7 +9789,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440870735?i=1440870739",
         "youtube_code": "DWaB4PXCwFU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative metal"
       }
     },
     {
@@ -9688,7 +9860,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/2vvwBjUBTQWZMIum68CPWx",
         "youtube_code": "eXV4WyQMHFM",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.cocker.com/"
+        "artist_url": "http://www.cocker.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -9808,7 +9981,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1123076757?i=1123076823",
         "youtube_code": "EhC_c7p50so",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -9878,7 +10052,8 @@
         "year": "1976",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443905673?i=1443905814",
         "youtube_code": "1xdnH44vIrQ",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Flamenco"
       }
     },
     {
@@ -9902,7 +10077,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/715559262?i=715559300",
         "youtube_code": "HZWeFKtuOyI",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Folk"
       }
     },
     {
@@ -9942,7 +10118,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1770581680?i=1770581684",
         "youtube_code": "Nfql0PyA8D0",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -9966,7 +10143,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/255218266?i=255218270",
         "youtube_code": "IN0KkGeEURw",
         "artist_nationality": "Jamaica",
-        "artist_url": "http://www.bobmarley.com/"
+        "artist_url": "http://www.bobmarley.com/",
+        "genre": "Reggae"
       }
     },
     {
@@ -10007,7 +10185,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443572901",
         "youtube_code": "XBDTQfp9ntc",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Metal"
       }
     },
     {
@@ -10031,7 +10210,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1816025661?i=1816025665",
         "youtube_code": "IJa4mg3tbBs",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Folk"
       }
     },
     {
@@ -10085,7 +10265,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/715669315?i=715669714",
         "youtube_code": "VBxgZc95Nyg",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Dance-punk"
       }
     },
     {
@@ -10109,7 +10290,8 @@
         "year": "1971",
         "apple_music_url": "https://embed.music.apple.com/es/album/726371044?i=726371896",
         "youtube_code": "eSUdlUmtg3Q",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -10149,7 +10331,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/273714443?i=273714640",
         "youtube_code": "CSvFpBOe8eY",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative metal"
       }
     },
     {
@@ -10190,7 +10373,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1237748988?i=1237749855",
         "youtube_code": "l8MlvHJPveY",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -10245,7 +10429,8 @@
         "year": "1962",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443302878?i=1443303115",
         "youtube_code": "ppJQKfqhFfE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Jazz"
       }
     },
     {
@@ -10315,7 +10500,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/273560031?i=273560292",
         "youtube_code": "Ezs52mucYSU",
-        "artist_nationality": "Finlandia"
+        "artist_nationality": "Finlandia",
+        "genre": "Alternative metal"
       }
     },
     {
@@ -10379,7 +10565,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1443460957?i=1443461378",
         "song": "Evening/Morning",
         "youtube_code": "O8owZRixRBs",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Indie rock"
       }
     },
     {
@@ -10419,7 +10606,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/724160495?i=724160600",
         "youtube_code": "jkaMiaRLgvY",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Indie rock"
       }
     },
     {
@@ -10442,7 +10630,8 @@
         "year": "1987",
         "apple_music_url": "https://embed.music.apple.com/es/album/875238573?i=875238579",
         "youtube_code": "N-9zEvBNpLs",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Nuevo flamenco"
       }
     },
     {
@@ -10505,7 +10694,8 @@
         "year": "1984",
         "apple_music_url": "https://embed.music.apple.com/es/album/1788380657?i=1788380899",
         "youtube_code": "4xmckWVPRaI",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Glam metal"
       }
     },
     {
@@ -10529,7 +10719,8 @@
         "year": "1988",
         "apple_music_url": "https://embed.music.apple.com/es/album/390617125?i=390617130",
         "youtube_code": "PSoOFn3wQV4",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -10553,7 +10744,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443146993?i=1443146995",
         "youtube_code": "RrhaisATTp0",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Reggae"
       }
     },
     {
@@ -10577,7 +10769,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1779577423?i=1779577427",
         "youtube_code": "JKZb4KQzjLY",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -10610,7 +10803,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/715553799?i=715554157",
         "youtube_code": "dTAAsCNK7RA",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -10687,7 +10881,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/0hiJeb1ycFFXyW12j61sfB",
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/260750982",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Art pop"
       }
     },
     {
@@ -10720,7 +10915,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/353969737?i=353969791",
         "youtube_code": "xYENqXShH_s",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Singer-songwriter"
       }
     },
     {
@@ -10852,7 +11048,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/288174238?i=288174248",
         "youtube_code": "YCcrRid_WN0",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Ska"
       }
     },
     {
@@ -10897,7 +11094,8 @@
         "category": "Canciones",
         "song": "Bittersweet symphony",
         "year": "2005",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Electronic"
       }
     },
     {
@@ -10975,7 +11173,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/6ZPJW29SfMLwh31gr7nNpY",
         "year": "2002",
         "youtube_code": "7QU1nvuxaMA",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -10999,7 +11198,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/1533513536?i=1533513537",
         "youtube_code": "0J2QdDbelmY",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -11046,7 +11246,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/33iQW2OneB0oNh2NfrAzqW",
         "year": "1976",
         "youtube_code": "QAN7D1V0vuI",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Punk rock"
       }
     },
     {
@@ -11070,7 +11271,8 @@
         "year": "1975",
         "apple_music_url": "https://embed.music.apple.com/es/album/1469550332?i=1469550556",
         "youtube_code": "IrVD0bP_ybg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Folk"
       }
     },
     {
@@ -11134,7 +11336,8 @@
         "song": "The Magic of the Wizard's Dream",
         "year": "2005",
         "youtube_code": "qz7hCazQESM",
-        "artist_nationality": "Italia"
+        "artist_nationality": "Italia",
+        "genre": "Power metal"
       }
     },
     {
@@ -11174,7 +11377,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/952887?i=952683",
         "youtube_code": "XS088Opj9o0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -11213,7 +11417,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/731073365",
         "youtube_code": "DRxawmG5MfM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Blues rock"
       }
     },
     {
@@ -11334,7 +11539,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440863940?i=1440864350",
         "youtube_code": "RIZdjT1472Y",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -11358,7 +11564,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1434907574?i=1434907699",
         "youtube_code": "UJNMWglLBvM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Classic country"
       }
     },
     {
@@ -11382,7 +11589,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1702829366?i=1702829369",
         "youtube_code": "C-BnRZ52jHs",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Jazz"
       }
     },
     {
@@ -11411,7 +11619,8 @@
         "category": "Bandas Sonoras Originales",
         "spotify_url": "https://open.spotify.com/embed/album/7CHdyKpyQwxRVARnA523yC",
         "year": "2002",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Orchestral"
       }
     },
     {
@@ -11435,7 +11644,8 @@
         "year": "1973",
         "apple_music_url": "https://embed.music.apple.com/es/album/1728071278?i=1728071989",
         "youtube_code": "rG6b8gjMEkw",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Blues rock"
       }
     },
     {
@@ -11459,7 +11669,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1460468103?i=1460468108",
         "youtube_code": "jVomBpEH-ck",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Power metal"
       }
     },
     {
@@ -11497,7 +11708,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/7rfqNuSQWV7KssLZHtWCnU",
         "year": "2007",
         "artist_nationality": "España",
-        "artist_url": "http://fundaciontonymanero.com/"
+        "artist_url": "http://fundaciontonymanero.com/",
+        "genre": "Disco"
       }
     },
     {
@@ -11552,7 +11764,8 @@
         "year": "1986",
         "apple_music_url": "https://embed.music.apple.com/es/album/1109429270?i=1109429471",
         "youtube_code": "9jK-NcRmVcw",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Hard rock"
       }
     },
     {
@@ -11576,7 +11789,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1481512614?i=1481513141",
         "youtube_code": "hnjGqS1Doto",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Pop"
       }
     },
     {
@@ -11754,7 +11968,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/0ixYgnczD7ao9weSDlPFnI",
         "year": "1999",
         "youtube_code": "NimfKV93D8E",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Acoustic rock"
       }
     },
     {
@@ -11795,7 +12010,8 @@
         "year": "1991",
         "apple_music_url": "https://embed.music.apple.com/es/album/322847038?i=322847192",
         "youtube_code": "PfrV_6yWbEg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -11828,7 +12044,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/181630530?i=181630818",
         "youtube_code": "X5KmB8Laemg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -11891,7 +12108,8 @@
         "song": "In the Back Seat",
         "year": "2004",
         "youtube_code": "i2jsArz5IQg",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Indie rock"
       }
     },
     {
@@ -11953,7 +12171,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1440813234?i=1440813250",
         "youtube_code": "vx2u5uUu3DE",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://bonjovi.com/"
+        "artist_url": "https://bonjovi.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -11986,7 +12205,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/211424158?i=211424460",
         "youtube_code": "BKtrWU4zaaI",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -12007,7 +12227,8 @@
         "category": "Álbumes",
         "spotify_url": "https://open.spotify.com/embed/album/1V5vQRMWTNGmqwxY8jMVou",
         "year": "2009",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Blues rock"
       }
     },
     {
@@ -12069,7 +12290,8 @@
         "year": "1972",
         "apple_music_url": "https://embed.music.apple.com/es/album/1290689445?i=1290689537",
         "youtube_code": "ZotVMxuXBo0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock and roll"
       }
     },
     {
@@ -12093,7 +12315,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1045197521?i=1045197526",
         "youtube_code": "sGwK5dl6pB8",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -12126,7 +12349,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/186057800?i=186057914",
         "youtube_code": "xVKGXgHDMvQ",
-        "artist_nationality": "Bélgica"
+        "artist_nationality": "Bélgica",
+        "genre": "Trip hop"
       }
     },
     {
@@ -12158,7 +12382,8 @@
         "year": "1995",
         "apple_music_url": "https://embed.music.apple.com/es/album/1576787215?i=1576787499",
         "youtube_code": "UNoouLa7uxA",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -12190,7 +12415,8 @@
         "year": "1985",
         "apple_music_url": "https://embed.music.apple.com/es/album/290650814?i=290650888",
         "youtube_code": "_n1E8EgnkIo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -12223,7 +12449,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1450122969?i=1450122974",
         "youtube_code": "gB5aXPgZ61s",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://theprodigy.com/"
+        "artist_url": "https://theprodigy.com/",
+        "genre": "Big beat"
       }
     },
     {
@@ -12263,7 +12490,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/290090461",
         "youtube_code": "-byTiKtOrH4",
         "artist_nationality": "España",
-        "artist_url": "https://www.extremoduro.com/"
+        "artist_url": "https://www.extremoduro.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -12303,7 +12531,8 @@
         "year": "1967",
         "apple_music_url": "https://embed.music.apple.com/es/album/878000342?i=878000348",
         "youtube_code": "U0yIf9Tkgu4",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Soul"
       }
     },
     {
@@ -12399,7 +12628,8 @@
         "year": "1975",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440861160?i=1440861294",
         "youtube_code": "unfzfe8f9NI",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Pop"
       }
     },
     {
@@ -12431,7 +12661,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1443333201?i=1443333354",
         "youtube_code": "4riOcYulpxQ",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://sevendust.com/"
+        "artist_url": "https://sevendust.com/",
+        "genre": "Nu metal"
       }
     },
     {
@@ -12470,7 +12701,8 @@
         "year": "1977",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440882892?i=1440883287",
         "youtube_code": "-fWw7FE9tTo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -12522,7 +12754,8 @@
         "category": "Bandas Sonoras Originales",
         "spotify_url": "https://open.spotify.com/embed/album/22UOVuCSJnESOxHBL7UJQN",
         "year": "2000",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Ambient"
       }
     },
     {
@@ -12562,7 +12795,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1440761104?i=1440761341",
         "youtube_code": "0NFV8dHrZYM",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://elbow.co.uk/"
+        "artist_url": "https://elbow.co.uk/",
+        "genre": "Indie rock"
       }
     },
     {
@@ -12608,7 +12842,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/499910679?i=499910684",
         "youtube_code": "VjODBcrgHPE",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -12664,7 +12899,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/101072188?i=101071993",
         "youtube_code": "rruTAabmjvM",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "New wave"
       }
     },
     {
@@ -12703,7 +12939,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1660629521?i=1660630363",
         "youtube_code": "gNvhvI59YX0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -12785,7 +13022,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/289405558?i=289405625",
         "youtube_code": "nmK5X4KtSzA",
-        "artist_nationality": "Islandia"
+        "artist_nationality": "Islandia",
+        "genre": "Indie pop"
       }
     },
     {
@@ -12822,7 +13060,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/289604735",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.daughtryofficial.com/"
+        "artist_url": "http://www.daughtryofficial.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -12893,7 +13132,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/1447442814?i=1447442935",
         "youtube_code": "8L64BcCRDAE",
-        "artist_nationality": "Islandia"
+        "artist_nationality": "Islandia",
+        "genre": "Post-rock"
       }
     },
     {
@@ -13003,7 +13243,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1108855980?i=1108856260",
         "youtube_code": "Qt2mbGP6vFI",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://philcollins.com/"
+        "artist_url": "https://philcollins.com/",
+        "genre": "Soft rock"
       }
     },
     {
@@ -13035,7 +13276,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/254000323?i=254000385",
         "youtube_code": "Nb1VOQRs-Vs",
-        "artist_nationality": "Argentina"
+        "artist_nationality": "Argentina",
+        "genre": "Latin"
       }
     },
     {
@@ -13084,7 +13326,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/320973040?i=320973069",
         "youtube_code": "5RowAc-H3EM",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Folk"
       }
     },
     {
@@ -13139,7 +13382,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1442454272?i=1442454279",
         "year": "1995",
         "youtube_code": "tM1rSTOs7Zs",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -13201,7 +13445,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440856219",
         "youtube_code": "lzKQ9I-2AXY",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Soul"
       }
     },
     {
@@ -13245,7 +13490,8 @@
         "song": "Air On A G String",
         "spotify_url": "https://open.spotify.com/embed/track/7rIWt3zlh2ntF1XDzj3wee",
         "youtube_code": "C4gIXvPk70g",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Classical"
       }
     },
     {
@@ -13278,7 +13524,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/331976141?i=331976890",
         "youtube_code": "wjWcF1QJx1Y",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -13318,7 +13565,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/270570605?i=270570607",
         "youtube_code": "UNo2-viKfW8",
         "artist_nationality": "Alemania",
-        "artist_url": "http://www.guanoapes.org/"
+        "artist_url": "http://www.guanoapes.org/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -13560,7 +13808,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/274017660?i=274017673",
         "youtube_code": "4vUzU7Em-UU",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Jazz"
       }
     },
     {
@@ -13606,7 +13855,8 @@
         "year": "1980",
         "apple_music_url": "https://embed.music.apple.com/es/album/128118673?i=128117993",
         "youtube_code": "ULmMwwn2o14",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -13638,7 +13888,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1442989631",
         "youtube_code": "q-SJjFcnsGs",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Dance-punk"
       }
     },
     {
@@ -13731,7 +13982,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/371668006?i=371668008",
         "year": "2010",
         "youtube_code": "QmjvnU4VKaA",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -13818,7 +14070,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443494795?i=1443495128",
         "youtube_code": "MPDmzTq4VHM",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -13850,7 +14103,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/157279141?i=157279464",
         "youtube_code": "L0frA_0MjW8",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.michaelbolton.com/"
+        "artist_url": "http://www.michaelbolton.com/",
+        "genre": "Pop rock"
       }
     },
     {
@@ -14041,7 +14295,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/279346512?i=279346570",
         "youtube_code": "WPbeEtjo70g",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Drum and bass"
       }
     },
     {
@@ -14085,7 +14340,8 @@
         "song": "Ein Tag",
         "spotify_url": "https://open.spotify.com/embed/track/2y79M7dij5Y9l9tYH8HqRU",
         "year": "2009",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Folk"
       }
     },
     {
@@ -14139,7 +14395,8 @@
         "year": "1988",
         "apple_music_url": "https://embed.music.apple.com/es/album/726432511?i=726433978",
         "youtube_code": "KIzRpvlmjZA",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -14187,7 +14444,8 @@
         "year": "1970",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440282323?i=1440282325",
         "youtube_code": "0qanF-91aJo",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Heavy metal"
       }
     },
     {
@@ -14305,7 +14563,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440717563?i=1440717826",
         "youtube_code": "gGdGFtwCNBE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -14351,7 +14610,8 @@
         "year": "1991",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440896026?i=1440896173",
         "youtube_code": "zRIbf6JqkNc",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hard rock"
       }
     },
     {
@@ -14433,7 +14693,8 @@
         "year": "1989",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440984569?i=1440984571",
         "youtube_code": "UmFFTkjs-O0",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Post-punk"
       }
     },
     {
@@ -14457,7 +14718,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/473099715?i=473099716",
         "youtube_code": "U8Qp3G398v0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Punk"
       }
     },
     {
@@ -14490,7 +14752,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1445831859?i=1445832042",
         "youtube_code": "fP-OVSQPqEQ",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Metal"
       }
     },
     {
@@ -14551,7 +14814,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/284530501?i=284530521",
         "youtube_code": "KjShkVqz2a4",
-        "artist_url": "http://www.hanszimmer.com/"
+        "artist_url": "http://www.hanszimmer.com/",
+        "genre": "Modern classical"
       }
     },
     {
@@ -14612,7 +14876,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443435094?i=1443435099",
         "youtube_code": "TqkJ30Kh7ZM",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Garage punk"
       }
     },
     {
@@ -14636,7 +14901,8 @@
         "year": "1993",
         "apple_music_url": "https://embed.music.apple.com/es/album/724502027?i=724502206",
         "youtube_code": "JwBjhBL9G6U",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Hip hop"
       }
     },
     {
@@ -14728,7 +14994,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1745026624?i=1745026625",
         "youtube_code": "8cWtSjvHOjY",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Jazz"
       }
     },
     {
@@ -14775,7 +15042,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/696672816?i=696672824",
         "song": "C'etait ici",
         "youtube_code": "G07oMCsF6v0",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Rock"
       }
     },
     {
@@ -14821,7 +15089,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1442905702?i=1442906202",
         "youtube_code": "Aerg3LphvbE",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Folk"
       }
     },
     {
@@ -14845,7 +15114,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1816084271",
         "youtube_code": "nuI3LeZBzrY",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -14896,7 +15166,8 @@
         "song": "El niño güey",
         "spotify_url": "https://open.spotify.com/embed/track/4HSUcBiPq6e9fsYv5q1yvg",
         "year": "2005",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Hip hop"
       }
     },
     {
@@ -15095,7 +15366,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/0n9RaZL54AffEDhkv5F5PJ",
         "year": "2003",
         "youtube_code": "l9reZ_rHZPw",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Funk metal"
       }
     },
     {
@@ -15298,7 +15570,8 @@
         "year": "2010",
         "youtube_code": "Bzba7TfDINc",
         "apple_music_url": "https://embed.music.apple.com/es/album/671941810?i=671942200",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Indie rock"
       }
     },
     {
@@ -15352,7 +15625,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/362133451?i=362133453",
         "youtube_code": "I7rCNiiNPxA",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -15376,7 +15650,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/153438328?i=153438355",
         "year": "2004",
         "youtube_code": "FcvXr-9XtgA",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -15469,7 +15744,8 @@
         "year": "1970",
         "apple_music_url": "https://embed.music.apple.com/es/album/836963816?i=836963835",
         "youtube_code": "YlgTzjZhR80",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Hard rock"
       }
     },
     {
@@ -15547,7 +15823,8 @@
         "category": "Conciertos",
         "song": "Cierre de concierto",
         "spotify_url": "https://open.spotify.com/embed/track/7ouMYWpwJ422jRcDASZB7P",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -15571,7 +15848,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/368703341?i=368703370",
         "youtube_code": "NbrGRuDIfGw",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Heavy metal"
       }
     },
     {
@@ -15604,7 +15882,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1502723226?i=1502723227",
         "youtube_code": "2MwPYO2yjhU",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Indie pop"
       }
     },
     {
@@ -15672,7 +15951,8 @@
         "year": "1996",
         "apple_music_url": "https://embed.music.apple.com/es/album/1474185335?i=1474185342",
         "youtube_code": "GIuZUCpm9hc",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Progressive metal"
       }
     },
     {
@@ -15713,7 +15993,8 @@
         "year": "1957",
         "apple_music_url": "https://embed.music.apple.com/es/album/485677395?i=485677833",
         "youtube_code": "mukQYm-O-AY",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Big band"
       }
     },
     {
@@ -15737,7 +16018,8 @@
         "year": "1984",
         "apple_music_url": "https://embed.music.apple.com/es/album/1727314446?i=1727314454",
         "youtube_code": "5jZ9IoMqHcY",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Glam metal"
       }
     },
     {
@@ -15804,7 +16086,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/1509395336?i=1509395700",
         "youtube_code": "PakHxrxYBsc",
-        "artist_nationality": "Brasil"
+        "artist_nationality": "Brasil",
+        "genre": "Jazz"
       }
     },
     {
@@ -15828,7 +16111,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1442841157?i=1442841402",
         "youtube_code": "YwGDkGnc88o",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -15861,7 +16145,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/107665489?i=107664406",
         "youtube_code": "qmfWtlhiQLU",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Blues"
       }
     },
     {
@@ -15910,7 +16195,8 @@
         "category": "Canciones",
         "song": "Thunder",
         "year": "2008",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Jazz"
       }
     },
     {
@@ -15942,7 +16228,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/63075939?i=63075953",
         "youtube_code": "qQC4dmjAWNM",
         "artist_nationality": "Uruguay",
-        "artist_url": "http://jorgedrexler.com/"
+        "artist_url": "http://jorgedrexler.com/",
+        "genre": "Latin ballad"
       }
     },
     {
@@ -15989,7 +16276,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/101217908",
         "youtube_code": "AiCoRwtO0cQ",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Celtic rock"
       }
     },
     {
@@ -16035,7 +16323,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/4xGFcQEIjtmbPD6Jsxq14M",
         "year": "1962",
         "youtube_code": "XQ2ojfznsq8",
-        "artist_nationality": "Brasil"
+        "artist_nationality": "Brasil",
+        "genre": "Bossa nova"
       }
     },
     {
@@ -16068,7 +16357,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/151252913?i=151253317",
         "youtube_code": "IflFhpxyy-Y",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Progressive metal"
       }
     },
     {
@@ -16092,7 +16382,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/67631410?i=67630776",
         "youtube_code": "uwh3IP6q0v4",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Celtic"
       }
     },
     {
@@ -16131,7 +16422,8 @@
         "year": "1970",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440948020?i=1440948088",
         "youtube_code": "u1V8YRJnr4Q",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Swamp rock"
       }
     },
     {
@@ -16155,7 +16447,8 @@
         "year": "1992",
         "apple_music_url": "https://embed.music.apple.com/es/album/922122348?i=922122360",
         "youtube_code": "uTKZ0zI0iEA",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -16179,7 +16472,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1445732923?i=1445733073",
         "youtube_code": "KjgWWjkNbhU",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://www.eltonjohn.com/"
+        "artist_url": "https://www.eltonjohn.com/",
+        "genre": "Pop"
       }
     },
     {
@@ -16203,7 +16497,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1444011452",
         "youtube_code": "SQ7iZ-cxyA0",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -16225,7 +16520,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1zGLVSco7H7NdpYfXGP3MD",
         "apple_music_url": "https://embed.music.apple.com/es/album/1444439263?i=1444439271",
         "youtube_code": "AbZSxiKVqmE",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Copla"
       }
     },
     {
@@ -16273,7 +16569,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/1714843662?i=1714844189",
         "youtube_code": "os4k2Zu7EB4",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -16312,7 +16609,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/182233646?i=182233793",
         "youtube_code": "eT9vheIszuw",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.kennygarrett.com/"
+        "artist_url": "http://www.kennygarrett.com/",
+        "genre": "Jazz"
       }
     },
     {
@@ -16336,7 +16634,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1436074064?i=1436074068",
         "youtube_code": "bY2wLycRssA",
-        "artist_nationality": "Irlanda"
+        "artist_nationality": "Irlanda",
+        "genre": "Rock"
       }
     },
     {
@@ -16374,7 +16673,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/6NZnmNm1gQeOytHZHclwYs",
         "year": "1973",
         "apple_music_url": "https://embed.music.apple.com/es/album/216546627?i=216546781",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Funk"
       }
     },
     {
@@ -16406,7 +16706,8 @@
         "year": "1991",
         "apple_music_url": "https://embed.music.apple.com/es/album/945581828?i=945581832",
         "youtube_code": "iyu04pqC8lE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Funk rock"
       }
     },
     {
@@ -16436,7 +16737,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/6stN8j5phWoWRgezf8260C",
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443808564",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -16459,7 +16761,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/0FoUcAsGNaVlcp2rgDv4RF",
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/274167784?i=274167794",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -16483,7 +16786,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1440812388?i=1440812588",
         "youtube_code": "BinwuzZVjnE",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.rollingstones.com/"
+        "artist_url": "http://www.rollingstones.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -16516,7 +16820,8 @@
         "year": "1983",
         "apple_music_url": "https://embed.music.apple.com/es/album/979936834?i=979938033",
         "youtube_code": "X4bgXH3sJ2Q",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Heavy metal"
       }
     },
     {
@@ -16562,7 +16867,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/1466652597?i=1466652605",
         "youtube_code": "yjJL9DGU7Gg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Grunge"
       }
     },
     {
@@ -16586,7 +16892,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1771710012?i=1771710539",
         "youtube_code": "36_4xjLFjM0",
         "artist_nationality": "Francia",
-        "artist_url": "https://www.wearephoenix.com/"
+        "artist_url": "https://www.wearephoenix.com/",
+        "genre": "Indie pop"
       }
     },
     {
@@ -16619,7 +16926,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/39280545?i=39280557",
         "youtube_code": "rOLN9T9w9kA",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Trip hop"
       }
     },
     {
@@ -16713,7 +17021,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440769689?i=1440769904",
         "youtube_code": "P0RlY2jEqSY",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -16765,7 +17074,8 @@
         "song": "Adagio del Concierto de Aranjuez",
         "spotify_url": "https://open.spotify.com/embed/track/2Tj8bSk30yzu5nyxr1U2TP",
         "year": "2000",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Classical"
       }
     },
     {
@@ -16789,7 +17099,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/277743082?i=277743136",
         "youtube_code": "8gFCW3PHBws",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -16813,7 +17124,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/307377410?i=307377430",
         "youtube_code": "yIEDeowX5rw",
         "artist_nationality": "España",
-        "artist_url": "http://www.amparanoia.com/"
+        "artist_url": "http://www.amparanoia.com/",
+        "genre": "Latin"
       }
     },
     {
@@ -16966,7 +17278,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1586895441?i=1586895442",
         "youtube_code": "hTWKbfoikeg",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.nirvana.com/"
+        "artist_url": "https://www.nirvana.com/",
+        "genre": "Grunge"
       }
     },
     {
@@ -16998,7 +17311,8 @@
         "year": "1990",
         "apple_music_url": "https://embed.music.apple.com/es/album/158439495?i=158440256",
         "youtube_code": "vIUke0CCvDs",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hard rock"
       }
     },
     {
@@ -17022,7 +17336,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/724445553?i=724446531",
         "youtube_code": "UEAhCsslqpE",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -17046,7 +17361,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/671833423?i=671833425",
         "youtube_code": "0xwxDra-xyg",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Art pop"
       }
     },
     {
@@ -17070,7 +17386,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/850042755",
         "youtube_code": "HLoOnBbDeeQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Blues rock"
       }
     },
     {
@@ -17093,7 +17410,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1ijHdyp5Xe23eQDXlJhsuE",
         "year": "1991",
         "youtube_code": "k94zDsJ-JMU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Jazz"
       }
     },
     {
@@ -17133,7 +17451,8 @@
         "year": "1996",
         "apple_music_url": "https://embed.music.apple.com/es/album/1097861387?i=1097861836",
         "youtube_code": "1uYWYWPc9HU",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -17220,7 +17539,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/203132910?i=203133094",
         "youtube_code": "NU9M8ej8dbM",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Acid jazz"
       }
     },
     {
@@ -17244,7 +17564,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/387683225?i=387683240",
         "youtube_code": "1Q_JcgTov7o",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Celtic rock"
       }
     },
     {
@@ -17360,7 +17681,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/267019278?i=267019389",
         "youtube_code": "j2no6QN1VnQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -17400,7 +17722,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440636547?i=1440636710",
         "youtube_code": "YgSPaXgAdzE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -17515,7 +17838,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/341535479?i=341535540",
         "youtube_code": "3w_InVVk5KU",
-        "artist_nationality": "Cuba"
+        "artist_nationality": "Cuba",
+        "genre": "Trova"
       }
     },
     {
@@ -17556,7 +17880,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/6k54ZuG2Z49HQRbJdO65b5",
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/368054407",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -17603,7 +17928,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/5C4oRiTuFPTo22t98qTL5g",
         "year": "2005",
         "artist_nationality": "Australia",
-        "artist_url": "http://www.johnbutlertrio.com/"
+        "artist_url": "http://www.johnbutlertrio.com/",
+        "genre": "Folk"
       }
     },
     {
@@ -17627,7 +17953,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/319397457?i=319397483",
         "youtube_code": "nCvRT2sy5FE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -17715,7 +18042,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1617420235?i=1617420238",
         "youtube_code": "JDuzLbomVMA",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Folk"
       }
     },
     {
@@ -17739,7 +18067,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/278035282?i=278035379",
         "youtube_code": "5-hXSgSmHwc",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Electrotango"
       }
     },
     {
@@ -17771,7 +18100,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/731963464?i=731963539",
         "youtube_code": "F0rwOsAteXM",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Pop"
       }
     },
     {
@@ -17795,7 +18125,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1109658139",
         "youtube_code": "NdYWuo9OFAw",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.googoodolls.com/"
+        "artist_url": "https://www.googoodolls.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -17819,7 +18150,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1443456452?i=1443456821",
         "youtube_code": "qQzdAsjWGPg",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.sinatra.com/"
+        "artist_url": "http://www.sinatra.com/",
+        "genre": "Jazz"
       }
     },
     {
@@ -17888,7 +18220,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/1444010211?i=1444010213",
         "youtube_code": "hptx-ofa5Uo",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Chanson française"
       }
     },
     {
@@ -17912,7 +18245,8 @@
         "year": "1988",
         "apple_music_url": "https://embed.music.apple.com/es/album/1727790222?i=1727790507",
         "youtube_code": "ZLwwIe_PjhE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Glam metal"
       }
     },
     {
@@ -17983,7 +18317,8 @@
         "year": "1980",
         "apple_music_url": "https://embed.music.apple.com/es/album/1614468412?i=1614468417",
         "youtube_code": "7pkHRfXBy2I",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "New wave"
       }
     },
     {
@@ -18063,7 +18398,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/1QZi8laY96nhaeGSklvN4D",
         "year": "1999",
         "youtube_code": "7NuiVUxZQfs",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Progressive metal"
       }
     },
     {
@@ -18103,7 +18439,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/387681154?i=387681164",
         "youtube_code": "1TB1x67Do5U",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "New wave"
       }
     },
     {
@@ -18136,7 +18473,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/726124235?i=726124672",
         "youtube_code": "RM9JWCVG4v4",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Folk"
       }
     },
     {
@@ -18176,7 +18514,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440905650?i=1440905808",
         "youtube_code": "O3dWBLoU--E",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -18209,7 +18548,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1713570802?i=1713573141",
         "youtube_code": "dscfeQOMuGw",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.zodiaclung.com/"
+        "artist_url": "http://www.zodiaclung.com/",
+        "genre": "Stoner rock"
       }
     },
     {
@@ -18233,7 +18573,8 @@
         "year": "1991",
         "apple_music_url": "https://embed.music.apple.com/es/album/1559885581?i=1559885583",
         "youtube_code": "0vUdluxNJ8E",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Pop"
       }
     },
     {
@@ -18298,7 +18639,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/716406320",
         "youtube_code": "T68sBbo9LlI",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -18331,7 +18673,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1545839209?i=1545839211",
         "youtube_code": "-vkyV84Ho7Q",
-        "artist_nationality": "Noruega"
+        "artist_nationality": "Noruega",
+        "genre": "Gothic metal"
       }
     },
     {
@@ -18424,7 +18767,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/1435646598?i=1435646607",
         "youtube_code": "KHM4PrHqNCo",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Electropop"
       }
     },
     {
@@ -18457,7 +18801,8 @@
         "year": "1978",
         "apple_music_url": "https://embed.music.apple.com/es/album/714094883?i=714096454",
         "youtube_code": "JqyTRH6geOM",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Punk"
       }
     },
     {
@@ -18504,7 +18849,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1828716608?i=1828716610",
         "youtube_code": "UfmkgQRmmeE",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.vanmorrison.com/"
+        "artist_url": "http://www.vanmorrison.com/",
+        "genre": "Folk rock"
       }
     },
     {
@@ -18536,7 +18882,8 @@
         "year": "1988",
         "apple_music_url": "https://embed.music.apple.com/es/album/1027465077?i=1027465608",
         "youtube_code": "49FB9hhoO6c",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -18575,7 +18922,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1252757950",
         "youtube_code": "wRFkxOM90UA",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Indie rock"
       }
     },
     {
@@ -18607,7 +18955,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1610400335?i=1610400700",
         "youtube_code": "9mqVekWJwxo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -18662,7 +19011,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1722479405?i=1722479415",
         "youtube_code": "eemZUbBtOLY",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Pop"
       }
     },
     {
@@ -18686,7 +19036,8 @@
         "year": "1991",
         "apple_music_url": "https://embed.music.apple.com/es/album/251671839?i=251671874",
         "youtube_code": "uzhr3Hg-XlI",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Dark wave"
       }
     },
     {
@@ -18740,7 +19091,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/1006543456?i=1006543458",
         "youtube_code": "4GHN1Mu6VG0",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Big beat"
       }
     },
     {
@@ -18786,7 +19138,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/0LOVgVTubX7ORrcLNLEksr",
         "year": "1937",
         "youtube_code": "Kxi4XkIVWLQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Delta blues"
       }
     },
     {
@@ -18818,7 +19171,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/37althaVkWK0pmxCgHmuFG",
         "year": "2002",
         "youtube_code": "Gd2-GZkFPkk",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Chanson française"
       }
     },
     {
@@ -18887,7 +19241,8 @@
         "song": "Overload",
         "spotify_url": "https://open.spotify.com/embed/track/5mkiCQExfYiH0HOKbVAPAE",
         "year": "2000",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -18918,7 +19273,8 @@
         "year": "1990",
         "youtube_code": "H58gMiQQRm0",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://theblackcrowes.com/"
+        "artist_url": "https://theblackcrowes.com/",
+        "genre": "Blues rock"
       }
     },
     {
@@ -18958,7 +19314,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1891116316?i=1891116321",
         "youtube_code": "ilVGDL-a4Kc",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -18998,7 +19355,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/1660698602?i=1660698791",
         "youtube_code": "KRZxbHqPfOg",
-        "artist_nationality": "Finlandia"
+        "artist_nationality": "Finlandia",
+        "genre": "Power metal"
       }
     },
     {
@@ -19030,7 +19388,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1eWjFDVbeDDFaJ38IfwG2M",
         "year": "2010",
         "youtube_code": "rgdge3sI8Mo",
-        "artist_nationality": "Dinamarca"
+        "artist_nationality": "Dinamarca",
+        "genre": "Electronic rock"
       }
     },
     {
@@ -19092,7 +19451,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/714705446",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://kttunstall.com/"
+        "artist_url": "http://kttunstall.com/",
+        "genre": "Folk"
       }
     },
     {
@@ -19163,7 +19523,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/118125504?i=118125081",
         "youtube_code": "vKl7DrQj9ig",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -19219,7 +19580,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1831584251?i=1831584253",
         "youtube_code": "-M7vOnlcLbo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Nu metal"
       }
     },
     {
@@ -19251,7 +19613,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/334826611?i=334826654",
         "youtube_code": "JdUhS4pmf4M",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Lounge"
       }
     },
     {
@@ -19275,7 +19638,8 @@
         "year": "1972",
         "apple_music_url": "https://embed.music.apple.com/es/album/976826793?i=976827222",
         "youtube_code": "9wxI4KK9ZYo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Art rock"
       }
     },
     {
@@ -19342,7 +19706,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/3owrJe0OzNBOS5EpAhFRmW",
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/883500999?i=883501052",
-        "artist_nationality": "Japón"
+        "artist_nationality": "Japón",
+        "genre": "Classical"
       }
     },
     {
@@ -19459,7 +19824,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1444067088?i=1444067103",
         "youtube_code": "2ysfiIwgBuU",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.delamitri.com/"
+        "artist_url": "http://www.delamitri.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -19513,7 +19879,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/259751732?i=259751738",
         "youtube_code": "VKzWLUQizz8",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Electro house"
       }
     },
     {
@@ -19546,7 +19913,8 @@
         "year": "1987",
         "apple_music_url": "https://embed.music.apple.com/es/album/1653566279?i=1653567069",
         "youtube_code": "O5IoZR41ltE",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -19578,7 +19946,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1jkHadH6dmjGJerMMm8BOa",
         "year": "1975",
         "youtube_code": "rfaihaFlcSg",
-        "artist_nationality": "Italia"
+        "artist_nationality": "Italia",
+        "genre": "Rock"
       }
     },
     {
@@ -19602,7 +19971,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/502838030?i=502838038",
         "youtube_code": "8eqcmxyQHxs",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Electronic"
       }
     },
     {
@@ -19624,7 +19994,8 @@
         "song": "Master of Puppets",
         "year": "1999",
         "youtube_code": "E0ozmU9cJDg",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Thrash metal"
       }
     },
     {
@@ -19671,7 +20042,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/726416050?i=726416473",
         "youtube_code": "SSbBvKaM6sk",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -19701,7 +20073,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/04wHr5OrcX3blirs4tRGUD",
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/357534650?i=357534665",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie pop"
       }
     },
     {
@@ -19740,7 +20113,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1852618373?i=1852618390",
         "year": "1999",
         "youtube_code": "SkkIwO_X4i4",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Gypsy punk"
       }
     },
     {
@@ -19764,7 +20138,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1668262694?i=1668262884",
         "youtube_code": "Bm1g5Yg0hUw",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.dandywarhols.com/"
+        "artist_url": "http://www.dandywarhols.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -19811,7 +20186,8 @@
         "year": "1988",
         "apple_music_url": "https://embed.music.apple.com/es/album/723398262?i=723398328",
         "youtube_code": "d-diB65scQU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Jazz"
       }
     },
     {
@@ -19844,7 +20220,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1460471435?i=1460471445",
         "youtube_code": "rNg2Dh6gPkw",
-        "artist_nationality": "Finlandia"
+        "artist_nationality": "Finlandia",
+        "genre": "Symphonic metal"
       }
     },
     {
@@ -19874,7 +20251,8 @@
         "song": "Love Theme",
         "spotify_url": "https://open.spotify.com/embed/album/6NkuCdMz5tGmHbOXAWbtCW",
         "year": "1982",
-        "artist_nationality": "Grecia"
+        "artist_nationality": "Grecia",
+        "genre": "Electronic"
       }
     },
     {
@@ -19941,7 +20319,8 @@
         "year": "1996",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443233666?i=1443233999",
         "youtube_code": "TGGOkp0VHac",
-        "artist_nationality": "Italia"
+        "artist_nationality": "Italia",
+        "genre": "Jazz"
       }
     },
     {
@@ -19989,7 +20368,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/284735474?i=284735478",
         "youtube_code": "qh8UPZs2t3Q",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Flamenco"
       }
     },
     {
@@ -20013,7 +20393,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/357721071?i=357721151",
         "youtube_code": "TGuAIGStets",
-        "artist_nationality": "Suiza"
+        "artist_nationality": "Suiza",
+        "genre": "Pop"
       }
     },
     {
@@ -20053,7 +20434,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/723757915?i=723757978",
         "youtube_code": "388bzfEEEWE",
-        "artist_nationality": "Países Bajos"
+        "artist_nationality": "Países Bajos",
+        "genre": "Rock"
       }
     },
     {
@@ -20083,7 +20465,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/0vBIKxACLWaBYJyQqAl7iu",
         "year": "2010",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.reginaspektor.com/"
+        "artist_url": "http://www.reginaspektor.com/",
+        "genre": "Anti-folk"
       }
     },
     {
@@ -20123,7 +20506,8 @@
         "year": "1979",
         "apple_music_url": "https://embed.music.apple.com/es/album/1065975633?i=1065976170",
         "youtube_code": "7kWl-ZGMwkQ",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -20162,7 +20546,8 @@
         "year": "1975",
         "apple_music_url": "https://embed.music.apple.com/es/album/6781023399?i=6781023657",
         "youtube_code": "fJ9rUzIMcZQ",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -20194,7 +20579,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1436239145?i=1436239150",
         "youtube_code": "8IoO5nkxT_4",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -20218,7 +20604,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1590333246?i=1590333252",
         "youtube_code": "CQwcqwHvrus",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://belleandsebastian.com/"
+        "artist_url": "https://belleandsebastian.com/",
+        "genre": "Indie pop"
       }
     },
     {
@@ -20250,7 +20637,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1309355762?i=1309355767",
         "youtube_code": "dPRYEZx01qU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie folk"
       }
     },
     {
@@ -20324,7 +20712,8 @@
         "year": "1995",
         "apple_music_url": "https://embed.music.apple.com/es/album/726405397?i=726405700",
         "youtube_code": "e1S8PzAjCQI",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -20348,7 +20737,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440653096?i=1440653206",
         "youtube_code": "4qQyUi4zfDs",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Trip hop"
       }
     },
     {
@@ -20395,7 +20785,8 @@
         "song": "Faded",
         "spotify_url": "https://open.spotify.com/embed/track/7GGmTz1GIEfeFZhg9q9Szo",
         "year": "1996",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -20418,7 +20809,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/7ert1XNsFjELUhMHNRBylv",
         "year": "2002",
         "youtube_code": "xXbPZ5hzdLI",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -20457,7 +20849,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1850810462?i=1850810465",
         "youtube_code": "Pib8eYDSFEI",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Indie pop"
       }
     },
     {
@@ -20490,7 +20883,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/892018539?i=892018546",
         "youtube_code": "m2OFxeg4spU",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.tompetty.com/"
+        "artist_url": "http://www.tompetty.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -20536,7 +20930,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/91992239?i=91991171",
         "youtube_code": "Rx0mYN32Kps",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -20559,7 +20954,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/384584145?i=384584150",
         "youtube_code": "l9vYSBR9nio",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock"
       }
     },
     {
@@ -20591,7 +20987,8 @@
         "year": "1986",
         "apple_music_url": "https://embed.music.apple.com/es/album/392830140?i=392830144",
         "youtube_code": "H6GTGCskxnQ",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -20615,7 +21012,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/362180473?i=362180487",
         "youtube_code": "EO0p_U1w89A",
-        "artist_nationality": "Finlandia"
+        "artist_nationality": "Finlandia",
+        "genre": "Pop"
       }
     },
     {
@@ -20655,7 +21053,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/340845298?i=340845522",
         "youtube_code": "NARh2xZeegM",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Indie pop"
       }
     },
     {
@@ -20679,7 +21078,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/417723934?i=417723935",
         "youtube_code": "6Cs3Pvmmv0E",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.georgemichael.com/"
+        "artist_url": "http://www.georgemichael.com/",
+        "genre": "Pop"
       }
     },
     {
@@ -20787,7 +21187,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/101256642?i=101255958",
         "youtube_code": "jXYCBPZOLZQ",
-        "artist_nationality": "Argentina"
+        "artist_nationality": "Argentina",
+        "genre": "Rock"
       }
     },
     {
@@ -20850,7 +21251,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1841436650?i=1841436652",
         "youtube_code": "NOG3eus4ZSo",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.smashingpumpkins.com/"
+        "artist_url": "https://www.smashingpumpkins.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -20890,7 +21292,8 @@
         "year": "1974",
         "apple_music_url": "https://embed.music.apple.com/es/album/391329235?i=391329236",
         "youtube_code": "7n0-N9qnXXQ",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -20922,7 +21325,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/693525980?i=693526009",
         "youtube_code": "z1rYmzQ8C9Q",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -20943,7 +21347,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/1P3B7c85W4mTXHk0fafGw2",
         "year": "2008",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.lauramarling.com/"
+        "artist_url": "http://www.lauramarling.com/",
+        "genre": "Folk"
       }
     },
     {
@@ -20976,7 +21381,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1826216531?i=1826217155",
         "youtube_code": "0QgM7lNgFnA",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Jazz"
       }
     },
     {
@@ -21067,7 +21473,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/274004116?i=274004375",
         "youtube_code": "1qmKk7fj9Ug",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -21099,7 +21506,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1485032634?i=1485032645",
         "youtube_code": "zwrHbI7auxs",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Punk"
       }
     },
     {
@@ -21231,7 +21639,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1401058390?i=1401059465",
         "youtube_code": "BW9Fzwuf43c",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -21254,7 +21663,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1435007812?i=1435008045",
         "youtube_code": "ABfQuZqq8wg",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.marvingaye.net/"
+        "artist_url": "http://www.marvingaye.net/",
+        "genre": "Soul"
       }
     },
     {
@@ -21293,7 +21703,8 @@
         "year": "1996",
         "apple_music_url": "https://embed.music.apple.com/es/album/1694076566?i=1694076582",
         "youtube_code": "pyExn6paD0U",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Psychedelic rock"
       }
     },
     {
@@ -21316,7 +21727,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/4veeNpXDK1YRHMTJ1Cppsg",
         "year": "2010",
         "youtube_code": "imwmmv9r1oE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Metal"
       }
     },
     {
@@ -21340,7 +21752,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1663661508?i=1663661527",
         "youtube_code": "BluHmpE8WfE",
-        "artist_nationality": "Noruega"
+        "artist_nationality": "Noruega",
+        "genre": "Folk pop"
       }
     },
     {
@@ -21362,7 +21775,8 @@
         "song": "Theme From Jurassic Park",
         "spotify_url": "https://open.spotify.com/embed/album/1PgeYPKQY9H5pxHGJa5izY",
         "year": "1993",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Classical"
       }
     },
     {
@@ -21386,7 +21800,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/697240234?i=697240266",
         "youtube_code": "R6Yfk-RL_9A",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Electronic"
       }
     },
     {
@@ -21410,7 +21825,8 @@
         "year": "1993",
         "apple_music_url": "https://embed.music.apple.com/es/album/403721236?i=403721254",
         "youtube_code": "FAmavvYPSLk",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -21467,7 +21883,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/303669081?i=303669094",
         "youtube_code": "3Y3LohlQFRs",
-        "artist_nationality": "Puerto Rico"
+        "artist_nationality": "Puerto Rico",
+        "genre": "Latin"
       }
     },
     {
@@ -21499,7 +21916,8 @@
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/1550302872?i=1550302979",
         "youtube_code": "B2DlKf8_8Ck",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -21545,7 +21963,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/1Da87nj7hlkdRAh9Zf5jp7",
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/368688241",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Heavy metal"
       }
     },
     {
@@ -21569,7 +21988,8 @@
         "year": "1967",
         "apple_music_url": "https://embed.music.apple.com/es/album/1192962129?i=1192962341",
         "youtube_code": "gdnzBNMfZfo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Psychedelic rock"
       }
     },
     {
@@ -21593,7 +22013,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1442990312?i=1442990320",
         "youtube_code": "iArXv64tCJA",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Rock"
       }
     },
     {
@@ -21625,7 +22046,8 @@
         "year": "1992",
         "apple_music_url": "https://embed.music.apple.com/es/album/305695112?i=305695140",
         "youtube_code": "kTQ70Zv0JMQ",
-        "artist_nationality": "Irlanda"
+        "artist_nationality": "Irlanda",
+        "genre": "New age"
       }
     },
     {
@@ -21649,7 +22071,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1589224458?i=1589224467",
         "youtube_code": "jCG2XNaODnM",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.spoontheband.com/"
+        "artist_url": "http://www.spoontheband.com/",
+        "genre": "Indie rock"
       }
     },
     {
@@ -21712,7 +22135,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/693606397?i=693606496",
         "youtube_code": "Fo6aKnRnBxM",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.gerryrafferty.com/"
+        "artist_url": "http://www.gerryrafferty.com/",
+        "genre": "Soft rock"
       }
     },
     {
@@ -21795,7 +22219,8 @@
         "lector": "Always Candy",
         "lector_web": "http://alwayscandy.wordpress.com/",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://wmg.jp/artist/suede/"
+        "artist_url": "http://wmg.jp/artist/suede/",
+        "genre": "Britpop"
       }
     },
     {
@@ -21841,7 +22266,8 @@
         "year": "1984",
         "apple_music_url": "https://embed.music.apple.com/es/album/1446013584?i=1446013598",
         "youtube_code": "Fpu5a0Bl8eY",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Neue deutsche welle"
       }
     },
     {
@@ -21865,7 +22291,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/276799575?i=276799602",
         "youtube_code": "rxDCcLVfOvM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hard rock"
       }
     },
     {
@@ -21896,7 +22323,8 @@
         "year": "1992",
         "apple_music_url": "https://embed.music.apple.com/es/album/309736061?i=309736079",
         "youtube_code": "g-UOTOqtU0M",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Grunge"
       }
     },
     {
@@ -21928,7 +22356,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/693376433?i=693376439",
         "youtube_code": "crsEGl4q1Qs",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -21983,7 +22412,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1436541287?i=1436541293",
         "youtube_code": "qp7KX1h3i_w",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Electronic"
       }
     },
     {
@@ -22006,7 +22436,8 @@
         "year": "1963",
         "apple_music_url": "https://embed.music.apple.com/es/album/329913658?i=329913683",
         "youtube_code": "Qgmh0BjLKVM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Garage rock"
       }
     },
     {
@@ -22027,7 +22458,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/5dbW25KDJWBkv2gtaQdmxJ",
         "year": "1998",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.fatboyslim.net/"
+        "artist_url": "http://www.fatboyslim.net/",
+        "genre": "Big beat"
       }
     },
     {
@@ -22088,7 +22520,8 @@
         "year": "1977",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440810369?i=1440811242",
         "youtube_code": "yqrAPOZxgzU",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Punk rock"
       }
     },
     {
@@ -22131,7 +22564,8 @@
         "category": "Canciones",
         "song": "Take me to the bonuslevel because I need an extra life",
         "year": "2007",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Chiptune"
       }
     },
     {
@@ -22163,7 +22597,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1443379135?i=1443379471",
         "youtube_code": "cYF0qU5WSew",
         "artist_nationality": "Canadá",
-        "artist_url": "http://www.listentofeist.com/"
+        "artist_url": "http://www.listentofeist.com/",
+        "genre": "Indie pop"
       }
     },
     {
@@ -22195,7 +22630,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1766601472?i=1766601484",
         "youtube_code": "Kdpxt4xiY_0",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Indie pop"
       }
     },
     {
@@ -22219,7 +22655,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1484813680?i=1484813685",
         "youtube_code": "iFsn9DQp4NU",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -22243,7 +22680,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/696139354?i=696139474",
         "youtube_code": "-Tk18PWkvNo",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -22295,7 +22733,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/2gLyPiwZIAsmtorjUxFg2r",
         "year": "2011",
         "apple_music_url": "https://embed.music.apple.com/es/album/731963464",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Pop"
       }
     },
     {
@@ -22326,7 +22765,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/7cFfFVVubc4K5qB0jGyguY",
         "year": "1991",
         "youtube_code": "JuA-YPatiHU",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Trip hop"
       }
     },
     {
@@ -22389,7 +22829,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1575400412?i=1575401166",
         "youtube_code": "07xTvC5a9YQ",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Rock"
       }
     },
     {
@@ -22413,7 +22854,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1551628500?i=1551628502",
         "youtube_code": "4t97qEK5ub0",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Drum and bass"
       }
     },
     {
@@ -22453,7 +22895,8 @@
         "year": "1990",
         "apple_music_url": "https://embed.music.apple.com/es/album/723401781?i=723403307",
         "youtube_code": "8HgpUuItyZE",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Blues rock"
       }
     },
     {
@@ -22477,7 +22920,8 @@
         "year": "1995",
         "apple_music_url": "https://embed.music.apple.com/es/album/299612552?i=299612594",
         "youtube_code": "s4oZdUV-G-Y",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Trip hop"
       }
     },
     {
@@ -22498,7 +22942,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/1gQuJDU5dpEkpdeDCIj19Z",
         "year": "1982",
         "apple_music_url": "https://embed.music.apple.com/es/album/1442468679",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Mod revival"
       }
     },
     {
@@ -22530,7 +22975,8 @@
         "year": "1994",
         "apple_music_url": "https://embed.music.apple.com/es/album/1484709966?i=1484709990",
         "youtube_code": "j4iuG7StmPc",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -22554,7 +23000,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1697149568?i=1697149763",
         "youtube_code": "u0gTNfbChD8",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.nadasurf.com/"
+        "artist_url": "http://www.nadasurf.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -22578,7 +23025,8 @@
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/1891804280?i=1891804685",
         "youtube_code": "Ly0fz0T_lQE",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Folk"
       }
     },
     {
@@ -22602,7 +23050,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/251126923?i=251126957",
         "youtube_code": "ma9I9VBKPiw",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Indie rock"
       }
     },
     {
@@ -22640,7 +23089,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/05ZxYc1glaSTsNVbjBO9Ty",
         "year": "1997",
         "youtube_code": "j--2L3_FN08",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Hardcore punk"
       }
     },
     {
@@ -22734,7 +23184,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/4SoFta34T2QBaaDzhPgXaR",
         "year": "1995",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.james-horner.com/"
+        "artist_url": "http://www.james-horner.com/",
+        "genre": "Classical"
       }
     },
     {
@@ -22779,7 +23230,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/2JO3HwMRPeya8bXbtbyPcf",
         "year": "1980",
         "youtube_code": "zuuObGsB0No",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Post-punk"
       }
     },
     {
@@ -22803,7 +23255,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/380597264?i=380597267",
         "youtube_code": "J_pRUZxIgdQ",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.paulsimon.com/"
+        "artist_url": "http://www.paulsimon.com/",
+        "genre": "Folk"
       }
     },
     {
@@ -22897,7 +23350,8 @@
         "year": "2010",
         "youtube_code": "NLAbYWKwrfk",
         "apple_music_url": "https://embed.music.apple.com/es/album/362286829?i=362286894",
-        "artist_nationality": "Francia"
+        "artist_nationality": "Francia",
+        "genre": "Hip hop"
       }
     },
     {
@@ -22920,7 +23374,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/28ASL502mpsN4rqS2NmrS3",
         "year": "1963",
         "youtube_code": "KThbNtVCFs4",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Rock and roll"
       }
     },
     {
@@ -22950,7 +23405,8 @@
         "song": "Raiders March",
         "spotify_url": "https://open.spotify.com/embed/album/6NKHFx1dBKrBU68RDFo76f",
         "year": "1981",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Classical"
       }
     },
     {
@@ -23021,7 +23477,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/218401886?i=218401954",
         "artist_nationality": "Australia",
-        "artist_url": "http://www.johnbutlertrio.com/"
+        "artist_url": "http://www.johnbutlertrio.com/",
+        "genre": "Folk"
       }
     },
     {
@@ -23067,7 +23524,8 @@
         "year": "1995",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440923838?i=1440924223",
         "youtube_code": "yuTMWgOduFM",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Britpop"
       }
     },
     {
@@ -23091,7 +23549,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/42019347?i=42019376",
         "youtube_code": "9LiNTU6GKlw",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -23115,7 +23574,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/963454866?i=963454881",
         "youtube_code": "_cXjuGubzFU",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Folk"
       }
     },
     {
@@ -23189,7 +23649,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/716272179?i=716272338",
         "youtube_code": "pfuU-uMNfF0",
         "artist_nationality": "Suecia",
-        "artist_url": "http://www.shoutoutlouds.com/"
+        "artist_url": "http://www.shoutoutlouds.com/",
+        "genre": "Indie pop"
       }
     },
     {
@@ -23235,7 +23696,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/695797980?i=695798149",
         "youtube_code": "qjc0ZIDM88Q",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Rock"
       }
     },
     {
@@ -23267,7 +23729,8 @@
         "year": "1996",
         "apple_music_url": "https://embed.music.apple.com/es/album/1435815170?i=1435815180",
         "youtube_code": "lDpnjE1LUvE",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -23290,7 +23753,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1gDB1PmlJzwvtSmiRSLFpd",
         "year": "1996",
         "youtube_code": "3L4YrGaR8E4",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative metal"
       }
     },
     {
@@ -23314,7 +23778,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1535558765?i=1535559501",
         "youtube_code": "RtX5xDzaMro",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://catstevens.com/"
+        "artist_url": "https://catstevens.com/",
+        "genre": "Folk rock"
       }
     },
     {
@@ -23399,7 +23864,8 @@
         "year": "1977",
         "apple_music_url": "https://embed.music.apple.com/es/album/193730141?i=193730684",
         "youtube_code": "tH2w6Oxx0kQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -23431,7 +23897,8 @@
         "year": "1981",
         "apple_music_url": "https://embed.music.apple.com/es/album/1076060805?i=1076060806",
         "youtube_code": "YkADj0TPrJA",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Soft rock"
       }
     },
     {
@@ -23455,7 +23922,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/187454164?i=187454458",
         "youtube_code": "FSBiplT9pi8",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://incubushq.com/"
+        "artist_url": "https://incubushq.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -23493,7 +23961,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/78Gzxi27GuNHTfkn2BylG4",
         "year": "2003",
         "youtube_code": "yQOJTLylm-A",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -23553,7 +24022,8 @@
         "year": "1967",
         "apple_music_url": "https://embed.music.apple.com/es/album/693518736?i=693519571",
         "youtube_code": "iC42OqjRF3M",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Latin ballad"
       }
     },
     {
@@ -23577,7 +24047,8 @@
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/1474894272?i=1474894559",
         "youtube_code": "afeAUndotas",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie folk"
       }
     },
     {
@@ -23600,7 +24071,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/2P4gGEWFH9zpJFXiLVRAJR",
         "year": "1991",
         "youtube_code": "1kT0ShC0w98",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -23624,7 +24096,8 @@
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/254840189?i=254840275",
         "youtube_code": "UWhah56hDbE",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Ska"
       }
     },
     {
@@ -23656,7 +24129,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/1339316659?i=1339316979",
         "youtube_code": "6XKvbROUmNk",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Indie rock"
       }
     },
     {
@@ -23742,7 +24216,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/1314528415?i=1314528419",
         "youtube_code": "QjdK9oRdKGM",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Drum and bass"
       }
     },
     {
@@ -23766,7 +24241,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/373318295?i=373318376",
         "youtube_code": "YDc58LGEYAE",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Punk rock"
       }
     },
     {
@@ -23790,7 +24266,8 @@
         "year": "1990",
         "apple_music_url": "https://embed.music.apple.com/es/album/574049507?i=574051407",
         "youtube_code": "v2AC41dglnM",
-        "artist_nationality": "Australia"
+        "artist_nationality": "Australia",
+        "genre": "Hard rock"
       }
     },
     {
@@ -23819,7 +24296,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/7gGcnUEEQgIMV2JRwVQbrF",
         "year": "2002",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.maroon5.com/"
+        "artist_url": "https://www.maroon5.com/",
+        "genre": "Pop"
       }
     },
     {
@@ -23875,7 +24353,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/724350250?i=724350331",
         "youtube_code": "Jj1VKss9FWw",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://dovesofficial.com/"
+        "artist_url": "https://dovesofficial.com/",
+        "genre": "Indie rock"
       }
     },
     {
@@ -23914,7 +24393,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/388953323?i=388953504",
         "youtube_code": "Jz2gvAApY2A",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://www.sonymusic.co.uk/artist/manic-street-preachers/"
+        "artist_url": "https://www.sonymusic.co.uk/artist/manic-street-preachers/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -23938,7 +24418,8 @@
         "year": "1993",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440848808?i=1440848810",
         "youtube_code": "ImKY6TZEyrI",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Dream pop"
       }
     },
     {
@@ -23961,7 +24442,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/7oozqNSsCLSSnkh3xN4pPP",
         "year": "2009",
         "youtube_code": "t5zvdfnd51I",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Pop"
       }
     },
     {
@@ -23984,7 +24466,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/724437216?i=724437318",
         "youtube_code": "T7B8U6bVvfI",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -24031,7 +24514,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/219396985",
         "youtube_code": "JXHMVgVgf0g",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -24077,7 +24561,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/302552722?i=302552724",
         "youtube_code": "inHbha2nyPs",
         "artist_nationality": "Francia",
-        "artist_url": "https://www.caravanpalace.com/"
+        "artist_url": "https://www.caravanpalace.com/",
+        "genre": "Electro swing"
       }
     },
     {
@@ -24130,7 +24615,8 @@
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440954595?i=1440954734",
         "youtube_code": "xAkg4cwJp1Y",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Indie rock"
       }
     },
     {
@@ -24186,7 +24672,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/690599409?i=690599482",
         "youtube_code": "KsGIGRJAPiE",
         "artist_nationality": "España",
-        "artist_url": "http://www.skizoo.es/"
+        "artist_url": "http://www.skizoo.es/",
+        "genre": "Alternative metal"
       }
     },
     {
@@ -24210,7 +24697,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1737160565?i=1737160569",
         "album": "Tigerränder & Taggtråd",
         "youtube_code": "G0Q5ysoF38Y",
-        "artist_nationality": "Suecia"
+        "artist_nationality": "Suecia",
+        "genre": "Punk"
       }
     },
     {
@@ -24234,7 +24722,8 @@
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1532131566?i=1532131588",
         "youtube_code": "UkJBS0Zazmw",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Progressive rock"
       }
     },
     {
@@ -24256,7 +24745,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/1380525919",
         "artist_nationality": "Irlanda",
-        "artist_url": "http://www.theframes.ie/"
+        "artist_url": "http://www.theframes.ie/",
+        "genre": "Indie rock"
       }
     },
     {
@@ -24280,7 +24770,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/712750351?i=712750380",
         "youtube_code": "nzyNWyZhUS0",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.aperfectcircle.com/"
+        "artist_url": "https://www.aperfectcircle.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -24323,7 +24814,8 @@
         "song": "A conspirancy",
         "spotify_url": "https://open.spotify.com/embed/track/2L4QKwX4eZubyN5dNkKlqH",
         "year": "1994",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Blues rock"
       }
     },
     {
@@ -24347,7 +24839,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1824106689?i=1824106694",
         "youtube_code": "h7ArUgxtlJs",
         "artist_nationality": "Canadá",
-        "artist_url": "http://www.deadmau5.com/"
+        "artist_url": "http://www.deadmau5.com/",
+        "genre": "Progressive house"
       }
     },
     {
@@ -24438,7 +24931,8 @@
         "year": "1996",
         "youtube_code": "wp87EVIenhk",
         "apple_music_url": "https://embed.music.apple.com/es/album/1872440620",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Indie rock"
       }
     },
     {
@@ -24462,7 +24956,8 @@
         "year": "1975",
         "apple_music_url": "https://embed.music.apple.com/es/album/1808090878?i=1808090895",
         "youtube_code": "sH0Qda32IKM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Psychedelic rock"
       }
     },
     {
@@ -24514,7 +25009,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1q9l6c8bAzqWcvO3DM6FsR",
         "year": "2006",
         "youtube_code": "4H5I6y1Qvz0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop"
       }
     },
     {
@@ -24546,7 +25042,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/376182536?i=376182600",
         "album": "Three Lions",
         "youtube_code": "oyoy2_7FegI",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Britpop"
       }
     },
     {
@@ -24570,7 +25067,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1862267701?i=1862267705",
         "youtube_code": "HJ9qLSpuJ7M",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://bandofhorses.com/"
+        "artist_url": "http://bandofhorses.com/",
+        "genre": "Indie rock"
       }
     },
     {
@@ -24594,7 +25092,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/270409624?i=270409634",
         "youtube_code": "9IzKueQ2ZxY",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Pop"
       }
     },
     {
@@ -24618,7 +25117,8 @@
         "year": "2008",
         "apple_music_url": "https://embed.music.apple.com/es/album/1604782222?i=1604783150",
         "youtube_code": "qDsdcltwMyM",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -24658,7 +25158,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1440917748",
         "youtube_code": "u9WgtlgGAgs",
         "artist_nationality": "Suecia",
-        "artist_url": "https://cardigans.com/"
+        "artist_url": "https://cardigans.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -24688,7 +25189,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1vxw6aYJls2oq3gW0DujAo",
         "year": "2006",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.gnarlsbarkley.com/"
+        "artist_url": "http://www.gnarlsbarkley.com/",
+        "genre": "Alternative hip hop"
       }
     },
     {
@@ -24712,7 +25214,8 @@
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1287830680?i=1287831352",
         "youtube_code": "GJF3sY3HGCA",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Metal"
       }
     },
     {
@@ -24753,7 +25256,8 @@
         "youtube_code": "3mbBbFH9fAg",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440811129?i=1440811686",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://soundgardenworld.com/"
+        "artist_url": "http://soundgardenworld.com/",
+        "genre": "Grunge"
       }
     },
     {
@@ -24813,7 +25317,8 @@
         "year": "2011",
         "apple_music_url": "https://embed.music.apple.com/es/album/429065370?i=429065378",
         "youtube_code": "FeGyEMVIuhs",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Rockabilly"
       }
     },
     {
@@ -24845,7 +25350,8 @@
         "year": "1999",
         "apple_music_url": "https://embed.music.apple.com/es/album/202788351?i=202788367",
         "youtube_code": "akYm79TnTf4",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Alternative dance"
       }
     },
     {
@@ -24884,7 +25390,8 @@
         "year": "2011",
         "apple_music_url": "https://embed.music.apple.com/es/album/713647550?i=713647601",
         "youtube_code": "HJqlA_HTEU8",
-        "artist_nationality": "México"
+        "artist_nationality": "México",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -24906,7 +25413,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/449913758",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://bishopallen.com/"
+        "artist_url": "http://bishopallen.com/",
+        "genre": "Indie rock"
       }
     },
     {
@@ -24951,7 +25459,8 @@
         "year": "1980",
         "youtube_code": "UbxUSsFXYo4",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.dollyparton.com/"
+        "artist_url": "https://www.dollyparton.com/",
+        "genre": "Country"
       }
     },
     {
@@ -25026,7 +25535,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1648620567?i=1648620718",
         "youtube_code": "JTLsF5hbuO8",
         "artist_nationality": "Australia",
-        "artist_url": "https://siamusic.net/"
+        "artist_url": "https://siamusic.net/",
+        "genre": "Pop"
       }
     },
     {
@@ -25078,7 +25588,8 @@
         "year": "1964",
         "apple_music_url": "https://embed.music.apple.com/es/album/1441164416?i=1441164417",
         "youtube_code": "zx2TFk0vh1I",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Rock"
       }
     },
     {
@@ -25109,7 +25620,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1SN46fWhF52YGnj7mGMTgQ",
         "year": "1995",
         "youtube_code": "UHQQ-IgZEeg",
-        "artist_nationality": "Bosnia y Herzegovina"
+        "artist_nationality": "Bosnia y Herzegovina",
+        "genre": "Folk"
       }
     },
     {
@@ -25147,7 +25659,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1yN2z5XVtaAOYGdeEqEuqd",
         "year": "1995",
         "youtube_code": "wCQfkEkePx8",
-        "artist_nationality": "Alemania"
+        "artist_nationality": "Alemania",
+        "genre": "Pop"
       }
     },
     {
@@ -25203,7 +25716,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1443723633?i=1443723685",
         "youtube_code": "u1AFFbOn3Ww",
         "artist_nationality": "Argentina",
-        "artist_url": "http://www.bersuit.com/"
+        "artist_url": "http://www.bersuit.com/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -25227,7 +25741,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/716595806?i=716595963",
         "youtube_code": "qcnPfHS24Pg",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.speechmusic.com/"
+        "artist_url": "http://www.speechmusic.com/",
+        "genre": "Boom bap"
       }
     },
     {
@@ -25259,7 +25774,8 @@
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/280429634?i=280429677",
         "youtube_code": "2lP5Og2tyVQ",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Pop punk"
       }
     },
     {
@@ -25315,7 +25831,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1349432579?i=1349432778",
         "youtube_code": "PHzAavDjTR0",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative metal"
       }
     },
     {
@@ -25339,7 +25856,8 @@
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443811956?i=1443812507",
         "youtube_code": "GCpvqLb1b94",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Indie rock"
       }
     },
     {
@@ -25406,7 +25924,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/1814380385?i=1814380732",
         "youtube_code": "oCAQ9uLmMdc",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Hip hop"
       }
     },
     {
@@ -25438,7 +25957,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/696904992?i=696907113",
         "youtube_code": "hMjwb13TFCo",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.daveedmundsmusic.com/"
+        "artist_url": "http://www.daveedmundsmusic.com/",
+        "genre": "Blues rock"
       }
     },
     {
@@ -25500,7 +26020,8 @@
         "category": "Especiales",
         "spotify_url": "https://open.spotify.com/embed/user/dsong2009/playlist/6MgdhqxqXtVWytzzz3YcQa",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://www.thebeatles.com/"
+        "artist_url": "https://www.thebeatles.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -25532,7 +26053,8 @@
         "year": "1976",
         "apple_music_url": "https://embed.music.apple.com/es/album/913902091?i=913902137",
         "youtube_code": "t4QK8RxCAwo",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hard rock"
       }
     },
     {
@@ -25571,7 +26093,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/721272842?i=721275427",
         "youtube_code": "Ts0XSyWpMnU",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://www.johnlennon.com/"
+        "artist_url": "https://www.johnlennon.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -25617,7 +26140,8 @@
         "year": "2002",
         "apple_music_url": "https://embed.music.apple.com/es/album/307631269?i=307631403",
         "youtube_code": "LCCiwPEdEpg",
-        "artist_nationality": "Reino Unido"
+        "artist_nationality": "Reino Unido",
+        "genre": "Heavy metal"
       }
     },
     {
@@ -25638,7 +26162,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/4YF2FhoRfaTLv2sMVLUrJm",
         "year": "1993",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.dannyelfman.com/"
+        "artist_url": "https://www.dannyelfman.com/",
+        "genre": "Modern classical"
       }
     },
     {
@@ -25660,7 +26185,8 @@
         "year": "1964",
         "youtube_code": "MMFj8uDubsE",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://bobdylan.com/"
+        "artist_url": "https://bobdylan.com/",
+        "genre": "Folk rock"
       }
     },
     {
@@ -25684,7 +26210,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/1462170885?i=1462170889",
         "youtube_code": "vSrosScv6x8",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://sensesfail.com/"
+        "artist_url": "https://sensesfail.com/",
+        "genre": "Pop punk"
       }
     },
     {
@@ -25708,7 +26235,8 @@
         "year": "1998",
         "apple_music_url": "https://embed.music.apple.com/es/album/1432108891?i=1432110505",
         "youtube_code": "kryV3E4QKGk",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -25732,7 +26260,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/395769893?i=395769908",
         "youtube_code": "aDaOgu2CQtI",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://pearljam.com/"
+        "artist_url": "https://pearljam.com/",
+        "genre": "Grunge"
       }
     },
     {
@@ -25763,7 +26292,8 @@
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/1601008224?i=1601008492",
         "youtube_code": "J8urkUCH79s",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Dream pop"
       }
     },
     {
@@ -25886,7 +26416,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/5YLeOLcuG6ohhlpZBuI9KE",
         "year": "2009",
         "youtube_code": "46WMkqcImU4",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Indie folk"
       }
     },
     {
@@ -26307,7 +26838,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/2QVQ9jDMP7FTYMnIhcC4gk",
         "year": "2009",
         "artist_nationality": "Reino Unido",
-        "artist_url": "http://www.officialsmiths.co.uk/"
+        "artist_url": "http://www.officialsmiths.co.uk/",
+        "genre": "Jangle pop"
       }
     },
     {
@@ -28204,7 +28736,8 @@
         "lector_web": "http://twitter.com/_alwayscandy",
         "year": "2011",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://thedrums.com/"
+        "artist_url": "http://thedrums.com/",
+        "genre": "Indie pop"
       }
     },
     {
@@ -28632,7 +29165,8 @@
         "artist": "Soft Cell",
         "category": "Listas",
         "artist_nationality": "Reino Unido",
-        "artist_url": "https://www.softcell.co.uk/"
+        "artist_url": "https://www.softcell.co.uk/",
+        "genre": "Synth-pop"
       }
     },
     {
@@ -32133,7 +32667,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/5JYGhIsQQSaoKqAROGpdsE",
         "year": "2000",
         "youtube_code": "0l0nzPpvbFs",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1440755215?i=1440755220"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440755215?i=1440755220",
+        "genre": "Stoner rock"
       }
     },
     {
@@ -33589,7 +34124,8 @@
         "category": "Bandas Sonoras Originales",
         "spotify_url": "https://open.spotify.com/embed/album/17WBbLtuKLHWkYp2Eryuu9",
         "year": "2011",
-        "artist_url": "https://www.michaelgiacchino.com/"
+        "artist_url": "https://www.michaelgiacchino.com/",
+        "genre": "Contemporary classical"
       }
     },
     {
@@ -33638,7 +34174,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/6eyqdgLPrzPyK3sKQVzIJl",
         "year": "1989",
         "youtube_code": "_0soY3Dk6QI",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1107820371?i=1107820611"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1107820371?i=1107820611",
+        "genre": "Soft rock"
       }
     },
     {
@@ -33824,7 +34361,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/6vj4uYCtqbpDjARz3MIBAI",
         "year": "2009",
         "youtube_code": "s1g7xyOhP3w",
-        "artist_url": "http://juliamarcell.com/"
+        "artist_url": "http://juliamarcell.com/",
+        "genre": "Alternative pop"
       }
     },
     {
@@ -33900,7 +34438,8 @@
         "artist": "Astor Piazzola",
         "category": "Canciones",
         "podcast_file": "dsong.es_20120316.mp3",
-        "artist_nationality": "Argentina"
+        "artist_nationality": "Argentina",
+        "genre": "Tango"
       }
     },
     {
@@ -34801,7 +35340,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/1Wgxp3J4MEqM7pXDyHfWb9",
         "year": "1998",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.hanszimmer.com/"
+        "artist_url": "http://www.hanszimmer.com/",
+        "genre": "Modern classical"
       }
     },
     {
@@ -34983,7 +35523,8 @@
         "artist_nationality": "american",
         "category": "Bandas Sonoras Originales",
         "spotify_url": "https://open.spotify.com/embed/album/5yKkKXvX1X0finFqR3JAKL",
-        "year": "2001"
+        "year": "2001",
+        "genre": "Classical"
       }
     },
     {
@@ -35198,7 +35739,8 @@
         "category": "Bandas Sonoras Originales",
         "spotify_url": "https://open.spotify.com/embed/album/0fFr787efn2HNrwrMSg6Yi",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://jamesnewtonhoward.com/"
+        "artist_url": "https://jamesnewtonhoward.com/",
+        "genre": "Classical"
       }
     },
     {
@@ -35372,7 +35914,8 @@
         "category": "Bandas Sonoras Originales",
         "spotify_url": "https://open.spotify.com/embed/album/0ycGvXMOCk8eBhOLxbEcG2",
         "youtube_code": "pNPIih4X7SA",
-        "artist_url": "https://johnpowellmusic.com/"
+        "artist_url": "https://johnpowellmusic.com/",
+        "genre": "Orchestral"
       }
     },
     {
@@ -36548,7 +37091,8 @@
         "artist_nationality": "american",
         "category": "Bandas Sonoras Originales",
         "spotify_url": "https://open.spotify.com/embed/album/6qbtlYI0l4Fpj3hJ7e9jGY",
-        "year": "1982"
+        "year": "1982",
+        "genre": "Classical"
       }
     },
     {
@@ -37379,7 +37923,8 @@
         "category": "Bandas Sonoras Originales",
         "spotify_url": "https://open.spotify.com/embed/album/6hzdQgjn3wTJhOUI4cVKu2",
         "year": "2001",
-        "artist_url": "https://www.yanntiersen.com/"
+        "artist_url": "https://www.yanntiersen.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -37436,7 +37981,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/0k9un4VZY52tvtxNhg6XLo",
         "year": "1987",
         "youtube_code": "d27gTrPPAyk",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1650882889?i=1650882898"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1650882889?i=1650882898",
+        "genre": "Pop"
       }
     },
     {
@@ -40966,7 +41512,8 @@
         "apple_music_url": "https://embed.music.apple.com/es/album/351872914?i=351873879",
         "youtube_code": "1rM5XH8O2fg",
         "artist_nationality": "Dinamarca",
-        "artist_url": "http://www.efterklang.net/"
+        "artist_url": "http://www.efterklang.net/",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -41166,7 +41713,8 @@
         "youtube_code": "TvBZmHyQv0c",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440803218?i=1440803930",
         "year": "2010",
-        "artist_nationality": "Canadá"
+        "artist_nationality": "Canadá",
+        "genre": "Pop"
       }
     },
     {
@@ -41234,7 +41782,8 @@
         "category": "Especiales",
         "spotify_url": "https://open.spotify.com/embed/user/dsong2009/playlist/0PxM1pgnvD9XcFzHubsn4r",
         "artist_nationality": "India",
-        "artist_url": "http://www.ravishankar.org/"
+        "artist_url": "http://www.ravishankar.org/",
+        "genre": "Indian classical"
       }
     },
     {
@@ -43496,7 +44045,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/0Lm12qfY6FePUQJKnJhnp7",
         "year": "2012",
         "youtube_code": "bNhIr_6H8aw",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1485058156?i=1485058160"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1485058156?i=1485058160",
+        "genre": "Rock"
       }
     },
     {
@@ -44873,7 +45423,8 @@
         "year": "2011",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443494795?i=1443495484",
         "youtube_code": "xDe7nVANDZg",
-        "artist_url": "http://latheband.com/"
+        "artist_url": "http://latheband.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -45187,7 +45738,8 @@
         "artist": "Justin Bieber",
         "category": "Especiales",
         "artist_nationality": "Canadá",
-        "artist_url": "https://www.justinbiebermusic.com/"
+        "artist_url": "https://www.justinbiebermusic.com/",
+        "genre": "Pop"
       }
     },
     {
@@ -46095,7 +46647,8 @@
         "spotify_url": "https://open.spotify.com/embed/album/1CLd4e3Crv3c5niqaZh7Aa",
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/268440194",
-        "artist_url": "https://melondiesel.com/"
+        "artist_url": "https://melondiesel.com/",
+        "genre": "Rock"
       }
     },
     {
@@ -46785,7 +47338,8 @@
         "artist": "Thomas Newman",
         "artist_nationality": "american",
         "category": "Bandas Sonoras Originales",
-        "spotify_url": "https://open.spotify.com/embed/album/5ucvCY0hFIAL95DVKohEiB"
+        "spotify_url": "https://open.spotify.com/embed/album/5ucvCY0hFIAL95DVKohEiB",
+        "genre": "Cinematic classical"
       }
     },
     {
@@ -47073,7 +47627,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/4riRq59QsmP74fLDUbyOug",
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/401440905?i=401440925",
-        "youtube_code": "Efg1h0EzLeE"
+        "youtube_code": "Efg1h0EzLeE",
+        "genre": "Indie rock"
       }
     },
     {
@@ -48026,7 +48581,8 @@
         "song": "Make your kind of music",
         "spotify_url": "https://open.spotify.com/embed/track/1nuiMoIH7mdUUDWnvocKVy",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "http://www.casselliot.com/"
+        "artist_url": "http://www.casselliot.com/",
+        "genre": "Baroque pop"
       }
     },
     {
@@ -49252,7 +49808,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/5eelBDTfioqMcfrN8ZuJAD",
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/1660475552?i=1660475560",
-        "youtube_code": "iwMTZFBd5eQ"
+        "youtube_code": "iwMTZFBd5eQ",
+        "genre": "Alternative rock"
       }
     },
     {
@@ -50410,7 +50967,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/0xOk7aRJlO3dUry6E0ffQp",
         "year": "1954",
         "apple_music_url": "https://embed.music.apple.com/es/album/466499817?i=466499901",
-        "youtube_code": "tXNohKdbBDo"
+        "youtube_code": "tXNohKdbBDo",
+        "genre": "Easy listening"
       }
     },
     {
@@ -51626,7 +52184,8 @@
         "song": "House of the rising sun",
         "year": "1964",
         "youtube_code": "5A-4VGfx5lU",
-        "apple_music_url": "https://embed.music.apple.com/es/album/697238360?i=697238871"
+        "apple_music_url": "https://embed.music.apple.com/es/album/697238360?i=697238871",
+        "genre": "Blues rock"
       }
     },
     {
@@ -54003,7 +54562,8 @@
         "year": "2011",
         "youtube_code": "RouVRNTKWKk",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443136580?i=1443136782",
-        "artist_nationality": "España"
+        "artist_nationality": "España",
+        "genre": "Hip hop"
       }
     },
     {
@@ -56328,7 +56888,8 @@
         "spotify_url": "https://open.spotify.com/embed/track/1RIhd7jjWDQwSKsbxxGArN",
         "year": "2014",
         "youtube_code": "1Nr_tqkMsJs",
-        "apple_music_url": "https://embed.music.apple.com/es/album/828622648?i=828622712"
+        "apple_music_url": "https://embed.music.apple.com/es/album/828622648?i=828622712",
+        "genre": "Hip hop"
       }
     },
     {
@@ -58021,7 +58582,8 @@
         "category": "Especiales",
         "spotify_url": "https://open.spotify.com/embed/user/alvaromontoro/playlist/422iLGtVnBVvmmPdVIyoCj",
         "year": "2015",
-        "artist_nationality": "Estados Unidos"
+        "artist_nationality": "Estados Unidos",
+        "genre": "Hip hop"
       }
     },
     {
@@ -58064,7 +58626,8 @@
         "category": "Especiales",
         "year": "2015",
         "artist_nationality": "Estados Unidos",
-        "artist_url": "https://www.fnm.com/"
+        "artist_url": "https://www.fnm.com/",
+        "genre": "Alternative metal"
       }
     },
     {

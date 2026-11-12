@@ -40,7 +40,7 @@ lib/musicbrainz.js     MusicBrainz client for the scripts: norm(), rate-limited 
 lib/reports.js         report(name): path in reports/, where every script writes its generated files (candidates,
                        review decisions, caches, reports); reports/ is the only generated folder ignored by git.
 lib/versions.js        Version markers (live, acoustic, remix…) in titles: KIND, isVersion(), kindsIn().
-lib/genres.js          metadata.genre (243 free-text values) -> broad family (Rock, Indie y alternativo…), for the archive landing (/archive/).
+lib/genres.js          metadata.genre (free-text values) -> broad family (Rock, Indie y alternativo…), for the archive landing (/archive/).
 lib/countries.js       artist_nationality (free text, EN/ES) -> country { code (ISO numeric), name (Spanish) }.
 _data/archive.js       Global `archive`: ids + byEditor/byArtist/byAlbum/byYear/byCategory/byCountry + byDay ("MM-DD") + radio.
 _data/worldMap.js      Global `worldMap`: country SVG paths (visionscarto-world-atlas 110m, d3-geo) + post counts, for /mapa/.
