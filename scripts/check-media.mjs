@@ -6,7 +6,7 @@ import data from "../data/posts.json" with { type: "json" };
 const CONCURRENCY = 3;
 const checks = [];
 for (const post of data.posts) {
-  const { youtube_code: youtube, spotify_url: spotify } = post.metadata;
+  const { youtube_code: youtube, spotify_url: spotify } = post.editorMetadata;
   if (youtube) checks.push({ id: post.id, type: "youtube", value: youtube,
     url: `https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${youtube}`)}` });
   if (spotify) checks.push({ id: post.id, type: "spotify", value: spotify,

@@ -14,7 +14,7 @@ const decisions = read(DECISIONS);
 // Reference players for each post (same sources as post.njk), to compare against the candidates.
 const PODCAST = "https://dsongstatic.jesusmagamu.dev/mp3/podcast/";
 const posts = JSON.parse(readFileSync(new URL("../data/posts.json", import.meta.url), "utf8")).posts;
-const players = Object.fromEntries(posts.map(({ id, metadata: m }) => [id, [
+const players = Object.fromEntries(posts.map(({ id, editorMetadata: m }) => [id, [
   m.spotify_url && { label: "Spotify", type: "iframe", src: m.spotify_url, height: 80 },
   m.apple_music_url && { label: "Apple Music", type: "iframe", src: m.apple_music_url, height: m.apple_music_url.includes("?i=") ? 175 : 450 },
   m.podcast_file && { label: "Podcast", type: "audio", src: PODCAST + m.podcast_file },

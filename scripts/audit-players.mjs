@@ -64,7 +64,7 @@ const withContext = posts.filter((p) => context[p.id]);
 const jobs = [];
 if (!cached) {
 for (const p of withContext) {
-  const m = p.metadata;
+  const m = p.editorMetadata;
   if (m.youtube_code && !(`yt:${m.youtube_code}` in cache)) jobs.push([`yt:${m.youtube_code}`, () => youtube(m.youtube_code), 300]);
   if (m.spotify_url && /\/(track|album)\//.test(m.spotify_url) && !(`sp:${m.spotify_url}` in cache)) jobs.push([`sp:${m.spotify_url}`, () => spotify(m.spotify_url), 400]);
 }
@@ -75,7 +75,7 @@ for (const [key, run, wait] of jobs) {
   await sleep(wait);
   if (++n % 50 === 0) { save(); console.log(`${n}/${jobs.length}`); }
 }
-const appleIds = [...new Set(withContext.map((p) => p.metadata.apple_music_url && appleId(p.metadata.apple_music_url)).filter((id) => id && !(`am:${id}` in cache)))];
+const appleIds = [...new Set(withContext.map((p) => p.editorMetadata.apple_music_url && appleId(p.editorMetadata.apple_music_url)).filter((id) => id && !(`am:${id}` in cache)))];
 console.log(`${appleIds.length} Apple Music players to look up`);
 for (let i = 0; i < appleIds.length; i += 150) {
   const batch = appleIds.slice(i, i + 150), found = await apple(batch);
@@ -106,7 +106,7 @@ const LABEL = {
   studio: "Post presents the original, player looks like another version",
 };
 for (const p of withContext) {
-  const c = context[p.id], m = p.metadata;
+  const c = context[p.id], m = p.editorMetadata;
   if (["podcast", "other"].includes(c.subject)) continue;
   const performer = c.performer ?? m.artist;
   const players = [

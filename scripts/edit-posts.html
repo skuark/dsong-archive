@@ -470,18 +470,18 @@ function fill(post) {
   field('content').value = post.content ?? '';
   field('reviewed').checked = !!post.reviewed_at;
   field('reviewed').parentElement.title = post.reviewed_at ? `Revisado el ${post.reviewed_at}` : 'Se guarda con la fecha de hoy';
-  for (const input of editor.querySelectorAll('[name^="m."]')) input.value = post.metadata[input.name.slice(2)] ?? '';
+  for (const input of editor.querySelectorAll('[name^="m."]')) input.value = post.editorMetadata[input.name.slice(2)] ?? '';
 
   // Metadata the form doesn't know (e.g. info_spotify): plain text fields
   const extra = $('[data-extra]', editor);
-  for (const key of Object.keys(post.metadata)) {
+  for (const key of Object.keys(post.editorMetadata)) {
     if (field(`m.${key}`)) continue;
     const label = document.createElement('label');
     label.className = 'field';
     label.innerHTML = `<span></span><input>`;
     label.firstChild.textContent = key;
     label.lastChild.name = `m.${key}`;
-    label.lastChild.value = post.metadata[key];
+    label.lastChild.value = post.editorMetadata[key];
     extra.append(label);
   }
 
@@ -553,12 +553,12 @@ function build() {
   if (author && author.name !== post.editor.name) post.editor = structuredClone(author);
 
   const metadata = {};
-  const keys = [...Object.keys(current.post.metadata), ...KNOWN.filter((k) => !(k in current.post.metadata))];
+  const keys = [...Object.keys(current.post.editorMetadata), ...KNOWN.filter((k) => !(k in current.post.editorMetadata))];
   for (const key of keys) {
-    const v = editor.querySelector(`[name="m.${key}"]`) ? value(`m.${key}`).trim() : current.post.metadata[key];
+    const v = editor.querySelector(`[name="m.${key}"]`) ? value(`m.${key}`).trim() : current.post.editorMetadata[key];
     if (v) metadata[key] = v;
   }
-  post.metadata = metadata;
+  post.editorMetadata = metadata;
 
   post.comments = [...editor.querySelectorAll('.comment')].map((row) => {
     const comment = structuredClone(current.post.comments[row.dataset.index]);
@@ -678,7 +678,7 @@ const STATUS = { ok: '✓ enlazado', review: 'por revisar', none: 'sin buscar to
 const bare = (s) => (s ?? '').replace(/^\s*(?:b\.?s\.?o\.?|o\.?s\.?t\.?|banda sonora(?: original)?(?: de)?)(?:\s*[:\-–]\s*|\s+)/i, '').trim();
 const mmss = (s) => (s ? `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}` : '');
 const ctx = () => current.sources?.context ?? {};
-const meta = () => current.post.metadata;
+const meta = () => current.post.editorMetadata;
 const performer = () => ctx().performer || meta().artist || '';
 
 function renderContext() {

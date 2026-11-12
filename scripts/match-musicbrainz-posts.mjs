@@ -5,7 +5,7 @@
 //   node scripts/match-musicbrainz-posts.mjs [report.json]          search (resumable: skips posts already
 //                                                                    searched with the same artist MBID)
 //   node scripts/match-musicbrainz-posts.mjs --limit=N [report.json] search only N posts (for testing)
-//   node scripts/match-musicbrainz-posts.mjs --apply [report.json]  write matches to data/musicbrainz.json (posts)
+//   node scripts/match-musicbrainz-posts.mjs --apply [report.json]  write matches to each post's musicbrainzMetadata (posts.json)
 // "auto" = same title, a studio version and (if the post names one) the same album; otherwise "review"
 // (decide in `npm run review-musicbrainz`, tab "Canciones"; decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
@@ -57,7 +57,7 @@ if (apply) {
     // A human decision (review UI or the editor, which stores the chosen candidate) always applies;
     // an automatic pick only while the post's artist id is still the one it was searched in.
     const r = results[post.id], d = decisions[post.id];
-    if (!d && (!r || !sameMbid(r.arid, data.artists[post.metadata.artist]))) continue;
+    if (!d && (!r || !sameMbid(r.arid, data.artists[post.editorMetadata.artist]))) continue;
     const pick = d ? d.pick : r.status === "auto" ? r.pick : null;
     const c = pick && (r?.candidates.find((c) => c.key === pick) ?? d?.candidate);
     if (!c) continue;
@@ -66,7 +66,7 @@ if (apply) {
     }).filter(([, v]) => v));
   }
   writeData({ ...data, posts: out });
-  console.log(`${Object.keys(out).length} posts with a recording or album -> data/musicbrainz.json`);
+  console.log(`${Object.keys(out).length} posts with a recording or album -> musicbrainzMetadata in data/posts.json`);
   process.exit(0);
 }
 
@@ -186,7 +186,7 @@ if (process.argv.includes("--resolve")) {
     const ctx = CONTEXT[id] ?? {}, text = plain(post.content);
     if (["podcast", "other"].includes(ctx.subject)) { r.status = "notfound"; r.via = "no single recording"; continue; }
     const kind = KIND[ctx.version] ? ctx.version : null;
-    const song = post.metadata.song, metaAlbum = bareTitle(post.metadata.album);
+    const song = post.editorMetadata.song, metaAlbum = bareTitle(post.editorMetadata.album);
     const albums = [metaAlbum, ctx.album && bareTitle(ctx.album)].filter(Boolean);
     let arid = r.arid;
     // A cover by someone else than the metadata artist: the performer's own recording.
@@ -224,8 +224,8 @@ if (process.argv.includes("--resolve")) {
     const set = (c, via) => { r.pick = c.key; r.status = "auto"; r.via = via; if (!cands.includes(c)) cands.unshift(c); };
     const albumOnly = (c) => ({ ...c, key: `|${c.release_group}`, recording: null, title: null, isrcs: [], disambiguation: null });
     const songs = cands.filter((c) => c.recording && titleOk(c));
-    kindNow = kind; yearNow = /^\d{4}$/.test(post.metadata.year ?? "") ? +post.metadata.year : null;
-    soundtrack = post.metadata.category === "Bandas Sonoras Originales" || !!ctx.soundtrack_of || /\b(bso|ost|soundtrack|banda sonora)\b/i.test(post.metadata.album ?? "");
+    kindNow = kind; yearNow = /^\d{4}$/.test(post.editorMetadata.year ?? "") ? +post.editorMetadata.year : null;
+    soundtrack = post.editorMetadata.category === "Bandas Sonoras Originales" || !!ctx.soundtrack_of || /\b(bso|ost|soundtrack|banda sonora)\b/i.test(post.editorMetadata.album ?? "");
     let pick = songs.find((c) => versionOk(c) && onAlbum(c))
       ?? (!song && cands.find((c) => c.release_group && onAlbum(c)));
     // The album the post names is there but the song wasn't paired with it: look for the song on that album.
@@ -237,7 +237,7 @@ if (process.argv.includes("--resolve")) {
     if (pick) set(pick, song ? (kind ? "version" : "album") : "album");
     else if (songs.some(versionOk)) {
       // The song is there in the right version, on another album: its first release (album, single or EP).
-      const original = (await aroundYear(r.performerArid ?? arid, song, post.metadata.year, kind, albums)) ?? await earliest(songs.filter((c) => versionOk(c) && c.release_group));
+      const original = (await aroundYear(r.performerArid ?? arid, song, post.editorMetadata.year, kind, albums)) ?? await earliest(songs.filter((c) => versionOk(c) && c.release_group));
       if (original) set(original, "original");
     }
     // Nothing reliable for the song: the album the post names, alone, if MusicBrainz has it.
@@ -271,12 +271,12 @@ if (process.argv.includes("--resolve")) {
   process.exit(0);
 }
 
-const todo = posts.filter((p) => data.artists[p.metadata.artist] && (p.metadata.song || p.metadata.album)
-  && !sameMbid(results[p.id]?.arid, data.artists[p.metadata.artist])).slice(0, limit);
+const todo = posts.filter((p) => data.artists[p.editorMetadata.artist] && (p.editorMetadata.song || p.editorMetadata.album)
+  && !sameMbid(results[p.id]?.arid, data.artists[p.editorMetadata.artist])).slice(0, limit);
 console.log(`${todo.length} posts to search (${Object.keys(results).length} already in ${report})`);
 let done = 0;
 for (const post of todo) {
-  const { artist, song } = post.metadata, metaAlbum = bareTitle(post.metadata.album);
+  const { artist, song } = post.editorMetadata, metaAlbum = bareTitle(post.editorMetadata.album);
   const arid = data.artists[artist];
   const text = plain(post.content);
   const ctx = CONTEXT[post.id] ?? {};
@@ -306,7 +306,7 @@ for (const post of todo) {
   const contextOk = !["podcast", "other"].includes(ctx.subject) && !coverConflict;
   candidates = candidates.slice(0, 12).map((c) => ({ ...c, mentioned: !!(c.album && mentions(text, c.album)) }));
   results[post.id] = {
-    arid, artist, song: song ?? null, album: post.metadata.album ?? null, year: post.metadata.year ?? null, title: post.title, context: CONTEXT[post.id] ?? null,
+    arid, artist, song: song ?? null, album: post.editorMetadata.album ?? null, year: post.editorMetadata.year ?? null, title: post.title, context: CONTEXT[post.id] ?? null,
     pick: top?.key ?? null, status: top && titleOk && albumOk && contextOk && (song ? top.recording : top.release_group) ? "auto" : "review", candidates,
   };
   if (++done % 10 === 0) { save(); console.log(`${done}/${todo.length}`); }

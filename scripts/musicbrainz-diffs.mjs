@@ -20,7 +20,7 @@ for (const post of posts) {
   if (!m || !r) continue;
   const pick = post.id in decisions ? decisions[post.id].pick : r.pick;
   const c = r.candidates.find((c) => c.key === pick) ?? decisions[post.id]?.candidate;
-  const { song, album, year } = post.metadata;
+  const { song, album, year } = post.editorMetadata;
   const link = `[${post.id}](https://dsong.es/archive/${post.id}.html)`;
   const mbYear = m.first_release?.slice(0, 4);
   if (year && mbYear && year !== mbYear) rows.year.push(`| ${link} | ${album ?? ""} | ${year} | ${mbYear} |`);
@@ -34,7 +34,7 @@ const artistRows = { name: [], country: [], countryMissing: [], url: [], urlMiss
 const NAME_OF = Object.fromEntries(Object.entries(ALPHA2).map(([code, a2]) => [a2, COUNTRIES[code] ?? a2]));
 const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
 const byArtist = new Map();
-for (const post of posts) if (post.metadata.artist) (byArtist.get(post.metadata.artist) ?? byArtist.set(post.metadata.artist, []).get(post.metadata.artist)).push(post);
+for (const post of posts) if (post.editorMetadata.artist) (byArtist.get(post.editorMetadata.artist) ?? byArtist.set(post.editorMetadata.artist, []).get(post.editorMetadata.artist)).push(post);
 for (const [name, list] of byArtist) {
   const mbid = linked[name];
   if (!mbid || Array.isArray(mbid) || !info[mbid]) continue;   // collaborations: their parts aren't one artist
@@ -43,20 +43,20 @@ for (const [name, list] of byArtist) {
   const known = [a.name, a.sort, ...a.aliases].filter(Boolean).map(norm);
   if (!known.includes(norm(name)) && !known.includes(norm(name.replace(/^(.*), (the|los|las|el|la)$/i, "$2 $1")))) artistRows.name.push(`| ${name} | ${mb} | ${count} |`);
   // Nationality
-  const ours = [...new Set(list.map((p) => p.metadata.artist_nationality).filter(Boolean))];
+  const ours = [...new Set(list.map((p) => p.editorMetadata.artist_nationality).filter(Boolean))];
   const codes = [...new Set(ours.map((n) => ALPHA2[countryOf(n)?.code]).filter(Boolean))];
   if (a.country && a.country !== "XW" && a.country !== "XE") {
     if (!ours.length) artistRows.countryMissing.push(`| ${name} | ${mb} | ${NAME_OF[a.country] ?? a.country} | ${count} |`);
     else if (codes.length && !codes.includes(a.country)) artistRows.country.push(`| ${name} | ${ours.join(", ")} | ${mb}: ${NAME_OF[a.country] ?? a.country}${a.area && a.area !== (NAME_OF[a.country] ?? a.country) ? ` (${a.area})` : ""} | ${count} |`);
   }
   // Official site
-  const sites = [...new Set(list.map((p) => p.metadata.artist_url).filter(Boolean))];
+  const sites = [...new Set(list.map((p) => p.editorMetadata.artist_url).filter(Boolean))];
   if (a.urls.official) {
     if (!sites.length) artistRows.urlMissing.push(`| ${name} | ${a.urls.official} | ${count} |`);
     else if (!sites.some((u) => host(u) === host(a.urls.official))) artistRows.url.push(`| ${name} | ${sites.join("<br>")} | ${a.urls.official} | ${count} |`);
   }
   // Genre, only where the post has none (ours are free text in Spanish)
-  const noGenre = list.filter((p) => !p.metadata.genre).length;
+  const noGenre = list.filter((p) => !p.editorMetadata.genre).length;
   if (noGenre && a.genres.length) artistRows.genre.push(`| ${name} | ${a.genres.join(", ")} | ${noGenre} |`);
 }
 const artistMd = !Object.keys(info).length ? [`_Run \`node scripts/musicbrainz-artists.mjs\` to compare artists too._`, ``] : [

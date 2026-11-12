@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 
 const BASE = "https://dsongstatic.jesusmagamu.dev/mp3/podcast/";
 const { posts } = JSON.parse(readFileSync("data/posts.json", "utf8"));
-const files = [...new Set(posts.map((post) => post.metadata.podcast_file).filter(Boolean))].sort();
+const files = [...new Set(posts.map((post) => post.editorMetadata.podcast_file).filter(Boolean))].sort();
 
 const sizes = {};
 const failed = [];

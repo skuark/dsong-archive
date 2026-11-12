@@ -27,7 +27,7 @@ const write = (file, value) => writeFileSync(file, JSON.stringify(value, null, 2
 // none (not searched yet), notfound (searched: not in MusicBrainz), nomatch (decided by hand: not in MusicBrainz),
 // noartist (the artist isn't linked yet).
 function status(post, s) {
-  const m = post.metadata, key = norm(m.artist);
+  const m = post.editorMetadata, key = norm(m.artist);
   const artist = !m.artist ? null : key in s.artistDecisions ? (s.artistDecisions[key].mbid ? "ok" : "nomatch")
     : s.mb.artists[m.artist] ? "ok" : s.artists[key]?.status === "review" ? "review" : s.artists[key]?.status === "notfound" ? "notfound" : "none";
   const record = !(m.song || m.album) || !m.artist ? null : post.id in s.postDecisions ? (s.postDecisions[post.id].pick ? "ok" : "nomatch")
@@ -47,7 +47,7 @@ export function summaries(posts) {
 
 // Everything the editor shows for one post.
 export function details(post) {
-  const s = load(), m = post.metadata, key = norm(m.artist);
+  const s = load(), m = post.editorMetadata, key = norm(m.artist);
   const r = s.artists[key], p = s.posts[post.id];
   return {
     context: s.context[post.id] ?? null,
@@ -126,7 +126,7 @@ export function chooseArtist(posts, name, value) {
   if (value === undefined) delete decisions[key]; else decisions[key] = { mbid: value };
   write(FILES.artistDecisions, decisions);
   // Every spelling of the artist in posts.json shares the decision.
-  const names = new Set(posts.map((p) => p.metadata.artist).filter((n) => n && norm(n) === key));
+  const names = new Set(posts.map((p) => p.editorMetadata.artist).filter((n) => n && norm(n) === key));
   const auto = readJson(FILES.artists)[key];
   const effective = value !== undefined ? value : auto?.status === "auto" ? auto.pick : null;
   for (const n of names) { if (effective) mb.artists[n] = effective; else delete mb.artists[n]; }

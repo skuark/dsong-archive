@@ -27,7 +27,7 @@ const save = () => writeFileSync(report, JSON.stringify(results, null, 2) + "\n"
 
 // Artists grouped by normalized name, with the exact spellings used in posts.json.
 const artists = {};
-for (const { metadata: m, content } of posts) {
+for (const { editorMetadata: m, content } of posts) {
   if (!m.artist) continue;
   const a = (artists[norm(m.artist)] ??= { names: new Set(), songs: new Set(), albums: new Set(), nationality: new Set(), years: new Set(), posts: 0, text: "" });
   a.text += plain(content);
@@ -183,8 +183,8 @@ if (process.argv.includes("--resolve")) {
   const terms = (s) => `(${norm(s).split(/\s+/).filter((t) => t.length > 1).map((t) => `${t.replace(/[^\p{L}\p{N}]/gu, "")}~`).filter((t) => t.length > 1).join(" ")})`;
   // Close names ("Kroke" for "Kroke Band", typos) are candidates too, but only count when confirmed.
   const nameFits = (c, key) => c.sameName || similar(norm(c.name), key) >= 0.85 || ` ${key} `.includes(` ${norm(c.name)} `);
-  const films = (key) => posts.filter((p) => norm(p.metadata.artist) === key).every((p) => p.metadata.category === "Bandas Sonoras Originales"
-    && (norm(bareTitle(p.metadata.album)) === key || norm(bareTitle(p.title.replace(/^especial\s+/i, ""))) === key));
+  const films = (key) => posts.filter((p) => norm(p.editorMetadata.artist) === key).every((p) => p.editorMetadata.category === "Bandas Sonoras Originales"
+    && (norm(bareTitle(p.editorMetadata.album)) === key || norm(bareTitle(p.title.replace(/^especial\s+/i, ""))) === key));
   // A song/album of the posts credited to this artist id (close titles: typos in the data).
   async function credited(id, a) {
     const songs = [...(a?.songs ?? [])].slice(0, 3), albums = [...(a?.albums ?? [])].filter((t) => norm(t) !== norm([...a.names][0])).slice(0, 3);
@@ -214,7 +214,7 @@ if (process.argv.includes("--resolve")) {
     // Film title as artist: the composer credited on the soundtrack with that title.
     if (films(key)) {
       // The composer the post's text names (post-context performer), else the one credited on the soundtrack.
-      const performers = [...new Set(posts.filter((p) => norm(p.metadata.artist) === key).map((p) => CONTEXT[p.id]?.performer).filter((x) => x && norm(x) !== key))];
+      const performers = [...new Set(posts.filter((p) => norm(p.editorMetadata.artist) === key).map((p) => CONTEXT[p.id]?.performer).filter((x) => x && norm(x) !== key))];
       if (performers.length === 1) {
         const pk = norm(performers[0]);
         const known = results[pk]?.status === "auto" && typeof results[pk].pick === "string" ? results[pk].pick : null;

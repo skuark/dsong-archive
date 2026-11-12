@@ -26,8 +26,8 @@ if (apply) {
   for (const post of data.posts) {
     const r = results[post.id], d = decisions[post.id];
     const pick = d ? d.pick : r?.pick && ["auto", "ok"].includes(r.status) ? r.pick : null;
-    if (!pick || post.metadata.youtube_code) continue;
-    post.metadata.youtube_code = pick;
+    if (!pick || post.editorMetadata.youtube_code) continue;
+    post.editorMetadata.youtube_code = pick;
     applied++;
   }
   // Same serialization as the original file (see AGENTS.md).
@@ -112,7 +112,7 @@ if (process.argv.includes("--deep")) {
 
   let accepted = 0, done = 0;
   for (const id of pending) {
-    const r = results[id], m = byId[id].metadata;
+    const r = results[id], m = byId[id].editorMetadata;
     const { artist, song, album = "" } = m;
     const soundtrack = m.category === "Bandas Sonoras Originales" || /^(varios|desconocido)$/i.test(artist);
     let track = known(r.spotify) ?? known(r.itunes);
@@ -197,7 +197,7 @@ if (process.argv.includes("--clues")) {
   let done = 0;
   for (const id of pending) {
     const post = byId[id];
-    const { artist, song, spotify_url: spotify } = post.metadata;
+    const { artist, song, spotify_url: spotify } = post.editorMetadata;
     // The post's context says whether it presents a live version; without it, any mention in the text.
     const liveMention = context[id] ? context[id].version === "live" : /en directo|concierto|en vivo|\blive\b/i.test(post.content);
 
@@ -276,8 +276,8 @@ if (process.argv.includes("--itunes")) {
 
   let accepted = 0, done = 0;
   for (const id of pending) {
-    const { artist } = byId[id].metadata;
-    const track = await itunes(artist, byId[id].metadata.song);
+    const { artist } = byId[id].editorMetadata;
+    const track = await itunes(artist, byId[id].editorMetadata.song);
     if (track) {
       const s = norm(track.name);
       const found = [...((await search(`${artist} ${track.name}`, 8)) ?? []), ...((await search(`${artist} ${track.name} topic`, 5)) ?? [])];
@@ -308,7 +308,7 @@ if (process.argv.includes("--rescore")) {
   let promoted = 0;
   for (const [id, r] of Object.entries(results)) {
     if (r.status !== "review" || decisions[id] || !byId[id]) continue;
-    const { artist, song } = byId[id].metadata;
+    const { artist, song } = byId[id].editorMetadata;
     const cands = r.candidates.map((line) => {
       const m = line.match(/^(\S+) \[[^\]]+\] (.*) · (.*)$/);
       return m && { id: m[1], title: m[2], channel: m[3] };
@@ -332,7 +332,7 @@ if (process.argv.includes("--refine")) {
   const worker = async () => {
     while (pending.length) {
       const id = pending.shift();
-      const { artist, song } = byId[id].metadata;
+      const { artist, song } = byId[id].editorMetadata;
       const a = norm(artist), s = norm(song);
       const found = (await search(`${artist} ${song} topic`)) ?? [];
       const match = found.find((v) => {
@@ -357,7 +357,7 @@ if (process.argv.includes("--refine")) {
   process.exit(0);
 }
 
-const queue = data.posts.filter((p) => !p.metadata.youtube_code && p.metadata.artist && p.metadata.song && !results[p.id]);
+const queue = data.posts.filter((p) => !p.editorMetadata.youtube_code && p.editorMetadata.artist && p.editorMetadata.song && !results[p.id]);
 const limit = Number(process.argv.find((a) => a.startsWith("--limit="))?.slice(8));
 if (limit) queue.splice(limit);
 const total = queue.length;
@@ -366,7 +366,7 @@ let done = 0;
 async function worker() {
   while (queue.length) {
     const post = queue.shift();
-    const { artist, song } = post.metadata;
+    const { artist, song } = post.editorMetadata;
     const found = await search(`${artist} ${song}`);
     if (found) {
       const candidates = found.map((v) => ({ ...v, score: score(v, artist, song) })).sort((a, b) => b.score - a.score);

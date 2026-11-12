@@ -1,9 +1,10 @@
 // Fetches the MusicBrainz record of every linked artist (data/musicbrainz.json): canonical name and aliases,
 // country/area, type, community genres and links (official site, Wikidata…), into musicbrainz-artists.json
-// (a cache, not committed). musicbrainz-diffs.mjs compares it with posts.json. No key; 1 req/s (~25 min).
+// (a cache in reports/). musicbrainz-diffs.mjs compares it with posts.json. What the site uses (country, genres,
+// official site: lib/metadata.js) is copied to data/musicbrainz.json `artistInfo`. No key; 1 req/s (~25 min).
 // Usage: node scripts/musicbrainz-artists.mjs [--refresh]   (resumable: skips artists already fetched)
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { get, mbidsOf, readData } from "../lib/musicbrainz.js";
+import { get, mbidsOf, readData, writeData } from "../lib/musicbrainz.js";
 import { report as reportFile } from "../lib/reports.js";
 
 const OUT = reportFile("musicbrainz-artists.json");
@@ -34,4 +35,14 @@ for (const id of ids) {
   if (++n % 25 === 0) { save(); console.log(`${n}/${ids.length}`); }
 }
 save();
+
+// Archived pages, link aggregators and pages about one album or work that MusicBrainz lists as "official homepage".
+const NOT_A_SITE = /web\.archive\.org|pirate-punk\.net|musicroamer\.com|dr-dee\.info|thacarterv\.com/;
+const { posts, ...data } = readData();
+const linked = new Set(Object.values(data.artists).flatMap(mbidsOf));
+data.artistInfo = Object.fromEntries([...linked].filter((id) => info[id]).sort().map((id) => {
+  const a = info[id], url = a.urls.official && !NOT_A_SITE.test(a.urls.official) ? a.urls.official : undefined;
+  return [id, Object.fromEntries(Object.entries({ country: a.country ?? undefined, genres: a.genres.length ? a.genres : undefined, url }).filter(([, v]) => v))];
+}));
+writeData(data);
 console.log(`Done: ${Object.keys(info).length} artists in ${OUT}`);

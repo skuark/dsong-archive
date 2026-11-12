@@ -20,17 +20,17 @@ const mb = readData();
 const decisions = readJson(reportFile("musicbrainz-review.json"));
 const page = (name) => `/archive/artists/${slugify(name)}.html`;
 // Album pages are per artist + album (lib/posts.js): renaming the artist moves them too.
-const albumPage = (p) => (p.metadata.album ? `/archive/albums/${slugify([p.metadata.artist, p.metadata.album].filter(Boolean).join("-"))}.html` : null);
+const albumPage = (p) => (p.editorMetadata.album ? `/archive/albums/${slugify([p.editorMetadata.artist, p.editorMetadata.album].filter(Boolean).join("-"))}.html` : null);
 const albumsBefore = new Map(data.posts.map((p) => [p.id, albumPage(p)]));
 
 const changed = [];
 for (const r of renames) {
-  const targets = data.posts.filter((p) => p.metadata.artist === r.from && (!r.posts || r.posts.includes(p.id)));
+  const targets = data.posts.filter((p) => p.editorMetadata.artist === r.from && (!r.posts || r.posts.includes(p.id)));
   if (!targets.length) throw new Error(`No posts with artist "${r.from}"${r.posts ? ` among ${r.posts.join(", ")}` : ""}`);
-  for (const p of targets) p.metadata.artist = r.to;
+  for (const p of targets) p.editorMetadata.artist = r.to;
   const link = r.mbid ?? mb.artists[r.to] ?? mb.artists[r.from];
   if (link) { mb.artists[r.to] = link; decisions[norm(r.to)] = { mbid: link }; }
-  const left = data.posts.some((p) => p.metadata.artist === r.from);
+  const left = data.posts.some((p) => p.editorMetadata.artist === r.from);
   if (!left) {
     delete mb.artists[r.from];
     // The old artist page is gone: send it to the new one (unless it's the same URL).

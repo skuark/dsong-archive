@@ -15,7 +15,7 @@ for (const [i, post] of data.posts.entries()) {
 
   const result = validatePost(post);
   for (const error of result.errors) errors.push(`${where}: ${error}`);
-  const nationality = post.metadata?.artist_nationality;
+  const nationality = post.editorMetadata?.artist_nationality;
   if (nationality && !countryOf(nationality)) unknownNationalities.add(nationality);
   for (const field of result.missing) warnings[`metadata.${field}`] = (warnings[`metadata.${field}`] ?? 0) + 1;
 }

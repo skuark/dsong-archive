@@ -9,6 +9,7 @@ import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import MarkdownIt from "markdown-it";
 import { serializePosts, validatePost } from "../lib/validate-post.js";
+import { withMusicbrainz } from "../lib/musicbrainz.js";
 import { chooseArtist, chooseRecord, details, searchSource, summaries } from "./edit-sources.mjs";
 
 const PORT = Number(process.env.PORT) || 8082;
@@ -17,11 +18,13 @@ const html = new URL("./edit-posts.html", import.meta.url);
 const md = new MarkdownIt({ html: true });   // same as the site's `markdown` filter
 
 const load = () => JSON.parse(readFileSync(FILE, "utf8"));
-const hash = (post) => createHash("sha1").update(JSON.stringify(post)).digest("hex");
+// musicbrainzMetadata is left out: MusicBrainz choices in the editor save it at once (edit-sources.mjs),
+// so it changing on disk isn't a conflict, and a save keeps the one on disk.
+const hash = ({ musicbrainzMetadata, ...post }) => createHash("sha1").update(JSON.stringify(post)).digest("hex");
 const distinct = (values) => [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
 
 function summary(post, extra = summaries([post])[post.id]) {
-  const m = post.metadata;
+  const m = post.editorMetadata;
   return {
     ...extra,
     id: post.id, title: post.title, date: post.published_at.slice(0, 10), editor: post.editor.name,
@@ -35,11 +38,11 @@ function summary(post, extra = summaries([post])[post.id]) {
 // Field values: trimmed; empty metadata fields are removed (the data has no empty keys)
 function clean(post) {
   const metadata = {};
-  for (const [key, value] of Object.entries(post.metadata ?? {})) {
+  for (const [key, value] of Object.entries(post.editorMetadata ?? {})) {
     const v = typeof value === "string" ? value.trim() : value;
     if (v !== "" && v != null) metadata[key] = v;
   }
-  return { ...post, title: post.title.trim(), published_at: post.published_at.trim(), metadata };
+  return { ...post, title: post.title.trim(), published_at: post.published_at.trim(), editorMetadata: metadata };
 }
 
 async function body(req) {
@@ -64,9 +67,9 @@ createServer(async (req, res) => {
       return send(200, {
         posts: posts.map((p) => summary(p, extra[p.id])),
         options: {
-          categories: distinct(posts.map((p) => p.metadata.category)),
-          genres: distinct(posts.map((p) => p.metadata.genre)),
-          countries: distinct(posts.map((p) => p.metadata.artist_nationality)),
+          categories: distinct(posts.map((p) => p.editorMetadata.category)),
+          genres: distinct(posts.map((p) => p.editorMetadata.genre)),
+          countries: distinct(posts.map((p) => p.editorMetadata.artist_nationality)),
           editors,
         },
       });
@@ -87,7 +90,7 @@ createServer(async (req, res) => {
     // Live searches: mb-artist, mb-recording, mb-release-group, youtube, apple
     const searchMatch = url.pathname.match(/^\/api\/search\/([a-z-]+)$/);
     if (searchMatch && req.method === "GET") return send(200, { results: await searchSource(searchMatch[1], url.searchParams) });
-    // MusicBrainz choices: saved at once to data/musicbrainz.json and the review decisions
+    // MusicBrainz choices: saved at once to musicbrainzMetadata / data/musicbrainz.json and the review decisions
     if (req.method === "POST" && url.pathname === "/api/musicbrainz/artist") {
       const { name, value } = await body(req);
       chooseArtist(load().posts, name, value);
@@ -108,7 +111,7 @@ createServer(async (req, res) => {
       const post = clean(edited);
       const { errors, missing } = validatePost(post);
       if (errors.length) return send(400, { errors });
-      data.posts[i] = post;
+      data.posts[i] = withMusicbrainz(post, data.posts[i].musicbrainzMetadata);
       writeFileSync(FILE, serializePosts(data));
       return send(200, { post, hash: hash(post), summary: summary(post), missing });
     }
