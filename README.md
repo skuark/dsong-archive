@@ -49,9 +49,10 @@ npm run edit
 
 The editor opens at `http://localhost:8082` and only listens on your machine. You can use it to:
 
-- edit a post's text (with a preview), metadata, players and comments;
-- filter posts, for example those missing a player or those still to review;
-- mark posts as reviewed.
+- edit a post's text (with a preview), slug, metadata, players and comments;
+- compare each field with MusicBrainz (and copy MusicBrainz's value), see where each player comes from, hide or show players;
+- filter posts, for example those missing a player or those where the site shows another value;
+- see the redirects to each post and the full list.
 
 Every save is validated and rewrites `posts.json` keeping its exact format. With `npm run serve` running, changes show up on the site right away.
 
