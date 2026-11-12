@@ -1,7 +1,7 @@
 {#- Index of a facet (authors, artists): searchable cards with each name and its number of posts,
     most posts first. Expects `items` ([{ name, slug, posts }]), `base` (URL prefix), `heading`, `crumb`,
     `placeholder`, `noun` ("artista|artistas") and optionally `images` (slug -> { src, credit? }: artists' Commons photos, authors' Gravatars; lazy-loaded as they
-    scroll into view). Tabs link the two indexes. The search
+    scroll into view) and `initials` (slug -> up to three initials: a square with them under the image, left when there's none or it fails). Tabs link the two indexes. The search
     (js/archive-table-search.js) also filters card lists. -#}
 {%- set nouns = noun.split("|") %}
 <nav class="crumbs" aria-label="Migas">
@@ -27,7 +27,9 @@
   {%- set first = (item.posts | first).published_at.slice(0, 4) %}
   {%- set last = (item.posts | last).published_at.slice(0, 4) %}
   {%- set image = images[item.slug] if images %}
-  <li><a class="facet-cards__card{% if image %} facet-cards__card--image{% endif %}" href="{{ base }}{{ item.slug }}.html">
+  <li><a class="facet-cards__card{% if image or (initials and initials[item.slug]) %} facet-cards__card--image{% endif %}" href="{{ base }}{{ item.slug }}.html">
+    {%- set initial = initials[item.slug] if initials %}
+    {%- if initial %}<span class="display facet-cards__initial" aria-hidden="true">{{ initial }}</span>{% endif %}
     {%- if image %}<img class="facet-cards__image" src="{{ image.src }}" alt="" {% if image.credit %}title="Foto: {{ image.credit }}" {% endif %} loading="lazy" decoding="async" width="64" height="64">{% endif %}
     <span class="display facet-cards__count">{{ item.posts.length }}</span>
     <span class="facet-cards__name">{{ item.name }}</span>

@@ -1397,10 +1397,16 @@ button.chip {
   font-size: 2rem;
 }
 
-/* Artists with a Commons photo: a small square in the top right corner (lazy-loaded) */
+/* Artists with a Commons photo, authors with a Gravatar or their initial: a small square in the top right
+   corner (lazy-loaded), beside the count; the name goes under both, the card's full width, so long
+   handles (heroedelproximomilenio) fit without breaking */
 .facet-cards__card--image {
-  padding-right: 5.5rem;
   position: relative;
+}
+
+.facet-cards__card--image .facet-cards__count {
+  min-height: 4rem;
+  padding-right: 4.5rem;
 }
 
 .facet-cards__image {
@@ -1410,6 +1416,25 @@ button.chip {
   height: 4rem;
   object-fit: cover;
   object-position: top;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 4rem;
+}
+
+/* Authors: up to three initials, under the Gravatar (they show when there's none) */
+.facet-cards__initial {
+  align-items: center;
+  background: var(--accent);
+  border: var(--border-thin);
+  box-sizing: border-box;
+  color: var(--ink);
+  display: flex;
+  font-size: 1.375rem;
+  letter-spacing: .02em;
+  height: 4rem;
+  justify-content: center;
+  line-height: 1;
   position: absolute;
   right: 1rem;
   top: 1rem;

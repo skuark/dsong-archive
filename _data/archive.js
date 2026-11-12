@@ -30,6 +30,14 @@ const brokenSpotify = (url) => /\/user\/(dsong2009|skuark|jesusr)\//.test(url ??
 
 const has = (v) => v != null && v !== "";
 
+// Up to three initials of a name, one per word (Brian Edward Hyde -> BEH, juanje.ra -> JR, AC/DC -> AD),
+// or a one-word name's first three letters (skuark -> SKU); punctuation is skipped ("(hed) p.e." -> HPE)
+const initials = (name) => {
+  const words = name.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+  return (words.length > 1 ? words.slice(0, 3).map((w) => w[0]).join("") : (words[0] ?? "").slice(0, 3)).toLocaleUpperCase("es");
+};
+const initialsOf = (groups) => Object.fromEntries(groups.map(({ slug, name }) => [slug, initials(name)]).filter(([, i]) => i));
+
 function onThisDay(posts) {
   const days = {};
   const day = (key) => (days[key] ??= { day: key, posts: [], anniversaries: [] });
@@ -88,6 +96,9 @@ export default function () {
       const url = group.posts.find((post) => post.editor.gravatar_url)?.editor.gravatar_url;
       return url ? [[group.slug, { src: `${url}?s=128&d=404` }]] : [];
     })),
+    // Slug -> up to three initials, for the square shown on the index cards without a photo
+    editorInitials: initialsOf(groupBy("editor")),
+    artistInitials: initialsOf(groupBy("artist")),
     byAlbum: groupBy("album"),
     byYear: groupBy("year"),
     byCategory: groupBy("category"),

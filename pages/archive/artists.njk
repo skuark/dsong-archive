@@ -11,4 +11,5 @@ pageClass: archive
 {%- set placeholder %}Busca un artista entre {{ items | length | thousands }}…{% endset %}
 {%- set noun = "artista|artistas" %}
 {%- set images = archive.artistImages %}
+{%- set initials = archive.artistInitials %}
 {% include "partials/facet-index.njk" %}

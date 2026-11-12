@@ -1,8 +1,10 @@
 (function() {
-  // Card photos that fail (an author without a Gravatar: d=404) go away, and so does the room kept for them
+  // Card photos that fail (an author without a Gravatar: d=404) go away, and so does the room kept for
+  // them, unless the card has an initial under the photo (authors), which then shows
   document.addEventListener('error', (event) => {
     if (!event.target.matches?.('.facet-cards__image')) return;
-    event.target.closest('.facet-cards__card')?.classList.remove('facet-cards__card--image');
+    const card = event.target.closest('.facet-cards__card');
+    if (!card?.querySelector('.facet-cards__initial')) card?.classList.remove('facet-cards__card--image');
     event.target.remove();
   }, true);
 

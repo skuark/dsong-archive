@@ -91,7 +91,7 @@ scripts/               validate-data.mjs, musicbrainz-players.mjs, check-links.m
 |---|---|---|
 | `pages/post.njk` | `collections.posts` | `/archive/<id>.html` |
 | `pages/archive/<facet>.njk` | `archive.by<Facet>` (`{ name, slug, posts }`) | `/archive/<facets>/<slug>.html` |
-| `pages/archive/editors.njk`, `pages/archive/artists.njk` | `archive.byEditor`, `stats.artistGroups` | `/archive/editors/`, `/archive/artists/` (indexes: searchable cards with name + count and tabs between the two, partials/facet-index.njk; artist cards show their Commons photo, `archive.artistImages`, author cards their Gravatar, `archive.editorImages` (dropped when there's none), lazy-loaded) |
+| `pages/archive/editors.njk`, `pages/archive/artists.njk` | `archive.byEditor`, `stats.artistGroups` | `/archive/editors/`, `/archive/artists/` (indexes: searchable cards with name + count and tabs between the two, partials/facet-index.njk; artist cards show their Commons photo, `archive.artistImages`, author cards their Gravatar, `archive.editorImages`, over a square with up to three initials (`archive.editorInitials`, shown when there's none; artist cards too, `archive.artistInitials`), lazy-loaded) |
 | `pages/archive/podcasts.njk` | `archive.podcastPosts` | `/archive/podcasts/` (cover, RSS subscribe, searchable list of the episodes) |
 | `pages/archive/specials.njk` | `archive.specials` | `/archive/especiales/` (the especiales as cards, by shape: álbumes, festivales, listas y temas) |
 | `pages/proyecto.njk` | — | `/el-proyecto/` (the project's history by year, static HTML written by hand: "del archivo" milestones link a post, "contado" ones are told; team and readers from 5.dsong.es; in the header menu and the footer) |
