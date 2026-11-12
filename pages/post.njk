@@ -166,6 +166,7 @@ permalink: "archive/{{ post.id }}.html"
 
   {#- On every post: radio mode may bring in a podcast block from another post #}
   <script src="/js/podcast.js?v={{ 'js/podcast.js' | assetVersion }}" defer></script>
+  <script src="/js/post-side.js?v={{ 'js/post-side.js' | assetVersion }}" defer></script>
   {#- Festival series: every day of it, this one marked; under the players, above the Ficha (radio mode swaps it) -#}
   {%- if series %}
   <nav class="series" aria-labelledby="series-title">

@@ -3031,36 +3031,17 @@ button.chip {
     /* Spans every row under the crumbs, so sticky can travel along the whole article */
     grid-row: 2 / span 50;
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    max-height: calc(100vh - 3rem);
-    /* Last resort when even a shrunk Ficha doesn't fit (long series, low window): the column scrolls,
-       with room for the boxes' shadows (it would clip them) */
-    overflow-y: auto;
-    padding: 0 4px 4px 0;
+    /* Sticky without scrolling inside: a column taller than the window scrolls with the page until its
+       foot shows, and stays there (a negative top); --side-height is its height, set by
+       js/post-side.js. Without JS, it sticks at the top. --side-start: under the radio bar too */
+    --side-start: 1.5rem;
     position: sticky;
-    scrollbar-width: thin;
-    top: 1.5rem;
+    top: min(var(--side-start), calc(100vh - var(--side-height, 0px) - 1.5rem));
   }
 
-  /* Taller than the window (long Ficha): the Ficha scrolls inside its own frame, players stay whole */
-  .post-view__side > * {
-    flex-shrink: 0;
-  }
-
-  .post-view__side > .post-facts {
-    flex-shrink: 1;
-    min-height: 6rem;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-  }
-
-  /* Above the radio bar */
-  /* Under the bar (its height: --radio-bar, set by js/radio.js) */
+  /* Under the radio bar (its height: --radio-bar, set by js/radio.js) */
   .radio-on .post-view > .post-view__side {
-    max-height: calc(100vh - 3rem - var(--radio-bar, 4.5rem));
-    top: calc(1.5rem + var(--radio-bar, 4.5rem));
+    --side-start: calc(1.5rem + var(--radio-bar, 4.5rem));
   }
 }
 

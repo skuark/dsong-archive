@@ -60,7 +60,7 @@ _data/worldMap.js      Global `worldMap`: country SVG paths (visionscarto-world-
 _data/stats.js         Global `stats`: totals, rankings, decades and decade x year heatmap for the archive landing (/archive/).
 _data/site.js          Global `site`: url, title, description, umamiId.
 _data/redirects.js     Exposes data/redirects.json as `redirects`.
-lib/facts.js           A post's "Ficha" (pages/post.njk: a section in the post's side column, under the players, sticky in the desktop split view by the page's room, `@container app`; after the text on narrow screens), Música and dSong groups of rows of label + values linked to the archive and their sources (MusicBrainz, artist site, players); `post.facts` (lib/posts.js).
+lib/facts.js           A post's "Ficha" (pages/post.njk: a section in the post's side column, under the players, sticky in the desktop split view by the page's room, `@container app`, never scrolling inside: a column taller than the window sticks by its foot, js/post-side.js; after the text on narrow screens), Música and dSong groups of rows of label + values linked to the archive and their sources (MusicBrainz, artist site, players); `post.facts` (lib/posts.js).
 lib/metadata.js        Resolves a post's `metadata` (used by lib/posts.js) from editorMetadata + MusicBrainz, one rule per field.
 lib/rename-artists.js  Renames an artist (scripts/rename-artists.mjs, the editor): MusicBrainz link, review decision, redirects.
 lib/validate-post.js   Per-post rules + byte-identical posts.json writer (validate-data and the editor).
@@ -70,6 +70,7 @@ js/                    archive-table-sort.js (also: a click on a row outside its
                        players.js (post players as tabs in a box; lazy-loads via data-src),
                        podcasts.js (podcast page: copy the feed URL, play an episode in place with one <audio>, radio mode (episodes one
                        after another in the page's order, with the radio bar on top), newest/oldest order),
+                       post-side.js (the post side column's height, for its sticky position),
                        menu.js (header menu folded behind a "Menú" button on phones and small tablets),
                        on-this-day.js (home "Tal día como hoy": fetches today's JSON in the browser: posts of the day and anniversaries),
                        radio.js (radio mode: swaps posts in place keeping the live YouTube/Spotify players, their iframe APIs).
