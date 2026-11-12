@@ -9,7 +9,7 @@
 // "auto" = same title, a studio version and (if the post names one) the same album; otherwise "review"
 // (decide in `npm run review-musicbrainz`, tab "Canciones"; decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
-import { get, norm, phrase, readData, readJson, search, writeData } from "../lib/musicbrainz.js";
+import { get, mentions, norm, phrase, plain, readData, readJson, search, writeData } from "../lib/musicbrainz.js";
 
 const DECISIONS = "musicbrainz-posts-review.json";
 // Release group id -> first release date (lookups; recording dates are unreliable: songs get re-released).
@@ -79,8 +79,12 @@ const close = (a, b) => similar(a, b) >= 0.8;
 // Unquoted terms for the fuzzy fallback search (Lucene syntax characters dropped).
 const terms = (s) => `(${norm(s) || s.replace(/[^\p{L}\p{N} ]/gu, " ")})`;
 
-function rank(c, song, album) {
+// `text`: the post itself (plain(content)). Naming the album or its year there backs a candidate,
+// above all when the metadata has no album or a different one.
+function rank(c, song, album, text = "") {
   let points = 0;
+  if (c.album && mentions(text, c.album)) points += album && norm(c.album) === norm(album) ? 1 : 3;
+  if (c.date && text.includes(` ${c.date.slice(0, 4)} `)) points += 1;
   if (song) points += norm(c.title) === norm(song) ? 4 : close(c.title, song) ? 2 : 0;
   if (VERSION.test(c.disambiguation ?? "") && !VERSION.test(song ?? "")) points -= 4;
   if (c.secondary.some((t) => OTHER_TYPES.has(t)) && !(c.secondary.includes("Soundtrack") && /bso|banda sonora|soundtrack/i.test(album ?? ""))) points -= 3;
@@ -94,7 +98,7 @@ function rank(c, song, album) {
 
 // Recording search: one candidate per (recording, release group) pair.
 // Exact phrase first; if nothing matches, unquoted terms (typos in the data) kept only when close.
-async function recordings(arid, song, album) {
+async function recordings(arid, song, album, text) {
   let found = (await search("recording", `recording:${phrase(song)} AND arid:${arid}`, 25))?.recordings ?? [];
   if (!found.length) found = ((await search("recording", `recording:${terms(song)} AND arid:${arid}`, 25))?.recordings ?? []).filter((r) => close(r.title, song));
   const out = [];
@@ -112,17 +116,17 @@ async function recordings(arid, song, album) {
       length: r.length ?? null, isrcs: r.isrcs ?? [], date: r["first-release-date"] ?? null, ...g,
     });
   }
-  return out.map((c) => ({ ...c, points: rank(c, song, album) }));
+  return out.map((c) => ({ ...c, points: rank(c, song, album, text) }));
 }
 
 // Release group search, for posts about an album (no song) or when the song's releases miss the album.
-async function releaseGroups(arid, album) {
+async function releaseGroups(arid, album, text) {
   let found = (await search("release-group", `releasegroup:${phrase(album)} AND arid:${arid}`, 10))?.["release-groups"] ?? [];
   if (!found.length) found = (await search("release-group", `releasegroup:${terms(album)} AND arid:${arid}`, 10))?.["release-groups"] ?? [];
   return found.filter((g) => close(g.title, album)).map((g) => ({
     key: `|${g.id}`, recording: null, release_group: g.id, title: null, disambiguation: g.disambiguation ?? null, length: null, isrcs: [],
     date: g["first-release-date"] ?? null, album: g.title, type: g["primary-type"] ?? null, secondary: g["secondary-types"] ?? [], status: null,
-  })).map((c) => ({ ...c, points: rank(c, null, album) }));
+  })).map((c) => ({ ...c, points: rank(c, null, album, text) }));
 }
 
 const todo = posts.filter((p) => data.artists[p.metadata.artist] && (p.metadata.song || p.metadata.album)
@@ -132,14 +136,15 @@ let done = 0;
 for (const post of todo) {
   const { artist, song, album } = post.metadata;
   const arid = data.artists[artist];
-  let candidates = song ? await recordings(arid, song, album) : [];
+  const text = plain(post.content);
+  let candidates = song ? await recordings(arid, song, album, text) : [];
   // The album gets its own search when no recording is on it (or the post is about an album).
   if (album && !candidates.some((c) => norm(c.album) === norm(album))) {
-    const groups = await releaseGroups(arid, album);
+    const groups = await releaseGroups(arid, album, text);
     // With a song, pair the album with the best version of it found elsewhere (single, compilation…).
     const best = [...candidates].sort((x, y) => y.points - x.points)[0];
     candidates.push(...(best ? groups.map((g) => ({ ...best, key: `${best.recording}|${g.release_group}`, release_group: g.release_group,
-      album: g.album, type: g.type, secondary: g.secondary, status: null, paired: true })).map((c) => ({ ...c, points: rank(c, song, album) })) : groups));
+      album: g.album, type: g.type, secondary: g.secondary, status: null, paired: true })).map((c) => ({ ...c, points: rank(c, song, album, text) })) : groups));
   }
   // One per key (the album search can repeat a pair), best first; ties: earliest release (the original), then with ISRC.
   candidates = candidates.filter((c, i, all) => all.findIndex((o) => o.key === c.key) === i);
@@ -148,7 +153,7 @@ for (const post of todo) {
   const titleOk = !song || (top?.title && similar(top.title, song) >= 0.85 && !(VERSION.test(top.disambiguation ?? "") && !VERSION.test(song)));
   // Close titles count: the artist is already fixed, so a near match is a typo in the data (reported apart).
   const albumOk = !album || (top?.album && similar(top.album, album) >= 0.85);
-  candidates = candidates.slice(0, 12);
+  candidates = candidates.slice(0, 12).map((c) => ({ ...c, mentioned: !!(c.album && mentions(text, c.album)) }));
   results[post.id] = {
     arid, artist, song: song ?? null, album: album ?? null, year: post.metadata.year ?? null, title: post.title,
     pick: top?.key ?? null, status: top && titleOk && albumOk && (song ? top.recording : top.release_group) ? "auto" : "review", candidates,

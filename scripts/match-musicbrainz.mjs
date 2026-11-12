@@ -10,7 +10,8 @@
 // "auto" = a candidate with the same name credited on one of them; otherwise "review"
 // (decide in `npm run review-musicbrainz`, whose decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
-import { norm, phrase as q, readData, readJson as read, search as mb, writeData } from "../lib/musicbrainz.js";
+import { ALPHA2, get, mentions, norm, phrase as q, plain, readData, readJson as read, search as mb, writeData } from "../lib/musicbrainz.js";
+import { countryOf } from "../lib/countries.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
 const DECISIONS = "musicbrainz-review.json";
@@ -23,9 +24,10 @@ const save = () => writeFileSync(report, JSON.stringify(results, null, 2) + "\n"
 
 // Artists grouped by normalized name, with the exact spellings used in posts.json.
 const artists = {};
-for (const { metadata: m } of posts) {
+for (const { metadata: m, content } of posts) {
   if (!m.artist) continue;
-  const a = (artists[norm(m.artist)] ??= { names: new Set(), songs: new Set(), albums: new Set(), nationality: new Set(), posts: 0 });
+  const a = (artists[norm(m.artist)] ??= { names: new Set(), songs: new Set(), albums: new Set(), nationality: new Set(), posts: 0, text: "" });
+  a.text += plain(content);
   a.names.add(m.artist);
   a.posts++;
   if (m.song) a.songs.add(m.song);
@@ -89,11 +91,22 @@ if (process.argv.includes("--recheck")) {
         if (c.confirmed.length) break;
       }
     }
-    // Auto when exactly one candidate is confirmed and its name fits ("Bunbury" inside "Enrique Bunbury").
+    // What the posts themselves say: the candidate's albums named in the text, and the post's nationality.
+    const country = [...(a?.nationality ?? [])].map((n) => ALPHA2[countryOf(n)?.code]).find(Boolean);
+    for (const c of pool) {
+      const groups = (await get(`release-group?artist=${c.mbid}&limit=100`))?.["release-groups"] ?? [];
+      c.mentioned = [...new Set(groups.map((g) => g.title).filter((t) => mentions(a?.text ?? "", t)))].slice(0, 5);
+      c.countryMatch = country && c.country ? c.country === country : null;
+    }
+    // Auto when exactly one candidate is confirmed and its name fits ("Bunbury" inside "Enrique Bunbury");
+    // failing that, when the text names albums of exactly one same-name candidate whose country doesn't contradict.
     const confirmed = r.candidates.filter((c) => c.confirmed.length);
     const fits = (c) => c.sameName || key.includes(norm(c.name)) || norm(c.name).includes(key);
+    const named = pool.filter((c) => fits(c) && c.mentioned?.length && c.countryMatch !== false);
     if (confirmed.length === 1 && fits(confirmed[0])) { r.pick = confirmed[0].mbid; r.status = "auto"; r.via = "recheck"; }
-    else if (confirmed.length) r.pick = confirmed.sort((x, y) => y.confirmed.length - x.confirmed.length)[0].mbid;
+    else if (!confirmed.length && named.length === 1) { r.pick = named[0].mbid; r.status = "auto"; r.via = "content"; }
+    else if (confirmed.length) r.pick = confirmed.sort((x, y) => y.confirmed.length - x.confirmed.length || (y.mentioned?.length ?? 0) - (x.mentioned?.length ?? 0))[0].mbid;
+    else if (named.length) r.pick = named.sort((x, y) => y.mentioned.length - x.mentioned.length)[0].mbid;
     r.rechecked = true;
     if (++done % 10 === 0) { save(); console.log(`${done}/${todo.length}`); }
   }

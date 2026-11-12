@@ -101,7 +101,7 @@ const chosenOf = (k) => (k in D() ? valueOf(D()[k]) : R()[k].status === "auto" ?
 function badge(k) {
   const r = R()[k];
   return k in D() ? (valueOf(D()[k]) ? `<span class="badge ok">elegido</span>` : `<span class="badge no">sin coincidencia</span>`)
-    : r.status === "auto" ? `<span class="badge ok">automático</span>` : `<span class="badge warn">por revisar</span>`;
+    : r.status === "auto" ? `<span class="badge ok">automático${r.via === "content" ? " (por el texto)" : ""}</span>` : `<span class="badge warn">por revisar</span>`;
 }
 
 function artistView(k, r, chosen) {
@@ -116,7 +116,9 @@ function artistView(k, r, chosen) {
       <div><span class="name">${esc(c.name)}</span> <a href="${MB}artist/${c.mbid}" target="_blank" rel="noopener">↗</a>
         ${c.sameName ? "" : `<span class="badge warn">otro nombre</span>`}</div>
       <div class="sub">${[c.disambiguation, c.type, c.area ?? c.country, [c.begin, c.end].filter(Boolean).join("–"), c.score != null && `puntuación ${c.score}`].filter(Boolean).map(esc).join(" · ")}</div>
-      ${c.confirmed.length ? `<div class="confirmed">✓ ${esc(c.confirmed.join(" · "))}</div>` : ""}` })),
+      ${c.confirmed.length ? `<div class="confirmed">✓ ${esc(c.confirmed.join(" · "))}</div>` : ""}
+      ${c.mentioned?.length ? `<div class="confirmed">📰 el artículo nombra: ${esc(c.mentioned.join(" · "))}</div>` : ""}
+      ${c.countryMatch === false ? `<div class="diff">≠ país (${esc(c.country)})</div>` : ""}` })),
     manual: "Otro: pega una URL o MBID de artista",
   };
 }
@@ -137,7 +139,7 @@ function postView(k, r, chosen) {
         <div><span class="name">${esc(c.title ?? "(solo disco)")}</span>
           ${c.recording ? `<a href="${MB}recording/${c.recording}" target="_blank" rel="noopener">↗</a>` : ""}
           · ${esc(c.album ?? "sin disco")} ${c.release_group ? `<a href="${MB}release-group/${c.release_group}" target="_blank" rel="noopener">↗</a>` : ""}</div>
-        <div class="sub">${[c.disambiguation, [c.type, ...c.secondary].filter(Boolean).join(" + "), c.status !== "Official" && c.status, c.date, mmss(c.length), c.isrcs.length && "ISRC", c.paired && "disco buscado aparte", `puntos ${c.points}`].filter(Boolean).map(esc).join(" · ")}</div>
+        <div class="sub">${[c.disambiguation, [c.type, ...c.secondary].filter(Boolean).join(" + "), c.status !== "Official" && c.status, c.date, mmss(c.length), c.isrcs.length && "ISRC", c.paired && "disco buscado aparte", c.mentioned && "el artículo nombra el disco", `puntos ${c.points}`].filter(Boolean).map(esc).join(" · ")}</div>
         ${diffs.length ? `<div class="diff">≠ ${esc(diffs.join(" · "))}</div>` : ""}` };
     }),
     manual: "Otro: pega la URL de una grabación y/o un disco (release-group)",
