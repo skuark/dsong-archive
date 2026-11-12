@@ -12,6 +12,15 @@
   if (!toggle) return;
   toggle.hidden = false;
 
+  // The button at the foot of the players: starts radio mode; while it plays, says so
+  const toggleLabel = toggle.querySelector('.radio-toggle__label');
+  const startLabel = toggleLabel?.textContent;
+  function setToggle(on) {
+    toggle.disabled = on;
+    toggle.classList.toggle('radio-toggle--on', on);
+    if (toggleLabel) toggleLabel.textContent = on ? 'Sonando en modo radio' : startLabel;
+  }
+
   const idOf = (path) => (path.match(/\/archive\/([^/]+)\.html$/) || [])[1];
   let list = null;          // [[id, title, youtubeCode, spotifyUri], ...] from /radio.json
   let active = false;
@@ -235,7 +244,7 @@
     active = true;
     played.add(currentId);
     upcoming = pickNext();
-    toggle.hidden = true;
+    setToggle(true);
     showBar();
     // Drop ?radio=aleatoria so a reload doesn't restart it
     if (location.search) history.replaceState(history.state, '', location.pathname);
@@ -259,7 +268,7 @@
     if (bar) bar.remove();
     bar = null;
     document.body.classList.remove('radio-on');
-    toggle.hidden = false;
+    setToggle(false);
   }
 
   // Replaces the current post with the one parsed from `doc`, keeping the live player panels.
@@ -297,7 +306,11 @@
     const podcast = next.querySelector('.podcast');
     if (podcast) current.querySelector('.post-view__side').prepend(document.importNode(podcast, true));
 
-    // Ficha: last in the side column, under the players
+    // Festival series, then the Ficha: last in the side column, under the players
+    current.querySelector('.series')?.remove();
+    const series = next.querySelector('.series');
+    if (series) current.querySelector('.post-view__side').append(document.importNode(series, true));
+
     current.querySelector('.post-facts')?.remove();
     const facts = next.querySelector('.post-facts');
     if (facts) current.querySelector('.post-view__side').append(document.importNode(facts, true));
@@ -364,7 +377,10 @@
         <button class="radio-bar__button radio-bar__button--icon" type="button" data-action="skip" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
       </span>
       <span class="radio-bar__next"></span>
-      <button class="radio-bar__button radio-bar__button--shuffle" type="button" data-action="shuffle" aria-pressed="false">Al azar</button>
+      <span class="radio-bar__order" role="radiogroup" aria-label="Orden">
+        <button class="radio-bar__button" type="button" role="radio" data-action="order" data-shuffle="false" aria-checked="true">En orden</button>
+        <button class="radio-bar__button" type="button" role="radio" data-action="order" data-shuffle="true" aria-checked="false">Al azar</button>
+      </span>
       <button class="radio-bar__button radio-bar__button--stop" type="button" data-action="stop" aria-label="Salir del modo radio">×</button>`;
     bar.addEventListener('click', (e) => {
       const action = e.target.closest('[data-action]')?.dataset.action;
@@ -372,8 +388,10 @@
         if (source === 'youtube') youtube?.playVideo();
         if (source === 'spotify') spotify?.play();
       }
-      if (action === 'shuffle') {
-        shuffle = !shuffle;
+      if (action === 'order') {
+        const wanted = e.target.closest('[data-action]').dataset.shuffle === 'true';
+        if (wanted === shuffle) return;
+        shuffle = wanted;
         upcoming = pickNext();
         updateBar();
       }
@@ -393,7 +411,9 @@
 
   function updateBar() {
     if (!bar) return;
-    bar.querySelector('[data-action="shuffle"]').setAttribute('aria-pressed', String(shuffle));
+    for (const button of bar.querySelectorAll('[data-action="order"]')) {
+      button.setAttribute('aria-checked', String((button.dataset.shuffle === 'true') === shuffle));
+    }
     bar.querySelector('[data-action="previous"]').disabled = !previous.length;
     const next = upcoming;
     const slot = bar.querySelector('.radio-bar__next');

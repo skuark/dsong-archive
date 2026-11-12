@@ -36,6 +36,8 @@ pageClass: archive
   <ol class="episodes__list" id="archive-table">
     {%- for post in posts | reverse %}
     <li class="episode">
+      {#- Plays the episode here (js/podcasts.js, one audio for the whole list); hidden without JS -#}
+      <button class="episode__play" type="button" data-src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/{{ post.metadata.podcast_file }}" aria-label="Reproducir {{ post.title }}" aria-pressed="false" hidden><span class="episode__icon" aria-hidden="true"></span></button>
       <time class="episode__date" datetime="{{ post.published_at | isoDate }}">{{ post.published_at | shortDate }}</time>
       <a class="display episode__title" href="/archive/{{ post.id }}.html">{{ post.title }}</a>
       <span class="episode__editor">{% if post.slugs.editor %}<a href="/archive/editors/{{ post.slugs.editor }}.html">{{ post.editor.name }}</a>{% else %}{{ post.editor.name }}{% endif %}</span>

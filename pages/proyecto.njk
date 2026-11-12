@@ -1,0 +1,72 @@
+---
+layout: layouts/main.njk
+title: El proyecto
+permalink: /el-proyecto/
+pageClass: project
+---
+{#- dSong's history (_data/historia.js): milestones from the archive and told by hand (data/historia.json) -#}
+<section class="project-hero">
+  <div class="project-hero__title">
+    <p class="kicker">El proyecto</p>
+    <h1 class="page-title project-hero__name">Un grupo de amigos, <mark>una canción al día</mark></h1>
+  </div>
+  <div class="project-hero__text">
+    <p>dSong fue un proyecto web sin ánimo de lucro que empezó el 18 de mayo de 2009: un grupo de amigos nos propusimos escribir una recomendación musical cada día.</p>
+    <p>Lo que sigue es la historia de lo que hicimos, contada con lo que quedó publicado.</p>
+  </div>
+</section>
+
+<section class="home__figures" aria-label="En cifras">
+  {%- for figure in [
+    [stats.totals.posts, "artículos", "/archive/all/"],
+    [historia.totals.comments, "comentarios", "/archive/all/"],
+    [stats.totals.editors, "autores", "/archive/editors/"],
+    [archive.specialCount, "especiales", "/archive/especiales/"],
+    [stats.totals.podcasts, "podcasts", "/archive/podcasts/"]
+  ] %}
+  <a class="home__figure" href="{{ figure[2] }}"><span class="display home__figure-value">{{ figure[0] | thousands }}</span><span class="kicker">{{ figure[1] }}</span></a>
+  {%- endfor %}
+</section>
+
+<section class="history" aria-labelledby="history-title">
+  <div class="history__head">
+    <h2 class="display history__title" id="history-title">La historia</h2>
+    <p class="history__legend">
+      <span><span class="history__tag">Del archivo</span> sale solo de los artículos</span>
+      <span><span class="history__tag history__tag--told">Contado</span> lo escribimos nosotros</span>
+    </p>
+  </div>
+  <ol class="history__years">
+    {%- for year in historia.years %}
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">{{ year.year }}</span>
+          {%- if year.count %}
+          <span class="history__year-count">{{ year.count }} {{ "artículo" if year.count == 1 else "artículos" }}</span>
+          <span class="history__year-track"><span class="history__year-fill" style="width: {{ year.pct }}%"></span></span>
+          {%- endif %}
+        </div>
+      </div>
+      <ol class="history__items">
+        {%- for item in year.items %}
+        <li class="history__item history__item--{{ item.kind }}">
+          <div class="history__item-head">
+            <span class="kicker">{{ (item.date + " 00:00") | longDate }}</span>
+            <span class="history__tag{% if item.kind == 'contado' %} history__tag--told{% endif %}">{{ "Contado" if item.kind == "contado" else "Del archivo" }}</span>
+          </div>
+          <h3 class="display history__item-title">{{ item.title }}</h3>
+          {%- if item.text %}<p>{{ item.text }}</p>{% endif %}
+          {%- if item.link %}<a class="history__link" href="{{ item.link.url }}"{% if not item.link.url.startsWith("/") %} rel="noopener" target="_blank"{% endif %}>{{ item.link.label }} →</a>{% endif %}
+        </li>
+        {%- endfor %}
+      </ol>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section class="project-license">
+  <h2 class="kicker">Licencia</h2>
+  <p>Todos los contenidos siguen publicados bajo la licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">Creative Commons Reconocimiento-No comercial-Compartir bajo la misma licencia 3.0 España</a>: puedes darles un uso no comercial, siempre que reconozcas la autoría y compartas con la misma licencia.</p>
+</section>

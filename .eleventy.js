@@ -38,6 +38,14 @@ export default function(eleventyConfig) {
     return withTime ? `${date}, ${HH}:${mm}` : date;
   });
 
+  // Weekday and day, e.g. "lun 8" (festival series)
+  eleventyConfig.addFilter("weekDay", (dateString) => {
+    const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(dateString ?? "");
+    if (!match) return dateString ?? "";
+    const [, yyyy, MM, dd] = match;
+    return `${WEEKDAYS[new Date(Date.UTC(yyyy, MM - 1, dd)).getUTCDay()].slice(0, 3)} ${Number(dd)}`;
+  });
+
   // Short Spanish date for lists, e.g. "29 may 2009"
   eleventyConfig.addFilter("shortDate", (dateString) => {
     const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(dateString ?? "");

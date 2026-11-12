@@ -1,0 +1,43 @@
+---
+layout: layouts/main.njk
+title: Especiales
+permalink: /archive/especiales/
+pageClass: archive
+---
+{#- Especiales (lib/specials.js): albums, festivals and lists or themes, each as post cards -#}
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><span>Especiales</span>
+</nav>
+
+<div class="page-head">
+  <div>
+    <p class="kicker">{{ archive.specialCount }} artículos</p>
+    <h1 class="page-title">Especiales</h1>
+  </div>
+  <nav class="chips" aria-label="Tipos de especial">
+    {%- for t in archive.specials %}
+    <a class="chip" href="#{{ t.type }}">{{ t.name }} · {{ t.posts | length }}</a>
+    {%- endfor %}
+  </nav>
+</div>
+
+{%- for t in archive.specials %}
+<section class="specials" id="{{ t.type }}" aria-labelledby="specials-{{ t.type }}">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="specials-{{ t.type }}">{{ t.name }} · {{ t.posts | length }}</h2>
+    <span>{{ t.note }}</span>
+  </div>
+  <ol class="post-cards">
+    {%- for post in t.posts %}
+    <li>
+      <a class="post-card" href="/archive/{{ post.id }}.html">
+        <span class="kicker">{{ post.published_at | shortDate }} · {{ post.special.series or post.special.label }}</span>
+        <span class="display post-card__title">{{ post.special.title }}</span>
+        {%- if post.special.by %}<span class="post-card__by">de {{ post.special.by }}</span>{% endif %}
+        <span class="post-card__editor">{{ post.editor.name }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+{%- endfor %}

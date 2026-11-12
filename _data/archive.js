@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { groupBy, loadPosts } from "../lib/posts.js";
+import { SPECIAL_TYPES } from "../lib/specials.js";
 
 // Artist name -> MusicBrainz artist id, or [{ name, mbid }] for a collaboration (scripts/match-musicbrainz.mjs --apply)
 const musicbrainz = () => {
@@ -86,6 +87,11 @@ export default function () {
     radioById: Object.fromEntries(radio.map((entry) => [entry[0], true])),
     // Podcast index (/archive/podcasts/): chronological, like the other tables
     podcastPosts: posts.filter((post) => post.metadata.podcast_file),
+    // Especiales (lib/specials.js): the posts of each shape, chronological, for /archive/especiales/
+    specials: SPECIAL_TYPES.map((t) => ({ ...t, posts: posts.filter((post) => post.special?.type === t.type) })),
+    specialCount: posts.filter((post) => post.special).length,
+    // Festival series: name -> its posts in order, for the series box beside each of them
+    series: Object.groupBy(posts.filter((post) => post.special?.series), (post) => post.special.series),
     // Podcast feed (/podcast.xml): posts with a UniRadio Jaén podcast, newest first
     podcast: posts.filter((post) => post.metadata.podcast_file)
       .map((post) => ({ post, file: post.metadata.podcast_file, length: podcastSizes[post.metadata.podcast_file] ?? 0 }))
