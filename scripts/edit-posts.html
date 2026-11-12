@@ -49,6 +49,12 @@
   .site--other { border-left-color: var(--accent); background: #ffffe0; }
   .site--match { background: #e8f5e8; border-left-color: var(--ok); color: var(--ok); font-weight: 700; }
   .site b { font-weight: 700; }
+  .redirects { border: 3px solid var(--ink); max-height: 85vh; padding: 0; width: min(70rem, 95vw); }
+  .redirects__bar { align-items: center; background: var(--paper); border-bottom: 2px solid var(--ink); display: flex; gap: .75rem; padding: .75rem; position: sticky; top: 0; }
+  .redirects__bar input { flex: 1; }
+  .redirects table { border-collapse: collapse; font-family: ui-monospace, monospace; font-size: .75rem; width: 100%; }
+  .redirects td, .redirects th { border-bottom: 1px solid var(--rule); overflow-wrap: anywhere; padding: .3rem .75rem; text-align: left; vertical-align: top; }
+  .redirects a { color: inherit; }
   .site__source { color: var(--muted); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
   .site .button { font-size: .7rem; margin-left: .4rem; padding: 0 .35rem; }
   .empty { color: var(--muted); padding: 2rem 1.25rem; }
@@ -167,6 +173,7 @@
         </optgroup>
       </select>
       <span class="list__count" id="count"></span>
+      <button class="button" type="button" data-action="all-redirects">Redirecciones…</button>
     </div>
     <ul class="list__items" id="items"></ul>
   </aside>
@@ -175,6 +182,11 @@
     <p class="empty">Elige un artículo de la lista. <kbd>⌘S</kbd> guarda, <kbd>⌘↵</kbd> guarda y pasa al siguiente de la lista; <kbd>↑</kbd>/<kbd>↓</kbd> (o <kbd>k</kbd>/<kbd>j</kbd>) cambian de artículo, y <kbd>⌥↑</kbd>/<kbd>⌥↓</kbd> también mientras escribes.</p>
   </main>
 </div>
+
+<dialog class="redirects" id="redirects">
+  <form method="dialog" class="redirects__bar"><strong>Redirecciones activas</strong> <input type="search" id="redirects-q" placeholder="Filtrar por URL…" autocomplete="off"> <span class="list__count" id="redirects-count"></span> <button class="button">Cerrar</button></form>
+  <table><thead><tr><th>Desde</th><th>A</th></tr></thead><tbody id="redirects-rows"></tbody></table>
+</dialog>
 
 <template id="form">
   <div class="editor__bar">
@@ -196,6 +208,7 @@
       <div class="block__body">
       <div class="grid">
         <label class="field field--wide"><span>Título</span><input name="title" required></label>
+        <label class="field field--wide"><span>Slug (URL: /archive/<i>slug</i>.html)</span><input name="id" required pattern="[a-z0-9\-]+" autocomplete="off" spellcheck="false"><small>Cambiarlo crea una redirección desde la URL anterior; las que apuntaban a ella pasan a la nueva.</small><span data-redirects></span></label>
         <label class="field"><span>Fecha de publicación</span><input name="published_at" required pattern="\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}"><small>aaaa-mm-dd hh:mm:ss, hora de Madrid</small></label>
         <label class="field"><span>Categoría</span><select name="m.category" data-options="categories" required></select></label>
         <label class="field"><span>Autor</span><select name="editor" data-options="editors"></select></label>
@@ -466,6 +479,11 @@ function fill(post) {
   }
   const field = (name) => editor.querySelector(`[name="${name}"]`);
   field('title').value = post.title;
+  field('id').value = post.id;
+  const box = $('[data-redirects]', editor);
+  box.innerHTML = (current.redirects ?? []).length
+    ? `<small class="site" data-keep><span class="site__source">Redirigen aquí (${current.redirects.length})</span> ${current.redirects.map((u) => `<a href="http://localhost:8080${esc(u)}" target="_blank">${esc(u)}</a>`).join(' · ')}</small>`
+    : '<small class="site" data-keep><span class="site__source">Redirigen aquí</span> ninguna</small>';
   field('published_at').value = withoutZone(post.published_at);
   field('editor').value = post.editor.name;
   field('content').value = post.content ?? '';
@@ -500,7 +518,7 @@ const SOURCE_LABEL = { MusicBrainz: 'MusicBrainz', 'yt-dlp': 'Búsqueda yt-dlp',
 const REASON = { broken: 'roto', mismatch: 'no es la versión del artículo', hand: 'quitado a mano' };
 function renderSite() {
   const editor = $('#editor');
-  editor.querySelectorAll('.site').forEach((el) => el.remove());
+  editor.querySelectorAll('.site:not([data-keep])').forEach((el) => el.remove());
   for (const [field, info] of Object.entries(current.site ?? {})) {
     const input = editor.querySelector(`[name="m.${field}"]`);
     if (!input) continue;
@@ -603,6 +621,7 @@ function build() {
   const editor = $('#editor');
   const value = (name) => editor.querySelector(`[name="${name}"]`)?.value ?? '';
   post.title = value('title');
+  post.id = value('id').trim();
   post.published_at = withZone(value('published_at'), current.post.published_at);
   post.content = lineBreaks(value('content'), current.post.content);
   const author = options.editors.find((e) => e.name === value('editor'));
@@ -652,8 +671,9 @@ async function save({ next = false } = {}) {
   if (isDirty()) {
     try {
       const data = await api(`/api/posts/${current.post.id}`, { post: build(), hash: current.hash });
-      current = { post: data.post, hash: data.hash, site: data.site, sources: current.sources };
-      posts[posts.findIndex((p) => p.id === data.post.id)] = data.summary;
+      current = { post: data.post, hash: data.hash, site: data.site, redirects: data.redirects, sources: current.sources };
+      posts[posts.findIndex((p) => p.id === (data.renamedFrom ?? data.post.id))] = data.summary;
+      if (data.renamedFrom) history.replaceState(null, '', `#${data.post.id}`);
       fill(data.post);
       showErrors([]);
       status(`✓ Guardado${data.missing.length ? ` (faltan: ${data.missing.join(', ')})` : ''}`, 'ok');
@@ -665,6 +685,28 @@ async function save({ next = false } = {}) {
   }
   if (next && following) open(following.id, { force: true });
 }
+
+// Slug: typed text becomes a valid id (lowercase ASCII, digits and hyphens), as validate requires.
+document.addEventListener('input', (e) => {
+  if (e.target.name !== 'id') return;
+  const v = e.target.value, slug = v.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+/, '');
+  if (slug !== v) e.target.value = slug;
+});
+// All redirects, filterable
+let allRedirects = [];
+function renderRedirects() {
+  const q = $('#redirects-q').value.trim().toLowerCase();
+  const rows = allRedirects.filter((r) => !q || `${r.from} ${r.to}`.toLowerCase().includes(q));
+  $('#redirects-count').textContent = `${rows.length} de ${allRedirects.length}`;
+  $('#redirects-rows').innerHTML = rows.map((r) => `<tr><td><a href="http://localhost:8080${esc(r.from)}" target="_blank">${esc(r.from)}</a></td><td><a href="http://localhost:8080${esc(r.to)}" target="_blank">${esc(r.to)}</a></td></tr>`).join('');
+}
+$('#redirects-q').addEventListener('input', renderRedirects);
+document.addEventListener('click', async (e) => {
+  if (!e.target.closest('[data-action="all-redirects"]')) return;
+  allRedirects = (await api('/api/redirects')).redirects;
+  renderRedirects();
+  $('#redirects').showModal();
+});
 
 // ---------- Players ----------
 // Pasted links become what the data stores (YouTube code, Spotify/Apple embed URLs)

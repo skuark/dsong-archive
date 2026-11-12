@@ -6,7 +6,7 @@
 // byte-identically; a post changed on disk since it was opened is not overwritten.
 import { createServer } from "node:http";
 import { createHash } from "node:crypto";
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import MarkdownIt from "markdown-it";
 import { serializePosts, validatePost } from "../lib/validate-post.js";
 import { PLAYERS, effective, hidePlayer, musicbrainzValues, ordered, playerSources, resolveMetadata, sameAsMusicbrainz } from "../lib/metadata.js";
@@ -16,6 +16,47 @@ import { chooseArtist, chooseRecord, details, searchSource, summaries } from "./
 const PORT = Number(process.env.PORT) || 8082;
 const FILE = new URL("../data/posts.json", import.meta.url);
 const MB_FILE = new URL("../data/musicbrainz.json", import.meta.url);
+const REDIRECTS = new URL("../data/redirects.json", import.meta.url);
+const CONTEXT = new URL("../data/post-context.json", import.meta.url);
+const loadRedirects = () => JSON.parse(readFileSync(REDIRECTS, "utf8"));
+const postUrl = (id) => `/archive/${id}.html`;
+const incoming = (id, redirects = loadRedirects()) => redirects.filter((r) => r.to === postUrl(id)).map((r) => r.from);
+
+// Changing a post's id (its slug: /archive/<id>.html). Old URLs must keep working: the old URL redirects to the
+// new one, redirects to the old one go straight to the new one (no chains), and a redirect from the new URL
+// (renaming back) is dropped. Files keyed by post id follow: data/post-context.json and the JSON reports
+// (top-level or `posts` keys), so the post keeps its context and review decisions.
+function slugProblem(from, to, posts, redirects) {
+  if (!/^[a-z0-9-]+$/.test(to)) return "El slug solo puede tener a-z, 0-9 y guiones";
+  if (posts.some((p) => p.id === to)) return `Ya hay un artículo con el slug ${to}`;
+  const taken = redirects.find((r) => r.from === postUrl(to));
+  if (taken && taken.to !== postUrl(from)) return `${postUrl(to)} ya redirige a ${taken.to}`;
+  return null;
+}
+function renameId(from, to) {
+  const redirects = loadRedirects().filter((r) => r.from !== postUrl(to));
+  for (const r of redirects) if (r.to === postUrl(from)) r.to = postUrl(to);
+  redirects.push({ from: postUrl(from), to: postUrl(to) });
+  writeFileSync(REDIRECTS, JSON.stringify(redirects, null, 2) + "\n");
+  const rekey = (obj) => {
+    if (!obj || typeof obj !== "object" || Array.isArray(obj) || !(from in obj)) return false;
+    const out = {};
+    for (const [k, v] of Object.entries(obj)) out[k === from ? to : k] = v;
+    for (const k of Object.keys(obj)) delete obj[k];
+    Object.assign(obj, out);
+    return true;
+  };
+  const mb = JSON.parse(readFileSync(MB_FILE, "utf8"));
+  let mbChanged = false;
+  for (const ids of Object.values(mb.preferEditor ?? {})) for (let i = 0; i < ids.length; i++) if (ids[i] === from) { ids[i] = to; mbChanged = true; }
+  if (mbChanged) writeFileSync(MB_FILE, JSON.stringify(mb, null, 2) + "\n");
+  const files = [CONTEXT, ...(existsSync("reports") ? readdirSync("reports").filter((f) => f.endsWith(".json")).map((f) => `reports/${f}`) : [])];
+  for (const file of files) {
+    if (!existsSync(file)) continue;
+    const json = JSON.parse(readFileSync(file, "utf8"));
+    if (rekey(json) | rekey(json.posts)) writeFileSync(file, JSON.stringify(json, null, 2) + "\n");
+  }
+}
 const html = new URL("./edit-posts.html", import.meta.url);
 const md = new MarkdownIt({ html: true });   // same as the site's `markdown` filter
 
@@ -116,7 +157,7 @@ createServer(async (req, res) => {
     const match = url.pathname.match(/^\/api\/posts\/([a-z0-9-]+)$/);
     if (match && req.method === "GET") {
       const post = load().posts.find((p) => p.id === match[1]);
-      return post ? send(200, { post, hash: hash(post), site: site(post), sources: details(post) }) : send(404, { error: "No existe" });
+      return post ? send(200, { post, hash: hash(post), site: site(post), redirects: incoming(post.id), sources: details(post) }) : send(404, { error: "No existe" });
     }
 
     // Context, MusicBrainz match and player audit of a post (refreshed after a choice)
@@ -165,14 +206,19 @@ createServer(async (req, res) => {
       const i = data.posts.findIndex((p) => p.id === match[1]);
       if (i < 0) return send(404, { error: "No existe" });
       if (hash(data.posts[i]) !== original) return send(409, { error: "El artículo ha cambiado en disco desde que lo abriste. Recárgalo antes de guardar." });
-      if (edited.id !== match[1]) return send(400, { errors: ["El id no se puede cambiar (las URLs dependen de él)"] });
+      const renamed = edited.id !== match[1];
+      if (renamed) { const problem = slugProblem(match[1], edited.id, data.posts, loadRedirects()); if (problem) return send(400, { errors: [problem] }); }
       const post = withLayers(clean(edited), data.posts[i]);
       const { errors, missing } = validatePost(post);
       if (errors.length) return send(400, { errors });
       data.posts[i] = post;
       writeFileSync(FILE, serializePosts(data));
-      return send(200, { post, hash: hash(post), site: site(post), summary: summary(post), missing });
+      if (renamed) renameId(match[1], post.id);
+      return send(200, { post, hash: hash(post), site: site(post), redirects: incoming(post.id), summary: summary(post), missing, renamedFrom: renamed ? match[1] : undefined });
     }
+
+    // All the redirects (data/redirects.json), for the list in the editor.
+    if (req.method === "GET" && url.pathname === "/api/redirects") return send(200, { redirects: loadRedirects() });
 
     if (req.method === "POST" && url.pathname === "/api/preview") {
       const { content } = await body(req);
