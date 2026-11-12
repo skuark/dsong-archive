@@ -153,7 +153,7 @@
   },
   {
     "from": "/archive/albums/astor-piazzola-undefined.html",
-    "to": "/archive/artists/astor-piazzola.html"
+    "to": "/archive/artists/astor-piazzolla.html"
   },
   {
     "from": "/archive/albums/andreas-johnson-undefined.html",
@@ -369,7 +369,7 @@
   },
   {
     "from": "/archive/albums/le-roux-undefined.html",
-    "to": "/archive/artists/le-roux.html"
+    "to": "/archive/artists/leroux.html"
   },
   {
     "from": "/archive/albums/faith-no-more-undefined.html",
@@ -589,7 +589,7 @@
   },
   {
     "from": "/archive/albums/annie-b-sweet-undo.html",
-    "to": "/archive/albums/annie-b-sweet-start-restart-undo.html"
+    "to": "/archive/albums/anni-b-sweet-start-restart-undo.html"
   },
   {
     "from": "/archive/albums/antilopez-ser-musico.html",
@@ -681,7 +681,7 @@
   },
   {
     "from": "/archive/albums/deadmau-4x4-12.html",
-    "to": "/archive/albums/deadmau-4-4-12.html"
+    "to": "/archive/albums/deadmau5-4-4-12.html"
   },
   {
     "from": "/archive/albums/delafe-y-las-flores-azules-las-trompetas-de-la-muerte.html",
@@ -1110,5 +1110,97 @@
   {
     "from": "/archive/2009-11-18-kajama-de-karl-jenkins.html",
     "to": "/archive/2009-11-18-kayama-de-karl-jenkins.html"
+  },
+  {
+    "from": "/archive/artists/annie-b-sweet.html",
+    "to": "/archive/artists/anni-b-sweet.html"
+  },
+  {
+    "from": "/archive/artists/astor-piazzola.html",
+    "to": "/archive/artists/astor-piazzolla.html"
+  },
+  {
+    "from": "/archive/artists/ce-ce-peniston.html",
+    "to": "/archive/artists/cece-peniston.html"
+  },
+  {
+    "from": "/archive/artists/deadmau.html",
+    "to": "/archive/artists/deadmau5.html"
+  },
+  {
+    "from": "/archive/artists/earth-wind-fire.html",
+    "to": "/archive/artists/earth-wind-and-fire.html"
+  },
+  {
+    "from": "/archive/artists/eurithmics.html",
+    "to": "/archive/artists/eurythmics.html"
+  },
+  {
+    "from": "/archive/artists/jarabedepalo.html",
+    "to": "/archive/artists/jarabe-de-palo.html"
+  },
+  {
+    "from": "/archive/artists/l-p.html",
+    "to": "/archive/artists/lp.html"
+  },
+  {
+    "from": "/archive/artists/le-roux.html",
+    "to": "/archive/artists/leroux.html"
+  },
+  {
+    "from": "/archive/artists/sugarbabes.html",
+    "to": "/archive/artists/sugababes.html"
+  },
+  {
+    "from": "/archive/artists/the-andrew-sisters.html",
+    "to": "/archive/artists/the-andrews-sisters.html"
+  },
+  {
+    "from": "/archive/artists/wolfang-amadeus-mozart.html",
+    "to": "/archive/artists/wolfgang-amadeus-mozart.html"
+  },
+  {
+    "from": "/archive/albums/ce-ce-peniston-finally.html",
+    "to": "/archive/albums/cece-peniston-finally.html"
+  },
+  {
+    "from": "/archive/albums/sugarbabes-one-touch.html",
+    "to": "/archive/albums/sugababes-one-touch.html"
+  },
+  {
+    "from": "/archive/albums/annie-b-sweet-start-restart-undo.html",
+    "to": "/archive/albums/anni-b-sweet-start-restart-undo.html"
+  },
+  {
+    "from": "/archive/albums/eurithmics-sweet-dreams-are-made-of-this.html",
+    "to": "/archive/albums/eurythmics-sweet-dreams-are-made-of-this.html"
+  },
+  {
+    "from": "/archive/albums/l-p-into-the-wild.html",
+    "to": "/archive/albums/lp-into-the-wild.html"
+  },
+  {
+    "from": "/archive/albums/wolfang-amadeus-mozart-requiem-en-re-menor.html",
+    "to": "/archive/albums/wolfgang-amadeus-mozart-requiem-en-re-menor.html"
+  },
+  {
+    "from": "/archive/albums/earth-wind-fire-the-best-of-earth-wind-and-fire-vol-1.html",
+    "to": "/archive/albums/earth-wind-and-fire-the-best-of-earth-wind-and-fire-vol-1.html"
+  },
+  {
+    "from": "/archive/albums/the-andrew-sisters-boogie-woogie-bugle-boy.html",
+    "to": "/archive/albums/the-andrews-sisters-boogie-woogie-bugle-boy.html"
+  },
+  {
+    "from": "/archive/albums/jarabedepalo-y-ahora-que-hacemos.html",
+    "to": "/archive/albums/jarabe-de-palo-y-ahora-que-hacemos.html"
+  },
+  {
+    "from": "/archive/albums/deadmau-4-4-12.html",
+    "to": "/archive/albums/deadmau5-4-4-12.html"
+  },
+  {
+    "from": "/archive/albums/jarabedepalo-la-flaca.html",
+    "to": "/archive/albums/jarabe-de-palo-la-flaca.html"
   }
 ]
