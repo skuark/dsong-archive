@@ -82,10 +82,10 @@ function summary(post, extra = summaries([post])[post.id], mb = mbFile()) {
 }
 
 // The form edits editorMetadata only (the original data plus hand corrections); the automatic layers
-// (hiddenPlayers, musicbrainzMetadata, spotifyMetadata, ytdlpMetadata) are kept from disk on save. `site`
+// (hiddenPlayers, musicbrainzMetadata, spotifyMetadata, ytdlpMetadata, itunesMetadata) are kept from disk on save. `site`
 // tells what the site shows for each field and where it comes from, to compare with the editor's values.
-const LAYERS = ["hiddenPlayers", "musicbrainzMetadata", "spotifyMetadata", "ytdlpMetadata"];
-const SOURCE = { editorMetadata: "editor", musicbrainzMetadata: "MusicBrainz", spotifyMetadata: "Spotify", ytdlpMetadata: "yt-dlp" };
+const LAYERS = ["hiddenPlayers", "musicbrainzMetadata", "spotifyMetadata", "ytdlpMetadata", "itunesMetadata"];
+const SOURCE = { editorMetadata: "editor", musicbrainzMetadata: "MusicBrainz", spotifyMetadata: "Spotify", ytdlpMetadata: "yt-dlp", itunesMetadata: "iTunes" };
 const COMPARED = ["song", "artist", "album", "year", "genre", "artist_nationality", "artist_url"];
 const mbFile = () => { try { return JSON.parse(readFileSync(MB_FILE, "utf8")); } catch { return {}; } };
 function site(post, mb = mbFile()) {

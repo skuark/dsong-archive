@@ -92,9 +92,8 @@ if (process.argv.includes("--apply")) {
     if (d.action !== "replace" || !d.pick) throw new Error(`Bad decision ${JSON.stringify(d)}`);
     if (d.player === "Spotify") throw new Error(`No Spotify search: can't replace ${d.id}`);
     if (d.player === "YouTube" && !/^[\w-]{11}$/.test(d.pick)) throw new Error(`Bad YouTube id ${d.pick}`);
-    // Apple Music players come only from MusicBrainz (an iTunes search by artist + title isn't reliable).
-    if (d.player === "Apple Music") throw new Error(`No Apple Music search: can't replace ${d.id}`);
-    setPlayer(post, field, d.pick);
+    // A pick from a search goes to its own layer: iTunes for Apple Music (the last resort), yt-dlp for YouTube.
+    setPlayer(post, field, d.pick, { source: field === "apple_music_url" ? "itunesMetadata" : "ytdlpMetadata" });
     log.replace.push(`| ${d.id} | ${d.player} | \`${before ?? ""}\` → \`${d.pick}\` | ${d.reason ?? ""} |`);
   }
   writeFileSync(POSTS, serializePosts(data));
