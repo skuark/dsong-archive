@@ -25,7 +25,8 @@
   .list__items { list-style: none; margin: 0; overflow-y: auto; padding: 0; }
   .list__item { border-bottom: 1px solid var(--rule); cursor: pointer; padding: .5rem .75rem; }
   .list__item:hover { background: var(--soft); }
-  .list__item[aria-current="true"] { background: var(--accent); }
+  /* The open post: highlighted, with a thick left rule */
+  .list__item[aria-current="true"] { background: var(--accent); box-shadow: inset 6px 0 0 var(--ink); }
   .list__title { display: block; font-weight: 600; line-height: 1.25; }
   .list__meta { color: var(--muted); display: block; font-size: .75rem; margin-top: .15rem; }
   .badge { border: 1px solid var(--ink); display: inline-block; font-size: .6rem; font-weight: 700; letter-spacing: .05em; margin-left: .25rem; padding: 0 .25rem; }
@@ -171,7 +172,7 @@
   </aside>
 
   <main class="editor" id="editor">
-    <p class="empty">Elige un artículo de la lista. <kbd>⌘S</kbd> guarda, <kbd>⌘↵</kbd> guarda y pasa al siguiente de la lista.</p>
+    <p class="empty">Elige un artículo de la lista. <kbd>⌘S</kbd> guarda, <kbd>⌘↵</kbd> guarda y pasa al siguiente de la lista; <kbd>↑</kbd>/<kbd>↓</kbd> (o <kbd>k</kbd>/<kbd>j</kbd>) cambian de artículo, y <kbd>⌥↑</kbd>/<kbd>⌥↓</kbd> también mientras escribes.</p>
   </main>
 </div>
 
@@ -445,7 +446,7 @@ async function open(id, { force = false } = {}) {
   current = data;
   if (location.hash !== `#${id}`) history.replaceState(null, '', `#${id}`);
   fill(data.post);
-  document.querySelectorAll('.list__item').forEach((li) => li.toggleAttribute('aria-current', li.dataset.id === id));
+  document.querySelectorAll('.list__item').forEach((li) => { if (li.dataset.id === id) li.setAttribute('aria-current', 'true'); else li.removeAttribute('aria-current'); });
   document.querySelector(`.list__item[data-id="${id}"]`)?.scrollIntoView({ block: 'nearest' });
 }
 
@@ -521,9 +522,23 @@ function renderSite() {
     for (const h of info.hidden ?? []) {
       lines.push(`<small class="site"><span class="site__source">Oculto · ${esc(REASON[h.reason] ?? h.reason)}</span> ${esc(h.value)} <button class="button" type="button" data-show="${esc(field)}" data-value="${esc(h.value)}">Mostrar</button></small>`);
     }
+    // Differs from MusicBrainz: a button copies MusicBrainz's value into the field (saved with the post).
+    if (info.musicbrainz && !info.match) {
+      const value = field === 'genre' ? info.musicbrainz.split(', ')[0].replace(/^./, (c) => c.toUpperCase()) : info.musicbrainz;
+      lines.push(`<small class="site"><button class="button" type="button" data-sync="${esc(field)}" data-value="${esc(value)}" title="Copia al campo el dato de MusicBrainz (se guarda con Guardar)">↓ Usar el de MusicBrainz: ${esc(value)}</button></small>`);
+    }
     anchor.insertAdjacentHTML('afterend', lines.join(''));
   }
 }
+document.addEventListener('click', (e) => {
+  const button = e.target.closest('[data-sync]');
+  if (!button || !current) return;
+  const input = $('#editor').querySelector(`[name="m.${button.dataset.sync}"]`);
+  input.value = button.dataset.value;
+  input.dispatchEvent(new Event('input', { bubbles: true }));
+  button.closest('.site').remove();
+  status();
+});
 document.addEventListener('click', async (e) => {
   const button = e.target.closest('[data-hide], [data-show]');
   if (!button || !current) return;
@@ -928,7 +943,7 @@ async function sourcesClick(e) {
   const use = e.target.closest('[data-use]')?.dataset.use;
   if (use) {
     $('input[name^="m."]', box).value = use;
-    box.querySelectorAll('.results li').forEach((li) => li.toggleAttribute('aria-current', li.querySelector('[data-use]')?.dataset.use === use));
+    box.querySelectorAll('.results li').forEach((li) => { if (li.querySelector('[data-use]')?.dataset.use === use) li.setAttribute('aria-current', 'true'); else li.removeAttribute('aria-current'); });
     tryPlayer(box);
     status();
     return true;
@@ -974,7 +989,17 @@ editorEl.addEventListener('click', async (e) => {
   if (action === 'try') tryPlayer(e.target.closest('.player'));
   if (action === 'delete-comment') { e.target.closest('.comment').remove(); status(); }
 });
+// Keyboard: ↑/↓ (or k/j) open the previous/next post of the list when not typing; ⌥↑/⌥↓ also inside a field.
+function step(delta) {
+  if (!visible.length) return;
+  const i = visible.findIndex((p) => p.id === current?.post.id);
+  const next = visible[i < 0 ? 0 : Math.min(Math.max(i + delta, 0), visible.length - 1)];
+  if (next && next.id !== current?.post.id) open(next.id);
+}
 document.addEventListener('keydown', (e) => {
+  const typing = e.target.matches('input, textarea, select, [contenteditable]');
+  const up = e.key === 'ArrowUp' || (!typing && e.key === 'k'), down = e.key === 'ArrowDown' || (!typing && e.key === 'j');
+  if ((up || down) && !e.metaKey && !e.ctrlKey && (e.altKey || !typing)) { e.preventDefault(); step(up ? -1 : 1); return; }
   if (e.key === 'Enter' && !(e.metaKey || e.ctrlKey) && e.target.matches('[data-q], [data-album]')) {
     e.preventDefault();
     e.target.closest('.source__search').querySelector('[data-action]').click();
