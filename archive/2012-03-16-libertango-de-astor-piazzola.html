@@ -14,7 +14,7 @@
   <meta property="og:description" content="Hace tiempo que tenia ganas de traer a Astor Piazzola por este rincón pero siempre se me acababa pasando. Pero de hoy no pasa. Astor fue uno de los…">
   <meta property="og:url" content="https://dsong.es/archive/2012-03-16-libertango-de-astor-piazzola.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=34c3b595">
+  <link rel="stylesheet" href="/css/bundle.css?v=55bd8219">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -76,7 +76,38 @@
       </span>
 
       <time class="post-view__date" datetime="2012-03-16T08:00:00+01:00">16 de Marzo de 2012</time>
-    </span>
+      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+  </div>
+  <div class="post-facts" id="post-facts" popover="manual">
+    <div class="post-facts__header">
+      <span class="kicker">Ficha</span>
+      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+    </div>
+    <div class="post-facts__body">
+    <h4 class="post-facts__group kicker">Música</h4>
+    <dl class="post-facts__list">
+      <dt>Artista</dt>
+      <dd><a href="/archive/artists/astor-piazzolla.html">Astor Piazzolla</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/e280268a-a5ab-4bb0-be4d-ec470ca59131" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
+      <dt>País</dt>
+      <dd><a href="/archive/countries/argentina.html">Argentina</a></dd>
+      <dt>Género</dt>
+      <dd>Tango</dd>
+      <dt>Géneros en MusicBrainz</dt>
+      <dd>nuevo tango, classical</dd>
+    </dl>
+    <h4 class="post-facts__group kicker">dSong</h4>
+    <dl class="post-facts__list">
+      <dt>Categoría</dt>
+      <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
+      <dt>Autor</dt>
+      <dd><a href="/archive/editors/beita.html">Beita</a></dd>
+      <dt>Publicado</dt>
+      <dd>16 de marzo de 2012</dd>
+      <dt>Podcast</dt>
+      <dd><a href="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20120316.mp3" rel="noopener" target="_blank">UniRadio Jaén (mp3) ↗</a></dd>
+    </dl>
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+    </div>
   </div>
   </header>
 
@@ -104,9 +135,10 @@
       <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
     </div>
   </section>
-  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
   <script src="/js/post-header.js?v=b10e229b" defer></script>
   </aside>
+
 
   
     <details class="post-view__comments">
