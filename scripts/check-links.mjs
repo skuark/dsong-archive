@@ -3,7 +3,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-const SITE = "_site";
+const SITE = process.argv[2] ?? "_site";   // another output dir: node scripts/check-links.mjs <dir>
 const files = readdirSync(SITE, { recursive: true }).filter((f) => f.endsWith(".html"));
 const resolves = (url) => {
   const path = join(SITE, decodeURI(url.split(/[?#]/)[0]));

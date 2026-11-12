@@ -88,11 +88,12 @@ if (process.argv.includes("--apply")) {
     if (!post || !field) throw new Error(`Bad decision ${JSON.stringify(d)}`);
     const before = effective(post)[field];
     if (d.action === "keep") { log.keep++; continue; }
-    if (d.action === "remove") { setPlayer(post, field, null); log.remove.push(`| ${d.id} | ${d.player} | \`${before}\` | ${d.reason ?? ""} |`); continue; }
+    if (d.action === "remove") { setPlayer(post, field, null, { reason: d.reason === "broken" ? "broken" : "mismatch" }); log.remove.push(`| ${d.id} | ${d.player} | \`${before}\` | ${d.reason ?? ""} |`); continue; }
     if (d.action !== "replace" || !d.pick) throw new Error(`Bad decision ${JSON.stringify(d)}`);
     if (d.player === "Spotify") throw new Error(`No Spotify search: can't replace ${d.id}`);
     if (d.player === "YouTube" && !/^[\w-]{11}$/.test(d.pick)) throw new Error(`Bad YouTube id ${d.pick}`);
-    if (d.player === "Apple Music" && !/^https:\/\/embed\.music\.apple\.com\/es\/album\/\d+(\?i=\d+)?$/.test(d.pick)) throw new Error(`Bad Apple Music URL ${d.pick}`);
+    // Apple Music players come only from MusicBrainz (an iTunes search by artist + title isn't reliable).
+    if (d.player === "Apple Music") throw new Error(`No Apple Music search: can't replace ${d.id}`);
     setPlayer(post, field, d.pick);
     log.replace.push(`| ${d.id} | ${d.player} | \`${before ?? ""}\` → \`${d.pick}\` | ${d.reason ?? ""} |`);
   }

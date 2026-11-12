@@ -28,7 +28,7 @@ if (process.argv.includes("--apply")) {
     const pick = post.id in decisions ? decisions[post.id] : r?.pick && ["auto", "ok"].includes(r.status) ? r.pick : null;
     if (!pick || effective(post).spotify_url) continue;
     if (!/^https:\/\/open\.spotify\.com\/embed\/(track|album)\/\w{22}$/.test(pick)) throw new Error(`Bad Spotify URL ${pick}`);
-    setPlayer(post, "spotify_url", pick);
+    setPlayer(post, "spotify_url", pick, { source: "spotifyMetadata" });
     applied++;
   }
   writeFileSync(POSTS, serializePosts(data));

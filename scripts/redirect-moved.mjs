@@ -7,6 +7,7 @@ import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const before = process.argv[2];
+const SITE = process.argv[3] ?? "_site";   // the current build (default _site)
 if (!before || !existsSync(before)) throw new Error("Usage: node scripts/redirect-moved.mjs <previous _site directory>");
 const FILE = new URL("../data/redirects.json", import.meta.url);
 const redirects = JSON.parse(readFileSync(FILE, "utf8"));
@@ -18,9 +19,9 @@ const added = [], lost = [];
 for (const facet of FACETS) {
   const dir = join(before, "archive", facet);
   if (!existsSync(dir)) continue;
-  const now = existsSync(join("_site/archive", facet)) ? readdirSync(join("_site/archive", facet)).filter((f) => f.endsWith(".html")) : [];
+  const now = existsSync(join(SITE, "archive", facet)) ? readdirSync(join(SITE, "archive", facet)).filter((f) => f.endsWith(".html")) : [];
   // Real pages only: the redirect pages in _site (data/redirects.json) don't count as existing.
-  const nowPosts = new Map(now.filter((f) => !redirected.has(`/archive/${facet}/${f}`)).map((f) => [f, postsIn(join("_site/archive", facet, f))]));
+  const nowPosts = new Map(now.filter((f) => !redirected.has(`/archive/${facet}/${f}`)).map((f) => [f, postsIn(join(SITE, "archive", facet, f))]));
   for (const f of readdirSync(dir).filter((f) => f.endsWith(".html"))) {
     const from = `/archive/${facet}/${f}`;
     if (nowPosts.has(f)) continue;
@@ -33,8 +34,8 @@ for (const facet of FACETS) {
     if (best) to = `/archive/${facet}/${best}`;
     // An album whose posts no longer have an album: their artist's page.
     else if (facet === "albums") {
-      const artists = readdirSync("_site/archive/artists").filter((g) => g.endsWith(".html") && !redirected.has(`/archive/artists/${g}`));
-      for (const g of artists) { const n = [...old].filter((id) => postsIn(join("_site/archive/artists", g)).has(id)).length; if (n > most) { best = g; most = n; } }
+      const artists = readdirSync(join(SITE, "archive/artists")).filter((g) => g.endsWith(".html") && !redirected.has(`/archive/artists/${g}`));
+      for (const g of artists) { const n = [...old].filter((id) => postsIn(join(SITE, "archive/artists", g)).has(id)).length; if (n > most) { best = g; most = n; } }
       if (best) to = `/archive/artists/${best}`;
     }
     if (!to) { lost.push(from); continue; }

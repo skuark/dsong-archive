@@ -65,6 +65,11 @@ if (apply) {
       recording: c.recording, song: (c.recording && c.title) || undefined, release_group: c.release_group, album: (c.release_group && c.album) || undefined,
       isrcs: c.isrcs?.length ? c.isrcs : undefined, first_release: (c.release_group && groups[c.release_group]) || undefined,
     }).filter(([, v]) => v));
+    // Players from MusicBrainz (musicbrainz-players.mjs) stay while the post keeps the same recording and album.
+    const old = data.posts[post.id];
+    if (old && old.recording === out[post.id].recording && old.release_group === out[post.id].release_group) {
+      for (const f of ["youtube_code", "spotify_url", "apple_music_url"]) if (old[f]) out[post.id][f] = old[f];
+    }
   }
   writeData({ ...data, posts: out });
   console.log(`${Object.keys(out).length} posts with a recording or album -> musicbrainzMetadata in data/posts.json`);

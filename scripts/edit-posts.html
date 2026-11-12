@@ -28,9 +28,6 @@
   .list__item[aria-current="true"] { background: var(--accent); }
   .list__title { display: block; font-weight: 600; line-height: 1.25; }
   .list__meta { color: var(--muted); display: block; font-size: .75rem; margin-top: .15rem; }
-  .badge--done { background: var(--ok); border-color: var(--ok); color: var(--paper); margin-left: 0; }
-  .reviewed { align-items: center; display: inline-flex; font-size: .8rem; font-weight: 700; gap: .35rem; }
-  .reviewed input { width: auto; }
   .badge { border: 1px solid var(--ink); display: inline-block; font-size: .6rem; font-weight: 700; letter-spacing: .05em; margin-left: .25rem; padding: 0 .25rem; }
 
   /* Editor */
@@ -40,7 +37,15 @@
   .editor__status { font-size: .8rem; }
   .editor__status--dirty { color: var(--error); font-weight: 700; }
   .editor__status--ok { color: var(--ok); }
-  .editor__body { display: grid; gap: 1.5rem; max-width: 70rem; padding: 1.25rem; }
+  /* The whole viewport: blocks side by side in two columns when there's room; text and comments full width */
+  .editor__body { align-items: start; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 38rem), 1fr)); padding: 1.25rem; }
+  .editor__body > .errors, .editor__body > .context, .editor__body > [data-block="text"], .editor__body > [data-block="comments"] { grid-column: 1 / -1; }
+  /* What the site shows when it isn't the editor's value (MusicBrainz, yt-dlp…), and hidden players */
+  .site { background: var(--soft); border-left: 3px solid var(--muted); display: block; font-size: .75rem; overflow-wrap: anywhere; padding: .2rem .4rem; }
+  .site--other { border-left-color: var(--accent); background: #ffffe0; }
+  .site b { font-weight: 700; }
+  .site__source { color: var(--muted); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+  .site .button { font-size: .7rem; margin-left: .4rem; padding: 0 .35rem; }
   .empty { color: var(--muted); padding: 2rem 1.25rem; }
 
   .errors { background: #fee; border: 2px solid var(--error); margin: 0; padding: .75rem 1rem .75rem 2rem; }
@@ -134,9 +139,8 @@
       <h1>✏️ Editor dSong</h1>
       <input id="search" type="search" placeholder="Buscar título, artista o id…" autocomplete="off">
       <select id="filter">
-        <option value="pending">Pendientes de revisar</option>
-        <option value="reviewed">Revisados</option>
         <option value="all">Todos</option>
+        <option value="differs">La web muestra otro dato (MusicBrainz, yt-dlp…)</option>
         <option value="anyPlayer">Falta algún reproductor</option>
         <option value="noYoutube">Sin YouTube</option>
         <option value="noSpotify">Sin Spotify</option>
@@ -171,7 +175,6 @@
   <div class="editor__bar">
     <span class="editor__id" data-id></span>
     <span class="editor__status" data-status></span>
-    <label class="reviewed" title="Se guarda con la fecha de hoy"><input type="checkbox" name="reviewed"> Revisado</label>
     <a class="button" data-view target="_blank">Ver en la web ↗</a>
     <button class="button" type="button" data-action="revert">Deshacer cambios</button>
     <button class="button" type="button" data-action="save">Guardar</button>
@@ -344,9 +347,8 @@ const api = async (url, body) => {
 
 // ---------- List ----------
 const FILTERS = {
-  pending: (p) => !p.reviewed,
-  reviewed: (p) => !!p.reviewed,
   all: () => true,
+  differs: (p) => p.differs,
   anyPlayer: (p) => !p.youtube || !p.spotify || !p.apple,
   noYoutube: (p) => !p.youtube,
   noSpotify: (p) => !p.spotify,
@@ -370,8 +372,7 @@ function renderList() {
   const q = norm($('#search').value).trim();
   const filter = FILTERS[$('#filter').value];
   visible = posts.filter((p) => filter(p) && (!q || norm(`${p.title} ${p.artist} ${p.id}`).includes(q)));
-  const reviewed = posts.filter((p) => p.reviewed).length;
-  $('#count').textContent = `${visible.length} en la lista · ${reviewed} de ${posts.length} revisados (${Math.round((reviewed / posts.length) * 100)} %)`;
+  $('#count').textContent = `${visible.length} de ${posts.length} artículos`;
   const items = $('#items');
   items.textContent = '';
   for (const p of visible) {
@@ -399,13 +400,6 @@ function renderList() {
       badge.title = 'MusicBrainz por revisar';
       badge.textContent = 'MB?';
       meta.append(badge);
-    }
-    if (p.reviewed) {
-      const done = document.createElement('span');
-      done.className = 'badge badge--done';
-      done.title = `Revisado el ${p.reviewed}`;
-      done.textContent = '✓';
-      meta.prepend(done, ' ');
     }
     li.append(title, meta);
     items.append(li);
@@ -468,8 +462,6 @@ function fill(post) {
   field('published_at').value = withoutZone(post.published_at);
   field('editor').value = post.editor.name;
   field('content').value = post.content ?? '';
-  field('reviewed').checked = !!post.reviewed_at;
-  field('reviewed').parentElement.title = post.reviewed_at ? `Revisado el ${post.reviewed_at}` : 'Se guarda con la fecha de hoy';
   for (const input of editor.querySelectorAll('[name^="m."]')) input.value = post.editorMetadata[input.name.slice(2)] ?? '';
 
   // Metadata the form doesn't know (e.g. info_spotify): plain text fields
@@ -486,6 +478,7 @@ function fill(post) {
   }
 
   renderComments(post.comments);
+  renderSite();
   if (current.sources) renderSources();
   applyBlocks();
   updateSearchLinks();
@@ -493,6 +486,45 @@ function fill(post) {
   pristine = JSON.stringify(build());
   status();
 }
+
+// Under each field: what the site shows when it isn't the editor's value, and from which source. Players:
+// the one shown (with a button to hide it) and the hidden ones (with a button to show them again).
+const SOURCE_LABEL = { MusicBrainz: 'MusicBrainz', 'yt-dlp': 'Búsqueda yt-dlp', Spotify: 'API de Spotify', editor: 'Editor' };
+const REASON = { broken: 'roto', mismatch: 'no es la versión del artículo', hand: 'quitado a mano' };
+function renderSite() {
+  const editor = $('#editor');
+  editor.querySelectorAll('.site').forEach((el) => el.remove());
+  for (const [field, info] of Object.entries(current.site ?? {})) {
+    const input = editor.querySelector(`[name="m.${field}"]`);
+    if (!input) continue;
+    const anchor = input.closest('.player__row') ?? input;
+    const own = current.post.editorMetadata[field] ?? '';
+    const lines = [];
+    const isPlayer = 'hidden' in info;
+    if (info.value && (info.source !== 'editor' || info.value !== own)) {
+      lines.push(`<small class="site site--other"><span class="site__source">En la web · ${esc(SOURCE_LABEL[info.source] ?? info.source)}</span> <b>${esc(info.value)}</b>${isPlayer ? ` <button class="button" type="button" data-hide="${esc(field)}" data-value="${esc(info.value)}">Ocultar</button>` : ''}</small>`);
+    } else if (!info.value && own) {
+      lines.push(`<small class="site site--other"><span class="site__source">En la web</span> no se muestra</small>`);
+    }
+    for (const h of info.hidden ?? []) {
+      lines.push(`<small class="site"><span class="site__source">Oculto · ${esc(REASON[h.reason] ?? h.reason)}</span> ${esc(h.value)} <button class="button" type="button" data-show="${esc(field)}" data-value="${esc(h.value)}">Mostrar</button></small>`);
+    }
+    anchor.insertAdjacentHTML('afterend', lines.join(''));
+  }
+}
+document.addEventListener('click', async (e) => {
+  const button = e.target.closest('[data-hide], [data-show]');
+  if (!button || !current) return;
+  const field = button.dataset.hide ?? button.dataset.show;
+  try {
+    const data = await api(`/api/players/${current.post.id}`, { field, value: button.dataset.value, action: button.dataset.hide ? 'hide' : 'show' });
+    current.site = data.site;
+    posts[posts.findIndex((p) => p.id === current.post.id)] = data.summary;
+    renderSite();
+    renderList();
+    status(button.dataset.hide ? '✓ Reproductor oculto' : '✓ Reproductor visible otra vez', 'ok');
+  } catch (error) { showErrors(error.data?.errors ?? [error.message]); }
+});
 
 function renderComments(comments) {
   const box = $('[data-comments]');
@@ -546,9 +578,6 @@ function build() {
   post.title = value('title');
   post.published_at = withZone(value('published_at'), current.post.published_at);
   post.content = lineBreaks(value('content'), current.post.content);
-  // Reviewed: keeps the original date; checking it now stores today's
-  if (!editor.querySelector('[name="reviewed"]').checked) delete post.reviewed_at;
-  else post.reviewed_at = current.post.reviewed_at ?? new Date().toLocaleDateString('sv-SE');
   const author = options.editors.find((e) => e.name === value('editor'));
   if (author && author.name !== post.editor.name) post.editor = structuredClone(author);
 
@@ -596,7 +625,7 @@ async function save({ next = false } = {}) {
   if (isDirty()) {
     try {
       const data = await api(`/api/posts/${current.post.id}`, { post: build(), hash: current.hash });
-      current = { post: data.post, hash: data.hash, sources: current.sources };
+      current = { post: data.post, hash: data.hash, site: data.site, sources: current.sources };
       posts[posts.findIndex((p) => p.id === data.post.id)] = data.summary;
       fill(data.post);
       showErrors([]);
