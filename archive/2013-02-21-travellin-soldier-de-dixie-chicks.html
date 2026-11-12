@@ -14,7 +14,7 @@
   <meta property="og:description" content="Hoy voy a hablar de las Dixie Chicks por diversas razones: nunca se ha hablado de ellas en dSong, son un trío de Texas (una de ellas vive en Austin), es la…">
   <meta property="og:url" content="https://dsong.es/archive/2013-02-21-travellin-soldier-de-dixie-chicks.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
+  <link rel="stylesheet" href="/css/bundle.css?v=ed2b5ede">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -86,6 +86,23 @@
 <p>Pero ellas se recuperaron y resarcieron con su siguiente álbum &quot;<em>Taking the Long Way</em>&quot;(2006): número 1 en la lista Billboard, millones de copias vendidas, y 5 Grammys (incluyendo Mejor Canción del Año por &quot;<em>Not Ready to Make Nice</em>&quot;, que trataba de las polémicas declaraciones).</p>
 
   </div><aside class="post-view__side">
+  <div class="players">
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/yOOg9rsPCbc?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/6hy0LtoZ4BfqXyps80c6rK" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </div>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=cb56d72c" defer></script>
   <section class="podcast" aria-labelledby="podcast-title">
     <div class="podcast__header">
       <a class="podcast__logo-link" href="https://uniradio.ujaen.es/" target="_blank"><img class="podcast__logo" src="/images/uniradio-jaen.jpg" alt="UniRadio Jaén"></a>
@@ -103,26 +120,8 @@
       <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
     </div>
   </section>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/yOOg9rsPCbc?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/6hy0LtoZ4BfqXyps80c6rK" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=9db5772b" defer></script>
   <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <script src="/js/post-side.js?v=09716af8" defer></script>
   <section class="post-facts" aria-labelledby="post-facts-title">
     <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
     <h3 class="post-facts__group kicker">Música</h3>

@@ -109,7 +109,6 @@ a:hover {
 .archive-search__count,
 .post-nav__label,
 .post-view__comments-summary,
-.players__summary,
 .players__tab {
   font-size: .75rem;
   font-weight: 700;
@@ -2156,6 +2155,7 @@ button.chip {
 /* Ficha (lib/facts.js): a 2px box under the players, label + values in two columns */
 .post-facts {
   border: var(--border-thin);
+  box-shadow: var(--shadow-small);
   font-size: .875rem;
   line-height: 1.5;
   padding: 1.25rem;
@@ -2262,36 +2262,11 @@ button.chip {
   padding: 1.25rem;
 }
 
-/* Players: one tab per player in a 2px box (media: no big shadow); the radio toggle at its foot */
+/* Players: one tab per player in a 2px box with a small shadow; the radio toggle at its foot */
 .players {
   background: var(--paper);
   border: var(--border-thin);
-}
-
-.players__summary {
-  border-bottom: var(--border-thin);
-  cursor: pointer;
-  list-style: none;
-  padding: .75rem 1rem;
-}
-
-.players__summary:hover {
-  background: var(--accent);
-}
-
-.players__summary::-webkit-details-marker {
-  display: none;
-}
-
-.players__summary::before {
-  content: "▸";
-  display: inline-block;
-  margin-right: .5rem;
-  transition: transform .2s ease;
-}
-
-.players[open] .players__summary::before {
-  transform: rotate(90deg);
+  box-shadow: var(--shadow-small);
 }
 
 .players__tabs {
@@ -2367,6 +2342,7 @@ button.chip {
 .podcast {
   background: var(--paper);
   border: var(--border-thin);
+  box-shadow: var(--shadow-small);
   padding: 1rem;
 }
 
@@ -3055,39 +3031,17 @@ button.chip {
     /* Spans every row under the crumbs, so sticky can travel along the whole article */
     grid-row: 2 / span 50;
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    max-height: calc(100vh - 3rem);
-    /* Last resort when even a shrunk Ficha doesn't fit (long series, low window): the column scrolls */
-    overflow-y: auto;
+    /* Sticky without scrolling inside: a column taller than the window moves with the page, both ways,
+       until its foot (going down) or its head (going up) shows, and stays there; js/post-side.js sets
+       that top (--side-top). Without JS, it sticks at the top. --side-start: under the radio bar too */
+    --side-start: 1.5rem;
     position: sticky;
-    scrollbar-width: thin;
-    top: 1.5rem;
+    top: var(--side-top, var(--side-start));
   }
 
-  /* Taller than the window (long Ficha): the Ficha scrolls inside its own frame, players stay whole */
-  .post-view__side > * {
-    flex-shrink: 0;
-  }
-
-  .post-view__side > .post-facts {
-    flex-shrink: 1;
-    min-height: 6rem;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-  }
-
-  /* Above the radio bar */
-  /* Under the bar (its height: --radio-bar, set by js/radio.js) */
+  /* Under the radio bar (its height: --radio-bar, set by js/radio.js) */
   .radio-on .post-view > .post-view__side {
-    max-height: calc(100vh - 3rem - var(--radio-bar, 4.5rem));
-    top: calc(1.5rem + var(--radio-bar, 4.5rem));
-  }
-
-  /* Always open in the side column: hide the accordion toggle */
-  .post-view__side .players__summary {
-    display: none;
+    --side-start: calc(1.5rem + var(--radio-bar, 4.5rem));
   }
 }
 

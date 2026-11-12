@@ -14,7 +14,7 @@
   <meta property="og:description" content="Hace poco, haciendo zapping por la televisión, ví a Mónica Naranjo participando como jurado en un programa de música. Esto hizo que a mi mente viniera un tema…">
   <meta property="og:url" content="https://dsong.es/archive/2011-11-04-sobrevivire-de-monica-naranjo.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
+  <link rel="stylesheet" href="/css/bundle.css?v=ed2b5ede">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -84,26 +84,7 @@
 <p>En su momento se convirtió en un auténtico himno gay español, cosa que sinceramente no comprendí entonces y que en la actualidad sigo sin ver claro el motivo, ya que la letra no hace ningún tipo de alusión directa a la homosexualidad. Para mí, ésta cuenta como una mujer intenta salir de una difícil relación, con el lema de &quot;sobreviviré&quot;. Una canción que en ocasiones parece desgarradora, pero que a la vez intentar trasmitir ánimo, sobre todo en la parte final.</p>
 
   </div><aside class="post-view__side">
-  <section class="podcast" aria-labelledby="podcast-title">
-    <div class="podcast__header">
-      <a class="podcast__logo-link" href="https://uniradio.ujaen.es/" target="_blank"><img class="podcast__logo" src="/images/uniradio-jaen.jpg" alt="UniRadio Jaén"></a>
-      <div>
-        <span class="kicker">Podcast</span>
-        <h3 class="podcast__title" id="podcast-title">Escúchalo en UniRadio Jaén</h3>
-        <a class="podcast__feed" href="/podcast.xml">Suscríbete al podcast (RSS)</a>
-      </div>
-    </div>
-    <audio class="podcast__audio" controls preload="metadata" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20111104.mp3">Tu navegador no soporta este tipo de reproductor</audio>
-    <div class="podcast-player">
-      <button class="podcast-player__play" type="button" aria-label="Reproducir" aria-pressed="false"><span class="podcast-player__icon" aria-hidden="true"></span></button>
-      <input class="podcast-player__seek" type="range" min="0" max="0" step="1" value="0" aria-label="Posición del podcast">
-      <span class="podcast-player__time"><span class="podcast-player__current">0:00</span> / <span class="podcast-player__duration">--:--</span></span>
-      <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
-    </div>
-  </section>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
+  <div class="players">
     <div class="players__tabs" role="tablist" aria-label="Reproductores">
       <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
       <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
@@ -121,10 +102,28 @@
       <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/283536572?i=283536755" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
     </div>
     <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
-  </details>
+  </div>
   <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/radio.js?v=cb56d72c" defer></script>
+  <section class="podcast" aria-labelledby="podcast-title">
+    <div class="podcast__header">
+      <a class="podcast__logo-link" href="https://uniradio.ujaen.es/" target="_blank"><img class="podcast__logo" src="/images/uniradio-jaen.jpg" alt="UniRadio Jaén"></a>
+      <div>
+        <span class="kicker">Podcast</span>
+        <h3 class="podcast__title" id="podcast-title">Escúchalo en UniRadio Jaén</h3>
+        <a class="podcast__feed" href="/podcast.xml">Suscríbete al podcast (RSS)</a>
+      </div>
+    </div>
+    <audio class="podcast__audio" controls preload="metadata" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20111104.mp3">Tu navegador no soporta este tipo de reproductor</audio>
+    <div class="podcast-player">
+      <button class="podcast-player__play" type="button" aria-label="Reproducir" aria-pressed="false"><span class="podcast-player__icon" aria-hidden="true"></span></button>
+      <input class="podcast-player__seek" type="range" min="0" max="0" step="1" value="0" aria-label="Posición del podcast">
+      <span class="podcast-player__time"><span class="podcast-player__current">0:00</span> / <span class="podcast-player__duration">--:--</span></span>
+      <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
+    </div>
+  </section>
   <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <script src="/js/post-side.js?v=09716af8" defer></script>
   <section class="post-facts" aria-labelledby="post-facts-title">
     <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
     <h3 class="post-facts__group kicker">Música</h3>

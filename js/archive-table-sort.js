@@ -18,6 +18,8 @@
   const headers = table.querySelectorAll('th.sortable');
   const originalRows = Array.from(tbody.querySelectorAll('tr'));
 
+  const collator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
+
   // Sort states: 0 = none, 1 = asc, 2 = desc
   let currentSortCol = null;
   let currentSortState = 0;
@@ -62,32 +64,25 @@
       indicator.textContent = ' ▼';
     }
 
-    // Sort rows
+    // Sort rows. Dates compare as their "YYYY-MM-DD hh:mm:ss" string (Safari and Firefox don't parse
+    // that format as a Date); text in Spanish order, ignoring accents, case and leading punctuation
+    // ("¿", "(", quotes); empty cells always last, whatever the direction.
+    const value = (cell) => {
+      if (sortType === 'date') return cell.dataset.value || '';
+      const text = cell.textContent.trim();
+      if (sortType === 'number') return text === '' ? '' : (parseInt(text, 10) || 0);
+      return text.replace(/^[^\p{L}\p{N}]+/u, '') || text;   // all punctuation (an album "✝"): as is
+    };
+    const sign = currentSortState === 1 ? 1 : -1;
     const rows = Array.from(tbody.querySelectorAll('tr'));
-    const sortedRows = rows.sort((a, b) => {
-      const aCell = a.cells[col];
-      const bCell = b.cells[col];
-      let aVal, bVal;
-
-      if (sortType === 'date') {
-        aVal = aCell.dataset.value || aCell.textContent;
-        bVal = bCell.dataset.value || bCell.textContent;
-        aVal = new Date(aVal).getTime();
-        bVal = new Date(bVal).getTime();
-      } else if (sortType === 'number') {
-        aVal = parseInt(aCell.textContent) || 0;
-        bVal = parseInt(bCell.textContent) || 0;
-      } else {
-        aVal = aCell.textContent.trim().toLowerCase();
-        bVal = bCell.textContent.trim().toLowerCase();
-      }
-
-      let comparison = 0;
-      if (aVal < bVal) comparison = -1;
-      else if (aVal > bVal) comparison = 1;
-
-      return currentSortState === 1 ? comparison : -comparison;
+    const keyed = rows.map((row) => ({ row, key: value(row.cells[col]) }));
+    keyed.sort((a, b) => {
+      if (a.key === '' || b.key === '') return (a.key === '') - (b.key === '');
+      if (sortType === 'number') return sign * (a.key - b.key);
+      if (sortType === 'date') return sign * (a.key < b.key ? -1 : a.key > b.key ? 1 : 0);
+      return sign * collator.compare(a.key, b.key);
     });
+    const sortedRows = keyed.map(({ row }) => row);
 
     sortedRows.forEach(row => tbody.appendChild(row));
   }

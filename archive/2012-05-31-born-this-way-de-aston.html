@@ -14,7 +14,7 @@
   <meta property="og:description" content="Hoy en día, todo es versionable. Cualquier canción puede saltar a otro estilo fácilmente, ya que la difusión que internet permite facilita que podamos escuchar…">
   <meta property="og:url" content="https://dsong.es/archive/2012-05-31-born-this-way-de-aston.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
+  <link rel="stylesheet" href="/css/bundle.css?v=ed2b5ede">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -83,6 +83,19 @@
 <p>Así que hoy os traigo una versión <em>docta</em> de la canción, y ésta viene a cargo del grupo <strong>Aston</strong>. Una banda formada por seis talentosos miembros cuya fama en Australia va en aumento desde el 2009 por las grandiosas versiones que realizan de todo tipo de canciones actuales o populares en el país. Dos violines, un chello, una guitarra, un piano y percusión logran adaptar fielmente cualquier melodía, siendo fácilmente reconocible la canción original, pero consiguiendo un bonito toque clásico que pocos podrían conseguir.</p>
 
   </div><aside class="post-view__side">
+  <div class="players">
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+    </div>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/75FHaGG4a08?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </div>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=cb56d72c" defer></script>
   <section class="podcast" aria-labelledby="podcast-title">
     <div class="podcast__header">
       <a class="podcast__logo-link" href="https://uniradio.ujaen.es/" target="_blank"><img class="podcast__logo" src="/images/uniradio-jaen.jpg" alt="UniRadio Jaén"></a>
@@ -100,22 +113,8 @@
       <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
     </div>
   </section>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/75FHaGG4a08?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=9db5772b" defer></script>
   <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <script src="/js/post-side.js?v=09716af8" defer></script>
   <section class="post-facts" aria-labelledby="post-facts-title">
     <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
     <h3 class="post-facts__group kicker">Música</h3>

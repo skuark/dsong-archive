@@ -318,10 +318,10 @@
       players.append(copy);
     }
 
-    // Podcast block (only some posts have one): first in the side column, above the players
+    // Podcast block (only some posts have one): in the side column, under the players
     current.querySelector('.podcast')?.remove();
     const podcast = next.querySelector('.podcast');
-    if (podcast) current.querySelector('.post-view__side').prepend(document.importNode(podcast, true));
+    if (podcast) current.querySelector('.post-view__side .players').after(document.importNode(podcast, true));
 
     // Festival series, then the Ficha: last in the side column, under the players
     current.querySelector('.series')?.remove();
