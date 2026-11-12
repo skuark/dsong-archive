@@ -395,6 +395,11 @@ function renderList() {
   const filter = FILTERS[$('#filter').value];
   visible = posts.filter((p) => filter(p) && (!q || norm(`${p.title} ${p.artist} ${p.id}`).includes(q)));
   $('#count').textContent = `${visible.length} de ${posts.length} artículos`;
+  // Each filter's label with how many posts it matches (ignoring the search box)
+  for (const option of $('#filter').options) {
+    option.dataset.label ??= option.textContent;
+    option.textContent = `${option.dataset.label} (${posts.filter(FILTERS[option.value]).length})`;
+  }
   const items = $('#items');
   items.textContent = '';
   for (const p of visible) {
@@ -886,7 +891,7 @@ async function refreshSources() {
   const data = await api(`/api/sources/${current.post.id}`);
   current.sources = data.sources;
   const i = posts.findIndex((p) => p.id === current.post.id);
-  if (i >= 0) posts[i] = { ...posts[i], ...pick(data.summary, ['mb', 'conflict', 'version', 'flagged']) };
+  if (i >= 0) posts[i] = { ...posts[i], ...pick(data.summary, ['mb', 'conflict', 'version', 'flagged', 'noDate']) };
   renderSources();
   renderList();
 }
