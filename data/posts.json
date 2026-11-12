@@ -2753,7 +2753,8 @@
         "artist_url": "www.alismusic.com",
         "category": "Canciones",
         "spotify_url": "https://open.spotify.com/embed/track/6G4x6xe0wzXZl6tlJqtI3N",
-        "year": "2008"
+        "year": "2008",
+        "artist_nationality": "España"
       },
       "ytdlpMetadata": {
         "youtube_code": "SuW6BOHCRKU"
@@ -5246,7 +5247,8 @@
         "category": "Canciones",
         "song": "Guerra y Paz",
         "spotify_url": "https://open.spotify.com/embed/track/2Mhs5lhxa2I79dVa6rObYU",
-        "year": "1997"
+        "year": "1997",
+        "artist_nationality": "España"
       },
       "musicbrainzMetadata": {
         "recording": "043a6997-cc79-401c-93f9-e5060f480d78",
@@ -5807,7 +5809,8 @@
         "category": "Canciones",
         "song": "La Historia Del Hombre Mudo",
         "spotify_url": "https://open.spotify.com/embed/track/6K8bVAjIGAcKFhFzUUBkSk",
-        "year": "2009"
+        "year": "2009",
+        "artist_nationality": "España"
       },
       "ytdlpMetadata": {
         "youtube_code": "1PKWuUQYupY"
@@ -6117,7 +6120,8 @@
         "category": "Canciones",
         "song": "África",
         "spotify_url": "https://open.spotify.com/embed/track/4c7kzf4xxp6fjOQWn1ZKDx",
-        "year": "2007"
+        "year": "2007",
+        "artist_nationality": "España"
       },
       "musicbrainzMetadata": {
         "recording": "82e4b257-fd05-493b-becc-90e3211ee141",
@@ -9254,7 +9258,8 @@
         "category": "Canciones",
         "song": "Viva La Vida",
         "spotify_url": "https://open.spotify.com/embed/track/4RH3wCxR29gK2NtALOsibl",
-        "year": "2009"
+        "year": "2009",
+        "artist_nationality": "Estados Unidos"
       },
       "itunesMetadata": {
         "apple_music_url": "https://embed.music.apple.com/es/album/419511893?i=419511968"
@@ -11930,7 +11935,8 @@
         "artist": "No Life After Love",
         "artist_url": "http://www.myspace.com/nolifeafterlove",
         "category": "Interrogatorios",
-        "song": "Alive"
+        "song": "Alive",
+        "artist_nationality": "España"
       }
     },
     {
@@ -14118,7 +14124,8 @@
         "artist": "Healthcontrol",
         "artist_url": "http://www.myspace.com/healthcontrol",
         "category": "Canciones",
-        "song": "Monólogo interior bruto"
+        "song": "Monólogo interior bruto",
+        "artist_nationality": "España"
       }
     },
     {
@@ -18864,7 +18871,8 @@
         "artist_url": "http://www.thewelcomedynasty.com",
         "category": "Festivales",
         "song": "Markus (WC meetings)",
-        "year": "2010"
+        "year": "2010",
+        "artist_nationality": "España"
       },
       "ytdlpMetadata": {
         "youtube_code": "ZavRIP1QJTk"
@@ -18931,7 +18939,8 @@
         "artist_url": "http://www.myspace.com/anikasade",
         "category": "Festivales",
         "song": "Paranoid Regress",
-        "year": "2009"
+        "year": "2009",
+        "artist_nationality": "España"
       }
     },
     {
@@ -19061,7 +19070,8 @@
         "artist_url": "http://www.ortofalicochisme.com/",
         "category": "Festivales",
         "song": "1000 Megatones",
-        "year": "2009"
+        "year": "2009",
+        "artist_nationality": "España"
       },
       "musicbrainzMetadata": {
         "recording": "04058bce-237d-4920-9a23-dbf0abb1c0fa",
@@ -19927,7 +19937,8 @@
         "album": "sé feliz",
         "artist": "Kico Gómez",
         "category": "Interrogatorios",
-        "year": "2010"
+        "year": "2010",
+        "artist_nationality": "España"
       }
     },
     {
@@ -21891,7 +21902,8 @@
         "artist": "Hijos de Leyenda",
         "category": "Canciones",
         "song": "Esta Noche",
-        "year": "2008"
+        "year": "2008",
+        "artist_nationality": "España"
       }
     },
     {
@@ -21963,7 +21975,8 @@
         "lector": "Yeg",
         "song": "Warflower",
         "spotify_url": "https://open.spotify.com/embed/track/5DbjH6eXl5iSuBMj0IUWvP",
-        "year": "2003"
+        "year": "2003",
+        "artist_nationality": "Estados Unidos"
       },
       "musicbrainzMetadata": {
         "recording": "38737a93-99d1-428f-8837-37c11e79bc71",
@@ -22768,7 +22781,8 @@
         "category": "Canciones",
         "song": "Texendo Suaños",
         "spotify_url": "https://open.spotify.com/embed/track/6lqm9Y77GEmTBZsb9jMkz0",
-        "year": "1999"
+        "year": "1999",
+        "artist_nationality": "España"
       },
       "musicbrainzMetadata": {
         "recording": "71a515e7-b9d8-4eb5-ba69-c7998b3f5ba5",
@@ -23352,7 +23366,8 @@
         "category": "Canciones",
         "song": "Soy Callejero",
         "spotify_url": "https://open.spotify.com/embed/track/6EWeqMBziAYORqBGb70zUo",
-        "year": "2009"
+        "year": "2009",
+        "artist_nationality": "España"
       },
       "ytdlpMetadata": {
         "youtube_code": "Mw5VGyJUc0M"
@@ -26546,7 +26561,8 @@
         "category": "Canciones",
         "song": "Como dos gotas de agua",
         "spotify_url": "https://open.spotify.com/embed/track/3SgD8yRBNpNiAbhiG15G4Q",
-        "year": "2010"
+        "year": "2010",
+        "artist_nationality": "España"
       },
       "musicbrainzMetadata": {
         "recording": "f683be3b-1c64-45c0-b8e7-bafe3e8c187c",
@@ -26857,7 +26873,8 @@
         "category": "Canciones",
         "song": "Cuando fuimos los mejores",
         "spotify_url": "https://open.spotify.com/embed/track/422JiYgh8dDfL5dx9U0QVq",
-        "year": "2000"
+        "year": "2000",
+        "artist_nationality": "España"
       },
       "itunesMetadata": {
         "apple_music_url": "https://embed.music.apple.com/es/album/1316443276?i=1316443281"
@@ -27525,7 +27542,8 @@
         "category": "Canciones",
         "song": "Fast Lane",
         "spotify_url": "https://open.spotify.com/embed/track/6NyzTrd99YlHTHlH79a33s",
-        "year": "2010"
+        "year": "2010",
+        "artist_nationality": "Noruega"
       },
       "musicbrainzMetadata": {
         "recording": "0e2c57ba-5c24-4abc-8a79-4bf76a2f59e6",
@@ -28618,7 +28636,8 @@
         "category": "Canciones",
         "song": "Your song",
         "spotify_url": "https://open.spotify.com/embed/track/6wM4UQJGjkOLHGsfUC13nt",
-        "year": "2006"
+        "year": "2006",
+        "artist_nationality": "Suecia"
       },
       "ytdlpMetadata": {
         "youtube_code": "uviwelGIgV8"
@@ -29689,7 +29708,8 @@
         "artist": "Pete Yorn y Scarlett Johanson",
         "category": "Álbumes",
         "spotify_url": "https://open.spotify.com/embed/album/4zFLcqkeYUMxqwnPqioYYb",
-        "year": "2009"
+        "year": "2009",
+        "artist_nationality": "Estados Unidos"
       }
     },
     {
@@ -31373,7 +31393,8 @@
         "category": "Canciones",
         "song": "Flying to nowhere",
         "spotify_url": "https://open.spotify.com/embed/track/7tXMQp1T6xQbtux6wKpO11",
-        "year": "2001"
+        "year": "2001",
+        "artist_nationality": "España"
       },
       "musicbrainzMetadata": {
         "recording": "f9eabc88-6ae2-4586-9461-3a8b0c1bf8ff",
@@ -31407,7 +31428,8 @@
         "category": "Canciones",
         "song": "Hightway to Hell",
         "spotify_url": "https://open.spotify.com/embed/track/7AOt0XSIzVb9VyBa6nt4x2",
-        "year": "1997"
+        "year": "1997",
+        "artist_nationality": "España"
       },
       "musicbrainzMetadata": {
         "recording": "7509e71f-e523-41a7-875a-f96e9b32ae97",
@@ -32178,7 +32200,8 @@
         "category": "Canciones",
         "song": "Escondite solitario",
         "spotify_url": "https://open.spotify.com/embed/track/5a5M19fpOfJ7ip5vAy5LRO",
-        "year": "2009"
+        "year": "2009",
+        "artist_nationality": "España"
       },
       "itunesMetadata": {
         "apple_music_url": "https://embed.music.apple.com/es/album/423768511?i=423768522"
@@ -33658,7 +33681,8 @@
         "genre": "Indie",
         "song": "Todo el tiempo",
         "spotify_url": "https://open.spotify.com/embed/track/5PPbjEN1yybFRctPpzZp8T",
-        "year": "2009"
+        "year": "2009",
+        "artist_nationality": "España"
       },
       "ytdlpMetadata": {
         "youtube_code": "5bbG_RxLF3Q"
@@ -34101,7 +34125,8 @@
         "genre": "Hard Rock",
         "song": "Bigger than Jesus",
         "spotify_url": "https://open.spotify.com/embed/track/3XRrPgUe9FzEVSM9CahyaV",
-        "year": "2005"
+        "year": "2005",
+        "artist_nationality": "España"
       },
       "ytdlpMetadata": {
         "youtube_code": "joe7SFoQBqo"
@@ -34277,7 +34302,8 @@
         "genre": "Indie",
         "song": "Swimming in the swamp",
         "spotify_url": "https://open.spotify.com/embed/track/6XoncGQuMacBJtUUe8PekZ",
-        "year": "2007"
+        "year": "2007",
+        "artist_nationality": "Estados Unidos"
       },
       "musicbrainzMetadata": {
         "recording": "eda24173-65ee-4458-8fef-d0809bd0cbee",
@@ -35001,7 +35027,8 @@
         "genre": "Alternative",
         "song": "Chasing you",
         "spotify_url": "https://open.spotify.com/embed/track/0Wq8K3IZMA5hyNBFyl5AWX",
-        "year": "2010"
+        "year": "2010",
+        "artist_nationality": "Suecia"
       },
       "ytdlpMetadata": {
         "youtube_code": "WmIK_C91i90"
@@ -35117,7 +35144,8 @@
         "category": "Canciones",
         "genre": "Lo-Fi",
         "song": "Derive",
-        "year": "2010"
+        "year": "2010",
+        "artist_nationality": "España"
       }
     },
     {
@@ -36065,7 +36093,8 @@
         "genre": "Alternative",
         "song": "Estatua de Sal",
         "spotify_url": "https://open.spotify.com/embed/album/13QI8IPBHDuTnHLd24cEhc",
-        "year": "2010"
+        "year": "2010",
+        "artist_nationality": "España"
       },
       "musicbrainzMetadata": {
         "recording": "b950d3d4-c7ff-41db-83cf-26a75e3ab295",
@@ -49712,7 +49741,8 @@
       "comments": [],
       "editorMetadata": {
         "artist": "Cristina Márquez",
-        "category": "Festivales"
+        "category": "Festivales",
+        "artist_nationality": "España"
       }
     },
     {
@@ -52857,7 +52887,8 @@
         "category": "Bandas Sonoras Originales",
         "genre": "bso",
         "spotify_url": "https://open.spotify.com/embed/album/7pCrhTJWUNobiCY3rmN9o0",
-        "year": "1985"
+        "year": "1985",
+        "artist_nationality": "Reino Unido"
       }
     },
     {
@@ -53106,7 +53137,8 @@
         "artist": "Andrew Powell",
         "category": "Bandas Sonoras Originales",
         "genre": "bso",
-        "spotify_url": "https://open.spotify.com/embed/track/3WEeXl4vPsCh15dNfgEgTr"
+        "spotify_url": "https://open.spotify.com/embed/track/3WEeXl4vPsCh15dNfgEgTr",
+        "artist_nationality": "Reino Unido"
       }
     },
     {
@@ -53965,7 +53997,8 @@
       "editorMetadata": {
         "artist": "Nancys Rubias",
         "category": "Listas",
-        "spotify_url": "https://open.spotify.com/embed/user/ascen87/playlist/4e0S5S3xBzraiIBB63mdgp"
+        "spotify_url": "https://open.spotify.com/embed/user/ascen87/playlist/4e0S5S3xBzraiIBB63mdgp",
+        "artist_nationality": "España"
       }
     },
     {
@@ -54714,7 +54747,8 @@
         "category": "Bandas Sonoras Originales",
         "genre": "Ambient",
         "year": "1998",
-        "youtube_code": "-aoYmyS6FN8"
+        "youtube_code": "-aoYmyS6FN8",
+        "artist_nationality": "Estados Unidos"
       },
       "hiddenPlayers": {
         "youtube_code": {
@@ -59621,7 +59655,8 @@
       "comments": [],
       "editorMetadata": {
         "artist": "Ravid Goldschmidt",
-        "category": "Especiales"
+        "category": "Especiales",
+        "artist_nationality": "Israel"
       }
     },
     {
@@ -63337,7 +63372,7 @@
       "editorMetadata": {
         "album": "Jack Knife",
         "artist": "Jack Knife",
-        "artist_nationality": "2013",
+        "artist_nationality": "España",
         "category": "Festivales",
         "genre": "Pop Rock",
         "podcast_file": "dsong.es_20131004.mp3",
@@ -63361,7 +63396,8 @@
         "artist": "The Glassphone",
         "category": "Festivales",
         "genre": "Rock",
-        "year": "2013"
+        "year": "2013",
+        "artist_nationality": "España"
       }
     },
     {
@@ -63570,7 +63606,8 @@
       "comments": [],
       "editorMetadata": {
         "artist": "The Glassphone",
-        "category": "Festivales"
+        "category": "Festivales",
+        "artist_nationality": "España"
       }
     },
     {
@@ -64737,7 +64774,8 @@
         "album": "OST: Deep Throat",
         "artist": "Gerard Damiano",
         "category": "Bandas Sonoras Originales",
-        "genre": "bso"
+        "genre": "bso",
+        "artist_nationality": "Estados Unidos"
       }
     },
     {
