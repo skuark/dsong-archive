@@ -2,3 +2,5 @@ _site
 node_modules
 youtube-candidates.json
 youtube-review.json
+musicbrainz-candidates.json
+musicbrainz-review.json

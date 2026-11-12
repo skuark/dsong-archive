@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisar artistas · dSong</title>
+<style>
+  :root { --bg: #f6f5f2; --card: #fff; --text: #1d1d1f; --muted: #6b6b70; --line: #e2e0da; --accent: #c2410c; --ok: #15803d; --no: #b91c1c; --warn: #b45309; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #151515; --card: #202020; --text: #ececec; --muted: #9a9a9f; --line: #333; --accent: #fb923c; --ok: #4ade80; --no: #f87171; --warn: #fbbf24; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, sans-serif; }
+  header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 16px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; z-index: 2; }
+  header h1 { font-size: 16px; margin: 0; }
+  .stats { color: var(--muted); font-variant-numeric: tabular-nums; }
+  select, input, button { font: inherit; color: inherit; background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+  h2 { font-size: 22px; margin: 0 0 4px; }
+  .meta { color: var(--muted); margin: 0 0 16px; }
+  .meta b { color: var(--text); font-weight: 500; }
+  a { color: var(--accent); }
+  .badge { display: inline-block; padding: 1px 8px; border-radius: 99px; border: 1px solid currentColor; font-size: 12px; margin-left: 6px; vertical-align: middle; font-weight: 500; }
+  .badge.ok { color: var(--ok); } .badge.no { color: var(--no); } .badge.warn { color: var(--warn); }
+  .cands { display: flex; flex-direction: column; gap: 10px; }
+  .cand { background: var(--card); border: 2px solid var(--line); border-radius: 10px; padding: 10px 14px; display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: center; }
+  .cand.chosen { border-color: var(--ok); }
+  .num { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .name { font-weight: 600; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .confirmed { color: var(--ok); font-size: 13px; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; align-items: center; }
+  .actions input { flex: 1; min-width: 260px; }
+  .hint { color: var(--muted); font-size: 13px; margin-top: 18px; }
+  kbd { border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; font-size: 12px; }
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+  .msg { color: var(--no); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Revisar artistas (MusicBrainz)</h1>
+  <select id="filter">
+    <option value="pending">Pendientes</option>
+    <option value="decided">Ya revisados</option>
+    <option value="auto">Automáticos</option>
+    <option value="all">Todos</option>
+  </select>
+  <span class="stats" id="stats"></span>
+</header>
+<main id="main"></main>
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s = "") => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const MB = "https://musicbrainz.org/artist/";
+const UUID = /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/;
+let results = {}, decisions = {}, keys = [], index = 0, current = null;
+
+function list() {
+  const f = $("#filter").value;
+  // Most posts first: those artists matter most on the site.
+  return Object.keys(results).filter((k) => {
+    const r = results[k], d = k in decisions;
+    if (f === "pending") return r.status === "review" && !d;
+    if (f === "decided") return d;
+    if (f === "auto") return r.status === "auto";
+    return true;
+  }).sort((a, b) => results[b].posts - results[a].posts || a.localeCompare(b));
+}
+
+async function load() {
+  const data = await (await fetch("/api/data")).json();
+  results = data.results; decisions = data.decisions;
+  keys = list();
+  index = current && keys.includes(current) ? keys.indexOf(current) : Math.min(index, Math.max(keys.length - 1, 0));
+  stats();
+  render();
+}
+
+function stats() {
+  const all = Object.values(results);
+  const left = Object.keys(results).filter((k) => results[k].status === "review" && !(k in decisions)).length;
+  $("#stats").textContent = `${left} por revisar · ${Object.keys(decisions).length} decisiones · ${all.filter((r) => r.status === "auto").length} automáticos · ${all.length} artistas`;
+}
+
+const chosenOf = (k) => (k in decisions ? decisions[k].mbid : results[k].status === "auto" ? results[k].pick : undefined);
+
+function render() {
+  if (!keys.length) { $("#main").innerHTML = `<p class="empty">Nada en esta lista.</p>`; current = null; return; }
+  const k = current = keys[index], r = results[k], chosen = chosenOf(k);
+  const badge = k in decisions ? (decisions[k].mbid ? `<span class="badge ok">elegido</span>` : `<span class="badge no">sin artista</span>`)
+    : r.status === "auto" ? `<span class="badge ok">automático</span>` : `<span class="badge warn">por revisar</span>`;
+  const q = encodeURIComponent(r.names[0]);
+  $("#main").innerHTML = `
+    <h2>${esc(r.names.join(" · "))} ${badge}</h2>
+    <p class="meta">${index + 1} de ${keys.length} · <b>${r.posts}</b> ${r.posts === 1 ? "artículo" : "artículos"}
+      ${r.nationality.length ? ` · ${esc(r.nationality.join(", "))}` : ""}
+      · <a href="https://musicbrainz.org/search?type=artist&query=${q}" target="_blank" rel="noopener">buscar en MusicBrainz</a></p>
+    <p class="meta">Canciones: <b>${esc(r.songs.join(" · ") || "—")}</b><br>Discos: <b>${esc(r.albums.join(" · ") || "—")}</b></p>
+    <div class="cands">${r.candidates.map((c, i) => `
+      <div class="cand ${c.mbid === chosen ? "chosen" : ""}">
+        <span class="num">${i < 9 ? i + 1 : ""}</span>
+        <div>
+          <div><span class="name">${esc(c.name)}</span> <a href="${MB + c.mbid}" target="_blank" rel="noopener">↗</a>
+            ${c.sameName ? "" : `<span class="badge warn">otro nombre</span>`}</div>
+          <div class="sub">${[c.disambiguation, c.type, c.area ?? c.country, [c.begin, c.end].filter(Boolean).join("–"), c.score != null && `puntuación ${c.score}`].filter(Boolean).map(esc).join(" · ")}</div>
+          ${c.confirmed.length ? `<div class="confirmed">✓ ${esc(c.confirmed.join(" · "))}</div>` : ""}
+        </div>
+        <button data-mbid="${c.mbid}">Elegir</button>
+      </div>`).join("") || `<p class="empty">Sin candidatos.</p>`}</div>
+    <div class="actions">
+      <input id="manual" placeholder="Otro: pega una URL o MBID de MusicBrainz" autocomplete="off">
+      <button id="useManual">Usar</button>
+      <button id="none">Sin artista (<kbd>0</kbd>)</button>
+      ${k in decisions ? `<button id="undo">Deshacer</button>` : ""}
+    </div>
+    <p class="msg" id="msg"></p>
+    <p class="hint"><kbd>1</kbd>–<kbd>9</kbd> elegir · <kbd>0</kbd> sin artista · <kbd>←</kbd> <kbd>→</kbd> moverse</p>`;
+  document.querySelectorAll("[data-mbid]").forEach((b) => b.onclick = () => decide(b.dataset.mbid));
+  $("#none").onclick = () => decide(null);
+  $("#useManual").onclick = () => {
+    const m = $("#manual").value.match(UUID);
+    if (m) decide(m[0]); else $("#msg").textContent = "No veo un MBID en eso.";
+  };
+  if ($("#undo")) $("#undo").onclick = () => decide(undefined);
+}
+
+async function decide(mbid) {
+  await fetch("/api/decide", { method: "POST", body: JSON.stringify({ key: current, mbid }) });
+  if (mbid === undefined) delete decisions[current]; else decisions[current] = { mbid };
+  // In "pending" the decided artist leaves the list; elsewhere move to the next one.
+  const filter = $("#filter").value;
+  keys = list();
+  if (filter !== "pending") index = Math.min(keys.indexOf(current) + 1, keys.length - 1);
+  else index = Math.min(index, Math.max(keys.length - 1, 0));
+  current = keys[index];
+  stats(); render();
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT" || e.metaKey || e.ctrlKey) return;
+  const r = current && results[current];
+  if (e.key === "ArrowRight") { index = Math.min(index + 1, keys.length - 1); current = keys[index]; render(); }
+  else if (e.key === "ArrowLeft") { index = Math.max(index - 1, 0); current = keys[index]; render(); }
+  else if (e.key === "0" && r) decide(null);
+  else if (/^[1-9]$/.test(e.key) && r?.candidates[e.key - 1]) decide(r.candidates[e.key - 1].mbid);
+});
+$("#filter").onchange = () => { index = 0; current = null; keys = list(); render(); };
+load();
+</script>
+</body>
+</html>

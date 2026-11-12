@@ -1,6 +1,11 @@
 import { readFileSync } from "node:fs";
 import { groupBy, loadPosts } from "../lib/posts.js";
 
+// Artist name -> MusicBrainz artist id (scripts/match-musicbrainz.mjs --apply)
+const musicbrainz = () => {
+  try { return JSON.parse(readFileSync("data/musicbrainz.json", "utf8")).artists; } catch { return {}; }
+};
+
 // Byte size of each podcast mp3 (scripts/podcast-sizes.mjs), for the RSS <enclosure>
 const podcastSizes = JSON.parse(readFileSync("data/podcast-sizes.json", "utf8"));
 
@@ -15,6 +20,7 @@ const brokenSpotify = (url) => /\/user\/(dsong2009|skuark|jesusr)\//.test(url ??
 // A function, so it's recomputed on every build (and rebuild under `npm run serve`)
 export default function () {
   const posts = loadPosts();
+  const mbids = musicbrainz();
   const radio = posts
     .map((post) => [post.id, post.title, post.metadata.youtube_code ?? "", spotifyUri(post.metadata.spotify_url)])
     .filter(([, , youtube, spotify], i) => youtube || (spotify && !brokenSpotify(posts[i].metadata.spotify_url)));
@@ -22,7 +28,7 @@ export default function () {
   return {
     ids: posts.map(post => post.id),
     byEditor: groupBy("editor"),
-    byArtist: groupBy("artist"),
+    byArtist: groupBy("artist").map((group) => ({ ...group, mbid: mbids[group.name] })),
     byAlbum: groupBy("album"),
     byYear: groupBy("year"),
     byCategory: groupBy("category"),
