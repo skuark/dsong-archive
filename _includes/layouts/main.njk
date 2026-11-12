@@ -57,25 +57,33 @@
 
   <div class="app page-{{ pageClass }}">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">{{ site.title }}</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <span class="header__logo-name">dSong</span>
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/"{% if page.url.startsWith("/archive") %} aria-current="page"{% endif %}>Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/"{% if page.url == "/mapa/" %} aria-current="page"{% endif %}>Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/"{% if page.url.startsWith("/archive") and not page.url.startsWith("/archive/podcasts") %} aria-current="page"{% endif %}>Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/"{% if page.url == "/mapa/" %} aria-current="page"{% endif %}>Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/"{% if page.url.startsWith("/archive/podcasts") %} aria-current="page"{% endif %}>Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       {{ content | safe }}
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p>Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

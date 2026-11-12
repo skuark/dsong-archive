@@ -24,15 +24,26 @@ export default function(eleventyConfig) {
     return dateFormat.replace(/yyyy|MM|dd|HH|mm/g, (token) => parts[token]);
   });
 
-  // Long Spanish date from the same string, e.g. "29 de Mayo de 2009" (", 13:45" with withTime).
-  // Months capitalized, as in the home page text.
-  const MONTHS = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-  eleventyConfig.addFilter("longDate", (dateString, withTime = false) => {
+  // Long Spanish date from the same string, e.g. "29 de mayo de 2009" (", 13:45" with withTime;
+  // "viernes, 29 de mayo de 2009" with weekday: from the calendar date via Date.UTC, so it doesn't depend
+  // on the build machine's timezone).
+  const MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const WEEKDAYS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  eleventyConfig.addFilter("longDate", (dateString, withTime = false, weekday = false) => {
     const match = /^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/.exec(dateString ?? "");
     if (!match) return dateString ?? "";
     const [, yyyy, MM, dd, HH, mm] = match;
-    const date = `${Number(dd)} de ${MONTHS[Number(MM) - 1]} de ${yyyy}`;
+    let date = `${Number(dd)} de ${MONTHS[Number(MM) - 1]} de ${yyyy}`;
+    if (weekday) date = `${WEEKDAYS[new Date(Date.UTC(yyyy, MM - 1, dd)).getUTCDay()]}, ${date}`;
     return withTime ? `${date}, ${HH}:${mm}` : date;
+  });
+
+  // Short Spanish date for lists, e.g. "29 may 2009"
+  eleventyConfig.addFilter("shortDate", (dateString) => {
+    const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(dateString ?? "");
+    if (!match) return dateString ?? "";
+    const [, yyyy, MM, dd] = match;
+    return `${Number(dd)} ${MONTHS[Number(MM) - 1].slice(0, 3)} ${yyyy}`;
   });
 
   // RFC 822 date for RSS from the same string: "2013-04-25 09:00:00 +0200" -> "Thu, 25 Apr 2013 09:00:00 +0200"
@@ -73,6 +84,19 @@ export default function(eleventyConfig) {
     const text = md.utils.unescapeAll(html).replace(/\s+/g, " ").trim();
     if (text.length <= length) return text;
     return text.slice(0, text.lastIndexOf(" ", length - 1)).replace(/[,;:.]$/, "") + "…";
+  });
+
+  // Minutes to read a post (200 words a minute, at least 1).
+  eleventyConfig.addFilter("readingTime", (content) => {
+    const words = md.render(content ?? "").replace(/<[^>]*>/g, " ").split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words / 200));
+  });
+
+  // "Song, de Artist" -> { main: "Song", by: "Artist" } for the post heading ("de Artist" under the title);
+  // titles without ", de " (some specials) stay whole.
+  eleventyConfig.addFilter("splitTitle", (title) => {
+    const at = title.lastIndexOf(", de ");
+    return at > 0 ? { main: title.slice(0, at), by: title.slice(at + 5) } : { main: title };
   });
 
   eleventyConfig.ignores.add("*.md");

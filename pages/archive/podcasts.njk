@@ -4,8 +4,46 @@ title: Podcasts
 permalink: /archive/podcasts/
 pageClass: archive
 ---
+{%- set posts = archive.podcastPosts %}
 
-{% set posts = archive.podcastPosts %}
-<h2 class="archive-title">Los podcasts con UniRadio Jaén</h2>
-<p>Cada publicación tiene su episodio. También puedes <a href="/podcast.xml">suscribirte a todos con RSS</a>.</p>
-{% include "partials/archive-table.njk" %}
+<section class="podcast-hero">
+  <img class="podcast-hero__cover" src="/images/podcast-cover.png" width="280" height="280" alt="Portada del podcast de dSong">
+  <div class="podcast-hero__text">
+    <p class="kicker">Podcast · con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a></p>
+    <h1 class="page-title">{{ posts | length }} recomendaciones, <mark>en antena</mark></h1>
+    <p class="podcast-hero__lead">Durante un tiempo narramos algunas de las recomendaciones de la web en UniRadio Jaén. Cada programa tiene su artículo, y todos se pueden seguir desde cualquier app de podcasts.</p>
+    <p class="podcast-hero__actions">
+      <a class="button button--accent" href="/podcast.xml"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 19a1 1 0 100-2 1 1 0 000 2zM4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/></svg>Suscribirse por RSS</a>
+      {#- Copies the feed URL (js/podcasts.js); hidden without JS -#}
+      <button class="button podcast-hero__copy" type="button" data-feed="{{ site.url }}/podcast.xml" hidden>Copiar la dirección del feed</button>
+    </p>
+  </div>
+</section>
+
+<section class="episodes" aria-labelledby="episodes-title">
+  <div class="episodes__head">
+    <h2 class="display episodes__title" id="episodes-title">Episodios</h2>
+    <div class="archive-search episodes__tools">
+      <label class="visually-hidden" for="archive-search">Buscar</label>
+      <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, autor…" autocomplete="off">
+      <div class="chips episodes__order" role="group" aria-label="Orden" hidden>
+        <button class="chip chip--small" type="button" data-order="desc" aria-pressed="true">Más recientes</button>
+        <button class="chip chip--small" type="button" data-order="asc" aria-pressed="false">Más antiguos</button>
+      </div>
+      <span class="archive-search__count" id="archive-search-count" data-noun="episodio|episodios" aria-live="polite">{{ posts | length }} episodios</span>
+    </div>
+  </div>
+  <ol class="episodes__list" id="archive-table">
+    {%- for post in posts | reverse %}
+    <li class="episode">
+      <time class="episode__date" datetime="{{ post.published_at | isoDate }}">{{ post.published_at | shortDate }}</time>
+      <a class="display episode__title" href="/archive/{{ post.id }}.html">{{ post.title }}</a>
+      <span class="episode__editor">{% if post.slugs.editor %}<a href="/archive/editors/{{ post.slugs.editor }}.html">{{ post.editor.name }}</a>{% else %}{{ post.editor.name }}{% endif %}</span>
+    </li>
+    {%- endfor %}
+  </ol>
+  <p class="archive__empty" id="archive-search-empty" hidden>Ningún episodio coincide.</p>
+</section>
+
+<script src="/js/archive-table-search.js?v={{ 'js/archive-table-search.js' | assetVersion }}"></script>
+<script src="/js/podcasts.js?v={{ 'js/podcasts.js' | assetVersion }}" defer></script>

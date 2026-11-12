@@ -10,8 +10,70 @@ permalink: "/archive/artists/{{ artist.slug }}.html"
 pageClass: archive
 ---
 
-{% set posts = artist.posts %}
-{% set heading = "Publicaciones del artista " + artist.name %}
-{%- if artist.musicbrainz %}{% set headingLinks = artist.musicbrainz %}{% endif %}
-{%- set artistBio = artist.bio %}
-{% include "partials/archive-table.njk" %}
+{%- set posts = artist.posts %}
+{%- set bio = artist.bio %}
+{%- set first = (posts | first).published_at.slice(0, 4) %}
+{%- set last = (posts | last).published_at.slice(0, 4) %}
+{%- set editors = [] %}
+{%- for post in posts %}{% if not (post.editor.name in editors) %}{% set editors = (editors.push(post.editor.name), editors) %}{% endif %}{% endfor %}
+
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>{{ artist.name }}</span>
+</nav>
+
+{#- Short bio and photo (data/artist-bios.json: Wikipedia + a Wikimedia Commons image, hotlinked with its credit) -#}
+<section class="artist-hero{% if not (bio and bio.image) %} artist-hero--text{% endif %}" aria-label="Sobre el artista">
+  {%- if bio and bio.image %}
+  <figure class="artist-hero__photo">
+    <img src="{{ bio.image.src }}" width="{{ bio.image.width }}" height="{{ bio.image.height }}" alt="{{ artist.name }}" decoding="async">
+    <figcaption><a href="{{ bio.image.page }}" rel="noopener">{{ bio.image.author or "Wikimedia Commons" }}{% if bio.image.license %} · {{ bio.image.license }}{% endif %}</a></figcaption>
+  </figure>
+  {%- endif %}
+  <div class="artist-hero__text">
+    <p class="kicker">Artista{% if artist.country %} · <a href="/archive/countries/{{ artist.country.slug }}.html">{{ artist.country.name }}</a>{% endif %}</p>
+    <h1 class="page-title artist-hero__name">{{ artist.name }}</h1>
+    {%- if bio and bio.bio %}
+    <p class="artist-hero__bio"{% if bio.lang != "es" %} lang="{{ bio.lang }}"{% endif %}>{{ bio.bio }}</p>
+    {%- endif %}
+    {%- if (bio and bio.wikipedia) or artist.musicbrainz or artist.url %}
+    <p class="artist-hero__links">
+      {%- if bio and bio.wikipedia %}<a href="{{ bio.wikipedia }}" rel="noopener">Wikipedia{% if bio.lang != "es" %} (en inglés){% endif %} ↗</a>{% endif %}
+      {%- for link in artist.musicbrainz %}<a href="{{ link.url }}" rel="noopener">{{ link.label }} ↗</a>{% endfor %}
+      {%- if artist.url %}<a href="{{ artist.url }}" rel="noopener">Web oficial ↗</a>{% endif %}
+    </p>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">{{ posts | length }} {{ "publicación" if (posts | length) == 1 else "publicaciones" }}{% if first != last %}, {{ first }}–{{ last }}{% else %}, {{ first }}{% endif %}</h2>
+    {%- if editors | length == 1 and (posts | length) > 1 %}
+    <span>Todas de <a href="/archive/editors/{{ (posts | first).slugs.editor }}.html">{{ editors[0] }}</a></span>
+    {%- endif %}
+  </div>
+  <ol class="post-cards">
+    {%- for post in posts %}
+    <li>
+      <a class="post-card" href="/archive/{{ post.id }}.html">
+        <span class="kicker">{{ post.published_at | shortDate }}{% if post.metadata.album %} · {{ post.metadata.album }}{% elif post.metadata.category %} · {{ post.metadata.category }}{% endif %}</span>
+        <span class="display post-card__title">{{ post.metadata.song or (post.title | splitTitle).main }}</span>
+        <span class="post-card__excerpt">«{{ post.content | excerpt(140) }}»</span>
+        <span class="post-card__editor">{{ post.editor.name }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q={{ artist.name | urlencode }}">Ver en la tabla del archivo →</a>
+</section>
+
+{%- if artist.albums | length %}
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    {%- for album in artist.albums %}
+    <a class="chip" href="/archive/albums/{{ album.slug }}.html">{{ album.name }}{% if album.count > 1 %} · {{ album.count }}{% endif %}</a>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}

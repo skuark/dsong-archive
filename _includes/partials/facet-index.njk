@@ -1,19 +1,37 @@
 {#- Index of a facet (authors, artists): searchable cards with each name and its number of posts,
-    most posts first. Expects `items` ([{ name, slug, posts }]), `base` (URL prefix), `heading` and
-    `noun` ("artista|artistas"). The search (js/archive-table-search.js) also filters card lists. -#}
+    most posts first. Expects `items` ([{ name, slug, posts }]), `base` (URL prefix), `heading`, `crumb`,
+    `placeholder` and `noun` ("artista|artistas"). Tabs link the two indexes. The search
+    (js/archive-table-search.js) also filters card lists. -#}
 {%- set nouns = noun.split("|") %}
-<h2 class="archive-title">{{ heading }}</h2>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><span>{{ crumb }}</span>
+</nav>
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" autocomplete="off">
+<div class="page-head">
+  <h1 class="page-title">{{ heading }}</h1>
+  <nav class="tabs" aria-label="Índice">
+    <a class="tabs__tab" href="/archive/editors/"{% if page.url == "/archive/editors/" %} aria-current="page"{% endif %}>Autores · {{ stats.totals.editors }}</a>
+    <a class="tabs__tab" href="/archive/artists/"{% if page.url == "/archive/artists/" %} aria-current="page"{% endif %}>Artistas · {{ stats.totals.artists | thousands }}</a>
+  </nav>
+</div>
+
+<div class="archive-search archive-search--index">
+  <label class="visually-hidden" for="archive-search">Filtrar</label>
+  <input class="archive-search__input" id="archive-search" type="search" placeholder="{{ placeholder }}" autocomplete="off">
   <span class="archive-search__count" id="archive-search-count" data-noun="{{ noun }}" aria-live="polite">{{ items | length | thousands }} {{ nouns[0] if (items | length) == 1 else nouns[1] }}</span>
 </div>
 
 <ol class="facet-cards" id="archive-table">
   {%- for item in items | sort(true, false, "posts.length") %}
-  <li><a class="facet-cards__card" href="{{ base }}{{ item.slug }}.html"><span class="facet-cards__name">{{ item.name }}</span> <span class="facet-cards__count">{{ item.posts.length }} {{ "publicación" if item.posts.length == 1 else "publicaciones" }}</span></a></li>
+  {%- set first = (item.posts | first).published_at.slice(0, 4) %}
+  {%- set last = (item.posts | last).published_at.slice(0, 4) %}
+  <li><a class="facet-cards__card" href="{{ base }}{{ item.slug }}.html">
+    <span class="display facet-cards__count">{{ item.posts.length }}</span>
+    <span class="facet-cards__name">{{ item.name }}</span>
+    <span class="facet-cards__sub">{{ "artículo" if item.posts.length == 1 else "artículos" }} · {{ first }}{% if last != first %}–{{ last }}{% endif %}</span>
+  </a></li>
   {%- endfor %}
 </ol>
+<p class="archive__empty" id="archive-search-empty" hidden>Ningún nombre coincide.</p>
 
 <script src="/js/archive-table-search.js?v={{ 'js/archive-table-search.js' | assetVersion }}"></script>

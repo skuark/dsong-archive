@@ -39,7 +39,7 @@ data/posts.json        Source data (~1,900 posts). Not in _data on purpose (see 
                        broken|mismatch|hand } }), `musicbrainzMetadata` (automatic: recording, song, release_group, album,
                        isrcs, first_release and the players MusicBrainz links), `spotifyMetadata` (find-spotify),
                        `ytdlpMetadata` (YouTube videos found by searching) and `itunesMetadata` (Apple Music found in iTunes Search, last resort). The site's `metadata` is resolved from them (lib/metadata.js).
-data/artist-bios.json  MBID -> { bio, lang, wikipedia, image? { src, width, height, page, author, license } } (artist-bios.mjs), shown on artist pages (partials/artist-bio.njk; artists linked one to one only).
+data/artist-bios.json  MBID -> { bio, lang, wikipedia, image? { src, width, height, page, author, license } } (artist-bios.mjs), shown on artist pages (pages/archive/artist.njk; artists linked one to one only).
 data/podcast-sizes.json Byte size of each podcast mp3 (RSS <enclosure> needs it).
 data/musicbrainz.json  { artists: name (as in posts.json) -> MBID, or [{ name, mbid }] for a collaboration ("X y Y"; mbid null: that artist isn't in MusicBrainz),
                          artistInfo: MBID -> { name, aliases? (only where our name isn't MusicBrainz's), country, genres, url }, preferEditor: { field: [MBID…] } (lib/metadata.js) }.
@@ -58,14 +58,14 @@ _data/worldMap.js      Global `worldMap`: country SVG paths (visionscarto-world-
 _data/stats.js         Global `stats`: totals, rankings, decades and decade x year heatmap for the archive landing (/archive/).
 _data/site.js          Global `site`: url, title, description, umamiId.
 _data/redirects.js     Exposes data/redirects.json as `redirects`.
-lib/facts.js           A post's "Ficha" (pages/post.njk: a side panel, a manual popover opened from a button in the header; the page moves aside for it and its split view follows the room left, `@container app`; js/post-facts.js closes it on Esc), Música and dSong groups of rows of label + values linked to the archive and their sources (MusicBrainz, artist site, players); `post.facts` (lib/posts.js).
+lib/facts.js           A post's "Ficha" (pages/post.njk: a section in the post's side column, under the players, sticky in the desktop split view by the page's room, `@container app`; after the text on narrow screens), Música and dSong groups of rows of label + values linked to the archive and their sources (MusicBrainz, artist site, players); `post.facts` (lib/posts.js).
 lib/metadata.js        Resolves a post's `metadata` (used by lib/posts.js) from editorMetadata + MusicBrainz, one rule per field.
 lib/rename-artists.js  Renames an artist (scripts/rename-artists.mjs, the editor): MusicBrainz link, review decision, redirects.
 lib/validate-post.js   Per-post rules + byte-identical posts.json writer (validate-data and the editor).
 lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only (pages/feeds/fonts.11ty.js -> /css/fonts.css).
-js/                    archive-table-sort.js, archive-table-search.js (accent-insensitive filter, ?q=),
-                       players.js (post players as tabs inside a <details>; lazy-loads via data-src).
-                       post-header.js (sticky post header height -> --post-header-height for the split view),
+js/                    archive-table-sort.js, archive-table-search.js (accent-insensitive filter, ?q=; publication-year chips, ?year=),
+                       players.js (post players as tabs inside a <details>; lazy-loads via data-src),
+                       podcasts.js (podcast page: copy the feed URL, newest/oldest order),
                        on-this-day.js (home "Tal día como hoy": fetches today's JSON in the browser: posts of the day and anniversaries),
                        radio.js (radio mode: swaps posts in place keeping the live YouTube/Spotify players, their iframe APIs).
 .eleventy.js           Filters (formatDate, markdown, excerpt), `posts` collection, passthrough.
@@ -86,8 +86,8 @@ scripts/               validate-data.mjs, musicbrainz-players.mjs, check-links.m
 |---|---|---|
 | `pages/post.njk` | `collections.posts` | `/archive/<id>.html` |
 | `pages/archive/<facet>.njk` | `archive.by<Facet>` (`{ name, slug, posts }`) | `/archive/<facets>/<slug>.html` |
-| `pages/archive/editors.njk`, `pages/archive/artists.njk` | `archive.byEditor`, `stats.artistGroups` | `/archive/editors/`, `/archive/artists/` (indexes: searchable cards with name + count, partials/facet-index.njk) |
-| `pages/archive/podcasts.njk` | `archive.podcastPosts` | `/archive/podcasts/` (table of the podcast posts) |
+| `pages/archive/editors.njk`, `pages/archive/artists.njk` | `archive.byEditor`, `stats.artistGroups` | `/archive/editors/`, `/archive/artists/` (indexes: searchable cards with name + count and tabs between the two, partials/facet-index.njk) |
+| `pages/archive/podcasts.njk` | `archive.podcastPosts` | `/archive/podcasts/` (cover, RSS subscribe, searchable list of the episodes) |
 | `pages/archive/all.njk` | `collections.posts` | `/archive/all/` (the full table) |
 | `pages/archive/archive.njk` | `stats` | `/archive/` (landing: search form + "dSong en cifras", static HTML/CSS charts, top 10s with a "Ver más" <details>) |
 | `pages/map.njk` | `worldMap`, `archive.byCountry` | `/mapa/` (static SVG world map by artist nationality) |
@@ -108,8 +108,9 @@ scripts/               validate-data.mjs, musicbrainz-players.mjs, check-links.m
 - **Post ids must be lowercase ASCII** (`validate` enforces it): percent-encoded ids 404 on GitHub Pages.
 - **Nationalities are normalized at build time** (`lib/countries.js`), not in posts.json: regions and compound values go to one country (English/Scottish → UK, Catalan → Spain). `validate` warns about unmapped values; countries too small for the 110m map (Gibraltar, Feroe, Cabo Verde) are drawn as dots.
 - **The full table lives at `/archive/all/`**, `/archive/` is the stats landing: it forwards old `/archive/?q=…` search links to the table.
+- **Design ("Propuesta A · Fanzine diario")**: the author's text leads; players, Ficha and covers go beside it, smaller (2px borders, no big shadows on media). Ink on paper, yellow only for highlights, the current state and one main action per screen; 3px rules and solid offset shadows on navigation and cards; Amaranth for titles and figures, Titillium Web for text, uppercase 12px labels; no emoji, inline stroke SVG icons. Tokens on `:root` in css/bundle.css.
 - **Redirects are a frozen JSON**, not computed from posts: old URLs must keep working even when data changes (`redirect-moved.mjs` adds the ones a change needs).
-- **Radio mode swaps the post in place** (js/radio.js): a page load would stop the music. Header, text, Ficha and comments are swapped; the live YouTube and Spotify panels must never move in the DOM (iframes reload when moved); YouTube embeds carry `enablejsapi=1`. Posts without YouTube play Spotify (30 s previews without a Spotify session); dSong's broken playlists are left out.
+- **Radio mode swaps the post in place** (js/radio.js): a page load would stop the music. Breadcrumbs (with the post's Nº), header, text, Ficha (last in the side column) and comments are swapped; the live YouTube and Spotify panels must never move in the DOM (iframes reload when moved); YouTube embeds carry `enablejsapi=1`. Posts without YouTube play Spotify (30 s previews without a Spotify session); dSong's broken playlists are left out.
 - **Media fields**: `youtube_code` (shown as the 11-character id: `youtubeId` drops tails like `&feature=kp` in original values), `spotify_url` (shown as an embed URL: lib/metadata.js `spotifyEmbed` converts play./open.spotify.com links), `apple_music_url` (embed URL; `?i=` = song, otherwise album), `podcast_file`. A post shows, per player, the first value not in `hiddenPlayers` from: `editorMetadata` (the editor's), `musicbrainzMetadata` (linked by MusicBrainz to that exact recording/album: musicbrainz-players.mjs), `spotifyMetadata`, `ytdlpMetadata` (a YouTube search by artist + title), `itunesMetadata` (an iTunes search, the least reliable). The scripts only write their own layer and `hiddenPlayers` via `setPlayer`/`hidePlayer`, and read the effective players with `effective(post)`. Most YouTube players are automatic (yt-dlp). Last comes `itunesMetadata`: 1,456 Apple Music players found in iTunes Search by artist + song (not by recording), dropped once (1c68ab78c) and restored as a last resort below every other source; `audit-players` flags the wrong ones. In `npm run edit` a player typed by hand goes to `editorMetadata` (and is shown again if it was hidden).
 - **Artist photos are hotlinked from Wikimedia Commons**, not stored in the repo (GitHub Pages size): only the Wikidata image (P18, always a free Commons file) is used, never Wikipedia's page image (it can be a non-free file), and its author and license are shown with a link to the file page, as Commons' reuse terms require. Rerun `artist-bios` now and then: Commons files can be renamed or deleted.
 - **dSong's own Spotify playlists are kept even though they're broken** (`user/dsong2009`, `user/skuark`, `user/jesusr`: 18 posts). `check-media` reports them; don't remove them.

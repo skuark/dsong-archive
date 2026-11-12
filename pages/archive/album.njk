@@ -13,4 +13,5 @@ pageClass: archive
 {% set posts = album.posts %}
 {% set meta = album.posts[0].metadata %}
 {% set heading = "Publicaciones del álbum " + meta.album + (", de " + meta.artist if meta.artist else "") %}
+{% set crumbLabel = meta.album %}
 {% include "partials/archive-table.njk" %}

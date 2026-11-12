@@ -6,9 +6,16 @@ pageClass: map
 ---
 {%- set countries = archive.byCountry | sort(true, false, "posts.length") %}
 
-<h2 class="archive-title">Mapa musical</h2>
-<p class="map-intro">De dónde son los artistas del archivo. Elige un país para ver sus canciones.</p>
+{%- set max = (countries | first).posts.length %}
+<div class="page-head map-head">
+  <div>
+    <p class="kicker">Mapa musical</p>
+    <h1 class="page-title">De dónde venía la música</h1>
+  </div>
+  <p class="map-intro">Cada país, coloreado por las recomendaciones de artistas de allí. Pulsa uno para ver sus artículos.</p>
+</div>
 
+<div class="map-layout">
 <figure class="map">
   <svg class="map__svg" viewBox="0 0 {{ worldMap.width }} {{ worldMap.height }}" role="img" aria-labelledby="map-title">
     <title id="map-title">Mapa mundial con el número de publicaciones por país del artista</title>
@@ -24,15 +31,34 @@ pageClass: map
     {%- endfor %}
   </svg>
   <figcaption class="map__legend">
-    <span>Publicaciones:</span>
+    <span class="kicker">Artículos</span>
     {%- for min in worldMap.levels %}
     <span class="map__legend-item"><span class="map__swatch map-level-{{ loop.index }}"></span>{{ min }}{% if loop.last %} o más{% else %}–{{ worldMap.levels[loop.index] - 1 }}{% endif %}</span>
     {%- endfor %}
   </figcaption>
 </figure>
 
-<ol class="map-countries">
-  {%- for country in countries %}
-  <li><a href="/archive/countries/{{ country.slug }}.html">{{ country.name }}</a> <span class="map-countries__count">{{ country.posts.length }}</span></li>
-  {%- endfor %}
-</ol>
+<aside class="map-top" aria-labelledby="map-top-title">
+  <div class="map-top__head">
+    <h2 class="display map-top__title" id="map-top-title">Los que más</h2>
+    <span class="kicker">artículos</span>
+  </div>
+  <ol class="bars map-top__bars">
+    {%- for country in countries.slice(0, 10) %}
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/{{ country.slug }}.html">{{ country.name }}</a>
+      <span class="bars__track"><span class="bars__fill{% if loop.first %} bars__fill--top{% endif %}" style="width: {{ (country.posts.length / max * 100) | round(1) }}%"></span></span>
+      <span class="bars__value">{{ country.posts.length }}</span>
+    </li>
+    {%- endfor %}
+  </ol>
+  <details class="bars-more">
+    <summary>Todos los países · {{ countries | length }}</summary>
+    <ol class="map-countries">
+      {%- for country in countries %}
+      <li><a href="/archive/countries/{{ country.slug }}.html">{{ country.name }}</a> <span class="map-countries__count">{{ country.posts.length }}</span></li>
+      {%- endfor %}
+    </ol>
+  </details>
+</aside>
+</div>

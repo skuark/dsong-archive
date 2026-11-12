@@ -267,8 +267,7 @@
     const current = document.querySelector('.post-view');
     const next = doc.querySelector('.post-view');
 
-    // The header carries the Ficha popover: close it before swapping
-    current.querySelector('.post-facts:popover-open')?.hidePopover();
+    current.querySelector('.post-view__crumbs').innerHTML = next.querySelector('.post-view__crumbs').innerHTML;
     current.querySelector('.post-view__header').innerHTML = next.querySelector('.post-view__header').innerHTML;
     current.querySelector('.post-view__content').replaceWith(document.importNode(next.querySelector('.post-view__content'), true));
 
@@ -297,6 +296,11 @@
     current.querySelector('.podcast')?.remove();
     const podcast = next.querySelector('.podcast');
     if (podcast) current.querySelector('.post-view__side').prepend(document.importNode(podcast, true));
+
+    // Ficha: last in the side column, under the players
+    current.querySelector('.post-facts')?.remove();
+    const facts = next.querySelector('.post-facts');
+    if (facts) current.querySelector('.post-view__side').append(document.importNode(facts, true));
 
     for (const position of ['top', 'bottom']) {
       const nav = doc.querySelector(`.post-nav--${position}`);
@@ -353,15 +357,15 @@
     bar.setAttribute('role', 'region');
     bar.setAttribute('aria-label', 'Modo radio');
     bar.innerHTML = `
-      <span class="kicker radio-bar__label">📻 Modo radio<span class="radio-bar__source"></span></span>
-      <span class="radio-bar__next"></span>
+      <span class="kicker radio-bar__label">Radio<span class="radio-bar__source"></span></span>
       <span class="radio-bar__actions">
-        <button class="radio-bar__button radio-bar__button--start" type="button" data-action="play" hidden>▶ Empezar</button>
-        <button class="radio-bar__button" type="button" data-action="shuffle" aria-pressed="false">🔀 Aleatorio</button>
-        <button class="radio-bar__button" type="button" data-action="previous" disabled>⏮ Anterior</button>
-        <button class="radio-bar__button" type="button" data-action="skip">Siguiente ⏭</button>
-        <button class="radio-bar__button" type="button" data-action="stop">Salir ✕</button>
-      </span>`;
+        <button class="radio-bar__button radio-bar__button--start" type="button" data-action="play" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>Empezar</button>
+        <button class="radio-bar__button radio-bar__button--icon" type="button" data-action="previous" aria-label="Anterior" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+        <button class="radio-bar__button radio-bar__button--icon" type="button" data-action="skip" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+      </span>
+      <span class="radio-bar__next"></span>
+      <button class="radio-bar__button radio-bar__button--shuffle" type="button" data-action="shuffle" aria-pressed="false">Al azar</button>
+      <button class="radio-bar__button radio-bar__button--stop" type="button" data-action="stop" aria-label="Salir del modo radio">×</button>`;
     bar.addEventListener('click', (e) => {
       const action = e.target.closest('[data-action]')?.dataset.action;
       if (action === 'play') {
@@ -395,7 +399,7 @@
     const slot = bar.querySelector('.radio-bar__next');
     slot.textContent = '';
     if (!next) { slot.textContent = 'Última canción del archivo'; return; }
-    slot.append('A continuación: ');
+    slot.append('Al acabar la canción pasa a ');
     const link = document.createElement('a');
     link.href = `/archive/${next[0]}.html`;
     link.textContent = next[1];

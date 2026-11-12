@@ -21,7 +21,7 @@ pageClass: stats
   {%- for item in items %}
   <li class="bars__row">
     <span class="bars__label">{% if base and item.slug %}<a href="{{ base }}{{ item.slug }}.html">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</span>
-    <span class="bars__track"><span class="bars__fill" style="width: {{ item.pct }}%"></span></span>
+    <span class="bars__track"><span class="bars__fill{% if item.pct == 100 %} bars__fill--top{% endif %}" style="width: {{ item.pct }}%"></span></span>
     <span class="bars__value">{{ item.count | thousands }}</span>
   </li>
   {%- endfor %}
@@ -32,7 +32,7 @@ pageClass: stats
   {%- for item in items %}
   <li class="columns__col" title="{{ item.name }}: {{ item.count | thousands }}">
     <span class="columns__value">{{ item.count | thousands }}</span>
-    <span class="columns__bar" style="height: {{ item.pct }}%"></span>
+    <span class="columns__bar{% if item.pct == 100 %} columns__bar--top{% endif %}" style="height: {{ item.pct }}%"></span>
     <span class="columns__label">{{ item.name }}</span>
   </li>
   {%- endfor %}
@@ -42,57 +42,71 @@ pageClass: stats
 {#- Old table links (/archive/?q=…, the search used to live here) go to the table with the same search -#}
 <script>if (new URLSearchParams(location.search).has("q")) location.replace("/archive/all/" + location.search);</script>
 
-<h2 class="archive-title">Archivo</h2>
-
-<form class="archive-search" action="/archive/all/" method="get" role="search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" name="q" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <button class="archive-search__button" type="submit">Buscar</button>
-  <a class="archive-search__all" href="/archive/all/">Ver las {{ stats.totals.posts | thousands }} publicaciones →</a>
-</form>
-
-<h3 class="stats-heading">dSong en cifras</h3>
-
-<ul class="stats-totals">
-  <li><a href="/archive/all/"><strong>{{ stats.totals.posts | thousands }}</strong> publicaciones →</a></li>
-  <li><a href="/archive/editors/"><strong>{{ stats.totals.editors }}</strong> autores →</a></li>
-  <li><a href="/archive/artists/"><strong>{{ stats.totals.artists | thousands }}</strong> artistas →</a></li>
-  <li><a href="/mapa/"><strong>{{ stats.totals.countries }}</strong> países →</a></li>
-  <li><a href="/archive/podcasts/"><strong>{{ stats.totals.podcasts }}</strong> podcasts →</a></li>
-</ul>
-
-<section class="stats-section">
-  <h3>Publicaciones por año</h3>
-  <p>Una canción al día de 2010 a 2014; en 2015 el blog fue apagándose.</p>
-  {{ columns(stats.byYear, "Publicaciones por año") }}
+<section class="archive-hero">
+  <p class="kicker">Archivo</p>
+  <h1 class="display page-title">Todo lo que publicamos</h1>
+  <form class="archive-search archive-search--big" action="/archive/all/" method="get" role="search">
+    <label class="visually-hidden" for="archive-search">Buscar en el archivo</label>
+    <input class="archive-search__input" id="archive-search" name="q" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
+    <a class="button button--accent archive-search__all" href="/archive/all/">Ver las {{ stats.totals.posts | thousands }}</a>
+  </form>
+  <nav class="chips" aria-label="Explorar por">
+    <a class="chip" href="/archive/editors/">Autores · {{ stats.totals.editors }}</a>
+    <a class="chip" href="/archive/artists/">Artistas · {{ stats.totals.artists | thousands }}</a>
+    <a class="chip" href="/mapa/">Países · {{ stats.totals.countries }}</a>
+    <a class="chip" href="/archive/podcasts/">Podcasts · {{ stats.totals.podcasts }}</a>
+  </nav>
 </section>
 
-<section class="stats-section">
-  <h3>Los autores más prolíficos</h3>
-  <p>Los diez que más escribieron, de {{ stats.totals.editors }}.</p>
-  {{ bars(stats.editors, "/archive/editors/", 10) }}
-</section>
+<h2 class="display stats-heading">dSong en cifras</h2>
 
-<section class="stats-section">
-  <h3>Géneros</h3>
-  <p>Los {{ stats.genreTotal | thousands }} posts con género, agrupados en grandes familias.</p>
-  {{ bars(stats.genres) }}
-</section>
+<div class="stats-grid">
+  <section class="stats-section">
+    <h3 class="kicker">Publicaciones por año</h3>
+    {{ columns(stats.byYear, "Publicaciones por año") }}
+    <p>Una canción al día de 2010 a 2014; en 2015 el blog fue apagándose.</p>
+  </section>
 
-<section class="stats-section">
-  <h3>Artistas más repetidos</h3>
-  <p>Los diez con más publicaciones; en «Ver más», todos los que tienen al menos tres.</p>
-  {{ bars(stats.artists, "/archive/artists/", 10) }}
-</section>
+  <section class="stats-section">
+    <h3 class="kicker">¿De qué década eran las canciones?</h3>
+    {{ bars(stats.decades) }}
+    <p>Al publicarse, una canción tenía de mediana {{ stats.medianAge }} años. La más antigua: <a href="/archive/{{ stats.oldest.id }}.html">{{ stats.oldest.title }}</a> ({{ stats.oldest.year }}).</p>
+  </section>
 
-<section class="stats-section">
-  <h3>¿De qué década eran las canciones?</h3>
-  <p>Al publicarse, una canción tenía de mediana {{ stats.medianAge }} años. La más antigua: <a href="/archive/{{ stats.oldest.id }}.html">{{ stats.oldest.title }}</a> ({{ stats.oldest.year }}).</p>
-  {{ columns(stats.decades, "Canciones por década") }}
-</section>
+  <section class="stats-section">
+    <h3 class="kicker">Los autores más prolíficos</h3>
+    {{ bars(stats.editors, "/archive/editors/", 10) }}
+    <a class="stats-section__more" href="/archive/editors/">Los {{ stats.totals.editors }} autores →</a>
+  </section>
 
-<section class="stats-section">
-  <h3>Década de la canción según el año de publicación</h3>
+  <section class="stats-section">
+    <h3 class="kicker">Artistas más repetidos</h3>
+    <ol class="ranking">
+      {%- for item in stats.artists.slice(0, 10) %}
+      <li><a href="/archive/artists/{{ item.slug }}.html">{{ item.name }}</a><strong>{{ item.count }}</strong></li>
+      {%- endfor %}
+    </ol>
+    {%- if stats.artists.length > 10 %}
+    <details class="bars-more">
+      <summary>Ver {{ stats.artists.length - 10 }} más</summary>
+      <ol class="ranking">
+        {%- for item in stats.artists.slice(10) %}
+        <li><a href="/archive/artists/{{ item.slug }}.html">{{ item.name }}</a><strong>{{ item.count }}</strong></li>
+        {%- endfor %}
+      </ol>
+    </details>
+    {%- endif %}
+    <div class="chips">
+      <span class="kicker chips__label">Géneros · {{ stats.genreTotal | thousands }} artículos con género</span>
+      {%- for genre in stats.genres %}
+      <span class="chip chip--small">{{ genre.name }} <strong>{{ genre.count }}</strong></span>
+      {%- endfor %}
+    </div>
+  </section>
+</div>
+
+<section class="stats-section stats-section--wide">
+  <h3 class="kicker">Década de la canción según el año de publicación</h3>
   <p>Porcentaje de las canciones de cada año que venían de cada década: con los años, el blog fue recomendando música más reciente.</p>
   <div class="heatmap-wrapper">
     <table class="heatmap">

@@ -12,4 +12,5 @@ pageClass: archive
 
 {% set posts = editor.posts %}
 {% set heading = "Publicaciones del editor " + editor.name %}
+{% set crumbs = [{ url: "/archive/editors/", label: "Autores" }] %}{% set crumbLabel = editor.name %}
 {% include "partials/archive-table.njk" %}

@@ -9,7 +9,7 @@ eleventyComputed:
 permalink: "archive/{{ post.id }}.html"
 ---
 
-{#- Linear navigation (above and below the post): the collection is in chronological order (oldest first).
+{#- Linear navigation (below the post): the collection is in chronological order (oldest first).
     It lives outside .post-view: the sticky side column can travel to the end of .post-view and would overlap it. #}
 {%- set prevPost = collections.posts[pagination.pageNumber - 1] if pagination.pageNumber > 0 %}
 {%- set nextPost = collections.posts[pagination.pageNumber + 1] %}
@@ -19,90 +19,59 @@ permalink: "archive/{{ post.id }}.html"
   <a class="post-nav__link post-nav__link--prev" href="/archive/{{ prevPost.id }}.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">{{ prevPost.title }}</span>
+    <span class="post-nav__editor">{{ prevPost.editor.name }}</span>
   </a>
   {%- endif %}
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   {%- if nextPost %}
   <a class="post-nav__link post-nav__link--next" href="/archive/{{ nextPost.id }}.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">{{ nextPost.title }}</span>
+    <span class="post-nav__editor">{{ nextPost.editor.name }}</span>
   </a>
   {%- endif %}
 </nav>
 {%- endmacro %}
 
-{{ postNav("top", prevPost, nextPost) }}
-
 <div class="post-view">
+  {#- Outside the header (it spans both columns); radio mode swaps it with the post -#}
+  {%- set pubYear = post.published_at.slice(0, 4) %}
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q={{ pubYear }}">{{ pubYear }}</a><span>Nº {{ pagination.pageNumber + 1 }}</span>
+  </nav>
+
   <header class="post-view__header">
-  {%- if post.metadata.category %}
+  {%- set heading = post.title | splitTitle %}
+  {%- if post.metadata.category or post.metadata.genre %}
   <span class="kicker post-view__kicker">
-    {%- if post.slugs.category %}<a href="/archive/categories/{{ post.slugs.category }}.html">{{ post.metadata.category }}</a>{% else %}{{ post.metadata.category }}{% endif -%}
+    {%- if post.metadata.category %}{% if post.slugs.category %}<a href="/archive/categories/{{ post.slugs.category }}.html">{{ post.metadata.category }}</a>{% else %}{{ post.metadata.category }}{% endif %}{% endif %}
+    {%- if post.metadata.category and post.metadata.genre %} · {% endif %}
+    {%- if post.metadata.genre %}{{ post.metadata.genre }}{% endif -%}
   </span>
   {%- endif %}
-  <h2 class="post-view__title">{{ post.title }}</h2>
+  <h1 class="display post-view__title">{{ heading.main }}</h1>
+  {%- if heading.by %}
+  <p class="post-view__by">de {% if post.slugs.artist and (heading.by | lower) == (post.metadata.artist | lower) %}<a href="/archive/artists/{{ post.slugs.artist }}.html">{{ heading.by }}</a>{% else %}{{ heading.by }}{% endif %}</p>
+  {%- endif %}
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        {% if post.editor.url %}
-          <a href="{{ post.editor.url }}" target="_blank">
-            <img class="post-view__editor-image" src="{{ post.editor.gravatar_url }}?s=20" alt="" />
-            <span class="post-view__editor-name">{{ post.editor.name }}</span>
-          </a>
-        {% else %}
-          <span>
-            <img class="post-view__editor-image" src="{{ post.editor.gravatar_url }}?s=20" alt="" />
-            <span class="post-view__editor-name">{{ post.editor.name }}</span>
-          </span>
-        {% endif %}
-      </span>
-
-      <time class="post-view__date" datetime="{{ post.published_at | isoDate }}">{{ post.published_at | longDate }}</time>
-      {%- if post.facts | length %}
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button>
+    <span class="post-view__editor">
+      {%- if post.editor.url %}
+      <a href="{{ post.editor.url }}" target="_blank"><span class="post-view__editor-name">{{ post.editor.name }}</span></a>
+      {%- else %}
+      <span class="post-view__editor-name">{{ post.editor.name }}</span>
       {%- endif %}
-      {#- Local builds only (CI builds with ELEVENTY_ENV=production): opens the post in the local editor (npm run edit) -#}
-      {%- if env.ELEVENTY_ENV != "production" %}
-      <a class="post-view__edit" href="http://localhost:8082/#{{ post.id }}" target="dsong-editor">✏️ Editar</a>
-      {%- endif %}
-      {#- Ficha (lib/facts.js): everything we know about the post, linked to the archive and its sources, in a
-          side panel (a manual popover: the page stays usable beside it; ✕, the button or Esc close it) opened from
-          the header. Inside the header, so radio mode swaps it with the post. -#}
     </span>
+    <time class="post-view__date" datetime="{{ post.published_at | isoDate }}">{{ post.published_at | longDate(false, true) }}</time>
+    <span>{{ post.content | readingTime }} min de lectura</span>
+    {#- Local builds only (CI builds with ELEVENTY_ENV=production): opens the post in the local editor (npm run edit) -#}
+    {%- if env.ELEVENTY_ENV != "production" %}
+    <a class="post-view__edit" href="http://localhost:8082/#{{ post.id }}" target="dsong-editor">Editar</a>
+    {%- endif %}
   </div>
-  {%- if post.facts | length %}
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    {%- for group in post.facts %}
-    <h4 class="post-facts__group kicker">{{ group.title }}</h4>
-    <dl class="post-facts__list">
-      {%- for row in group.rows %}
-      <dt>{{ row.label }}</dt>
-      <dd>
-        {%- for item in row.items %}
-        {%- if item.musicbrainz %} <a class="post-facts__mb" href="{{ item.href }}" rel="noopener" target="_blank" title="Ver en {{ item.text }}"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>{{ item.text }}</a>
-        {%- else %}
-        {%- if not loop.first %}<span class="post-facts__sep"> · </span>{% endif %}
-        {%- if item.href %}<a href="{{ item.href }}"{% if item.external %} rel="noopener" target="_blank"{% endif %}>{{ item.text }}{% if item.external %} ↗{% endif %}</a>{% else %}{{ item.text }}{% endif %}
-        {%- if item.note %} <span class="post-facts__note">({{ item.note }})</span>{% endif %}
-        {%- endif %}
-        {%- endfor -%}
-      </dd>
-      {%- endfor %}
-    </dl>
-    {%- endfor %}
-    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  {%- endif %}
   </header>
 
   <div class="post-view__content">
@@ -119,8 +88,8 @@ permalink: "archive/{{ post.id }}.html"
   {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
 
 
-  {#- Side column in the desktop split view: players and podcast (sticky) #}
-  {%- set hasSide = (players | length) or m.podcast_file %}
+  {#- Side column (sticky in the desktop split view, after the text on narrow screens): podcast, players, Ficha #}
+  {%- set hasSide = (players | length) or m.podcast_file or (post.facts | length) %}
   {%- if hasSide %}<aside class="post-view__side">{% endif %}
   {#- UniRadio Jaén podcast: its own block, above the players #}
   {%- if m.podcast_file %}
@@ -146,9 +115,6 @@ permalink: "archive/{{ post.id }}.html"
   {%- if players | length %}
   {#- Radio mode (js/radio.js): plays the next posts' YouTube (or Spotify) with their text; hidden without JS #}
   {%- set inRadio = archive.radioById[post.id] %}
-  {%- if inRadio %}
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  {%- endif %}
   <details class="players" open>
     <summary class="players__summary">Escuchar</summary>
 
@@ -175,6 +141,9 @@ permalink: "archive/{{ post.id }}.html"
       {%- endif %}
     </div>
     {%- endfor %}
+    {%- if inRadio %}
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg>Seguir en modo radio desde aquí</button>
+    {%- endif %}
   </details>
   <script src="/js/players.js?v={{ 'js/players.js' | assetVersion }}" defer></script>
   {%- if inRadio %}
@@ -184,17 +153,40 @@ permalink: "archive/{{ post.id }}.html"
 
   {#- On every post: radio mode may bring in a podcast block from another post #}
   <script src="/js/podcast.js?v={{ 'js/podcast.js' | assetVersion }}" defer></script>
-  {#- Esc closes the Ficha panel (a manual popover doesn't) -#}
-  <script src="/js/post-facts.js?v={{ 'js/post-facts.js' | assetVersion }}" defer></script>
+  {#- Ficha (lib/facts.js): everything we know about the post, linked to the archive and its sources.
+      In the side column, under the players; radio mode swaps it with the post. -#}
+  {%- if post.facts | length %}
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    {%- for group in post.facts %}
+    <h3 class="post-facts__group kicker">{{ group.title }}</h3>
+    <dl class="post-facts__list">
+      {%- for row in group.rows %}
+      <dt>{{ row.label }}</dt>
+      <dd>
+        {%- for item in row.items %}
+        {%- if item.musicbrainz %} <a class="post-facts__mb" href="{{ item.href }}" rel="noopener" target="_blank" title="Ver en {{ item.text }}"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>{{ item.text }}</a>
+        {%- else %}
+        {%- if not loop.first %}<span class="post-facts__sep"> · </span>{% endif %}
+        {%- if item.href %}<a href="{{ item.href }}"{% if item.external %} rel="noopener" target="_blank"{% endif %}>{{ item.text }}{% if item.external %} ↗{% endif %}</a>{% else %}{{ item.text }}{% endif %}
+        {%- if item.note %} <span class="post-facts__note">({{ item.note }})</span>{% endif %}
+        {%- endif %}
+        {%- endfor -%}
+      </dd>
+      {%- endfor %}
+    </dl>
+    {%- endfor %}
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+  </section>
+  {%- endif %}
   {%- if hasSide %}
-  <script src="/js/post-header.js?v={{ 'js/post-header.js' | assetVersion }}" defer></script>
   </aside>
   {%- endif %}
 
 
   {% if post.comments and post.comments | length > 0 %}
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios ({{ post.comments | length }})</summary>
+      <summary class="post-view__comments-summary"><strong>{{ post.comments | length }} {{ "comentario" if post.comments | length == 1 else "comentarios" }}</strong> en el blog original</summary>
       <ul>
         {% for comment in post.comments %}
           <li class="post-view__comment">

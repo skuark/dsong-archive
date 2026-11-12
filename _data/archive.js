@@ -41,10 +41,23 @@ function onThisDay(posts) {
     if (!has(title)) continue;
     const list = day(date.slice(5)).anniversaries;
     if (list.some((a) => a.title === title && a.artist === artist)) continue;   // several posts on one album: the first
-    list.push({ id: post.id, title, artist, year: date.slice(0, 4) });
+    list.push({ id: post.id, title, artist, year: date.slice(0, 4), author: post.editor.name, song: title === song ? undefined : song });
   }
   for (const entry of Object.values(days)) entry.anniversaries.sort((a, b) => a.year - b.year);
   return Object.values(days);
+}
+
+// Artist page extras from its latest post: country (name + slug of its page), official site, and the albums
+// its posts present ({ name, slug, count }, in order of appearance)
+function artistDetails(group) {
+  const latest = group.posts.at(-1);
+  const country = groupBy("country", [latest])[0];
+  const albums = {};
+  for (const post of group.posts) {
+    if (!post.slugs.album) continue;
+    (albums[post.slugs.album] ??= { name: post.metadata.album, slug: post.slugs.album, count: 0 }).count++;
+  }
+  return { country: country && { name: country.name, slug: country.slug }, url: latest.metadata.artist_url, albums: Object.values(albums) };
 }
 
 // A function, so it's recomputed on every build (and rebuild under `npm run serve`)
@@ -60,7 +73,7 @@ export default function () {
     ids: posts.map(post => post.id),
     byEditor: groupBy("editor"),
     // A bio only for artists linked one to one (not collaborations)
-    byArtist: groupBy("artist").map((group) => ({ ...group, musicbrainz: musicbrainzLinks(mbids[group.name]),
+    byArtist: groupBy("artist").map((group) => ({ ...group, ...artistDetails(group), musicbrainz: musicbrainzLinks(mbids[group.name]),
       bio: typeof mbids[group.name] === "string" ? bios[mbids[group.name]] : undefined })),
     byAlbum: groupBy("album"),
     byYear: groupBy("year"),

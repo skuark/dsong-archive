@@ -12,4 +12,5 @@ pageClass: archive
 
 {% set posts = category.posts %}
 {% set heading = "Publicaciones de la categoría " + category.name %}
+{% set crumbLabel = category.name %}
 {% include "partials/archive-table.njk" %}

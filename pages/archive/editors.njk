@@ -6,6 +6,8 @@ pageClass: archive
 ---
 {%- set items = archive.byEditor %}
 {%- set base = "/archive/editors/" %}
-{%- set heading = "Los " + (items | length) + " autores de dSong" %}
+{%- set heading = "Autores" %}
+{%- set crumb = "Autores" %}
+{%- set placeholder %}Busca un autor…{% endset %}
 {%- set noun = "autor|autores" %}
 {% include "partials/facet-index.njk" %}

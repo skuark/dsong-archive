@@ -1,14 +1,30 @@
+{#- Variables: posts, heading, crumbs ([{ url, label }] between "Archivo" and the heading), headingLinks,
+    yearChips (publication-year filter, js/archive-table-search.js) -#}
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a>
+  {%- for crumb in crumbs %}<a href="{{ crumb.url }}">{{ crumb.label }}</a>{% endfor %}
+  <span>{{ crumbLabel or heading }}</span>
+</nav>
 {%- if heading %}
-<h2 class="archive-title">{{ heading }}</h2>
+<div class="page-head">
+  <h1 class="page-title">{{ heading }}</h1>
+</div>
 {%- endif %}
 {%- if headingLinks %}
 <p class="archive-links">{% for link in headingLinks %}<a href="{{ link.url }}" rel="noopener">{{ link.label }} ↗</a>{% endfor %}</p>
 {%- endif %}
-{%- if artistBio %}{% include "partials/artist-bio.njk" %}{% endif %}
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
+<div class="archive-search archive-search--table">
+  <label class="visually-hidden" for="archive-search">Buscar</label>
   <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
+  {%- if yearChips %}
+  <div class="chips archive-search__years" role="group" aria-label="Año de publicación">
+    <button class="chip chip--small" type="button" data-year="" aria-pressed="true">Todos</button>
+    {%- for item in stats.byYear %}
+    <button class="chip chip--small" type="button" data-year="{{ item.name }}" aria-pressed="false">{{ item.name }}</button>
+    {%- endfor %}
+  </div>
+  {%- endif %}
   <span class="archive-search__count" id="archive-search-count" aria-live="polite">{{ posts | length }} {{ "publicación" if (posts | length) == 1 else "publicaciones" }}</span>
 </div>
 
@@ -41,6 +57,7 @@
       {%- endfor -%}
     </tbody>
   </table>
+  <p class="archive__empty" id="archive-search-empty" hidden>Nada por aquí. Prueba con otro nombre o <a href="/rand/">un artículo al azar</a>.</p>
 </div>
 
 <script src="/js/archive-table-search.js?v={{ 'js/archive-table-search.js' | assetVersion }}"></script>

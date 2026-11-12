@@ -2,12 +2,25 @@
 layout: layouts/main.njk
 title: Página no encontrada
 permalink: /404.html
-pageClass: index
+pageClass: not-found
 noIndex: true
 eleventyExcludeFromCollections: true
 ---
 
-<p>🔇 Esta página no existe, o se perdió por el camino desde que dSong dejó de publicar.</p>
-
-<p>Puedes volver al <a href="/">inicio</a>, buscar en el <a href="/archive/all/">archivo</a> o
-  <a href="/rand/"><img src="/images/dices.png" alt="" class="header__menu--dices"> dejar que el azar te recomiende algo</a>.</p>
+<section class="not-found">
+  <div class="display not-found__code" aria-hidden="true"><span>404</span></div>
+  <div class="not-found__text">
+    <p class="kicker">Cara B</p>
+    <h1 class="page-title not-found__title">Esta canción no está en el archivo</h1>
+    <p class="not-found__lead">Puede que el enlace venga del blog antiguo o que la página haya cambiado de nombre. Búscala, o deja que suene otra.</p>
+    <form class="archive-search not-found__search" action="/archive/all/" role="search">
+      <label class="visually-hidden" for="not-found-search">Buscar en el archivo</label>
+      <input class="archive-search__input" id="not-found-search" name="q" type="search" placeholder="Artista, canción…">
+      <button class="button not-found__submit" type="submit">Buscar</button>
+    </form>
+    <p class="not-found__actions">
+      <a class="button button--accent" href="/rand/">Un artículo al azar</a>
+      <a class="button" href="/">Volver al inicio</a>
+    </p>
+  </div>
+</section>

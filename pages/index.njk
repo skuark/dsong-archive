@@ -5,69 +5,71 @@ pageClass: index
 ---
 
 <div class="home">
-  <div class="home__intro">
-    <p class="kicker home__kicker">Una recomendación musical diaria · 2009–2017</p>
+  <section class="home__hero">
+    <div class="home__intro">
+      <p class="kicker">Una recomendación musical diaria</p>
+      <h1 class="display home__title">Una canción al día.<br>Durante <mark>ocho años.</mark></h1>
+      <p class="home__lead">Entre 2009 y 2017, un grupo de amigos escribimos casi 2.000 recomendaciones y grabamos
+        335 programas con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>. Aquí siguen todas, con su reproductor.</p>
+      <p class="home__actions">
+        <a class="button button--accent" href="/radio/"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>Escuchar la radio</a>
+        <a class="button" href="/archive/">Explorar el archivo</a>
+        <a class="button" href="/rand/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.3" fill="currentColor"/><circle cx="16" cy="16" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg>Al azar</a>
+      </p>
+    </div>
 
-    <p class="home__lead">dSong fue un proyecto web sin ánimo de lucro fundado el 18 de Mayo de 2009, en el que un
-      grupo de amigos nos propusimos escribir <mark>una recomendación musical diaria</mark>.</p>
+    {#- Filled by js/on-this-day.js with the visitor's date (the site is static) #}
+    <aside class="on-this-day" aria-labelledby="on-this-day-title" hidden>
+      <div class="on-this-day__header">
+        <h2 class="kicker" id="on-this-day-title">Tal día como hoy</h2>
+        <span class="display on-this-day__date"><span class="on-this-day__day"></span> <span class="on-this-day__month"></span></span>
+      </div>
+      <p class="on-this-day__note" hidden></p>
+      <ol class="on-this-day__list"></ol>
+      <section class="on-this-day__anniversaries-box" hidden>
+        <h3 class="kicker on-this-day__subhead"></h3>
+        <ol class="on-this-day__anniversaries"></ol>
+        <p class="on-this-day__source">Años que cumple cada disco hoy, según MusicBrainz.</p>
+      </section>
+    </aside>
+  </section>
 
-    <p class="home__actions">
-      <a class="button" href="/archive/">🗂️ Explorar el archivo</a>
-      <a class="button" href="/mapa/">🗺️ Ver el mapa</a>
-      <a class="button" href="/radio/">📻 Escuchar la radio</a>
-      <a class="button" href="/rand/">🎲 Un artículo al azar</a>
-    </p>
+  <section class="home__figures" aria-label="dSong en cifras">
+    {%- for figure in [
+      [stats.totals.posts, "artículos", "/archive/all/"],
+      [stats.totals.podcasts, "podcasts", "/archive/podcasts/"],
+      [stats.totals.artists, "artistas", "/archive/artists/"],
+      [stats.totals.editors, "autores", "/archive/editors/"],
+      [8, "años", "/archive/"]
+    ] %}
+    <a class="home__figure" href="{{ figure[2] }}"><span class="display home__figure-value">{{ figure[0] | thousands }}</span><span class="kicker">{{ figure[1] }}</span></a>
+    {%- endfor %}
+  </section>
 
-    <ul class="home__notes">
-      <li class="home__note">
-        <span class="home__emoji" aria-hidden="true">✍🏼</span>
-        <p>A lo largo de 8 años publicamos cerca de 2.000 artículos. Durante un tiempo también colaboramos con <a
-            href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>, grabando 335 podcasts narrando algunas
-          de las recomendaciones de la web. Puedes <a href="/podcast.xml">suscribirte a todos ellos con RSS</a> en tu app de
-          podcasts.</p>
-      </li>
-      <li class="home__note">
-        <span class="home__emoji" aria-hidden="true">⌛️</span>
-        <p>A principios de 2017 publicamos el último artículo. En <a
-            href="https://web.archive.org/web/20170501000000*/http://www.dsong.es" target="_blank">archive.org</a> se
-          pueden seguir consultando algunas capturas de la web original.</p>
-      </li>
-      <li class="home__note">
-        <span class="home__emoji" aria-hidden="true">💻</span>
-        <p>Era una pena que todo este contenido se perdiese en un disco duro de copias de seguridad, así que hemos
-          creado este pequeño proyecto para que se pueda seguir consultando más allá del típico formato blog que un día
-          fue. En el <a href="/archive/">Archivo</a> puedes ver el blog en cifras y encontrar una tabla con todo el
-          contenido, filtrarlo y ordenarlo por distintos criterios. También puedes <a href="/rand/"><img src="/images/dices.png" alt="Dados"
-              class="header__menu--dices"> navegar a tu suerte</a>, y ver qué te vamos recomendando de entre todo el
-          histórico de publicaciones.</p>
-      </li>
-      <li class="home__note">
-        <span class="home__emoji" aria-hidden="true">🤝</span>
-        <p>Todos los contenidos de este sitio continuan estando publicados bajo una licencia <a
-            href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">«Creative Commons
-            Reconocimiento-No comercial-Compartir bajo la misma licencia 3.0 España»</a>. Puedes darle un uso no
-          comercial, siempre y cuando reconozcas la autoría y compartas con el mismo tipo de licencia.</p>
-      </li>
-      <li class="home__note">
-        <span class="home__emoji" aria-hidden="true">📨</span>
-        <p>Si encuentras alguna errata, una publicación mal formateada, enlaces rotos o algún reproductor que no
-          funciona puedes <a href="mailto:dsong@jesusmagamu.dev">escribir un email a dsong@jesusmagamu.dev</a> o <a
-            href="https://github.com/skuark/dsong-archive" target="_blank">abrir una issue en GitHub</a>.</p>
-      </li>
-    </ul>
-  </div>
-
-  {#- Filled by js/on-this-day.js with the visitor's date (the site is static) #}
-  <aside class="on-this-day" aria-labelledby="on-this-day-title" hidden>
-    <h2 class="on-this-day__header" id="on-this-day-title">
-      <span class="on-this-day__kicker">Tal día como hoy</span>
-      <span class="on-this-day__day"></span>
-      <span class="on-this-day__month"></span>
-    </h2>
-    <p class="on-this-day__note" hidden></p>
-    <ol class="on-this-day__list"></ol>
-    <h3 class="on-this-day__subhead" hidden>Aniversarios</h3>
-    <ol class="on-this-day__list on-this-day__anniversaries" hidden></ol>
-  </aside>
+  <section class="home__ways">
+    <h2 class="display home__ways-title">Cuatro formas de perderse</h2>
+    <div class="home__ways-cards">
+      <a class="way-card" href="/radio/">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/><path d="M6 12h4M6 15h4"/></svg>
+        <span class="display way-card__title">Radio</span>
+        <span>Un artículo tras otro, sin recargar. En orden o al azar.</span>
+      </a>
+      <a class="way-card" href="/archive/">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <span class="display way-card__title">Archivo</span>
+        <span>Todo en una tabla: por año, artista, álbum, autor o país.</span>
+      </a>
+      <a class="way-card" href="/mapa/">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+        <span class="display way-card__title">Mapa</span>
+        <span>El mundo coloreado por la nacionalidad de los artistas.</span>
+      </a>
+      <a class="way-card way-card--accent" href="/archive/podcasts/">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>
+        <span class="display way-card__title">Podcast</span>
+        <span>{{ stats.totals.podcasts }} programas en UniRadio Jaén. Suscríbete por RSS.</span>
+      </a>
+    </div>
+  </section>
 </div>
 <script src="/js/on-this-day.js?v={{ 'js/on-this-day.js' | assetVersion }}" defer></script>

@@ -12,4 +12,5 @@ pageClass: archive
 
 {% set posts = year.posts %}
 {% set heading = "Música del año " + year.name %}
+{% set crumbLabel = year.name %}
 {% include "partials/archive-table.njk" %}

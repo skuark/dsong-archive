@@ -6,6 +6,8 @@ pageClass: archive
 ---
 {%- set items = stats.artistGroups %}
 {%- set base = "/archive/artists/" %}
-{%- set heading = "Los " + (items | length | thousands) + " artistas de dSong" %}
+{%- set heading = "Artistas" %}
+{%- set crumb = "Artistas" %}
+{%- set placeholder %}Busca un artista entre {{ items | length | thousands }}…{% endset %}
 {%- set noun = "artista|artistas" %}
 {% include "partials/facet-index.njk" %}

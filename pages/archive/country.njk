@@ -12,4 +12,5 @@ pageClass: archive
 
 {% set posts = country.posts %}
 {% set heading = "Música de " + country.name %}
+{% set crumbs = [{ url: "/mapa/", label: "Mapa" }] %}{% set crumbLabel = country.name %}
 {% include "partials/archive-table.njk" %}
