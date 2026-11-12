@@ -102,31 +102,10 @@ permalink: "archive/{{ post.id }}.html"
   {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
 
 
-  {#- Side column (sticky in the desktop split view, after the text on narrow screens): podcast, players, Ficha #}
+  {#- Side column (sticky in the desktop split view, after the text on narrow screens): players, podcast, Ficha #}
   {%- set hasSide = (players | length) or m.podcast_file or (post.facts | length) or series %}
   {%- if hasSide %}<aside class="post-view__side">{% endif %}
 
-  {#- UniRadio Jaén podcast: its own block, above the players #}
-  {%- if m.podcast_file %}
-  <section class="podcast" aria-labelledby="podcast-title">
-    <div class="podcast__header">
-      <a class="podcast__logo-link" href="https://uniradio.ujaen.es/" target="_blank"><img class="podcast__logo" src="/images/uniradio-jaen.jpg" alt="UniRadio Jaén"></a>
-      <div>
-        <span class="kicker">Podcast</span>
-        <h3 class="podcast__title" id="podcast-title">Escúchalo en UniRadio Jaén</h3>
-        <a class="podcast__feed" href="/podcast.xml">Suscríbete al podcast (RSS)</a>
-      </div>
-    </div>
-    <audio class="podcast__audio" controls preload="metadata" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/{{ m.podcast_file }}">Tu navegador no soporta este tipo de reproductor</audio>
-    {#- Own controls (js/podcast.js); without JS the native ones above stay #}
-    <div class="podcast-player">
-      <button class="podcast-player__play" type="button" aria-label="Reproducir" aria-pressed="false"><span class="podcast-player__icon" aria-hidden="true"></span></button>
-      <input class="podcast-player__seek" type="range" min="0" max="0" step="1" value="0" aria-label="Posición del podcast">
-      <span class="podcast-player__time"><span class="podcast-player__current">0:00</span> / <span class="podcast-player__duration">--:--</span></span>
-      <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
-    </div>
-  </section>
-  {%- endif %}
   {%- if players | length %}
   {#- Radio mode (js/radio.js): plays the next posts' YouTube (or Spotify) with their text; hidden without JS #}
   {%- set inRadio = archive.radioById[post.id] %}
@@ -162,6 +141,27 @@ permalink: "archive/{{ post.id }}.html"
   {%- if inRadio %}
   <script src="/js/radio.js?v={{ 'js/radio.js' | assetVersion }}" defer></script>
   {%- endif %}
+  {%- endif %}
+  {#- UniRadio Jaén podcast: its own block, under the players #}
+  {%- if m.podcast_file %}
+  <section class="podcast" aria-labelledby="podcast-title">
+    <div class="podcast__header">
+      <a class="podcast__logo-link" href="https://uniradio.ujaen.es/" target="_blank"><img class="podcast__logo" src="/images/uniradio-jaen.jpg" alt="UniRadio Jaén"></a>
+      <div>
+        <span class="kicker">Podcast</span>
+        <h3 class="podcast__title" id="podcast-title">Escúchalo en UniRadio Jaén</h3>
+        <a class="podcast__feed" href="/podcast.xml">Suscríbete al podcast (RSS)</a>
+      </div>
+    </div>
+    <audio class="podcast__audio" controls preload="metadata" src="https://dsongstatic.jesusmagamu.dev/mp3/podcast/{{ m.podcast_file }}">Tu navegador no soporta este tipo de reproductor</audio>
+    {#- Own controls (js/podcast.js); without JS the native ones above stay #}
+    <div class="podcast-player">
+      <button class="podcast-player__play" type="button" aria-label="Reproducir" aria-pressed="false"><span class="podcast-player__icon" aria-hidden="true"></span></button>
+      <input class="podcast-player__seek" type="range" min="0" max="0" step="1" value="0" aria-label="Posición del podcast">
+      <span class="podcast-player__time"><span class="podcast-player__current">0:00</span> / <span class="podcast-player__duration">--:--</span></span>
+      <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
+    </div>
+  </section>
   {%- endif %}
 
   {#- On every post: radio mode may bring in a podcast block from another post #}

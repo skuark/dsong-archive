@@ -3031,12 +3031,12 @@ button.chip {
     /* Spans every row under the crumbs, so sticky can travel along the whole article */
     grid-row: 2 / span 50;
     margin-top: 0;
-    /* Sticky without scrolling inside: a column taller than the window scrolls with the page until its
-       foot shows, and stays there (a negative top); --side-height is its height, set by
-       js/post-side.js. Without JS, it sticks at the top. --side-start: under the radio bar too */
+    /* Sticky without scrolling inside: a column taller than the window moves with the page, both ways,
+       until its foot (going down) or its head (going up) shows, and stays there; js/post-side.js sets
+       that top (--side-top). Without JS, it sticks at the top. --side-start: under the radio bar too */
     --side-start: 1.5rem;
     position: sticky;
-    top: min(var(--side-start), calc(100vh - var(--side-height, 0px) - 1.5rem));
+    top: var(--side-top, var(--side-start));
   }
 
   /* Under the radio bar (its height: --radio-bar, set by js/radio.js) */
