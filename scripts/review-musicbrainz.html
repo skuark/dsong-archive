@@ -123,13 +123,30 @@ function artistView(k, r, chosen) {
   };
 }
 
+// What the post's text says it presents (data/post-context.json).
+const VERSIONS = { original: "versión original", live: "en directo", acoustic: "acústica", remix: "remix", cover: "versión (cover)", demo: "demo", orchestral: "orquestal", other: "otra versión" };
+function contextLine(c) {
+  if (!c) return "";
+  const parts = [
+    c.subject && c.subject !== "song" && `trata de: ${c.subject}`,
+    c.performer && `interpreta ${c.performer}`,
+    c.version && c.version !== "original" && VERSIONS[c.version],
+    c.version_detail, c.is_cover && `versión de ${c.original_artist ?? "otro artista"}`,
+    c.featuring?.length && `con ${c.featuring.join(", ")}`, c.soundtrack_of && `BSO de ${c.soundtrack_of}`,
+    c.album && `disco: ${c.album}`, c.year && `año: ${c.year}`,
+  ].filter(Boolean);
+  return `<p class="meta">📰 Según el artículo: <b>${esc(parts.join(" · ") || "versión original")}</b>${c.confidence && c.confidence !== "high" ? ` (confianza ${c.confidence === "low" ? "baja" : "media"})` : ""}</p>
+    ${c.metadata_conflict ? `<p class="diff">≠ ${esc(c.metadata_conflict)}</p>` : ""}`;
+}
+
 function postView(k, r, chosen) {
   const q = encodeURIComponent([r.song, r.artist].filter(Boolean).join(" "));
   return {
     head: `<h2>${esc(r.title)} ${badge(k)}</h2>
       <p class="meta">${index + 1} de ${keys.length} · <a href="/archive/${esc(k)}.html" onclick="return false">${esc(k)}</a>
         · <a href="${MB}search?type=${r.song ? "recording" : "release_group"}&query=${q}" target="_blank" rel="noopener">buscar en MusicBrainz</a></p>
-      <p class="meta">Artista: <b>${esc(r.artist)}</b> · Canción: <b>${esc(r.song || "—")}</b> · Disco: <b>${esc(r.album || "—")}</b> · Año: <b>${esc(r.year || "—")}</b></p>`,
+      <p class="meta">Artista: <b>${esc(r.artist)}</b> · Canción: <b>${esc(r.song || "—")}</b> · Disco: <b>${esc(r.album || "—")}</b> · Año: <b>${esc(r.year || "—")}</b></p>
+      ${contextLine(r.context)}`,
     cands: r.candidates.map((c) => {
       const diffs = [
         r.song && c.title && norm(c.title) !== norm(r.song) && `título «${c.title}»`,

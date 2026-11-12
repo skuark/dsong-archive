@@ -8,3 +8,5 @@ musicbrainz-posts-candidates.json
 musicbrainz-posts-review.json
 musicbrainz-release-groups.json
 musicbrainz-diffs.md
+players-cache.json
+players-audit.md

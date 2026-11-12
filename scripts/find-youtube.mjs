@@ -12,6 +12,9 @@ const POSTS = new URL("../data/posts.json", import.meta.url);
 const apply = process.argv.includes("--apply");
 const report = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? "youtube-candidates.json";
 const data = JSON.parse(readFileSync(POSTS, "utf8"));
+// What each post says it presents (data/post-context.json): a live version, a cover by someone else…
+const CONTEXT_FILE = new URL("../data/post-context.json", import.meta.url);
+const context = existsSync(CONTEXT_FILE) ? JSON.parse(readFileSync(CONTEXT_FILE, "utf8")) : {};
 const results = existsSync(report) ? JSON.parse(readFileSync(report, "utf8")) : {};
 const save = () => writeFileSync(report, JSON.stringify(results, null, 2) + "\n");
 
@@ -194,7 +197,8 @@ if (process.argv.includes("--clues")) {
   for (const id of pending) {
     const post = byId[id];
     const { artist, song, spotify_url: spotify } = post.metadata;
-    const liveMention = /en directo|concierto|en vivo|\blive\b/i.test(post.content);
+    // The post's context says whether it presents a live version; without it, any mention in the text.
+    const liveMention = context[id] ? context[id].version === "live" : /en directo|concierto|en vivo|\blive\b/i.test(post.content);
 
     // 1. YouTube link in the article.
     const linked = [...post.content.matchAll(/(?:youtube\.com\/(?:watch\?(?:[^"'\s]*&)?v=|embed\/|v\/)|youtu\.be\/)([\w-]{11})/g)].map((m) => m[1]);

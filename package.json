@@ -15,7 +15,8 @@
     "match-musicbrainz": "node scripts/match-musicbrainz.mjs",
     "review-musicbrainz": "node scripts/review-musicbrainz.mjs",
     "match-musicbrainz-posts": "node scripts/match-musicbrainz-posts.mjs",
-    "musicbrainz-diffs": "node scripts/musicbrainz-diffs.mjs"
+    "musicbrainz-diffs": "node scripts/musicbrainz-diffs.mjs",
+    "audit-players": "node scripts/audit-players.mjs"
   },
   "keywords": [],
   "author": "",
