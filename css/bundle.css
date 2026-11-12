@@ -226,6 +226,14 @@ a:hover {
   margin-bottom: 1.25rem;
 }
 
+/* External links under a facet heading (e.g. the artist's MusicBrainz page) */
+.archive-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: -0.5rem 0 1.25rem;
+}
+
 /* Music map (/mapa/): countries colored by number of posts, from pale to strong yellow */
 .map {
   border: 2px solid var(--ink);
