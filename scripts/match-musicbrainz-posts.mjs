@@ -9,7 +9,7 @@
 // "auto" = same title, a studio version and (if the post names one) the same album; otherwise "review"
 // (decide in `npm run review-musicbrainz`, tab "Canciones"; decisions win on --apply).
 import { readFileSync, writeFileSync } from "node:fs";
-import { get, mentions, norm, phrase, plain, readData, readJson, search, similar, writeData, arid as aridOf, sameMbid, bareTitle } from "../lib/musicbrainz.js";
+import { get, mentions, norm, phrase, plain, readData, readJson, search, similar, writeData, arid as aridOf, sameMbid, bareTitle, filmTitle } from "../lib/musicbrainz.js";
 import { isVersion, KIND } from "../lib/versions.js";
 const VERSION = { test: isVersion };
 
@@ -86,10 +86,12 @@ function rank(c, song, album, text = "", kind = null) {
   if (c.date && text.includes(` ${c.date.slice(0, 4)} `)) points += 1;
   if (song) points += norm(c.title) === norm(song) ? 4 : close(c.title, song) ? 2 : 0;
   if (VERSION.test(c.disambiguation ?? "") && !VERSION.test(song ?? "")) points -= 4;
-  if (c.secondary.some((t) => OTHER_TYPES.has(t)) && !(c.secondary.includes("Soundtrack") && /bso|banda sonora|soundtrack/i.test(album ?? ""))) points -= 3;
+  // A soundtrack isn't "another version" when the post is about that film ("BSO: X" is passed bare as "X").
+  const film = c.secondary.includes("Soundtrack") && (/bso|banda sonora|soundtrack/i.test(album ?? "") || (album && c.album && close(filmTitle(c.album), album)));
+  if (c.secondary.some((t) => OTHER_TYPES.has(t)) && !film) points -= 3;
   if (c.status && c.status !== "Official") points -= 2;
   if (album && norm(c.album) === norm(album)) points += 5;
-  else if (album && c.album && close(c.album, album)) points += 3;
+  else if (album && c.album && (close(c.album, album) || close(filmTitle(c.album), album))) points += 3;
   if (c.isrcs?.length) points += 1;
   if (c.type === "Album") points += 1;
   return points;
@@ -122,7 +124,7 @@ async function recordings(arid, song, album, text, kind) {
 async function releaseGroups(arid, album, text, kind) {
   let found = (await search("release-group", `releasegroup:${phrase(album)} AND arid:${aridOf(arid)}`, 10))?.["release-groups"] ?? [];
   if (!found.length) found = (await search("release-group", `releasegroup:${terms(album)} AND arid:${aridOf(arid)}`, 10))?.["release-groups"] ?? [];
-  return found.filter((g) => close(g.title, album)).map((g) => ({
+  return found.filter((g) => close(g.title, album) || close(filmTitle(g.title), album)).map((g) => ({
     key: `|${g.id}`, recording: null, release_group: g.id, title: null, disambiguation: g.disambiguation ?? null, length: null, isrcs: [],
     date: g["first-release-date"] ?? null, album: g.title, type: g["primary-type"] ?? null, secondary: g["secondary-types"] ?? [], status: null,
   })).map((c) => ({ ...c, points: rank(c, null, album, text, kind) }));
@@ -158,7 +160,7 @@ for (const post of todo) {
   const titleOk = !song || (top?.title && similar(top.title, song) >= 0.85
     && (kind ? matchesKind(top, kind) : !(VERSION.test(top.disambiguation ?? "") && !VERSION.test(song))));
   // Close titles count: the artist is already fixed, so a near match is a typo in the data (reported apart).
-  const albumOk = !metaAlbum || (top?.album && similar(top.album, metaAlbum) >= 0.85);
+  const albumOk = !metaAlbum || (top?.album && Math.max(similar(top.album, metaAlbum), similar(filmTitle(top.album), metaAlbum)) >= 0.85);
   // Podcasts and other posts don't present one recording; covers by someone else need a human.
   const contextOk = !["podcast", "other"].includes(ctx.subject) && !coverConflict;
   candidates = candidates.slice(0, 12).map((c) => ({ ...c, mentioned: !!(c.album && mentions(text, c.album)) }));

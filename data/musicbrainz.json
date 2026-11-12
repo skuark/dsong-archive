@@ -228,6 +228,7 @@
     "Ce Ce Peniston": "16b3f3fc-6c76-4fec-8f0b-9fa9a4ec8e91",
     "Céline Dion": "847e8a0c-cc20-4213-9e16-975515c2a926",
     "Celtas Cortos": "e41b4871-a98d-494a-8cea-b9ba1a3ade1b",
+    "César Benito": "b543fb4f-7f10-4888-ba6c-36d8db20c202",
     "Chambao": "b44eab39-900f-446f-af67-0512a88e54ec",
     "Charles Aznavour": "5f264b87-d5f6-487d-aa3e-ae4c5f0c6fc9",
     "Charles Bradley": "dc6d2ba1-012c-47a7-ba3f-d74e76c30d53",
@@ -242,6 +243,7 @@
     "Chris Cornell": "cbf9738d-8f81-4a92-bc64-ede09341652d",
     "Chris Isaak": "479497d4-e7c2-4e78-972e-56e78fac3995",
     "Christina Aguilera": "b202beb7-99bd-47e7-8b72-195c8d72ebdd",
+    "Christophe Beck": "0df890e1-f4f2-4b21-a413-cd8af1af32d8",
     "Christopher Tyng": "db87dbb6-784c-4969-8a51-c4c016f5476c",
     "Chuck Berry": "592a3b6d-c42b-4567-99c9-ecf63bd66499",
     "Chuck Wicks": "4cbc9839-c43e-42e6-9d84-b44045cf03ba",
@@ -661,6 +663,7 @@
     "Kings of leon": "6ffb8ea9-2370-44d8-b678-e9237bbd347b",
     "KISS": "e1f1e33e-2e4c-4d43-b91b-7064068d3283",
     "Kitty Daisy & Lewis": "b7ca7429-4ffb-4528-8e7e-6d6b8bd20770",
+    "Klaus Badelt": "74ba575f-3420-4d62-8e48-ac473d3c4282",
     "Klaus&Kinski": "195e88e9-2fd2-45fb-abdb-0b224e25f27c",
     "Klaxons": "63011a8d-0117-4f7e-9991-1ef1f337ff70",
     "Kodaline": "74aab3b7-93a5-473c-a729-f975234c58b6",
@@ -855,6 +858,7 @@
     "Muse": "9c9f1380-2516-4fc9-a3e6-f9f61941d090",
     "Mutemath": "6e855495-c063-4052-a26d-959c3f226c87",
     "My Morning Jacket": "ea5883b7-68ce-48b3-b115-61746ea53b8c",
+    "Mychael Danna": "45926800-aa45-4bfc-a1f1-b25416d75215",
     "N.E.R.D": "3fb49f5a-fdc0-4789-9c84-22b38b3f3cb5",
     "N.O.H.A": "298a8237-0975-438d-9f9b-008aaa2bcc63",
     "Nach": "ff734df1-6795-43ec-84a7-ae04b356dad1",
@@ -1282,6 +1286,7 @@
     "Them Crooked Vultures": "4bc09c51-5d42-4c93-9ba6-8cc21a0edb8d",
     "They Might Be Giants": "183d6ef6-e161-47ff-9085-063c8b897e97",
     "Thirteen senses": "c860af48-e9c1-49cd-b441-8d18e9f522f2",
+    "Thomas Newman": "348f3a5f-5112-4d72-b33b-11c60b4f9af2",
     "Tierra Santa": "23121875-8f68-49c5-9988-dcb7f8e7a680",
     "Tijuana No!": "4bbdec5c-bc95-474a-be95-76377d9bf42b",
     "Tim Buckley": "8546949d-f46c-45ab-8391-85b26dda6b65",
@@ -6263,6 +6268,17 @@
       ],
       "first_release": "2011-11-02"
     },
+    "2012-01-27-mad-world-de-gary-jules-michael-andrews": {
+      "recording": "8b6a8b89-4d4c-4164-8433-75b58bd48799",
+      "release_group": "58c13ff8-bf93-3b9a-bf6d-913ae6672197",
+      "isrcs": [
+        "USER80300317",
+        "USHM90699796",
+        "USDUD0300035",
+        "USER80100317"
+      ],
+      "first_release": "2001"
+    },
     "2012-01-28-blue-jeans-de-lana-del-rey": {
       "recording": "815d7902-6acb-4b35-93f0-9e1a9bc31c49",
       "release_group": "4b16a1bc-8644-48ae-9b3e-8ae36aa30cfc",
@@ -7207,6 +7223,10 @@
       ],
       "first_release": "1985-10-25"
     },
+    "2012-09-16-bso-wall-e-de-thomas-newman": {
+      "release_group": "5e798395-6221-4ecb-8ebf-8f01704539e0",
+      "first_release": "2008-06-24"
+    },
     "2012-09-17-something-to-die-for-de-the-sounds": {
       "recording": "4f906ed1-5d91-4ca6-9524-e7efcdb08897",
       "release_group": "cbee76d9-1c51-4cbf-9bfd-df5ee7d04065",
@@ -7285,6 +7305,10 @@
       ],
       "first_release": "2009-09-15"
     },
+    "2012-09-30-bso-titanic": {
+      "release_group": "cfc7581a-385e-3933-93b7-432f16873cf3",
+      "first_release": "1997-11-18"
+    },
     "2012-10-01-nadine-de-big-harp": {
       "recording": "08b64ae4-4ad0-4d30-9fab-3c1df9ec50bd",
       "release_group": "499fb812-80c7-46fa-a2b5-2cebb5787fdb",
@@ -7306,6 +7330,10 @@
       ],
       "first_release": "2004"
     },
+    "2012-10-07-bso-origen-inception": {
+      "release_group": "cba0c394-1aa2-40e0-8613-a9ead5624c21",
+      "first_release": "2010-07-09"
+    },
     "2012-10-08-gentleman-who-fell-de-milla-jovovich": {
       "recording": "3749985c-f2c8-437c-b30f-fdd6c1d53f40",
       "release_group": "89f5b5c7-69f9-39e1-8913-92356a338dfd",
@@ -7326,6 +7354,10 @@
       "recording": "97cc1c38-82cf-4bd7-83ff-ae599bb05177",
       "release_group": "cbffb669-c390-3a4d-b46f-1be8ea934b03",
       "first_release": "2002-08-17"
+    },
+    "2012-10-14-bso-brave-indomable": {
+      "release_group": "e83fc9cc-a6e0-43d7-85d7-cf080daa2ef9",
+      "first_release": "2012-06-19"
     },
     "2012-10-16-never-ending-story-de-limahl": {
       "recording": "360af6e3-6c05-4e96-8623-8e2650780341",
@@ -7353,6 +7385,10 @@
       "recording": "ffc8366c-9f4f-4a3f-b4c2-c0ff787fb730",
       "release_group": "76c767ed-d4fc-318e-a9e4-16e7f77297f7",
       "first_release": "2002-09-30"
+    },
+    "2012-10-21-bso-blade-runner": {
+      "release_group": "f393097a-b567-3253-9bdf-df353ee3e9e1",
+      "first_release": "1993-12"
     },
     "2012-10-22-what-im-looking-for-de-brendan-benson": {
       "recording": "03ff9453-3acd-406c-ba21-07c904111a31",
@@ -7860,6 +7896,10 @@
       ],
       "first_release": "2008-03-31"
     },
+    "2013-02-10-bso-avatar": {
+      "release_group": "b6c636ae-aeb5-45b0-a03d-ad64c5cef859",
+      "first_release": "2009-12-11"
+    },
     "2013-02-12-da-da-da-i-dont-love-you-you-dont-love-me-aha-aha-aha-de-trio": {
       "recording": "1900714a-4efc-4ef6-b9ca-0cefe9e18a6d",
       "release_group": "51eb82e9-6cc6-4373-a016-b675764af8f6",
@@ -8157,6 +8197,10 @@
       "release_group": "6503c37c-a0c8-4a05-be9d-baf89f69039d",
       "first_release": "2011-11-07"
     },
+    "2013-04-07-bso-los-mundos-de-coraline-de-bruno-coulais": {
+      "release_group": "ae45bd9c-a304-3271-9245-6b8858485f62",
+      "first_release": "2009-02-03"
+    },
     "2013-04-08-reconciliation-de-pain-of-salvation": {
       "recording": "e7894b30-395a-43a4-a914-0305d217c363",
       "release_group": "cee19788-5d82-3465-94bb-18947bba5633",
@@ -8244,6 +8288,10 @@
       ],
       "first_release": "1992-09-29"
     },
+    "2013-04-21-bso-gladiator": {
+      "release_group": "e4a3c015-3cac-31cb-8602-88d11edf5ddf",
+      "first_release": "2000-04-04"
+    },
     "2013-04-24-el-jinete-de-bunbury": {
       "recording": "f656fcd2-6e99-444a-be49-275808f59e1d",
       "release_group": "1efdd138-2f09-44aa-b50c-68c070da9054",
@@ -8324,6 +8372,10 @@
       "release_group": "f55ae151-8b2a-4d92-b29d-5461ab790d54",
       "first_release": "2012-03-18"
     },
+    "2013-05-05-bso-la-pantera-rosa": {
+      "release_group": "046d718c-adde-3b40-b87d-8e7bf58d8b16",
+      "first_release": "1963"
+    },
     "2013-05-06-stop-the-clocks-de-l-a": {
       "recording": "2c974cbf-2a71-48b0-a9ee-6bc0b72a4c06",
       "release_group": "a8585b51-c228-4ab6-903d-fda461fc7633",
@@ -8354,6 +8406,10 @@
         "USUM71201074"
       ],
       "first_release": "2012-09-04"
+    },
+    "2013-05-12-bso-mulan": {
+      "release_group": "16226776-415f-4ac8-8e8e-742ef3c52ecb",
+      "first_release": "1998"
     },
     "2013-05-13-the-time-is-now-de-moloko": {
       "recording": "b7964cfe-3d69-4878-a002-e61e4ea96b29",
@@ -8417,6 +8473,10 @@
         "US5940903680"
       ],
       "first_release": "2013-02-26"
+    },
+    "2013-05-26-bso-small-world": {
+      "release_group": "003a997a-f879-41f6-af34-b3e81e70a1ba",
+      "first_release": "2010-12-16"
     },
     "2013-05-28-mmmbop-de-hanson": {
       "recording": "3ac36d65-0389-4391-8454-e47e86bfdd53",
@@ -8572,6 +8632,10 @@
       ],
       "first_release": "1997"
     },
+    "2013-06-30-bso-man-of-steel": {
+      "release_group": "74f154e4-a8a5-4f12-8767-e8845ff65560",
+      "first_release": "2013-06-10"
+    },
     "2013-07-01-same-love-de-macklemore-ryan-lewis": {
       "recording": "0b96c431-f91e-48b2-a192-75bbbb2b76f3",
       "release_group": "22315cdd-4ed9-427c-9492-560cf4afed58",
@@ -8648,6 +8712,10 @@
       ],
       "first_release": "1971-03"
     },
+    "2013-07-14-bso-senales-del-futuro": {
+      "release_group": "2c6d64ee-0faa-48b3-b5e2-71a091e24dd9",
+      "first_release": "2009-03-24"
+    },
     "2013-07-15-fantastic-shine-de-love-of-lesbian": {
       "recording": "d077ebec-977b-44e4-b68a-41175d1ddb33",
       "release_group": "4d2a39a9-88f3-4777-a9ae-f454da3f038f",
@@ -8681,6 +8749,10 @@
       "recording": "71849430-5a95-4ab9-a6ee-00bd674a1947",
       "release_group": "864bffa8-3e43-4211-87b4-ff4413ed7494",
       "first_release": "2013-04-02"
+    },
+    "2013-07-21-bso-cadena-perpetua": {
+      "release_group": "18ab56e0-7068-341e-ba17-7fe8eea1a829",
+      "first_release": "1994-09-20"
     },
     "2013-07-22-rich-woman-de-robert-plant-alison-krauss": {
       "recording": "12896d5b-2e81-4543-b599-140368f311af",
@@ -8752,6 +8824,10 @@
         "ES5120900401"
       ],
       "first_release": "2009-10-31"
+    },
+    "2013-09-08-bso-pesadilla-antes-de-navidad": {
+      "release_group": "16879ae9-c718-328e-b2e4-cef03537eb4b",
+      "first_release": "1993-10-12"
     },
     "2013-09-09-hospital-beds-de-cold-war-kids": {
       "recording": "986b17ac-ea5e-47c2-9e44-b3258e20d99d",
@@ -8937,6 +9013,10 @@
       ],
       "first_release": "1969-07-05"
     },
+    "2013-10-13-bso-forrest-gump": {
+      "release_group": "ff29c859-9503-3a01-86ab-1cfff9233cc0",
+      "first_release": "1994-08-02"
+    },
     "2013-10-14-strict-machine-de-goldfrapp": {
       "recording": "72428053-d408-4314-a41d-7871942f51d5",
       "release_group": "69bfcf64-b212-357b-8a06-df99b9d56158",
@@ -9005,6 +9085,10 @@
         "GBAAP0100409"
       ],
       "first_release": "2001-06-18"
+    },
+    "2013-10-27-bso-lo-imposible": {
+      "release_group": "0b55f926-ca75-4baf-bfc9-d68cc17b7f7d",
+      "first_release": "2012-10-09"
     },
     "2013-10-28-i-cant-wait-de-hepcat": {
       "recording": "a91700d0-7f7f-45da-9f08-6431d1101fb4",
@@ -9209,6 +9293,10 @@
       ],
       "first_release": "2012-03-27"
     },
+    "2013-12-01-bso-los-juegos-del-hambre-en-llamas": {
+      "release_group": "263f11cf-5ae7-4fad-9d35-f9c4c123ccfa",
+      "first_release": "2013-01-01"
+    },
     "2013-12-02-rearrange-de-miles-kane": {
       "recording": "8eddc9e9-ff12-40e4-a776-324a61344b33",
       "release_group": "57538d5e-8e2a-486e-9f3a-210e1b2a9c19",
@@ -9303,6 +9391,10 @@
       ],
       "first_release": "2011-01-01"
     },
+    "2013-12-15-bso-la-delgada-linea-roja-the-thin-red-line": {
+      "release_group": "3d478f36-7a5e-33b5-91ea-2847c6609808",
+      "first_release": "1999-01-11"
+    },
     "2013-12-16-twist-and-shout-de-los-beatles": {
       "recording": "fecad904-03b4-4452-89b4-2a068ec87329",
       "release_group": "de208292-8db5-3aed-a14a-b37a84d8c521",
@@ -9338,6 +9430,10 @@
       "recording": "91386cff-ecbe-48d2-bfce-5710e2e5eda2",
       "release_group": "d7963d46-2695-4e42-b594-b66e9bc0faba",
       "first_release": "1966"
+    },
+    "2013-12-22-bso-frozen-el-reino-del-hielo": {
+      "release_group": "b1b7e9ba-bbac-4bdd-90fb-9517f840b247",
+      "first_release": "2013-11-25"
     },
     "2013-12-23-i-drove-all-night": {
       "recording": "df1d38c9-4206-4130-91a0-7843f5c5f059",
@@ -9413,6 +9509,10 @@
       ],
       "first_release": "2009-10-31"
     },
+    "2014-01-05-bso-american-beauty": {
+      "release_group": "004357e6-d631-37e7-85d7-4d5b0671c6f5",
+      "first_release": "2000-01-11"
+    },
     "2014-01-06-alli-donde-soliamos-gritar-de-love-of-lesbian": {
       "recording": "c4056057-5f81-4490-a392-0ca71fbb32f3",
       "release_group": "3d96d3c6-2e72-3b66-8aab-1567cbb2f379",
@@ -9473,6 +9573,10 @@
         "JPSR00603361"
       ],
       "first_release": "2007-04-04"
+    },
+    "2014-01-19-bso-la-vida-de-pi": {
+      "release_group": "cffbbd41-005f-4da7-86f3-674fb861eef4",
+      "first_release": "2012-11-16"
     },
     "2014-01-20-metralleta-joe-de-angel-stanich": {
       "recording": "f87be4cb-11cc-4e55-ad1d-fcdfa8519c5e",
@@ -9575,6 +9679,10 @@
         "ES5151302566"
       ],
       "first_release": "2014-02-11"
+    },
+    "2014-02-09-bso-el-rey-leon": {
+      "release_group": "2221ed36-10e5-31a4-bd39-782a65f4fc99",
+      "first_release": "1994-05-31"
     },
     "2014-02-11-mix-de-ti-y-de-mi-de-fon-roman": {
       "recording": "0c8fe773-6de1-4106-9612-c7fcf1feecec",
@@ -9690,6 +9798,10 @@
         "GBAAA1200795"
       ],
       "first_release": "2012-04-27"
+    },
+    "2014-03-02-bso-el-tiempo-entre-costuras": {
+      "release_group": "bb5b05dc-5514-4df7-8425-7f553678969b",
+      "first_release": "2013-12-10"
     },
     "2014-03-03-on-the-sofa-de-sidonie": {
       "recording": "3e4b1c48-8e2b-4b3b-8298-010f8d2f76d3",
