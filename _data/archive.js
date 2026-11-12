@@ -8,7 +8,7 @@ const musicbrainz = () => {
 
 // Links to the artist's MusicBrainz page(s): a collaboration ([{ name, mbid }]) links each of its artists.
 const musicbrainzLinks = (v) => !v ? null : Array.isArray(v)
-  ? v.map(({ name, mbid }) => ({ label: `MusicBrainz: ${name}`, url: `https://musicbrainz.org/artist/${mbid}` }))
+  ? v.filter(({ mbid }) => mbid).map(({ name, mbid }) => ({ label: `MusicBrainz: ${name}`, url: `https://musicbrainz.org/artist/${mbid}` }))   // parts not in MusicBrainz: no link
   : [{ label: "MusicBrainz", url: `https://musicbrainz.org/artist/${v}` }];
 
 // Byte size of each podcast mp3 (scripts/podcast-sizes.mjs), for the RSS <enclosure>
