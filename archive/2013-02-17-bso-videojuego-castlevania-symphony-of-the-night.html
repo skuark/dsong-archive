@@ -14,11 +14,12 @@
   <meta property="og:description" content="La saga Castlevania, al igual que ocurre con &quot;Starcraft&quot; , es de esas que apenas necesitan presentación. Desde aquellas primeras aventuras en la Nintendo de…">
   <meta property="og:url" content="https://dsong.es/archive/2013-02-17-bso-videojuego-castlevania-symphony-of-the-night.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,66 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2013-02-16-i-dont-know-what-i-can-save-you-from-de-kings-of-convenience.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">I Don&#39;t Know What i Can Save You From, de Kings of Convenience</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2013-02-18-while-you-wait-for-the-others-de-grizzly-bear.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">While you wait for the others, de Grizzly Bear</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2013">2013</a><span>Nº 1246</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a></span>
-  <h2 class="post-view__title">BSO Videojuego: Castlevania Symphony of the Night</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a> · Instrumental</span>
+  <h1 class="display post-view__title">BSO Videojuego: Castlevania Symphony of the Night</h1>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/ab5589a036c1e14dc96a2ebd4089b588?s=20" alt="" />
-            <span class="post-view__editor-name">Ome Gak</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2013-02-17T08:00:57+01:00">17 de Febrero de 2013</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Ome Gak</span>
+    </span>
+    <time class="post-view__date" datetime="2013-02-17T08:00:57+01:00">domingo, 17 de febrero de 2013</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+  </header>
+
+  <div class="post-view__content">
+    <p>La saga Castlevania, al igual que ocurre con <a title="BSO Videojuego: Starcraft" href="https://dsong.es/archive/2013-01-13-bso-videojuego-starcraft.html"><em><strong>&quot;Starcraft&quot;</strong></em></a>, es de esas que apenas necesitan presentación. Desde aquellas primeras aventuras en la Nintendo de 8-bits, esta versión a la japonesa de los vampiros ha sabido defender su nicho a capa y látigo en el apretadísimo mercado de los chupasangre.</p>
+<p>De entre todos los títulos, hoy vamos a hablar del que es por muchos considerado la obra culmen, <em>&quot;<strong>Symphony of the Night&quot;</strong></em>. En ella manejamos al hijo de Drácula, Alucard, fruto de su unión con una humana, y la historia transcurre a finales del siglo 18, cinco años después de que Richter Belmont derrotase al señor de los vampiros. Alucard se dispone a exterminar los últimos siervos que quedaron en el castillo, pero esta simple tarea termina tornándose en toda una odisea.</p>
+<p>Con una cuidada estética 2D que ya empezaba escasear gracias al boom de los gráficos 3D, Symphony of the Night es un paseo inolvidable por montones de escenarios góticos y renacentistas en un castillo gigantesco lleno de detalles, recovecos y habitaciones secretas. La torre del reloj, la biblioteca, la capilla, el coliseo, la gruta en el subterráneo... Y es que el nombre del juego no es únicamente un título, sino toda una declaración de intenciones, una sinfonía en toda regla que baña con sus melodías los emblemáticos rincones del castillo.</p>
+<p><strong>Michiru Yamane</strong>, compositora de la banda sonora, consiguió elevar la calidad de Symphony of the Night a la altura de obra maestra con un álbum muy variado, que pese a lo que cabría esperar, melodías lúgubres y con un juego de instrumentos monotemático, sorprende mezclando armoniosamente órganos con guitarras eléctricas y coros, o atreviéndose con temas muy movidos y ritmos bastante españoles (<em>&quot;Wandering Ghosts&quot;)</em>.</p>
+<p>Si me lo permitís, dejadme que os haga una visita guiada por el castillo.  Para sentirse bienvenido a la morada del vampiro, nada mejor que comenzar con <em>&quot;Dracula's Castle&quot;</em>, <em>&quot;Marble Gallery&quot;</em> o <em>&quot;Final Toccata&quot;</em>. Mención especial merecen <em>&quot;Wood Carving Partita&quot;</em> o <em>&quot;Dance of Pales&quot;</em>, que nos recuerdan el exquisito gusto del conde. Una vez que la ajetreada vida de palacio nos abrume, una visita a <em>&quot;Crystal Teardrops&quot;</em> y <em>&quot;Lost Painting&quot;</em> seguro que alivia el cansancio. Y por último, antes de salir,<em> </em>no olvideis pasar por<em> &quot;Prologue&quot;</em> o <em>&quot;The Tragic Prince&quot;,</em> donde se lucen las guitarras eléctricas en fechas señaladas.</p>
+<p>Sólo me queda animaros a que no os quedéis aquí y que experimentéis por vosotros esta aventura. Tenéis disponibles reediciones tanto para PS3 como para Xbox 360 en descarga digital, así que la excusa de desempolvar vuestra Playstation 1 no os va a servir esta vez.</p>
+
+  </div><aside class="post-view__side">
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/michiru-yamane.html">Michiru Yamane</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/17dbd4b4-6e92-4027-a64f-659258f4e775" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -99,7 +103,7 @@
       <dt>Género</dt>
       <dd>Instrumental</dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a></dd>
@@ -109,20 +113,8 @@
       <dd>17 de febrero de 2013</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>La saga Castlevania, al igual que ocurre con <a title="BSO Videojuego: Starcraft" href="https://dsong.es/archive/2013-01-13-bso-videojuego-starcraft.html"><em><strong>&quot;Starcraft&quot;</strong></em></a>, es de esas que apenas necesitan presentación. Desde aquellas primeras aventuras en la Nintendo de 8-bits, esta versión a la japonesa de los vampiros ha sabido defender su nicho a capa y látigo en el apretadísimo mercado de los chupasangre.</p>
-<p>De entre todos los títulos, hoy vamos a hablar del que es por muchos considerado la obra culmen, <em>&quot;<strong>Symphony of the Night&quot;</strong></em>. En ella manejamos al hijo de Drácula, Alucard, fruto de su unión con una humana, y la historia transcurre a finales del siglo 18, cinco años después de que Richter Belmont derrotase al señor de los vampiros. Alucard se dispone a exterminar los últimos siervos que quedaron en el castillo, pero esta simple tarea termina tornándose en toda una odisea.</p>
-<p>Con una cuidada estética 2D que ya empezaba escasear gracias al boom de los gráficos 3D, Symphony of the Night es un paseo inolvidable por montones de escenarios góticos y renacentistas en un castillo gigantesco lleno de detalles, recovecos y habitaciones secretas. La torre del reloj, la biblioteca, la capilla, el coliseo, la gruta en el subterráneo... Y es que el nombre del juego no es únicamente un título, sino toda una declaración de intenciones, una sinfonía en toda regla que baña con sus melodías los emblemáticos rincones del castillo.</p>
-<p><strong>Michiru Yamane</strong>, compositora de la banda sonora, consiguió elevar la calidad de Symphony of the Night a la altura de obra maestra con un álbum muy variado, que pese a lo que cabría esperar, melodías lúgubres y con un juego de instrumentos monotemático, sorprende mezclando armoniosamente órganos con guitarras eléctricas y coros, o atreviéndose con temas muy movidos y ritmos bastante españoles (<em>&quot;Wandering Ghosts&quot;)</em>.</p>
-<p>Si me lo permitís, dejadme que os haga una visita guiada por el castillo.  Para sentirse bienvenido a la morada del vampiro, nada mejor que comenzar con <em>&quot;Dracula's Castle&quot;</em>, <em>&quot;Marble Gallery&quot;</em> o <em>&quot;Final Toccata&quot;</em>. Mención especial merecen <em>&quot;Wood Carving Partita&quot;</em> o <em>&quot;Dance of Pales&quot;</em>, que nos recuerdan el exquisito gusto del conde. Una vez que la ajetreada vida de palacio nos abrume, una visita a <em>&quot;Crystal Teardrops&quot;</em> y <em>&quot;Lost Painting&quot;</em> seguro que alivia el cansancio. Y por último, antes de salir,<em> </em>no olvideis pasar por<em> &quot;Prologue&quot;</em> o <em>&quot;The Tragic Prince&quot;,</em> donde se lucen las guitarras eléctricas en fechas señaladas.</p>
-<p>Sólo me queda animaros a que no os quedéis aquí y que experimentéis por vosotros esta aventura. Tenéis disponibles reediciones tanto para PS3 como para Xbox 360 en descarga digital, así que la excusa de desempolvar vuestra Playstation 1 no os va a servir esta vez.</p>
-
-  </div>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
+  </section>
+  </aside>
 
 
   
@@ -133,22 +125,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2013-02-16-i-dont-know-what-i-can-save-you-from-de-kings-of-convenience.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">I Don&#39;t Know What i Can Save You From, de Kings of Convenience</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2013-02-18-while-you-wait-for-the-others-de-grizzly-bear.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">While you wait for the others, de Grizzly Bear</span>
+    <span class="post-nav__editor">Silvia</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

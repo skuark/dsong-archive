@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/a-ha.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,96 +28,98 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista A-ha</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/7364dea6-ca9a-48e3-be01-b44ad0d19897" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/A-haVistalegre19.JPG/330px-A-haVistalegre19.JPG" width="320" height="212" alt="A-ha" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:A-haVistalegre19.JPG" rel="noopener">Jamesbond raul · CC BY-SA 4.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>A-ha</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/A-haVistalegre19.JPG/330px-A-haVistalegre19.JPG" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/A-haVistalegre19.JPG/330px-A-haVistalegre19.JPG" width="320" height="212" alt="A-ha" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:A-haVistalegre19.JPG" rel="noopener" target="_blank">Jamesbond raul · CC BY-SA 4.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>A-ha (estilizado como a-ha) es una banda noruega de pop rock, formada en Oslo el 14 de septiembre de 1982. El grupo está compuesto por Morten Harket como vocalista, Magne Furuholmen en los teclados y Paul Waaktaar-Savoy en la guitarra. El trío saltó a la fama mundial gracias a su álbum debut, lanzado en 1985, que tuvo un gran éxito de ventas. Desde entonces, se han posicionado como una de las bandas más populares de este género de todos los tiempos.​​​​ Han vendido alrededor de 100 millones de álbumes y singles en todo el mundo.​​​​​</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/A-ha" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/noruega.html">Noruega</a></p>
+    <h1 class="page-title artist-hero__name">A-ha</h1>
+    <p class="artist-hero__bio">A-ha (estilizado como a-ha) es una banda noruega de pop rock, formada en Oslo el 14 de septiembre de 1982. El grupo está compuesto por Morten Harket como vocalista, Magne Furuholmen en los teclados y Paul Waaktaar-Savoy en la guitarra. El trío saltó a la fama mundial gracias a su álbum debut, lanzado en 1985, que tuvo un gran éxito de ventas. Desde entonces, se han posicionado como una de las bandas más populares de este género de todos los tiempos.​​​​ Han vendido alrededor de 100 millones de álbumes y singles en todo el mundo.​​​​​</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/A-ha" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/7364dea6-ca9a-48e3-be01-b44ad0d19897" rel="noopener">MusicBrainz ↗</a><a href="http://a-ha.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">3 publicaciones, 2010–2011</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2010-01-05-take-on-me-de-a-ha.html">
+        <span class="kicker">5 ene 2010 · Hunting High and Low</span>
+        <span class="display post-card__title">Take On Me</span>
+        <span class="post-card__excerpt">«Paquito el Chocolatero , Follow the leader o La Bomba son solo tres de las típicas canciones con las que nos bombardean en bodas, bautizos…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2010-01-14-summer-moved-on-de-a-ha.html">
+        <span class="kicker">14 ene 2010 · minor earth | major sky</span>
+        <span class="display post-card__title">Summer Moved On</span>
+        <span class="post-card__excerpt">«No es que pretenda machacaros con la vida y obra de a-ha, es más, para ser sincero no es un grupo de los que podría mencionar entre mis…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2011-06-15-take-on-me-de-a-ha-2.html">
+        <span class="kicker">15 jun 2011 · Hunting High and Low</span>
+        <span class="display post-card__title">Take On Me</span>
+        <span class="post-card__excerpt">«Hay canciones que por mucho se intentase disimular, siempre suenan claramente a otra época. Esto ocurre con el tema de hoy, &quot;Take on me&quot;…»</span>
+        <span class="post-card__editor">Jal</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=A-ha">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/a-ha-hunting-high-and-low.html">Hunting High and Low · 2</a>
+    <a class="chip" href="/archive/albums/a-ha-minor-earth-major-sky.html">minor earth | major sky</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">3 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-01-05 09:00:51 +0100">05/01/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-01-05-take-on-me-de-a-ha.html">Take On Me, de a-ha</a></td>
-        <td class="archive-table__cell--song">Take On Me</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/a-ha.html">A-ha</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/a-ha-hunting-high-and-low.html">Hunting High and Low</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1985.html">1985</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-01-14 09:00:13 +0100">14/01/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-01-14-summer-moved-on-de-a-ha.html">Summer Moved On, de a-ha</a></td>
-        <td class="archive-table__cell--song">Summer Moved On</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/a-ha.html">A-ha</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/a-ha-minor-earth-major-sky.html">minor earth | major sky</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2000.html">2000</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2011-06-15 09:00:59 +0200">15/06/2011</td>
-        <td class="archive-table__cell--title"><a href="/archive/2011-06-15-take-on-me-de-a-ha-2.html">Take on me, de A-ha</a></td>
-        <td class="archive-table__cell--song">Take On Me</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/a-ha.html">A-ha</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/a-ha-hunting-high-and-low.html">Hunting High and Low</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1985.html">1985</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jal.html">Jal</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

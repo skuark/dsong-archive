@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/mapa/">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,24 +28,43 @@
 
   <div class="app page-map">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/" aria-current="page">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/" aria-current="page">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
+<div class="page-head map-head">
+  <div>
+    <p class="kicker">Mapa musical</p>
+    <h1 class="page-title">De dónde venía la música</h1>
+  </div>
+  <p class="map-intro">Cada país, coloreado por las recomendaciones de artistas de allí. Pulsa uno para ver sus artículos.</p>
+</div>
 
-<h2 class="archive-title">Mapa musical</h2>
-<p class="map-intro">De dónde son los artistas del archivo. Elige un país para ver sus canciones.</p>
-
+<div class="map-layout">
 <figure class="map">
   <svg class="map__svg" viewBox="0 0 960 418" role="img" aria-labelledby="map-title">
     <title id="map-title">Mapa mundial con el número de publicaciones por país del artista</title>
@@ -229,7 +249,7 @@
     <a href="/archive/countries/gibraltar.html"><circle class="map__country map__dot map-level-2" cx="466.5" cy="131.6" r="4"><title>Gibraltar: 5 publicaciones</title></circle></a>
   </svg>
   <figcaption class="map__legend">
-    <span>Publicaciones:</span>
+    <span class="kicker">Artículos</span>
     <span class="map__legend-item"><span class="map__swatch map-level-1"></span>1–2</span>
     <span class="map__legend-item"><span class="map__swatch map-level-2"></span>3–9</span>
     <span class="map__legend-item"><span class="map__swatch map-level-3"></span>10–29</span>
@@ -238,68 +258,129 @@
   </figcaption>
 </figure>
 
-<ol class="map-countries">
-  <li><a href="/archive/countries/estados-unidos.html">Estados Unidos</a> <span class="map-countries__count">622</span></li>
-  <li><a href="/archive/countries/espana.html">España</a> <span class="map-countries__count">441</span></li>
-  <li><a href="/archive/countries/reino-unido.html">Reino Unido</a> <span class="map-countries__count">348</span></li>
-  <li><a href="/archive/countries/francia.html">Francia</a> <span class="map-countries__count">52</span></li>
-  <li><a href="/archive/countries/suecia.html">Suecia</a> <span class="map-countries__count">51</span></li>
-  <li><a href="/archive/countries/alemania.html">Alemania</a> <span class="map-countries__count">43</span></li>
-  <li><a href="/archive/countries/canada.html">Canadá</a> <span class="map-countries__count">42</span></li>
-  <li><a href="/archive/countries/australia.html">Australia</a> <span class="map-countries__count">35</span></li>
-  <li><a href="/archive/countries/irlanda.html">Irlanda</a> <span class="map-countries__count">26</span></li>
-  <li><a href="/archive/countries/italia.html">Italia</a> <span class="map-countries__count">20</span></li>
-  <li><a href="/archive/countries/noruega.html">Noruega</a> <span class="map-countries__count">15</span></li>
-  <li><a href="/archive/countries/argentina.html">Argentina</a> <span class="map-countries__count">14</span></li>
-  <li><a href="/archive/countries/islandia.html">Islandia</a> <span class="map-countries__count">10</span></li>
-  <li><a href="/archive/countries/paises-bajos.html">Países Bajos</a> <span class="map-countries__count">9</span></li>
-  <li><a href="/archive/countries/japon.html">Japón</a> <span class="map-countries__count">9</span></li>
-  <li><a href="/archive/countries/finlandia.html">Finlandia</a> <span class="map-countries__count">8</span></li>
-  <li><a href="/archive/countries/grecia.html">Grecia</a> <span class="map-countries__count">6</span></li>
-  <li><a href="/archive/countries/dinamarca.html">Dinamarca</a> <span class="map-countries__count">6</span></li>
-  <li><a href="/archive/countries/belgica.html">Bélgica</a> <span class="map-countries__count">6</span></li>
-  <li><a href="/archive/countries/cuba.html">Cuba</a> <span class="map-countries__count">6</span></li>
-  <li><a href="/archive/countries/portugal.html">Portugal</a> <span class="map-countries__count">6</span></li>
-  <li><a href="/archive/countries/mexico.html">México</a> <span class="map-countries__count">6</span></li>
-  <li><a href="/archive/countries/gibraltar.html">Gibraltar</a> <span class="map-countries__count">5</span></li>
-  <li><a href="/archive/countries/jamaica.html">Jamaica</a> <span class="map-countries__count">5</span></li>
-  <li><a href="/archive/countries/brasil.html">Brasil</a> <span class="map-countries__count">5</span></li>
-  <li><a href="/archive/countries/puerto-rico.html">Puerto Rico</a> <span class="map-countries__count">5</span></li>
-  <li><a href="/archive/countries/polonia.html">Polonia</a> <span class="map-countries__count">5</span></li>
-  <li><a href="/archive/countries/austria.html">Austria</a> <span class="map-countries__count">4</span></li>
-  <li><a href="/archive/countries/colombia.html">Colombia</a> <span class="map-countries__count">4</span></li>
-  <li><a href="/archive/countries/uruguay.html">Uruguay</a> <span class="map-countries__count">3</span></li>
-  <li><a href="/archive/countries/china.html">China</a> <span class="map-countries__count">3</span></li>
-  <li><a href="/archive/countries/sudafrica.html">Sudáfrica</a> <span class="map-countries__count">3</span></li>
-  <li><a href="/archive/countries/corea-del-sur.html">Corea del Sur</a> <span class="map-countries__count">3</span></li>
-  <li><a href="/archive/countries/rusia.html">Rusia</a> <span class="map-countries__count">3</span></li>
-  <li><a href="/archive/countries/republica-dominicana.html">República Dominicana</a> <span class="map-countries__count">3</span></li>
-  <li><a href="/archive/countries/israel.html">Israel</a> <span class="map-countries__count">3</span></li>
-  <li><a href="/archive/countries/mali.html">Malí</a> <span class="map-countries__count">3</span></li>
-  <li><a href="/archive/countries/turquia.html">Turquía</a> <span class="map-countries__count">2</span></li>
-  <li><a href="/archive/countries/chile.html">Chile</a> <span class="map-countries__count">2</span></li>
-  <li><a href="/archive/countries/libano.html">Líbano</a> <span class="map-countries__count">2</span></li>
-  <li><a href="/archive/countries/senegal.html">Senegal</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/suiza.html">Suiza</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/bosnia-y-herzegovina.html">Bosnia y Herzegovina</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/islas-feroe.html">Islas Feroe</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/taiwan.html">Taiwán</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/ucrania.html">Ucrania</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/india.html">India</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/marruecos.html">Marruecos</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/tunez.html">Túnez</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/indonesia.html">Indonesia</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/nueva-zelanda.html">Nueva Zelanda</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/cabo-verde.html">Cabo Verde</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/paraguay.html">Paraguay</a> <span class="map-countries__count">1</span></li>
-  <li><a href="/archive/countries/rumania.html">Rumanía</a> <span class="map-countries__count">1</span></li>
-</ol>
+<aside class="map-top" aria-labelledby="map-top-title">
+  <div class="map-top__head">
+    <h2 class="display map-top__title" id="map-top-title">Los que más</h2>
+    <span class="kicker">artículos</span>
+  </div>
+  <ol class="bars map-top__bars">
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/estados-unidos.html">Estados Unidos</a>
+      <span class="bars__track"><span class="bars__fill bars__fill--top" style="width: 100%"></span></span>
+      <span class="bars__value">622</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/espana.html">España</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 70.9%"></span></span>
+      <span class="bars__value">441</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/reino-unido.html">Reino Unido</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 55.9%"></span></span>
+      <span class="bars__value">348</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/francia.html">Francia</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 8.4%"></span></span>
+      <span class="bars__value">52</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/suecia.html">Suecia</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 8.2%"></span></span>
+      <span class="bars__value">51</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/alemania.html">Alemania</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 6.9%"></span></span>
+      <span class="bars__value">43</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/canada.html">Canadá</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 6.8%"></span></span>
+      <span class="bars__value">42</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/australia.html">Australia</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 5.6%"></span></span>
+      <span class="bars__value">35</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/irlanda.html">Irlanda</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 4.2%"></span></span>
+      <span class="bars__value">26</span>
+    </li>
+    <li class="bars__row">
+      <a class="bars__label" href="/archive/countries/italia.html">Italia</a>
+      <span class="bars__track"><span class="bars__fill" style="width: 3.2%"></span></span>
+      <span class="bars__value">20</span>
+    </li>
+  </ol>
+  <details class="bars-more">
+    <summary>Todos los países · 54</summary>
+    <ol class="map-countries">
+      <li><a href="/archive/countries/estados-unidos.html">Estados Unidos</a> <span class="map-countries__count">622</span></li>
+      <li><a href="/archive/countries/espana.html">España</a> <span class="map-countries__count">441</span></li>
+      <li><a href="/archive/countries/reino-unido.html">Reino Unido</a> <span class="map-countries__count">348</span></li>
+      <li><a href="/archive/countries/francia.html">Francia</a> <span class="map-countries__count">52</span></li>
+      <li><a href="/archive/countries/suecia.html">Suecia</a> <span class="map-countries__count">51</span></li>
+      <li><a href="/archive/countries/alemania.html">Alemania</a> <span class="map-countries__count">43</span></li>
+      <li><a href="/archive/countries/canada.html">Canadá</a> <span class="map-countries__count">42</span></li>
+      <li><a href="/archive/countries/australia.html">Australia</a> <span class="map-countries__count">35</span></li>
+      <li><a href="/archive/countries/irlanda.html">Irlanda</a> <span class="map-countries__count">26</span></li>
+      <li><a href="/archive/countries/italia.html">Italia</a> <span class="map-countries__count">20</span></li>
+      <li><a href="/archive/countries/noruega.html">Noruega</a> <span class="map-countries__count">15</span></li>
+      <li><a href="/archive/countries/argentina.html">Argentina</a> <span class="map-countries__count">14</span></li>
+      <li><a href="/archive/countries/islandia.html">Islandia</a> <span class="map-countries__count">10</span></li>
+      <li><a href="/archive/countries/paises-bajos.html">Países Bajos</a> <span class="map-countries__count">9</span></li>
+      <li><a href="/archive/countries/japon.html">Japón</a> <span class="map-countries__count">9</span></li>
+      <li><a href="/archive/countries/finlandia.html">Finlandia</a> <span class="map-countries__count">8</span></li>
+      <li><a href="/archive/countries/grecia.html">Grecia</a> <span class="map-countries__count">6</span></li>
+      <li><a href="/archive/countries/dinamarca.html">Dinamarca</a> <span class="map-countries__count">6</span></li>
+      <li><a href="/archive/countries/belgica.html">Bélgica</a> <span class="map-countries__count">6</span></li>
+      <li><a href="/archive/countries/cuba.html">Cuba</a> <span class="map-countries__count">6</span></li>
+      <li><a href="/archive/countries/portugal.html">Portugal</a> <span class="map-countries__count">6</span></li>
+      <li><a href="/archive/countries/mexico.html">México</a> <span class="map-countries__count">6</span></li>
+      <li><a href="/archive/countries/gibraltar.html">Gibraltar</a> <span class="map-countries__count">5</span></li>
+      <li><a href="/archive/countries/jamaica.html">Jamaica</a> <span class="map-countries__count">5</span></li>
+      <li><a href="/archive/countries/brasil.html">Brasil</a> <span class="map-countries__count">5</span></li>
+      <li><a href="/archive/countries/puerto-rico.html">Puerto Rico</a> <span class="map-countries__count">5</span></li>
+      <li><a href="/archive/countries/polonia.html">Polonia</a> <span class="map-countries__count">5</span></li>
+      <li><a href="/archive/countries/austria.html">Austria</a> <span class="map-countries__count">4</span></li>
+      <li><a href="/archive/countries/colombia.html">Colombia</a> <span class="map-countries__count">4</span></li>
+      <li><a href="/archive/countries/uruguay.html">Uruguay</a> <span class="map-countries__count">3</span></li>
+      <li><a href="/archive/countries/china.html">China</a> <span class="map-countries__count">3</span></li>
+      <li><a href="/archive/countries/sudafrica.html">Sudáfrica</a> <span class="map-countries__count">3</span></li>
+      <li><a href="/archive/countries/corea-del-sur.html">Corea del Sur</a> <span class="map-countries__count">3</span></li>
+      <li><a href="/archive/countries/rusia.html">Rusia</a> <span class="map-countries__count">3</span></li>
+      <li><a href="/archive/countries/republica-dominicana.html">República Dominicana</a> <span class="map-countries__count">3</span></li>
+      <li><a href="/archive/countries/israel.html">Israel</a> <span class="map-countries__count">3</span></li>
+      <li><a href="/archive/countries/mali.html">Malí</a> <span class="map-countries__count">3</span></li>
+      <li><a href="/archive/countries/turquia.html">Turquía</a> <span class="map-countries__count">2</span></li>
+      <li><a href="/archive/countries/chile.html">Chile</a> <span class="map-countries__count">2</span></li>
+      <li><a href="/archive/countries/libano.html">Líbano</a> <span class="map-countries__count">2</span></li>
+      <li><a href="/archive/countries/senegal.html">Senegal</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/suiza.html">Suiza</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/bosnia-y-herzegovina.html">Bosnia y Herzegovina</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/islas-feroe.html">Islas Feroe</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/taiwan.html">Taiwán</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/ucrania.html">Ucrania</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/india.html">India</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/marruecos.html">Marruecos</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/tunez.html">Túnez</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/indonesia.html">Indonesia</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/nueva-zelanda.html">Nueva Zelanda</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/cabo-verde.html">Cabo Verde</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/paraguay.html">Paraguay</a> <span class="map-countries__count">1</span></li>
+      <li><a href="/archive/countries/rumania.html">Rumanía</a> <span class="map-countries__count">1</span></li>
+    </ol>
+  </details>
+</aside>
+</div>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

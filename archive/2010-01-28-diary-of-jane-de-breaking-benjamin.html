@@ -14,11 +14,12 @@
   <meta property="og:description" content="Hoy si me lo permitís voy a hacer una recomendación especial ya que va dedicada a mi hermana Virginia. Ayer fue su cumpleaños y quiero dedicarle estas líneas y…">
   <meta property="og:url" content="https://dsong.es/archive/2010-01-28-diary-of-jane-de-breaking-benjamin.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,87 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-01-27-eugenio-salvador-dali-de-mecano.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">&quot;Eungenio&quot; Salvador Dalí, de Mecano</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-01-29-flaca-de-amor-de-pasion-vega.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Flaca De Amor, de Pasión Vega</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2010">2010</a><span>Nº 225</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Diary of Jane, de Breaking Benjamin</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Alternative metal</span>
+  <h1 class="display post-view__title">Diary of Jane</h1>
+  <p class="post-view__by">de <a href="/archive/artists/breaking-benjamin.html">Breaking Benjamin</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/7a499d70b8711d2d3b8726bfd8b430ec?s=20" alt="" />
-            <span class="post-view__editor-name">Jose</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-01-28T09:00:59+01:00">28 de Enero de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Jose</span>
+    </span>
+    <time class="post-view__date" datetime="2010-01-28T09:00:59+01:00">jueves, 28 de enero de 2010</time>
+    <span>1 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Hoy si me lo permitís voy a hacer una recomendación especial ya que va dedicada a mi hermana Virginia. Ayer fue su cumpleaños y quiero dedicarle estas líneas y esta canción que sé de buena tinta que es una de sus favoritas. Es difícil fallar si la canción que recomiendo es de uno de sus grupos favoritos.</p>
+<p>El grupo autor de la canción se llama <a href="http://es.wikipedia.org/wiki/Breaking_Benjamin" target="_blank">Breaking Benjamin</a>. Banda de metal alternativo formada en el año 1998 en Pennsylvania y que dicen estar influenciados por grupos como <a href="http://dsong.es/tag/nirvana/" target="_blank">Nirvana</a> o <a href="http://dsong.es/tag/pearl-jam" target="_blank">Pearl Jam</a>. Desde luego después de escucharlos no se me ocurriría asemejarlos al estilo de las mencionadas bandas. El nombre de la formación tiene una historia anecdótica por así decirlo. Durante un concierto el vocalista de la misma -Benjamin Burnley- en un momento no sabemos si de entusiasmo, tiro el micrófono del local donde actuaban al suelo, siendo debido a ello, motivo de mofa y escarnio del propietario del local y del micrófono malogrado. Poco tiempo después dejaron de llamarse <em>Plan 9</em>, anterior nombre de la banda, rebautizándose con el nombre actual y es que, parece ser, el suceso causo repercusión. Curioso desde luego. Además de por el vocalista la banda está formada por tres miembros más en la actualidad.</p>
+<p>La canción que tengo el atrevimiento de recomendar se titula <strong>&quot;Diary of Jane&quot;</strong> perteneciente a su tercer álbum <strong>&quot;Phobia&quot;</strong> (2006) de los cuatro que tiene publicados hasta la fecha. Sin más os dejo con ella y espero que os guste también la canción.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/DWaB4PXCwFU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/5pvJ59i7JxylN8VB24xdMs" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1440870735?i=1440870739" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/breaking-benjamin.html">Breaking Benjamin</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/854a1807-025b-42a8-ba8c-2a39717f1d25" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +132,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=DWaB4PXCwFU" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/5pvJ59i7JxylN8VB24xdMs" rel="noopener" target="_blank">Spotify ↗</a> <span class="post-facts__note">(enlazado en MusicBrainz)</span><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/1440870735?i=1440870739" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -117,47 +142,13 @@
       <dd>28 de enero de 2010</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Hoy si me lo permitís voy a hacer una recomendación especial ya que va dedicada a mi hermana Virginia. Ayer fue su cumpleaños y quiero dedicarle estas líneas y esta canción que sé de buena tinta que es una de sus favoritas. Es difícil fallar si la canción que recomiendo es de uno de sus grupos favoritos.</p>
-<p>El grupo autor de la canción se llama <a href="http://es.wikipedia.org/wiki/Breaking_Benjamin" target="_blank">Breaking Benjamin</a>. Banda de metal alternativo formada en el año 1998 en Pennsylvania y que dicen estar influenciados por grupos como <a href="http://dsong.es/tag/nirvana/" target="_blank">Nirvana</a> o <a href="http://dsong.es/tag/pearl-jam" target="_blank">Pearl Jam</a>. Desde luego después de escucharlos no se me ocurriría asemejarlos al estilo de las mencionadas bandas. El nombre de la formación tiene una historia anecdótica por así decirlo. Durante un concierto el vocalista de la misma -Benjamin Burnley- en un momento no sabemos si de entusiasmo, tiro el micrófono del local donde actuaban al suelo, siendo debido a ello, motivo de mofa y escarnio del propietario del local y del micrófono malogrado. Poco tiempo después dejaron de llamarse <em>Plan 9</em>, anterior nombre de la banda, rebautizándose con el nombre actual y es que, parece ser, el suceso causo repercusión. Curioso desde luego. Además de por el vocalista la banda está formada por tres miembros más en la actualidad.</p>
-<p>La canción que tengo el atrevimiento de recomendar se titula <strong>&quot;Diary of Jane&quot;</strong> perteneciente a su tercer álbum <strong>&quot;Phobia&quot;</strong> (2006) de los cuatro que tiene publicados hasta la fecha. Sin más os dejo con ella y espero que os guste también la canción.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/DWaB4PXCwFU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/5pvJ59i7JxylN8VB24xdMs" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1440870735?i=1440870739" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (1)</summary>
+      <summary class="post-view__comments-summary"><strong>1 comentario</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -173,7 +164,7 @@ De todos modos, este tipo de sonido a mi me suena muchas veces muy similar a la 
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-01-28T18:28:10+01:00">28 de Enero de 2010, 18:28</time>
+              <time class="post-view__comment-date" datetime="2010-01-28T18:28:10+01:00">28 de enero de 2010, 18:28</time>
             </div>
           </li>
         
@@ -187,22 +178,23 @@ De todos modos, este tipo de sonido a mi me suena muchas veces muy similar a la 
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-01-27-eugenio-salvador-dali-de-mecano.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">&quot;Eungenio&quot; Salvador Dalí, de Mecano</span>
+    <span class="post-nav__editor">juanje.ra</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-01-29-flaca-de-amor-de-pasion-vega.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Flaca De Amor, de Pasión Vega</span>
+    <span class="post-nav__editor">juanje.ra</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

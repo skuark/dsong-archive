@@ -14,11 +14,12 @@
   <meta property="og:description" content="Ya está todo dicho. Ayer se celebró en Jaén la edición nacional del Lagarto Festival 2010 (vigésimo cuarta edición, ahí es nada) de la que llevamos toda esta…">
   <meta property="og:url" content="https://dsong.es/archive/2010-06-13-especial-lagarto-festival-2010-cronica.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,73 +29,49 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-06-12-especial-lagarto-2010-dinero-en-los-bolsillos-de-ofunkillo.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Especial Lagarto Festival 2010: Dinero en los bolsillos, de O’Funk’illo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-06-14-fruhling-de-hund-am-strand.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Frühling, de Hund am Strand</span>
-  </a>
-</nav>
-
 <div class="post-view">
-  <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/festivales.html">Festivales</a></span>
-  <h2 class="post-view__title">Especial Lagarto Festival 2010: Crónica</h2>
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/especiales/">Especiales</a><a href="/archive/especiales/#festival">Festivales</a><span>Nº 361</span>
+  </nav>
+
+  <header class="post-view__header"><span class="kicker special-tag">Especial · Festival · 7 de 7</span>
+  <h1 class="display post-view__title">Lagarto Festival 2010: Crónica</h1>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="?s=20" alt="" />
-            <span class="post-view__editor-name">dSong</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-06-13T18:08:55+02:00">13 de Junio de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
-  </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">dSong</h4>
-    <dl class="post-facts__list">
-      <dt>Categoría</dt>
-      <dd><a href="/archive/categories/festivales.html">Festivales</a></dd>
-      <dt>Autor</dt>
-      <dd><a href="/archive/editors/dsong.html">dSong</a></dd>
-      <dt>Publicado</dt>
-      <dd>13 de junio de 2010</dd>
-    </dl>
-    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">dSong</span>
+    </span>
+    <time class="post-view__date" datetime="2010-06-13T18:08:55+02:00">domingo, 13 de junio de 2010</time>
+    <span>2 min de lectura</span>
   </div>
   </header>
 
@@ -109,13 +86,61 @@
 <p>Con algunos meses de retraso, y con una calidad de vídeo y audio que no deseábamos, aquí tenéis la sorpresa que nos quedaba aún en la recámara acerca de este Lagarto Festival 2010. Se trata de unas preguntillas que realizamos a cada uno de los 6 grupos que participaron en el festival.</p>
 <p>Os pedimos <strong>disculpas por la calidad</strong>, pero hemos tratado de mejorarlo en la medida de nuestras posibilidades. Los medios que utilizamos para la grabación y el ruído ambiente no eran los adecuados para nuestro propósito, lo que originó que el resultado no fuese el más adecuado. No obstante ahí quedan,  y esperamos que podáis disfrutarlos en la medida de lo posible.</p>
 <div style="text-align: center;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/p/7E3E2F738105CDAC?hl=es_ES&fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="480" height="385" src="http://www.youtube.com/p/7E3E2F738105CDAC?hl=es_ES&fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></div>
-  </div>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
+  </div><aside class="post-view__side">
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <nav class="series" aria-labelledby="series-title">
+    <h2 class="kicker series__title" id="series-title">La serie · Lagarto Festival 2010</h2>
+    <ol class="series__list">
+      <li class="series__item">
+        <span class="series__meta">lun 7 · Beita</span>
+        <a href="/archive/2010-06-07-especial-lagarto-festival-2010-markus-wc-meetings-de-the-welcome-dinasty.html">Markus (WC Meetings), de The Welcome Dinasty</a>
+      </li>
+      <li class="series__item">
+        <span class="series__meta">mar 8 · Jose</span>
+        <a href="/archive/2010-06-08-especial-lagarto-festival-2010-el-nino-guey-de-sfdk.html">El niño güey, de SFDK</a>
+      </li>
+      <li class="series__item">
+        <span class="series__meta">mié 9 · skuark</span>
+        <a href="/archive/2010-06-09-especial-lagarto-festival-2010-paranoid-regress-de-anika-sade.html">Paranoid Regress, de Anika Sade</a>
+      </li>
+      <li class="series__item">
+        <span class="series__meta">jue 10 · jesusr</span>
+        <a href="/archive/2010-06-10-especial-lagarto-festival-2010-y-los-conserjes-de-noche-de-quique-gonzalez.html">Y los conserjes de noche, de Quique González</a>
+      </li>
+      <li class="series__item">
+        <span class="series__meta">vie 11 · Poncho</span>
+        <a href="/archive/2010-06-11-especial-lagarto-festival-2010-1000-megatones-de-ortofalico-chisme.html">1000 Megatones, de Ortofálico Chisme</a>
+      </li>
+      <li class="series__item">
+        <span class="series__meta">sáb 12 · luizk</span>
+        <a href="/archive/2010-06-12-especial-lagarto-2010-dinero-en-los-bolsillos-de-ofunkillo.html">Dinero en los bolsillos, de O’Funk’illo</a>
+      </li>
+      <li class="series__item">
+        <span class="series__meta">dom 13 · dSong</span>
+        <strong class="series__current" aria-current="page">Crónica · estás aquí</strong>
+      </li>
+    </ol>
+    <p class="series__note">Este artículo no tiene reproductor: cada grupo suena en su artículo de la serie.</p>
+  </nav>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">dSong</h3>
+    <dl class="post-facts__list">
+      <dt>Categoría</dt>
+      <dd><a href="/archive/categories/festivales.html">Festivales</a></dd>
+      <dt>Autor</dt>
+      <dd><a href="/archive/editors/dsong.html">dSong</a></dd>
+      <dt>Publicado</dt>
+      <dd>13 de junio de 2010</dd>
+    </dl>
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+  </section>
+  </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (9)</summary>
+      <summary class="post-view__comments-summary"><strong>9 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -129,7 +154,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-13T20:28:05+02:00">13 de Junio de 2010, 20:28</time>
+              <time class="post-view__comment-date" datetime="2010-06-13T20:28:05+02:00">13 de junio de 2010, 20:28</time>
             </div>
           </li>
         
@@ -144,7 +169,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-13T21:32:59+02:00">13 de Junio de 2010, 21:32</time>
+              <time class="post-view__comment-date" datetime="2010-06-13T21:32:59+02:00">13 de junio de 2010, 21:32</time>
             </div>
           </li>
         
@@ -159,7 +184,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-13T21:33:55+02:00">13 de Junio de 2010, 21:33</time>
+              <time class="post-view__comment-date" datetime="2010-06-13T21:33:55+02:00">13 de junio de 2010, 21:33</time>
             </div>
           </li>
         
@@ -174,7 +199,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-13T22:36:52+02:00">13 de Junio de 2010, 22:36</time>
+              <time class="post-view__comment-date" datetime="2010-06-13T22:36:52+02:00">13 de junio de 2010, 22:36</time>
             </div>
           </li>
         
@@ -189,7 +214,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-14T09:09:57+02:00">14 de Junio de 2010, 09:09</time>
+              <time class="post-view__comment-date" datetime="2010-06-14T09:09:57+02:00">14 de junio de 2010, 09:09</time>
             </div>
           </li>
         
@@ -204,7 +229,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-14T10:49:44+02:00">14 de Junio de 2010, 10:49</time>
+              <time class="post-view__comment-date" datetime="2010-06-14T10:49:44+02:00">14 de junio de 2010, 10:49</time>
             </div>
           </li>
         
@@ -222,7 +247,7 @@ Nada más y espero que maticen tales afirmaciones por respeto a la banda y a los
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-14T17:52:32+02:00">14 de Junio de 2010, 17:52</time>
+              <time class="post-view__comment-date" datetime="2010-06-14T17:52:32+02:00">14 de junio de 2010, 17:52</time>
             </div>
           </li>
         
@@ -237,7 +262,7 @@ Nada más y espero que maticen tales afirmaciones por respeto a la banda y a los
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-15T11:49:18+02:00">15 de Junio de 2010, 11:49</time>
+              <time class="post-view__comment-date" datetime="2010-06-15T11:49:18+02:00">15 de junio de 2010, 11:49</time>
             </div>
           </li>
         
@@ -252,7 +277,7 @@ Nada más y espero que maticen tales afirmaciones por respeto a la banda y a los
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-06-16T00:27:01+02:00">16 de Junio de 2010, 00:27</time>
+              <time class="post-view__comment-date" datetime="2010-06-16T00:27:01+02:00">16 de junio de 2010, 00:27</time>
             </div>
           </li>
         
@@ -266,22 +291,23 @@ Nada más y espero que maticen tales afirmaciones por respeto a la banda y a los
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-06-12-especial-lagarto-2010-dinero-en-los-bolsillos-de-ofunkillo.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Especial Lagarto Festival 2010: Dinero en los bolsillos, de O’Funk’illo</span>
+    <span class="post-nav__editor">luizk</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-06-14-fruhling-de-hund-am-strand.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Frühling, de Hund am Strand</span>
+    <span class="post-nav__editor">Poncho</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

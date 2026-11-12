@@ -14,11 +14,12 @@
   <meta property="og:description" content="He perdido la cuenta de los años que llevamos escuchando lo de que Internet mata la cultura, por aquello de que los artistas no pueden sobrevivir con la…">
   <meta property="og:url" content="https://dsong.es/archive/2013-10-29-we-sink-de-chvrches.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,98 +29,51 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2013-10-28-i-cant-wait-de-hepcat.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">I can&#39;t wait, de Hepcat</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2013-10-30-heaven-de-bryan-adams.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Heaven, de Bryan Adams</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2013">2013</a><span>Nº 1468</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">We Sink, de CHVRCHES</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · electrónica</span>
+  <h1 class="display post-view__title">We Sink</h1>
+  <p class="post-view__by">de <a href="/archive/artists/chvrches.html">CHVRCHES</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.skuark.com/" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=20" alt="" />
-            <span class="post-view__editor-name">skuark</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2013-10-29T08:00:10+01:00">29 de Octubre de 2013</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
-  </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
-    <dl class="post-facts__list">
-      <dt>Artista</dt>
-      <dd><a href="/archive/artists/chvrches.html">CHVRCHES</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/6a93afbb-257f-4166-b389-9f2a1e5c5df8" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
-      <dt>País</dt>
-      <dd><a href="/archive/countries/reino-unido.html">Reino Unido</a></dd>
-      <dt>Web</dt>
-      <dd><a href="https://chvrch.es/" rel="noopener" target="_blank">chvrch.es ↗</a></dd>
-      <dt>Canción</dt>
-      <dd>We Sink <a class="post-facts__mb" href="https://musicbrainz.org/recording/9530baf4-c640-4d5d-86e2-99d17e708af5" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
-      <dt>Álbum</dt>
-      <dd><a href="/archive/albums/chvrches-the-bones-of-what-you-believe.html">The Bones of What You Believe</a> <a class="post-facts__mb" href="https://musicbrainz.org/release-group/b2cbaa83-cb77-4961-8ca3-816b24e5204f" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
-      <dt>Año</dt>
-      <dd><a href="/archive/years/2013.html">2013</a> <span class="post-facts__note">(primera edición: 20 de septiembre de 2013)</span></dd>
-      <dt>Género</dt>
-      <dd>electrónica</dd>
-      <dt>Géneros en MusicBrainz</dt>
-      <dd>synth-pop, indie pop, indietronica, pop, dance</dd>
-      <dt>ISRC</dt>
-      <dd>GBZN82300002<span class="post-facts__sep"> · </span>GBZN81300020<span class="post-facts__sep"> · </span>GBZN51300020</dd>
-      <dt>Escuchar en</dt>
-      <dd><a href="https://www.youtube.com/watch?v=cpnXMMq-uWs" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/31IxooDVO2GR9HRUSCdcRG" rel="noopener" target="_blank">Spotify ↗</a></dd>
-    </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
-    <dl class="post-facts__list">
-      <dt>Categoría</dt>
-      <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
-      <dt>Autor</dt>
-      <dd><a href="/archive/editors/skuark.html">skuark</a></dd>
-      <dt>Publicado</dt>
-      <dd>29 de octubre de 2013</dd>
-      <dt>Podcast</dt>
-      <dd><a href="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20131029.mp3" rel="noopener" target="_blank">UniRadio Jaén (mp3) ↗</a></dd>
-    </dl>
-    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
+    <span class="post-view__editor">
+      <a href="http://www.skuark.com/" target="_blank"><span class="post-view__editor-name">skuark</span></a>
+    </span>
+    <time class="post-view__date" datetime="2013-10-29T08:00:10+01:00">martes, 29 de octubre de 2013</time>
+    <span>2 min de lectura</span>
   </div>
   </header>
 
@@ -146,7 +100,6 @@
       <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
     </div>
   </section>
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
   <details class="players" open>
     <summary class="players__summary">Escuchar</summary>
 
@@ -162,11 +115,49 @@
     <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
       <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/31IxooDVO2GR9HRUSCdcRG" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
   </details>
   <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
+    <dl class="post-facts__list">
+      <dt>Artista</dt>
+      <dd><a href="/archive/artists/chvrches.html">CHVRCHES</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/6a93afbb-257f-4166-b389-9f2a1e5c5df8" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
+      <dt>País</dt>
+      <dd><a href="/archive/countries/reino-unido.html">Reino Unido</a></dd>
+      <dt>Web</dt>
+      <dd><a href="https://chvrch.es/" rel="noopener" target="_blank">chvrch.es ↗</a></dd>
+      <dt>Canción</dt>
+      <dd>We Sink <a class="post-facts__mb" href="https://musicbrainz.org/recording/9530baf4-c640-4d5d-86e2-99d17e708af5" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
+      <dt>Álbum</dt>
+      <dd><a href="/archive/albums/chvrches-the-bones-of-what-you-believe.html">The Bones of What You Believe</a> <a class="post-facts__mb" href="https://musicbrainz.org/release-group/b2cbaa83-cb77-4961-8ca3-816b24e5204f" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
+      <dt>Año</dt>
+      <dd><a href="/archive/years/2013.html">2013</a> <span class="post-facts__note">(primera edición: 20 de septiembre de 2013)</span></dd>
+      <dt>Género</dt>
+      <dd>electrónica</dd>
+      <dt>Géneros en MusicBrainz</dt>
+      <dd>synth-pop, indie pop, indietronica, pop, dance</dd>
+      <dt>ISRC</dt>
+      <dd>GBZN82300002<span class="post-facts__sep"> · </span>GBZN81300020<span class="post-facts__sep"> · </span>GBZN51300020</dd>
+      <dt>Escuchar en</dt>
+      <dd><a href="https://www.youtube.com/watch?v=cpnXMMq-uWs" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/31IxooDVO2GR9HRUSCdcRG" rel="noopener" target="_blank">Spotify ↗</a></dd>
+    </dl>
+    <h3 class="post-facts__group kicker">dSong</h3>
+    <dl class="post-facts__list">
+      <dt>Categoría</dt>
+      <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
+      <dt>Autor</dt>
+      <dd><a href="/archive/editors/skuark.html">skuark</a></dd>
+      <dt>Publicado</dt>
+      <dd>29 de octubre de 2013</dd>
+      <dt>Podcast</dt>
+      <dd><a href="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20131029.mp3" rel="noopener" target="_blank">UniRadio Jaén (mp3) ↗</a></dd>
+    </dl>
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+  </section>
   </aside>
 
 
@@ -178,22 +169,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2013-10-28-i-cant-wait-de-hepcat.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">I can&#39;t wait, de Hepcat</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2013-10-30-heaven-de-bryan-adams.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Heaven, de Bryan Adams</span>
+    <span class="post-nav__editor">Jal</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

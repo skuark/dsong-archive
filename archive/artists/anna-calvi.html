@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/anna-calvi.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,96 +28,97 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista Anna Calvi</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/462a9ce0-e1f3-4cbc-a21e-0998003d9386" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Anna_Calvi.jpg/330px-Anna_Calvi.jpg" width="320" height="240" alt="Anna Calvi" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Anna_Calvi.jpg" rel="noopener">Drew de F Fawkes · CC BY-SA 4.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Anna Calvi</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Anna_Calvi.jpg/330px-Anna_Calvi.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Anna_Calvi.jpg/330px-Anna_Calvi.jpg" width="320" height="240" alt="Anna Calvi" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Anna_Calvi.jpg" rel="noopener" target="_blank">Drew de F Fawkes · CC BY-SA 4.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>Anna Margaret Michelle Calvi (Twickenham, 24 de septiembre de 1980) es una cantante y compositora británica de indie rock. Anna ha sido comparada con artistas como Patti Smith,​ PJ Harvey y Siouxsie Sioux.​</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Anna_Calvi" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/reino-unido.html">Reino Unido</a></p>
+    <h1 class="page-title artist-hero__name">Anna Calvi</h1>
+    <p class="artist-hero__bio">Anna Margaret Michelle Calvi (Twickenham, 24 de septiembre de 1980) es una cantante y compositora británica de indie rock. Anna ha sido comparada con artistas como Patti Smith,​ PJ Harvey y Siouxsie Sioux.​</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Anna_Calvi" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/462a9ce0-e1f3-4cbc-a21e-0998003d9386" rel="noopener">MusicBrainz ↗</a><a href="http://annacalvi.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">3 publicaciones, 2012–2014</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2012-01-14-desire-de-anni-calvi.html">
+        <span class="kicker">14 ene 2012 · Anna Calvi</span>
+        <span class="display post-card__title">Desire</span>
+        <span class="post-card__excerpt">«Fuerza, belleza y misterio. Todas cualidades muy aplicables a esta fantástica e inquietante cantautora inglesa y de ascendencia italiana…»</span>
+        <span class="post-card__editor">Beita</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2012-09-04-jezebel-de-anna-calvi.html">
+        <span class="kicker">4 sep 2012 · Anna Calvi</span>
+        <span class="display post-card__title">Jezebel</span>
+        <span class="post-card__excerpt">«No es la primera vez que la portentosa voz de Anna Calvi aparece en este blog. El pasado mes de enero, Beita nos trajo &quot;Desire&quot; y el…»</span>
+        <span class="post-card__editor">Ascen</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2014-05-07-first-we-kiss-de-anna-calvi.html">
+        <span class="kicker">7 may 2014 · Anna Calvi</span>
+        <span class="display post-card__title">First We Kiss</span>
+        <span class="post-card__excerpt">«“Primero, nos besamos”, dice Anna. Yo pienso entonces que igual lo segundo que viene es el precipicio en que uno no sabe bien dónde se…»</span>
+        <span class="post-card__editor">Silvia</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Anna%20Calvi">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/anna-calvi-anna-calvi.html">Anna Calvi · 3</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">3 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-01-14 08:00:08 +0100">14/01/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-01-14-desire-de-anni-calvi.html">Desire, de Anna Calvi</a></td>
-        <td class="archive-table__cell--song">Desire</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/anna-calvi.html">Anna Calvi</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/anna-calvi-anna-calvi.html">Anna Calvi</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2011.html">2011</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/beita.html">Beita</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-09-04 08:00:06 +0200">04/09/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-09-04-jezebel-de-anna-calvi.html">Jezebel, de Anna Calvi</a></td>
-        <td class="archive-table__cell--song">Jezebel</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/anna-calvi.html">Anna Calvi</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/anna-calvi-anna-calvi.html">Anna Calvi</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2011.html">2011</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/ascen.html">Ascen</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2014-05-07 08:00:04 +0200">07/05/2014</td>
-        <td class="archive-table__cell--title"><a href="/archive/2014-05-07-first-we-kiss-de-anna-calvi.html">First we kiss, de Anna Calvi</a></td>
-        <td class="archive-table__cell--song">First We Kiss</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/anna-calvi.html">Anna Calvi</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/anna-calvi-anna-calvi.html">Anna Calvi</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2011.html">2011</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/silvia.html">Silvia</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

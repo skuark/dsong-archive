@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/seal.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,78 +28,81 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista Seal</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/f053ae01-dae6-4aae-9883-e8c279fdbef4" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seal_2012_%28cropped%29.jpg" width="320" height="427" alt="Seal" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Seal_2012_(cropped).jpg" rel="noopener">Eva Rinaldi · CC BY-SA 2.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Seal</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seal_2012_%28cropped%29.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seal_2012_%28cropped%29.jpg" width="320" height="427" alt="Seal" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Seal_2012_(cropped).jpg" rel="noopener" target="_blank">Eva Rinaldi · CC BY-SA 2.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>Seal Henry Olusegun Olumide Adeola Samuel (Londres, 19 de febrero de 1963) es un músico, cantante y compositor británico. Entre sus mayores éxitos destaca la canción «Kiss from a Rose», banda sonora de la película Batman Forever, por la cual recibió tres premios Grammy en 1995.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Seal" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/reino-unido.html">Reino Unido</a></p>
+    <h1 class="page-title artist-hero__name">Seal</h1>
+    <p class="artist-hero__bio">Seal Henry Olusegun Olumide Adeola Samuel (Londres, 19 de febrero de 1963) es un músico, cantante y compositor británico. Entre sus mayores éxitos destaca la canción «Kiss from a Rose», banda sonora de la película Batman Forever, por la cual recibió tres premios Grammy en 1995.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Seal" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/f053ae01-dae6-4aae-9883-e8c279fdbef4" rel="noopener">MusicBrainz ↗</a><a href="http://www.seal.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">1 publicación, 2009</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2009-07-10-kiss-from-a-rose-de-seal.html">
+        <span class="kicker">10 jul 2009 · Seal II</span>
+        <span class="display post-card__title">Kiss From a Rose</span>
+        <span class="post-card__excerpt">«Aterrizamos hoy con el romance de Seal y su canción &quot;Kiss from a rose&quot; en este verano caluroso. Hacia el año 1995, Seal grabó y publicó un…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Seal">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/seal-seal-ii.html">Seal II</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">1 publicación</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2009-07-10 09:00:47 +0200">10/07/2009</td>
-        <td class="archive-table__cell--title"><a href="/archive/2009-07-10-kiss-from-a-rose-de-seal.html">Kiss from a rose, de Seal</a></td>
-        <td class="archive-table__cell--song">Kiss From a Rose</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/seal.html">Seal</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/seal-seal-ii.html">Seal II</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1994.html">1994</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

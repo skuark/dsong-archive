@@ -14,11 +14,12 @@
   <meta property="og:description" content="Jeff Buckley no es un cualquiera. Es posible que muchos de vosotros ni siquiera prestéis oído, y más que probable que a la mayoría nunca os afectara su música…">
   <meta property="og:url" content="https://dsong.es/archive/2009-07-12-especial-album-grace-de-jeff-buckley.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,84 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2009-07-11-en-algun-lugar-de-duncan-dhu.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">En algún lugar, de Duncan Dhu</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2009-07-13-el-lado-oscuro-de-las-cosas-de-091.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">El lado oscuro de las cosas, de 091</span>
-  </a>
-</nav>
-
 <div class="post-view">
-  <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/albumes.html">Álbumes</a></span>
-  <h2 class="post-view__title">Especial Álbum: Grace, de Jeff Buckley</h2>
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/especiales/">Especiales</a><a href="/archive/especiales/#album">Álbumes</a><span>Nº 56</span>
+  </nav>
+
+  <header class="post-view__header"><span class="kicker special-tag">Especial · Álbum</span>
+  <h1 class="display post-view__title">Grace</h1>
+  <p class="post-view__by">de <a href="/archive/artists/jeff-buckley.html">Jeff Buckley</a> · 1994</p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.jesusr.es" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/3627cf44a707970b4f2b493e78030448?s=20" alt="" />
-            <span class="post-view__editor-name">jesusr</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2009-07-12T09:00:38+02:00">12 de Julio de 2009</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <a href="http://www.jesusr.es" target="_blank"><span class="post-view__editor-name">jesusr</span></a>
+    </span>
+    <time class="post-view__date" datetime="2009-07-12T09:00:38+02:00">domingo, 12 de julio de 2009</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p><strong>Jeff Buckley</strong> no es un cualquiera. Es posible que muchos de vosotros ni siquiera prestéis oído, y más que probable que a la mayoría nunca os afectara su música o la falta de ella. Pero resulta que Jeff Buckley es una leyenda.</p>
+<p>Hijo de un músico de conocido Jazz y Folk (Tim Buckley), a los 18 años estudio en una escuela de música, etapa que considero &quot;una pérdida de tiempo&quot;. Participó en Los Ángeles como miembro de varias bandas de reggae, rock y pop, en las que se limitaba a tocar la guitarra. Lo más curioso de todo fue que su début como cantante no fue hasta años después, cuando acudió a un concierto homenaje a su padre. Y es curioso porque Jeff Buckley es conocido por poseer una de las voces más peculiares y con mejor acústica de la época (alcanzaba al menos<strong> cuatro octavas y media</strong>).</p>
+<p>Trás este début, Jeff se convirtió en cantante solista habitual en algunos cafés de Nueva York, como el <strong>Sin-é;</strong> y es que su primer EP consistió en cuatro temas grabados precisamente en este bar. En 1994, y tras múltiples colaboraciones con el guitarrista Gary Lucas, grabó su primer álbum, &quot;<strong>Grace</strong>&quot;. Si bien no fue un éxito en cuanto a ventas desde el principio, la crítica lo recibió con un aluvión de alabanzas. Además, el álbum incluía una versión del famoso &quot;<strong>Hallellujah</strong>&quot; de Leonard Cohen, que la crítica consideró como la versión definitiva del tema por la suavidad, la simpleza y la increible voz que la componían.</p>
+<p>Los problemas, como siempre, comenzaron a llegar: la discográfica le agobiaba, y Jeff como respuesta alargaba la publicación de un segundo álbum mediante una gira de más de dos años y otras actividades artísticas (como por ejemplo, realizar giras actuando bajo pseudonimo en cartel).</p>
+<p>Todos estos problemas terminaron con una de las muertes más controvertidas que se recuerdan en el mundo de la música. Jeff Buckley escuchaba música junto a un compañero a orillas del río Wolf en Memphis, cuando Jeff fue a bañarse y se perdió de vista; su cuerpo apareció días después ahogado. Se ha especulado con que padecía desordenes psicológicos y se suicidó, o con que fue un accidente. Incluso se ha llegado a insinuar que fue un asesinato, ya que se baño totalmente vestido, pero apareció desnudo y no se encontró ningún rastro de la ropa.</p>
+<p>Precisamente esa misma noche en que murió, iban a comenzar la grabación de su segundo álbum, que se llamaría <strong>&quot;My Sweetheart drunk&quot;.</strong></p>
+<p>Sin embargo, el unico álbum (LP) que nos dejó, marcó una época y un hito en la historia de la música moderna. Temas como <em>&quot;Grace&quot;, &quot;Forget Her&quot;</em> o la que os dejamos un poco más abajo para que la escuchéis,<strong> &quot;Last Goodbye&quot;,</strong> han sido punto de partida y de llegada para muchos artistas desde su aparición.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/1vpvc2YPQM8iPk95be8Y3x" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1046187510" width="100%" height="450" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/jeff-buckley.html">Jeff Buckley</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/e6e879c0-3d56-4f12-b3c5-3ce459661a8e" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -103,7 +125,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://open.spotify.com/album/1vpvc2YPQM8iPk95be8Y3x" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/1046187510" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(enlazado en MusicBrainz)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/albumes.html">Álbumes</a></dd>
@@ -113,45 +135,13 @@
       <dd>12 de julio de 2009</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p><strong>Jeff Buckley</strong> no es un cualquiera. Es posible que muchos de vosotros ni siquiera prestéis oído, y más que probable que a la mayoría nunca os afectara su música o la falta de ella. Pero resulta que Jeff Buckley es una leyenda.</p>
-<p>Hijo de un músico de conocido Jazz y Folk (Tim Buckley), a los 18 años estudio en una escuela de música, etapa que considero &quot;una pérdida de tiempo&quot;. Participó en Los Ángeles como miembro de varias bandas de reggae, rock y pop, en las que se limitaba a tocar la guitarra. Lo más curioso de todo fue que su début como cantante no fue hasta años después, cuando acudió a un concierto homenaje a su padre. Y es curioso porque Jeff Buckley es conocido por poseer una de las voces más peculiares y con mejor acústica de la época (alcanzaba al menos<strong> cuatro octavas y media</strong>).</p>
-<p>Trás este début, Jeff se convirtió en cantante solista habitual en algunos cafés de Nueva York, como el <strong>Sin-é;</strong> y es que su primer EP consistió en cuatro temas grabados precisamente en este bar. En 1994, y tras múltiples colaboraciones con el guitarrista Gary Lucas, grabó su primer álbum, &quot;<strong>Grace</strong>&quot;. Si bien no fue un éxito en cuanto a ventas desde el principio, la crítica lo recibió con un aluvión de alabanzas. Además, el álbum incluía una versión del famoso &quot;<strong>Hallellujah</strong>&quot; de Leonard Cohen, que la crítica consideró como la versión definitiva del tema por la suavidad, la simpleza y la increible voz que la componían.</p>
-<p>Los problemas, como siempre, comenzaron a llegar: la discográfica le agobiaba, y Jeff como respuesta alargaba la publicación de un segundo álbum mediante una gira de más de dos años y otras actividades artísticas (como por ejemplo, realizar giras actuando bajo pseudonimo en cartel).</p>
-<p>Todos estos problemas terminaron con una de las muertes más controvertidas que se recuerdan en el mundo de la música. Jeff Buckley escuchaba música junto a un compañero a orillas del río Wolf en Memphis, cuando Jeff fue a bañarse y se perdió de vista; su cuerpo apareció días después ahogado. Se ha especulado con que padecía desordenes psicológicos y se suicidó, o con que fue un accidente. Incluso se ha llegado a insinuar que fue un asesinato, ya que se baño totalmente vestido, pero apareció desnudo y no se encontró ningún rastro de la ropa.</p>
-<p>Precisamente esa misma noche en que murió, iban a comenzar la grabación de su segundo álbum, que se llamaría <strong>&quot;My Sweetheart drunk&quot;.</strong></p>
-<p>Sin embargo, el unico álbum (LP) que nos dejó, marcó una época y un hito en la historia de la música moderna. Temas como <em>&quot;Grace&quot;, &quot;Forget Her&quot;</em> o la que os dejamos un poco más abajo para que la escuchéis,<strong> &quot;Last Goodbye&quot;,</strong> han sido punto de partida y de llegada para muchos artistas desde su aparición.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
-      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/1vpvc2YPQM8iPk95be8Y3x" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1046187510" width="100%" height="450" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (3)</summary>
+      <summary class="post-view__comments-summary"><strong>3 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -165,7 +155,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-07-12T21:54:31+02:00">12 de Julio de 2009, 21:54</time>
+              <time class="post-view__comment-date" datetime="2009-07-12T21:54:31+02:00">12 de julio de 2009, 21:54</time>
             </div>
           </li>
         
@@ -182,7 +172,7 @@ Yo a Jeff ya sabes que lo conocí gracias a ti, y me encantó. Es curioso como j
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-07-13T09:36:46+02:00">13 de Julio de 2009, 09:36</time>
+              <time class="post-view__comment-date" datetime="2009-07-13T09:36:46+02:00">13 de julio de 2009, 09:36</time>
             </div>
           </li>
         
@@ -197,7 +187,7 @@ Yo a Jeff ya sabes que lo conocí gracias a ti, y me encantó. Es curioso como j
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-07-14T21:30:44+02:00">14 de Julio de 2009, 21:30</time>
+              <time class="post-view__comment-date" datetime="2009-07-14T21:30:44+02:00">14 de julio de 2009, 21:30</time>
             </div>
           </li>
         
@@ -211,22 +201,23 @@ Yo a Jeff ya sabes que lo conocí gracias a ti, y me encantó. Es curioso como j
   <a class="post-nav__link post-nav__link--prev" href="/archive/2009-07-11-en-algun-lugar-de-duncan-dhu.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">En algún lugar, de Duncan Dhu</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2009-07-13-el-lado-oscuro-de-las-cosas-de-091.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">El lado oscuro de las cosas, de 091</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

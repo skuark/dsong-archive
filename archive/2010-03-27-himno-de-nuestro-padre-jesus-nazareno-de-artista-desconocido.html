@@ -14,11 +14,12 @@
   <meta property="og:description" content="Con la entrada de la Semana Santa y haciendo honor de las costumbres de mi ciudad (Jaén), quisiera contarles que es &quot;El Abuelo&quot;. El Jueves Santo en España se…">
   <meta property="og:url" content="https://dsong.es/archive/2010-03-27-himno-de-nuestro-padre-jesus-nazareno-de-artista-desconocido.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,65 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-03-26-i-surrender-de-celine-dion.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">I Surrender, de Céline Dion</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-03-28-especial-album-euphoria-morning-de-chris-cornell.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Especial Álbum: Euphoria Morning, de Chris Cornell</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2010">2010</a><span>Nº 283</span>
+  </nav>
+
   <header class="post-view__header">
   <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Himno de Nuestro Padre Jesús Nazareno, de artista desconocido </h2>
+  <h1 class="display post-view__title">Himno de Nuestro Padre Jesús Nazareno</h1>
+  <p class="post-view__by">de artista desconocido </p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.myspace.com/reinodehadesjaen" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/8bd05d3f3d24c9ea891a0daa61f9d325?s=20" alt="" />
-            <span class="post-view__editor-name">david</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-03-27T09:00:36+01:00">27 de Marzo de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <a href="http://www.myspace.com/reinodehadesjaen" target="_blank"><span class="post-view__editor-name">david</span></a>
+    </span>
+    <time class="post-view__date" datetime="2010-03-27T09:00:36+01:00">sábado, 27 de marzo de 2010</time>
+    <span>1 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+  </header>
+
+  <div class="post-view__content">
+    <p>Con la entrada de la Semana Santa y haciendo honor de las costumbres de mi ciudad (Jaén), quisiera contarles que es &quot;El Abuelo&quot;. El Jueves Santo en España se representa La Pasión de Cristo, y en el caso de Jaén, a esta conmemoración la llamamos &quot;El día del Abuelo&quot;. Pero, ¿De dónde viene este nombre?. Os contaré la leyenda:</p>
+<p>Hace mucho tiempo, un misterioso anciano se acercó a un caserío y pidió alojamiento. A la afueras de este, había un tronco de árbol el cual llamó la atención del anciano ya que, al parecer, le gustaba tallar la madera y dijo que de ahí podría salir una buena talla. Cogió el tronco y se encerró en su habitación. Durante varias horas se escuchó el ruido de tallar la madera, hasta que de pronto desapareció. Los dueños del lugar, vieron que el anciano  no salía de su habitación y decidieron entrar. Cuando abrieron la puerta el anciano ya no estaba y en su lugar había  una estatua de Nuestro Padre Jesús, que es la que ahora sale el Jueves Santo.</p>
+<p>La procesión del Día del Abuelo tiene un himno característico el cual identificarán más rápidamente los seguidores de este evento. En este caso, es una versión del himno con toques de jazz que resulta verdaderamente sorprendente. Por desgracia soy desconocedor del autor de esta versión y demás información. Si alguien sabe información sobre esto, agradecería un comentario en este artículo divulgándola.</p>
+<p>Cuando escuché por primera vez esta maravilla, me quede totalmente alucinado. Sin menospreciar a nadie, sería genial que sonara así en &quot;El día del Abuelo&quot;.  Os dejo con <strong>El himno de Nuestro Padre Jesús.</strong></p>
+
+  </div><aside class="post-view__side">
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/desconocido.html">Desconocido</a></dd>
@@ -95,7 +98,7 @@
       <dt>Álbum</dt>
       <dd><a href="/archive/albums/desconocido-desconocido.html">Desconocido</a></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -105,23 +108,13 @@
       <dd>27 de marzo de 2010</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Con la entrada de la Semana Santa y haciendo honor de las costumbres de mi ciudad (Jaén), quisiera contarles que es &quot;El Abuelo&quot;. El Jueves Santo en España se representa La Pasión de Cristo, y en el caso de Jaén, a esta conmemoración la llamamos &quot;El día del Abuelo&quot;. Pero, ¿De dónde viene este nombre?. Os contaré la leyenda:</p>
-<p>Hace mucho tiempo, un misterioso anciano se acercó a un caserío y pidió alojamiento. A la afueras de este, había un tronco de árbol el cual llamó la atención del anciano ya que, al parecer, le gustaba tallar la madera y dijo que de ahí podría salir una buena talla. Cogió el tronco y se encerró en su habitación. Durante varias horas se escuchó el ruido de tallar la madera, hasta que de pronto desapareció. Los dueños del lugar, vieron que el anciano  no salía de su habitación y decidieron entrar. Cuando abrieron la puerta el anciano ya no estaba y en su lugar había  una estatua de Nuestro Padre Jesús, que es la que ahora sale el Jueves Santo.</p>
-<p>La procesión del Día del Abuelo tiene un himno característico el cual identificarán más rápidamente los seguidores de este evento. En este caso, es una versión del himno con toques de jazz que resulta verdaderamente sorprendente. Por desgracia soy desconocedor del autor de esta versión y demás información. Si alguien sabe información sobre esto, agradecería un comentario en este artículo divulgándola.</p>
-<p>Cuando escuché por primera vez esta maravilla, me quede totalmente alucinado. Sin menospreciar a nadie, sería genial que sonara así en &quot;El día del Abuelo&quot;.  Os dejo con <strong>El himno de Nuestro Padre Jesús.</strong></p>
-
-  </div>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
+  </section>
+  </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (16)</summary>
+      <summary class="post-view__comments-summary"><strong>16 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -136,7 +129,7 @@ Gracias por traerme un poquito de casa a la otra parte del mundo. Un abrazo y di
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T10:44:05+01:00">27 de Marzo de 2010, 10:44</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T10:44:05+01:00">27 de marzo de 2010, 10:44</time>
             </div>
           </li>
         
@@ -155,7 +148,7 @@ Qué diria mi buen amigo Emilio Cebrian si viera esto...</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T15:01:11+01:00">27 de Marzo de 2010, 15:01</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T15:01:11+01:00">27 de marzo de 2010, 15:01</time>
             </div>
           </li>
         
@@ -170,7 +163,7 @@ Qué diria mi buen amigo Emilio Cebrian si viera esto...</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T15:08:07+01:00">27 de Marzo de 2010, 15:08</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T15:08:07+01:00">27 de marzo de 2010, 15:08</time>
             </div>
           </li>
         
@@ -185,7 +178,7 @@ Qué diria mi buen amigo Emilio Cebrian si viera esto...</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T15:14:16+01:00">27 de Marzo de 2010, 15:14</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T15:14:16+01:00">27 de marzo de 2010, 15:14</time>
             </div>
           </li>
         
@@ -204,7 +197,7 @@ PD: &quot;Sin menospreciar a nadie, sería genial que sonara así en “El día 
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T15:17:35+01:00">27 de Marzo de 2010, 15:17</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T15:17:35+01:00">27 de marzo de 2010, 15:17</time>
             </div>
           </li>
         
@@ -220,7 +213,7 @@ Tio en serio, si no sabes que publicar consulta a tus compañeros o dimite, pero
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T15:41:59+01:00">27 de Marzo de 2010, 15:41</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T15:41:59+01:00">27 de marzo de 2010, 15:41</time>
             </div>
           </li>
         
@@ -249,7 +242,7 @@ Tio en serio, si no sabes que publicar consulta a tus compañeros o dimite, pero
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T15:58:08+01:00">27 de Marzo de 2010, 15:58</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T15:58:08+01:00">27 de marzo de 2010, 15:58</time>
             </div>
           </li>
         
@@ -268,7 +261,7 @@ Tio en serio, si no sabes que publicar consulta a tus compañeros o dimite, pero
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T16:03:06+01:00">27 de Marzo de 2010, 16:03</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T16:03:06+01:00">27 de marzo de 2010, 16:03</time>
             </div>
           </li>
         
@@ -285,7 +278,7 @@ Y vosotros que tanto habláis de respeto creo que sois los que más pecáis de f
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T16:36:18+01:00">27 de Marzo de 2010, 16:36</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T16:36:18+01:00">27 de marzo de 2010, 16:36</time>
             </div>
           </li>
         
@@ -300,7 +293,7 @@ Y vosotros que tanto habláis de respeto creo que sois los que más pecáis de f
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-27T19:11:07+01:00">27 de Marzo de 2010, 19:11</time>
+              <time class="post-view__comment-date" datetime="2010-03-27T19:11:07+01:00">27 de marzo de 2010, 19:11</time>
             </div>
           </li>
         
@@ -321,7 +314,7 @@ PD: reitero mi opinón, ni mucho menos voy a callármela; feo queda cuando algui
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-28T04:45:57+02:00">28 de Marzo de 2010, 04:45</time>
+              <time class="post-view__comment-date" datetime="2010-03-28T04:45:57+02:00">28 de marzo de 2010, 04:45</time>
             </div>
           </li>
         
@@ -338,7 +331,7 @@ PD: Solo es una opinión. No hay q tomarselo tan en serio.</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-28T13:04:38+02:00">28 de Marzo de 2010, 13:04</time>
+              <time class="post-view__comment-date" datetime="2010-03-28T13:04:38+02:00">28 de marzo de 2010, 13:04</time>
             </div>
           </li>
         
@@ -360,7 +353,7 @@ Cualquier crítica, siempre que sea constructiva y sin ánimo de ofender, la ace
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-28T14:37:04+02:00">28 de Marzo de 2010, 14:37</time>
+              <time class="post-view__comment-date" datetime="2010-03-28T14:37:04+02:00">28 de marzo de 2010, 14:37</time>
             </div>
           </li>
         
@@ -375,7 +368,7 @@ Cualquier crítica, siempre que sea constructiva y sin ánimo de ofender, la ace
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-04-08T18:40:37+02:00">8 de Abril de 2010, 18:40</time>
+              <time class="post-view__comment-date" datetime="2010-04-08T18:40:37+02:00">8 de abril de 2010, 18:40</time>
             </div>
           </li>
         
@@ -400,7 +393,7 @@ Por cierto, esto último está copiado del apartado &quot;Acerca de&quot; de est
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-04-13T16:53:50+02:00">13 de Abril de 2010, 16:53</time>
+              <time class="post-view__comment-date" datetime="2010-04-13T16:53:50+02:00">13 de abril de 2010, 16:53</time>
             </div>
           </li>
         
@@ -415,7 +408,7 @@ Por cierto, esto último está copiado del apartado &quot;Acerca de&quot; de est
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-04-13T16:56:19+02:00">13 de Abril de 2010, 16:56</time>
+              <time class="post-view__comment-date" datetime="2010-04-13T16:56:19+02:00">13 de abril de 2010, 16:56</time>
             </div>
           </li>
         
@@ -429,22 +422,23 @@ Por cierto, esto último está copiado del apartado &quot;Acerca de&quot; de est
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-03-26-i-surrender-de-celine-dion.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">I Surrender, de Céline Dion</span>
+    <span class="post-nav__editor">Jose</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-03-28-especial-album-euphoria-morning-de-chris-cornell.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Especial Álbum: Euphoria Morning, de Chris Cornell</span>
+    <span class="post-nav__editor">Poncho</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

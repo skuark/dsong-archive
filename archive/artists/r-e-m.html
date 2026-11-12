@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/r-e-m.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,96 +28,98 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista R.E.M</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/ea4dfa26-f633-4da6-a52a-f49ea4897b58" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/R.E.M._at_Stadio_Euganeo%2C_Padova%2C_Italy%2C_2003-07-22_04.jpg/330px-R.E.M._at_Stadio_Euganeo%2C_Padova%2C_Italy%2C_2003-07-22_04.jpg" width="320" height="240" alt="R.E.M" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:R.E.M._at_Stadio_Euganeo,_Padova,_Italy,_2003-07-22_04.jpg" rel="noopener">Stefano · CC BY-SA 2.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>R.E.M</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/R.E.M._at_Stadio_Euganeo%2C_Padova%2C_Italy%2C_2003-07-22_04.jpg/330px-R.E.M._at_Stadio_Euganeo%2C_Padova%2C_Italy%2C_2003-07-22_04.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/R.E.M._at_Stadio_Euganeo%2C_Padova%2C_Italy%2C_2003-07-22_04.jpg/330px-R.E.M._at_Stadio_Euganeo%2C_Padova%2C_Italy%2C_2003-07-22_04.jpg" width="320" height="240" alt="R.E.M" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:R.E.M._at_Stadio_Euganeo,_Padova,_Italy,_2003-07-22_04.jpg" rel="noopener" target="_blank">Stefano · CC BY-SA 2.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>R.E.M. fue una banda de rock estadounidense formada en 1980 en Athens, Georgia, por el baterista Bill Berry, el guitarrista Peter Buck, el bajista Mike Mills y el vocalista principal Michael Stipe, quienes eran estudiantes de la Universidad de Georgia. Fue una de las primeras bandas de rock alternativo, que destacaba por el estilo de guitarra arpegiado y sonoro de Buck; la distintiva calidad vocal de Stipe, su presencia escénica única y sus letras oscuras; las líneas de bajo melódicas y coros de Mills; y el estilo de batería ajustado y sobrio de Berry.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/R.E.M." rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/estados-unidos.html">Estados Unidos</a></p>
+    <h1 class="page-title artist-hero__name">R.E.M</h1>
+    <p class="artist-hero__bio">R.E.M. fue una banda de rock estadounidense formada en 1980 en Athens, Georgia, por el baterista Bill Berry, el guitarrista Peter Buck, el bajista Mike Mills y el vocalista principal Michael Stipe, quienes eran estudiantes de la Universidad de Georgia. Fue una de las primeras bandas de rock alternativo, que destacaba por el estilo de guitarra arpegiado y sonoro de Buck; la distintiva calidad vocal de Stipe, su presencia escénica única y sus letras oscuras; las líneas de bajo melódicas y coros de Mills; y el estilo de batería ajustado y sobrio de Berry.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/R.E.M." rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/ea4dfa26-f633-4da6-a52a-f49ea4897b58" rel="noopener">MusicBrainz ↗</a><a href="https://remhq.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">3 publicaciones, 2011–2012</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2011-02-14-strange-currencies-de-r-e-m.html">
+        <span class="kicker">14 feb 2011 · Monster</span>
+        <span class="display post-card__title">Strange Currencies</span>
+        <span class="post-card__excerpt">«Me he levantado tierna, pero tranquilos amigos que no va a ser la tónica general. Es que resulta que hoy es ese día del año que se dedica…»</span>
+        <span class="post-card__editor">Beita</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2011-09-22-loosing-my-religion-de-r-e-m.html">
+        <span class="kicker">22 sep 2011 · Out of Time</span>
+        <span class="display post-card__title">Losing My Religion</span>
+        <span class="post-card__excerpt">«R.E.M. nunca ha estado entre mi lista de grupos preferidos. Siendo sincero, diré incluso que, salvo excepciones, la música de R.E.M. nunca…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2012-02-19-out-of-time-de-r-e-m.html">
+        <span class="kicker">19 feb 2012 · Out of Time</span>
+        <span class="display post-card__title">Loosing My Religion</span>
+        <span class="post-card__excerpt">«Este es el más que merecidísimo homenaje que desde aquí le quiero mandar a una banda tan enorme como es R.E.M. Fueron el fruto de lo que es…»</span>
+        <span class="post-card__editor">Beita</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=R.E.M">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/r-e-m-monster.html">Monster</a>
+    <a class="chip" href="/archive/albums/r-e-m-out-of-time.html">Out of Time · 2</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">3 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2011-02-14 09:00:56 +0100">14/02/2011</td>
-        <td class="archive-table__cell--title"><a href="/archive/2011-02-14-strange-currencies-de-r-e-m.html">Strange Currencies, de R.E.M</a></td>
-        <td class="archive-table__cell--song">Strange Currencies</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/r-e-m.html">R.E.M</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/r-e-m-monster.html">Monster</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1994.html">1994</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/beita.html">Beita</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2011-09-22 09:00:36 +0200">22/09/2011</td>
-        <td class="archive-table__cell--title"><a href="/archive/2011-09-22-loosing-my-religion-de-r-e-m.html">Losing My Religion, de R.E.M.</a></td>
-        <td class="archive-table__cell--song">Losing My Religion</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/r-e-m.html">R.E.M</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/r-e-m-out-of-time.html">Out of Time</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1991.html">1991</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-02-19 09:00:27 +0100">19/02/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-02-19-out-of-time-de-r-e-m.html">Out of Time, de R.E.M</a></td>
-        <td class="archive-table__cell--song">Loosing My Religion</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/r-e-m.html">R.E.M</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/r-e-m-out-of-time.html">Out of Time</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1991.html">1991</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/albumes.html">Álbumes</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/beita.html">Beita</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

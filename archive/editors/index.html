@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/editors/">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,93 +28,329 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-<h2 class="archive-title">Los 53 autores de dSong</h2>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><span>Autores</span>
+</nav>
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" autocomplete="off">
+<div class="page-head">
+  <h1 class="page-title">Autores</h1>
+  <nav class="tabs" aria-label="Índice">
+    <a class="tabs__tab" href="/archive/editors/" aria-current="page">Autores · 53</a>
+    <a class="tabs__tab" href="/archive/artists/">Artistas · 1.401</a>
+  </nav>
+</div>
+
+<div class="archive-search archive-search--index">
+  <label class="visually-hidden" for="archive-search">Filtrar</label>
+  <input class="archive-search__input" id="archive-search" type="search" placeholder="Busca un autor…" autocomplete="off">
   <span class="archive-search__count" id="archive-search-count" data-noun="autor|autores" aria-live="polite">53 autores</span>
 </div>
 
 <ol class="facet-cards" id="archive-table">
-  <li><a class="facet-cards__card" href="/archive/editors/jesusr.html"><span class="facet-cards__name">jesusr</span> <span class="facet-cards__count">374 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/skuark.html"><span class="facet-cards__name">skuark</span> <span class="facet-cards__count">279 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/jal.html"><span class="facet-cards__name">Jal</span> <span class="facet-cards__count">178 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/monty.html"><span class="facet-cards__name">Monty</span> <span class="facet-cards__count">125 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/silvia.html"><span class="facet-cards__name">Silvia</span> <span class="facet-cards__count">122 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/johnbo.html"><span class="facet-cards__name">Johnbo</span> <span class="facet-cards__count">108 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/ascen.html"><span class="facet-cards__name">Ascen</span> <span class="facet-cards__count">107 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/jose.html"><span class="facet-cards__name">Jose</span> <span class="facet-cards__count">103 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/beita.html"><span class="facet-cards__name">Beita</span> <span class="facet-cards__count">94 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/poncho.html"><span class="facet-cards__name">Poncho</span> <span class="facet-cards__count">93 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/luizk.html"><span class="facet-cards__name">luizk</span> <span class="facet-cards__count">75 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/medinaman.html"><span class="facet-cards__name">medinaman</span> <span class="facet-cards__count">52 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/brian-edward-hyde.html"><span class="facet-cards__name">Brian Edward Hyde</span> <span class="facet-cards__count">44 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/juanje-ra.html"><span class="facet-cards__name">juanje.ra</span> <span class="facet-cards__count">39 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/jacky.html"><span class="facet-cards__name">Jacky</span> <span class="facet-cards__count">12 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/dsong.html"><span class="facet-cards__name">dSong</span> <span class="facet-cards__count">11 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/david.html"><span class="facet-cards__name">david</span> <span class="facet-cards__count">10 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/jose-duenas.html"><span class="facet-cards__name">Jose Dueñas</span> <span class="facet-cards__count">5 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/ome-gak.html"><span class="facet-cards__name">Ome Gak</span> <span class="facet-cards__count">5 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/mari.html"><span class="facet-cards__name">Mari</span> <span class="facet-cards__count">3 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/melgui.html"><span class="facet-cards__name">Melgui</span> <span class="facet-cards__count">3 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/yeg.html"><span class="facet-cards__name">yeg</span> <span class="facet-cards__count">3 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/javi-duenas.html"><span class="facet-cards__name">Javi Dueñas</span> <span class="facet-cards__count">3 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/vicluiper.html"><span class="facet-cards__name">vicluiper</span> <span class="facet-cards__count">3 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/matador.html"><span class="facet-cards__name">matador</span> <span class="facet-cards__count">3 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/m.html"><span class="facet-cards__name">M</span> <span class="facet-cards__count">3 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/alwayscandy.html"><span class="facet-cards__name">alwayscandy</span> <span class="facet-cards__count">3 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/juancho.html"><span class="facet-cards__name">Juancho</span> <span class="facet-cards__count">2 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/josefine.html"><span class="facet-cards__name">josefine</span> <span class="facet-cards__count">2 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/grabieh.html"><span class="facet-cards__name">Grabieh</span> <span class="facet-cards__count">2 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/heroedelproximomilenio.html"><span class="facet-cards__name">heroedelproximomilenio</span> <span class="facet-cards__count">2 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/juan-ruiz.html"><span class="facet-cards__name">Juan Ruiz</span> <span class="facet-cards__count">2 publicaciones</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/carmen-romero.html"><span class="facet-cards__name">Carmen Romero</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/ana-beleita.html"><span class="facet-cards__name">Ana Beleita</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/vicky-castillo.html"><span class="facet-cards__name">Vicky Castillo</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/virginia.html"><span class="facet-cards__name">virginia</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/starks.html"><span class="facet-cards__name">Starks</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/liz.html"><span class="facet-cards__name">Liz</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/dori-nami.html"><span class="facet-cards__name">dori_nami</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/jose-fernandez-alameda.html"><span class="facet-cards__name">José Fernández Alameda</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/ilde.html"><span class="facet-cards__name">Ilde</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/lolosonico.html"><span class="facet-cards__name">lolosonico</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/kilfer.html"><span class="facet-cards__name">KilFer</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/reginacc.html"><span class="facet-cards__name">reginacc</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/eltrucha.html"><span class="facet-cards__name">ElTrucha</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/carmen-m.html"><span class="facet-cards__name">Carmen.M</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/modo-6-6-6.html"><span class="facet-cards__name">Modo 6.6.6</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/falin-edo.html"><span class="facet-cards__name">falin_edo</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/magamu.html"><span class="facet-cards__name">magamu</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/manuel-morillas-sanchez.html"><span class="facet-cards__name">Manuel Morillas Sánchez</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/alberto-escabias-shone.html"><span class="facet-cards__name">Alberto Escabias Shone</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/ferdinando.html"><span class="facet-cards__name">ferdinando</span> <span class="facet-cards__count">1 publicación</span></a></li>
-  <li><a class="facet-cards__card" href="/archive/editors/marinela.html"><span class="facet-cards__name">Marinela</span> <span class="facet-cards__count">1 publicación</span></a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/jesusr.html"><span class="display facet-cards__initial" aria-hidden="true">JES</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/3627cf44a707970b4f2b493e78030448?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">374</span>
+    <span class="facet-cards__name">jesusr</span>
+    <span class="facet-cards__sub">artículos · 2009–2016</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/skuark.html"><span class="display facet-cards__initial" aria-hidden="true">SKU</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">279</span>
+    <span class="facet-cards__name">skuark</span>
+    <span class="facet-cards__sub">artículos · 2009–2014</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/jal.html"><span class="display facet-cards__initial" aria-hidden="true">JAL</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/f42869219445369bbfc8dabc926d714a?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">178</span>
+    <span class="facet-cards__name">Jal</span>
+    <span class="facet-cards__sub">artículos · 2011–2014</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/monty.html"><span class="display facet-cards__initial" aria-hidden="true">MON</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/bebd502207c63b6e2caa00dd3e297672?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">125</span>
+    <span class="facet-cards__name">Monty</span>
+    <span class="facet-cards__sub">artículos · 2012–2017</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/silvia.html"><span class="display facet-cards__initial" aria-hidden="true">SIL</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/5f772767c24124a1f66fe4fd0c35f6c7?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">122</span>
+    <span class="facet-cards__name">Silvia</span>
+    <span class="facet-cards__sub">artículos · 2011–2014</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/johnbo.html"><span class="display facet-cards__initial" aria-hidden="true">JOH</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/1ec93d310204e8b4e2562ec656d94568?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">108</span>
+    <span class="facet-cards__name">Johnbo</span>
+    <span class="facet-cards__sub">artículos · 2011–2015</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/ascen.html"><span class="display facet-cards__initial" aria-hidden="true">ASC</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/d6053ebb23bd256b19517c7e733639ce?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">107</span>
+    <span class="facet-cards__name">Ascen</span>
+    <span class="facet-cards__sub">artículos · 2012–2014</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/jose.html"><span class="display facet-cards__initial" aria-hidden="true">JOS</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/7a499d70b8711d2d3b8726bfd8b430ec?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">103</span>
+    <span class="facet-cards__name">Jose</span>
+    <span class="facet-cards__sub">artículos · 2009–2011</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/beita.html"><span class="display facet-cards__initial" aria-hidden="true">BEI</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/8d6372053a84d687208517cc9a9627d6?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">94</span>
+    <span class="facet-cards__name">Beita</span>
+    <span class="facet-cards__sub">artículos · 2010–2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/poncho.html"><span class="display facet-cards__initial" aria-hidden="true">PON</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/74291eae2bd3251783b8aa958e5ffd3c?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">93</span>
+    <span class="facet-cards__name">Poncho</span>
+    <span class="facet-cards__sub">artículos · 2009–2014</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/luizk.html"><span class="display facet-cards__initial" aria-hidden="true">LUI</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/616b25790f47c73ebb30c76c020fac2e?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">75</span>
+    <span class="facet-cards__name">luizk</span>
+    <span class="facet-cards__sub">artículos · 2009–2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/medinaman.html"><span class="display facet-cards__initial" aria-hidden="true">MED</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/c0e3284ae0bbc761f3ece32ab7fbc47f?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">52</span>
+    <span class="facet-cards__name">medinaman</span>
+    <span class="facet-cards__sub">artículos · 2012–2014</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/brian-edward-hyde.html"><span class="display facet-cards__initial" aria-hidden="true">BEH</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/2f64fccdc715052a4212341e099278e3?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">44</span>
+    <span class="facet-cards__name">Brian Edward Hyde</span>
+    <span class="facet-cards__sub">artículos · 2012–2014</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/juanje-ra.html"><span class="display facet-cards__initial" aria-hidden="true">JR</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/0f148e2e5a6029397720e7781ad87871?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">39</span>
+    <span class="facet-cards__name">juanje.ra</span>
+    <span class="facet-cards__sub">artículos · 2009–2011</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/jacky.html"><span class="display facet-cards__initial" aria-hidden="true">JAC</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/2e1c9658f5bd8297280f59d0a8d5bac5?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">12</span>
+    <span class="facet-cards__name">Jacky</span>
+    <span class="facet-cards__sub">artículos · 2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/dsong.html"><span class="display facet-cards__initial" aria-hidden="true">DSO</span>
+    <span class="display facet-cards__count">11</span>
+    <span class="facet-cards__name">dSong</span>
+    <span class="facet-cards__sub">artículos · 2009–2013</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/david.html"><span class="display facet-cards__initial" aria-hidden="true">DAV</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/8bd05d3f3d24c9ea891a0daa61f9d325?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">10</span>
+    <span class="facet-cards__name">david</span>
+    <span class="facet-cards__sub">artículos · 2009–2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/jose-duenas.html"><span class="display facet-cards__initial" aria-hidden="true">JD</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/5eced78a29a69f87bb11c96853a66bec?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">5</span>
+    <span class="facet-cards__name">Jose Dueñas</span>
+    <span class="facet-cards__sub">artículos · 2009</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/ome-gak.html"><span class="display facet-cards__initial" aria-hidden="true">OG</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/ab5589a036c1e14dc96a2ebd4089b588?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">5</span>
+    <span class="facet-cards__name">Ome Gak</span>
+    <span class="facet-cards__sub">artículos · 2012–2013</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/mari.html"><span class="display facet-cards__initial" aria-hidden="true">MAR</span>
+    <span class="display facet-cards__count">3</span>
+    <span class="facet-cards__name">Mari</span>
+    <span class="facet-cards__sub">artículos · 2009–2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/melgui.html"><span class="display facet-cards__initial" aria-hidden="true">MEL</span>
+    <span class="display facet-cards__count">3</span>
+    <span class="facet-cards__name">Melgui</span>
+    <span class="facet-cards__sub">artículos · 2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/yeg.html"><span class="display facet-cards__initial" aria-hidden="true">YEG</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/f441bb559a9c53ec4df507f939bc8f62?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">3</span>
+    <span class="facet-cards__name">yeg</span>
+    <span class="facet-cards__sub">artículos · 2010–2013</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/javi-duenas.html"><span class="display facet-cards__initial" aria-hidden="true">JD</span>
+    <span class="display facet-cards__count">3</span>
+    <span class="facet-cards__name">Javi Dueñas</span>
+    <span class="facet-cards__sub">artículos · 2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/vicluiper.html"><span class="display facet-cards__initial" aria-hidden="true">VIC</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/165f946c43e6a8f06a4828c3534892e5?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">3</span>
+    <span class="facet-cards__name">vicluiper</span>
+    <span class="facet-cards__sub">artículos · 2010–2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/matador.html"><span class="display facet-cards__initial" aria-hidden="true">MAT</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/724056b1b3e7b93aeac773529c367f29?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">3</span>
+    <span class="facet-cards__name">matador</span>
+    <span class="facet-cards__sub">artículos · 2010–2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/m.html"><span class="display facet-cards__initial" aria-hidden="true">M</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/d96e540646612ded6bcc9c29a475a018?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">3</span>
+    <span class="facet-cards__name">M</span>
+    <span class="facet-cards__sub">artículos · 2010–2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/alwayscandy.html"><span class="display facet-cards__initial" aria-hidden="true">ALW</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/90b7fd609161ec25c8bc3859e823e2c4?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">3</span>
+    <span class="facet-cards__name">alwayscandy</span>
+    <span class="facet-cards__sub">artículos · 2011–2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/juancho.html"><span class="display facet-cards__initial" aria-hidden="true">JUA</span>
+    <span class="display facet-cards__count">2</span>
+    <span class="facet-cards__name">Juancho</span>
+    <span class="facet-cards__sub">artículos · 2009–2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/josefine.html"><span class="display facet-cards__initial" aria-hidden="true">JOS</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/fcd1c96bcb97673f8f73edf0ee504309?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">2</span>
+    <span class="facet-cards__name">josefine</span>
+    <span class="facet-cards__sub">artículos · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/grabieh.html"><span class="display facet-cards__initial" aria-hidden="true">GRA</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/4404d63b8d2fb5d6d05d0ee3451ccf02?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">2</span>
+    <span class="facet-cards__name">Grabieh</span>
+    <span class="facet-cards__sub">artículos · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/heroedelproximomilenio.html"><span class="display facet-cards__initial" aria-hidden="true">HER</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/9b364e0099965616a80400523b766c3f?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">2</span>
+    <span class="facet-cards__name">heroedelproximomilenio</span>
+    <span class="facet-cards__sub">artículos · 2013</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/juan-ruiz.html"><span class="display facet-cards__initial" aria-hidden="true">JR</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/14acb446ab2d4c1cf94546eb060ddfc1?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">2</span>
+    <span class="facet-cards__name">Juan Ruiz</span>
+    <span class="facet-cards__sub">artículos · 2015</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/carmen-romero.html"><span class="display facet-cards__initial" aria-hidden="true">CR</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Carmen Romero</span>
+    <span class="facet-cards__sub">artículo · 2009</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/ana-beleita.html"><span class="display facet-cards__initial" aria-hidden="true">AB</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Ana Beleita</span>
+    <span class="facet-cards__sub">artículo · 2009</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/vicky-castillo.html"><span class="display facet-cards__initial" aria-hidden="true">VC</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/9bf3d8843bcc726cfaf842ac7a4357ca?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Vicky Castillo</span>
+    <span class="facet-cards__sub">artículo · 2009</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/virginia.html"><span class="display facet-cards__initial" aria-hidden="true">VIR</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/0f4d147b3fef79c2fe62535c9e966f6d?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">virginia</span>
+    <span class="facet-cards__sub">artículo · 2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/starks.html"><span class="display facet-cards__initial" aria-hidden="true">STA</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Starks</span>
+    <span class="facet-cards__sub">artículo · 2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/liz.html"><span class="display facet-cards__initial" aria-hidden="true">LIZ</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Liz</span>
+    <span class="facet-cards__sub">artículo · 2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/dori-nami.html"><span class="display facet-cards__initial" aria-hidden="true">DN</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">dori_nami</span>
+    <span class="facet-cards__sub">artículo · 2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/jose-fernandez-alameda.html"><span class="display facet-cards__initial" aria-hidden="true">JFA</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">José Fernández Alameda</span>
+    <span class="facet-cards__sub">artículo · 2010</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/ilde.html"><span class="display facet-cards__initial" aria-hidden="true">ILD</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Ilde</span>
+    <span class="facet-cards__sub">artículo · 2011</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/lolosonico.html"><span class="display facet-cards__initial" aria-hidden="true">LOL</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">lolosonico</span>
+    <span class="facet-cards__sub">artículo · 2011</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/kilfer.html"><span class="display facet-cards__initial" aria-hidden="true">KIL</span>
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">KilFer</span>
+    <span class="facet-cards__sub">artículo · 2011</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/reginacc.html"><span class="display facet-cards__initial" aria-hidden="true">REG</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/4eb13a94e42223193d3b70909067c994?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">reginacc</span>
+    <span class="facet-cards__sub">artículo · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/eltrucha.html"><span class="display facet-cards__initial" aria-hidden="true">ELT</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/18f408bf0ef1fd86f737387b8f52fb8a?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">ElTrucha</span>
+    <span class="facet-cards__sub">artículo · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/carmen-m.html"><span class="display facet-cards__initial" aria-hidden="true">CM</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/00d351d63444b21dd2359d3eb2eda29c?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Carmen.M</span>
+    <span class="facet-cards__sub">artículo · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/modo-6-6-6.html"><span class="display facet-cards__initial" aria-hidden="true">M66</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/c31807059bd7ff28143e064c73ef60c8?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Modo 6.6.6</span>
+    <span class="facet-cards__sub">artículo · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/falin-edo.html"><span class="display facet-cards__initial" aria-hidden="true">FE</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/000c55dddb25c8b92a52b3898cc56b3f?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">falin_edo</span>
+    <span class="facet-cards__sub">artículo · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/magamu.html"><span class="display facet-cards__initial" aria-hidden="true">MAG</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/dd1c3e6d7a1200aa29cd9824071740ee?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">magamu</span>
+    <span class="facet-cards__sub">artículo · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/manuel-morillas-sanchez.html"><span class="display facet-cards__initial" aria-hidden="true">MMS</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/a2bdbf30afcda74046b69bb6525b9b40?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Manuel Morillas Sánchez</span>
+    <span class="facet-cards__sub">artículo · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/alberto-escabias-shone.html"><span class="display facet-cards__initial" aria-hidden="true">AES</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/b0e7f753b19a752f8f7db54b011fc8cb?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Alberto Escabias Shone</span>
+    <span class="facet-cards__sub">artículo · 2012</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/ferdinando.html"><span class="display facet-cards__initial" aria-hidden="true">FER</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/e769994ab6f2689c7c5827be4cd73086?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">ferdinando</span>
+    <span class="facet-cards__sub">artículo · 2013</span>
+  </a></li>
+  <li><a class="facet-cards__card facet-cards__card--image" href="/archive/editors/marinela.html"><span class="display facet-cards__initial" aria-hidden="true">MAR</span><img class="facet-cards__image" src="https://s.gravatar.com/avatar/fae2a88a94bf1e13350575f9e205571d?s=128&amp;d=404" alt=""  loading="lazy" decoding="async" width="64" height="64">
+    <span class="display facet-cards__count">1</span>
+    <span class="facet-cards__name">Marinela</span>
+    <span class="facet-cards__sub">artículo · 2015</span>
+  </a></li>
 </ol>
+<p class="archive__empty" id="archive-search-empty" hidden>Ningún nombre coincide.</p>
 
-<script src="/js/archive-table-search.js?v=762566a0"></script>
+<script src="/js/archive-table-search.js?v=eca49726"></script>
 
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

@@ -14,11 +14,12 @@
   <meta property="og:description" content="Si hay alguien que convierte sus discos en verdaderas historias relatadas es Julio de la Rosa . El jerezano empezó su carrera en solitario con un sublime…">
   <meta property="og:url" content="https://dsong.es/archive/2011-01-02-especial-album-la-herida-universal-de-julio-de-la-rosa.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,81 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2011-01-01-10-temas-que-me-acompanaron-en-la-primera-decada-del-s-xxi.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">10 temas que me acompañaron en la primera década del S.XXI</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2011-01-03-gling-glo-de-bjork-gudmundsdottir-trio-gudmundar-ingolfssonar.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Gling Glo, de Björk Guðmundsdóttir &amp; Tríó Guðmundar Ingólfssonar</span>
-  </a>
-</nav>
-
 <div class="post-view">
-  <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/albumes.html">Álbumes</a></span>
-  <h2 class="post-view__title">Especial Álbum: La Herida Universal, de Julio de la Rosa</h2>
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/especiales/">Especiales</a><a href="/archive/especiales/#album">Álbumes</a><span>Nº 533</span>
+  </nav>
+
+  <header class="post-view__header"><span class="kicker special-tag">Especial · Álbum</span>
+  <h1 class="display post-view__title">La Herida Universal</h1>
+  <p class="post-view__by">de <a href="/archive/artists/julio-de-la-rosa.html">Julio de la Rosa</a> · 2010</p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="https://twitter.com/#!/Seronda_" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/d96e540646612ded6bcc9c29a475a018?s=20" alt="" />
-            <span class="post-view__editor-name">M</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2011-01-02T09:00:47+01:00">2 de Enero de 2011</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <a href="https://twitter.com/#!/Seronda_" target="_blank"><span class="post-view__editor-name">M</span></a>
+    </span>
+    <time class="post-view__date" datetime="2011-01-02T09:00:47+01:00">domingo, 2 de enero de 2011</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Si hay alguien que convierte sus discos en verdaderas historias relatadas es <strong>Julio de la Rosa</strong>. El jerezano empezó su carrera en solitario con un sublime M.O.S., alejado de lo hecho anteriormente con El Hombre Burbuja (discos siempre poco valorados) donde ya rompió moldes en el panorama español. En solitario sigue la línea narrativa que lo ha caracterizado siempre, para algo es, además de cantante, compositor y escritor. Un disco de fragmentos de poemas que entremezcla con explosiones de guitarra.</p>
+<p>Un año después presentaría el que es su disco más oscuro, pero a la vez más profundo, da un giro de tuerca más en la música, usando bases electrónicas pausadas, que dan una sensación casi hipnótica, e instrumentos exóticos. Aquí una vez más nos cuenta la historia de un hombre que en su desgracia su vida pasa por conducciones temerarias, alcohol y puticlubs. En el año 2008 actuará de “espectador” con temas, aparentemente ,más accesibles, ayudado de una instrumentación más sencilla y menos pensada. Un disco grabado como si de una maqueta entre amigos se tratara.</p>
+<p>Este año, ya pasado, Julio de la rosa, después de relatarnos otras historias en sus anteriores discos nos presenta <strong>“La Herida Universal</strong>”. Siempre ha destacado por ser un letrista espectacular, por saber introducirnos en historias de frustrados personajes. Aquí hace un nuevo disco narrativo, donde ningún tema sobra ni falta. Este disco es una hecatombe de altibajos emocionales que describen claramente lo evidente, que la “herida universal” tiene eso; que en una ruptura digna de mención hay días que no te puedes levantar de la cama y días de canallería que te comes el mundo con el descaro más sinvergüenza. El disco empieza con el “que somos uno, ¿no lo ves?”, para terminar sentenciando “sin ti no estoy mal”, marcando así el proceso inevitable de curación universal.</p>
+<p>Proceso con subidas como <em>“Entresemana” “Las Camareras” “Hasta que te hartes” “Tan Amigos”</em>, para luego caer en picado en temas como <em>“El anzuelo” o “El Temporal”.</em> Y temas intermedios que pueden ser terriblemente adictivos, como <em>&quot;Canción de guerra&quot;</em> o <em>“El amor desperdiciado”,</em> tema que le dejamos a la escucha.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/1ao86U8U2CijmnUcbHYa6B" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/379902225" width="100%" height="450" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/julio-de-la-rosa.html">Julio de la Rosa</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/733a0f21-236b-4ab0-82aa-0d35ebeccbed" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -99,7 +118,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://open.spotify.com/album/1ao86U8U2CijmnUcbHYa6B" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/379902225" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/albumes.html">Álbumes</a></dd>
@@ -109,42 +128,13 @@
       <dd>2 de enero de 2011</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Si hay alguien que convierte sus discos en verdaderas historias relatadas es <strong>Julio de la Rosa</strong>. El jerezano empezó su carrera en solitario con un sublime M.O.S., alejado de lo hecho anteriormente con El Hombre Burbuja (discos siempre poco valorados) donde ya rompió moldes en el panorama español. En solitario sigue la línea narrativa que lo ha caracterizado siempre, para algo es, además de cantante, compositor y escritor. Un disco de fragmentos de poemas que entremezcla con explosiones de guitarra.</p>
-<p>Un año después presentaría el que es su disco más oscuro, pero a la vez más profundo, da un giro de tuerca más en la música, usando bases electrónicas pausadas, que dan una sensación casi hipnótica, e instrumentos exóticos. Aquí una vez más nos cuenta la historia de un hombre que en su desgracia su vida pasa por conducciones temerarias, alcohol y puticlubs. En el año 2008 actuará de “espectador” con temas, aparentemente ,más accesibles, ayudado de una instrumentación más sencilla y menos pensada. Un disco grabado como si de una maqueta entre amigos se tratara.</p>
-<p>Este año, ya pasado, Julio de la rosa, después de relatarnos otras historias en sus anteriores discos nos presenta <strong>“La Herida Universal</strong>”. Siempre ha destacado por ser un letrista espectacular, por saber introducirnos en historias de frustrados personajes. Aquí hace un nuevo disco narrativo, donde ningún tema sobra ni falta. Este disco es una hecatombe de altibajos emocionales que describen claramente lo evidente, que la “herida universal” tiene eso; que en una ruptura digna de mención hay días que no te puedes levantar de la cama y días de canallería que te comes el mundo con el descaro más sinvergüenza. El disco empieza con el “que somos uno, ¿no lo ves?”, para terminar sentenciando “sin ti no estoy mal”, marcando así el proceso inevitable de curación universal.</p>
-<p>Proceso con subidas como <em>“Entresemana” “Las Camareras” “Hasta que te hartes” “Tan Amigos”</em>, para luego caer en picado en temas como <em>“El anzuelo” o “El Temporal”.</em> Y temas intermedios que pueden ser terriblemente adictivos, como <em>&quot;Canción de guerra&quot;</em> o <em>“El amor desperdiciado”,</em> tema que le dejamos a la escucha.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
-      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/1ao86U8U2CijmnUcbHYa6B" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/379902225" width="100%" height="450" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (1)</summary>
+      <summary class="post-view__comments-summary"><strong>1 comentario</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -158,7 +148,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-01-03T11:54:40+01:00">3 de Enero de 2011, 11:54</time>
+              <time class="post-view__comment-date" datetime="2011-01-03T11:54:40+01:00">3 de enero de 2011, 11:54</time>
             </div>
           </li>
         
@@ -172,22 +162,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2011-01-01-10-temas-que-me-acompanaron-en-la-primera-decada-del-s-xxi.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">10 temas que me acompañaron en la primera década del S.XXI</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2011-01-03-gling-glo-de-bjork-gudmundsdottir-trio-gudmundar-ingolfssonar.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Gling Glo, de Björk Guðmundsdóttir &amp; Tríó Guðmundar Ingólfssonar</span>
+    <span class="post-nav__editor">Beita</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

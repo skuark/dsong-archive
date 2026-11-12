@@ -14,11 +14,12 @@
   <meta property="og:description" content="Seguimos un día más con las recomendaciones que nos van llegando para la participación en el factor dSong . En este caso la participante es &#39;Beita&#39; , quien ya…">
   <meta property="og:url" content="https://dsong.es/archive/2010-05-07-factor-dsong-beita-sunny-weather-de-lisa-ekdahl.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,91 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-05-06-factor-dsong-maripili-ahora-se-que-me-quieres-de-formula-v.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Factor dSong [Maripili] - Ahora sé que me quieres, de Formula V</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-05-08-tu-frialdad-de-triana.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Tu Frialdad, de Triana</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2010">2010</a><span>Nº 324</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Factor dSong [Beita] - Sunny weather, de Lisa Ekdahl</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Jazz</span>
+  <h1 class="display post-view__title">Factor dSong [Beita] - Sunny weather</h1>
+  <p class="post-view__by">de <a href="/archive/artists/lisa-ekdahl.html">Lisa Ekdahl</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/8d6372053a84d687208517cc9a9627d6?s=20" alt="" />
-            <span class="post-view__editor-name">Beita</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-05-07T09:00:48+02:00">7 de Mayo de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Beita</span>
+    </span>
+    <time class="post-view__date" datetime="2010-05-07T09:00:48+02:00">viernes, 7 de mayo de 2010</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Seguimos un día más con las recomendaciones que nos van llegando para la participación en el <a href="https://dsong.es/archive/2010-04-26-buscamos-una-colaboradora-bienvenidas-al-factor-dsong.html">factor dSong</a>. En este caso la participante es <em>'Beita'</em>, quien ya nos dejó hace unos días <a href="https://dsong.es/archive/2010-04-26-svefn-g-englar-de-sigur-ros.html">otra recomendación del lector</a>. Agradecemos nuevamente tu interés por dSong y te deseamos, al igual que al resto de participantes, mucha suerte en las votaciones que tendrán lugar una vez presentemos todas las candidaturas que nos lleguen.  A las que aún no se han animado, aún estáis a tiempo. Tenéis hasta el domingo a última hora.</p>
+<h2>Recomendación</h2>
+<blockquote>Este tema se encuadra dentro de esas maravillosas rarezas que surgen en el mundo de la música, y es que <strong>Lisa Ekdahl</strong> que normalmente se encuadra entre ritmos mas jazzisticos, en este trabajo se desmarca con este toque brasileño de bossa nova que hace destacar su increíble calidad vocal, si, su impresionante y cristalina voz.
+<p>Lisa Ekdahl, nacida en Suecia, se une en este disco con el guitarrista Salvadore Poe para crear esta pequeña joya. Normalmente canta en sueco todos sus temas de jazz y en inglés los demás, pero si tengo que posicionarme considero que en inglés canta como un verdadero y autentico ángel.</p>
+<p>El disco entero desprende una calidez y una sensualidad extrema que es capaz de transportarte instantáneamente a un mundo de dulce sensibilidad.</p>
+<p>Me gustaría dedicar este tema a todas las chicas que aunque no lo parezcamos también nos gusta una cenita romántica.</blockquote></p>
+<h2>Bio</h2>
+<blockquote>Hace ya unas "pocas" primaveras que me dedico a escuchar kilos y kilos de musica que pasan por mis manos o que pillo religiosamente en radio 3. Debido a ser un culo inquieto y a haberme dedicado a mochilearme Europa entera durante años, he descubierto muchísima música folk que considero debe ser sacada a la luz. Pero, tranquilos que no voy a recomendar a mocedades (aun). Me encantan los grupos con voces femeninas o las cantautoras (pero no solo) y espero con esto poder dar mi toquecito femenino.</blockquote>
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/4vUzU7Em-UU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/4uFtmnlPaQfiXlz8KCEfiC" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/274017660?i=274017673" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/lisa-ekdahl.html">Lisa Ekdahl</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/560c4706-0868-4c89-be8b-b26fb7754aba" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +136,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=4vUzU7Em-UU" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/4uFtmnlPaQfiXlz8KCEfiC" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/274017660?i=274017673" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -117,51 +146,13 @@
       <dd>7 de mayo de 2010</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Seguimos un día más con las recomendaciones que nos van llegando para la participación en el <a href="https://dsong.es/archive/2010-04-26-buscamos-una-colaboradora-bienvenidas-al-factor-dsong.html">factor dSong</a>. En este caso la participante es <em>'Beita'</em>, quien ya nos dejó hace unos días <a href="https://dsong.es/archive/2010-04-26-svefn-g-englar-de-sigur-ros.html">otra recomendación del lector</a>. Agradecemos nuevamente tu interés por dSong y te deseamos, al igual que al resto de participantes, mucha suerte en las votaciones que tendrán lugar una vez presentemos todas las candidaturas que nos lleguen.  A las que aún no se han animado, aún estáis a tiempo. Tenéis hasta el domingo a última hora.</p>
-<h2>Recomendación</h2>
-<blockquote>Este tema se encuadra dentro de esas maravillosas rarezas que surgen en el mundo de la música, y es que <strong>Lisa Ekdahl</strong> que normalmente se encuadra entre ritmos mas jazzisticos, en este trabajo se desmarca con este toque brasileño de bossa nova que hace destacar su increíble calidad vocal, si, su impresionante y cristalina voz.
-<p>Lisa Ekdahl, nacida en Suecia, se une en este disco con el guitarrista Salvadore Poe para crear esta pequeña joya. Normalmente canta en sueco todos sus temas de jazz y en inglés los demás, pero si tengo que posicionarme considero que en inglés canta como un verdadero y autentico ángel.</p>
-<p>El disco entero desprende una calidez y una sensualidad extrema que es capaz de transportarte instantáneamente a un mundo de dulce sensibilidad.</p>
-<p>Me gustaría dedicar este tema a todas las chicas que aunque no lo parezcamos también nos gusta una cenita romántica.</blockquote></p>
-<h2>Bio</h2>
-<blockquote>Hace ya unas "pocas" primaveras que me dedico a escuchar kilos y kilos de musica que pasan por mis manos o que pillo religiosamente en radio 3. Debido a ser un culo inquieto y a haberme dedicado a mochilearme Europa entera durante años, he descubierto muchísima música folk que considero debe ser sacada a la luz. Pero, tranquilos que no voy a recomendar a mocedades (aun). Me encantan los grupos con voces femeninas o las cantautoras (pero no solo) y espero con esto poder dar mi toquecito femenino.</blockquote>
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/4vUzU7Em-UU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/4uFtmnlPaQfiXlz8KCEfiC" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/274017660?i=274017673" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (7)</summary>
+      <summary class="post-view__comments-summary"><strong>7 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -175,7 +166,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-07T11:56:05+02:00">7 de Mayo de 2010, 11:56</time>
+              <time class="post-view__comment-date" datetime="2010-05-07T11:56:05+02:00">7 de mayo de 2010, 11:56</time>
             </div>
           </li>
         
@@ -190,7 +181,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-07T16:42:01+02:00">7 de Mayo de 2010, 16:42</time>
+              <time class="post-view__comment-date" datetime="2010-05-07T16:42:01+02:00">7 de mayo de 2010, 16:42</time>
             </div>
           </li>
         
@@ -209,7 +200,7 @@ mi concepcion de bossa nova se reducía a las grandes clásicas brasileiras... p
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-07T18:23:56+02:00">7 de Mayo de 2010, 18:23</time>
+              <time class="post-view__comment-date" datetime="2010-05-07T18:23:56+02:00">7 de mayo de 2010, 18:23</time>
             </div>
           </li>
         
@@ -224,7 +215,7 @@ mi concepcion de bossa nova se reducía a las grandes clásicas brasileiras... p
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-08T14:03:30+02:00">8 de Mayo de 2010, 14:03</time>
+              <time class="post-view__comment-date" datetime="2010-05-08T14:03:30+02:00">8 de mayo de 2010, 14:03</time>
             </div>
           </li>
         
@@ -239,7 +230,7 @@ mi concepcion de bossa nova se reducía a las grandes clásicas brasileiras... p
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-08T17:18:46+02:00">8 de Mayo de 2010, 17:18</time>
+              <time class="post-view__comment-date" datetime="2010-05-08T17:18:46+02:00">8 de mayo de 2010, 17:18</time>
             </div>
           </li>
         
@@ -254,7 +245,7 @@ mi concepcion de bossa nova se reducía a las grandes clásicas brasileiras... p
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-09T17:47:58+02:00">9 de Mayo de 2010, 17:47</time>
+              <time class="post-view__comment-date" datetime="2010-05-09T17:47:58+02:00">9 de mayo de 2010, 17:47</time>
             </div>
           </li>
         
@@ -269,7 +260,7 @@ mi concepcion de bossa nova se reducía a las grandes clásicas brasileiras... p
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-12T18:54:36+02:00">12 de Mayo de 2010, 18:54</time>
+              <time class="post-view__comment-date" datetime="2010-05-12T18:54:36+02:00">12 de mayo de 2010, 18:54</time>
             </div>
           </li>
         
@@ -283,22 +274,23 @@ mi concepcion de bossa nova se reducía a las grandes clásicas brasileiras... p
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-05-06-factor-dsong-maripili-ahora-se-que-me-quieres-de-formula-v.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Factor dSong [Maripili] - Ahora sé que me quieres, de Formula V</span>
+    <span class="post-nav__editor">virginia</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-05-08-tu-frialdad-de-triana.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Tu Frialdad, de Triana</span>
+    <span class="post-nav__editor">juanje.ra</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

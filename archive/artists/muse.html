@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/muse.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,114 +28,115 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista Muse</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/9c9f1380-2516-4fc9-a3e6-f9f61941d090" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Muse_2006_003.jpg/330px-Muse_2006_003.jpg" width="320" height="250" alt="Muse" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Muse_2006_003.jpg" rel="noopener">Warner Music Sweden · CC BY 3.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Muse</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Muse_2006_003.jpg/330px-Muse_2006_003.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Muse_2006_003.jpg/330px-Muse_2006_003.jpg" width="320" height="250" alt="Muse" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Muse_2006_003.jpg" rel="noopener" target="_blank">Warner Music Sweden · CC BY 3.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>Muse es una banda de rock formada en 1994 en Teignmouth, Devon (Inglaterra). Desde su formación, sus integrantes son: Matt Bellamy (voz, guitarra, piano, composición), Christopher Wolstenholme (bajo, coros) y Dominic Howard (batería, percusión).</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Muse" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/reino-unido.html">Reino Unido</a></p>
+    <h1 class="page-title artist-hero__name">Muse</h1>
+    <p class="artist-hero__bio">Muse es una banda de rock formada en 1994 en Teignmouth, Devon (Inglaterra). Desde su formación, sus integrantes son: Matt Bellamy (voz, guitarra, piano, composición), Christopher Wolstenholme (bajo, coros) y Dominic Howard (batería, percusión).</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Muse" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/9c9f1380-2516-4fc9-a3e6-f9f61941d090" rel="noopener">MusicBrainz ↗</a><a href="https://muse.mu/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">5 publicaciones, 2009–2012</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2009-09-27-the-resistance-de-muse.html">
+        <span class="kicker">27 sep 2009 · The Resistance</span>
+        <span class="display post-card__title">Especial Album: The resistance</span>
+        <span class="post-card__excerpt">«El disco más esperado del año para muchos. La gran luz de la innovación musical. La maestría. La mezcla de estilos. Todo esto y más ha sido…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2010-06-20-especial-concierto-de-muse-madrid-1662010-estadio-vicente-calderon.html">
+        <span class="kicker">20 jun 2010 · Conciertos</span>
+        <span class="display post-card__title">Cierre de concierto</span>
+        <span class="post-card__excerpt">«A eso de las 7 entramos al estadio Beita, el Olivo y yo, momento en el que abrí la boca y no la cerré hasta casi 5 horas más tarde. Muse…»</span>
+        <span class="post-card__editor">luizk</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2011-06-13-starlight-de-muse.html">
+        <span class="kicker">13 jun 2011 · Black Holes and Revelations</span>
+        <span class="display post-card__title">Starlight</span>
+        <span class="post-card__excerpt">«Entonces se sentó, tomo el ordenador cuidadosamente y al hacer play en la canción dijo: &quot;Creo que esta es la única canción que nos gusta a…»</span>
+        <span class="post-card__editor">luizk</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2012-07-26-survival-de-muse.html">
+        <span class="kicker">26 jul 2012 · The 2nd Law</span>
+        <span class="display post-card__title">Survival</span>
+        <span class="post-card__excerpt">«Todo evento deportivo a gran escala suele venir acompañado de una canción oficial que adorna los spots publicitarios y las sintonías de las…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2012-12-24-exogenesis-symphony-part-3-redemption-de-muse.html">
+        <span class="kicker">24 dic 2012 · The Resistance</span>
+        <span class="display post-card__title">Exogenesis: Symphony, Part 1: Overture</span>
+        <span class="post-card__excerpt">«El quinto trabajo de estudio de Muse, The Resistance, de 2009, concluye con una sinfónia de unos 12 minutos dividida en tres movimientos, y…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Muse">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/muse-the-resistance.html">The Resistance · 2</a>
+    <a class="chip" href="/archive/albums/muse-black-holes-and-revelations.html">Black Holes and Revelations</a>
+    <a class="chip" href="/archive/albums/muse-the-2nd-law.html">The 2nd Law</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">5 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2009-09-27 12:15:19 +0200">27/09/2009</td>
-        <td class="archive-table__cell--title"><a href="/archive/2009-09-27-the-resistance-de-muse.html">Especial Album: The resistance, de Muse</a></td>
-        <td class="archive-table__cell--song"></td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/muse.html">Muse</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/muse-the-resistance.html">The Resistance</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2009.html">2009</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/albumes.html">Álbumes</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-06-20 09:00:11 +0200">20/06/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-06-20-especial-concierto-de-muse-madrid-1662010-estadio-vicente-calderon.html">Especial: Concierto de Muse (Madrid, 16/6/2010, Estadio Vicente Calderón)</a></td>
-        <td class="archive-table__cell--song">Cierre de concierto</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/muse.html">Muse</a></td>
-        <td class="archive-table__cell--album"></td>
-        <td class="archive-table__cell--year"></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/conciertos.html">Conciertos</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/luizk.html">luizk</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2011-06-13 09:00:05 +0200">13/06/2011</td>
-        <td class="archive-table__cell--title"><a href="/archive/2011-06-13-starlight-de-muse.html">Starlight, de Muse</a></td>
-        <td class="archive-table__cell--song">Starlight</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/muse.html">Muse</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/muse-black-holes-and-revelations.html">Black Holes and Revelations</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2006.html">2006</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/luizk.html">luizk</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-07-26 08:00:11 +0200">26/07/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-07-26-survival-de-muse.html">Survival, de Muse</a></td>
-        <td class="archive-table__cell--song">Survival</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/muse.html">Muse</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/muse-the-2nd-law.html">The 2nd Law</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2012.html">2012</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-12-24 08:00:09 +0100">24/12/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-12-24-exogenesis-symphony-part-3-redemption-de-muse.html">Exogenesis: Symphony Part 3 - Redemption, de Muse</a></td>
-        <td class="archive-table__cell--song">Exogenesis: Symphony, Part 1: Overture</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/muse.html">Muse</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/muse-the-resistance.html">The Resistance</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2009.html">2009</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

@@ -14,11 +14,12 @@
   <meta property="og:description" content="“El general que se convirtió en esclavo, el esclavo que se convirtió en gladiador, el gladiador que desafió a un imperio” Esta semana hablaremos de una de las…">
   <meta property="og:url" content="https://dsong.es/archive/2013-04-21-bso-gladiator.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,88 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2013-04-20-them-bones-de-alice-in-chains.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Them Bones, de Alice In Chains</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2013-04-22-its-alright-its-ok-de-primal-scream.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">It&#39;s Alright, It&#39;s Ok, de Primal Scream</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2013">2013</a><span>Nº 1309</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a></span>
-  <h2 class="post-view__title">BSO: Gladiator</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a> · bso</span>
+  <h1 class="display post-view__title">BSO: Gladiator</h1>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/c0e3284ae0bbc761f3ece32ab7fbc47f?s=20" alt="" />
-            <span class="post-view__editor-name">medinaman</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2013-04-21T10:00:00+02:00">21 de Abril de 2013</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">medinaman</span>
+    </span>
+    <time class="post-view__date" datetime="2013-04-21T10:00:00+02:00">domingo, 21 de abril de 2013</time>
+    <span>6 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p style="text-align: center;"><strong>“El general que se convirtió en esclavo, el esclavo que se convirtió en gladiador, el gladiador que desafió a un imperio”</strong></p>
+Esta semana hablaremos de una de las películas más espectaculares y grandilocuentes de la historia del cine. Y por supuesto, de su banda sonora, que genero bastante polémica, incluso fue denostada por algunos sectores más conservadores debido a la temática del filme, pero que en ninguno de los casos paso desapercibida ni tampoco indiferente. De hecho es todo un icono en el cine moderno, no solo por el empleo de la música en la misma sino también en la forma de contar la historia y en ofrecernos una visión más que personal de la mano de su director.
+<p>Gladiator es una película enfocada de principio a fin en una exhausta “tragedia griega”. En el año 180, el imperio Romano es amo y señor de todo el mundo conocido, el anciano emperador Marco Aurelio (Richard Harris) decide tras meditarlo mucho transferir el trono a Máximo, (Rusell Crowe) general de los ejércitos y mano derecha del emperador. El problema, y como suele suceder en estos casos, la ansia de poder absoluto que ciega al hijo de Marco Aurelio, Cómodo, hace convertirlo en un ser despiadado que no aceptara tal decisión, matando a su padre y asesinando a toda la familia de Máximo, desterrándolo de sus tierras y condenándolo al exilio.</p>
+<!--more-->
+<p>Gladiator arrasó en su estreno, convirtiéndose así en una de las películas más taquilleras del momento. 5 oscar (fue nominada a mejor banda sonora pero finalmente se la arrebato Tigre y Dragon), 2 globos de oro, 4 premios BAFTA…. La lista como podéis observar es interminable.
+El director de la cinta Ridley Scott es uno de los cineastas más respetados y laureados por la industria de Hollywood, películas como Alíen, el octavo pasajero, Blade Runner o Hannibal le sirvió no solo para demostrar que es uno de los grandes de la talla de Spielberg, Polanski o el propio Zemequis, sino que al igual que le sucede a los grandes posee su propia visión de hacer cine, muy personal pero muy detallista en cuanto a fotografía, guiones y demás. Es cierto que últimamente se le ha criticado bastante por sus últimos trabajos como por ejemplo Robin Hood y Prometheus, donde parece haber perdido algo de forma. Aun así sigue siendo Scott le pese a quien le pese, y seguramente volverá a callar bocas con el estreno en 2015 de su nueva visión del clásico Blade Runner.
+A continuación es el turno de hablar de su fantástica banda sonora, por lo tanto es el turno de hablar de nuestro querido (u odiado según el sector en el que te encuentres, por mi parte es querido, siempre querido) Has Zimmer, el alemán que se encuentra metido en todos los fregados habidos y por haber firma una de sus mejores obras, con todos los elementos característicos que lo han hecho tan conocido. Grandes orquestaciones, uso desmedido de las trompas, mucha percusión y la colaboración de Lisa Gerrard para las voces.</p>
+<p>Cuando he comentado anteriormente que esta película fue criticada por un pequeño sector ultraconservador fue entre otras cosas por la propia banda sonora, el problema es que hasta este momento el cine de gladiadores no estaba precisamente en alza, y las películas que nos hubiera venido a la retina en esos momentos hubieran sido epopeyas como El último Gladiador (1964) o la propia Ben Hur (1959) películas con unas banda sonoras muy pomposas y muchísimo más clásicas en su estructuras. Está claro que si el propio compositor de Ben Hur Miklós Rózsa hubiera escuchado la apuesta de Zimmer lo hubiera lanzado a los leones. A parte de esto, es verdad, que hay algún que otro fragmento, sobre todo en la pieza “The Battle” donde parece haber tomado “prestado” una sección entera del track número 5 de la obra compuesta por Ennio Morricone, en la película El secreto del Sahara del año 1987. Cuesta creer que haya sido casualidad, pero está claro que busco material en donde inspirarse. Es quizás la única nota negativa a este trabajo, por lo demás nada más que objetar. Principalmente estas fueron algunas de las razones por las que no gustaron en un primer momento los acordes de Zimmer para esta película. Pero el cine es quizás uno de los mejores ejemplos de cambio y progreso, no solo en la técnica, sino también en todo el proceso creativo que hay intrínseco. El alemán lo sabe y siempre ha ido un paso por delante en sus trabajos, por eso es y ha sido siempre un visionario, y no nos queda otra que aceptarlo, su trabajo en Gladiator habla por sí solo y funciona increíblemente bien tanto en las secuencias de acción como en los diálogos.
+El comienzo de la película ya de por si es impresionante y la música deja claro lo que vas a ver a partir de ese momento, una historia exageradamente épica que te dejara exhausto hasta la última secuencia del filme. Hans Zimmer en esta ocasión no está solo, y se apoya en Lisa Gerrard, una cantante que es a su vez papel imprescindible en el proceso creativo y compositivo de la película. Un emocionante espectáculo cargado de lirismo absoluto y melodías dotadas de una fuerza y una capacidad motivadora que te desgarrara por dentro.</p>
+<p>¿Suena exagerado todo lo que os digo? Escuchad “Now are wee free” y luego me contáis que os ha parecido, un dato curioso sobre este soundtrack es que la letra no forma parte de ningún idioma, es más bien un lenguaje libre sin ningún significado en particular que ideó Lisa Gerrard para enaltecer aún más la melodía de la voz, se trata principalmente de melismas enfocados en la propia melodía, esta técnica vocal utiliza el recurso de trasladar notas musicales a silabas, lo que genera un halo hipnótico que te ayuda a sentir aún más la profundidad de la línea melódica ideada por Zimmer y Gerrard. Esta técnica es en cierto modo similar a la que se utiliza en el “Cante Jondo”.</p>
+<p>Otras que recomiendo es la propia “The Battle”, “Reunión”, &quot;Strength and Honor&quot; u “Honor Him”. Da igual por donde le eches el lazo a esta banda sonora, te va a sonar increíble de todos modos. Has Zimmer es una de los más grandes compositores vivos del momento, y cada vez que se lo toma en serio crea verdaderas maravillas épicas y emotivas. Me encanta toda esa atmosfera de angustia contenida, melancolía y un toque de esperanza que envuelve toda esta obra. La fuerza que transmite es apabullante, relajaros y escuchad esta maravilla. Piel de gallina en 3…2…1…</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/1yqkE2BoMZaQRABJRJT2HZ" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1510822340" width="100%" height="450" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/lisa-gerrard.html">Lisa Gerrard</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/cd645207-1664-46af-9953-264e9ae54089" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -103,7 +129,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://open.spotify.com/album/1yqkE2BoMZaQRABJRJT2HZ" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/1510822340" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(enlazado en MusicBrainz)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a></dd>
@@ -113,43 +139,7 @@
       <dd>21 de abril de 2013</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p style="text-align: center;"><strong>“El general que se convirtió en esclavo, el esclavo que se convirtió en gladiador, el gladiador que desafió a un imperio”</strong></p>
-Esta semana hablaremos de una de las películas más espectaculares y grandilocuentes de la historia del cine. Y por supuesto, de su banda sonora, que genero bastante polémica, incluso fue denostada por algunos sectores más conservadores debido a la temática del filme, pero que en ninguno de los casos paso desapercibida ni tampoco indiferente. De hecho es todo un icono en el cine moderno, no solo por el empleo de la música en la misma sino también en la forma de contar la historia y en ofrecernos una visión más que personal de la mano de su director.
-<p>Gladiator es una película enfocada de principio a fin en una exhausta “tragedia griega”. En el año 180, el imperio Romano es amo y señor de todo el mundo conocido, el anciano emperador Marco Aurelio (Richard Harris) decide tras meditarlo mucho transferir el trono a Máximo, (Rusell Crowe) general de los ejércitos y mano derecha del emperador. El problema, y como suele suceder en estos casos, la ansia de poder absoluto que ciega al hijo de Marco Aurelio, Cómodo, hace convertirlo en un ser despiadado que no aceptara tal decisión, matando a su padre y asesinando a toda la familia de Máximo, desterrándolo de sus tierras y condenándolo al exilio.</p>
-<!--more-->
-<p>Gladiator arrasó en su estreno, convirtiéndose así en una de las películas más taquilleras del momento. 5 oscar (fue nominada a mejor banda sonora pero finalmente se la arrebato Tigre y Dragon), 2 globos de oro, 4 premios BAFTA…. La lista como podéis observar es interminable.
-El director de la cinta Ridley Scott es uno de los cineastas más respetados y laureados por la industria de Hollywood, películas como Alíen, el octavo pasajero, Blade Runner o Hannibal le sirvió no solo para demostrar que es uno de los grandes de la talla de Spielberg, Polanski o el propio Zemequis, sino que al igual que le sucede a los grandes posee su propia visión de hacer cine, muy personal pero muy detallista en cuanto a fotografía, guiones y demás. Es cierto que últimamente se le ha criticado bastante por sus últimos trabajos como por ejemplo Robin Hood y Prometheus, donde parece haber perdido algo de forma. Aun así sigue siendo Scott le pese a quien le pese, y seguramente volverá a callar bocas con el estreno en 2015 de su nueva visión del clásico Blade Runner.
-A continuación es el turno de hablar de su fantástica banda sonora, por lo tanto es el turno de hablar de nuestro querido (u odiado según el sector en el que te encuentres, por mi parte es querido, siempre querido) Has Zimmer, el alemán que se encuentra metido en todos los fregados habidos y por haber firma una de sus mejores obras, con todos los elementos característicos que lo han hecho tan conocido. Grandes orquestaciones, uso desmedido de las trompas, mucha percusión y la colaboración de Lisa Gerrard para las voces.</p>
-<p>Cuando he comentado anteriormente que esta película fue criticada por un pequeño sector ultraconservador fue entre otras cosas por la propia banda sonora, el problema es que hasta este momento el cine de gladiadores no estaba precisamente en alza, y las películas que nos hubiera venido a la retina en esos momentos hubieran sido epopeyas como El último Gladiador (1964) o la propia Ben Hur (1959) películas con unas banda sonoras muy pomposas y muchísimo más clásicas en su estructuras. Está claro que si el propio compositor de Ben Hur Miklós Rózsa hubiera escuchado la apuesta de Zimmer lo hubiera lanzado a los leones. A parte de esto, es verdad, que hay algún que otro fragmento, sobre todo en la pieza “The Battle” donde parece haber tomado “prestado” una sección entera del track número 5 de la obra compuesta por Ennio Morricone, en la película El secreto del Sahara del año 1987. Cuesta creer que haya sido casualidad, pero está claro que busco material en donde inspirarse. Es quizás la única nota negativa a este trabajo, por lo demás nada más que objetar. Principalmente estas fueron algunas de las razones por las que no gustaron en un primer momento los acordes de Zimmer para esta película. Pero el cine es quizás uno de los mejores ejemplos de cambio y progreso, no solo en la técnica, sino también en todo el proceso creativo que hay intrínseco. El alemán lo sabe y siempre ha ido un paso por delante en sus trabajos, por eso es y ha sido siempre un visionario, y no nos queda otra que aceptarlo, su trabajo en Gladiator habla por sí solo y funciona increíblemente bien tanto en las secuencias de acción como en los diálogos.
-El comienzo de la película ya de por si es impresionante y la música deja claro lo que vas a ver a partir de ese momento, una historia exageradamente épica que te dejara exhausto hasta la última secuencia del filme. Hans Zimmer en esta ocasión no está solo, y se apoya en Lisa Gerrard, una cantante que es a su vez papel imprescindible en el proceso creativo y compositivo de la película. Un emocionante espectáculo cargado de lirismo absoluto y melodías dotadas de una fuerza y una capacidad motivadora que te desgarrara por dentro.</p>
-<p>¿Suena exagerado todo lo que os digo? Escuchad “Now are wee free” y luego me contáis que os ha parecido, un dato curioso sobre este soundtrack es que la letra no forma parte de ningún idioma, es más bien un lenguaje libre sin ningún significado en particular que ideó Lisa Gerrard para enaltecer aún más la melodía de la voz, se trata principalmente de melismas enfocados en la propia melodía, esta técnica vocal utiliza el recurso de trasladar notas musicales a silabas, lo que genera un halo hipnótico que te ayuda a sentir aún más la profundidad de la línea melódica ideada por Zimmer y Gerrard. Esta técnica es en cierto modo similar a la que se utiliza en el “Cante Jondo”.</p>
-<p>Otras que recomiendo es la propia “The Battle”, “Reunión”, &quot;Strength and Honor&quot; u “Honor Him”. Da igual por donde le eches el lazo a esta banda sonora, te va a sonar increíble de todos modos. Has Zimmer es una de los más grandes compositores vivos del momento, y cada vez que se lo toma en serio crea verdaderas maravillas épicas y emotivas. Me encanta toda esa atmosfera de angustia contenida, melancolía y un toque de esperanza que envuelve toda esta obra. La fuerza que transmite es apabullante, relajaros y escuchad esta maravilla. Piel de gallina en 3…2…1…</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
-      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/album/1yqkE2BoMZaQRABJRJT2HZ" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1510822340" width="100%" height="450" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
@@ -161,22 +151,23 @@ El comienzo de la película ya de por si es impresionante y la música deja clar
   <a class="post-nav__link post-nav__link--prev" href="/archive/2013-04-20-them-bones-de-alice-in-chains.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Them Bones, de Alice In Chains</span>
+    <span class="post-nav__editor">Jal</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2013-04-22-its-alright-its-ok-de-primal-scream.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">It&#39;s Alright, It&#39;s Ok, de Primal Scream</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

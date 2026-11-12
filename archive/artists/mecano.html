@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/mecano.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,110 +28,108 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Mecano</span>
+</nav><section class="artist-hero artist-hero--text" aria-label="Sobre el artista">
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/espana.html">España</a></p>
+    <h1 class="page-title artist-hero__name">Mecano</h1>
+    <p class="artist-hero__bio">Mecano fue un trío español de synthpop, y pioneros del tecno-pop, una escena regional de dicho género en España, activos principalmente entre 1981 y 1992, periodo al que hay que sumar una fugaz reaparición durante seis meses y medio en 1998. Estaba formado por la cantante Ana Torroja y los hermanos Nacho y José María Cano.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Mecano_(banda)" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/3be5dee4-5fa6-45a5-97c2-98914580bafa" rel="noopener">MusicBrainz ↗</a><a href="http://www.zonamecano.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
 
-
-<h2 class="archive-title">Publicaciones del artista Mecano</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/3be5dee4-5fa6-45a5-97c2-98914580bafa" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio artist-bio--text" aria-label="Sobre el artista">
-  <div class="artist-bio__text">
-    <p>Mecano fue un trío español de synthpop, y pioneros del tecno-pop, una escena regional de dicho género en España, activos principalmente entre 1981 y 1992, periodo al que hay que sumar una fugaz reaparición durante seis meses y medio en 1998. Estaba formado por la cantante Ana Torroja y los hermanos Nacho y José María Cano.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Mecano_(banda)" rel="noopener">Wikipedia ↗</a></p>
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">5 publicaciones, 2010–2013</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2010-01-27-eugenio-salvador-dali-de-mecano.html">
+        <span class="kicker">27 ene 2010 · Siglo XXI</span>
+        <span class="display post-card__title">&quot;Eungenio&quot; Salvador Dalí</span>
+        <span class="post-card__excerpt">«Es imperdonable, lo sé, por que aunque habíamos hecho alguna mención anteriormente a este grupo pop español de la década de los 80, e…»</span>
+        <span class="post-card__editor">juanje.ra</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2010-10-08-el-uno-el-dos-el-tres-de-mecano.html">
+        <span class="kicker">8 oct 2010 · Aidalai</span>
+        <span class="display post-card__title">El uno, el dos, el tres</span>
+        <span class="post-card__excerpt">«Hace algunos meses nuestro compañero Juanje.ra tuvo un problemilla cuando os fué a hablar de Mecano , y es que según nos comentaba le costó…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2011-12-10-jal-3.html">
+        <span class="kicker">10 dic 2011 · Aidalai</span>
+        <span class="display post-card__title">El fallo positivo</span>
+        <span class="post-card__excerpt">«El 1 de diciembre fue el día internacional de la lucha contra el sida. Aunque no soy muy amigo de los &quot;días internacionales&quot;, esto me hizo…»</span>
+        <span class="post-card__editor">Jal</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2012-04-23-laika-de-mecano.html">
+        <span class="kicker">23 abr 2012 · Descanso dominical</span>
+        <span class="display post-card__title">Laika</span>
+        <span class="post-card__excerpt">«Muy lejana queda ya la historia de la perra callejera Kudryavka, conocida mundialmente, debido a su raza, como la perra Laika. Laika fue el…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2013-09-24-el-7-de-septiembre-de-mecano.html">
+        <span class="kicker">24 sep 2013 · Aidalai</span>
+        <span class="display post-card__title">El 7 de septiembre</span>
+        <span class="post-card__excerpt">«Hace un par de semanas se anunció la vuelta de “Hoy No Me Puedo Levantar” a los escenarios madrileños. Con más de dos millones y medio de…»</span>
+        <span class="post-card__editor">Monty</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Mecano">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/mecano-siglo-xxi.html">Siglo XXI</a>
+    <a class="chip" href="/archive/albums/mecano-aidalai.html">Aidalai · 3</a>
+    <a class="chip" href="/archive/albums/mecano-descanso-dominical.html">Descanso dominical</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">5 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-01-27 09:00:11 +0100">27/01/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-01-27-eugenio-salvador-dali-de-mecano.html">&quot;Eungenio&quot; Salvador Dalí, de Mecano</a></td>
-        <td class="archive-table__cell--song">&quot;Eungenio&quot; Salvador Dalí</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/mecano.html">Mecano</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/mecano-siglo-xxi.html">Siglo XXI</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2009.html">2009</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/juanje-ra.html">juanje.ra</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-10-08 09:00:21 +0200">08/10/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-10-08-el-uno-el-dos-el-tres-de-mecano.html">El uno, el dos, el tres, de Mecano</a></td>
-        <td class="archive-table__cell--song">El uno, el dos, el tres</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/mecano.html">Mecano</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/mecano-aidalai.html">Aidalai</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1991.html">1991</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2011-12-10 08:00:08 +0100">10/12/2011</td>
-        <td class="archive-table__cell--title"><a href="/archive/2011-12-10-jal-3.html">El fallo positivo, de Mecano</a></td>
-        <td class="archive-table__cell--song">El fallo positivo</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/mecano.html">Mecano</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/mecano-aidalai.html">Aidalai</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1991.html">1991</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jal.html">Jal</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-04-23 08:00:21 +0200">23/04/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-04-23-laika-de-mecano.html">Laika, de Mecano</a></td>
-        <td class="archive-table__cell--song">Laika</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/mecano.html">Mecano</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/mecano-descanso-dominical.html">Descanso dominical</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1988.html">1988</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2013-09-24 08:00:24 +0200">24/09/2013</td>
-        <td class="archive-table__cell--title"><a href="/archive/2013-09-24-el-7-de-septiembre-de-mecano.html">El 7 de Septiembre, de Mecano</a></td>
-        <td class="archive-table__cell--song">El 7 de septiembre</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/mecano.html">Mecano</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/mecano-aidalai.html">Aidalai</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1991.html">1991</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/monty.html">Monty</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

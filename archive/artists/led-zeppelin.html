@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/led-zeppelin.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,105 +28,106 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista Led Zeppelin</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/678d88b2-87b0-403b-b63d-5da7465aecc3" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Led_zeppelin_revista_pelo_1971.jpg/330px-Led_zeppelin_revista_pelo_1971.jpg" width="320" height="213" alt="Led Zeppelin" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Led_zeppelin_revista_pelo_1971.jpg" rel="noopener">Unknown authorUnknown author · Public domain</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Led Zeppelin</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Led_zeppelin_revista_pelo_1971.jpg/330px-Led_zeppelin_revista_pelo_1971.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Led_zeppelin_revista_pelo_1971.jpg/330px-Led_zeppelin_revista_pelo_1971.jpg" width="320" height="213" alt="Led Zeppelin" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Led_zeppelin_revista_pelo_1971.jpg" rel="noopener" target="_blank">Unknown authorUnknown author · Public domain</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>Led Zeppelin fue un grupo británico de rock fundado en Londres en 1968 por el guitarrista Jimmy Page, exguitarrista de The Yardbirds. La banda estuvo integrada también por John Paul Jones como bajista y tecladista, el vocalista Robert Plant y John Bonham en la batería. Es considerada una de las bandas más importantes e influyentes de la década de los 70 y de la historia del rock y unos de los artistas musicales con mayores ventas de todos los tiempos.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Led_Zeppelin" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/reino-unido.html">Reino Unido</a></p>
+    <h1 class="page-title artist-hero__name">Led Zeppelin</h1>
+    <p class="artist-hero__bio">Led Zeppelin fue un grupo británico de rock fundado en Londres en 1968 por el guitarrista Jimmy Page, exguitarrista de The Yardbirds. La banda estuvo integrada también por John Paul Jones como bajista y tecladista, el vocalista Robert Plant y John Bonham en la batería. Es considerada una de las bandas más importantes e influyentes de la década de los 70 y de la historia del rock y unos de los artistas musicales con mayores ventas de todos los tiempos.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Led_Zeppelin" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/678d88b2-87b0-403b-b63d-5da7465aecc3" rel="noopener">MusicBrainz ↗</a><a href="http://www.ledzeppelin.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">4 publicaciones, 2010–2014</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2010-06-19-thats-the-way-de-led-zeppelin.html">
+        <span class="kicker">19 jun 2010 · Led Zeppelin III</span>
+        <span class="display post-card__title">That&#39;s the Way</span>
+        <span class="post-card__excerpt">«Imagina un campo con unas pequeñas casas en la lejanía. Unos pequeños se miran con pesar, de pronto uno le dice al otro que no puede verlo…»</span>
+        <span class="post-card__editor">Liz</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2011-06-08-inmigrant-song-de-led-zeppelin.html">
+        <span class="kicker">8 jun 2011 · Led Zeppelin III</span>
+        <span class="display post-card__title">Immigrant Song</span>
+        <span class="post-card__excerpt">«La semana pasada veía en casa de unos amigos Shrek 3 y me hizo muchísima gracia la escena donde Blancanieves empezaba a entonar una canción…»</span>
+        <span class="post-card__editor">Jal</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2013-02-14-since-ive-been-loving-you-de-led-zeppelin.html">
+        <span class="kicker">14 feb 2013 · Led Zeppelin III</span>
+        <span class="display post-card__title">Since I&#39;ve Been Loving You</span>
+        <span class="post-card__excerpt">«A Led Zeppelin hay multitud de maneras de descubrirlos . Seguramente la más habitual sea a través de Stairway to Heaven, canción que llevo…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2014-06-28-communication-breakdown-de-led-zeppelin.html">
+        <span class="kicker">28 jun 2014 · Led Zeppelin</span>
+        <span class="display post-card__title">Communication Breakdown</span>
+        <span class="post-card__excerpt">«La calidad de una buena canción no está reñida con la sofisticación que proporciona una nueva tecnología de sonido, no. La calidad está en…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Led%20Zeppelin">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/led-zeppelin-led-zeppelin-iii.html">Led Zeppelin III · 3</a>
+    <a class="chip" href="/archive/albums/led-zeppelin-led-zeppelin.html">Led Zeppelin</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">4 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-06-19 09:00:44 +0200">19/06/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-06-19-thats-the-way-de-led-zeppelin.html">That&#39;s the way, de Led Zeppelin</a></td>
-        <td class="archive-table__cell--song">That&#39;s the Way</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin.html">Led Zeppelin</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/led-zeppelin-led-zeppelin-iii.html">Led Zeppelin III</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1970.html">1970</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/liz.html">Liz</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2011-06-08 15:11:33 +0200">08/06/2011</td>
-        <td class="archive-table__cell--title"><a href="/archive/2011-06-08-inmigrant-song-de-led-zeppelin.html">Inmigrant Song, de Led Zeppelin</a></td>
-        <td class="archive-table__cell--song">Immigrant Song</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin.html">Led Zeppelin</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/led-zeppelin-led-zeppelin-iii.html">Led Zeppelin III</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1970.html">1970</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jal.html">Jal</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2013-02-14 08:00:57 +0100">14/02/2013</td>
-        <td class="archive-table__cell--title"><a href="/archive/2013-02-14-since-ive-been-loving-you-de-led-zeppelin.html">Since I&#39;ve Been Loving You, de Led Zeppelin</a></td>
-        <td class="archive-table__cell--song">Since I&#39;ve Been Loving You</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin.html">Led Zeppelin</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/led-zeppelin-led-zeppelin-iii.html">Led Zeppelin III</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1970.html">1970</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2014-06-28 08:00:24 +0200">28/06/2014</td>
-        <td class="archive-table__cell--title"><a href="/archive/2014-06-28-communication-breakdown-de-led-zeppelin.html">Communication Breakdown, de Led Zeppelin</a></td>
-        <td class="archive-table__cell--song">Communication Breakdown</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/led-zeppelin.html">Led Zeppelin</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/led-zeppelin-led-zeppelin.html">Led Zeppelin</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1969.html">1969</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

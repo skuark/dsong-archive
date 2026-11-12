@@ -14,11 +14,12 @@
   <meta property="og:description" content="Hay veces que la música te emociona. Despierta en ti sentimientos que no esperas, y hasta te pone la piel de gallina sin entender muy bien por qué. In the Back…">
   <meta property="og:url" content="https://dsong.es/archive/2010-04-01-in-the-back-seat-de-arcade-fire.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,79 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-03-31-ln-granada-de-supersubmarina.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">LN Granada, de Supersubmarina</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-04-02-its-my-life-de-bon-jovi.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">It&#39;s my life, de Bon Jovi</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2010">2010</a><span>Nº 288</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">In the Back Seat, de Arcade Fire</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Indie rock</span>
+  <h1 class="display post-view__title">In the Back Seat</h1>
+  <p class="post-view__by">de <a href="/archive/artists/arcade-fire.html">Arcade Fire</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/74291eae2bd3251783b8aa958e5ffd3c?s=20" alt="" />
-            <span class="post-view__editor-name">Poncho</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-04-01T09:00:46+02:00">1 de Abril de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Poncho</span>
+    </span>
+    <time class="post-view__date" datetime="2010-04-01T09:00:46+02:00">jueves, 1 de abril de 2010</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Hay veces que la música te emociona. Despierta en ti sentimientos que no esperas, y hasta te pone la piel de gallina sin entender muy bien por qué. <strong>In the Back Seat</strong> de <strong>Arcade Fire</strong> es para mí un claro ejemplo de eso. Una canción maravillosa, aunque muy triste. Como podéis deducir por el título del álbum, este disco está basado principalmente en varias experiencias de muerte de amigos y familiares que sufrieron algunos de los miembros del grupo. Esta canción habla de la muerte de Alice. Un tema precioso que cuenta como a Alice le gustaba sentarse en el asiento de atrás del coche, de lo cual se deduce que murió en un accidente de tráfico. Me falta documentación fiable para asegurar con certeza si la canción habla de alguien real o no, pero si puedo asegurar que el tema está cargado de sentimiento, y no me extrañaría para nada. Una letra sencilla que encierra un gran significado, acompañado de la increíble calidad orquestal de este grupo, consigue el efecto de realmente transmitir sensaciones al oyente. Los cambios de ritmo, el como va ganando fuerza la canción poco a poco...</p>
+<p>Por contaros del grupo, <strong>Arcade Fire</strong> lleva en activo desde 2003. Poseen un total de dos álbumes, <em><strong>Funeral</strong></em> (2004) y <em>Neon Bible</em> (2007). El grupo esta encabezado por el matrimonio Win Butler y Régine Chassagne, acompañados de una cantidad de artistas que lo convierten en una gran familia. La gran seña identificativa de Arcade Fire es que es de los pocos grupos de rock o indie, como queráis, que es capaz de combinar instrumentos tales como violines, violas, violonchelos, pianos, mandolinas, ukeleles, acordeones, xilófonos e incluso la <a href="http://es.wikipedia.org/wiki/Zanfona">zanfona</a>, instrumento medieval muy poco común. Muchos de sus temas se caracterizan por una gran atmósfera instrumental que envuelve al oyente. Y para que os hagáis una idea más o menos de qué clase de grupo estamos hablando, entre otros reconocimientos, la MTV2 seleccionó este mismo álbum como mejor disco del año 2005 y el New Musical Express lo seleccionó como uno de los mejores de ese año, eligiendo &quot;Rebellion (Lies)&quot; como la mejor canción. Con estos reconocimientos, era casi lógico que en noviembre de 2005 alcanzaran el disco de oro en Canadá y Reino Unido, con unas ventas totales de medio millón de discos.</p>
+<p>Y para acabar un consejo. Dejad que la música os emocione. No tengáis reparo en cerrar los ojos, pensar lo menos posible y sentir como se te pone el vello de punta. Os deseo a todos un buen Jueves Santo, que es también una experiencia de muerte y decepción para los creyentes, como pudo serlo la muerte de Alice para los componentes de esta canción.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/i2jsArz5IQg?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/arcade-fire.html">Arcade Fire</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/52074ba6-e495-4ef3-9bb4-0703888a9f68" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -105,7 +122,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=i2jsArz5IQg" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -115,39 +132,13 @@
       <dd>1 de abril de 2010</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Hay veces que la música te emociona. Despierta en ti sentimientos que no esperas, y hasta te pone la piel de gallina sin entender muy bien por qué. <strong>In the Back Seat</strong> de <strong>Arcade Fire</strong> es para mí un claro ejemplo de eso. Una canción maravillosa, aunque muy triste. Como podéis deducir por el título del álbum, este disco está basado principalmente en varias experiencias de muerte de amigos y familiares que sufrieron algunos de los miembros del grupo. Esta canción habla de la muerte de Alice. Un tema precioso que cuenta como a Alice le gustaba sentarse en el asiento de atrás del coche, de lo cual se deduce que murió en un accidente de tráfico. Me falta documentación fiable para asegurar con certeza si la canción habla de alguien real o no, pero si puedo asegurar que el tema está cargado de sentimiento, y no me extrañaría para nada. Una letra sencilla que encierra un gran significado, acompañado de la increíble calidad orquestal de este grupo, consigue el efecto de realmente transmitir sensaciones al oyente. Los cambios de ritmo, el como va ganando fuerza la canción poco a poco...</p>
-<p>Por contaros del grupo, <strong>Arcade Fire</strong> lleva en activo desde 2003. Poseen un total de dos álbumes, <em><strong>Funeral</strong></em> (2004) y <em>Neon Bible</em> (2007). El grupo esta encabezado por el matrimonio Win Butler y Régine Chassagne, acompañados de una cantidad de artistas que lo convierten en una gran familia. La gran seña identificativa de Arcade Fire es que es de los pocos grupos de rock o indie, como queráis, que es capaz de combinar instrumentos tales como violines, violas, violonchelos, pianos, mandolinas, ukeleles, acordeones, xilófonos e incluso la <a href="http://es.wikipedia.org/wiki/Zanfona">zanfona</a>, instrumento medieval muy poco común. Muchos de sus temas se caracterizan por una gran atmósfera instrumental que envuelve al oyente. Y para que os hagáis una idea más o menos de qué clase de grupo estamos hablando, entre otros reconocimientos, la MTV2 seleccionó este mismo álbum como mejor disco del año 2005 y el New Musical Express lo seleccionó como uno de los mejores de ese año, eligiendo &quot;Rebellion (Lies)&quot; como la mejor canción. Con estos reconocimientos, era casi lógico que en noviembre de 2005 alcanzaran el disco de oro en Canadá y Reino Unido, con unas ventas totales de medio millón de discos.</p>
-<p>Y para acabar un consejo. Dejad que la música os emocione. No tengáis reparo en cerrar los ojos, pensar lo menos posible y sentir como se te pone el vello de punta. Os deseo a todos un buen Jueves Santo, que es también una experiencia de muerte y decepción para los creyentes, como pudo serlo la muerte de Alice para los componentes de esta canción.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/i2jsArz5IQg?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (1)</summary>
+      <summary class="post-view__comments-summary"><strong>1 comentario</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -165,7 +156,7 @@ Buena recomendación!</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-04-02T15:03:33+02:00">2 de Abril de 2010, 15:03</time>
+              <time class="post-view__comment-date" datetime="2010-04-02T15:03:33+02:00">2 de abril de 2010, 15:03</time>
             </div>
           </li>
         
@@ -179,22 +170,23 @@ Buena recomendación!</div>
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-03-31-ln-granada-de-supersubmarina.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">LN Granada, de Supersubmarina</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-04-02-its-my-life-de-bon-jovi.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">It&#39;s my life, de Bon Jovi</span>
+    <span class="post-nav__editor">Jacky</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

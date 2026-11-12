@@ -14,11 +14,12 @@
   <meta property="og:description" content="Oye, qué bien que vistes, no?! - exclamó esbozando una sonrisa mientras miraba una camiseta negra y vieja que yo llevaba puesta - ¡me gusta mucho! Y es que sí…">
   <meta property="og:url" content="https://dsong.es/archive/2010-03-09-blitzkrieg-bop-de-the-ramones.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,86 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-03-08-seven-nation-army-de-the-white-stripes.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Seven Nation Army, de The White Stripes</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-03-10-diamonds-rust-de-joan-baez.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Diamonds &amp; Rust, de Joan Baez</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2010">2010</a><span>Nº 265</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Blitzkrieg bop, de The Ramones</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Punk rock</span>
+  <h1 class="display post-view__title">Blitzkrieg bop</h1>
+  <p class="post-view__by">de <a href="/archive/artists/the-ramones.html">The Ramones</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/616b25790f47c73ebb30c76c020fac2e?s=20" alt="" />
-            <span class="post-view__editor-name">luizk</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-03-09T09:00:52+01:00">9 de Marzo de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">luizk</span>
+    </span>
+    <time class="post-view__date" datetime="2010-03-09T09:00:52+01:00">martes, 9 de marzo de 2010</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <ul>
+<li>Oye, qué bien que vistes, no?! - exclamó esbozando una sonrisa mientras miraba una camiseta negra y vieja que yo llevaba puesta - ¡me gusta mucho!</li>
+</ul>
+<p>Y es que sí amigos mios, las modas van y vienen, son olas, waves o como nos de la gana llamarlas. Un día tu madre llama filas a una camiseta de los the Clash para servir en la tercera legión de paños de cocina, escuadrón limpia-horno y al tiempo alguien te dice que vas a la moda.  Dicha camiseta que me queda y podeis adquirir en cualquier establecimiento de Hinditecs  (Cara,Pul an biar...), es de <strong>The Ramones</strong>.</p>
+<p>Joey, Dee Dee, Johnny y Tommy, son los nombres que pueden leerse en esa camiseta &quot;roía&quot; y que hacen honor a la formación original de esta banda nacida en los años 70. Este grupo puede considerarse uno de los pioneros del punk moderno con sus letras repetitivas y de estribillo pegadizo. A lo largo de sus 22 años de existencia y a pesar de ser actualmente ultraconocido, solo consiguieron colar 2 temas en el top 50 del Billboard. Un auténtico contraste con la situación de hoy día en el que todo el mundo los reconoce al tararear el &quot;<em>jei jou, lets gou</em>&quot;. Como en cualquier banda que se precie, hubo conflictos de nivel 15, quizás los más conocidos eran los ocurridos entre Johnny y Joey por temas ideologico-políticos.</p>
+<p>&quot;De Ramouns&quot;, un grupo que sentó bases en lo que hoy día es la música y ha <a href="http://www.rollingstone.com.ar/archivo/nota.asp?nota_id=584933">influenciado a bandas como U2</a>. Comenzaron su andadura con el album &quot;<em>Ramones</em>&quot;(1976) y la concluyeron con &quot;<em>Adios Amigos!</em>&quot;(1995). Precisamente de su primer corte, he seleccionado un pedacito de gloria suyo<strong> </strong>que todos lo conocereis, ni más, ni menos que el <em>Flitflit plot (</em>según mi madre) o <strong>Blitzkrieg bop</strong>. Cabe decir que a modo culturo-filosófico, Blitzkrieg es el término con el que los nazis denominaron a la guerra relámpago con la que conquistaron Polonia, pero lo que es el contenido de la canción realmente no hace ninguna mención a otra cosa que no sea a pasarselo estupendísticamente en un concierto. Os dejo deleitaros amigos mios, ¡sed buenos este martes!</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/QAN7D1V0vuI?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/33iQW2OneB0oNh2NfrAzqW" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/the-ramones.html">The Ramones</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/d6ed7887-a401-47a8-893c-34b967444d26" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +131,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=QAN7D1V0vuI" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/33iQW2OneB0oNh2NfrAzqW" rel="noopener" target="_blank">Spotify ↗</a></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -117,46 +141,13 @@
       <dd>9 de marzo de 2010</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <ul>
-<li>Oye, qué bien que vistes, no?! - exclamó esbozando una sonrisa mientras miraba una camiseta negra y vieja que yo llevaba puesta - ¡me gusta mucho!</li>
-</ul>
-<p>Y es que sí amigos mios, las modas van y vienen, son olas, waves o como nos de la gana llamarlas. Un día tu madre llama filas a una camiseta de los the Clash para servir en la tercera legión de paños de cocina, escuadrón limpia-horno y al tiempo alguien te dice que vas a la moda.  Dicha camiseta que me queda y podeis adquirir en cualquier establecimiento de Hinditecs  (Cara,Pul an biar...), es de <strong>The Ramones</strong>.</p>
-<p>Joey, Dee Dee, Johnny y Tommy, son los nombres que pueden leerse en esa camiseta &quot;roía&quot; y que hacen honor a la formación original de esta banda nacida en los años 70. Este grupo puede considerarse uno de los pioneros del punk moderno con sus letras repetitivas y de estribillo pegadizo. A lo largo de sus 22 años de existencia y a pesar de ser actualmente ultraconocido, solo consiguieron colar 2 temas en el top 50 del Billboard. Un auténtico contraste con la situación de hoy día en el que todo el mundo los reconoce al tararear el &quot;<em>jei jou, lets gou</em>&quot;. Como en cualquier banda que se precie, hubo conflictos de nivel 15, quizás los más conocidos eran los ocurridos entre Johnny y Joey por temas ideologico-políticos.</p>
-<p>&quot;De Ramouns&quot;, un grupo que sentó bases en lo que hoy día es la música y ha <a href="http://www.rollingstone.com.ar/archivo/nota.asp?nota_id=584933">influenciado a bandas como U2</a>. Comenzaron su andadura con el album &quot;<em>Ramones</em>&quot;(1976) y la concluyeron con &quot;<em>Adios Amigos!</em>&quot;(1995). Precisamente de su primer corte, he seleccionado un pedacito de gloria suyo<strong> </strong>que todos lo conocereis, ni más, ni menos que el <em>Flitflit plot (</em>según mi madre) o <strong>Blitzkrieg bop</strong>. Cabe decir que a modo culturo-filosófico, Blitzkrieg es el término con el que los nazis denominaron a la guerra relámpago con la que conquistaron Polonia, pero lo que es el contenido de la canción realmente no hace ninguna mención a otra cosa que no sea a pasarselo estupendísticamente en un concierto. Os dejo deleitaros amigos mios, ¡sed buenos este martes!</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/QAN7D1V0vuI?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/33iQW2OneB0oNh2NfrAzqW" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (3)</summary>
+      <summary class="post-view__comments-summary"><strong>3 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -170,7 +161,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-09T22:52:13+01:00">9 de Marzo de 2010, 22:52</time>
+              <time class="post-view__comment-date" datetime="2010-03-09T22:52:13+01:00">9 de marzo de 2010, 22:52</time>
             </div>
           </li>
         
@@ -185,7 +176,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-10T14:53:07+01:00">10 de Marzo de 2010, 14:53</time>
+              <time class="post-view__comment-date" datetime="2010-03-10T14:53:07+01:00">10 de marzo de 2010, 14:53</time>
             </div>
           </li>
         
@@ -200,7 +191,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-03-12T16:47:35+01:00">12 de Marzo de 2010, 16:47</time>
+              <time class="post-view__comment-date" datetime="2010-03-12T16:47:35+01:00">12 de marzo de 2010, 16:47</time>
             </div>
           </li>
         
@@ -214,22 +205,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-03-08-seven-nation-army-de-the-white-stripes.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Seven Nation Army, de The White Stripes</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-03-10-diamonds-rust-de-joan-baez.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Diamonds &amp; Rust, de Joan Baez</span>
+    <span class="post-nav__editor">Jose</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

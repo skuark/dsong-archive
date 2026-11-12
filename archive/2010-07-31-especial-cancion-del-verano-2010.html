@@ -14,11 +14,12 @@
   <meta property="og:description" content="Termina el mes de Julio, algo bueno para unos (los que comenzamos ahora nuestras vacaciones) y malo para otros (los que ya las han acabado o tienen que…">
   <meta property="og:url" content="https://dsong.es/archive/2010-07-31-especial-cancion-del-verano-2010.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,78 +29,49 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-07-30-buen-rollito-de-amparanoia.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Buen rollito, de Amparanoia</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-09-01-smells-like-teen-spirit-de-nirvana.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Smells like teen spirit, de Nirvana</span>
-  </a>
-</nav>
-
 <div class="post-view">
-  <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/listas.html">Listas</a></span>
-  <h2 class="post-view__title">Especial Canción del Verano 2010</h2>
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/especiales/">Especiales</a><a href="/archive/especiales/#lista">Listas y temas</a><span>Nº 409</span>
+  </nav>
+
+  <header class="post-view__header"><span class="kicker special-tag">Especial · Lista</span>
+  <h1 class="display post-view__title">Canción del Verano 2010</h1>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.skuark.com/" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=20" alt="" />
-            <span class="post-view__editor-name">skuark</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-07-31T09:00:08+02:00">31 de Julio de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
-  </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
-    <dl class="post-facts__list">
-      <dt>Escuchar en</dt>
-      <dd><a href="https://open.spotify.com/user/dsong2009/playlist/17EDOzayS2IYTKljN01D5G" rel="noopener" target="_blank">Spotify ↗</a></dd>
-    </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
-    <dl class="post-facts__list">
-      <dt>Categoría</dt>
-      <dd><a href="/archive/categories/listas.html">Listas</a></dd>
-      <dt>Autor</dt>
-      <dd><a href="/archive/editors/skuark.html">skuark</a></dd>
-      <dt>Publicado</dt>
-      <dd>31 de julio de 2010</dd>
-    </dl>
-    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
+    <span class="post-view__editor">
+      <a href="http://www.skuark.com/" target="_blank"><span class="post-view__editor-name">skuark</span></a>
+    </span>
+    <time class="post-view__date" datetime="2010-07-31T09:00:08+02:00">sábado, 31 de julio de 2010</time>
+    <span>4 min de lectura</span>
   </div>
   </header>
 
@@ -134,14 +106,31 @@
     </div>
   </details>
   <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
+    <dl class="post-facts__list">
+      <dt>Escuchar en</dt>
+      <dd><a href="https://open.spotify.com/user/dsong2009/playlist/17EDOzayS2IYTKljN01D5G" rel="noopener" target="_blank">Spotify ↗</a></dd>
+    </dl>
+    <h3 class="post-facts__group kicker">dSong</h3>
+    <dl class="post-facts__list">
+      <dt>Categoría</dt>
+      <dd><a href="/archive/categories/listas.html">Listas</a></dd>
+      <dt>Autor</dt>
+      <dd><a href="/archive/editors/skuark.html">skuark</a></dd>
+      <dt>Publicado</dt>
+      <dd>31 de julio de 2010</dd>
+    </dl>
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (7)</summary>
+      <summary class="post-view__comments-summary"><strong>7 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -156,7 +145,7 @@ http://www.youtube.com/watch?v=mT-fOr29OfA&amp;feature=related</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-07-31T14:01:56+02:00">31 de Julio de 2010, 14:01</time>
+              <time class="post-view__comment-date" datetime="2010-07-31T14:01:56+02:00">31 de julio de 2010, 14:01</time>
             </div>
           </li>
         
@@ -175,7 +164,7 @@ http://www.youtube.com/watch?v=hhKpOz4SROE</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-08-03T13:39:32+02:00">3 de Agosto de 2010, 13:39</time>
+              <time class="post-view__comment-date" datetime="2010-08-03T13:39:32+02:00">3 de agosto de 2010, 13:39</time>
             </div>
           </li>
         
@@ -196,7 +185,7 @@ Un saludo.</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-08-03T14:03:50+02:00">3 de Agosto de 2010, 14:03</time>
+              <time class="post-view__comment-date" datetime="2010-08-03T14:03:50+02:00">3 de agosto de 2010, 14:03</time>
             </div>
           </li>
         
@@ -213,7 +202,7 @@ http://www.youtube.com/watch?v=cGe-U7uytG8</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-08-05T18:27:15+02:00">5 de Agosto de 2010, 18:27</time>
+              <time class="post-view__comment-date" datetime="2010-08-05T18:27:15+02:00">5 de agosto de 2010, 18:27</time>
             </div>
           </li>
         
@@ -230,7 +219,7 @@ http://www.youtube.com/watch?v=PH5qjROPGxM</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-08-06T00:28:53+02:00">6 de Agosto de 2010, 00:28</time>
+              <time class="post-view__comment-date" datetime="2010-08-06T00:28:53+02:00">6 de agosto de 2010, 00:28</time>
             </div>
           </li>
         
@@ -245,7 +234,7 @@ http://www.youtube.com/watch?v=PH5qjROPGxM</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-08-31T00:13:57+02:00">31 de Agosto de 2010, 00:13</time>
+              <time class="post-view__comment-date" datetime="2010-08-31T00:13:57+02:00">31 de agosto de 2010, 00:13</time>
             </div>
           </li>
         
@@ -262,7 +251,7 @@ Del Guetta la que más he oído ha sido &quot;Memories&quot; este verano.</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-09-07T19:57:17+02:00">7 de Septiembre de 2010, 19:57</time>
+              <time class="post-view__comment-date" datetime="2010-09-07T19:57:17+02:00">7 de septiembre de 2010, 19:57</time>
             </div>
           </li>
         
@@ -276,22 +265,23 @@ Del Guetta la que más he oído ha sido &quot;Memories&quot; este verano.</div>
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-07-30-buen-rollito-de-amparanoia.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Buen rollito, de Amparanoia</span>
+    <span class="post-nav__editor">luizk</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-09-01-smells-like-teen-spirit-de-nirvana.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Smells like teen spirit, de Nirvana</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

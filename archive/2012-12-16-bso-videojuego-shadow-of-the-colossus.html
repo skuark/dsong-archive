@@ -14,11 +14,12 @@
   <meta property="og:description" content="Hoy comenzamos la que espero sea una prolongada serie de artículos en los que profundizaremos en la dimensión musical de los videojuegos. Un abanico mucho más…">
   <meta property="og:url" content="https://dsong.es/archive/2012-12-16-bso-videojuego-shadow-of-the-colossus.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,84 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2012-12-15-people-movin-de-the-shoes.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">People Movin&#39;, de The Shoes</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2012-12-17-annabel-lee-de-maga.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Annabel Lee, de Maga</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2012">2012</a><span>Nº 1183</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a></span>
-  <h2 class="post-view__title">BSO Videojuego: Shadow of the Colossus</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a> · Instrumental</span>
+  <h1 class="display post-view__title">BSO Videojuego: Shadow of the Colossus</h1>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/ab5589a036c1e14dc96a2ebd4089b588?s=20" alt="" />
-            <span class="post-view__editor-name">Ome Gak</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2012-12-16T08:00:18+01:00">16 de Diciembre de 2012</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Ome Gak</span>
+    </span>
+    <time class="post-view__date" datetime="2012-12-16T08:00:18+01:00">domingo, 16 de diciembre de 2012</time>
+    <span>4 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Hoy comenzamos la que espero sea una prolongada serie de artículos en los que profundizaremos en la dimensión musical de los videojuegos. Un abanico mucho más amplio y rico de lo que muchos podrían imaginar en un primer lugar y con el que con seguridad sorprenderé a más de uno.</p>
+<p>Aún a pesar de las muchas limitaciones técnicas que existían en un principio para sintetizar audio en las videoconsolas, siempre ha habido compositores de música de videojuegos que han conseguido impregnar los títulos de una magia especial indistintamente del canal de transmisión. Desde aquellas martilleantes melodías 8-bit que marcaron época, la composición musical para videojuegos ha madurado junto a ellos hasta alcanzar el estatus de arte que hoy podemos afirmar tienen, cristalizando en magníficas obras orquestales como la que hoy os traigo: <em><strong>&quot;Shadow of the Colossus: Roar of the Earth&quot;</strong></em>.</p>
+<p>La banda sonora de Shadow of the Colossus pone el contrapunto a una epopeya fantástica enmudecida por la soledad. Wander, el protagonista de la aventura, junto a su caballo Agro son los únicos seres vivos que pueblan la Tierra Prohibida, un paraje yermo que alberga las ruinas de monumentos, coliseos, torres y ciudades de una civilización olvidada. Wander emprende este viaje solitario y sin retorno para pactar con el dios de aquella civilización y así traer de vuelta a la vida el cuerpo inerte de su prometida. Tarea sencilla si no fuese por los 16 gigantescos colosos de extraña naturaleza que vagan incansables a lo largo y ancho de la Tierra Prohibida custodiando los fragmentos sellados del antiguo dios.</p>
+<p>Shadow of the Colossus fue uno de esos títulos que se convierten en clásicos en el mismo instante en el que pulsas start. Debutó en Playstation 2 y  llamó la atención por su planteamiento innovador: 16 final bosses del tamaño de una montaña sin que ningún otro enemigo, mazmorra o puzzle se interpusieran en la narrativa. Únicamente un escenario inmenso y precioso, un caballo y combates desesperados de intelecto y habilidad entre el frágil Wander y los colosos.</p>
+<p>A la altura de una novela épica de estas proporciones se encuentra la banda sonora compuesta <strong>Kow Otani</strong>. En ella, el estilo del japonés acentúa con precisión quirúrgica el contraste que experimenta el jugador entre los espectaculares viajes a caballo por las vastas planicies y desiertos, la inquietante exploración de las ruinas, y el clímax de los violentos encuentros con los colosos. Los temas que la componen varían desde aquellos más ambientales, que consiguen transportar al jugador en cuerpo y alma hasta las mismísima Tierra Prohibida, hasta composiciones de corte bélico-épico que causan infarto y graban a fuego recuerdos inolvidables.</p>
+<p>Son precisamente estos últimos temas los que destacan con creces en la banda sonora, y por suerte no son pocos. Estos transmiten magistralmente con coros, campanas y violines el pavor de Wander ante semejantes criaturas, pero también infunden con percusión el mismo temple que muestra el pequeño personaje cuando se escabulle entre las piernas, agarra con todas sus fuerzas al grueso pelaje, escala hasta la extenuación las corazas de roca y clava su espada en los puntos desprotegidos de los gigantes. Esta transición de miedo a valor se refleja muy bien en los siguientes pares de temas <em>&quot;A Violent Encounter&quot;</em> ~ <em>&quot;Revived Power&quot;</em> o <em>&quot;A Messenger from Behind&quot;</em> ~ <em>&quot;Counterattack&quot;</em>.</p>
+<p>Si bien aquí nos centramos en la música, para apreciar por completo la grandeza de esta composición en conjunto recomiendo encarecidamente visualicéis el vídeo de YouTube bajo los metadatos. Uno de los momentos más emocionantes de la aventura en la que se palpa la magnificencia de la unión de la banda sonora con las enormes batallas. Sobre un lago cubierto de densa niebla surge un acueducto derruido que se alza hasta una inmensa plataforma donde espera un coloso bípedo armado con una espada de piedra. Su cuerpo está protegido por coraza y la única opción es correr por su filo romo hasta llegar a su brazo (<a title="Wander trepa por la espada del coloso" href="http://youtu.be/nUdrFkW1RY8?t=3m3s" target="_blank">3:10</a>). Épico es poco.</p>
+<p>Por último y para conduciros un poco entre los 42 temas que componen la genial banda sonora, hago mención especial de <em>&quot;In Awe of the Power&quot;</em>, <em>&quot;Swift Horse&quot;</em> y <em>&quot;The Sunlit Earth&quot;</em>. Disfrutad del viaje.</p>
+<p>Nos leemos pronto con más joyas del mundo de los videojuegos.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/nUdrFkW1RY8?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/kow-otani.html">Kow Otani</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/615e497a-340d-4efd-b191-73a22c280784" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -101,7 +123,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=nUdrFkW1RY8" rel="noopener" target="_blank">YouTube ↗</a></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/bandas-sonoras-originales.html">Bandas Sonoras Originales</a></dd>
@@ -111,45 +133,13 @@
       <dd>16 de diciembre de 2012</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Hoy comenzamos la que espero sea una prolongada serie de artículos en los que profundizaremos en la dimensión musical de los videojuegos. Un abanico mucho más amplio y rico de lo que muchos podrían imaginar en un primer lugar y con el que con seguridad sorprenderé a más de uno.</p>
-<p>Aún a pesar de las muchas limitaciones técnicas que existían en un principio para sintetizar audio en las videoconsolas, siempre ha habido compositores de música de videojuegos que han conseguido impregnar los títulos de una magia especial indistintamente del canal de transmisión. Desde aquellas martilleantes melodías 8-bit que marcaron época, la composición musical para videojuegos ha madurado junto a ellos hasta alcanzar el estatus de arte que hoy podemos afirmar tienen, cristalizando en magníficas obras orquestales como la que hoy os traigo: <em><strong>&quot;Shadow of the Colossus: Roar of the Earth&quot;</strong></em>.</p>
-<p>La banda sonora de Shadow of the Colossus pone el contrapunto a una epopeya fantástica enmudecida por la soledad. Wander, el protagonista de la aventura, junto a su caballo Agro son los únicos seres vivos que pueblan la Tierra Prohibida, un paraje yermo que alberga las ruinas de monumentos, coliseos, torres y ciudades de una civilización olvidada. Wander emprende este viaje solitario y sin retorno para pactar con el dios de aquella civilización y así traer de vuelta a la vida el cuerpo inerte de su prometida. Tarea sencilla si no fuese por los 16 gigantescos colosos de extraña naturaleza que vagan incansables a lo largo y ancho de la Tierra Prohibida custodiando los fragmentos sellados del antiguo dios.</p>
-<p>Shadow of the Colossus fue uno de esos títulos que se convierten en clásicos en el mismo instante en el que pulsas start. Debutó en Playstation 2 y  llamó la atención por su planteamiento innovador: 16 final bosses del tamaño de una montaña sin que ningún otro enemigo, mazmorra o puzzle se interpusieran en la narrativa. Únicamente un escenario inmenso y precioso, un caballo y combates desesperados de intelecto y habilidad entre el frágil Wander y los colosos.</p>
-<p>A la altura de una novela épica de estas proporciones se encuentra la banda sonora compuesta <strong>Kow Otani</strong>. En ella, el estilo del japonés acentúa con precisión quirúrgica el contraste que experimenta el jugador entre los espectaculares viajes a caballo por las vastas planicies y desiertos, la inquietante exploración de las ruinas, y el clímax de los violentos encuentros con los colosos. Los temas que la componen varían desde aquellos más ambientales, que consiguen transportar al jugador en cuerpo y alma hasta las mismísima Tierra Prohibida, hasta composiciones de corte bélico-épico que causan infarto y graban a fuego recuerdos inolvidables.</p>
-<p>Son precisamente estos últimos temas los que destacan con creces en la banda sonora, y por suerte no son pocos. Estos transmiten magistralmente con coros, campanas y violines el pavor de Wander ante semejantes criaturas, pero también infunden con percusión el mismo temple que muestra el pequeño personaje cuando se escabulle entre las piernas, agarra con todas sus fuerzas al grueso pelaje, escala hasta la extenuación las corazas de roca y clava su espada en los puntos desprotegidos de los gigantes. Esta transición de miedo a valor se refleja muy bien en los siguientes pares de temas <em>&quot;A Violent Encounter&quot;</em> ~ <em>&quot;Revived Power&quot;</em> o <em>&quot;A Messenger from Behind&quot;</em> ~ <em>&quot;Counterattack&quot;</em>.</p>
-<p>Si bien aquí nos centramos en la música, para apreciar por completo la grandeza de esta composición en conjunto recomiendo encarecidamente visualicéis el vídeo de YouTube bajo los metadatos. Uno de los momentos más emocionantes de la aventura en la que se palpa la magnificencia de la unión de la banda sonora con las enormes batallas. Sobre un lago cubierto de densa niebla surge un acueducto derruido que se alza hasta una inmensa plataforma donde espera un coloso bípedo armado con una espada de piedra. Su cuerpo está protegido por coraza y la única opción es correr por su filo romo hasta llegar a su brazo (<a title="Wander trepa por la espada del coloso" href="http://youtu.be/nUdrFkW1RY8?t=3m3s" target="_blank">3:10</a>). Épico es poco.</p>
-<p>Por último y para conduciros un poco entre los 42 temas que componen la genial banda sonora, hago mención especial de <em>&quot;In Awe of the Power&quot;</em>, <em>&quot;Swift Horse&quot;</em> y <em>&quot;The Sunlit Earth&quot;</em>. Disfrutad del viaje.</p>
-<p>Nos leemos pronto con más joyas del mundo de los videojuegos.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/nUdrFkW1RY8?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (1)</summary>
+      <summary class="post-view__comments-summary"><strong>1 comentario</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -163,7 +153,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2012-12-16T12:11:00+01:00">16 de Diciembre de 2012, 12:11</time>
+              <time class="post-view__comment-date" datetime="2012-12-16T12:11:00+01:00">16 de diciembre de 2012, 12:11</time>
             </div>
           </li>
         
@@ -177,22 +167,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2012-12-15-people-movin-de-the-shoes.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">People Movin&#39;, de The Shoes</span>
+    <span class="post-nav__editor">Poncho</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2012-12-17-annabel-lee-de-maga.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Annabel Lee, de Maga</span>
+    <span class="post-nav__editor">Ascen</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

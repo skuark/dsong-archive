@@ -14,11 +14,12 @@
   <meta property="og:description" content="Raincoat es el nuevo artista revelación que está innovando últimamente por toda la Costa Este de Norteamérica, dando que hablar en toda la escena tanto del…">
   <meta property="og:url" content="https://dsong.es/archive/2011-12-28-xmas-beat-de-raincoat.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,92 +29,51 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2011-12-27-je-veux-de-zaz.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Je veux, de Zaz</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2011-12-29-sugar-sugar-de-the-archies.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Sugar, sugar; de The Archies</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2011">2011</a><span>Nº 862</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Xmas-Beat, de Raincoat</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Metal industrial</span>
+  <h1 class="display post-view__title">Xmas-Beat</h1>
+  <p class="post-view__by">de <a href="/archive/artists/raincoat.html">Raincoat</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/74291eae2bd3251783b8aa958e5ffd3c?s=20" alt="" />
-            <span class="post-view__editor-name">Poncho</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2011-12-28T08:00:51+01:00">28 de Diciembre de 2011</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
-  </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
-    <dl class="post-facts__list">
-      <dt>Artista</dt>
-      <dd><a href="/archive/artists/raincoat.html">Raincoat</a></dd>
-      <dt>País</dt>
-      <dd><a href="/archive/countries/mexico.html">México</a></dd>
-      <dt>Web</dt>
-      <dd><a href="https://dsong.es/archive/editors/Poncho.html" rel="noopener" target="_blank">dsong.es ↗</a></dd>
-      <dt>Canción</dt>
-      <dd>Xmas-Beat</dd>
-      <dt>Álbum</dt>
-      <dd><a href="/archive/albums/raincoat-the-innocence.html">The Innocence</a></dd>
-      <dt>Año</dt>
-      <dd><a href="/archive/years/2011.html">2011</a></dd>
-      <dt>Género</dt>
-      <dd>Metal industrial</dd>
-    </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
-    <dl class="post-facts__list">
-      <dt>Categoría</dt>
-      <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
-      <dt>Autor</dt>
-      <dd><a href="/archive/editors/poncho.html">Poncho</a></dd>
-      <dt>Publicado</dt>
-      <dd>28 de diciembre de 2011</dd>
-      <dt>Podcast</dt>
-      <dd><a href="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20111228.mp3" rel="noopener" target="_blank">UniRadio Jaén (mp3) ↗</a></dd>
-    </dl>
-    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Poncho</span>
+    </span>
+    <time class="post-view__date" datetime="2011-12-28T08:00:51+01:00">miércoles, 28 de diciembre de 2011</time>
+    <span>1 min de lectura</span>
   </div>
   </header>
 
@@ -139,14 +99,45 @@
       <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
     </div>
   </section>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
+    <dl class="post-facts__list">
+      <dt>Artista</dt>
+      <dd><a href="/archive/artists/raincoat.html">Raincoat</a></dd>
+      <dt>País</dt>
+      <dd><a href="/archive/countries/mexico.html">México</a></dd>
+      <dt>Web</dt>
+      <dd><a href="https://dsong.es/archive/editors/Poncho.html" rel="noopener" target="_blank">dsong.es ↗</a></dd>
+      <dt>Canción</dt>
+      <dd>Xmas-Beat</dd>
+      <dt>Álbum</dt>
+      <dd><a href="/archive/albums/raincoat-the-innocence.html">The Innocence</a></dd>
+      <dt>Año</dt>
+      <dd><a href="/archive/years/2011.html">2011</a></dd>
+      <dt>Género</dt>
+      <dd>Metal industrial</dd>
+    </dl>
+    <h3 class="post-facts__group kicker">dSong</h3>
+    <dl class="post-facts__list">
+      <dt>Categoría</dt>
+      <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
+      <dt>Autor</dt>
+      <dd><a href="/archive/editors/poncho.html">Poncho</a></dd>
+      <dt>Publicado</dt>
+      <dd>28 de diciembre de 2011</dd>
+      <dt>Podcast</dt>
+      <dd><a href="https://dsongstatic.jesusmagamu.dev/mp3/podcast/dsong.es_20111228.mp3" rel="noopener" target="_blank">UniRadio Jaén (mp3) ↗</a></dd>
+    </dl>
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (13)</summary>
+      <summary class="post-view__comments-summary"><strong>13 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -160,7 +151,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T10:24:00+01:00">28 de Diciembre de 2011, 10:24</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T10:24:00+01:00">28 de diciembre de 2011, 10:24</time>
             </div>
           </li>
         
@@ -175,7 +166,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T13:49:00+01:00">28 de Diciembre de 2011, 13:49</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T13:49:00+01:00">28 de diciembre de 2011, 13:49</time>
             </div>
           </li>
         
@@ -190,7 +181,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T13:53:00+01:00">28 de Diciembre de 2011, 13:53</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T13:53:00+01:00">28 de diciembre de 2011, 13:53</time>
             </div>
           </li>
         
@@ -205,7 +196,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T18:12:00+01:00">28 de Diciembre de 2011, 18:12</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T18:12:00+01:00">28 de diciembre de 2011, 18:12</time>
             </div>
           </li>
         
@@ -220,7 +211,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T19:26:00+01:00">28 de Diciembre de 2011, 19:26</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T19:26:00+01:00">28 de diciembre de 2011, 19:26</time>
             </div>
           </li>
         
@@ -235,7 +226,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T19:28:00+01:00">28 de Diciembre de 2011, 19:28</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T19:28:00+01:00">28 de diciembre de 2011, 19:28</time>
             </div>
           </li>
         
@@ -250,7 +241,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T19:29:00+01:00">28 de Diciembre de 2011, 19:29</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T19:29:00+01:00">28 de diciembre de 2011, 19:29</time>
             </div>
           </li>
         
@@ -265,7 +256,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T19:31:00+01:00">28 de Diciembre de 2011, 19:31</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T19:31:00+01:00">28 de diciembre de 2011, 19:31</time>
             </div>
           </li>
         
@@ -280,7 +271,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T19:59:00+01:00">28 de Diciembre de 2011, 19:59</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T19:59:00+01:00">28 de diciembre de 2011, 19:59</time>
             </div>
           </li>
         
@@ -295,7 +286,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-28T20:45:00+01:00">28 de Diciembre de 2011, 20:45</time>
+              <time class="post-view__comment-date" datetime="2011-12-28T20:45:00+01:00">28 de diciembre de 2011, 20:45</time>
             </div>
           </li>
         
@@ -310,7 +301,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-29T14:38:00+01:00">29 de Diciembre de 2011, 14:38</time>
+              <time class="post-view__comment-date" datetime="2011-12-29T14:38:00+01:00">29 de diciembre de 2011, 14:38</time>
             </div>
           </li>
         
@@ -325,7 +316,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-12-29T18:18:00+01:00">29 de Diciembre de 2011, 18:18</time>
+              <time class="post-view__comment-date" datetime="2011-12-29T18:18:00+01:00">29 de diciembre de 2011, 18:18</time>
             </div>
           </li>
         
@@ -340,7 +331,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2012-01-09T23:29:00+01:00">9 de Enero de 2012, 23:29</time>
+              <time class="post-view__comment-date" datetime="2012-01-09T23:29:00+01:00">9 de enero de 2012, 23:29</time>
             </div>
           </li>
         
@@ -354,22 +345,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2011-12-27-je-veux-de-zaz.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Je veux, de Zaz</span>
+    <span class="post-nav__editor">Johnbo</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2011-12-29-sugar-sugar-de-the-archies.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Sugar, sugar; de The Archies</span>
+    <span class="post-nav__editor">Jal</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

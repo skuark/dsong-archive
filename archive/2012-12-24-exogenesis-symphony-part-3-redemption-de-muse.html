@@ -14,11 +14,12 @@
   <meta property="og:description" content="El quinto trabajo de estudio de Muse, The Resistance, de 2009, concluye con una sinfónia de unos 12 minutos dividida en tres movimientos, y titulada en su…">
   <meta property="og:url" content="https://dsong.es/archive/2012-12-24-exogenesis-symphony-part-3-redemption-de-muse.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,84 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2012-12-23-bso-videojuego-bastion.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">BSO Videojuego: Bastion</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2012-12-25-especial-eclecticismo-navideno-navidad-2012.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Especial: Eclecticismo Navideño (Navidad 2012)</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2012">2012</a><span>Nº 1191</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Exogenesis: Symphony Part 3 - Redemption, de Muse</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Orchestral</span>
+  <h1 class="display post-view__title">Exogenesis: Symphony Part 3 - Redemption</h1>
+  <p class="post-view__by">de <a href="/archive/artists/muse.html">Muse</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.skuark.com/" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=20" alt="" />
-            <span class="post-view__editor-name">skuark</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2012-12-24T08:00:09+01:00">24 de Diciembre de 2012</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <a href="http://www.skuark.com/" target="_blank"><span class="post-view__editor-name">skuark</span></a>
+    </span>
+    <time class="post-view__date" datetime="2012-12-24T08:00:09+01:00">lunes, 24 de diciembre de 2012</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>El quinto trabajo de estudio de Muse, The Resistance, de 2009, concluye con <strong>una sinfónia de unos 12 minutos dividida en tres movimientos, y titulada en su conjunto Exogenesis</strong>. Esta sinfonía, compuesta por el líder y cantante de la banda británica, Matt Bellamy, trata acerca de <strong>la humanidad llegando a su fin</strong>, y poniendo sus últimas esperanzas en un grupo de astronautas que viajará al espacio para explorar otros planetas en los que albergar a la humanidad, intento que conluye con los astronautas reconociendo que ha llegado el fin de un ciclo, y que <strong>por qué no empezar de nuevo para arreglar las cosas y que la historia no vuelva a repetirse</strong>...</p>
+<p>El propio Bellamy comentaba acerca de Exogenesis que le había llevado varios años terminarla, pues siendo una obra orquestal en la que el trío británico queda relegado a un segundo plano, él solito se trabajó los arreglos orquestales. También confesaba que <strong>se había dejado influenciar por obras de compositores clásicos como Rachmaninov, Richard Strauss y Chopin, e incluso por Pink Floyd</strong>. No me negaréis que el menú no suena exquisito. Pero sed pacientes, que aún hay más...</p>
+<p>A finales del pasado mes de Octubre, tres años más tarde del lanzamiento de The Resistance y en plena gira de su sexto y nuevo trabajo discográfico, Muse presentaba a través de su web una animación japonesa como el videoclip oficial del tercer movimiento de Exogenesis, justamente en el que hoy quería centrarme. Esta animación era la versión extendida de Pendulum,<strong> videoclip no-oficial</strong> del tema que Tekken, un artista japonés, había realizado para un programa de televisión. Posteriormente lo había publicado en YouTube y con el tiempo se había hecho bastante popular entre los fans del grupo. Un buen día <strong>los propios miembros de Muse llegaron hasta el vídeo y no pudieron más que ponerse en contacto con su autor para que completase la obra y fuese reconocida como videoclip oficial</strong>.</p>
+<p>Ahora ya si, oíd, ved y sentid. <strong>Os doy permiso para soltar alguna lagrimilla</strong>, y es que la melodía y el vídeo en conjunto tocan la fibra sensible :) Ahhhh, y feliz noche buena!</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/6cQggXJ5JSk?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/76ZDwA8uTyMys4LIS3pBUX" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/muse.html">Muse</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/9c9f1380-2516-4fc9-a3e6-f9f61941d090" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -105,7 +127,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=6cQggXJ5JSk" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/76ZDwA8uTyMys4LIS3pBUX" rel="noopener" target="_blank">Spotify ↗</a></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -115,44 +137,13 @@
       <dd>24 de diciembre de 2012</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>El quinto trabajo de estudio de Muse, The Resistance, de 2009, concluye con <strong>una sinfónia de unos 12 minutos dividida en tres movimientos, y titulada en su conjunto Exogenesis</strong>. Esta sinfonía, compuesta por el líder y cantante de la banda británica, Matt Bellamy, trata acerca de <strong>la humanidad llegando a su fin</strong>, y poniendo sus últimas esperanzas en un grupo de astronautas que viajará al espacio para explorar otros planetas en los que albergar a la humanidad, intento que conluye con los astronautas reconociendo que ha llegado el fin de un ciclo, y que <strong>por qué no empezar de nuevo para arreglar las cosas y que la historia no vuelva a repetirse</strong>...</p>
-<p>El propio Bellamy comentaba acerca de Exogenesis que le había llevado varios años terminarla, pues siendo una obra orquestal en la que el trío británico queda relegado a un segundo plano, él solito se trabajó los arreglos orquestales. También confesaba que <strong>se había dejado influenciar por obras de compositores clásicos como Rachmaninov, Richard Strauss y Chopin, e incluso por Pink Floyd</strong>. No me negaréis que el menú no suena exquisito. Pero sed pacientes, que aún hay más...</p>
-<p>A finales del pasado mes de Octubre, tres años más tarde del lanzamiento de The Resistance y en plena gira de su sexto y nuevo trabajo discográfico, Muse presentaba a través de su web una animación japonesa como el videoclip oficial del tercer movimiento de Exogenesis, justamente en el que hoy quería centrarme. Esta animación era la versión extendida de Pendulum,<strong> videoclip no-oficial</strong> del tema que Tekken, un artista japonés, había realizado para un programa de televisión. Posteriormente lo había publicado en YouTube y con el tiempo se había hecho bastante popular entre los fans del grupo. Un buen día <strong>los propios miembros de Muse llegaron hasta el vídeo y no pudieron más que ponerse en contacto con su autor para que completase la obra y fuese reconocida como videoclip oficial</strong>.</p>
-<p>Ahora ya si, oíd, ved y sentid. <strong>Os doy permiso para soltar alguna lagrimilla</strong>, y es que la melodía y el vídeo en conjunto tocan la fibra sensible :) Ahhhh, y feliz noche buena!</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/6cQggXJ5JSk?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/76ZDwA8uTyMys4LIS3pBUX" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (2)</summary>
+      <summary class="post-view__comments-summary"><strong>2 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -166,7 +157,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2012-12-25T13:09:00+01:00">25 de Diciembre de 2012, 13:09</time>
+              <time class="post-view__comment-date" datetime="2012-12-25T13:09:00+01:00">25 de diciembre de 2012, 13:09</time>
             </div>
           </li>
         
@@ -181,7 +172,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2012-12-25T13:23:00+01:00">25 de Diciembre de 2012, 13:23</time>
+              <time class="post-view__comment-date" datetime="2012-12-25T13:23:00+01:00">25 de diciembre de 2012, 13:23</time>
             </div>
           </li>
         
@@ -195,22 +186,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2012-12-23-bso-videojuego-bastion.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">BSO Videojuego: Bastion</span>
+    <span class="post-nav__editor">Ome Gak</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2012-12-25-especial-eclecticismo-navideno-navidad-2012.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Especial: Eclecticismo Navideño (Navidad 2012)</span>
+    <span class="post-nav__editor">Ascen</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

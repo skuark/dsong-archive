@@ -14,11 +14,12 @@
   <meta property="og:description" content="Hoy es uno de esos días en los que el fin de semana llega &quot;a traición&quot;, tras un jueves (o juernes) en el que muchos hemos celebrado el día de San Patricio como…">
   <meta property="og:url" content="https://dsong.es/archive/2011-03-18-mi-gran-noche-de-raphael.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,88 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2011-03-17-what-ever-happened-de-the-strokes.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">What Ever Happened?, de The Strokes</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2011-03-19-son-of-sam-de-elliott-smith.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Son of Sam, de Elliott Smith </span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2011">2011</a><span>Nº 608</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Mi gran noche, de Raphael</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Latin ballad</span>
+  <h1 class="display post-view__title">Mi gran noche</h1>
+  <p class="post-view__by">de <a href="/archive/artists/raphael.html">Raphael</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/1ec93d310204e8b4e2562ec656d94568?s=20" alt="" />
-            <span class="post-view__editor-name">Johnbo</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2011-03-18T09:40:38+01:00">18 de Marzo de 2011</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Johnbo</span>
+    </span>
+    <time class="post-view__date" datetime="2011-03-18T09:40:38+01:00">viernes, 18 de marzo de 2011</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Hoy es uno de esos días en los que el fin de semana llega &quot;a traición&quot;, tras un jueves (o juernes) en el que muchos hemos celebrado el día de San Patricio como si fuésemos irlandeses del mismísimo centro de Dublín, ahora toca unas pocas horas de trabajo o estudio, con la mente siempre puesta en el descanso que tanto nos merecemos.</p>
+<p>Por eso, lo mejor será poner los altavoces a tope y poner una canción que nos mantenga los ánimos bien altos para que no decaiga. Mi sugerencia no es una canción que esté de moda o que tenga una letra digna de mención, pero sí que tiene una gran efectividad a la hora de cargar las pilas. Se trata de <strong>&quot;Mi gran noche&quot;</strong>, del linarense Miguel Rafael Martos, mundialmente conocido como <strong><a href="http://dsong.es/tag/raphael/">Raphael</a></strong>. Aunque la canción salió a la luz en 1967, como parte del disco <strong>&quot;Digan lo que digan&quot;</strong>, es uno de esos temas que volvemos a escuchar en cada feria y que, sí, por qué no, vamos a admitirlo, tiene un cierto toque hortera, pero es muy divertida y siempre apetece bailarla.</p>
+<p>Y es que, en justicia, hay que decir que Raphael es uno de los grandes artistas que han salido de esta provincia olivarera (como <a href="http://dsong.es/tag/joaquin-sabina/">Joaquín Sabina</a>, <a href="http://dsong.es/tag/supersubmarina/">Supersubmarina</a>, <a href="http://dsong.es/tag/amparanoia/">Amparanoia</a>, <a href="http://dsong.es/tag/alis/">Alis</a>...), pero que está bastante denostado o menospreciado. Sin embargo, el de Linares fue el primer artista a nivel mundial en ganar un <a href="http://es.wikipedia.org/wiki/Disco_de_uranio">disco de uranio</a> tras vender más de 50 millones de discos por todo el mundo. Nada mal para haber salido de una de las provincias más pobres y olvidadas de España, ¿no?</p>
+<p>Pues eso, que la disfrutéis y mantengáis bien alto el espíritu fiestero. Y no os cortéis a la hora de cantar a voz en grito.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/iC42OqjRF3M?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/0csENJioyGcnIChZJymTDE" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/693518736?i=693519571" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/raphael.html">Raphael</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/b34cfe02-994d-40dc-854f-bf54a23dd405" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -105,7 +131,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=iC42OqjRF3M" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/0csENJioyGcnIChZJymTDE" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/693518736?i=693519571" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -115,48 +141,13 @@
       <dd>18 de marzo de 2011</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Hoy es uno de esos días en los que el fin de semana llega &quot;a traición&quot;, tras un jueves (o juernes) en el que muchos hemos celebrado el día de San Patricio como si fuésemos irlandeses del mismísimo centro de Dublín, ahora toca unas pocas horas de trabajo o estudio, con la mente siempre puesta en el descanso que tanto nos merecemos.</p>
-<p>Por eso, lo mejor será poner los altavoces a tope y poner una canción que nos mantenga los ánimos bien altos para que no decaiga. Mi sugerencia no es una canción que esté de moda o que tenga una letra digna de mención, pero sí que tiene una gran efectividad a la hora de cargar las pilas. Se trata de <strong>&quot;Mi gran noche&quot;</strong>, del linarense Miguel Rafael Martos, mundialmente conocido como <strong><a href="http://dsong.es/tag/raphael/">Raphael</a></strong>. Aunque la canción salió a la luz en 1967, como parte del disco <strong>&quot;Digan lo que digan&quot;</strong>, es uno de esos temas que volvemos a escuchar en cada feria y que, sí, por qué no, vamos a admitirlo, tiene un cierto toque hortera, pero es muy divertida y siempre apetece bailarla.</p>
-<p>Y es que, en justicia, hay que decir que Raphael es uno de los grandes artistas que han salido de esta provincia olivarera (como <a href="http://dsong.es/tag/joaquin-sabina/">Joaquín Sabina</a>, <a href="http://dsong.es/tag/supersubmarina/">Supersubmarina</a>, <a href="http://dsong.es/tag/amparanoia/">Amparanoia</a>, <a href="http://dsong.es/tag/alis/">Alis</a>...), pero que está bastante denostado o menospreciado. Sin embargo, el de Linares fue el primer artista a nivel mundial en ganar un <a href="http://es.wikipedia.org/wiki/Disco_de_uranio">disco de uranio</a> tras vender más de 50 millones de discos por todo el mundo. Nada mal para haber salido de una de las provincias más pobres y olvidadas de España, ¿no?</p>
-<p>Pues eso, que la disfrutéis y mantengáis bien alto el espíritu fiestero. Y no os cortéis a la hora de cantar a voz en grito.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/iC42OqjRF3M?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/0csENJioyGcnIChZJymTDE" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/693518736?i=693519571" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (5)</summary>
+      <summary class="post-view__comments-summary"><strong>5 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -171,7 +162,7 @@ Hasta que no pongas I love London no te voy a dejar en paz...</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-03-18T10:02:50+01:00">18 de Marzo de 2011, 10:02</time>
+              <time class="post-view__comment-date" datetime="2011-03-18T10:02:50+01:00">18 de marzo de 2011, 10:02</time>
             </div>
           </li>
         
@@ -190,7 +181,7 @@ Y no, no pienso recomendar I love London, pero como soy generoso, te dejo aquí 
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-03-18T10:14:23+01:00">18 de Marzo de 2011, 10:14</time>
+              <time class="post-view__comment-date" datetime="2011-03-18T10:14:23+01:00">18 de marzo de 2011, 10:14</time>
             </div>
           </li>
         
@@ -205,7 +196,7 @@ Y no, no pienso recomendar I love London, pero como soy generoso, te dejo aquí 
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-03-18T10:33:25+01:00">18 de Marzo de 2011, 10:33</time>
+              <time class="post-view__comment-date" datetime="2011-03-18T10:33:25+01:00">18 de marzo de 2011, 10:33</time>
             </div>
           </li>
         
@@ -220,7 +211,7 @@ Y no, no pienso recomendar I love London, pero como soy generoso, te dejo aquí 
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-03-21T12:46:59+01:00">21 de Marzo de 2011, 12:46</time>
+              <time class="post-view__comment-date" datetime="2011-03-21T12:46:59+01:00">21 de marzo de 2011, 12:46</time>
             </div>
           </li>
         
@@ -235,7 +226,7 @@ Y no, no pienso recomendar I love London, pero como soy generoso, te dejo aquí 
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-03-21T12:58:21+01:00">21 de Marzo de 2011, 12:58</time>
+              <time class="post-view__comment-date" datetime="2011-03-21T12:58:21+01:00">21 de marzo de 2011, 12:58</time>
             </div>
           </li>
         
@@ -249,22 +240,23 @@ Y no, no pienso recomendar I love London, pero como soy generoso, te dejo aquí 
   <a class="post-nav__link post-nav__link--prev" href="/archive/2011-03-17-what-ever-happened-de-the-strokes.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">What Ever Happened?, de The Strokes</span>
+    <span class="post-nav__editor">Beita</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2011-03-19-son-of-sam-de-elliott-smith.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Son of Sam, de Elliott Smith </span>
+    <span class="post-nav__editor">Poncho</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

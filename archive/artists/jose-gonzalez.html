@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/jose-gonzalez.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,105 +28,106 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista José González</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/cd8c5019-5d75-4d5c-bc28-e1e26a7dd5c8" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Jos%C3%A9_Gonzales_at_La_Route_du_Rock_2008%2C_b.jpg/330px-Jos%C3%A9_Gonzales_at_La_Route_du_Rock_2008%2C_b.jpg" width="320" height="213" alt="José González" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Gonzales_at_La_Route_du_Rock_2008,_b.jpg" rel="noopener">Bertrand · CC BY 2.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>José González</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Jos%C3%A9_Gonzales_at_La_Route_du_Rock_2008%2C_b.jpg/330px-Jos%C3%A9_Gonzales_at_La_Route_du_Rock_2008%2C_b.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Jos%C3%A9_Gonzales_at_La_Route_du_Rock_2008%2C_b.jpg/330px-Jos%C3%A9_Gonzales_at_La_Route_du_Rock_2008%2C_b.jpg" width="320" height="213" alt="José González" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Gonzales_at_La_Route_du_Rock_2008,_b.jpg" rel="noopener" target="_blank">Bertrand · CC BY 2.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>José Gabriel González (Gotemburgo, 31 de julio de 1978) es un cantante, compositor y guitarrista sueco de indie folk. González también es miembro del grupo Junip.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Jos%C3%A9_Gonz%C3%A1lez_(cantante)" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/suecia.html">Suecia</a></p>
+    <h1 class="page-title artist-hero__name">José González</h1>
+    <p class="artist-hero__bio">José Gabriel González (Gotemburgo, 31 de julio de 1978) es un cantante, compositor y guitarrista sueco de indie folk. González también es miembro del grupo Junip.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Jos%C3%A9_Gonz%C3%A1lez_(cantante)" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/cd8c5019-5d75-4d5c-bc28-e1e26a7dd5c8" rel="noopener">MusicBrainz ↗</a><a href="https://jose-gonzalez.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">4 publicaciones, 2010–2014</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2010-01-18-teardrop-de-jose-gonzalez.html">
+        <span class="kicker">18 ene 2010 · In Our Nature</span>
+        <span class="display post-card__title">Teardrop</span>
+        <span class="post-card__excerpt">«José González es un cantautor sueco al que tuve el placer de conocer gracias a esta cover de Massive Attack . Nació en Gotemburgo en 1978…»</span>
+        <span class="post-card__editor">Poncho</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2013-11-07-killing-for-love-de-jose-gonzalez.html">
+        <span class="kicker">7 nov 2013 · In Our Nature</span>
+        <span class="display post-card__title">Killing for Love</span>
+        <span class="post-card__excerpt">«José González es uno de esos elementos extraños en el panorama que la música y sus límites nos ofrecen. Un ser pensativo, tranquilo y a…»</span>
+        <span class="post-card__editor">Silvia</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2013-11-16-cycling-trivialities-de-jose-gonzalez-2.html">
+        <span class="kicker">16 nov 2013 · In Our Nature</span>
+        <span class="display post-card__title">Cycling Trivialities</span>
+        <span class="post-card__excerpt">«José González es una tarde lluviosa frente al espejo. Unas manos pequeñas que se deslizan torpemente por los trastes de una guitarra…»</span>
+        <span class="post-card__editor">Ascen</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2014-09-30-this-is-how-we-walk-on-the-moon-de-jose-gonzalez.html">
+        <span class="kicker">30 sep 2014 · This Is How We Walk on the Moon</span>
+        <span class="display post-card__title">This Is How We Walk on the Moon</span>
+        <span class="post-card__excerpt">«Demos un cálido abrazo a nuestro amigo de siempre, ese que ya ha estado más de una vez por aquí, y que es sueco a pesar de que cuando lo…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Jos%C3%A9%20Gonz%C3%A1lez">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/jose-gonzalez-in-our-nature.html">In Our Nature · 3</a>
+    <a class="chip" href="/archive/albums/jose-gonzalez-this-is-how-we-walk-on-the-moon.html">This Is How We Walk on the Moon</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">4 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-01-18 09:00:02 +0100">18/01/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-01-18-teardrop-de-jose-gonzalez.html">Teardrop, de José González</a></td>
-        <td class="archive-table__cell--song">Teardrop</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/jose-gonzalez.html">José González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/jose-gonzalez-in-our-nature.html">In Our Nature</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2007.html">2007</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/poncho.html">Poncho</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2013-11-07 08:00:00 +0100">07/11/2013</td>
-        <td class="archive-table__cell--title"><a href="/archive/2013-11-07-killing-for-love-de-jose-gonzalez.html">Killing for Love, de José González</a></td>
-        <td class="archive-table__cell--song">Killing for Love</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/jose-gonzalez.html">José González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/jose-gonzalez-in-our-nature.html">In Our Nature</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2007.html">2007</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/silvia.html">Silvia</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2013-11-16 08:00:04 +0100">16/11/2013</td>
-        <td class="archive-table__cell--title"><a href="/archive/2013-11-16-cycling-trivialities-de-jose-gonzalez-2.html">Cycling Trivialities, de José González</a></td>
-        <td class="archive-table__cell--song">Cycling Trivialities</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/jose-gonzalez.html">José González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/jose-gonzalez-in-our-nature.html">In Our Nature</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2007.html">2007</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/ascen.html">Ascen</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2014-09-30 10:00:00 +0200">30/09/2014</td>
-        <td class="archive-table__cell--title"><a href="/archive/2014-09-30-this-is-how-we-walk-on-the-moon-de-jose-gonzalez.html">This is how we walk on the moon, de José González</a></td>
-        <td class="archive-table__cell--song">This Is How We Walk on the Moon</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/jose-gonzalez.html">José González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/jose-gonzalez-this-is-how-we-walk-on-the-moon.html">This Is How We Walk on the Moon</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2014.html">2014</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

@@ -14,11 +14,12 @@
   <meta property="og:description" content="Cuando tienes que escribir sobre la vida de alguien no es algo sencillo y mucho menos si del que escribes es Michael Jackson . A lo largo de esta semana y…">
   <meta property="og:url" content="https://dsong.es/archive/2009-07-05-especial-michael-jackson.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,96 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2009-07-04-nube-negra-de-joaquin-sabina.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Nube Negra, de Joaquín Sabina</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2009-07-06-me-gustaria-poder-hacerte-feliz-de-elefantes.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Me gustaría poder hacerte feliz, de Elefantes</span>
-  </a>
-</nav>
-
 <div class="post-view">
-  <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/artistas.html">Artistas</a></span>
-  <h2 class="post-view__title">Especial Michael Jackson</h2>
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/especiales/">Especiales</a><a href="/archive/especiales/#lista">Listas y temas</a><span>Nº 49</span>
+  </nav>
+
+  <header class="post-view__header"><span class="kicker special-tag">Especial · Artista</span>
+  <h1 class="display post-view__title">Michael Jackson</h1>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/7a499d70b8711d2d3b8726bfd8b430ec?s=20" alt="" />
-            <span class="post-view__editor-name">Jose</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2009-07-05T09:00:09+02:00">5 de Julio de 2009</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Jose</span>
+    </span>
+    <time class="post-view__date" datetime="2009-07-05T09:00:09+02:00">domingo, 5 de julio de 2009</time>
+    <span>8 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Cuando tienes que escribir sobre la vida de alguien no es algo sencillo y mucho menos si del que escribes es <strong>Michael Jackson</strong>.  A lo largo de esta semana y durante un tiempo no creo que paremos de oír hablar de él; la verdad es que personalmente me da un poco de asco todo lo que se está vertiendo sobre su figura, y mucho más cuando él ya no está presente para defenderse. Por eso, sí es eso lo que estás buscando éste no es el lugar adecuado para ti, aquí simplemente hablaremos de él como lo que quiso ser, un músico, un artista, simplemente Michael Jackson.</p>
+<p>Michael nació un <strong>29 de agosto de 1958</strong> en Gary (Indiana)  Estados Unidos. Miembro de una familia numerosa era el séptimo de nueve hermanos. Su padre era un músico aficionado que tocaba la guitarra eléctrica. Según se ha comentado <strong>Joseph Jackson</strong> tenía prohibido que sus hijos cogieran la guitarra y como ya sabemos no hay nada más excitante que aquello que se te prohíbe, así que pronto los chicos con el beneplácito de su madre tocaban a escondidas la guitarra de su padre mientras él estaba trabajando en una fundición de metal.</p>
+<p>Como suele pasar el padre al final se entero y tras comprobar que sus vástagos tenían talento decidió formar un grupo musical con los cuatro hermanos mayores de Michael, para así tal vez ver cumplidos sus sueños frustrados de músico. Michael no era más que un niño pequeño de 5 años, pero en esos momentos emergió su talento artístico. Al ver a sus hermanos ensayando, Michael empezó a imitarlos y a cantar, algo que no pasó desapercibido para su madre, lo que supuso la adhesión de este último a la formación final, tras convencer a su marido. Es así como comienza la “vida artística” de Michael y sus comienzos en los <strong>Jackson Five</strong>.</p>
+<p>Después de pequeñas actuaciones por locales de Indiana y otros estados cercanos a éste al final les llego la oportunidad de su vida, como se suele decir en esto casos, y firmaron un contrato con la mítica discográfica Motown. Es así como en el  año 1969 salió a la luz el primer sencillo de los <strong>Jackson Five</strong>,<em> I want you back</em>. Este sencillo fue un éxito rotundo alcanzando el número 1 en las listas rápidamente. Después de este vendrían otras canciones míticas como<em> ABC, The love you save y I'll be there</em> por citar algunos ya que son muchas las canciones que cantaron y situaron en los primeros puestos de las listas musicales de medio mundo.</p>
+<p>Con el tiempo era notorio que  para Michael, el proyecto Jackson Five se le quedaba pequeño y es así como decide compaginarlo con un proyecto paralelo en solitario. En el año 1972 saca con Motown su primer disco en solitario titulado <strong>Got to be there</strong>.  A éste le siguieron posteriormente otros cuatro discos más, pero  al final una serie de desavenencias como por ejemplo que Motown no dejará a los Jackson grabar sus propias canciones desencadenaron su salida del sello. Los Jackson Five estarían vinculados con Motown hasta el año 1975 momento que decidieron pasarse a otra compañía. En Motown editaron 13 álbumes de estudio.</p>
+<p>En la CBS  (su nueva compañía discográfica) los Jackson Five editaron 7 discos de estudio más, pero era ya patente que las relaciones con sus hermanos y sobre todo con su padre no eran lo que se dicen buenas.  En estos momentos es cuando Jackson conoce al hombre que le cambiara la vida musicalmente hablando.</p>
+<p>A finales de la década de los 70 entra en la vida de Michael el productor musical <strong>Quincy Jones</strong>, y es en este momento donde se produce una de las mejores, si no la mejor, simbiosis productor – artista que se ha dado en la historia de la música. Con Quincy graba su álbum en solitario titulado <strong>Off the Wall</strong>. Para muchos entendidos de la música el mejor álbum de Michael Jackson. De este álbum cabe destacar  la canción <em>Rock with you</em>, una de las grandes canciones de Michael o también <em>Don't stop 'till you get enough</em> como las más conocidas.</p>
+<p>Tras el relativo éxito de ventas de este álbum tocaba nuevo disco, Michael tardo en decidirse en grabarlo 3 años ya que todavía seguía vinculado a sus hermanos, pero tras esas dudas y reticencias nació el &quot;disco&quot;. Diréis: ¿por qué el &quot;disco&quot;?, es que resulta que hablamos de <strong>Thriller</strong>. Según Quincy Jones la compañía les dio como plazo ocho semanas para llevar a cabo la grabación. De Thiller se pueden escribir lineas y lineas alabando tal vez cada una de la notas que lo componen, creo que no se merecería menos. Musicalmente hablando no era una maravilla según muchos críticos, pero en él Michael introdujo mucho de lo que le llevaría a ser lo que fue. En él puso en práctica ideas que ya empezaban a emerger de forma tibia, la idea de grabar un vídeo clip como si se tratara de un corto cine, esto es, intentando contar una historia asociada a la canción o la de otorgarle una importancia hasta esos momentos desconocida al baile y a la coreografía. Michael utilizo en este álbum ya de forma definitiva el concepto de la música como espectáculo no solo sonoro, si no también visual. No creo que nadie desconozca Thriller; por lo menos es uno de los primeros discos de los que tengo recuerdo de empezar a escuchar y valorar. Canciones como <em>Thriller, Beat it, Billie Jean</em> quedan para la historia, y podríamos seguir citándolas una a una, ya que todas las canciones de este disco son soberbias. Es lo que llamamos un disco redondo.</p>
+<p>Después de este enorme disco llego el álbum <strong>Bad,</strong> también un gran disco pero sin duda Thriller fue  el &quot;álbum&quot; de Michael y eso puede que le pesara como una losa, no pudo volver a cosechar de nuevo el éxito que obtuvo con Thriller. Este disco salio en 1987 a la calle, Michael le costo mucho llegar a sacarlo por lo anteriormente citado. Caben destacar canciones como <em>Smooth Criminal, Speed Demon o Leave Me Alone</em>. Por estas fechas es cuando empieza a hacerse patente muchas de las excentricidades que persiguieron a Jackson a lo largo de su vida, como son las operaciones de estética agraviadas por el hecho de que Michael sufría una enfermedad desconocida para la gran mayoría de la gente denominada <a href="http://es.wikipedia.org/wiki/Vit%C3%ADligo" target="_blank">Vitíligo</a>.</p>
+<p>Después de Bad se rompió la sociedad creativa que mantenía con Quincy Jones y sin duda esto se noto en los posteriores discos que aparecieron de Michael. Es hasta el siguiente disco que los expertos catalogan como la mejor década de que un artista musical ha tenido nunca, a partir de éste disco titulado <strong>Dangerous</strong> los discos editados por el Rey del Pop (calificativo que le dio su amiga Elisabeth Taylor) ya no poseían el mismo atractivo ni la misma calidad. De Dangerous caben destacar la canción <em>Black or White</em> o la canción que da titulo al álbum <em>Dangerous</em>.</p>
+<p>A partir de aquí Michael edito tres disco de estudio más pero ya sin el éxito de los precedentes, esto son: <strong>HIStory: Past, Present and Future - Book I</strong> editado en 1995, disco en el que se alternaban grandes éxitos del artista con canciones nuevas. Se utilizo esta formato para intentar subir de esa manera las ventas acuciado como estaba ya con las primeras acusaciones de pederastia. De este disco destacan canciones como <em>Scream, You are not Alone o They Don't Care About As</em>. Le siguieron <strong>Blood On The Dance Floor</strong> en el 97 y por último <strong>Invincible</strong> en el año 2001. Pero sin duda fueron ya discos con mucha menos repercusión que los anteriormente citados.</p>
+<p>Los últimos años de su vida, Michael fue mucho más conocido por sus excentricidades y apariciones en los tabloides rosa que por su trabajo. Acusaciones de pederastia que desencadenaron en un juicio mediático, dudas sobre su posible idoneidad para tener la custodia de sus hijos o el estado de su cuentas bancarias eran noticias que saltaban más a menudo de lo que a él seguramente le hubiera gustado a la opinión publica.</p>
+<p>Mucho se ha dicho y se dirá de su figura, pero tal vez debemos quedarnos bajo mi humilde opinión con aquello que lo engrandeció. Su gran talento para la música, el haber sido una de las mejoras voces del siglo XX o el haber sido uno de los mejores cantantes - bailarines que han existido, siendo de hecho el maestro de muchos de los artistas que posteriormente emergieron, ver a una persona con una apariencia tan frágil moverse de la forma que se movía era impactante. Y no sólo en el apartado artístico ha sido clave, no debemos olvidar la importante labor humanitaria que llevo a cabo a lo largo de su vida.</p>
+<p>Para terminar este especial sólo quiero destacar que me siento afortunado al poder haber estado presente y haber podido disfrutar de la música de este artista mientras estuvo vivo, por que Michael Jackson es y será un importante exponente de la historia de la misma.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/5X-Mrc2l1d0?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/user/dsong2009/playlist/2V8uQewcdUDMluju6U8XXm" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/159292399?i=159293419" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/michael-jackson.html">Michael Jackson</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/f27ec8db-af05-4f36-916e-3d57f91ecf5e" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +141,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=5X-Mrc2l1d0" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/user/dsong2009/playlist/2V8uQewcdUDMluju6U8XXm" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/159292399?i=159293419" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(enlazado en MusicBrainz)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/artistas.html">Artistas</a></dd>
@@ -117,58 +151,13 @@
       <dd>5 de julio de 2009</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Cuando tienes que escribir sobre la vida de alguien no es algo sencillo y mucho menos si del que escribes es <strong>Michael Jackson</strong>.  A lo largo de esta semana y durante un tiempo no creo que paremos de oír hablar de él; la verdad es que personalmente me da un poco de asco todo lo que se está vertiendo sobre su figura, y mucho más cuando él ya no está presente para defenderse. Por eso, sí es eso lo que estás buscando éste no es el lugar adecuado para ti, aquí simplemente hablaremos de él como lo que quiso ser, un músico, un artista, simplemente Michael Jackson.</p>
-<p>Michael nació un <strong>29 de agosto de 1958</strong> en Gary (Indiana)  Estados Unidos. Miembro de una familia numerosa era el séptimo de nueve hermanos. Su padre era un músico aficionado que tocaba la guitarra eléctrica. Según se ha comentado <strong>Joseph Jackson</strong> tenía prohibido que sus hijos cogieran la guitarra y como ya sabemos no hay nada más excitante que aquello que se te prohíbe, así que pronto los chicos con el beneplácito de su madre tocaban a escondidas la guitarra de su padre mientras él estaba trabajando en una fundición de metal.</p>
-<p>Como suele pasar el padre al final se entero y tras comprobar que sus vástagos tenían talento decidió formar un grupo musical con los cuatro hermanos mayores de Michael, para así tal vez ver cumplidos sus sueños frustrados de músico. Michael no era más que un niño pequeño de 5 años, pero en esos momentos emergió su talento artístico. Al ver a sus hermanos ensayando, Michael empezó a imitarlos y a cantar, algo que no pasó desapercibido para su madre, lo que supuso la adhesión de este último a la formación final, tras convencer a su marido. Es así como comienza la “vida artística” de Michael y sus comienzos en los <strong>Jackson Five</strong>.</p>
-<p>Después de pequeñas actuaciones por locales de Indiana y otros estados cercanos a éste al final les llego la oportunidad de su vida, como se suele decir en esto casos, y firmaron un contrato con la mítica discográfica Motown. Es así como en el  año 1969 salió a la luz el primer sencillo de los <strong>Jackson Five</strong>,<em> I want you back</em>. Este sencillo fue un éxito rotundo alcanzando el número 1 en las listas rápidamente. Después de este vendrían otras canciones míticas como<em> ABC, The love you save y I'll be there</em> por citar algunos ya que son muchas las canciones que cantaron y situaron en los primeros puestos de las listas musicales de medio mundo.</p>
-<p>Con el tiempo era notorio que  para Michael, el proyecto Jackson Five se le quedaba pequeño y es así como decide compaginarlo con un proyecto paralelo en solitario. En el año 1972 saca con Motown su primer disco en solitario titulado <strong>Got to be there</strong>.  A éste le siguieron posteriormente otros cuatro discos más, pero  al final una serie de desavenencias como por ejemplo que Motown no dejará a los Jackson grabar sus propias canciones desencadenaron su salida del sello. Los Jackson Five estarían vinculados con Motown hasta el año 1975 momento que decidieron pasarse a otra compañía. En Motown editaron 13 álbumes de estudio.</p>
-<p>En la CBS  (su nueva compañía discográfica) los Jackson Five editaron 7 discos de estudio más, pero era ya patente que las relaciones con sus hermanos y sobre todo con su padre no eran lo que se dicen buenas.  En estos momentos es cuando Jackson conoce al hombre que le cambiara la vida musicalmente hablando.</p>
-<p>A finales de la década de los 70 entra en la vida de Michael el productor musical <strong>Quincy Jones</strong>, y es en este momento donde se produce una de las mejores, si no la mejor, simbiosis productor – artista que se ha dado en la historia de la música. Con Quincy graba su álbum en solitario titulado <strong>Off the Wall</strong>. Para muchos entendidos de la música el mejor álbum de Michael Jackson. De este álbum cabe destacar  la canción <em>Rock with you</em>, una de las grandes canciones de Michael o también <em>Don't stop 'till you get enough</em> como las más conocidas.</p>
-<p>Tras el relativo éxito de ventas de este álbum tocaba nuevo disco, Michael tardo en decidirse en grabarlo 3 años ya que todavía seguía vinculado a sus hermanos, pero tras esas dudas y reticencias nació el &quot;disco&quot;. Diréis: ¿por qué el &quot;disco&quot;?, es que resulta que hablamos de <strong>Thriller</strong>. Según Quincy Jones la compañía les dio como plazo ocho semanas para llevar a cabo la grabación. De Thiller se pueden escribir lineas y lineas alabando tal vez cada una de la notas que lo componen, creo que no se merecería menos. Musicalmente hablando no era una maravilla según muchos críticos, pero en él Michael introdujo mucho de lo que le llevaría a ser lo que fue. En él puso en práctica ideas que ya empezaban a emerger de forma tibia, la idea de grabar un vídeo clip como si se tratara de un corto cine, esto es, intentando contar una historia asociada a la canción o la de otorgarle una importancia hasta esos momentos desconocida al baile y a la coreografía. Michael utilizo en este álbum ya de forma definitiva el concepto de la música como espectáculo no solo sonoro, si no también visual. No creo que nadie desconozca Thriller; por lo menos es uno de los primeros discos de los que tengo recuerdo de empezar a escuchar y valorar. Canciones como <em>Thriller, Beat it, Billie Jean</em> quedan para la historia, y podríamos seguir citándolas una a una, ya que todas las canciones de este disco son soberbias. Es lo que llamamos un disco redondo.</p>
-<p>Después de este enorme disco llego el álbum <strong>Bad,</strong> también un gran disco pero sin duda Thriller fue  el &quot;álbum&quot; de Michael y eso puede que le pesara como una losa, no pudo volver a cosechar de nuevo el éxito que obtuvo con Thriller. Este disco salio en 1987 a la calle, Michael le costo mucho llegar a sacarlo por lo anteriormente citado. Caben destacar canciones como <em>Smooth Criminal, Speed Demon o Leave Me Alone</em>. Por estas fechas es cuando empieza a hacerse patente muchas de las excentricidades que persiguieron a Jackson a lo largo de su vida, como son las operaciones de estética agraviadas por el hecho de que Michael sufría una enfermedad desconocida para la gran mayoría de la gente denominada <a href="http://es.wikipedia.org/wiki/Vit%C3%ADligo" target="_blank">Vitíligo</a>.</p>
-<p>Después de Bad se rompió la sociedad creativa que mantenía con Quincy Jones y sin duda esto se noto en los posteriores discos que aparecieron de Michael. Es hasta el siguiente disco que los expertos catalogan como la mejor década de que un artista musical ha tenido nunca, a partir de éste disco titulado <strong>Dangerous</strong> los discos editados por el Rey del Pop (calificativo que le dio su amiga Elisabeth Taylor) ya no poseían el mismo atractivo ni la misma calidad. De Dangerous caben destacar la canción <em>Black or White</em> o la canción que da titulo al álbum <em>Dangerous</em>.</p>
-<p>A partir de aquí Michael edito tres disco de estudio más pero ya sin el éxito de los precedentes, esto son: <strong>HIStory: Past, Present and Future - Book I</strong> editado en 1995, disco en el que se alternaban grandes éxitos del artista con canciones nuevas. Se utilizo esta formato para intentar subir de esa manera las ventas acuciado como estaba ya con las primeras acusaciones de pederastia. De este disco destacan canciones como <em>Scream, You are not Alone o They Don't Care About As</em>. Le siguieron <strong>Blood On The Dance Floor</strong> en el 97 y por último <strong>Invincible</strong> en el año 2001. Pero sin duda fueron ya discos con mucha menos repercusión que los anteriormente citados.</p>
-<p>Los últimos años de su vida, Michael fue mucho más conocido por sus excentricidades y apariciones en los tabloides rosa que por su trabajo. Acusaciones de pederastia que desencadenaron en un juicio mediático, dudas sobre su posible idoneidad para tener la custodia de sus hijos o el estado de su cuentas bancarias eran noticias que saltaban más a menudo de lo que a él seguramente le hubiera gustado a la opinión publica.</p>
-<p>Mucho se ha dicho y se dirá de su figura, pero tal vez debemos quedarnos bajo mi humilde opinión con aquello que lo engrandeció. Su gran talento para la música, el haber sido una de las mejoras voces del siglo XX o el haber sido uno de los mejores cantantes - bailarines que han existido, siendo de hecho el maestro de muchos de los artistas que posteriormente emergieron, ver a una persona con una apariencia tan frágil moverse de la forma que se movía era impactante. Y no sólo en el apartado artístico ha sido clave, no debemos olvidar la importante labor humanitaria que llevo a cabo a lo largo de su vida.</p>
-<p>Para terminar este especial sólo quiero destacar que me siento afortunado al poder haber estado presente y haber podido disfrutar de la música de este artista mientras estuvo vivo, por que Michael Jackson es y será un importante exponente de la historia de la misma.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/5X-Mrc2l1d0?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/user/dsong2009/playlist/2V8uQewcdUDMluju6U8XXm" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/159292399?i=159293419" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (6)</summary>
+      <summary class="post-view__comments-summary"><strong>6 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -184,7 +173,7 @@ Es cierto lo q dices de cómo una persona con tal apariencia de fragilidad, se p
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-07-05T14:46:48+02:00">5 de Julio de 2009, 14:46</time>
+              <time class="post-view__comment-date" datetime="2009-07-05T14:46:48+02:00">5 de julio de 2009, 14:46</time>
             </div>
           </li>
         
@@ -199,7 +188,7 @@ Es cierto lo q dices de cómo una persona con tal apariencia de fragilidad, se p
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-07-05T21:34:49+02:00">5 de Julio de 2009, 21:34</time>
+              <time class="post-view__comment-date" datetime="2009-07-05T21:34:49+02:00">5 de julio de 2009, 21:34</time>
             </div>
           </li>
         
@@ -214,7 +203,7 @@ Es cierto lo q dices de cómo una persona con tal apariencia de fragilidad, se p
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-07-06T09:20:34+02:00">6 de Julio de 2009, 09:20</time>
+              <time class="post-view__comment-date" datetime="2009-07-06T09:20:34+02:00">6 de julio de 2009, 09:20</time>
             </div>
           </li>
         
@@ -233,7 +222,7 @@ Enhorabuena ;-)</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-07-06T13:22:27+02:00">6 de Julio de 2009, 13:22</time>
+              <time class="post-view__comment-date" datetime="2009-07-06T13:22:27+02:00">6 de julio de 2009, 13:22</time>
             </div>
           </li>
         
@@ -249,7 +238,7 @@ despues de jesus</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-11-06T21:08:20+01:00">6 de Noviembre de 2009, 21:08</time>
+              <time class="post-view__comment-date" datetime="2009-11-06T21:08:20+01:00">6 de noviembre de 2009, 21:08</time>
             </div>
           </li>
         
@@ -265,7 +254,7 @@ despues de jesus  y es mi amo</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-11-06T21:10:53+01:00">6 de Noviembre de 2009, 21:10</time>
+              <time class="post-view__comment-date" datetime="2009-11-06T21:10:53+01:00">6 de noviembre de 2009, 21:10</time>
             </div>
           </li>
         
@@ -279,22 +268,23 @@ despues de jesus  y es mi amo</div>
   <a class="post-nav__link post-nav__link--prev" href="/archive/2009-07-04-nube-negra-de-joaquin-sabina.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Nube Negra, de Joaquín Sabina</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2009-07-06-me-gustaria-poder-hacerte-feliz-de-elefantes.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Me gustaría poder hacerte feliz, de Elefantes</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

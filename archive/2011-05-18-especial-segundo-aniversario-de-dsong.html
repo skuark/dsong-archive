@@ -14,11 +14,12 @@
   <meta property="og:description" content="12 editores, 1575 etiquetas, 1627 comentarios y 668 recomendaciones (27 de ellas del lector). Eso es lo que ha dado de si dSong en 2 años de vida. Porque…">
   <meta property="og:url" content="https://dsong.es/archive/2011-05-18-especial-segundo-aniversario-de-dsong.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,88 +29,49 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2011-05-17-i-hear-you-knocking-de-dave-edmunds.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">I hear you knocking, de Dave Edmunds</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2011-05-19-more-than-a-feeling-de-boston.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">More than a feeling, de Boston</span>
-  </a>
-</nav>
-
 <div class="post-view">
-  <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/especiales.html">Especiales</a></span>
-  <h2 class="post-view__title">Especial Segundo Aniversario de dSong</h2>
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/especiales/">Especiales</a><a href="/archive/especiales/#lista">Listas y temas</a><span>Nº 669</span>
+  </nav>
+
+  <header class="post-view__header"><span class="kicker special-tag">Especial · Tema</span>
+  <h1 class="display post-view__title">Segundo Aniversario de dSong</h1>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="?s=20" alt="" />
-            <span class="post-view__editor-name">dSong</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2011-05-18T09:00:36+02:00">18 de Mayo de 2011</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
-  </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
-    <dl class="post-facts__list">
-      <dt>Artista</dt>
-      <dd><a href="/archive/artists/the-beatles.html">The Beatles</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
-      <dt>País</dt>
-      <dd><a href="/archive/countries/reino-unido.html">Reino Unido</a></dd>
-      <dt>Web</dt>
-      <dd><a href="https://www.thebeatles.com/" rel="noopener" target="_blank">thebeatles.com ↗</a></dd>
-      <dt>Género</dt>
-      <dd>Rock</dd>
-      <dt>Géneros en MusicBrainz</dt>
-      <dd>pop, pop rock, merseybeat, psychedelic pop</dd>
-      <dt>Escuchar en</dt>
-      <dd><a href="https://open.spotify.com/user/dsong2009/playlist/6MgdhqxqXtVWytzzz3YcQa" rel="noopener" target="_blank">Spotify ↗</a></dd>
-    </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
-    <dl class="post-facts__list">
-      <dt>Categoría</dt>
-      <dd><a href="/archive/categories/especiales.html">Especiales</a></dd>
-      <dt>Autor</dt>
-      <dd><a href="/archive/editors/dsong.html">dSong</a></dd>
-      <dt>Publicado</dt>
-      <dd>18 de mayo de 2011</dd>
-    </dl>
-    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">dSong</span>
+    </span>
+    <time class="post-view__date" datetime="2011-05-18T09:00:36+02:00">miércoles, 18 de mayo de 2011</time>
+    <span>9 min de lectura</span>
   </div>
   </header>
 
@@ -171,14 +133,41 @@
     </div>
   </details>
   <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
+    <dl class="post-facts__list">
+      <dt>Artista</dt>
+      <dd><a href="/archive/artists/the-beatles.html">The Beatles</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
+      <dt>País</dt>
+      <dd><a href="/archive/countries/reino-unido.html">Reino Unido</a></dd>
+      <dt>Web</dt>
+      <dd><a href="https://www.thebeatles.com/" rel="noopener" target="_blank">thebeatles.com ↗</a></dd>
+      <dt>Género</dt>
+      <dd>Rock</dd>
+      <dt>Géneros en MusicBrainz</dt>
+      <dd>pop, pop rock, merseybeat, psychedelic pop</dd>
+      <dt>Escuchar en</dt>
+      <dd><a href="https://open.spotify.com/user/dsong2009/playlist/6MgdhqxqXtVWytzzz3YcQa" rel="noopener" target="_blank">Spotify ↗</a></dd>
+    </dl>
+    <h3 class="post-facts__group kicker">dSong</h3>
+    <dl class="post-facts__list">
+      <dt>Categoría</dt>
+      <dd><a href="/archive/categories/especiales.html">Especiales</a></dd>
+      <dt>Autor</dt>
+      <dd><a href="/archive/editors/dsong.html">dSong</a></dd>
+      <dt>Publicado</dt>
+      <dd>18 de mayo de 2011</dd>
+    </dl>
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (6)</summary>
+      <summary class="post-view__comments-summary"><strong>6 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -192,7 +181,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-05-18T11:42:49+02:00">18 de Mayo de 2011, 11:42</time>
+              <time class="post-view__comment-date" datetime="2011-05-18T11:42:49+02:00">18 de mayo de 2011, 11:42</time>
             </div>
           </li>
         
@@ -207,7 +196,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-05-18T12:48:05+02:00">18 de Mayo de 2011, 12:48</time>
+              <time class="post-view__comment-date" datetime="2011-05-18T12:48:05+02:00">18 de mayo de 2011, 12:48</time>
             </div>
           </li>
         
@@ -222,7 +211,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-05-18T13:34:03+02:00">18 de Mayo de 2011, 13:34</time>
+              <time class="post-view__comment-date" datetime="2011-05-18T13:34:03+02:00">18 de mayo de 2011, 13:34</time>
             </div>
           </li>
         
@@ -237,7 +226,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-05-18T13:59:33+02:00">18 de Mayo de 2011, 13:59</time>
+              <time class="post-view__comment-date" datetime="2011-05-18T13:59:33+02:00">18 de mayo de 2011, 13:59</time>
             </div>
           </li>
         
@@ -252,7 +241,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-05-19T03:41:27+02:00">19 de Mayo de 2011, 03:41</time>
+              <time class="post-view__comment-date" datetime="2011-05-19T03:41:27+02:00">19 de mayo de 2011, 03:41</time>
             </div>
           </li>
         
@@ -273,7 +262,7 @@ PD: Algún día podéis incluir a gente como James, The Charlatans, Jesus Jones,
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-05-24T17:28:59+02:00">24 de Mayo de 2011, 17:28</time>
+              <time class="post-view__comment-date" datetime="2011-05-24T17:28:59+02:00">24 de mayo de 2011, 17:28</time>
             </div>
           </li>
         
@@ -287,22 +276,23 @@ PD: Algún día podéis incluir a gente como James, The Charlatans, Jesus Jones,
   <a class="post-nav__link post-nav__link--prev" href="/archive/2011-05-17-i-hear-you-knocking-de-dave-edmunds.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">I hear you knocking, de Dave Edmunds</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2011-05-19-more-than-a-feeling-de-boston.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">More than a feeling, de Boston</span>
+    <span class="post-nav__editor">Jal</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

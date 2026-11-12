@@ -14,11 +14,12 @@
   <meta property="og:description" content="Hey tío, ¿te apetece salir esta noche a dar una vuelta? Pues no lo sé ... ahora estoy acabando un proyecto de la universidad mientras hago horas extra en el…">
   <meta property="og:url" content="https://dsong.es/archive/2010-10-25-overload-de-sugarbabes.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,78 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-10-24-especial-lista-10-canciones-de-discoteca-que-bailaste-en-los-90s.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Especial Lista: 10 canciones de discoteca que bailaste en los 90′s</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-10-26-she-talks-to-the-angels-de-the-black-crowes.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">She Talks to the Angels, de The Black Crowes</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2010">2010</a><span>Nº 464</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Overload, de Sugarbabes</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Pop</span>
+  <h1 class="display post-view__title">Overload</h1>
+  <p class="post-view__by">de Sugarbabes</p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/74291eae2bd3251783b8aa958e5ffd3c?s=20" alt="" />
-            <span class="post-view__editor-name">Poncho</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-10-25T09:00:05+02:00">25 de Octubre de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Poncho</span>
+    </span>
+    <time class="post-view__date" datetime="2010-10-25T09:00:05+02:00">lunes, 25 de octubre de 2010</time>
+    <span>1 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Hey tío,  ¿te apetece salir esta noche a dar una vuelta? Pues no lo sé ... ahora estoy acabando un proyecto de la universidad mientras hago horas extra en el trabajo y creo que mi novia quería que hoy viéramos una peli juntos, aunque he visto que hoy es el cumpleaños de Pepe y quería celebrarlo con las amigas de mi amante....</p>
+<p>Alguna vez te has visto agobiado de planes, gente, novias/novios, amantes clandestinos... amigo dSongnero... tú has estado sin duda &quot;Overloaded&quot;. Porque todos alguna vez nos hemos sentido sobrecargados y la cabeza nos iba a estallar entre unas cosas y otras. Y más un lunes de Octubre como el de hoy...</p>
+<p>Mejor relajarse y disfrutar lo que tenga que venir con este tema de <strong>Sugarbabes</strong>. Tres ardientes londinenses que hacen música desde el 94. Aunque ya no quede ninguna de las que originalmente formaban el grupo. Os traigo su single más conocido <strong>Overload</strong>, tema que batió records de ventas, con una crítica fabulosa y llegando incluso a ser disco de oro en Alemania.</p>
+<p>Y ya como consejo... cuando esteis sobrecargados, procurad no agobiaros, respirad hondo y... haced lo que más os apetezca! Feliz lunes :-D</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
+      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/5mkiCQExfYiH0HOKbVAPAE" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/sugababes.html">Sugababes</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/dfa715ac-b536-44df-af43-570d3ea3edec" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +123,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://open.spotify.com/track/5mkiCQExfYiH0HOKbVAPAE" rel="noopener" target="_blank">Spotify ↗</a></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -117,38 +133,13 @@
       <dd>25 de octubre de 2010</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Hey tío,  ¿te apetece salir esta noche a dar una vuelta? Pues no lo sé ... ahora estoy acabando un proyecto de la universidad mientras hago horas extra en el trabajo y creo que mi novia quería que hoy viéramos una peli juntos, aunque he visto que hoy es el cumpleaños de Pepe y quería celebrarlo con las amigas de mi amante....</p>
-<p>Alguna vez te has visto agobiado de planes, gente, novias/novios, amantes clandestinos... amigo dSongnero... tú has estado sin duda &quot;Overloaded&quot;. Porque todos alguna vez nos hemos sentido sobrecargados y la cabeza nos iba a estallar entre unas cosas y otras. Y más un lunes de Octubre como el de hoy...</p>
-<p>Mejor relajarse y disfrutar lo que tenga que venir con este tema de <strong>Sugarbabes</strong>. Tres ardientes londinenses que hacen música desde el 94. Aunque ya no quede ninguna de las que originalmente formaban el grupo. Os traigo su single más conocido <strong>Overload</strong>, tema que batió records de ventas, con una crítica fabulosa y llegando incluso a ser disco de oro en Alemania.</p>
-<p>Y ya como consejo... cuando esteis sobrecargados, procurad no agobiaros, respirad hondo y... haced lo que más os apetezca! Feliz lunes :-D</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="true">Spotify</button>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify">
-      <iframe title="Reproductor de Spotify" src="https://open.spotify.com/embed/track/5mkiCQExfYiH0HOKbVAPAE" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (4)</summary>
+      <summary class="post-view__comments-summary"><strong>4 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -162,7 +153,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-10-25T09:28:58+02:00">25 de Octubre de 2010, 09:28</time>
+              <time class="post-view__comment-date" datetime="2010-10-25T09:28:58+02:00">25 de octubre de 2010, 09:28</time>
             </div>
           </li>
         
@@ -177,7 +168,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-10-25T16:13:20+02:00">25 de Octubre de 2010, 16:13</time>
+              <time class="post-view__comment-date" datetime="2010-10-25T16:13:20+02:00">25 de octubre de 2010, 16:13</time>
             </div>
           </li>
         
@@ -193,7 +184,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-10-25T16:30:34+02:00">25 de Octubre de 2010, 16:30</time>
+              <time class="post-view__comment-date" datetime="2010-10-25T16:30:34+02:00">25 de octubre de 2010, 16:30</time>
             </div>
           </li>
         
@@ -211,7 +202,7 @@ P.D: Los lunes son un mojoncete =)</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-10-26T16:00:24+02:00">26 de Octubre de 2010, 16:00</time>
+              <time class="post-view__comment-date" datetime="2010-10-26T16:00:24+02:00">26 de octubre de 2010, 16:00</time>
             </div>
           </li>
         
@@ -225,22 +216,23 @@ P.D: Los lunes son un mojoncete =)</div>
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-10-24-especial-lista-10-canciones-de-discoteca-que-bailaste-en-los-90s.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Especial Lista: 10 canciones de discoteca que bailaste en los 90′s</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-10-26-she-talks-to-the-angels-de-the-black-crowes.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">She Talks to the Angels, de The Black Crowes</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

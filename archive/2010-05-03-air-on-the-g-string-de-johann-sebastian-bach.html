@@ -14,11 +14,12 @@
   <meta property="og:description" content="Pesada, coñazo o aburrida son algunos de los calificativos que la música clásica ha recibido en tantos años de historia. No os quiero engañar haciéndome pasar…">
   <meta property="og:url" content="https://dsong.es/archive/2010-05-03-air-on-the-g-string-de-johann-sebastian-bach.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,84 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2010-05-02-back-to-black-de-amy-winehouse.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Especial Álbum: Back to Black, de Amy Winehouse</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2010-05-04-do-you-want-the-truth-or-something-beautiful-de-paloma-faith.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Do You Want The Truth or Something Beautiful?, de Paloma Faith</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2010">2010</a><span>Nº 320</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Air on the G String, de Johann Sebastian Bach</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Classical</span>
+  <h1 class="display post-view__title">Air on the G String</h1>
+  <p class="post-view__by">de <a href="/archive/artists/johann-sebastian-bach.html">Johann Sebastian Bach</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.skuark.com/" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=20" alt="" />
-            <span class="post-view__editor-name">skuark</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2010-05-03T09:00:29+02:00">3 de Mayo de 2010</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <a href="http://www.skuark.com/" target="_blank"><span class="post-view__editor-name">skuark</span></a>
+    </span>
+    <time class="post-view__date" datetime="2010-05-03T09:00:29+02:00">lunes, 3 de mayo de 2010</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Pesada, coñazo o aburrida son algunos de los calificativos que la música clásica ha recibido en tantos años de historia. No os quiero engañar haciéndome pasar por un talibán del género, típicos culturetas pedantes que ven en este estilo el único tipo de creación musical digno de existencia.</p>
+<p>En cierto modo la música clásica no es un género, sino el nombre con el que se comenzó a conocer a partir de la primera mitad del Siglo XIX (primera referencia al término) a las composiciones europeas más destacadas del siglo anterior. Sin embargo, con el tiempo el término <em>&quot;música clásica&quot;</em> se convirtió en la forma de designar a las creaciones opuestas a la música popular. Según la RAE, la música clásica es la música de tradición culta. Sea como sea, lo cierto es que todos sabemos a qué nos referimos cuando hablamos de música clásica.</p>
+<p>Una de las piezas clásicas más reconocidas y reproducidas por diferentes autores a lo largo de los años, y que todos habrémos escuchado en decenas sino cientos de ocasiones, es la composición <strong><em>&quot;Air on a G String&quot;</em></strong> para cuerda y piano. La suite orquestal original de esta obra fue escrita por el compositor de origen alemán <strong>Johann Sebastian Bach</strong>, en algún momento entre los años 1717 y 1723, para su mecenas el príncipe <em>Leopold de Anhalt-Cöthen</em>. El nombre <em>&quot;Air on the G String&quot;</em> le fue dado sin embargo por el violinista August Wilhelmj, también de origen alemán, quien realizó algunos arreglos a la obra para violín y piano a finales del Siglo XIX. Transformando la clave de la pieza desde D Mayor a C Mayor y descendiendo la melodía en una octava, Wilhelmj pudo reproducirla en solo una cuerda de su violín, la cuerda G. Y no, para mi desgracia no se tanto de música, esto simplemente lo he leído mientras preparaba el artículo.</p>
+<p>Sin más preámbulos, os dejo con esta bella melodía digna de escuchar en momentos de relax.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/C4gIXvPk70g?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/7rIWt3zlh2ntF1XDzj3wee" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/johann-sebastian-bach.html">Johann Sebastian Bach</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/24f1766e-9635-4d58-a4d4-9413f9f98a4c" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -105,7 +127,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=C4gIXvPk70g" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/7rIWt3zlh2ntF1XDzj3wee" rel="noopener" target="_blank">Spotify ↗</a></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -115,44 +137,13 @@
       <dd>3 de mayo de 2010</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Pesada, coñazo o aburrida son algunos de los calificativos que la música clásica ha recibido en tantos años de historia. No os quiero engañar haciéndome pasar por un talibán del género, típicos culturetas pedantes que ven en este estilo el único tipo de creación musical digno de existencia.</p>
-<p>En cierto modo la música clásica no es un género, sino el nombre con el que se comenzó a conocer a partir de la primera mitad del Siglo XIX (primera referencia al término) a las composiciones europeas más destacadas del siglo anterior. Sin embargo, con el tiempo el término <em>&quot;música clásica&quot;</em> se convirtió en la forma de designar a las creaciones opuestas a la música popular. Según la RAE, la música clásica es la música de tradición culta. Sea como sea, lo cierto es que todos sabemos a qué nos referimos cuando hablamos de música clásica.</p>
-<p>Una de las piezas clásicas más reconocidas y reproducidas por diferentes autores a lo largo de los años, y que todos habrémos escuchado en decenas sino cientos de ocasiones, es la composición <strong><em>&quot;Air on a G String&quot;</em></strong> para cuerda y piano. La suite orquestal original de esta obra fue escrita por el compositor de origen alemán <strong>Johann Sebastian Bach</strong>, en algún momento entre los años 1717 y 1723, para su mecenas el príncipe <em>Leopold de Anhalt-Cöthen</em>. El nombre <em>&quot;Air on the G String&quot;</em> le fue dado sin embargo por el violinista August Wilhelmj, también de origen alemán, quien realizó algunos arreglos a la obra para violín y piano a finales del Siglo XIX. Transformando la clave de la pieza desde D Mayor a C Mayor y descendiendo la melodía en una octava, Wilhelmj pudo reproducirla en solo una cuerda de su violín, la cuerda G. Y no, para mi desgracia no se tanto de música, esto simplemente lo he leído mientras preparaba el artículo.</p>
-<p>Sin más preámbulos, os dejo con esta bella melodía digna de escuchar en momentos de relax.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/C4gIXvPk70g?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/7rIWt3zlh2ntF1XDzj3wee" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (3)</summary>
+      <summary class="post-view__comments-summary"><strong>3 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -166,7 +157,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-03T11:17:03+02:00">3 de Mayo de 2010, 11:17</time>
+              <time class="post-view__comment-date" datetime="2010-05-03T11:17:03+02:00">3 de mayo de 2010, 11:17</time>
             </div>
           </li>
         
@@ -185,7 +176,7 @@ Skuark, has abierto la veda de la música clásica en dSong :-P</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-03T11:39:36+02:00">3 de Mayo de 2010, 11:39</time>
+              <time class="post-view__comment-date" datetime="2010-05-03T11:39:36+02:00">3 de mayo de 2010, 11:39</time>
             </div>
           </li>
         
@@ -200,7 +191,7 @@ Skuark, has abierto la veda de la música clásica en dSong :-P</div>
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2010-05-03T16:19:08+02:00">3 de Mayo de 2010, 16:19</time>
+              <time class="post-view__comment-date" datetime="2010-05-03T16:19:08+02:00">3 de mayo de 2010, 16:19</time>
             </div>
           </li>
         
@@ -214,22 +205,23 @@ Skuark, has abierto la veda de la música clásica en dSong :-P</div>
   <a class="post-nav__link post-nav__link--prev" href="/archive/2010-05-02-back-to-black-de-amy-winehouse.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Especial Álbum: Back to Black, de Amy Winehouse</span>
+    <span class="post-nav__editor">Jose</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2010-05-04-do-you-want-the-truth-or-something-beautiful-de-paloma-faith.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Do You Want The Truth or Something Beautiful?, de Paloma Faith</span>
+    <span class="post-nav__editor">Jose</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

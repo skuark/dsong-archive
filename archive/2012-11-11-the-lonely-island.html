@@ -14,11 +14,12 @@
   <meta property="og:description" content="The Lonely Island no es un grupo que suene en la radio, ni de los que dan conciertos multitudinarios, puede que el nombre ni siquiera te suene o que pienses…">
   <meta property="og:url" content="https://dsong.es/archive/2012-11-11-the-lonely-island.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,93 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2012-11-10-the-greeks-de-is-tropical.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">The Greeks, de Is Tropical</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2012-11-12-je-taime-moi-non-plus.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Je t&#39;aime moi non plus, de Serge Gainsbourg &amp; Jane Birkin</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2012">2012</a><span>Nº 1148</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/artistas.html">Artistas</a></span>
-  <h2 class="post-view__title">The Lonely Island</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/artistas.html">Artistas</a> · Comedia</span>
+  <h1 class="display post-view__title">The Lonely Island</h1>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.alvaromontoro.com" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/bebd502207c63b6e2caa00dd3e297672?s=20" alt="" />
-            <span class="post-view__editor-name">Monty</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2012-11-11T08:00:23+01:00">11 de Noviembre de 2012</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <a href="http://www.alvaromontoro.com" target="_blank"><span class="post-view__editor-name">Monty</span></a>
+    </span>
+    <time class="post-view__date" datetime="2012-11-11T08:00:23+01:00">domingo, 11 de noviembre de 2012</time>
+    <span>4 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p><strong>The Lonely Island</strong> no es un grupo que suene en la radio, ni de los que dan conciertos multitudinarios, puede que el nombre ni siquiera te suene o que pienses que sólo los conocen en su casa a la hora de comer... Pero, ¿y si te dijéramos que han grabado con artistas como Justin Timberlake, Rihanna, Julian Casablancas (vocalista de <a title="The Strokes" href="http://dsong.es/autor/the-strokes-2">The Strokes</a>), <a title="Lady Gaga" href="http://dsong.es/autor/lady-gaga/">Lady Gaga</a>, <a title="Michael Bolton" href="https://dsong.es/archive/artists/michael-bolton.html">Michael Bolton</a>, <a title="Norah Jones" href="http://dsong.es/autor/norah-jones/">Norah Jones</a> o Snoop Dogg? ¿O que han vendido millones de copias de sus singles? ¿O que han sido nominados a los Grammy y llegado al número 1 de la lista de álbumes de rap?</p>
+<p>¿Dónde está el truco entonces? Digamos que su género musical no es el más popular: el trío formado por <strong>Akiva Schaeffer</strong>, <strong>Jorma Taccone</strong> y <strong>Andy Samberg</strong> se dedica a la comedia y la comedia-hip hop. Con un estilo propio, diferente al de otros grupos dedicados a la canción comedia como los más conocidos Flight of the Conchords, sus composiciones son enérgicas y más moviditas.</p>
+<p>Empezaron a escribir pequeñas canciones y vídeos-parodia cuando estaban en el instituto, y su éxito les llevó a ser guionistas invitados de los MTV Movie Awards. Jimmy Fallon, presentador de esa edición de los premios y miembro del casting de Saturday Night Live (uno de los programas de comedia más importantes de Estados Unidos, que tuvo una breve versión española encabezada por Eva Hache en Cuatro), vio el gran potencial del trío y no dudo en recomendarlos para SNL. Los tres se incorporaron al show como guionistas, y Andy Samberg también como actor (hasta hace apenas unas semanas, algo que anunció durante la presentación de la película That’s my boy.)</p>
+<p>Aunque su estilo es principalmente hip hop, también coquetean con el rock y la electrónica (&quot;<em>Incredibad</em>&quot; recuerda a los Beastie Boys). Su música tiene un ritmo muy pegadizo, y las letras son divertidas y generalmente subida de tono (casi todas sus canciones llevan la etiqueta de &quot;aviso parental, letras explícitas&quot;). Una mezcla explosiva.</p>
+<p>Acompañados del rapero T-Pain, consiguieron una nominación a los premios Grammy de 2010, en la categoría de Mejor Colaboración de Rap/Hip-hop con la canción &quot;<em><strong>I’m on a boat</strong></em>&quot; (la canción que puedes escuchar en dSong). Aunque el premio se lo llevó finalmente el tema &quot;<em>Run this town</em>&quot;, cantada por Jay-Z, Rihanna y Kanye West.</p>
+<p>Tres años antes, el vídeo de la canción &quot;<a title="Dick in a box" href="http://www.youtube.com/watch?v=R7yfISlGLNU" target="_blank"><em>Dick in a box</em></a>&quot; ya les había valido el premio Emmy a la Mejor Canción y Letras. En él, un dúo formado por Andy Samberg y Justin Timberlake explicaban como el mejor regalo para las Navidades consiste en meter el <em>tema</em> en una caja y dejar que la novia lo abra. El tema tuvo tan buena acogida que dio lugar a dos secuelas: &quot;<a title="Motherlover" href="http://www.youtube.com/watch?v=X0DeIqJm4vM" target="_blank"><em>Motherlover</em></a>&quot; (con la colaboración de Patricia Clarkson y Susan Sarandon como madres), y &quot;<a title="3-way. The Golden Rule" href="http://www.youtube.com/watch?v=Pi7gwX7rjOw" target="_blank"><em>3-way. The Golden Rule</em></a>&quot; (cantada junto a Lady Gaga y en la que explican la regla de oro en un trío.)</p>
+<p>Como parte del reparto de SNL, muchos de sus vídeos musicales fueron emitidos como cortos humorísticos en el programa, normalmente caracterizados por sus numerosos cameos (Jessica Alba, Seth Rogen, Robin Wright…) y que añaden aún más comedia a la letra de la canción.</p>
+<p>Así se pudo ver a Michael Bolton disfrazado de Forrest Gump y Erin Brokovich, en &quot;<a title="Jack Sparrow" href="http://www.youtube.com/watch?v=GI6CfKcMhjY" target="_blank"><strong><em>Jack Sparrow</em></strong></a>&quot; (puedes ver el vídeo en dSong; en él, Bolton se olvida constantemente del estribillo porque no puede dejar de pensar en Piratas del Caribe, dejando boquiabiertos a los integrantes de <strong>The Lonely Island</strong>); unos agresivos Ryan Reynolds y Elijah Wood a los que no les gusta que nadie interrumpa su cena, en &quot;<a title="Threw it on the ground" href="http://www.youtube.com/watch?v=gAYL5H46QnQ" target="_blank"><em>Threw it on the ground</em></a>&quot;; la cara más macarra de Natalie Portman en &quot;<em>Natalie’s Rap</em>&quot;; o una sexy Rihanna robando un banco mientras canta con Shy Ronnie (Samberg) en &quot;<a title="Shy Ronnie 2: Ronnie and Clyde" href="http://www.youtube.com/watch?v=6_W_xLWtNa0" target="_blank"><em>Shy Ronnie 2: Ronnie and Clyde</em></a>.&quot; Sin olvidar su tema más popular en Spotify: &quot;<a title="I just had sex" href="http://www.youtube.com/watch?v=lQlIhraqL7o" target="_blank"><em>I just had sex</em></a>.&quot;</p>
+<p>Pero además de las canciones más conocidas, cuentan con un abanico de canciones muy divertidas como &quot;<em>Japan</em>&quot; (en la que cuentan cómo escriben una canción sobre Japón porque nunca han estado allí y quieren obligar a la discográfica a pagarles el viaje), &quot;<em>Mama</em>&quot; o &quot;<em>No homo</em>.&quot;</p>
+<p>Con dos discos a sus espaldas: &quot;<strong>Incredibad</strong>&quot; y &quot;<em><strong>Turtleneck &amp; Chain</strong></em>&quot;, 6 discos de oro y 3 de platino, habrá que ver como afecta la salida de SNL a este grupo, al que no le falta talento y buen sentido del humor.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/GI6CfKcMhjY?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/3IQSYqnKsCTMLWn2xE3HFT" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1452841438?i=1452841465" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/the-lonely-island.html">The Lonely Island</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/028e1863-cab4-4a3d-9dd9-91c682c91005" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +138,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=GI6CfKcMhjY" rel="noopener" target="_blank">YouTube ↗</a><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/3IQSYqnKsCTMLWn2xE3HFT" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/1452841438?i=1452841465" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/artistas.html">Artistas</a></dd>
@@ -117,48 +148,7 @@
       <dd>11 de noviembre de 2012</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p><strong>The Lonely Island</strong> no es un grupo que suene en la radio, ni de los que dan conciertos multitudinarios, puede que el nombre ni siquiera te suene o que pienses que sólo los conocen en su casa a la hora de comer... Pero, ¿y si te dijéramos que han grabado con artistas como Justin Timberlake, Rihanna, Julian Casablancas (vocalista de <a title="The Strokes" href="http://dsong.es/autor/the-strokes-2">The Strokes</a>), <a title="Lady Gaga" href="http://dsong.es/autor/lady-gaga/">Lady Gaga</a>, <a title="Michael Bolton" href="https://dsong.es/archive/artists/michael-bolton.html">Michael Bolton</a>, <a title="Norah Jones" href="http://dsong.es/autor/norah-jones/">Norah Jones</a> o Snoop Dogg? ¿O que han vendido millones de copias de sus singles? ¿O que han sido nominados a los Grammy y llegado al número 1 de la lista de álbumes de rap?</p>
-<p>¿Dónde está el truco entonces? Digamos que su género musical no es el más popular: el trío formado por <strong>Akiva Schaeffer</strong>, <strong>Jorma Taccone</strong> y <strong>Andy Samberg</strong> se dedica a la comedia y la comedia-hip hop. Con un estilo propio, diferente al de otros grupos dedicados a la canción comedia como los más conocidos Flight of the Conchords, sus composiciones son enérgicas y más moviditas.</p>
-<p>Empezaron a escribir pequeñas canciones y vídeos-parodia cuando estaban en el instituto, y su éxito les llevó a ser guionistas invitados de los MTV Movie Awards. Jimmy Fallon, presentador de esa edición de los premios y miembro del casting de Saturday Night Live (uno de los programas de comedia más importantes de Estados Unidos, que tuvo una breve versión española encabezada por Eva Hache en Cuatro), vio el gran potencial del trío y no dudo en recomendarlos para SNL. Los tres se incorporaron al show como guionistas, y Andy Samberg también como actor (hasta hace apenas unas semanas, algo que anunció durante la presentación de la película That’s my boy.)</p>
-<p>Aunque su estilo es principalmente hip hop, también coquetean con el rock y la electrónica (&quot;<em>Incredibad</em>&quot; recuerda a los Beastie Boys). Su música tiene un ritmo muy pegadizo, y las letras son divertidas y generalmente subida de tono (casi todas sus canciones llevan la etiqueta de &quot;aviso parental, letras explícitas&quot;). Una mezcla explosiva.</p>
-<p>Acompañados del rapero T-Pain, consiguieron una nominación a los premios Grammy de 2010, en la categoría de Mejor Colaboración de Rap/Hip-hop con la canción &quot;<em><strong>I’m on a boat</strong></em>&quot; (la canción que puedes escuchar en dSong). Aunque el premio se lo llevó finalmente el tema &quot;<em>Run this town</em>&quot;, cantada por Jay-Z, Rihanna y Kanye West.</p>
-<p>Tres años antes, el vídeo de la canción &quot;<a title="Dick in a box" href="http://www.youtube.com/watch?v=R7yfISlGLNU" target="_blank"><em>Dick in a box</em></a>&quot; ya les había valido el premio Emmy a la Mejor Canción y Letras. En él, un dúo formado por Andy Samberg y Justin Timberlake explicaban como el mejor regalo para las Navidades consiste en meter el <em>tema</em> en una caja y dejar que la novia lo abra. El tema tuvo tan buena acogida que dio lugar a dos secuelas: &quot;<a title="Motherlover" href="http://www.youtube.com/watch?v=X0DeIqJm4vM" target="_blank"><em>Motherlover</em></a>&quot; (con la colaboración de Patricia Clarkson y Susan Sarandon como madres), y &quot;<a title="3-way. The Golden Rule" href="http://www.youtube.com/watch?v=Pi7gwX7rjOw" target="_blank"><em>3-way. The Golden Rule</em></a>&quot; (cantada junto a Lady Gaga y en la que explican la regla de oro en un trío.)</p>
-<p>Como parte del reparto de SNL, muchos de sus vídeos musicales fueron emitidos como cortos humorísticos en el programa, normalmente caracterizados por sus numerosos cameos (Jessica Alba, Seth Rogen, Robin Wright…) y que añaden aún más comedia a la letra de la canción.</p>
-<p>Así se pudo ver a Michael Bolton disfrazado de Forrest Gump y Erin Brokovich, en &quot;<a title="Jack Sparrow" href="http://www.youtube.com/watch?v=GI6CfKcMhjY" target="_blank"><strong><em>Jack Sparrow</em></strong></a>&quot; (puedes ver el vídeo en dSong; en él, Bolton se olvida constantemente del estribillo porque no puede dejar de pensar en Piratas del Caribe, dejando boquiabiertos a los integrantes de <strong>The Lonely Island</strong>); unos agresivos Ryan Reynolds y Elijah Wood a los que no les gusta que nadie interrumpa su cena, en &quot;<a title="Threw it on the ground" href="http://www.youtube.com/watch?v=gAYL5H46QnQ" target="_blank"><em>Threw it on the ground</em></a>&quot;; la cara más macarra de Natalie Portman en &quot;<em>Natalie’s Rap</em>&quot;; o una sexy Rihanna robando un banco mientras canta con Shy Ronnie (Samberg) en &quot;<a title="Shy Ronnie 2: Ronnie and Clyde" href="http://www.youtube.com/watch?v=6_W_xLWtNa0" target="_blank"><em>Shy Ronnie 2: Ronnie and Clyde</em></a>.&quot; Sin olvidar su tema más popular en Spotify: &quot;<a title="I just had sex" href="http://www.youtube.com/watch?v=lQlIhraqL7o" target="_blank"><em>I just had sex</em></a>.&quot;</p>
-<p>Pero además de las canciones más conocidas, cuentan con un abanico de canciones muy divertidas como &quot;<em>Japan</em>&quot; (en la que cuentan cómo escriben una canción sobre Japón porque nunca han estado allí y quieren obligar a la discográfica a pagarles el viaje), &quot;<em>Mama</em>&quot; o &quot;<em>No homo</em>.&quot;</p>
-<p>Con dos discos a sus espaldas: &quot;<strong>Incredibad</strong>&quot; y &quot;<em><strong>Turtleneck &amp; Chain</strong></em>&quot;, 6 discos de oro y 3 de platino, habrá que ver como afecta la salida de SNL a este grupo, al que no le falta talento y buen sentido del humor.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/GI6CfKcMhjY?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/3IQSYqnKsCTMLWn2xE3HFT" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1452841438?i=1452841465" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
@@ -170,22 +160,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2012-11-10-the-greeks-de-is-tropical.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">The Greeks, de Is Tropical</span>
+    <span class="post-nav__editor">Poncho</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2012-11-12-je-taime-moi-non-plus.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Je t&#39;aime moi non plus, de Serge Gainsbourg &amp; Jane Birkin</span>
+    <span class="post-nav__editor">Jal</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

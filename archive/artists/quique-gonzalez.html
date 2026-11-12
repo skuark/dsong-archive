@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/quique-gonzalez.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,123 +28,126 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista Quique González</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/27e948aa-6b38-4da2-acf6-8459964a130a" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Quique_Gonz%C3%A1lez_y_Los_Detectives_-_Palencia_Sonora_2017_06.jpg/330px-Quique_Gonz%C3%A1lez_y_Los_Detectives_-_Palencia_Sonora_2017_06.jpg" width="320" height="213" alt="Quique González" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Quique_Gonz%C3%A1lez_y_Los_Detectives_-_Palencia_Sonora_2017_06.jpg" rel="noopener">Montgomery · CC BY-SA 4.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Quique González</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Quique_Gonz%C3%A1lez_y_Los_Detectives_-_Palencia_Sonora_2017_06.jpg/330px-Quique_Gonz%C3%A1lez_y_Los_Detectives_-_Palencia_Sonora_2017_06.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Quique_Gonz%C3%A1lez_y_Los_Detectives_-_Palencia_Sonora_2017_06.jpg/330px-Quique_Gonz%C3%A1lez_y_Los_Detectives_-_Palencia_Sonora_2017_06.jpg" width="320" height="213" alt="Quique González" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Quique_Gonz%C3%A1lez_y_Los_Detectives_-_Palencia_Sonora_2017_06.jpg" rel="noopener" target="_blank">Montgomery · CC BY-SA 4.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>Enrique González Morales, conocido artísticamente como Quique González (Madrid, 17 de octubre de 1973) es un cantante y compositor español de música rock.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Quique_Gonz%C3%A1lez" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/espana.html">España</a></p>
+    <h1 class="page-title artist-hero__name">Quique González</h1>
+    <p class="artist-hero__bio">Enrique González Morales, conocido artísticamente como Quique González (Madrid, 17 de octubre de 1973) es un cantante y compositor español de música rock.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Quique_Gonz%C3%A1lez" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/27e948aa-6b38-4da2-acf6-8459964a130a" rel="noopener">MusicBrainz ↗</a><a href="http://www.quiquegonzalez.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">6 publicaciones, 2009–2016</h2>
+    <span>Todas de <a href="/archive/editors/jesusr.html">jesusr</a></span>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2009-09-19-rompeolas-de-quique-gonzalez.html">
+        <span class="kicker">19 sep 2009 · Salitre 48</span>
+        <span class="display post-card__title">Rompeolas</span>
+        <span class="post-card__excerpt">«Quique González es uno de esos hombres que se merecen respeto. Respeto, porque para empezar él nunca dejó de hacer lo que consideraba…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2009-12-06-especial-album-daiquiri-blues-de-quique-gonzalez.html">
+        <span class="kicker">6 dic 2009 · Daiquiri Blues</span>
+        <span class="display post-card__title">Especial Álbum: Daiquiri Blues</span>
+        <span class="post-card__excerpt">«Aquí está. Quique González sigue subiendo, y no toca techo. Y sí, vale, lo digo porque es un plato de mi gusto, pero no sólo por esto…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2010-06-10-especial-lagarto-festival-2010-y-los-conserjes-de-noche-de-quique-gonzalez.html">
+        <span class="kicker">10 jun 2010 · Ajuste de cuentas</span>
+        <span class="display post-card__title">Y los conserjes de noche</span>
+        <span class="post-card__excerpt">«Como ya sabéis, llevamos unos días (y los que nos quedan) repasando los artistas que el sábado 12 de Junio de 2010 saldrán a la palestra…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2013-01-12-el-contestador-de-quique-gonzalez.html">
+        <span class="kicker">12 ene 2013 · Personal</span>
+        <span class="display post-card__title">El contestador</span>
+        <span class="post-card__excerpt">«No es un secreto que Quique González es admirado en esta casa, (particularmente y para concretar, por mi). Es una evidencia que se sustenta…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2014-05-02-dia-de-feria-de-quique-gonzalez.html">
+        <span class="kicker">2 may 2014 · Salitre 48</span>
+        <span class="display post-card__title">Día de feria</span>
+        <span class="post-card__excerpt">«Hoy es 2 de mayo y estoy en Sevilla. Casi en una feria no-de-abril he empezado a bromear con poner algo de Cantores de Hispalis o Ecos del…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2016-09-01-me-mata-si-me-necesitas-de-quique-gonzalez.html">
+        <span class="kicker">1 sep 2016 · Me mata si me necesitas</span>
+        <span class="display post-card__title">Me mata si me necesitas</span>
+        <span class="post-card__excerpt">«Hoy se me ha dado una situación que me ha llamado la atención poderosamente, porque no es algo que me ocurra con asiduidad con ciertos…»</span>
+        <span class="post-card__editor">jesusr</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Quique%20Gonz%C3%A1lez">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/quique-gonzalez-salitre-48.html">Salitre 48 · 2</a>
+    <a class="chip" href="/archive/albums/quique-gonzalez-daiquiri-blues.html">Daiquiri Blues</a>
+    <a class="chip" href="/archive/albums/quique-gonzalez-ajuste-de-cuentas.html">Ajuste de cuentas</a>
+    <a class="chip" href="/archive/albums/quique-gonzalez-personal.html">Personal</a>
+    <a class="chip" href="/archive/albums/quique-gonzalez-me-mata-si-me-necesitas.html">Me mata si me necesitas</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">6 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2009-09-19 09:00:59 +0200">19/09/2009</td>
-        <td class="archive-table__cell--title"><a href="/archive/2009-09-19-rompeolas-de-quique-gonzalez.html">Rompeolas, de Quique González</a></td>
-        <td class="archive-table__cell--song">Rompeolas</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/quique-gonzalez.html">Quique González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/quique-gonzalez-salitre-48.html">Salitre 48</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2001.html">2001</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2009-12-06 09:00:38 +0100">06/12/2009</td>
-        <td class="archive-table__cell--title"><a href="/archive/2009-12-06-especial-album-daiquiri-blues-de-quique-gonzalez.html">Especial Álbum: Daiquiri Blues, de Quique González</a></td>
-        <td class="archive-table__cell--song"></td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/quique-gonzalez.html">Quique González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/quique-gonzalez-daiquiri-blues.html">Daiquiri Blues</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2009.html">2009</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/albumes.html">Álbumes</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-06-10 09:00:02 +0200">10/06/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-06-10-especial-lagarto-festival-2010-y-los-conserjes-de-noche-de-quique-gonzalez.html">Especial Lagarto Festival 2010: Y los conserjes de noche, de Quique González</a></td>
-        <td class="archive-table__cell--song">Y los conserjes de noche</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/quique-gonzalez.html">Quique González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/quique-gonzalez-ajuste-de-cuentas.html">Ajuste de cuentas</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2006.html">2006</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/festivales.html">Festivales</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2013-01-12 08:00:00 +0100">12/01/2013</td>
-        <td class="archive-table__cell--title"><a href="/archive/2013-01-12-el-contestador-de-quique-gonzalez.html">El contestador, de Quique González</a></td>
-        <td class="archive-table__cell--song">El contestador</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/quique-gonzalez.html">Quique González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/quique-gonzalez-personal.html">Personal</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1998.html">1998</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2014-05-02 10:00:00 +0200">02/05/2014</td>
-        <td class="archive-table__cell--title"><a href="/archive/2014-05-02-dia-de-feria-de-quique-gonzalez.html">Día de feria, de Quique González</a></td>
-        <td class="archive-table__cell--song">Día de feria</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/quique-gonzalez.html">Quique González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/quique-gonzalez-salitre-48.html">Salitre 48</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2001.html">2001</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2016-09-01 11:00:28 +0200">01/09/2016</td>
-        <td class="archive-table__cell--title"><a href="/archive/2016-09-01-me-mata-si-me-necesitas-de-quique-gonzalez.html">Me mata si me necesitas, de Quique González</a></td>
-        <td class="archive-table__cell--song"></td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/quique-gonzalez.html">Quique González</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/quique-gonzalez-me-mata-si-me-necesitas.html">Me mata si me necesitas</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2016.html">2016</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/albumes.html">Álbumes</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

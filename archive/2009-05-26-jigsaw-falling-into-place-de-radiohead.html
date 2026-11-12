@@ -14,11 +14,12 @@
   <meta property="og:description" content="Era de esperar que no tardara mucho Radiohead en aparecer en dSong, y es que este grupo realmente lo merece. Un grupo que no necesita presentación, con más de…">
   <meta property="og:url" content="https://dsong.es/archive/2009-05-26-jigsaw-falling-into-place-de-radiohead.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,87 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2009-05-25-lift-de-poets-of-the-fall.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Lift, de Poets of the fall</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2009-05-27-boston-de-augustana.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Boston, de Augustana</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2009">2009</a><span>Nº 9</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Jigsaw Falling Into Place, de Radiohead</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Alternative rock</span>
+  <h1 class="display post-view__title">Jigsaw Falling Into Place</h1>
+  <p class="post-view__by">de <a href="/archive/artists/radiohead.html">Radiohead</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/74291eae2bd3251783b8aa958e5ffd3c?s=20" alt="" />
-            <span class="post-view__editor-name">Poncho</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2009-05-26T09:00:49+02:00">26 de Mayo de 2009</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Poncho</span>
+    </span>
+    <time class="post-view__date" datetime="2009-05-26T09:00:49+02:00">martes, 26 de mayo de 2009</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Era de esperar que no tardara mucho<strong> <a href="http://dsong.es/tag/radiohead/">Radiohead</a></strong> en aparecer en dSong, y es que este grupo realmente lo merece. Un grupo que no necesita presentación, con más de 20 años en activo, aunque hayan tenido sus parones entre <em><span class="bbcode_album">Hail to the Thief</span></em> e <strong><em><span class="bbcode_album">&quot;In Rainbows</span>&quot;</em></strong>, donde  <span class="bbcode_artist">Thom Yorke</span> aprovechó para editar su album en solitario<em> The Eraser.</em> Empezando en el 88 con el estilo poco profesional de <em><span class="bbcode_artist">On a Friday</span></em>, pasando por discos geniales aunque prudentes como <em><span class="bbcode_album">Pablo Honey</span></em> o <em><span class="bbcode_album">The Bends</span></em> (1995), alcanzando el punto de inflexión con el disco por excelencia alabado por las críticas  <em><a href="http://dsong.es/tag/ok computer">OK Computer</a> </em>(1997), para lanzarse más tarde a un estilo mucho más atrevido y personal que sólo ya los que son fans de Radiohead pueden entenderlo, como se demuestra en sus posteriores trabajos de  <em><span class="bbcode_album">Kid A</span></em> (2000), <em><span class="bbcode_album">Amnesiac</span></em> (2001),  <span class="bbcode_album"><em>Hail to the Thief</em></span><a class="bbcode_album" title="Radiohead - Hail to the Thief" href="http://www.lastfm.es/music/Radiohead/Hail+to+the+Thief"> </a><span class="bbcode_album">(2003) e </span><em><span class="bbcode_album">In Rainbows</span></em> (2007). Un grupo que se ha convertido referente para muchos y que ha tomado parte en bandas sonoras de películas como <em>Vanilla Sky, </em><em>Hijos de los hombres</em> o <em>El Ilusionista</em>. Podría escribir un post kilométrico sobre este magnifico grupo, que considero uno de mis grupos favoritos.</p>
+<p>El caso es que, a parte de merecerlo por naturaleza propia del grupo, traigo hoy a Radiohead porque desde el 19 de Mayo este grupo es noticia. Radiohead <a href="http://potq.cl/2009/05/19/radiohead-vuelve-al-estudio-a-grabar-un-nuevo-material/">vuelve a al estudio de grabación</a> para preparar su nuevo trabajo. Sabemos que este grupo, aunque obtenga enormes beneficios debido a su gran calidad, no se aprovecha de ello para hacer exitos comerciales y venderlos como auténticas joyas. Ya lo demostró con el comercial de <em><span class="bbcode_album">In Rainbows</span></em> donde te podías descargar su album de su página web pagando únicamente lo que consideraras que valía ese album para ti (incluso a 0$ si así lo veías oportuno), todo un ejemplo que muchos artistas deberían tener en cuenta.</p>
+<p>La canción que hoy traigo es de su último album <span class="bbcode_album"><em>In Rainbow</em>, </span><em><strong>&quot;Jigsaw Falling Into Place</strong></em><span class="bbcode_album"><em><strong>&quot;</strong></em>, y es uno de esos temas que para la gente que no es fan de Radiohead puede pasar desaprecibido, pero que como siempre en este grupo, está cargado de un estilo original y atrevido que personalmente a mí me encanta.</span></p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/GoLJJRIWCLU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/6nB3rviYjrrg2IIltIStvs" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1109714933?i=1109715469" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/radiohead.html">Radiohead</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +132,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=GoLJJRIWCLU" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(enlazado en MusicBrainz)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/6nB3rviYjrrg2IIltIStvs" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/1109714933?i=1109715469" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -117,47 +142,13 @@
       <dd>26 de mayo de 2009</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Era de esperar que no tardara mucho<strong> <a href="http://dsong.es/tag/radiohead/">Radiohead</a></strong> en aparecer en dSong, y es que este grupo realmente lo merece. Un grupo que no necesita presentación, con más de 20 años en activo, aunque hayan tenido sus parones entre <em><span class="bbcode_album">Hail to the Thief</span></em> e <strong><em><span class="bbcode_album">&quot;In Rainbows</span>&quot;</em></strong>, donde  <span class="bbcode_artist">Thom Yorke</span> aprovechó para editar su album en solitario<em> The Eraser.</em> Empezando en el 88 con el estilo poco profesional de <em><span class="bbcode_artist">On a Friday</span></em>, pasando por discos geniales aunque prudentes como <em><span class="bbcode_album">Pablo Honey</span></em> o <em><span class="bbcode_album">The Bends</span></em> (1995), alcanzando el punto de inflexión con el disco por excelencia alabado por las críticas  <em><a href="http://dsong.es/tag/ok computer">OK Computer</a> </em>(1997), para lanzarse más tarde a un estilo mucho más atrevido y personal que sólo ya los que son fans de Radiohead pueden entenderlo, como se demuestra en sus posteriores trabajos de  <em><span class="bbcode_album">Kid A</span></em> (2000), <em><span class="bbcode_album">Amnesiac</span></em> (2001),  <span class="bbcode_album"><em>Hail to the Thief</em></span><a class="bbcode_album" title="Radiohead - Hail to the Thief" href="http://www.lastfm.es/music/Radiohead/Hail+to+the+Thief"> </a><span class="bbcode_album">(2003) e </span><em><span class="bbcode_album">In Rainbows</span></em> (2007). Un grupo que se ha convertido referente para muchos y que ha tomado parte en bandas sonoras de películas como <em>Vanilla Sky, </em><em>Hijos de los hombres</em> o <em>El Ilusionista</em>. Podría escribir un post kilométrico sobre este magnifico grupo, que considero uno de mis grupos favoritos.</p>
-<p>El caso es que, a parte de merecerlo por naturaleza propia del grupo, traigo hoy a Radiohead porque desde el 19 de Mayo este grupo es noticia. Radiohead <a href="http://potq.cl/2009/05/19/radiohead-vuelve-al-estudio-a-grabar-un-nuevo-material/">vuelve a al estudio de grabación</a> para preparar su nuevo trabajo. Sabemos que este grupo, aunque obtenga enormes beneficios debido a su gran calidad, no se aprovecha de ello para hacer exitos comerciales y venderlos como auténticas joyas. Ya lo demostró con el comercial de <em><span class="bbcode_album">In Rainbows</span></em> donde te podías descargar su album de su página web pagando únicamente lo que consideraras que valía ese album para ti (incluso a 0$ si así lo veías oportuno), todo un ejemplo que muchos artistas deberían tener en cuenta.</p>
-<p>La canción que hoy traigo es de su último album <span class="bbcode_album"><em>In Rainbow</em>, </span><em><strong>&quot;Jigsaw Falling Into Place</strong></em><span class="bbcode_album"><em><strong>&quot;</strong></em>, y es uno de esos temas que para la gente que no es fan de Radiohead puede pasar desaprecibido, pero que como siempre en este grupo, está cargado de un estilo original y atrevido que personalmente a mí me encanta.</span></p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/GoLJJRIWCLU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/6nB3rviYjrrg2IIltIStvs" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1109714933?i=1109715469" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (8)</summary>
+      <summary class="post-view__comments-summary"><strong>8 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -171,7 +162,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-05-26T16:05:22+02:00">26 de Mayo de 2009, 16:05</time>
+              <time class="post-view__comment-date" datetime="2009-05-26T16:05:22+02:00">26 de mayo de 2009, 16:05</time>
             </div>
           </li>
         
@@ -186,7 +177,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-05-26T22:11:23+02:00">26 de Mayo de 2009, 22:11</time>
+              <time class="post-view__comment-date" datetime="2009-05-26T22:11:23+02:00">26 de mayo de 2009, 22:11</time>
             </div>
           </li>
         
@@ -201,7 +192,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-05-27T15:55:25+02:00">27 de Mayo de 2009, 15:55</time>
+              <time class="post-view__comment-date" datetime="2009-05-27T15:55:25+02:00">27 de mayo de 2009, 15:55</time>
             </div>
           </li>
         
@@ -216,7 +207,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-05-27T20:07:36+02:00">27 de Mayo de 2009, 20:07</time>
+              <time class="post-view__comment-date" datetime="2009-05-27T20:07:36+02:00">27 de mayo de 2009, 20:07</time>
             </div>
           </li>
         
@@ -231,7 +222,7 @@
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-05-28T13:47:30+02:00">28 de Mayo de 2009, 13:47</time>
+              <time class="post-view__comment-date" datetime="2009-05-28T13:47:30+02:00">28 de mayo de 2009, 13:47</time>
             </div>
           </li>
         
@@ -246,7 +237,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-05-28T17:22:45+02:00">28 de Mayo de 2009, 17:22</time>
+              <time class="post-view__comment-date" datetime="2009-05-28T17:22:45+02:00">28 de mayo de 2009, 17:22</time>
             </div>
           </li>
         
@@ -261,7 +252,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-05-28T18:22:36+02:00">28 de Mayo de 2009, 18:22</time>
+              <time class="post-view__comment-date" datetime="2009-05-28T18:22:36+02:00">28 de mayo de 2009, 18:22</time>
             </div>
           </li>
         
@@ -276,7 +267,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-05-28T19:34:33+02:00">28 de Mayo de 2009, 19:34</time>
+              <time class="post-view__comment-date" datetime="2009-05-28T19:34:33+02:00">28 de mayo de 2009, 19:34</time>
             </div>
           </li>
         
@@ -290,22 +281,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2009-05-25-lift-de-poets-of-the-fall.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Lift, de Poets of the fall</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2009-05-27-boston-de-augustana.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Boston, de Augustana</span>
+    <span class="post-nav__editor">Jose</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

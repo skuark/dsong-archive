@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,44 +28,58 @@
 
   <div class="app page-stats">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       <script>if (new URLSearchParams(location.search).has("q")) location.replace("/archive/all/" + location.search);</script>
 
-<h2 class="archive-title">Archivo</h2>
+<section class="archive-hero">
+  <p class="kicker">Archivo</p>
+  <h1 class="display page-title">Todo lo que publicamos</h1>
+  <form class="archive-search archive-search--big" action="/archive/all/" method="get" role="search">
+    <label class="visually-hidden" for="archive-search">Buscar en el archivo</label>
+    <input class="archive-search__input" id="archive-search" name="q" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
+    <a class="button button--accent archive-search__all" href="/archive/all/">Ver las 1.891</a>
+  </form>
+  <nav class="chips" aria-label="Explorar por">
+    <a class="chip" href="/archive/editors/">Autores · 53</a>
+    <a class="chip" href="/archive/artists/">Artistas · 1.401</a>
+    <a class="chip" href="/mapa/">Países · 54</a>
+    <a class="chip" href="/archive/especiales/">Especiales · 147</a>
+    <a class="chip" href="/archive/podcasts/">Podcasts · 335</a>
+  </nav>
+</section>
 
-<form class="archive-search" action="/archive/all/" method="get" role="search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" name="q" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <button class="archive-search__button" type="submit">Buscar</button>
-  <a class="archive-search__all" href="/archive/all/">Ver las 1.891 publicaciones →</a>
-</form>
+<h2 class="display stats-heading">dSong en cifras</h2>
 
-<h3 class="stats-heading">dSong en cifras</h3>
-
-<ul class="stats-totals">
-  <li><a href="/archive/all/"><strong>1.891</strong> publicaciones →</a></li>
-  <li><a href="/archive/editors/"><strong>53</strong> autores →</a></li>
-  <li><a href="/archive/artists/"><strong>1.401</strong> artistas →</a></li>
-  <li><a href="/mapa/"><strong>54</strong> países →</a></li>
-  <li><a href="/archive/podcasts/"><strong>335</strong> podcasts →</a></li>
-</ul>
-
-<section class="stats-section">
-  <h3>Publicaciones por año</h3>
-  <p>Una canción al día de 2010 a 2014; en 2015 el blog fue apagándose.</p>
-  <ol class="columns" aria-label="Publicaciones por año">
+<div class="stats-grid">
+  <section class="stats-section">
+    <h3 class="kicker">Publicaciones por año</h3>
+    <ol class="columns" aria-label="Publicaciones por año">
   <li class="columns__col" title="2009: 197">
     <span class="columns__value">197</span>
     <span class="columns__bar" style="height: 59%"></span>
@@ -72,12 +87,12 @@
   </li>
   <li class="columns__col" title="2010: 334">
     <span class="columns__value">334</span>
-    <span class="columns__bar" style="height: 100%"></span>
+    <span class="columns__bar columns__bar--top" style="height: 100%"></span>
     <span class="columns__label">2010</span>
   </li>
   <li class="columns__col" title="2011: 334">
     <span class="columns__value">334</span>
-    <span class="columns__bar" style="height: 100%"></span>
+    <span class="columns__bar columns__bar--top" style="height: 100%"></span>
     <span class="columns__label">2011</span>
   </li>
   <li class="columns__col" title="2012: 333">
@@ -111,16 +126,64 @@
     <span class="columns__label">2017</span>
   </li>
 </ol>
-</section>
+    <p>Una canción al día de 2010 a 2014; en 2015 el blog fue apagándose.</p>
+  </section>
 
-<section class="stats-section">
-  <h3>Los autores más prolíficos</h3>
-  <p>Los diez que más escribieron, de 53.</p>
-  
+  <section class="stats-section">
+    <h3 class="kicker">¿De qué década eran las canciones?</h3>
+    
+<ol class="bars" start="1">
+  <li class="bars__row">
+    <span class="bars__label">Antes de 1950</span>
+    <span class="bars__track"><span class="bars__fill" style="width: 3.8%"></span></span>
+    <span class="bars__value">26</span>
+  </li>
+  <li class="bars__row">
+    <span class="bars__label">1950s</span>
+    <span class="bars__track"><span class="bars__fill" style="width: 2.9%"></span></span>
+    <span class="bars__value">20</span>
+  </li>
+  <li class="bars__row">
+    <span class="bars__label">1960s</span>
+    <span class="bars__track"><span class="bars__fill" style="width: 10%"></span></span>
+    <span class="bars__value">68</span>
+  </li>
+  <li class="bars__row">
+    <span class="bars__label">1970s</span>
+    <span class="bars__track"><span class="bars__fill" style="width: 17.7%"></span></span>
+    <span class="bars__value">121</span>
+  </li>
+  <li class="bars__row">
+    <span class="bars__label">1980s</span>
+    <span class="bars__track"><span class="bars__fill" style="width: 15.8%"></span></span>
+    <span class="bars__value">108</span>
+  </li>
+  <li class="bars__row">
+    <span class="bars__label">1990s</span>
+    <span class="bars__track"><span class="bars__fill" style="width: 48%"></span></span>
+    <span class="bars__value">328</span>
+  </li>
+  <li class="bars__row">
+    <span class="bars__label">2000s</span>
+    <span class="bars__track"><span class="bars__fill bars__fill--top" style="width: 100%"></span></span>
+    <span class="bars__value">683</span>
+  </li>
+  <li class="bars__row">
+    <span class="bars__label">2010s</span>
+    <span class="bars__track"><span class="bars__fill" style="width: 68.2%"></span></span>
+    <span class="bars__value">466</span>
+  </li>
+</ol>
+    <p>Al publicarse, una canción tenía de mediana 7 años. La más antigua: <a href="/archive/2014-04-22-el-trino-del-diablo-de-giuseppe-tartini.html">El trino del diablo, de Giuseppe Tartini</a> (1713).</p>
+  </section>
+
+  <section class="stats-section">
+    <h3 class="kicker">Los autores más prolíficos</h3>
+    
 <ol class="bars" start="1">
   <li class="bars__row">
     <span class="bars__label"><a href="/archive/editors/jesusr.html">jesusr</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 100%"></span></span>
+    <span class="bars__track"><span class="bars__fill bars__fill--top" style="width: 100%"></span></span>
     <span class="bars__value">374</span>
   </li>
   <li class="bars__row">
@@ -389,628 +452,136 @@
   </li>
 </ol>
 </details>
-</section>
+    <a class="stats-section__more" href="/archive/editors/">Los 53 autores →</a>
+  </section>
 
-<section class="stats-section">
-  <h3>Géneros</h3>
-  <p>Los 1.715 posts con género, agrupados en grandes familias.</p>
-  
-<ol class="bars" start="1">
-  <li class="bars__row">
-    <span class="bars__label">Rock</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 100%"></span></span>
-    <span class="bars__value">420</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Indie y alternativo</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 76.9%"></span></span>
-    <span class="bars__value">323</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Folk y cantautor</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 39.8%"></span></span>
-    <span class="bars__value">167</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Pop</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 34.5%"></span></span>
-    <span class="bars__value">145</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Electrónica</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 32.6%"></span></span>
-    <span class="bars__value">137</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Jazz, blues y soul</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 31%"></span></span>
-    <span class="bars__value">130</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Flamenco, latina y del mundo</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 28.1%"></span></span>
-    <span class="bars__value">118</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Metal</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 16.4%"></span></span>
-    <span class="bars__value">69</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Bandas sonoras</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 13.8%"></span></span>
-    <span class="bars__value">58</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Clásica y lírica</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 12.1%"></span></span>
-    <span class="bars__value">51</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Country</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 8.1%"></span></span>
-    <span class="bars__value">34</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Otros</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 8.1%"></span></span>
-    <span class="bars__value">34</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label">Hip hop</span>
-    <span class="bars__track"><span class="bars__fill" style="width: 6.9%"></span></span>
-    <span class="bars__value">29</span>
-  </li>
-</ol>
-</section>
+  <section class="stats-section">
+    <h3 class="kicker">Artistas más repetidos</h3>
+    <ol class="ranking">
+      <li><a href="/archive/artists/hans-zimmer.html">Hans Zimmer</a><strong>7</strong></li>
+      <li><a href="/archive/artists/dream-theater.html">Dream Theater</a><strong>6</strong></li>
+      <li><a href="/archive/artists/quique-gonzalez.html">Quique González</a><strong>6</strong></li>
+      <li><a href="/archive/artists/vetusta-morla.html">Vetusta Morla</a><strong>5</strong></li>
+      <li><a href="/archive/artists/travis.html">Travis</a><strong>5</strong></li>
+      <li><a href="/archive/artists/antonio-vega.html">Antonio Vega</a><strong>5</strong></li>
+      <li><a href="/archive/artists/ivan-ferreiro.html">Iván Ferreiro</a><strong>5</strong></li>
+      <li><a href="/archive/artists/muse.html">Muse</a><strong>5</strong></li>
+      <li><a href="/archive/artists/sober.html">Sôber</a><strong>5</strong></li>
+      <li><a href="/archive/artists/mecano.html">Mecano</a><strong>5</strong></li>
+    </ol>
+    <details class="bars-more">
+      <summary>Ver 87 más</summary>
+      <ol class="ranking">
+        <li><a href="/archive/artists/john-williams.html">John Williams</a><strong>5</strong></li>
+        <li><a href="/archive/artists/love-of-lesbian.html">Love of Lesbian</a><strong>5</strong></li>
+        <li><a href="/archive/artists/the-black-keys.html">The Black Keys</a><strong>5</strong></li>
+        <li><a href="/archive/artists/damien-rice.html">Damien Rice</a><strong>4</strong></li>
+        <li><a href="/archive/artists/incubus.html">Incubus</a><strong>4</strong></li>
+        <li><a href="/archive/artists/coldplay.html">Coldplay</a><strong>4</strong></li>
+        <li><a href="/archive/artists/amaral.html">Amaral</a><strong>4</strong></li>
+        <li><a href="/archive/artists/triana.html">Triana</a><strong>4</strong></li>
+        <li><a href="/archive/artists/supersubmarina.html">Supersubmarina</a><strong>4</strong></li>
+        <li><a href="/archive/artists/joaquin-sabina.html">Joaquín Sabina</a><strong>4</strong></li>
+        <li><a href="/archive/artists/jeff-buckley.html">Jeff Buckley</a><strong>4</strong></li>
+        <li><a href="/archive/artists/lenny-kravitz.html">Lenny Kravitz</a><strong>4</strong></li>
+        <li><a href="/archive/artists/nirvana.html">Nirvana</a><strong>4</strong></li>
+        <li><a href="/archive/artists/queen.html">Queen</a><strong>4</strong></li>
+        <li><a href="/archive/artists/celtas-cortos.html">Celtas Cortos</a><strong>4</strong></li>
+        <li><a href="/archive/artists/mika.html">Mika</a><strong>4</strong></li>
+        <li><a href="/archive/artists/the-national.html">The National</a><strong>4</strong></li>
+        <li><a href="/archive/artists/pearl-jam.html">Pearl Jam</a><strong>4</strong></li>
+        <li><a href="/archive/artists/james-horner.html">James Horner</a><strong>4</strong></li>
+        <li><a href="/archive/artists/jose-gonzalez.html">José González</a><strong>4</strong></li>
+        <li><a href="/archive/artists/arcade-fire.html">Arcade Fire</a><strong>4</strong></li>
+        <li><a href="/archive/artists/los-piratas.html">Los Piratas</a><strong>4</strong></li>
+        <li><a href="/archive/artists/yann-tiersen.html">Yann Tiersen</a><strong>4</strong></li>
+        <li><a href="/archive/artists/led-zeppelin.html">Led Zeppelin</a><strong>4</strong></li>
+        <li><a href="/archive/artists/ryan-adams.html">Ryan Adams</a><strong>4</strong></li>
+        <li><a href="/archive/artists/phoenix.html">Phoenix</a><strong>4</strong></li>
+        <li><a href="/archive/artists/beirut.html">Beirut</a><strong>4</strong></li>
+        <li><a href="/archive/artists/standstill.html">Standstill</a><strong>4</strong></li>
+        <li><a href="/archive/artists/danny-elfman.html">Danny Elfman</a><strong>4</strong></li>
+        <li><a href="/archive/artists/radiohead.html">Radiohead</a><strong>3</strong></li>
+        <li><a href="/archive/artists/u2.html">U2</a><strong>3</strong></li>
+        <li><a href="/archive/artists/roxette.html">Roxette</a><strong>3</strong></li>
+        <li><a href="/archive/artists/roeyksopp.html">Röyksopp</a><strong>3</strong></li>
+        <li><a href="/archive/artists/michael-jackson.html">Michael Jackson</a><strong>3</strong></li>
+        <li><a href="/archive/artists/scorpions.html">Scorpions</a><strong>3</strong></li>
+        <li><a href="/archive/artists/elefantes.html">Elefantes</a><strong>3</strong></li>
+        <li><a href="/archive/artists/091.html">091</a><strong>3</strong></li>
+        <li><a href="/archive/artists/melon-diesel.html">Melon Diesel</a><strong>3</strong></li>
+        <li><a href="/archive/artists/sufjan-stevens.html">Sufjan Stevens</a><strong>3</strong></li>
+        <li><a href="/archive/artists/john-williams-guitarrista.html">John Williams (guitarrista)</a><strong>3</strong></li>
+        <li><a href="/archive/artists/gary-moore.html">Gary Moore</a><strong>3</strong></li>
+        <li><a href="/archive/artists/heroes-del-silencio.html">Héroes del Silencio</a><strong>3</strong></li>
+        <li><a href="/archive/artists/death-cab-for-cutie.html">Death Cab for Cutie</a><strong>3</strong></li>
+        <li><a href="/archive/artists/micah-p-hinson.html">Micah P. Hinson</a><strong>3</strong></li>
+        <li><a href="/archive/artists/los-secretos.html">Los secretos</a><strong>3</strong></li>
+        <li><a href="/archive/artists/eleftheria-arvanitaki.html">Elefthería Arvanitáki</a><strong>3</strong></li>
+        <li><a href="/archive/artists/o-funk-illo.html">O&#39;Funk&#39;illo</a><strong>3</strong></li>
+        <li><a href="/archive/artists/john-mayer.html">John Mayer</a><strong>3</strong></li>
+        <li><a href="/archive/artists/los-rodriguez.html">Los Rodríguez</a><strong>3</strong></li>
+        <li><a href="/archive/artists/a-ha.html">A-ha</a><strong>3</strong></li>
+        <li><a href="/archive/artists/ismael-serrano.html">Ismael Serrano</a><strong>3</strong></li>
+        <li><a href="/archive/artists/supertramp.html">Supertramp</a><strong>3</strong></li>
+        <li><a href="/archive/artists/ok-go.html">Ok Go</a><strong>3</strong></li>
+        <li><a href="/archive/artists/madonna.html">Madonna</a><strong>3</strong></li>
+        <li><a href="/archive/artists/the-killers.html">The killers</a><strong>3</strong></li>
+        <li><a href="/archive/artists/elvis-presley.html">Elvis Presley</a><strong>3</strong></li>
+        <li><a href="/archive/artists/extremoduro.html">Extremoduro</a><strong>3</strong></li>
+        <li><a href="/archive/artists/phil-collins.html">Phil Collins</a><strong>3</strong></li>
+        <li><a href="/archive/artists/the-rolling-stones.html">The Rolling Stones</a><strong>3</strong></li>
+        <li><a href="/archive/artists/jamiroquai.html">Jamiroquai</a><strong>3</strong></li>
+        <li><a href="/archive/artists/maga.html">Maga</a><strong>3</strong></li>
+        <li><a href="/archive/artists/wilco.html">Wilco</a><strong>3</strong></li>
+        <li><a href="/archive/artists/sting.html">Sting</a><strong>3</strong></li>
+        <li><a href="/archive/artists/hurts.html">Hurts</a><strong>3</strong></li>
+        <li><a href="/archive/artists/the-black-crowes.html">The Black Crowes</a><strong>3</strong></li>
+        <li><a href="/archive/artists/the-dandy-warhols.html">The Dandy Warhols</a><strong>3</strong></li>
+        <li><a href="/archive/artists/vangelis.html">Vangelis</a><strong>3</strong></li>
+        <li><a href="/archive/artists/the-xx.html">The xx</a><strong>3</strong></li>
+        <li><a href="/archive/artists/enrique-morente-y-lagartija-nick.html">Enrique Morente y Lagartija Nick</a><strong>3</strong></li>
+        <li><a href="/archive/artists/adele.html">Adele</a><strong>3</strong></li>
+        <li><a href="/archive/artists/r-e-m.html">R.E.M</a><strong>3</strong></li>
+        <li><a href="/archive/artists/arctic-monkeys.html">Arctic Monkeys</a><strong>3</strong></li>
+        <li><a href="/archive/artists/kaiser-chiefs.html">Kaiser Chiefs</a><strong>3</strong></li>
+        <li><a href="/archive/artists/band-of-horses.html">Band of horses</a><strong>3</strong></li>
+        <li><a href="/archive/artists/zoe.html">Zoé</a><strong>3</strong></li>
+        <li><a href="/archive/artists/the-beatles.html">The Beatles</a><strong>3</strong></li>
+        <li><a href="/archive/artists/david-bowie.html">David Bowie</a><strong>3</strong></li>
+        <li><a href="/archive/artists/miss-caffeina.html">Miss Caffeina</a><strong>3</strong></li>
+        <li><a href="/archive/artists/the-drums.html">The Drums</a><strong>3</strong></li>
+        <li><a href="/archive/artists/nina-simone.html">Nina Simone</a><strong>3</strong></li>
+        <li><a href="/archive/artists/grizzly-bear.html">Grizzly Bear</a><strong>3</strong></li>
+        <li><a href="/archive/artists/anna-calvi.html">Anna Calvi</a><strong>3</strong></li>
+        <li><a href="/archive/artists/mayte-martin.html">Mayte Martín</a><strong>3</strong></li>
+        <li><a href="/archive/artists/foreigner.html">Foreigner</a><strong>3</strong></li>
+        <li><a href="/archive/artists/thomas-newman.html">Thomas Newman</a><strong>3</strong></li>
+        <li><a href="/archive/artists/radical-face.html">Radical Face</a><strong>3</strong></li>
+        <li><a href="/archive/artists/passenger.html">Passenger</a><strong>3</strong></li>
+      </ol>
+    </details>
+    <div class="chips">
+      <span class="kicker chips__label">Géneros · 1.715 artículos con género</span>
+      <span class="chip chip--small">Rock <strong>420</strong></span>
+      <span class="chip chip--small">Indie y alternativo <strong>323</strong></span>
+      <span class="chip chip--small">Folk y cantautor <strong>167</strong></span>
+      <span class="chip chip--small">Pop <strong>145</strong></span>
+      <span class="chip chip--small">Electrónica <strong>137</strong></span>
+      <span class="chip chip--small">Jazz, blues y soul <strong>130</strong></span>
+      <span class="chip chip--small">Flamenco, latina y del mundo <strong>118</strong></span>
+      <span class="chip chip--small">Metal <strong>69</strong></span>
+      <span class="chip chip--small">Bandas sonoras <strong>58</strong></span>
+      <span class="chip chip--small">Clásica y lírica <strong>51</strong></span>
+      <span class="chip chip--small">Country <strong>34</strong></span>
+      <span class="chip chip--small">Otros <strong>34</strong></span>
+      <span class="chip chip--small">Hip hop <strong>29</strong></span>
+    </div>
+  </section>
+</div>
 
-<section class="stats-section">
-  <h3>Artistas más repetidos</h3>
-  <p>Los diez con más publicaciones; en «Ver más», todos los que tienen al menos tres.</p>
-  
-<ol class="bars" start="1">
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/hans-zimmer.html">Hans Zimmer</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 100%"></span></span>
-    <span class="bars__value">7</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/dream-theater.html">Dream Theater</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 85.7%"></span></span>
-    <span class="bars__value">6</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/quique-gonzalez.html">Quique González</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 85.7%"></span></span>
-    <span class="bars__value">6</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/vetusta-morla.html">Vetusta Morla</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/travis.html">Travis</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/antonio-vega.html">Antonio Vega</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/ivan-ferreiro.html">Iván Ferreiro</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/muse.html">Muse</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/sober.html">Sôber</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/mecano.html">Mecano</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-</ol>
-<details class="bars-more">
-  <summary>Ver 87 más</summary>
-  <ol class="bars" start="11">
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/john-williams.html">John Williams</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/love-of-lesbian.html">Love of Lesbian</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-black-keys.html">The Black Keys</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 71.4%"></span></span>
-    <span class="bars__value">5</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/damien-rice.html">Damien Rice</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/incubus.html">Incubus</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/coldplay.html">Coldplay</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/amaral.html">Amaral</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/triana.html">Triana</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/supersubmarina.html">Supersubmarina</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/joaquin-sabina.html">Joaquín Sabina</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/jeff-buckley.html">Jeff Buckley</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/lenny-kravitz.html">Lenny Kravitz</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/nirvana.html">Nirvana</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/queen.html">Queen</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/celtas-cortos.html">Celtas Cortos</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/mika.html">Mika</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-national.html">The National</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/pearl-jam.html">Pearl Jam</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/james-horner.html">James Horner</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/jose-gonzalez.html">José González</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/arcade-fire.html">Arcade Fire</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/los-piratas.html">Los Piratas</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/yann-tiersen.html">Yann Tiersen</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/led-zeppelin.html">Led Zeppelin</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/ryan-adams.html">Ryan Adams</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/phoenix.html">Phoenix</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/beirut.html">Beirut</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/standstill.html">Standstill</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/danny-elfman.html">Danny Elfman</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 57.1%"></span></span>
-    <span class="bars__value">4</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/radiohead.html">Radiohead</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/u2.html">U2</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/roxette.html">Roxette</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/roeyksopp.html">Röyksopp</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/michael-jackson.html">Michael Jackson</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/scorpions.html">Scorpions</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/elefantes.html">Elefantes</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/091.html">091</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/melon-diesel.html">Melon Diesel</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/sufjan-stevens.html">Sufjan Stevens</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/john-williams-guitarrista.html">John Williams (guitarrista)</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/gary-moore.html">Gary Moore</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/heroes-del-silencio.html">Héroes del Silencio</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/death-cab-for-cutie.html">Death Cab for Cutie</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/micah-p-hinson.html">Micah P. Hinson</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/los-secretos.html">Los secretos</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/eleftheria-arvanitaki.html">Elefthería Arvanitáki</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/o-funk-illo.html">O&#39;Funk&#39;illo</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/john-mayer.html">John Mayer</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/los-rodriguez.html">Los Rodríguez</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/a-ha.html">A-ha</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/ismael-serrano.html">Ismael Serrano</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/supertramp.html">Supertramp</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/ok-go.html">Ok Go</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/madonna.html">Madonna</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-killers.html">The killers</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/elvis-presley.html">Elvis Presley</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/extremoduro.html">Extremoduro</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/phil-collins.html">Phil Collins</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-rolling-stones.html">The Rolling Stones</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/jamiroquai.html">Jamiroquai</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/maga.html">Maga</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/wilco.html">Wilco</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/sting.html">Sting</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/hurts.html">Hurts</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-black-crowes.html">The Black Crowes</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-dandy-warhols.html">The Dandy Warhols</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/vangelis.html">Vangelis</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-xx.html">The xx</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/enrique-morente-y-lagartija-nick.html">Enrique Morente y Lagartija Nick</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/adele.html">Adele</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/r-e-m.html">R.E.M</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/arctic-monkeys.html">Arctic Monkeys</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/kaiser-chiefs.html">Kaiser Chiefs</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/band-of-horses.html">Band of horses</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/zoe.html">Zoé</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-beatles.html">The Beatles</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/david-bowie.html">David Bowie</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/miss-caffeina.html">Miss Caffeina</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/the-drums.html">The Drums</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/nina-simone.html">Nina Simone</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/grizzly-bear.html">Grizzly Bear</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/anna-calvi.html">Anna Calvi</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/mayte-martin.html">Mayte Martín</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/foreigner.html">Foreigner</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/thomas-newman.html">Thomas Newman</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/radical-face.html">Radical Face</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-  <li class="bars__row">
-    <span class="bars__label"><a href="/archive/artists/passenger.html">Passenger</a></span>
-    <span class="bars__track"><span class="bars__fill" style="width: 42.9%"></span></span>
-    <span class="bars__value">3</span>
-  </li>
-</ol>
-</details>
-</section>
-
-<section class="stats-section">
-  <h3>¿De qué década eran las canciones?</h3>
-  <p>Al publicarse, una canción tenía de mediana 7 años. La más antigua: <a href="/archive/2014-04-22-el-trino-del-diablo-de-giuseppe-tartini.html">El trino del diablo, de Giuseppe Tartini</a> (1713).</p>
-  <ol class="columns" aria-label="Canciones por década">
-  <li class="columns__col" title="Antes de 1950: 26">
-    <span class="columns__value">26</span>
-    <span class="columns__bar" style="height: 3.8%"></span>
-    <span class="columns__label">Antes de 1950</span>
-  </li>
-  <li class="columns__col" title="1950s: 20">
-    <span class="columns__value">20</span>
-    <span class="columns__bar" style="height: 2.9%"></span>
-    <span class="columns__label">1950s</span>
-  </li>
-  <li class="columns__col" title="1960s: 68">
-    <span class="columns__value">68</span>
-    <span class="columns__bar" style="height: 10%"></span>
-    <span class="columns__label">1960s</span>
-  </li>
-  <li class="columns__col" title="1970s: 121">
-    <span class="columns__value">121</span>
-    <span class="columns__bar" style="height: 17.7%"></span>
-    <span class="columns__label">1970s</span>
-  </li>
-  <li class="columns__col" title="1980s: 108">
-    <span class="columns__value">108</span>
-    <span class="columns__bar" style="height: 15.8%"></span>
-    <span class="columns__label">1980s</span>
-  </li>
-  <li class="columns__col" title="1990s: 328">
-    <span class="columns__value">328</span>
-    <span class="columns__bar" style="height: 48%"></span>
-    <span class="columns__label">1990s</span>
-  </li>
-  <li class="columns__col" title="2000s: 683">
-    <span class="columns__value">683</span>
-    <span class="columns__bar" style="height: 100%"></span>
-    <span class="columns__label">2000s</span>
-  </li>
-  <li class="columns__col" title="2010s: 466">
-    <span class="columns__value">466</span>
-    <span class="columns__bar" style="height: 68.2%"></span>
-    <span class="columns__label">2010s</span>
-  </li>
-</ol>
-</section>
-
-<section class="stats-section">
-  <h3>Década de la canción según el año de publicación</h3>
+<section class="stats-section stats-section--wide">
+  <h3 class="kicker">Década de la canción según el año de publicación</h3>
   <p>Porcentaje de las canciones de cada año que venían de cada década: con los años, el blog fue recomendando música más reciente.</p>
   <div class="heatmap-wrapper">
     <table class="heatmap">
@@ -1112,9 +683,8 @@
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

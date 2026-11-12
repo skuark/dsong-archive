@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/love-of-lesbian.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,114 +28,117 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista Love of Lesbian</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/31ab8f5f-b5d7-41a2-80ef-13084aaf0eab" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Brisa_Festival_2026_-_Love_of_Lesbian_-_11.jpg/330px-Brisa_Festival_2026_-_Love_of_Lesbian_-_11.jpg" width="320" height="213" alt="Love of Lesbian" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Brisa_Festival_2026_-_Love_of_Lesbian_-_11.jpg" rel="noopener">Pedro J Pacheco · CC BY-SA 4.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Love of Lesbian</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Brisa_Festival_2026_-_Love_of_Lesbian_-_11.jpg/330px-Brisa_Festival_2026_-_Love_of_Lesbian_-_11.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Brisa_Festival_2026_-_Love_of_Lesbian_-_11.jpg/330px-Brisa_Festival_2026_-_Love_of_Lesbian_-_11.jpg" width="320" height="213" alt="Love of Lesbian" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Brisa_Festival_2026_-_Love_of_Lesbian_-_11.jpg" rel="noopener" target="_blank">Pedro J Pacheco · CC BY-SA 4.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>Love of Lesbian es un grupo español de indie rock e indie pop formado en San Vicente dels Horts, Barcelona en otoño de 1997. En sus primeros años, la formación original del grupo estaba formada por el vocalista, guitarrista y teclista Santi Balmes, el guitarrista Jordi Roig, el bajista Joan Ramón Planell, y el baterista Oriol Bonet. A partir de 2005 con Maniobras de escapismo, el guitarrista Julián Saldarriaga, que ya trabajaba para la banda como roadie y músico contratado, se convirtió en el quinto miembro oficial del grupo.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Love_of_Lesbian" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/espana.html">España</a></p>
+    <h1 class="page-title artist-hero__name">Love of Lesbian</h1>
+    <p class="artist-hero__bio">Love of Lesbian es un grupo español de indie rock e indie pop formado en San Vicente dels Horts, Barcelona en otoño de 1997. En sus primeros años, la formación original del grupo estaba formada por el vocalista, guitarrista y teclista Santi Balmes, el guitarrista Jordi Roig, el bajista Joan Ramón Planell, y el baterista Oriol Bonet. A partir de 2005 con Maniobras de escapismo, el guitarrista Julián Saldarriaga, que ya trabajaba para la banda como roadie y músico contratado, se convirtió en el quinto miembro oficial del grupo.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Love_of_Lesbian" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/31ab8f5f-b5d7-41a2-80ef-13084aaf0eab" rel="noopener">MusicBrainz ↗</a><a href="https://loveoflesbianband.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">5 publicaciones, 2011–2014</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2011-02-03-me-amo-de-love-of-lesbian.html">
+        <span class="kicker">3 feb 2011 · Cuentos chinos para niños del Japón</span>
+        <span class="display post-card__title">Me amo</span>
+        <span class="post-card__excerpt">«Hay veces que gustar tener un poco de falta de humildad y ver lo geniales que somos. Sentir que no hay nada ahora que pueda con nosotros, y…»</span>
+        <span class="post-card__editor">Poncho</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2012-05-22-el-hambre-invisible-de-love-of-lesbian.html">
+        <span class="kicker">22 may 2012 · La noche eterna. Los días no vividos</span>
+        <span class="display post-card__title">El hambre invisible</span>
+        <span class="post-card__excerpt">«Hoy 22 de mayo sale a la venta “La noche eterna. Los días no vividos” , el séptimo disco de los catalanes Love of Lesbian , para alivio y…»</span>
+        <span class="post-card__editor">Ascen</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2013-07-15-fantastic-shine-de-love-of-lesbian.html">
+        <span class="kicker">15 jul 2013 · Fantastic Shine</span>
+        <span class="display post-card__title">Fantastic Shine</span>
+        <span class="post-card__excerpt">«Probablemente hayáis visto hace ya algún tiempo el spot publicitario que como cada año nos trae una conocida marca de cerveza, el cual…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2014-01-06-alli-donde-soliamos-gritar-de-love-of-lesbian.html">
+        <span class="kicker">6 ene 2014 · 1999</span>
+        <span class="display post-card__title">Allí donde solíamos gritar</span>
+        <span class="post-card__excerpt">«&quot;Año nuevo, vida nueva&quot;. Eso suele decirse. Supongo que muchos de nosotros habremos echado la vista atrás estos días para hacer el típico…»</span>
+        <span class="post-card__editor">Jal</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2014-06-12-manifiesto-delirista-de-love-of-lesbian.html">
+        <span class="kicker">12 jun 2014 · Nouvelle Cuisine Caníbal</span>
+        <span class="display post-card__title">Manifiesto delirista</span>
+        <span class="post-card__excerpt">«Lo han vuelto a hacer. Love of Lesbian han conseguido sacarnos una sonrisa una vez más y eso, amigos, se agradece. Los que dicen que a este…»</span>
+        <span class="post-card__editor">Ascen</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Love%20of%20Lesbian">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/love-of-lesbian-cuentos-chinos-para-ninos-del-japon.html">Cuentos chinos para niños del Japón</a>
+    <a class="chip" href="/archive/albums/love-of-lesbian-la-noche-eterna-los-dias-no-vividos.html">La noche eterna. Los días no vividos</a>
+    <a class="chip" href="/archive/albums/love-of-lesbian-fantastic-shine.html">Fantastic Shine</a>
+    <a class="chip" href="/archive/albums/love-of-lesbian-1999.html">1999</a>
+    <a class="chip" href="/archive/albums/love-of-lesbian-nouvelle-cuisine-canibal.html">Nouvelle Cuisine Caníbal</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">5 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2011-02-03 09:00:29 +0100">03/02/2011</td>
-        <td class="archive-table__cell--title"><a href="/archive/2011-02-03-me-amo-de-love-of-lesbian.html">Me amo, de Love of Lesbian</a></td>
-        <td class="archive-table__cell--song">Me amo</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/love-of-lesbian.html">Love of Lesbian</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/love-of-lesbian-cuentos-chinos-para-ninos-del-japon.html">Cuentos chinos para niños del Japón</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2007.html">2007</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/poncho.html">Poncho</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-05-22 08:00:29 +0200">22/05/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-05-22-el-hambre-invisible-de-love-of-lesbian.html">El hambre invisible, de Love of Lesbian</a></td>
-        <td class="archive-table__cell--song">El hambre invisible</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/love-of-lesbian.html">Love of Lesbian</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/love-of-lesbian-la-noche-eterna-los-dias-no-vividos.html">La noche eterna. Los días no vividos</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2012.html">2012</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/ascen.html">Ascen</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2013-07-15 15:54:27 +0200">15/07/2013</td>
-        <td class="archive-table__cell--title"><a href="/archive/2013-07-15-fantastic-shine-de-love-of-lesbian.html">Fantastic Shine, de Love of Lesbian</a></td>
-        <td class="archive-table__cell--song">Fantastic Shine</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/love-of-lesbian.html">Love of Lesbian</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/love-of-lesbian-fantastic-shine.html">Fantastic Shine</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2013.html">2013</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2014-01-06 08:00:04 +0100">06/01/2014</td>
-        <td class="archive-table__cell--title"><a href="/archive/2014-01-06-alli-donde-soliamos-gritar-de-love-of-lesbian.html">Allí donde solíamos gritar, de Love of Lesbian</a></td>
-        <td class="archive-table__cell--song">Allí donde solíamos gritar</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/love-of-lesbian.html">Love of Lesbian</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/love-of-lesbian-1999.html">1999</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2009.html">2009</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jal.html">Jal</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2014-06-12 13:05:12 +0200">12/06/2014</td>
-        <td class="archive-table__cell--title"><a href="/archive/2014-06-12-manifiesto-delirista-de-love-of-lesbian.html">Manifiesto delirista, de Love of Lesbian</a></td>
-        <td class="archive-table__cell--song">Manifiesto delirista</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/love-of-lesbian.html">Love of Lesbian</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/love-of-lesbian-nouvelle-cuisine-canibal.html">Nouvelle Cuisine Caníbal</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2014.html">2014</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/ascen.html">Ascen</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

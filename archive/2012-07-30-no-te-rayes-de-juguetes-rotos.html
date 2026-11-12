@@ -14,11 +14,12 @@
   <meta property="og:description" content="Innumerables son los grupos que saltaron al estrellato tras prestar su voz a un anuncio de televisión, unos simples segundos sonando hacen que todo el mundo…">
   <meta property="og:url" content="https://dsong.es/archive/2012-07-30-no-te-rayes-de-juguetes-rotos.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,65 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2012-07-29-album-about-a-feeling-de-summer-heart.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Álbum: About a feeling, de Summer Heart</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2012-07-31-especial-un-mar-de-canciones-2012.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Especial Un Mar de Canciones 2012</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2012">2012</a><span>Nº 1077</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">No te rayes, de Juguetes rotos</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Symphonic Pop</span>
+  <h1 class="display post-view__title">No te rayes</h1>
+  <p class="post-view__by">de <a href="/archive/artists/juguetes-rotos.html">Juguetes rotos</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/4404d63b8d2fb5d6d05d0ee3451ccf02?s=20" alt="" />
-            <span class="post-view__editor-name">Grabieh</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2012-07-30T08:00:09+02:00">30 de Julio de 2012</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Grabieh</span>
+    </span>
+    <time class="post-view__date" datetime="2012-07-30T08:00:09+02:00">lunes, 30 de julio de 2012</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+  </header>
+
+  <div class="post-view__content">
+    <p>Innumerables son los grupos que saltaron al estrellato tras prestar su voz a un anuncio de televisión, unos simples segundos sonando hacen que todo el mundo quiera saber qué canción es esa, comprar el disco (en estos tiempos no tanto), arrancarles la ropa... Pero ese no fue el caso de Juguetes rotos, cuya canción <em>No te rayes</em> fue banda sonora de un anuncio de Digital+ allá por 2008. Mientras una pareja comentaba las maravillas de la plataforma televisiva, se escuchaba el estribillo -un sencillo pero pegadizo &quot;na na na na na na nanaaaaa...&quot;- de fondo. Aunque la canción ya engancha desde el principio, cuando comienzan a sonar las primeras notas de piano. Ahí te das cuenta de que no estás escuchando a un grupo del montón.</p>
+<p>La banda está (o estaba, la falta de información sobre ellos es descorazonadora) formada por tres miembros, procedentes de diferentes proyectos musicales: Juli García (vocalista, guitarra, teclado y jiennense), David Romero (bajista) y Letes Pastrana (percusión). Juguetes rotos grabaron un primer disco homónimo (Juguetes rotos, 2008) acompañados de una orquesta filarmónica, dando lugar a un sonido que algunos medios del sector no tardaron en bautizar como 'Pop sinfónico'. Y lo cierto es que, pese a que la descripción pueda sonar pretenciosa, su sonido no lo es en absoluto. No puedes ser pretencioso si tu single se llama No te rayes. Además el disco contaba con canciones de gran calidad como Sólo amor o Contra la pared (dedicada a las mujeres maltratadas, con un sonido y letra optimistas).</p>
+<p>Aunque no gozaron de éxito masivo, durante aquel año 2008 hicieron una gira por pequeñas salas, mostrando un gran directo (lo sé porque tuve la suerte de verles) y fueron portada en alguna revista del sector.</p>
+<p>Aún hoy, guardo la esperanza de que estén grabando su siguiente disco y entro en <a href="http://www.juguetesrotos.com/">su web oficial</a> (en construcción desde hace años) <a href="http://www.myspace.com/juguetesrotos">o en Myspace</a> (su época de mayor fama coincidió con la de esta red social) para ver si encuentro noticias frescas. De cualquier manera, sea lo que sea que estén haciendo, con su talento seguro que no se han convertido en unos juguetes rotos.</p>
+
+  </div><aside class="post-view__side">
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/juguetes-rotos.html">Juguetes Rotos</a></dd>
@@ -101,7 +104,7 @@
       <dt>Género</dt>
       <dd>Symphonic Pop</dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -111,18 +114,8 @@
       <dd>30 de julio de 2012</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Innumerables son los grupos que saltaron al estrellato tras prestar su voz a un anuncio de televisión, unos simples segundos sonando hacen que todo el mundo quiera saber qué canción es esa, comprar el disco (en estos tiempos no tanto), arrancarles la ropa... Pero ese no fue el caso de Juguetes rotos, cuya canción <em>No te rayes</em> fue banda sonora de un anuncio de Digital+ allá por 2008. Mientras una pareja comentaba las maravillas de la plataforma televisiva, se escuchaba el estribillo -un sencillo pero pegadizo &quot;na na na na na na nanaaaaa...&quot;- de fondo. Aunque la canción ya engancha desde el principio, cuando comienzan a sonar las primeras notas de piano. Ahí te das cuenta de que no estás escuchando a un grupo del montón.</p>
-<p>La banda está (o estaba, la falta de información sobre ellos es descorazonadora) formada por tres miembros, procedentes de diferentes proyectos musicales: Juli García (vocalista, guitarra, teclado y jiennense), David Romero (bajista) y Letes Pastrana (percusión). Juguetes rotos grabaron un primer disco homónimo (Juguetes rotos, 2008) acompañados de una orquesta filarmónica, dando lugar a un sonido que algunos medios del sector no tardaron en bautizar como 'Pop sinfónico'. Y lo cierto es que, pese a que la descripción pueda sonar pretenciosa, su sonido no lo es en absoluto. No puedes ser pretencioso si tu single se llama No te rayes. Además el disco contaba con canciones de gran calidad como Sólo amor o Contra la pared (dedicada a las mujeres maltratadas, con un sonido y letra optimistas).</p>
-<p>Aunque no gozaron de éxito masivo, durante aquel año 2008 hicieron una gira por pequeñas salas, mostrando un gran directo (lo sé porque tuve la suerte de verles) y fueron portada en alguna revista del sector.</p>
-<p>Aún hoy, guardo la esperanza de que estén grabando su siguiente disco y entro en <a href="http://www.juguetesrotos.com/">su web oficial</a> (en construcción desde hace años) <a href="http://www.myspace.com/juguetesrotos">o en Myspace</a> (su época de mayor fama coincidió con la de esta red social) para ver si encuentro noticias frescas. De cualquier manera, sea lo que sea que estén haciendo, con su talento seguro que no se han convertido en unos juguetes rotos.</p>
-
-  </div>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
+  </section>
+  </aside>
 
 
   
@@ -133,22 +126,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2012-07-29-album-about-a-feeling-de-summer-heart.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Álbum: About a feeling, de Summer Heart</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2012-07-31-especial-un-mar-de-canciones-2012.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Especial Un Mar de Canciones 2012</span>
+    <span class="post-nav__editor">Ascen</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

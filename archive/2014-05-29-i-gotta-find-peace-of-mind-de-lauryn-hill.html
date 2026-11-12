@@ -14,11 +14,12 @@
   <meta property="og:description" content="Lauryn Hill ha tenido una carrera musical en solitario meteórica, pero excepcional. Sólo con haberse marcado el trabajo que hoy nos ocupa, valdría la pena…">
   <meta property="og:url" content="https://dsong.es/archive/2014-05-29-i-gotta-find-peace-of-mind-de-lauryn-hill.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,88 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2014-05-28-somos-otros-de-joe-la-reina.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Somos otros, de Joe La Reina</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2014-05-30-cannibal-dinner-de-bigott.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Cannibal Dinner, de Bigott</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2014">2014</a><span>Nº 1680</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">I gotta find peace of mind, de Lauryn Hill</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · R&amp;B</span>
+  <h1 class="display post-view__title">I gotta find peace of mind</h1>
+  <p class="post-view__by">de <a href="/archive/artists/lauryn-hill.html">Lauryn Hill</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/2f64fccdc715052a4212341e099278e3?s=20" alt="" />
-            <span class="post-view__editor-name">Brian Edward Hyde</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2014-05-29T01:59:26+02:00">29 de Mayo de 2014</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Brian Edward Hyde</span>
+    </span>
+    <time class="post-view__date" datetime="2014-05-29T01:59:26+02:00">jueves, 29 de mayo de 2014</time>
+    <span>3 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Lauryn Hill ha tenido una carrera musical en solitario meteórica, pero excepcional. Sólo con haberse marcado el trabajo que hoy nos ocupa, valdría la pena rescatarla del olvido. Para el imaginario popular, siempre será una de las adolescentes rebeldes de la película <em>Sister Act 2</em>, donde dio a demostrar su virtuosismo vocal a una audiencia mayor. También la recordarán como uno de los componentes de <a title="The Fugees en Dsong" href="http://dsong.es/?s=fugees&submit=Search" target="_blank">The Fugees</a>, al menos hasta que decidió probar suerte en solitario.</p>
+<p>Me gusta hablar de Lauryn porque su vida es fascinante. Venía de una familia de músicos de Nueva Jersey, pero acabó apareciendo en una telenovela. Ha estado en prisión por algún asunto turbio de evasión fiscal, tuvo seis hijos con el mismísimo hijo de Bob Marley mientras éste seguía casado con su mujer (al menos al principio, porque el último hijo no es reconocido). Lauryn tocó el cielo con The Fugees, pero decidió seguir por libre a pesar del éxito por desavenencias con su primo, también miembro de la banda. Dio el campanazo con su primer y único álbum de estudio, el feminista <em>The Miseducation of Lauryn Hill</em>, que abrió la veda al r&amp;b, el reggae y el rap cantado por mujeres en un mundo hasta entonces dominado por los hombres. Entonces la cantante desaparició del ámbito público, agotada por el éxito y desencantada con la industria musical, hasta que en 2001 protagonizó uno de los mejores acústicos que ha ofrecido MTV, con material nuevo y una calidad musical inusitada. Ése es el disco que os traigo, un trabajo que no funcionó a nivel comercial e hizo que Hill quedara relegada a algún single de vez en cuando, participación en festivales y conciertos esporádicos. En 2004 hubo una reunión de The Fugees, aunque los desencuentros -y es que Lauryn Hill tiene fama de difícil, de rebelde y otras cosas- hicieron que se separaran antes de terminar la grabación del nuevo disco. A pesar del apoyo de sus fans, de tener a la crítica de su lado y de la bola de nieve que suponen las expectativas, la cantante ha pospuesto constantemente la aparición de un nuevo álbum, aunque no ha dejado de ser guerrera en los singles que ha publicado durante estos años, donde causas como el feminismo, la lucha por los derechos de los pobres y los negros la han convertido en un referente de la música de guerrilla.</p>
+<p>Hoy he escogido esta puta maravilla, y dejad que la llame así, que es &quot;I gotta find peace of mind&quot;, un tema entre el soul y el r&amp;b improvisados en el que Hill, acompañada de guitarra, con una voz quebrada como el cuchillo sobre la tostada, expone sus razones, abre paso a la esperanza: amor que se acaba, amor nocivo, frente a amor nuevo, esta vez para siempre. Lauryn canta aquí como en un susurro, pero suda música, es cierto, y nos cuesta creer que éste sea el resultado de un concierto ofrecido por MTV hace ya más de una década. Desde este trabajo no hemos vuelto a tener álbum nuevo, a pesar de que se había anunciado el esperadísimo nuevo disco de Lauryn Hill para 2013. Pero llegó la prisión, claro, y es que la chica, insisto, es difícil.</p>
+<p>Pero prefiero terminar con una reflexión, y es que sin el atrevimiento Lauryn probablemente ahora mismo no tendrían cabida en la industria artistas como M.I.A., Jill Scott, Alicia Keys, Nicky Minaj, Missy Elliot, Jamelia, Dixie Chicks...</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/brWmS8As9Wk?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/3QVlJ073oeCkTlp5Bcwa9a" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/192492278?i=192492922" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/lauryn-hill.html">Lauryn Hill</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/e8414012-4a1c-4ad4-be5e-fc55294e28cc" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +133,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=brWmS8As9Wk" rel="noopener" target="_blank">YouTube ↗</a><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/3QVlJ073oeCkTlp5Bcwa9a" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/192492278?i=192492922" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -117,48 +143,13 @@
       <dd>29 de mayo de 2014</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Lauryn Hill ha tenido una carrera musical en solitario meteórica, pero excepcional. Sólo con haberse marcado el trabajo que hoy nos ocupa, valdría la pena rescatarla del olvido. Para el imaginario popular, siempre será una de las adolescentes rebeldes de la película <em>Sister Act 2</em>, donde dio a demostrar su virtuosismo vocal a una audiencia mayor. También la recordarán como uno de los componentes de <a title="The Fugees en Dsong" href="http://dsong.es/?s=fugees&submit=Search" target="_blank">The Fugees</a>, al menos hasta que decidió probar suerte en solitario.</p>
-<p>Me gusta hablar de Lauryn porque su vida es fascinante. Venía de una familia de músicos de Nueva Jersey, pero acabó apareciendo en una telenovela. Ha estado en prisión por algún asunto turbio de evasión fiscal, tuvo seis hijos con el mismísimo hijo de Bob Marley mientras éste seguía casado con su mujer (al menos al principio, porque el último hijo no es reconocido). Lauryn tocó el cielo con The Fugees, pero decidió seguir por libre a pesar del éxito por desavenencias con su primo, también miembro de la banda. Dio el campanazo con su primer y único álbum de estudio, el feminista <em>The Miseducation of Lauryn Hill</em>, que abrió la veda al r&amp;b, el reggae y el rap cantado por mujeres en un mundo hasta entonces dominado por los hombres. Entonces la cantante desaparició del ámbito público, agotada por el éxito y desencantada con la industria musical, hasta que en 2001 protagonizó uno de los mejores acústicos que ha ofrecido MTV, con material nuevo y una calidad musical inusitada. Ése es el disco que os traigo, un trabajo que no funcionó a nivel comercial e hizo que Hill quedara relegada a algún single de vez en cuando, participación en festivales y conciertos esporádicos. En 2004 hubo una reunión de The Fugees, aunque los desencuentros -y es que Lauryn Hill tiene fama de difícil, de rebelde y otras cosas- hicieron que se separaran antes de terminar la grabación del nuevo disco. A pesar del apoyo de sus fans, de tener a la crítica de su lado y de la bola de nieve que suponen las expectativas, la cantante ha pospuesto constantemente la aparición de un nuevo álbum, aunque no ha dejado de ser guerrera en los singles que ha publicado durante estos años, donde causas como el feminismo, la lucha por los derechos de los pobres y los negros la han convertido en un referente de la música de guerrilla.</p>
-<p>Hoy he escogido esta puta maravilla, y dejad que la llame así, que es &quot;I gotta find peace of mind&quot;, un tema entre el soul y el r&amp;b improvisados en el que Hill, acompañada de guitarra, con una voz quebrada como el cuchillo sobre la tostada, expone sus razones, abre paso a la esperanza: amor que se acaba, amor nocivo, frente a amor nuevo, esta vez para siempre. Lauryn canta aquí como en un susurro, pero suda música, es cierto, y nos cuesta creer que éste sea el resultado de un concierto ofrecido por MTV hace ya más de una década. Desde este trabajo no hemos vuelto a tener álbum nuevo, a pesar de que se había anunciado el esperadísimo nuevo disco de Lauryn Hill para 2013. Pero llegó la prisión, claro, y es que la chica, insisto, es difícil.</p>
-<p>Pero prefiero terminar con una reflexión, y es que sin el atrevimiento Lauryn probablemente ahora mismo no tendrían cabida en la industria artistas como M.I.A., Jill Scott, Alicia Keys, Nicky Minaj, Missy Elliot, Jamelia, Dixie Chicks...</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/brWmS8As9Wk?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/3QVlJ073oeCkTlp5Bcwa9a" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/192492278?i=192492922" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (2)</summary>
+      <summary class="post-view__comments-summary"><strong>2 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -172,7 +163,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2014-05-30T12:11:00+02:00">30 de Mayo de 2014, 12:11</time>
+              <time class="post-view__comment-date" datetime="2014-05-30T12:11:00+02:00">30 de mayo de 2014, 12:11</time>
             </div>
           </li>
         
@@ -187,7 +178,7 @@
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2014-05-30T19:55:00+02:00">30 de Mayo de 2014, 19:55</time>
+              <time class="post-view__comment-date" datetime="2014-05-30T19:55:00+02:00">30 de mayo de 2014, 19:55</time>
             </div>
           </li>
         
@@ -201,22 +192,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2014-05-28-somos-otros-de-joe-la-reina.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Somos otros, de Joe La Reina</span>
+    <span class="post-nav__editor">Ascen</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2014-05-30-cannibal-dinner-de-bigott.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Cannibal Dinner, de Bigott</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

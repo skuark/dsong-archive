@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/dream-theater.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,123 +28,125 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista Dream Theater</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/28503ab7-8bf2-4666-a7bd-2644bfc7cb1d" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Dream_theater_live_in_Parigi_2005.jpg/330px-Dream_theater_live_in_Parigi_2005.jpg" width="320" height="195" alt="Dream Theater" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Dream_theater_live_in_Parigi_2005.jpg" rel="noopener">Franganghi · Public domain</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Dream Theater</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Dream_theater_live_in_Parigi_2005.jpg/330px-Dream_theater_live_in_Parigi_2005.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Dream_theater_live_in_Parigi_2005.jpg/330px-Dream_theater_live_in_Parigi_2005.jpg" width="320" height="195" alt="Dream Theater" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Dream_theater_live_in_Parigi_2005.jpg" rel="noopener" target="_blank">Franganghi · Public domain</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>Dream Theater es una banda estadounidense de metal progresivo, formada en 1985 con el nombre de Majesty por Mike Portnoy, John Myung y John Petrucci durante su estadía en el Berklee College of Music de Massachusetts. Poco a poco fueron dejando sus estudios para dedicar más atención a la banda que terminaría llamándose Dream Theater. A pesar de que se sucedieron algunos cambios en la formación inicial, los tres miembros originales permanecieron junto a James LaBrie y Jordan Rudess hasta el 8 de septiembre de 2010, cuando Portnoy abandonó el grupo.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Dream_Theater" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/estados-unidos.html">Estados Unidos</a></p>
+    <h1 class="page-title artist-hero__name">Dream Theater</h1>
+    <p class="artist-hero__bio">Dream Theater es una banda estadounidense de metal progresivo, formada en 1985 con el nombre de Majesty por Mike Portnoy, John Myung y John Petrucci durante su estadía en el Berklee College of Music de Massachusetts. Poco a poco fueron dejando sus estudios para dedicar más atención a la banda que terminaría llamándose Dream Theater. A pesar de que se sucedieron algunos cambios en la formación inicial, los tres miembros originales permanecieron junto a James LaBrie y Jordan Rudess hasta el 8 de septiembre de 2010, cuando Portnoy abandonó el grupo.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Dream_Theater" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/28503ab7-8bf2-4666-a7bd-2644bfc7cb1d" rel="noopener">MusicBrainz ↗</a><a href="https://dreamtheater.net/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">6 publicaciones, 2009–2013</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2009-07-26-especial-album-a-change-of-seasons-de-dream-theater.html">
+        <span class="kicker">26 jul 2009 · A Change of Seasons</span>
+        <span class="display post-card__title">A Change of Seasons</span>
+        <span class="post-card__excerpt">«Corría Septiembre del año 1985 cuando John Petrucci (guitarra) y John Myung (bajo) decidieron formar un grupo musical en su tiempo libre…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2010-10-03-especial-album-metropolis-de-dream-theater.html">
+        <span class="kicker">3 oct 2010 · Metropolis, Pt. 2: Scenes From a Memory</span>
+        <span class="display post-card__title">The Spirit Carries On</span>
+        <span class="post-card__excerpt">«Dream Theater no es la típica banda de Rock del montón. Los que los conocemos y hemos escuchado su música en profundidad bien sabemos que…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2011-09-18-a-dramatic-turn-of-events-de-dream-theater.html">
+        <span class="kicker">18 sep 2011 · A Dramatic Turn of Events</span>
+        <span class="display post-card__title">Build Me Up, Break Me Down</span>
+        <span class="post-card__excerpt">«Tras varios meses de espera desde que se anunciase, el pasado martes los incondicionales de Dream Theater pudimos disfrutar al fin de las…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2012-03-11-especial-twelve-step-suite-de-dream-theater.html">
+        <span class="kicker">11 mar 2012 · Listas</span>
+        <span class="display post-card__title">Especial: Twelve-step Suite</span>
+        <span class="post-card__excerpt">«No han sido pocas las veces en que el alcohol y la droga se han cruzado en el camino de un músico. Tal vez la juventud, el dinero y la…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2012-06-18-metropolis-part-i-the-miracle-and-the-sleeper-de-dream-theater.html">
+        <span class="kicker">18 jun 2012 · Images and Words</span>
+        <span class="display post-card__title">Metropolis, Part I: The Miracle and the Sleeper</span>
+        <span class="post-card__excerpt">«Recuerdo que siendo tan solo un crío descubrí a esta banda, y si os soy sincero, en la primera escucha no conseguí disfrutarlo del todo, ya…»</span>
+        <span class="post-card__editor">medinaman</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2013-09-12-the-enemy-inside-de-dream-theater.html">
+        <span class="kicker">12 sep 2013 · Dream Theater</span>
+        <span class="display post-card__title">The Enemy Inside</span>
+        <span class="post-card__excerpt">«Hace aproximadamente dos años estaba escribiendo para dSong una recomendación del por entonces recién publicado A Dramatic Turn of Events…»</span>
+        <span class="post-card__editor">skuark</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Dream%20Theater">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/dream-theater-a-change-of-seasons.html">A Change of Seasons</a>
+    <a class="chip" href="/archive/albums/dream-theater-metropolis-pt-2-scenes-from-a-memory.html">Metropolis, Pt. 2: Scenes From a Memory</a>
+    <a class="chip" href="/archive/albums/dream-theater-a-dramatic-turn-of-events.html">A Dramatic Turn of Events</a>
+    <a class="chip" href="/archive/albums/dream-theater-images-and-words.html">Images and Words</a>
+    <a class="chip" href="/archive/albums/dream-theater-dream-theater.html">Dream Theater</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">6 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2009-07-26 09:00:14 +0200">26/07/2009</td>
-        <td class="archive-table__cell--title"><a href="/archive/2009-07-26-especial-album-a-change-of-seasons-de-dream-theater.html">Especial Álbum: A Change of Seasons, de Dream Theater</a></td>
-        <td class="archive-table__cell--song">A Change of Seasons</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/dream-theater.html">Dream Theater</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/dream-theater-a-change-of-seasons.html">A Change of Seasons</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1995.html">1995</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/albumes.html">Álbumes</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2010-10-03 09:00:23 +0200">03/10/2010</td>
-        <td class="archive-table__cell--title"><a href="/archive/2010-10-03-especial-album-metropolis-de-dream-theater.html">Especial Álbum: Metropolis, de Dream Theater</a></td>
-        <td class="archive-table__cell--song">The Spirit Carries On</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/dream-theater.html">Dream Theater</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/dream-theater-metropolis-pt-2-scenes-from-a-memory.html">Metropolis, Pt. 2: Scenes From a Memory</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1999.html">1999</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/albumes.html">Álbumes</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2011-09-18 09:00:14 +0200">18/09/2011</td>
-        <td class="archive-table__cell--title"><a href="/archive/2011-09-18-a-dramatic-turn-of-events-de-dream-theater.html">A Dramatic Turn of Events, de Dream Theater</a></td>
-        <td class="archive-table__cell--song">Build Me Up, Break Me Down</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/dream-theater.html">Dream Theater</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/dream-theater-a-dramatic-turn-of-events.html">A Dramatic Turn of Events</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2011.html">2011</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/albumes.html">Álbumes</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-03-11 09:00:04 +0100">11/03/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-03-11-especial-twelve-step-suite-de-dream-theater.html">Especial: Twelve-step Suite, de Dream Theater</a></td>
-        <td class="archive-table__cell--song"></td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/dream-theater.html">Dream Theater</a></td>
-        <td class="archive-table__cell--album"></td>
-        <td class="archive-table__cell--year"></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2012-06-18 08:00:00 +0200">18/06/2012</td>
-        <td class="archive-table__cell--title"><a href="/archive/2012-06-18-metropolis-part-i-the-miracle-and-the-sleeper-de-dream-theater.html">Metropolis Part I “The Miracle And The Sleeper”, de Dream Theater</a></td>
-        <td class="archive-table__cell--song">Metropolis, Part I: The Miracle and the Sleeper</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/dream-theater.html">Dream Theater</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/dream-theater-images-and-words.html">Images and Words</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1992.html">1992</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/medinaman.html">medinaman</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2013-09-12 08:00:50 +0200">12/09/2013</td>
-        <td class="archive-table__cell--title"><a href="/archive/2013-09-12-the-enemy-inside-de-dream-theater.html">The Enemy Inside, de Dream Theater</a></td>
-        <td class="archive-table__cell--song">The Enemy Inside</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/dream-theater.html">Dream Theater</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/dream-theater-dream-theater.html">Dream Theater</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2013.html">2013</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

@@ -49,21 +49,26 @@ table {
 
 /* Custom styles */
 
-/* Design language (from the home "Tal día como hoy" sheet): black ink on white paper, yellow
-   highlight, solid offset black shadows, Amaranth display type and small uppercase kickers. */
+/* Design language ("Propuesta A · Fanzine diario"): black ink on white paper, yellow highlight (only for
+   highlights, the current state and one main action per screen), 3px rules and solid offset black shadows
+   on navigation and cards, 2px borders on media, Amaranth display type and small uppercase labels. */
 :root {
   --ink: #000;
   --paper: #fff;
   --accent: #ff0;
-  --muted: #666;
+  --muted: #555;
   --rule: #ccc;
-  --shadow: .5rem .5rem 0 var(--ink);
-  --shadow-small: .25rem .25rem 0 var(--ink);
+  --border: 3px solid var(--ink);
+  --border-thin: 2px solid var(--ink);
+  --shadow-big: 10px 10px 0 var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-small: 4px 4px 0 var(--ink);
   --font-display: Amaranth, sans-serif;
 }
 
 /* Font on body (not only .app): the radio bar is appended to <body>, outside .app */
 body {
+  background: var(--paper);
   color: var(--ink);
   font-family: Titillium Web, sans-serif;
   line-height: 1.6;
@@ -90,9 +95,17 @@ a:hover {
   outline-offset: 2px;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* Small uppercase label used above titles and as section headings */
 .kicker,
-.archive-search__label,
 .archive-search__count,
 .post-nav__label,
 .post-view__comments-summary,
@@ -104,91 +117,142 @@ a:hover {
   text-transform: uppercase;
 }
 
-/* The page is a size container: the post's split view depends on the room the page has (less while the
-   Ficha panel is open: the page moves aside for it), not on the window */
+/* Display headings (Amaranth) */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1;
+}
+
+/* Buttons: 3px ink border and a solid shadow; .button--accent is the screen's main action */
+.button {
+  align-items: center;
+  background: var(--paper);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  gap: .6rem;
+  min-height: 48px;
+  padding: 0 1.35rem;
+  text-decoration: none;
+}
+
+.button--accent,
+.button:hover {
+  background: var(--accent);
+}
+
+.button svg {
+  flex: none;
+}
+
+/* Breadcrumbs */
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .875rem;
+  gap: .5rem;
+  padding: 1rem 0;
+}
+
+/* The separator sits inside the next link: inline-block and paper-backed, so the link's hover yellow and
+   underline stay on its text */
+.crumbs > * + *::before {
+  background: var(--paper);
+  content: "/";
+  display: inline-block;
+  padding-right: .5rem;
+}
+
+/* The page is a size container: the post's split view depends on the room the page has, not on the window */
 .app {
   container: app / inline-size;
   min-height: 100vh;
 }
 
-:root {
-  --facts-width: min(26rem, 40vw);
-}
-
-/* Ficha panel open (wider than a phone): the page makes room for it on the right, centred in the rest */
-@media (min-width: 40rem) {
-  html:has(.post-facts:popover-open) .app {
-    margin-right: var(--facts-width);
-  }
-
-  html:has(.post-facts:popover-open) .radio-bar {
-    right: var(--facts-width);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .app {
-    transition: margin-right .2s ease;
-  }
-}
-
-/* Same content width on every page (the archive table's min-width is 80rem = 84rem - padding) */
+/* Same content width on every page */
 .app-wrapper {
-  max-width: 84rem;
+  box-sizing: border-box;
+  max-width: 90rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem 2rem 3rem;
 }
 
-/* Running text keeps a comfortable line length inside the wider page */
-.page-index .app-wrapper > p,
-.home__intro,
-.post-view__content {
-  max-width: 40rem;
-}
-
-/* Comments: as wide as the players in one column (phones, tablets); in the desktop text column, as wide as the text */
-@container app (min-width: 60rem) {
-  .post-view > .post-view__comments {
-    max-width: 40rem;
+@media (max-width: 40rem) {
+  .app-wrapper {
+    padding: 1rem 1rem 2rem;
   }
 }
 
+/* Header: wordmark on the left; menu and search on the right, wrapping on narrow screens */
 .header {
-  margin-bottom: 2rem;
-  text-align: center;
+  align-items: center;
+  border-bottom: var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+  padding-bottom: 1rem;
 }
 
 .header__logo {
-  width: 110px !important;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+  text-decoration: none;
 }
 
-.header__logo-container a:hover {
+.header__logo:hover {
   background: none;
 }
 
+.header__logo-img {
+  align-self: center;
+  display: block;
+  height: 5rem;
+  margin: -.5rem 0;
+  width: auto;
+}
+
+@media (max-width: 40rem) {
+  .header__logo-img {
+    height: 4rem;
+  }
+}
+
 .header__logo-headline {
-  font-size: .7rem;
+  font-size: .75rem;
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
 
-.header__menu {
-  margin: 1rem 0;
+.header__nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
 }
 
-.header__menu--item {
-  display: inline-block;
-  padding: .25rem;
-  vertical-align: middle;
+.header__menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
 }
 
 /* Menu: uppercase labels; the current page is a yellow tag with a small shadow */
 .header__menu--item a {
-  font-size: .8rem;
+  display: inline-block;
+  font-size: .8125rem;
   font-weight: 700;
   letter-spacing: .1em;
-  padding: .3rem .6rem;
+  padding: .375rem .75rem;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -198,62 +262,210 @@ a:hover {
   box-shadow: var(--shadow-small);
 }
 
-.header__menu--dices {
-  width: 16px;
-  vertical-align: middle;
+.header__search {
+  align-items: center;
+  border: var(--border-thin);
+  display: flex;
+  gap: .5rem;
+  padding: .25rem .625rem;
 }
 
-.footer {
-  border-top: 3px solid var(--ink);
-  font-size: .85rem;
-  line-height: 1.5;
-  margin-top: 4rem;
-  padding-top: 1.25rem;
-  text-align: center;
+.header__search:focus-within {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
 }
 
-.footer p {
-  margin: .25rem 0;
+.header__search-input {
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-size: .875rem;
+  outline: none;
+  width: 10rem;
 }
 
-/* From tablet up: logo on the left, menu on the right (on phones it stays centered and stacked) */
-@media (min-width: 40rem) {
+/* Phones and small tablets: the menu folds behind a "Menú" button (js/menu.js); open, it's a full-width list under the
+   wordmark, each item a row between 1px rules, the current page in yellow, then the search */
+.header__burger {
+  align-items: center;
+  background: var(--paper);
+  border: var(--border-thin);
+  box-shadow: var(--shadow-small);
+  color: var(--ink);
+  cursor: pointer;
+  display: none;
+  font: inherit;
+  font-size: .8125rem;
+  font-weight: 700;
+  gap: .5rem;
+  letter-spacing: .1em;
+  padding: .375rem .75rem;
+  text-transform: uppercase;
+}
+
+.header__burger:hover,
+.header--open .header__burger {
+  background: var(--accent);
+}
+
+.header__burger-close,
+.header--open .header__burger-open {
+  display: none;
+}
+
+.header--open .header__burger-close {
+  display: inline;
+}
+
+@media (max-width: 52rem) {
   .header {
     align-items: center;
-    border-bottom: 3px solid var(--ink);
-    display: flex;
-    gap: 1rem 2rem;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    text-align: left;
+    display: grid;
+    gap: 0 1rem;
+    grid-template-columns: 1fr auto;
+  }
+
+  .header__burger:not([hidden]) {
+    display: inline-flex;
+  }
+
+  .header__nav {
+    grid-column: 1 / -1;
+  }
+
+  .header:has(.header__burger:not([hidden])):not(.header--open) .header__nav {
+    display: none;
+  }
+
+  .header__nav {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
   }
 
   .header__menu {
-    margin: 0;
+    border-top: var(--border-thin);
+    flex-direction: column;
+    gap: 0;
   }
 
-  .header__menu--item:last-child {
-    padding-right: 0;
+  .header__menu--item {
+    border-bottom: 1px solid var(--ink);
   }
+
+  .header__menu--item a {
+    display: block;
+    font-size: .9375rem;
+    padding: .875rem .25rem;
+  }
+
+  .header__menu--item [aria-current="page"] {
+    box-shadow: none;
+    padding-left: .75rem;
+  }
+
+  .header__search-input {
+    flex: 1;
+    width: auto;
+  }
+
+  .header__search {
+    padding: .5rem .75rem;
+  }
+}
+
+/* Between the folded menu and one row: the menu under the wordmark, search on its right */
+@media (min-width: 52.01rem) and (max-width: 75rem) {
+  .header__nav {
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+}
+
+.footer {
+  border-top: var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .875rem;
+  gap: .75rem 2rem;
+  justify-content: space-between;
+  line-height: 1.5;
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+}
+
+.footer p {
+  margin: 0;
 }
 
 .archive {
   display: grid;
 }
 
-/* When the table doesn't fit, scroll it instead of widening the whole page
-   (on wide screens the page scrolls, which keeps the sticky header). */
-@media (max-width: 84rem) {
-  .archive {
-    overflow-x: auto;
-  }
+
+/* Page titles: Amaranth, big */
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
 }
 
-.archive-title {
-  font-family: var(--font-display);
-  font-size: 3rem;
-  line-height: 1;
-  margin-bottom: 1.25rem;
+/* Title row of a page: title on the left, an action on the right */
+.page-head {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+  padding: 1rem 0 1.5rem;
+}
+
+/* Chips: 2px bordered tags (links or plain), wrapping */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .625rem;
+}
+
+.chips__label {
+  width: 100%;
+}
+
+.chip {
+  align-items: center;
+  border: var(--border-thin);
+  display: inline-flex;
+  font-weight: 700;
+  gap: .375rem;
+  min-height: 44px;
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+a.chip:hover,
+.chip[aria-current="page"],
+.chip[aria-pressed="true"] {
+  background: var(--accent);
+}
+
+.chip--small {
+  min-height: 0;
+  padding: .25rem .625rem;
+}
+
+.chip--small strong {
+  font-weight: 400;
+}
+
+button.chip {
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
 }
 
 /* External links under a facet heading (e.g. the artist's MusicBrainz page) */
@@ -264,49 +476,218 @@ a:hover {
   margin: -0.5rem 0 1.25rem;
 }
 
-/* Artist page: short bio and photo (partials/artist-bio.njk) */
-.artist-bio {
-  display: grid;
-  grid-template-columns: 10rem 1fr;
-  gap: 1.25rem;
+/* Artist page: photo (big shadow) beside kicker, name, bio and links; then the posts as cards */
+.artist-hero {
   align-items: start;
-  max-width: 52rem;
-  margin: 0 0 2rem;
-  padding: 1rem;
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow-small);
-  background: var(--paper);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  padding: 1.5rem 0 3rem;
 }
-.artist-bio--text { grid-template-columns: 1fr; }
-.artist-bio__photo { margin: 0; }
-.artist-bio__photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 14rem;
+
+.artist-hero__photo {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* Side by side (wide screens): the photo on the right of the bio; stacked, it goes first */
+@media (min-width: 48rem) {
+  .artist-hero__photo {
+    align-items: flex-end;
+    order: 2;
+  }
+}
+
+/* A 3:2 frame with the big shadow: the blurred photo fills it, the photo itself sits in the middle at no
+   more than its own size (Commons thumbnails are 330px wide) */
+.artist-hero__frame {
+  aspect-ratio: 3 / 2;
+  background: var(--ink);
+  border: var(--border);
+  box-shadow: var(--shadow-big);
+  box-sizing: border-box;
+  isolation: isolate;
+  max-width: 36rem;
+  overflow: hidden;
+  position: relative;
+  width: calc(100% - 10px);
+}
+
+.artist-hero__backdrop {
+  filter: blur(24px) saturate(1.2) brightness(.85);
+  height: 100%;
+  inset: 0;
   object-fit: cover;
-  object-position: top;
-  border: 2px solid var(--ink);
+  position: absolute;
+  transform: scale(1.2);
+  width: 100%;
+  z-index: -1;
 }
-.artist-bio__photo figcaption {
-  margin-top: .35rem;
-  font-size: .7rem;
-  line-height: 1.3;
+
+/* Absolute, so its max sizes resolve against the frame */
+.artist-hero__image {
+  border: var(--border-thin);
+  box-shadow: var(--shadow-small);
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  inset: 0;
+  margin: auto;
+  max-height: calc(100% - 2.5rem);
+  max-width: calc(100% - 2.5rem);
+  position: absolute;
+  width: auto;
+}
+
+.artist-hero__photo figcaption {
   color: var(--muted);
+  font-size: .8125rem;
   overflow-wrap: anywhere;
+  padding-top: .375rem;
 }
-.artist-bio__photo figcaption a { color: inherit; }
-.artist-bio__text p { margin: 0; line-height: 1.5; }
-.artist-bio__text .artist-bio__source { margin-top: .5rem; font-size: .85rem; }
-@media (max-width: 36rem) {
-  .artist-bio { grid-template-columns: 6rem 1fr; gap: .9rem; }
+
+.artist-hero__photo figcaption a {
+  color: inherit;
+}
+
+.artist-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.artist-hero__text > * {
+  margin: 0;
+}
+
+.artist-hero__name {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  line-height: .95;
+}
+
+.artist-hero__bio {
+  font-size: 1.1875rem;
+  line-height: 1.55;
+  max-width: 36rem;
+}
+
+.artist-hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .9375rem;
+  gap: .5rem 1.25rem;
+}
+
+.artist-posts,
+.artist-albums {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.artist-albums {
+  margin-top: 3rem;
+}
+
+.artist-posts__head {
+  align-items: baseline;
+  border-top: var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.artist-posts__title {
+  font-size: 2.25rem;
+}
+
+.artist-albums .artist-posts__title {
+  border-top: var(--border);
+  padding-top: 1rem;
+}
+
+.artist-posts__table {
+  font-weight: 700;
+  margin-top: .5rem;
+}
+
+/* Post cards: date · album, title, an excerpt of the text and its author */
+.post-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  padding: .5rem 0;
+}
+
+.post-card {
+  background: var(--paper);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  height: calc(100% - 6px);
+  padding: 1.25rem;
+  text-decoration: none;
+}
+
+.post-card:hover {
+  background: var(--accent);
+}
+
+.post-card__title {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.post-card__excerpt {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.post-card__editor {
+  font-size: .875rem;
+  margin-top: auto;
 }
 
 /* Music map (/mapa/): countries colored by number of posts, from pale to strong yellow */
+.map-head {
+  align-items: end;
+  padding-top: 2.5rem;
+}
+
+.map-head .kicker,
+.map-intro {
+  margin: 0 0 .5rem;
+}
+
+.map-intro {
+  font-size: 1.0625rem;
+  max-width: 26rem;
+}
+
+/* Map and "Los que más" side by side, wrapping on narrow screens */
+.map-layout {
+  align-items: start;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
+}
+
+@media (max-width: 56rem) {
+  .map-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .map {
-  border: 2px solid var(--ink);
+  border: var(--border);
   box-shadow: var(--shadow);
-  margin: 0 0 2rem;
+  margin: 0 6px 0 0;
   padding: 1rem;
 }
 
@@ -361,48 +742,634 @@ a:hover {
   width: .9rem;
 }
 
+.map-top {
+  border: var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.map-top__head {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-top__title {
+  font-size: 1.5rem;
+}
+
+.map-top__bars {
+  grid-template-columns: minmax(0, 7rem) minmax(0, 1fr) 2.5rem;
+}
+
 .map-countries {
-  columns: 12rem;
-  list-style: none;
-  margin: 0 0 2rem;
-  padding: 0;
+  font-size: .9375rem;
+  line-height: 1.7;
 }
 
 .map-countries__count {
   color: var(--muted);
 }
 
-/* Archive landing (/archive/): search form that submits to the table, then the stats */
-.archive-search__button {
+/* Archive landing (/archive/): title, big search that submits to the table, chips to the indexes */
+.archive-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 0 2rem;
+}
+
+.archive-hero > .kicker {
+  margin: 0;
+}
+
+/* El proyecto (/el-proyecto/): title and intro side by side, figures, then the history by year */
+.project-hero {
+  align-items: end;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22.5rem), 1fr));
+  padding: 3.5rem 0 3rem;
+}
+
+.project-hero__title,
+.project-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-hero > * > * {
+  margin: 0;
+}
+
+.project-hero__name {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.project-hero mark {
+  -webkit-box-decoration-break: clone;
   background: var(--accent);
-  border: 2px solid var(--ink);
+  box-decoration-break: clone;
+  padding: 0 .5rem;
+}
+
+.project-hero__text {
+  font-size: 1.1875rem;
+}
+
+.history {
+  padding-top: 3.5rem;
+}
+
+.history__head {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 2rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.history__title {
+  font-size: 3rem;
+}
+
+.history__legend {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .875rem;
+  gap: 1rem;
+  margin: 0;
+}
+
+.history__legend > span {
+  align-items: center;
+  display: flex;
+  gap: .375rem;
+}
+
+/* "Del archivo": outlined; "Contado": black and yellow */
+.history__tag {
+  border: var(--border-thin);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 1px 6px;
+  text-transform: uppercase;
+}
+
+.history__tag--told {
+  background: var(--ink);
+  color: var(--accent);
+}
+
+/* Each year: the year (sticky) and its posts' bar on the left of a 3px line; its milestones as cards */
+.history__year {
+  display: grid;
+  gap: 0 2.5rem;
+  grid-template-columns: 12.5rem minmax(0, 1fr);
+}
+
+.history__year-side {
+  border-right: var(--border);
+  padding-bottom: 2.5rem;
+}
+
+.history__year-sticky {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding-right: 1.5rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.history__year-number {
+  font-size: 3.5rem;
+  line-height: .9;
+}
+
+.history__year-count {
+  font-size: .8125rem;
+  font-weight: 700;
+}
+
+.history__year-track {
+  border: var(--border-thin);
+  display: block;
+  height: 10px;
+}
+
+.history__year-fill {
+  background: var(--ink);
+  display: block;
+  height: 100%;
+}
+
+.history__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
+.history__item {
+  background: var(--paper);
+  border: var(--border);
   box-shadow: var(--shadow-small);
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  padding: 1rem 1.25rem;
+  position: relative;
+}
+
+/* A square on the year's line */
+.history__item::before {
+  background: var(--paper);
+  border: var(--border);
+  box-sizing: border-box;
+  content: "";
+  height: 22px;
+  left: calc(-2.5rem - 14px);
+  position: absolute;
+  top: 1.125rem;
+  width: 22px;
+}
+
+/* Told milestones: paper like the rest, a yellow band on the left (yellow stays a highlight) */
+.history__item--contado {
+  box-shadow: inset 10px 0 0 var(--accent), var(--shadow);
+  padding-left: 1.875rem;
+}
+
+.history__item--contado::before {
+  background: var(--accent);
+}
+
+.history__item > * {
+  margin: 0;
+}
+
+.history__item-head {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .375rem .75rem;
+  justify-content: space-between;
+}
+
+.history__item-title {
+  font-size: 1.625rem;
+  line-height: 1.1;
+}
+
+.history__link {
+  font-size: .9375rem;
+  font-weight: 700;
+}
+
+@media (max-width: 40rem) {
+  .history__year {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .history__year-side {
+    border-bottom: var(--border);
+    border-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .history__year-sticky {
+    position: static;
+  }
+
+  .history__item::before {
+    display: none;
+  }
+}
+
+.project-license {
+  border-top: var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  max-width: 44rem;
+  padding-top: 1.5rem;
+}
+
+.project-license p {
+  margin: 0;
+}
+
+/* Especiales: a black tag over the title */
+.special-tag {
+  align-self: flex-start;
+  background: var(--ink);
+  color: var(--accent);
+  padding: .25rem .625rem;
+}
+
+/* Festival series in the side column: each day, this one marked */
+.series {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-right: 6px;
+  padding: 1.25rem;
+}
+
+.series__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.series__item {
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 0;
+}
+
+.series__item:last-child {
+  border-bottom: 0;
+}
+
+.series__meta {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.series__item a,
+.series__current {
+  font-weight: 700;
+}
+
+.series__current {
+  align-self: flex-start;
+  background: var(--accent);
+  padding: 0 .375rem;
+}
+
+.series__note {
+  font-size: .875rem;
+  margin: 0;
+}
+
+/* /archive/especiales/: one section of cards per shape */
+.specials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  scroll-margin-top: 1rem;
+}
+
+.post-card__by {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+}
+
+/* Podcast page: cover with a big shadow beside the title and the subscribe actions; then the episodes */
+.podcast-hero {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.podcast-hero__cover {
+  border: var(--border);
+  box-shadow: var(--shadow-big);
+  flex: none;
+  height: auto;
+  max-width: calc(100% - 10px);
+  width: 17.5rem;
+}
+
+.podcast-hero__text {
+  display: flex;
+  flex: 1 1 26rem;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.podcast-hero__text > * {
+  margin: 0;
+}
+
+.podcast-hero mark {
+  background: var(--accent);
+  padding: 0 .5rem;
+}
+
+.podcast-hero__lead {
+  font-size: 1.1875rem;
+  max-width: 34rem;
+}
+
+.podcast-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.podcast-hero__copy[hidden],
+.episodes__order[hidden] {
+  display: none;
+}
+
+.episodes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.episodes__head {
+  align-items: center;
+  border-bottom: var(--border);
+  border-top: var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+  padding: .75rem 0;
+}
+
+.episodes__title {
+  font-size: 2.25rem;
+}
+
+.episodes__tools .archive-search__input {
+  box-shadow: none;
+  flex: 1 1 14rem;
+  min-height: 44px;
+}
+
+.episode {
+  align-items: center;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  gap: .25rem 1rem;
+  grid-template-columns: 3rem 7.5rem minmax(0, 1fr) 10rem;
+  min-height: 4rem;
+  padding: .5rem .75rem;
+}
+
+.episode {
   cursor: pointer;
-  font: inherit;
+}
+
+.episode[hidden] {
+  display: none;
+}
+
+/* The episode playing (js/podcasts.js) */
+.episode--current {
+  background: var(--accent);
+  box-shadow: inset 4px 0 0 var(--ink);
+}
+
+.podcast-hero__radio[hidden] {
+  display: none;
+}
+
+.episode:hover {
+  background: var(--accent);
+}
+
+.episode__date {
   font-weight: 700;
-  padding: .35rem .9rem;
+  font-variant-numeric: tabular-nums;
 }
 
-.archive-search__all {
+.episode__title {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.episode__title:hover {
+  text-decoration: underline;
+}
+
+.episode__editor {
+  font-size: .875rem;
+}
+
+/* Play button: a 48px square; a triangle, two bars while it plays */
+.episode__play {
+  align-items: center;
+  background: var(--paper);
+  border: var(--border);
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.episode__play[hidden] {
+  display: none;
+}
+
+.episode__play:hover,
+.episode__play[aria-pressed="true"] {
+  background: var(--accent);
+}
+
+.episode__icon {
+  border-bottom: 8px solid transparent;
+  border-left: 13px solid var(--ink);
+  border-top: 8px solid transparent;
+  height: 0;
+  margin-left: 3px;
+  width: 0;
+}
+
+.episode__play[aria-pressed="true"] .episode__icon {
+  border: 0;
+  border-left: 4px solid var(--ink);
+  border-right: 4px solid var(--ink);
+  height: 16px;
+  margin-left: 0;
+  width: 4px;
+}
+
+/* Without JS (no play button) the date takes the first column */
+.episode:has(.episode__play[hidden]) {
+  grid-template-columns: 7.5rem minmax(0, 1fr) 10rem;
+}
+
+@media (max-width: 40rem) {
+  .episode,
+  .episode:has(.episode__play[hidden]) {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    padding: .75rem 0;
+  }
+
+  .episode__play {
+    grid-row: span 3;
+  }
+
+  .episode > :not(.episode__play) {
+    grid-column: 2;
+  }
+}
+
+/* 404: a huge yellow "404" with a shadow beside the text, a search and two ways out */
+.not-found {
+  align-items: center;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+  padding: 4.5rem 0;
+}
+
+.not-found__code {
+  font-size: clamp(8rem, 18vw, 13.75rem);
+  letter-spacing: -.04em;
+  line-height: .8;
+}
+
+.not-found__code span {
+  background: var(--accent);
+  box-shadow: 12px 12px 0 var(--ink);
+  padding: 0 1rem;
+}
+
+.not-found__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.not-found__text > * {
+  margin: 0;
+}
+
+.not-found__title {
+  font-size: 3rem;
+}
+
+.not-found__lead {
+  font-size: 1.125rem;
+  max-width: 30rem;
+}
+
+.not-found__search .archive-search__input {
+  box-shadow: none;
+}
+
+.not-found__submit,
+.not-found__submit:hover {
+  background: var(--ink);
+  box-shadow: none;
+  color: var(--accent);
+  min-height: 52px;
+}
+
+.not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: .5rem;
+}
+
+/* Tabs between two pages (the indexes): one 3px box with a shadow, the current page in yellow */
+.tabs {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+}
+
+.tabs__tab {
+  align-items: center;
+  display: inline-flex;
+  font-size: .8125rem;
   font-weight: 700;
+  letter-spacing: .12em;
+  min-height: 48px;
+  padding: 0 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.page-stats .archive-search {
-  margin-bottom: 2.5rem;
+.tabs__tab + .tabs__tab {
+  border-left: var(--border);
 }
 
-/* Facet indexes (/archive/editors/, /archive/artists/): one card per name, with its number of posts */
+.tabs__tab[aria-current="page"] {
+  background: var(--accent);
+}
+
+.archive-search--index {
+  margin-bottom: 1.5rem;
+}
+
+.archive-search--index .archive-search__input {
+  box-shadow: none;
+  flex-basis: 100%;
+  font-size: 1.125rem;
+  min-height: 56px;
+}
+
+/* Facet indexes (/archive/editors/, /archive/artists/): one card per name, its count big */
 .facet-cards {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-  list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
   margin: 0 0 2rem;
-  padding: 0;
-}
-
-.facet-cards li {
-  margin: 0;
 }
 
 .facet-cards li[hidden] {
@@ -410,13 +1377,14 @@ a:hover {
 }
 
 .facet-cards__card {
-  border: 2px solid var(--ink);
-  box-sizing: border-box;
+  border: var(--border);
   box-shadow: var(--shadow-small);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding: .6rem .8rem;
+  gap: .25rem;
+  height: calc(100% - 4px);
+  padding: 1rem 1.125rem;
   text-decoration: none;
 }
 
@@ -425,82 +1393,135 @@ a:hover {
   background: var(--accent);
 }
 
+.facet-cards__count {
+  font-size: 2rem;
+}
+
+/* Artists with a Commons photo, authors with a Gravatar or their initial: a small square in the top right
+   corner (lazy-loaded), beside the count; the name goes under both, the card's full width, so long
+   handles (heroedelproximomilenio) fit without breaking */
+.facet-cards__card--image {
+  position: relative;
+}
+
+.facet-cards__card--image .facet-cards__count {
+  min-height: 4rem;
+  padding-right: 4.5rem;
+}
+
+.facet-cards__image {
+  background: var(--rule);
+  border: var(--border-thin);
+  box-sizing: border-box;
+  height: 4rem;
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 4rem;
+}
+
+/* Authors: up to three initials, under the Gravatar (they show when there's none) */
+.facet-cards__initial {
+  align-items: center;
+  background: var(--accent);
+  border: var(--border-thin);
+  box-sizing: border-box;
+  color: var(--ink);
+  display: flex;
+  font-size: 1.375rem;
+  letter-spacing: .02em;
+  height: 4rem;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 4rem;
+}
+
 .facet-cards__name {
+  font-size: 1.0625rem;
   font-weight: 700;
+  line-height: 1.3;
   overflow-wrap: anywhere;
 }
 
-.facet-cards__count {
-  color: var(--muted);
-  font-size: .8rem;
+.facet-cards__sub {
+  font-size: .875rem;
 }
 
-/* dSong en cifras (/archive/): totals, bar and column charts, decade heatmap */
+/* dSong en cifras (/archive/): a 2x2 grid of sections split by thin rules, bar and column charts */
 .stats-heading {
-  font-family: var(--font-display);
+  border-bottom: var(--border);
+  border-top: var(--border);
   font-size: 2.25rem;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  padding: .75rem 0;
 }
 
-.stats-totals {
+/* One column, two from 64rem (never three: the rules between sections assume pairs) */
+.stats-grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  list-style: none;
-  margin: 0 0 3rem;
-  padding: 0;
-}
-
-.stats-totals li {
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow-small);
-  padding: .75rem 1rem;
-}
-
-/* Linked tiles (posts -> table, countries -> map): the whole block is the link */
-.stats-totals li:has(a) {
-  padding: 0;
-}
-
-.stats-totals a {
-  display: block;
-  padding: .75rem 1rem;
-  text-decoration: none;
-}
-
-.stats-totals a:hover,
-.stats-totals a:focus-visible {
-  background: var(--accent);
-}
-
-.stats-totals strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 2.25rem;
-  line-height: 1.1;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .stats-section {
-  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.75rem 0;
 }
 
-.stats-section h3 {
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  line-height: 1.1;
-  margin-bottom: .5rem;
+.stats-section > * {
+  margin: 0;
+}
+
+.stats-section p {
+  font-size: .9375rem;
+}
+
+.stats-section__more {
+  font-weight: 700;
+}
+
+/* Two columns: a rule between them, room on each side */
+@media (min-width: 64rem) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-grid > .stats-section:nth-child(odd) {
+    border-right: 1px solid var(--ink);
+    padding-right: 1.75rem;
+  }
+
+  .stats-grid > .stats-section:nth-child(even) {
+    padding-left: 1.75rem;
+  }
+
+  .stats-grid > .stats-section:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+}
+
+.stats-section--wide {
+  border-bottom: 0;
+  border-top: var(--border);
 }
 
 .bars {
   align-items: center;
   display: grid;
-  gap: .35rem 1rem;
+  font-size: .9375rem;
+  gap: .5rem .75rem;
   /* Fixed columns, so the top 10 and its "Ver más" list line up */
-  grid-template-columns: 12rem 1fr 3rem;
+  grid-template-columns: 8.5rem minmax(0, 1fr) 2.75rem;
   list-style: none;
   margin: 0;
-  max-width: 48rem;
   padding: 0;
 }
 
@@ -508,45 +1529,27 @@ a:hover {
   display: contents;
 }
 
-.bars-more {
-  margin-top: .75rem;
-  max-width: 48rem;
-}
-
-.bars-more summary {
-  cursor: pointer;
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.bars-more[open] summary {
-  margin-bottom: .75rem;
-}
-
 .bars__label {
+  font-weight: 700;
   overflow-wrap: anywhere;
 }
 
-@media (max-width: 500px) {
-  .bars {
-    gap: .35rem .5rem;
-    grid-template-columns: 8rem 1fr 2.25rem;
-  }
-}
-
-.bars__fill,
-.columns__bar {
-  background: var(--accent);
-  border: 2px solid var(--ink);
+.bars__track {
+  border: var(--border-thin);
   display: block;
+  height: 1.25rem;
+  overflow: hidden;
 }
 
 .bars__fill {
-  border-radius: 0 4px 4px 0;
-  height: 1.1rem;
-  min-width: 4px;
+  background: var(--ink);
+  display: block;
+  height: 100%;
+  min-width: 2px;
+}
+
+.bars__fill--top {
+  background: var(--accent);
 }
 
 .bars__value {
@@ -554,55 +1557,102 @@ a:hover {
   text-align: right;
 }
 
+.bars-more summary {
+  cursor: pointer;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.bars-more[open] summary {
+  margin-bottom: .75rem;
+}
+
+/* Year columns: ink bars standing on a 3px rule; the highest in yellow */
 .columns {
   align-items: end;
+  border-bottom: var(--border);
   display: grid;
   gap: .5rem;
-  grid-auto-columns: 1fr;
+  grid-auto-columns: minmax(0, 1fr);
   grid-auto-flow: column;
   height: 14rem;
   list-style: none;
   margin: 0;
-  max-width: 48rem;
-  padding: 0;
+  padding: 0 0 0;
 }
 
 .columns__col {
   display: flex;
   flex-direction: column;
+  gap: .25rem;
   height: 100%;
   justify-content: flex-end;
   min-width: 0;
+  position: relative;
   text-align: center;
 }
 
 .columns__bar {
-  border-radius: 4px 4px 0 0;
-  min-height: 4px;
+  background: var(--ink);
+  border: var(--border-thin);
+  border-bottom: 0;
+  box-sizing: border-box;
+  display: block;
+  min-height: 2px;
+}
+
+.columns__bar--top {
+  background: var(--accent);
 }
 
 .columns__value,
 .columns__label {
-  font-size: .8rem;
+  font-size: .75rem;
   font-variant-numeric: tabular-nums;
+  font-weight: 700;
   line-height: 1.3;
 }
 
-@media (max-width: 500px) {
+/* Labels under the rule */
+.columns {
+  margin-bottom: 1.5rem;
+}
+
+.columns__label {
+  bottom: -1.5rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 30rem) {
   .columns {
     gap: .25rem;
   }
 
   .columns__value,
   .columns__label {
-    font-size: .65rem;
+    font-size: .625rem;
   }
 }
 
-.columns__label {
-  border-top: 2px solid var(--ink);
-  margin-top: -2px;
-  padding-top: .25rem;
+/* A ranking in two columns: name and count, thin rules */
+.ranking {
+  column-gap: 1.5rem;
+  display: grid;
+  font-size: .9375rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ranking li {
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+  padding: .375rem 0;
 }
 
 .heatmap-wrapper {
@@ -626,107 +1676,282 @@ a:hover {
   border: 1px solid var(--rule);
 }
 
+/* Search box: 3px border and shadow; the big one on the archive landing */
 .archive-search {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem 1rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .archive-search__input {
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow-small);
-  flex: 1 1 12rem;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  flex: 1 1 18rem;
   font: inherit;
+  font-size: 1.0625rem;
+  min-height: 52px;
   min-width: 0;
-  font-size: .9rem;
+  padding: 0 1rem;
+}
+
+.archive-search--table {
+  margin-bottom: 1.5rem;
+}
+
+.archive-search--table .archive-search__input {
+  flex: 1 1 20rem;
+  max-width: 30rem;
+}
+
+/* Text filter + year select in one 3px box with the shadow; a rule between them, the select yellow
+   when a year is chosen */
+.archive-search__bar {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex: 1 1 22rem;
   max-width: 40rem;
-  padding: .4rem .6rem;
+  min-height: 52px;
+}
+
+.archive-search__bar:focus-within {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.archive-search__bar .archive-search__input {
+  border: 0;
+  box-shadow: none;
+  flex: 1 1 auto;
+  max-width: none;
+  outline: none;
+}
+
+.archive-search__year {
+  align-items: center;
+  border-left: var(--border);
+  cursor: pointer;
+  display: flex;
+  gap: .5rem;
+  padding: 0 .875rem;
+  position: relative;
+}
+
+.archive-search__year:has(option:checked:not([value=""])) {
+  background: var(--accent);
+}
+
+.archive-search__year-label {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.archive-search__year-select {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  outline: none;
+  padding-right: 1.25rem;
+}
+
+.archive-search__year svg {
+  pointer-events: none;
+  position: absolute;
+  right: .875rem;
+}
+
+/* Where the browser lets a select be styled (appearance: base-select): the list in the site's own box,
+   3px border and solid shadow, the year in Amaranth, its count in grey, the chosen one in yellow. Elsewhere,
+   the system list ("2009 (197)") */
+@supports (appearance: base-select) {
+  .archive-search__year-select,
+  .archive-search__year-select::picker(select) {
+    appearance: base-select;
+  }
+
+  .archive-search__year-select::picker-icon {
+    display: none;
+  }
+
+  .archive-search__year-select::picker(select) {
+    background: var(--paper);
+    border: var(--border);
+    box-shadow: var(--shadow);
+    margin-top: .5rem;
+    padding: .25rem 0;
+  }
+
+  .archive-search__year-select option {
+    align-items: baseline;
+    display: flex;
+    gap: .5rem;
+    padding: .375rem 1rem;
+  }
+
+  .archive-search__year-select option::checkmark {
+    display: none;
+  }
+
+  .archive-search__year-select option:hover,
+  .archive-search__year-select option:focus-visible {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .archive-search__year-select option:checked {
+    background: var(--accent);
+    color: var(--ink);
+  }
+
+  .archive-search__option-year {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+  }
+
+  .archive-search__option-count {
+    color: var(--muted);
+    font-size: .8125rem;
+    margin-left: auto;
+  }
+
+  .archive-search__year-select option:hover .archive-search__option-count {
+    color: inherit;
+  }
+}
+
+/* Phones: the year select under the text filter */
+@media (max-width: 30rem) {
+  .archive-search__bar {
+    flex-direction: column;
+  }
+
+  .archive-search__bar .archive-search__input {
+    min-height: 48px;
+  }
+
+  .archive-search__year {
+    border-left: 0;
+    border-top: var(--border-thin);
+    min-height: 44px;
+  }
+
+  .archive-search__year-select {
+    flex: 1;
+  }
 }
 
 .archive-search__input:focus {
-  background: var(--accent);
-  outline: none;
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.archive-search--big {
+  align-items: stretch;
+}
+
+.archive-search--big .archive-search__input {
+  flex-basis: 22.5rem;
+  font-size: 1.25rem;
+  min-height: 60px;
+  padding: 0 1.25rem;
+}
+
+.archive-search--big .button {
+  font-size: 1.125rem;
+  min-height: 60px;
+  padding: 0 1.75rem;
 }
 
 .archive-search__count {
   color: var(--muted);
 }
 
+/* Archive table: white header over a 3px rule, uppercase labels, the sorted column in yellow */
 .archive-table {
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow);
-  font-size: .8rem;
+  font-size: .9375rem;
+  line-height: 1.45;
   margin-bottom: 1rem;
-  min-width: 80rem;
+  min-width: 68rem;
   table-layout: fixed;
   width: 100%;
 }
 
-.archive-table thead {
-  font-weight: 700;
-}
-
 .archive-table th {
-  background: #000;
-  color: #fff;
-  padding: .5rem;
-  position: -webkit-sticky;
+  background: var(--paper);
+  border-bottom: var(--border);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 0 .875rem;
   position: sticky;
   text-align: left;
-  top: -2px;
+  text-transform: uppercase;
+  top: 0;
+  height: 48px;
 }
 
 .archive-table th.sortable {
   cursor: pointer;
   user-select: none;
-  transition: background-color 0.2s ease;
 }
 
-.archive-table th.sortable:hover {
-  background: #333;
-}
-
+.archive-table th.sortable:hover,
 .archive-table th.sort-asc,
 .archive-table th.sort-desc {
-  background: #1a1a1a;
-}
-
-/* Sorted column: yellow label */
-.archive-table th.sort-asc,
-.archive-table th.sort-desc {
-  color: var(--accent);
+  background: var(--accent);
 }
 
 .archive-table th .sort-indicator {
-  font-size: 0.75rem;
-  opacity: 0.8;
-}
-
-.archive-table th a {
-  color: var(--paper);
+  font-size: .75rem;
 }
 
 .archive-table tbody tr:hover {
   background: var(--accent);
 }
 
-.archive-table tbody a:hover {
-  background: var(--ink);
-  color: var(--accent);
+/* The whole row opens the post (js/archive-table-sort.js) */
+.archive-table tbody tr {
+  cursor: pointer;
 }
 
 .archive-table tr {
   border-bottom: 1px solid var(--rule);
 }
 
-.archive-table tr:last-child {
-  border-bottom: none;
+.archive-table td {
+  overflow-wrap: break-word;
+  padding: .625rem .875rem;
 }
 
-.archive-table td {
-  padding: .5rem;
+/* Short values never break inside a word (author handles can be long: they break only when they must) */
+.archive-table :is(.archive-table__cell--year, .archive-table__cell--category) {
+  overflow-wrap: normal;
+}
+
+.archive-table td.archive-table__cell--published-at {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.archive-table td.archive-table__cell--title a {
+  font-weight: 700;
+}
+
+.archive__empty {
+  font-size: 1.0625rem;
+  padding: 2rem 0;
+}
+
+.archive__empty[hidden] {
+  display: none;
 }
 
 .archive-table__cell--published-at {
@@ -752,115 +1977,165 @@ a:hover {
   width: 8%;
 }
 
-.post-view__kicker {
-  display: block;
-  margin-bottom: .25rem;
+/* Below the room the table needs: each post is a card (title; artist · album · year; date · category ·
+   author) and the header turns into a row of sort chips */
+@media (max-width: 72rem) {
+  .archive-table,
+  .archive-table thead,
+  .archive-table tbody {
+    display: block;
+    min-width: 0;
+  }
+
+  .archive-table thead tr {
+    align-items: center;
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  .archive-table thead tr::before {
+    content: "Ordenar por";
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .archive-table th {
+    border: var(--border-thin);
+    height: auto;
+    padding: .375rem .625rem;
+    position: static;
+    width: auto;
+  }
+
+  .archive-table th.archive-table__cell--song {
+    display: none;
+  }
+
+  .archive-table tbody tr {
+    border: var(--border-thin);
+    column-gap: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .75rem;
+    padding: .875rem 1rem;
+  }
+
+  .archive-table tbody tr[hidden] {
+    display: none;
+  }
+
+  /* The line break between the two meta lines */
+  .archive-table tbody tr::after {
+    content: "";
+    flex-basis: 100%;
+    order: 2;
+  }
+
+  .archive-table td {
+    padding: 0;
+    width: auto;
+  }
+
+  .archive-table td:empty,
+  .archive-table td.archive-table__cell--song {
+    display: none;
+  }
+
+  .archive-table td.archive-table__cell--title {
+    flex-basis: 100%;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: .375rem;
+  }
+
+  .archive-table :is(td.archive-table__cell--artist, td.archive-table__cell--album, td.archive-table__cell--year) {
+    order: 1;
+  }
+
+  .archive-table :is(td.archive-table__cell--published-at, td.archive-table__cell--category, td.archive-table__cell--editor) {
+    color: var(--muted);
+    font-size: .875rem;
+    margin-top: .25rem;
+    order: 3;
+  }
+
+  .archive-table :is(td.archive-table__cell--album, td.archive-table__cell--year, td.archive-table__cell--category, td.archive-table__cell--editor)::before {
+    color: var(--muted);
+    content: "·";
+    margin-right: .5rem;
+  }
+}
+
+/* Post header: kicker, big title, "de Artist", and a meta line between 2px rules */
+.post-view__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.post-view__header > * {
+  margin: 0;
 }
 
 .post-view__kicker a {
   text-decoration: none;
 }
 
-.post-view__title {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  line-height: 1.05;
-  margin-bottom: 1rem;
-}
-
-.post-view__title a {
-  color: #000;
-  text-decoration: none;
-}
-
-.post-view__title a:hover {
+.post-view__kicker a:hover {
   text-decoration: underline;
 }
 
-.post-view__meta {
-  font-size: .8rem;
+.post-view__title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  overflow-wrap: break-word;
 }
 
-/* Author, date, Ficha and Editar: one row, vertically centred (wraps on narrow screens), each item set
-   apart by a thin vertical rule */
-.post-view__meta > span {
+.post-view__by {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 1.875rem);
+  line-height: 1.1;
+}
+
+.post-view__meta {
   align-items: center;
+  border-bottom: var(--border-thin);
+  border-top: var(--border-thin);
   display: flex;
   flex-wrap: wrap;
-  line-height: 1.4;
-  row-gap: .25rem;
+  font-size: .9375rem;
+  gap: .5rem 1.25rem;
+  padding: .75rem 0;
 }
 
-/* The rule is drawn outside the item, halfway into the gap, so a hover highlight covers the item only */
-.post-view__meta > span > * + * {
-  margin-left: 1.5rem;
-  position: relative;
-}
-
-.post-view__meta > span > * + *::before {
-  border-left: 1px solid var(--rule);
-  bottom: .15em;
-  content: "";
-  left: -.75rem;
-  position: absolute;
-  top: .15em;
-}
-
-.post-view__editor,
-.post-view__editor > a,
-.post-view__editor > span {
-  align-items: center;
-  display: flex;
+.post-view__editor-name {
+  font-weight: 700;
 }
 
 /* Local builds only: link to the post in the local editor */
 .post-view__edit {
-  font-weight: 700;
+  font-size: .8125rem;
+  margin-left: auto;
 }
 
-/* Author links wrap avatar + name with whitespace around: underline and highlight only the name */
-.post-view__editor a,
-.post-view__comment-editor a {
-  text-decoration: none;
-}
-
-.post-view__editor a:hover,
-.post-view__comment-editor a:hover {
-  background: none;
-}
-
-.post-view__editor a .post-view__editor-name,
-.post-view__comment-editor a .post-view__comment-editor-name {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-.post-view__editor a:hover .post-view__editor-name,
-.post-view__comment-editor a:hover .post-view__comment-editor-name {
-  background: var(--accent);
-}
-
-.post-view__editor-image {
-  border: 2px solid var(--ink);
-  border-radius: 1rem;
-  display: block;
-  margin-right: .5rem;
-  width: 20px;
-}
-
-.post-view__editor-name {
-  display: inline-block;
-}
-
-.post-view__permalink {
-  display: inline-block;
-  vertical-align: middle;
-}
-
+/* The author's text: the first paragraph bigger, as a lead */
 .post-view__content {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+}
+
+.post-view__content > p:first-child {
+  font-size: 1.375rem;
+  line-height: 1.5;
+}
+
+.post-view__content p {
+  margin-bottom: 1.25rem;
 }
 
 /* Lists inside articles (tracklists, etc.): the reset removes their markers */
@@ -878,145 +2153,43 @@ a:hover {
   list-style: disc;
 }
 
-/* Header line (author, date): the Ficha button looks like the "Editar" link next to it */
-.post-facts-toggle {
-  background: none;
-  border: 0;
-  color: var(--ink);
-  cursor: pointer;
-  font: inherit;
-  font-weight: 700;
-  line-height: inherit;
-  padding: 0;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-.post-facts-toggle:hover,
-.post-facts-toggle:focus-visible {
-  background: var(--accent);
-}
-
-/* Ficha: a popover (top layer) shown as a side panel on the right, full height, beside the page (which
-   moves aside for it, see .app). The post's data as a two-column list. */
+/* Ficha (lib/facts.js): a 2px box under the players, label + values in two columns */
 .post-facts {
-  background: var(--paper);
-  border: 0;
-  border-left: 3px solid var(--ink);
-  color: var(--ink);
-  height: 100%;
-  inset: 0 0 0 auto;
-  margin: 0;
-  max-height: none;
-  max-width: none;
-  overflow-y: auto;
-  padding: 0;
-  position: fixed;
-  width: var(--facts-width);
+  border: var(--border-thin);
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: 1.25rem;
 }
 
-/* Slides in (where the browser animates popovers; elsewhere it just appears) */
-@media (prefers-reduced-motion: no-preference) {
-  .post-facts {
-    transition: transform .2s ease, overlay .2s allow-discrete, display .2s allow-discrete;
-    transform: translateX(100%);
-  }
-
-  .post-facts:popover-open {
-    transform: none;
-  }
-
-  @starting-style {
-    .post-facts:popover-open {
-      transform: translateX(100%);
-    }
-  }
-}
-
-.post-facts__header {
-  align-items: center;
-  background: var(--paper);
-  border-bottom: 2px solid var(--ink);
-  display: flex;
-  justify-content: space-between;
-  padding: .5rem .5rem .5rem 1rem;
-  position: sticky;
-  top: 0;
-}
-
-.post-facts__close {
-  background: none;
-  border: 0;
-  color: var(--ink);
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-  padding: .25rem .5rem;
-}
-
-.post-facts__close:hover,
-.post-facts__close:focus-visible {
-  background: var(--accent);
-}
-
-.post-facts__body {
-  padding: 1rem;
-}
-
-/* Phones: a sheet from the bottom of the screen, full width */
-@media (max-width: 40rem) {
-  .post-facts {
-    border-left: 0;
-    border-top: 3px solid var(--ink);
-    height: auto;
-    inset: auto 0 0 0;
-    max-height: 85vh;
-    width: 100%;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .post-facts {
-      transform: translateY(100%);
-    }
-
-    .post-facts:popover-open {
-      transform: none;
-    }
-
-    @starting-style {
-      .post-facts:popover-open {
-        transform: translateY(100%);
-      }
-    }
-  }
+.post-facts__title {
+  margin-bottom: .75rem;
 }
 
 /* Group headings inside the Ficha (Música, dSong) */
 .post-facts__group {
   color: var(--muted);
-  margin: 0 0 .5rem;
+  font-size: .6875rem;
+  margin-bottom: .375rem;
 }
 
 .post-facts__list + .post-facts__group {
   border-top: 1px solid var(--rule);
-  margin-top: 1rem;
-  padding-top: .75rem;
+  margin-top: .875rem;
+  padding-top: .875rem;
 }
 
 .post-facts__list {
-  column-gap: 1rem;
   display: grid;
-  /* Same label column in both groups (long labels wrap) */
-  grid-template-columns: 8.5rem minmax(0, 1fr);
-  row-gap: .25rem;
+  gap: .375rem .75rem;
+  grid-template-columns: 6rem 1fr;
 }
 
 .post-facts__list dt {
-  color: var(--muted);
+  font-weight: 700;
 }
 
 .post-facts__list dd {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
@@ -1034,45 +2207,35 @@ a:hover {
 }
 
 .post-facts__mb-icon {
-  margin-right: .2em;
-  vertical-align: -.1em;
+  margin-right: .15rem;
+  vertical-align: -1px;
 }
 
 .post-facts__note,
 .post-facts__source {
   color: var(--muted);
-  font-size: .875rem;
 }
 
 .post-facts__source {
-  border-top: 1px solid var(--rule);
-  margin: .75rem 0 0;
-  padding-top: .5rem;
+  font-size: .75rem;
+  margin: .875rem 0 0;
 }
 
-/* Phones: label above its values */
-@media (max-width: 30rem) {
-  .post-facts__list {
-    grid-template-columns: 1fr;
-    row-gap: 0;
-  }
-
-  .post-facts__list dd {
-    margin-bottom: .5rem;
-  }
-}
-
-/* Comments: closed accordion, same look as the players one */
+/* Comments: a dashed box, closed until asked for (kept as they were in 2017) */
 .post-view__comments {
-  border: 2px solid var(--ink);
-  /* Same right margin as the players (room for their shadow), so the boxes line up */
-  margin: 2rem .5rem 2rem 0;
+  border: 2px dashed var(--ink);
+  font-size: .9375rem;
+  margin-top: 1rem;
 }
 
 .post-view__comments-summary {
   cursor: pointer;
+  font-size: .9375rem;
+  font-weight: 400;
+  letter-spacing: 0;
   list-style: none;
-  padding: .75rem 1rem;
+  padding: 1rem 1.25rem;
+  text-transform: none;
 }
 
 .post-view__comments-summary:hover {
@@ -1095,26 +2258,18 @@ a:hover {
 }
 
 .post-view__comments ul {
-  border-top: 2px solid var(--ink);
-  padding: 1.25rem 1rem;
+  border-top: 2px dashed var(--ink);
+  padding: 1.25rem;
 }
 
-.post-view__media {
-  margin: 1rem 0;
-}
-
-.post-view__media audio {
-  width: 100%;
-}
-
-/* Players: accordion (details) with one tab per player */
+/* Players: one tab per player in a 2px box (media: no big shadow); the radio toggle at its foot */
 .players {
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow);
-  margin: 2rem .5rem 2rem 0;
+  background: var(--paper);
+  border: var(--border-thin);
 }
 
 .players__summary {
+  border-bottom: var(--border-thin);
   cursor: pointer;
   list-style: none;
   padding: .75rem 1rem;
@@ -1140,39 +2295,56 @@ a:hover {
 }
 
 .players__tabs {
-  border-bottom: 2px solid var(--ink);
-  border-top: 2px solid var(--ink);
+  border-bottom: var(--border-thin);
   display: flex;
-  flex-wrap: wrap;
 }
 
 .players__tab {
   background: var(--paper);
   border: 0;
-  border-right: 2px solid var(--ink);
+  border-right: var(--border-thin);
   color: var(--ink);
   cursor: pointer;
+  flex: 1;
   font-family: inherit;
-  padding: .6rem 1rem;
-  transition: background-color .2s ease;
+  min-height: 44px;
+  padding: 0 .75rem;
 }
 
-.players__tab:hover {
+.players__tab:last-child {
+  border-right: 0;
+}
+
+.players__tab:hover,
+.players__tab[aria-selected="true"] {
   background: var(--accent);
 }
 
-.players__tab[aria-selected="true"] {
-  background: var(--ink);
-  color: var(--accent);
-}
-
 .players__tab:focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--ink);
   outline-offset: -5px;
 }
 
 .players__panel {
-  padding: 1rem;
+  line-height: 0;
+}
+
+/* Spotify and Apple Music draw rounded cards: a margin of paper around them, so the corners sit inside the
+   square frame on purpose */
+.players__panel--spotify,
+.players__panel--apple-music {
+  background: var(--paper);
+  padding: .625rem;
+}
+
+/* A single player: its tab is a plain label, not a big yellow button */
+.players__tab:only-child {
+  background: var(--paper);
+  cursor: default;
+  flex: none;
+  min-height: 36px;
+  padding: 0 .875rem;
+  text-align: left;
 }
 
 .players__panel audio {
@@ -1180,26 +2352,21 @@ a:hover {
 }
 
 .post-view__media-container {
-  height: 0;
-  padding-bottom: 56.25%;
-  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
   width: 100%;
 }
 
 .post-view__media-container iframe {
+  display: block;
   height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 100%;
 }
 
 /* UniRadio Jaén podcast: own block above the players */
 .podcast {
   background: var(--paper);
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow);
-  margin: 2rem .5rem 2rem 0;
+  border: var(--border-thin);
   padding: 1rem;
 }
 
@@ -1360,64 +2527,78 @@ a:hover {
   background: var(--accent);
 }
 
-/* Radio mode toggle (above the players) and bar (fixed at the bottom while it plays) */
+/* Radio mode toggle: the foot of the players box */
 .radio-toggle {
-  background: var(--accent);
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow-small);
+  align-items: center;
+  background: var(--paper);
+  border: 0;
+  border-top: var(--border-thin);
+  color: var(--ink);
   cursor: pointer;
-  display: block;
+  display: flex;
   font: inherit;
-  font-size: .8rem;
+  font-size: .875rem;
   font-weight: 700;
-  letter-spacing: .1em;
-  margin: 0 .25rem 1rem 0;
-  padding: .5rem .75rem;
-  text-align: left;
-  text-transform: uppercase;
-  transition: transform .1s ease, box-shadow .1s ease;
-  width: calc(100% - .25rem);
+  gap: .625rem;
+  justify-content: center;
+  min-height: 44px;
+  width: 100%;
 }
 
 .radio-toggle:hover {
-  box-shadow: none;
-  transform: translate(.25rem, .25rem);
+  background: var(--accent);
+}
+
+.radio-toggle:disabled {
+  cursor: progress;
+}
+
+/* While radio mode plays: a status, not a button */
+.radio-toggle--on,
+.radio-toggle--on:hover {
+  background: var(--accent);
+  cursor: default;
 }
 
 .radio-toggle[hidden] {
   display: none;
 }
 
-.radio-toggle__hint {
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
+/* Radio bar: black, fixed at the bottom while it plays */
 .radio-bar {
   align-items: center;
-  background: var(--accent);
-  border-top: 3px solid var(--ink);
-  bottom: 0;
+  background: var(--ink);
+  color: var(--paper);
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem 1.5rem;
-  left: 0;
-  padding: .75rem 2rem;
-  position: fixed;
-  right: 0;
+  gap: .75rem 1.5rem;
+  padding: .875rem max(2rem, calc((100% - 86rem) / 2));
+  /* First in <body> (js/radio.js): takes its room at the top and stays there while scrolling */
+  position: sticky;
+  top: 0;
   z-index: 10;
 }
 
+.radio-bar__label {
+  background: var(--accent);
+  color: var(--ink);
+  padding: .25rem .625rem;
+}
+
 .radio-bar__next {
-  flex: 1 1 16rem;
-  font-size: .9rem;
+  flex: 1 1 15rem;
+  font-size: .9375rem;
   min-width: 0;
 }
 
-.radio-bar__next a:hover {
-  background: var(--ink);
-  color: var(--accent);
+.radio-bar a {
+  color: var(--paper);
+  font-weight: 700;
+}
+
+.radio-bar a:hover {
+  background: var(--accent);
+  color: var(--ink);
 }
 
 .radio-bar__actions {
@@ -1426,24 +2607,52 @@ a:hover {
 }
 
 .radio-bar__button {
-  background: var(--paper);
-  border: 2px solid var(--ink);
+  align-items: center;
+  background: var(--ink);
+  border: 2px solid var(--paper);
+  color: var(--paper);
   cursor: pointer;
+  display: inline-flex;
   font: inherit;
-  font-size: .8rem;
   font-weight: 700;
-  padding: .3rem .7rem;
+  gap: .5rem;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 .875rem;
 }
 
-.radio-bar__button:hover {
-  background: var(--ink);
-  color: var(--accent);
+.radio-bar__button--icon {
+  padding: 0;
+  width: 44px;
 }
 
-.radio-bar__button[aria-pressed="true"],
+.radio-bar__button:hover,
 .radio-bar__button--start {
-  background: var(--ink);
-  color: var(--accent);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+/* En orden / Al azar: two halves of one white box, the chosen one white */
+.radio-bar__order {
+  border: 2px solid var(--paper);
+  display: flex;
+}
+
+.radio-bar__order .radio-bar__button {
+  border: 0;
+}
+
+.radio-bar__order .radio-bar__button[aria-checked="true"] {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.radio-bar__button--stop {
+  border: 0;
+  font-size: 1.375rem;
+  padding: 0;
+  width: 44px;
 }
 
 .radio-bar__button[hidden] {
@@ -1456,402 +2665,429 @@ a:hover {
 }
 
 .radio-bar__button:disabled:hover {
-  background: var(--paper);
-  color: inherit;
+  background: var(--ink);
+  border-color: var(--paper);
+  color: var(--paper);
 }
 
-/* Room for the bar so it doesn't cover the end of the page */
-.radio-on {
-  padding-bottom: 5rem;
-}
-
-@media (max-width: 500px) {
+/* Phones: two compact rows (label, order, close / previous, next, what comes next), so the bar on top
+   leaves room for the post */
+@media (max-width: 40rem) {
   .radio-bar {
-    padding: .75rem 1rem;
+    align-items: center;
+    display: grid;
+    gap: .5rem .75rem;
+    grid-template-areas: "label order stop" "actions next next";
+    grid-template-columns: auto 1fr auto;
+    padding: .5rem 1rem;
+  }
+
+  .radio-bar__label { grid-area: label; }
+  .radio-bar__order { grid-area: order; justify-self: end; }
+  .radio-bar__button--stop { grid-area: stop; }
+  .radio-bar__actions { grid-area: actions; }
+
+  .radio-bar__next {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    font-size: .8125rem;
+    grid-area: next;
+    -webkit-line-clamp: 2;
+    line-height: 1.3;
+    overflow: hidden;
+  }
+
+  .radio-bar__button {
+    font-size: .8125rem;
+    min-height: 36px;
+    padding: 0 .625rem;
+  }
+
+  .radio-bar__button--icon,
+  .radio-bar__button--stop {
+    padding: 0;
+    width: 36px;
   }
 }
 
-/* Previous / next post: plain text links under a thin rule */
+/* Previous / random / next post: three cards under the post */
 .post-nav {
-  border-top: 3px solid var(--ink);
   display: grid;
-  gap: 1rem 2rem;
-  grid-template-columns: 1fr auto 1fr;
-  margin-top: 2rem;
-  padding-top: 1rem;
-}
-
-/* Above the post: rule below instead of above */
-.post-nav--top {
-  border-bottom: 3px solid var(--ink);
-  border-top: 0;
-  margin: 0 0 1rem;
-  padding: 0 0 1rem;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  margin-top: 4rem;
 }
 
 .post-nav__link {
+  background: var(--paper);
+  border: var(--border);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  gap: .1rem;
+  gap: .375rem;
+  padding: 1.25rem;
   text-decoration: none;
 }
 
-.post-nav__link:hover {
-  background: none;
+.post-nav__link:hover,
+.post-nav__link--random {
+  background: var(--accent);
 }
 
 .post-nav__title {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  line-height: 1.2;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
-.post-nav__link:hover .post-nav__title {
-  background: var(--accent);
+.post-nav__editor {
+  font-size: .875rem;
 }
 
-.post-nav__link--prev {
-  grid-column: 1;
-}
-
+/* Order: previous, random, next, whichever exist */
 .post-nav__link--next {
-  grid-column: 3;
+  order: 1;
   text-align: right;
 }
 
-/* Random post, between previous and next (same label + title shape) */
-.post-nav__link--random {
-  grid-column: 2;
-  grid-row: 1;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.post-nav__label {
-  color: var(--muted);
-}
-
-@media (max-width: 500px) {
+/* Middle widths: previous and next side by side, random under them across both */
+@container app (min-width: 32rem) and (max-width: 56rem) {
   .post-nav {
-    grid-template-columns: 1fr;
-  }
-
-  .post-nav__link--prev,
-  .post-nav__link--next {
-    grid-column: 1;
-    text-align: left;
+    grid-template-columns: 1fr 1fr;
   }
 
   .post-nav__link--random {
-    grid-column: 1;
-    grid-row: auto;
-    text-align: left;
+    grid-column: 1 / -1;
+    order: 2;
   }
 }
 
-/* Home: "Tal día como hoy" as a calendar sheet (posts published on today's date in past years),
-   filled by js/on-this-day.js */
-.on-this-day {
-  background: var(--accent);
-  box-shadow: var(--shadow);
-  margin: 2rem .5rem 1rem 0;
-  padding: 1.5rem 1.5rem 1.25rem;
-  transform: rotate(-2deg);
-  transition: transform .2s ease;
+/* Home: hero (title, lead, actions) and "Tal día como hoy" side by side, wrapping on narrow screens */
+.home__hero {
+  align-items: start;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22.5rem), 1fr));
+  padding: 3.5rem 0 3rem;
 }
 
-.on-this-day:hover,
-.on-this-day:focus-within {
-  transform: rotate(0);
+.home__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.home__intro > * {
+  margin: 0;
+}
+
+.home__title {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  letter-spacing: -.02em;
+  line-height: 1.1;
+}
+
+.home__title mark,
+.home mark,
+.podcast-hero mark {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.home__title mark,
+.home mark {
+  background: var(--accent);
+  padding: 0 .5rem;
+}
+
+.home__lead {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  max-width: 34rem;
+}
+
+.home__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: .5rem;
+}
+
+/* "Tal día como hoy" (filled by js/on-this-day.js): a card with a big shadow and a yellow header */
+.on-this-day {
+  background: var(--paper);
+  border: var(--border);
+  box-shadow: var(--shadow-big);
+  line-height: 1.55;
+}
+
+.on-this-day[hidden],
+.on-this-day [hidden] {
+  display: none;
 }
 
 .on-this-day__header {
+  align-items: baseline;
+  background: var(--accent);
+  border-bottom: var(--border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+.on-this-day__date {
+  font-size: 2.125rem;
+}
+
+.on-this-day__note {
+  font-size: .875rem;
+  margin: 0;
+  padding: .75rem 1.25rem 0;
+}
+
+.on-this-day__list {
+  padding: .25rem 1.25rem .75rem;
+}
+
+.on-this-day__list .on-this-day__item {
+  align-items: baseline;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: 4rem 1fr;
+  padding: .75rem 0;
+}
+
+.on-this-day__list .on-this-day__item:last-child {
+  border-bottom: 0;
+}
+
+.on-this-day__year {
+  font-size: 1.5rem;
+}
+
+.on-this-day__body {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
 }
 
-.on-this-day__kicker {
-  font-size: .75rem;
+.on-this-day__list .on-this-day__body > a {
+  font-size: 1.0625rem;
   font-weight: 700;
-  letter-spacing: .15em;
-  text-transform: uppercase;
+  line-height: 1.3;
 }
 
-.on-this-day__day {
-  font-family: var(--font-display);
-  font-size: 6rem;
-  line-height: .9;
+.on-this-day__meta {
+  font-size: .875rem;
 }
 
-.on-this-day__month {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  letter-spacing: .05em;
+/* Efemérides: albums released on this day, their age in a yellow box */
+.on-this-day__anniversaries-box {
+  border-top: var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.on-this-day__anniversaries {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+}
+
+.on-this-day__anniversaries .on-this-day__item {
+  align-items: start;
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: 3.5rem 1fr;
+}
+
+.on-this-day__anniversaries .on-this-day__body > a {
+  font-weight: 700;
+}
+
+.on-this-day__age {
+  align-self: start;
+  background: var(--accent);
+  border: var(--border-thin);
+  display: flex;
+  flex-direction: column;
+  padding: .125rem 0 .25rem;
+  text-align: center;
+}
+
+.on-this-day__age-value {
+  font-size: 1.375rem;
+  line-height: 1.1;
+}
+
+.on-this-day__age-unit {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .12em;
   line-height: 1;
   text-transform: uppercase;
 }
 
-.on-this-day__note {
-  font-size: .8rem;
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-/* Anniversaries: albums that came out on this day (below the posts, if any) */
-.on-this-day__subhead {
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .15em;
-  margin: 1.25rem 0 .75rem;
-  text-transform: uppercase;
-}
-
-.on-this-day__list[hidden] + .on-this-day__subhead {
-  margin-top: 0;
-}
-
-/* Timeline: a black line with a dot per year */
-.on-this-day__list {
-  border-left: 2px solid #000;
-  margin-left: .35rem;
-}
-
-.on-this-day__item {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 .9rem 1.1rem;
-  position: relative;
-}
-
-.on-this-day__item:last-child {
-  padding-bottom: 0;
-}
-
-.on-this-day__item::before {
-  background: #000;
-  border-radius: 50%;
-  content: "";
-  height: .7rem;
-  left: -.45rem;
-  position: absolute;
-  top: .3rem;
-  width: .7rem;
-}
-
-.on-this-day__meta {
-  font-size: .8rem;
-}
-
-.on-this-day__year {
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-}
-
-.on-this-day__item a {
-  color: #000;
-  line-height: 1.3;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-.on-this-day__item a:hover {
-  background: #000;
-  color: #ff0;
-  text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .on-this-day {
-    transition: none;
-  }
-}
-
-/* Home intro: magazine-like lead, big figures and notes with hanging emoji */
-.home__kicker {
-  margin-bottom: .5rem;
-}
-
-.home__lead {
-  font-family: var(--font-display);
-  font-size: 1.9rem;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-}
-
-.home__lead mark {
-  background: var(--accent);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  color: inherit;
-  padding: 0 .2em;
-}
-
-/* Home calls to action: bordered buttons with the site's hard shadow */
-.home__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .75rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Compact enough for the home buttons to fit on one line on usual desktop widths */
-.home__actions .button {
-  letter-spacing: .06em;
-  padding: .6rem .8rem;
-}
-
-.button {
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow-small);
-  display: inline-block;
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  padding: .6rem 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.button:hover {
-  background: var(--accent);
-}
-
-.button:active {
-  box-shadow: none;
-  transform: translate(2px, 2px);
-}
-
-
-
-
-
-.home__note {
-  border-bottom: 1px dotted var(--rule);
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 2rem 1fr;
-  padding: 1rem 0;
-}
-
-.home__note:last-child {
-  border-bottom: 0;
-}
-
-.home__note p {
+.on-this-day__source {
+  font-size: .8125rem;
   margin: 0;
 }
 
-.home__emoji {
+/* "dSong en cifras": a strip of big figures between two 3px rules */
+/* Flex rows that always fill (any number of figures); the 1px lines between them are the ink behind the gap */
+.home__figures {
+  background: var(--ink);
+  border-bottom: var(--border);
+  border-top: var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.home__figure {
+  background: var(--paper);
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 11rem;
+  flex-direction: column;
+  padding: 1.5rem 1.25rem;
+  text-decoration: none;
+}
+
+.home__figure:hover {
+  background: var(--accent);
+}
+
+.home__figure-value {
+  font-size: 3rem;
+}
+
+@media (max-width: 40rem) {
+  /* Two a row; an odd last one takes the whole row */
+  .home__figure {
+    flex-basis: 40%;
+  }
+
+  .home__figure-value {
+    font-size: 2.25rem;
+  }
+}
+
+/* "Cuatro formas de perderse": cards with an icon, a title and a line */
+.home__ways {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3.5rem 0 .5rem;
+}
+
+.home__ways-title {
+  font-size: 2.25rem;
+}
+
+.home__ways-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.way-card {
+  background: var(--paper);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  font-size: .9375rem;
+  gap: .625rem;
+  line-height: 1.5;
+  padding: 1.375rem;
+  text-decoration: none;
+}
+
+.way-card--accent,
+.way-card:hover {
+  background: var(--accent);
+}
+
+.way-card__title {
   font-size: 1.5rem;
-  line-height: 1.2;
 }
 
-@media (max-width: 500px) {
-  .home__lead {
-    font-size: 1.5rem;
-  }
+/* The side column (podcast, players, Ficha) after the text on narrow screens */
+.post-view__side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-/* Desktop: text on the left, "Tal día como hoy" in the free space on the right */
-@media (min-width: 64rem) {
-  .home {
-    column-gap: 3rem;
+.post-view__side > script {
+  display: none;
+}
+
+/* Desktop split view: the author's text first, filling the room left; podcast, players and Ficha sticky on the right,
+   smaller. By the page's room (container), not the window. */
+@container app (min-width: 60rem) {
+  .post-view {
+    column-gap: 3.5rem;
     display: grid;
-    /* The intro takes the free width (up to a readable 56rem); "Tal día como hoy" is capped at 24rem */
-    grid-template-columns: minmax(0, 56rem) minmax(18rem, 24rem);
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 26rem);
     justify-content: space-between;
+    padding-top: 1.5rem;
   }
 
-  .home__intro {
-    max-width: none;
-  }
-
-  /* Sticky while scrolling the intro (desktop only, where it sits in its own column) */
-  .on-this-day {
-    align-self: start;
-    margin-top: 0;
-    position: sticky;
-    top: 2rem;
-  }
-}
-
-/* Desktop: the post header (title + author/date) stays at the top while reading */
-@container app (min-width: 60rem) {
-  .post-view__header {
-    background: var(--paper);
-    border-bottom: 3px solid var(--ink);
-    padding: .75rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-
-  .post-view__header .post-view__title {
-    margin-bottom: .5rem;
-  }
-
-  /* Same 1rem gap under the header before and after it sticks (the players column uses
-     top: header height + 1rem); in the grid, margins don't collapse, so the text drops its own */
-  .post-view__header {
-    margin-bottom: 1rem;
-  }
-
-  .post-view__header + .post-view__content {
-    margin-top: 0;
-  }
-}
-
-/* Desktop split view: text on the left, players sticky on the right so the video stays in view
-   while reading. Only for posts with players (mobile stays one column). By the page's room (container). */
-@container app (min-width: 60rem) {
-  .post-view:has(.post-view__side) {
-    column-gap: 3rem;
-    display: grid;
-    grid-template-columns: minmax(0, 40rem) minmax(24rem, 1fr);
-  }
-
-  .post-view:has(.post-view__side) > * {
+  .post-view > * {
     grid-column: 1;
   }
 
-  /* Side column with the players, sticky so the video stays in view while reading */
-  .post-view:has(.post-view__side) > .post-view__side {
+  .post-view > .post-view__crumbs {
+    grid-column: 1 / -1;
+    margin-top: -1.5rem;
+  }
+
+  .post-view > .post-view__side {
     align-self: start;
     grid-column: 2;
-    /* Spans every row under the header, so sticky can travel along the whole article */
+    /* Spans every row under the crumbs, so sticky can travel along the whole article */
     grid-row: 2 / span 50;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 3rem);
+    /* Last resort when even a shrunk Ficha doesn't fit (long series, low window): the column scrolls */
+    overflow-y: auto;
     position: sticky;
-    /* Right under the sticky header (its height is set by js/post-header.js) */
-    top: calc(var(--post-header-height, 6rem) + 1rem);
+    scrollbar-width: thin;
+    top: 1.5rem;
   }
 
-
-  /* Post header (title + author/date) across both columns */
-  .post-view:has(.post-view__side) > .post-view__header {
-    grid-column: 1 / -1;
-    grid-row: 1;
+  /* Taller than the window (long Ficha): the Ficha scrolls inside its own frame, players stay whole */
+  .post-view__side > * {
+    flex-shrink: 0;
   }
 
-  /* Room on the right for the offset shadow */
-  .post-view__side > .players,
-  .post-view__side > .podcast {
-    margin: 0 .5rem 0 0;
+  .post-view__side > .post-facts {
+    flex-shrink: 1;
+    min-height: 6rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
   }
 
-  /* Podcast first, as its own block: room before the radio toggle / players */
-  .post-view__side > .podcast {
-    margin-bottom: 1.5rem;
+  /* Above the radio bar */
+  /* Under the bar (its height: --radio-bar, set by js/radio.js) */
+  .radio-on .post-view > .post-view__side {
+    max-height: calc(100vh - 3rem - var(--radio-bar, 4.5rem));
+    top: calc(1.5rem + var(--radio-bar, 4.5rem));
   }
 
   /* Always open in the side column: hide the accordion toggle */
-  .post-view:has(.post-view__side) .players__summary {
+  .post-view__side .players__summary {
     display: none;
-  }
-
-  .post-view:has(.post-view__side) .players__tabs {
-    border-top: 0;
   }
 }
 

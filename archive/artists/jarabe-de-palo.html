@@ -14,11 +14,12 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/artists/jarabe-de-palo.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -27,87 +28,90 @@
 
   <div class="app page-archive">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-
-<h2 class="archive-title">Publicaciones del artista Jarabe de Palo</h2>
-<p class="archive-links"><a href="https://musicbrainz.org/artist/38b511a2-76fa-4a1e-9b7a-e2a6efa6399b" rel="noopener">MusicBrainz ↗</a></p><section class="artist-bio" aria-label="Sobre el artista">
-  <figure class="artist-bio__photo">
-    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Jarabe_de_Palo.jpg/330px-Jarabe_de_Palo.jpg" width="320" height="241" alt="Jarabe de Palo" loading="lazy" decoding="async">
-    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Jarabe_de_Palo.jpg" rel="noopener">Javier Mediavilla Ezquibela · CC BY 2.0</a></figcaption>
+<nav class="crumbs" aria-label="Migas">
+  <a href="/archive/">Archivo</a><a href="/archive/artists/">Artistas</a><span>Jarabe de Palo</span>
+</nav><section class="artist-hero" aria-label="Sobre el artista">
+  <figure class="artist-hero__photo">
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Jarabe_de_Palo.jpg/330px-Jarabe_de_Palo.jpg" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Jarabe_de_Palo.jpg/330px-Jarabe_de_Palo.jpg" width="320" height="241" alt="Jarabe de Palo" decoding="async">
+    </div>
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Jarabe_de_Palo.jpg" rel="noopener" target="_blank">Javier Mediavilla Ezquibela · CC BY 2.0</a></figcaption>
   </figure>
-  <div class="artist-bio__text">
-    <p>Jarabe de Palo fue un grupo de rock de España formado en 1995. Estuvo liderado por el cantante, compositor y guitarrista Pau Donés hasta su fallecimiento el 9 de junio de 2020. Tuvo gran éxito a finales de los años 90 y la década de los años 2000.</p>
-    <p class="artist-bio__source"><a href="https://es.wikipedia.org/wiki/Jarabe_de_Palo" rel="noopener">Wikipedia ↗</a></p>
+  <div class="artist-hero__text">
+    <p class="kicker">Artista · <a href="/archive/countries/espana.html">España</a></p>
+    <h1 class="page-title artist-hero__name">Jarabe de Palo</h1>
+    <p class="artist-hero__bio">Jarabe de Palo fue un grupo de rock de España formado en 1995. Estuvo liderado por el cantante, compositor y guitarrista Pau Donés hasta su fallecimiento el 9 de junio de 2020. Tuvo gran éxito a finales de los años 90 y la década de los años 2000.</p>
+    <p class="artist-hero__links"><a href="https://es.wikipedia.org/wiki/Jarabe_de_Palo" rel="noopener">Wikipedia ↗</a><a href="https://musicbrainz.org/artist/38b511a2-76fa-4a1e-9b7a-e2a6efa6399b" rel="noopener">MusicBrainz ↗</a><a href="http://www.jarabedepalo.com/" rel="noopener">Web oficial ↗</a>
+    </p>
+  </div>
+</section>
+
+<section class="artist-posts" aria-labelledby="artist-posts-title">
+  <div class="artist-posts__head">
+    <h2 class="display artist-posts__title" id="artist-posts-title">2 publicaciones, 2014</h2>
+  </div>
+  <ol class="post-cards">
+    <li>
+      <a class="post-card" href="/archive/2014-02-14-frio-jarabedepalo-y-antonio-orozco.html">
+        <span class="kicker">14 feb 2014 · ¿Y ahora qué hacemos?</span>
+        <span class="display post-card__title">Frío</span>
+        <span class="post-card__excerpt">«Juro que yo venía hoy, Día de los Enamorados, de oh, l&#39;amour fou , Cupidos y Afroditas y cajas de bombones y peluches y del póntelo…»</span>
+        <span class="post-card__editor">Brian Edward Hyde</span>
+      </a>
+    </li>
+    <li>
+      <a class="post-card" href="/archive/2014-04-28-la-flaca-de-jarabedepalo.html">
+        <span class="kicker">28 abr 2014 · La flaca</span>
+        <span class="display post-card__title">La flaca</span>
+        <span class="post-card__excerpt">«Era el año 1997 cuando en nuestras emisoras de radio nacionales se empezaba a escuchar &quot;La Flaca&quot; , una canción de rock latino que había…»</span>
+        <span class="post-card__editor">Jal</span>
+      </a>
+    </li>
+  </ol>
+  <a class="artist-posts__table" href="/archive/all/?q=Jarabe%20de%20Palo">Ver en la tabla del archivo →</a>
+</section>
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
+  <div class="chips">
+    <a class="chip" href="/archive/albums/jarabe-de-palo-y-ahora-que-hacemos.html">¿Y ahora qué hacemos?</a>
+    <a class="chip" href="/archive/albums/jarabe-de-palo-la-flaca.html">La flaca</a>
   </div>
 </section>
 
 
-<div class="archive-search">
-  <label class="archive-search__label" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  <span class="archive-search__count" id="archive-search-count" aria-live="polite">2 publicaciones</span>
-</div>
-
-<div class="archive">
-  <table class="archive-table" id="archive-table">
-    <thead>
-      <tr>
-        <th class="archive-table__cell--published-at sortable" data-sort="date" data-col="0">Fecha <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--title sortable" data-sort="string" data-col="1">Publicación <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--song sortable" data-sort="string" data-col="2">Canción <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--artist sortable" data-sort="string" data-col="3">Artista <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--album sortable" data-sort="string" data-col="4">Álbum <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
-        <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
-      </tr>
-    </thead>
-    <tbody><tr>
-        <td class="archive-table__cell--published-at" data-value="2014-02-14 08:00:32 +0100">14/02/2014</td>
-        <td class="archive-table__cell--title"><a href="/archive/2014-02-14-frio-jarabedepalo-y-antonio-orozco.html">Frío, Jarabedepalo y Antonio Orozco</a></td>
-        <td class="archive-table__cell--song">Frío</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/jarabe-de-palo.html">Jarabe de Palo</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/jarabe-de-palo-y-ahora-que-hacemos.html">¿Y ahora qué hacemos?</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/2011.html">2011</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/brian-edward-hyde.html">Brian Edward Hyde</a></td>
-      </tr><tr>
-        <td class="archive-table__cell--published-at" data-value="2014-04-28 08:00:58 +0200">28/04/2014</td>
-        <td class="archive-table__cell--title"><a href="/archive/2014-04-28-la-flaca-de-jarabedepalo.html">La Flaca, de Jarabedepalo</a></td>
-        <td class="archive-table__cell--song">La flaca</td>
-        <td class="archive-table__cell--artist"><a href="/archive/artists/jarabe-de-palo.html">Jarabe de Palo</a></td>
-        <td class="archive-table__cell--album"><a href="/archive/albums/jarabe-de-palo-la-flaca.html">La flaca</a></td>
-        <td class="archive-table__cell--year"><a href="/archive/years/1996.html">1996</a></td>
-        <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jal.html">Jal</a></td>
-      </tr></tbody>
-  </table>
-</div>
-
-<script src="/js/archive-table-search.js?v=762566a0"></script>
-<script src="/js/archive-table-sort.js?v=9f0802a1"></script>
-
-
-
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

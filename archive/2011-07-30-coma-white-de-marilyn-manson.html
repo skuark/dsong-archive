@@ -14,11 +14,12 @@
   <meta property="og:description" content="Provocador. Obsceno. Satánico. Desequilibrado. Políticamente incorrecto. Malhablado. Pocos son los adjetivos que se le pueden atribuir a Marilyn Manson de…">
   <meta property="og:url" content="https://dsong.es/archive/2011-07-30-coma-white-de-marilyn-manson.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,84 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2011-07-29-mania-de-babel-fish.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Mania, de Babel Fish</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2011-07-31-especial-verano-2011-10-temas-que-suenan-a-verano.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Especial Verano 2011: 10 temas que suenan a verano</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2011">2011</a><span>Nº 742</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Coma White, de Marilyn Manson</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Alternative Metal</span>
+  <h1 class="display post-view__title">Coma White</h1>
+  <p class="post-view__by">de <a href="/archive/artists/marilyn-manson.html">Marilyn Manson</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/f42869219445369bbfc8dabc926d714a?s=20" alt="" />
-            <span class="post-view__editor-name">Jal</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2011-07-30T09:00:52+02:00">30 de Julio de 2011</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Jal</span>
+    </span>
+    <time class="post-view__date" datetime="2011-07-30T09:00:52+02:00">sábado, 30 de julio de 2011</time>
+    <span>2 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p>Provocador. Obsceno. Satánico. Desequilibrado. Políticamente incorrecto. Malhablado. Pocos son los adjetivos que se le pueden atribuir a <strong>Marilyn Manson</strong> de partida cuando se le empieza a describir. Alguien que tiene prohibida la entrada a varias ciudades en los EE.UU. y al cual se le ha acusado de todo, incluso de incentivar asesinatos entre adolescentes por la temática de sus canciones; lo cual para mí es absurdo, porque alguien con problemas mentales los va a seguir teniendo escuche lo que escuche, vea lo que vea. He escuchado a Marilyn Manson desde los 17 y no soy ningún satánico ni nadie peligroso, pero por una razón básica: soy capaz de diferenciar música y realidad, así como diferencio al personaje y su música.</p>
+<p>En cualquier caso, para mí Marilyn Manson es todo eso. Su estilismo y su provocación, tanto en sus videoclips, apariencia y música; forman parte de él. En ese sentido me recuerda mucho a Lady Gaga (con la cual se lleva genial, por cierto): si les quitas esas cosas ya no se reconocería al artista tal y como ellos se muestran. Pero más allá de todo eso, Marilyn Manson es un auténtico rockero, de esos que pocos quedan activos, con un éxito mundial muy reconocido. Sus 22 años sobre los escenarios así le avalan.</p>
+<p>Su música consigue ir desde el metal más duro, lleno de voces guturales, al más melódico. Y así es la canción de hoy,<strong> Coma White</strong>. Sé que poner a Marilyn Manson en dSong era algo arriesgado, pero bueno, creo que esta canción es apta para todos los oídos, al menos para los más receptivos y tolerantes. No os voy a engañar, es metal; pero un metal bastante suave, además, este tema es de los mejores del cantante, empezando muy tranquilo y creciendo poco a poco, explotando en los estribillos.</p>
+<p>Si se os hace demasiado duro de oir, a lo mejor el videoclip os ayuda, el cual recomiendo veais. En este se nos hace una oscura recreacion alternativa del famoso asesinato de Kennedy en el año 1963, cuando circulaba en coche por las calles de Dallas (Texas). Como no podía ser de otra manera, generó mucha polémica, pero Manson afirmó: <em>&quot;No pretendo fomentar ninguna forma de imitar. De hecho, es un tributo a hombres como Jesucristo y Kennedy, quienes murieron en las manos de una indestruible sed de violencia, la cual yo siempre rechazaré&quot;.</em> Podeis pinchar <a href="http://www.youtube.com/watch?v=QQPJYnr48yU">aquí para ver el vídeo.</a></p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/QQPJYnr48yU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/7o5QfTTOeckhRUqqAHjRa8" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/marilyn-manson.html">Marilyn Manson</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/5dfdca28-9ddc-4853-933c-8bc97d87beec" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +129,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=QQPJYnr48yU" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/7o5QfTTOeckhRUqqAHjRa8" rel="noopener" target="_blank">Spotify ↗</a></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -117,44 +139,13 @@
       <dd>30 de julio de 2011</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p>Provocador. Obsceno. Satánico. Desequilibrado. Políticamente incorrecto. Malhablado. Pocos son los adjetivos que se le pueden atribuir a <strong>Marilyn Manson</strong> de partida cuando se le empieza a describir. Alguien que tiene prohibida la entrada a varias ciudades en los EE.UU. y al cual se le ha acusado de todo, incluso de incentivar asesinatos entre adolescentes por la temática de sus canciones; lo cual para mí es absurdo, porque alguien con problemas mentales los va a seguir teniendo escuche lo que escuche, vea lo que vea. He escuchado a Marilyn Manson desde los 17 y no soy ningún satánico ni nadie peligroso, pero por una razón básica: soy capaz de diferenciar música y realidad, así como diferencio al personaje y su música.</p>
-<p>En cualquier caso, para mí Marilyn Manson es todo eso. Su estilismo y su provocación, tanto en sus videoclips, apariencia y música; forman parte de él. En ese sentido me recuerda mucho a Lady Gaga (con la cual se lleva genial, por cierto): si les quitas esas cosas ya no se reconocería al artista tal y como ellos se muestran. Pero más allá de todo eso, Marilyn Manson es un auténtico rockero, de esos que pocos quedan activos, con un éxito mundial muy reconocido. Sus 22 años sobre los escenarios así le avalan.</p>
-<p>Su música consigue ir desde el metal más duro, lleno de voces guturales, al más melódico. Y así es la canción de hoy,<strong> Coma White</strong>. Sé que poner a Marilyn Manson en dSong era algo arriesgado, pero bueno, creo que esta canción es apta para todos los oídos, al menos para los más receptivos y tolerantes. No os voy a engañar, es metal; pero un metal bastante suave, además, este tema es de los mejores del cantante, empezando muy tranquilo y creciendo poco a poco, explotando en los estribillos.</p>
-<p>Si se os hace demasiado duro de oir, a lo mejor el videoclip os ayuda, el cual recomiendo veais. En este se nos hace una oscura recreacion alternativa del famoso asesinato de Kennedy en el año 1963, cuando circulaba en coche por las calles de Dallas (Texas). Como no podía ser de otra manera, generó mucha polémica, pero Manson afirmó: <em>&quot;No pretendo fomentar ninguna forma de imitar. De hecho, es un tributo a hombres como Jesucristo y Kennedy, quienes murieron en las manos de una indestruible sed de violencia, la cual yo siempre rechazaré&quot;.</em> Podeis pinchar <a href="http://www.youtube.com/watch?v=QQPJYnr48yU">aquí para ver el vídeo.</a></p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/QQPJYnr48yU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/7o5QfTTOeckhRUqqAHjRa8" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (1)</summary>
+      <summary class="post-view__comments-summary"><strong>1 comentario</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -170,7 +161,7 @@ Seguid así, fenómenos!Un saludo</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2011-09-05T00:59:00+02:00">5 de Septiembre de 2011, 00:59</time>
+              <time class="post-view__comment-date" datetime="2011-09-05T00:59:00+02:00">5 de septiembre de 2011, 00:59</time>
             </div>
           </li>
         
@@ -184,22 +175,23 @@ Seguid así, fenómenos!Un saludo</div>
   <a class="post-nav__link post-nav__link--prev" href="/archive/2011-07-29-mania-de-babel-fish.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Mania, de Babel Fish</span>
+    <span class="post-nav__editor">Johnbo</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2011-07-31-especial-verano-2011-10-temas-que-suenan-a-verano.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Especial Verano 2011: 10 temas que suenan a verano</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

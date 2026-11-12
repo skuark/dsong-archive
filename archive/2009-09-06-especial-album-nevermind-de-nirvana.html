@@ -14,11 +14,12 @@
   <meta property="og:description" content="Finales de la década de los ochenta principio de los noventa. Empieza a tomar protagonismo en la sociedad una nueva generación. Una generación que huía de todo…">
   <meta property="og:url" content="https://dsong.es/archive/2009-09-06-especial-album-nevermind-de-nirvana.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,94 +29,50 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2009-09-05-what-is-love-de-haddaway.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">What is love, de Haddaway</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2009-09-07-el-tempano-de-juan-carlos-baglietto.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">El témpano, de Juan Carlos Baglietto</span>
-  </a>
-</nav>
-
 <div class="post-view">
-  <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/albumes.html">Álbumes</a></span>
-  <h2 class="post-view__title">Especial Álbum: Nevermind, de Nirvana</h2>
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/especiales/">Especiales</a><a href="/archive/especiales/#album">Álbumes</a><span>Nº 81</span>
+  </nav>
+
+  <header class="post-view__header"><span class="kicker special-tag">Especial · Álbum</span>
+  <h1 class="display post-view__title">Nevermind</h1>
+  <p class="post-view__by">de <a href="/archive/artists/nirvana.html">Nirvana</a> · 1991</p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <span>
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/7a499d70b8711d2d3b8726bfd8b430ec?s=20" alt="" />
-            <span class="post-view__editor-name">Jose</span>
-          </span>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2009-09-06T09:00:15+02:00">6 de Septiembre de 2009</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
-  </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
-    </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
-    <dl class="post-facts__list">
-      <dt>Artista</dt>
-      <dd><a href="/archive/artists/nirvana.html">Nirvana</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
-      <dt>País</dt>
-      <dd><a href="/archive/countries/estados-unidos.html">Estados Unidos</a></dd>
-      <dt>Web</dt>
-      <dd><a href="https://www.nirvana.com/" rel="noopener" target="_blank">nirvana.com ↗</a></dd>
-      <dt>Canción</dt>
-      <dd>Come as You Are <a class="post-facts__mb" href="https://musicbrainz.org/recording/8bab26df-c96c-4261-822e-8c2405d67ab7" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
-      <dt>Álbum</dt>
-      <dd><a href="/archive/albums/nirvana-nevermind.html">Nevermind</a> <a class="post-facts__mb" href="https://musicbrainz.org/release-group/1b022e01-4da6-387b-8658-8678046e4cef" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
-      <dt>Año</dt>
-      <dd><a href="/archive/years/1991.html">1991</a> <span class="post-facts__note">(primera edición: 24 de septiembre de 1991)</span></dd>
-      <dt>Género</dt>
-      <dd>Grunge</dd>
-      <dt>Géneros en MusicBrainz</dt>
-      <dd>alternative rock, rock, noise rock, acoustic rock</dd>
-      <dt>Escuchar en</dt>
-      <dd><a href="https://www.youtube.com/watch?v=vabnZ9-ex7o" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/album/7fh6U3pYDTFZBjLaF2tyTp" rel="noopener" target="_blank">Spotify ↗</a></dd>
-    </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
-    <dl class="post-facts__list">
-      <dt>Categoría</dt>
-      <dd><a href="/archive/categories/albumes.html">Álbumes</a></dd>
-      <dt>Autor</dt>
-      <dd><a href="/archive/editors/jose.html">Jose</a></dd>
-      <dt>Publicado</dt>
-      <dd>6 de septiembre de 2009</dd>
-    </dl>
-    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
+    <span class="post-view__editor">
+      <span class="post-view__editor-name">Jose</span>
+    </span>
+    <time class="post-view__date" datetime="2009-09-06T09:00:15+02:00">domingo, 6 de septiembre de 2009</time>
+    <span>4 min de lectura</span>
   </div>
   </header>
 
@@ -145,7 +102,6 @@
 	<li>Something in the Way (3:51)</li>
 </ol>
   </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
   <details class="players" open>
     <summary class="players__summary">Escuchar</summary>
 
@@ -161,17 +117,51 @@
     <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
       <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/album/7fh6U3pYDTFZBjLaF2tyTp" width="100%" height="352" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
   </details>
   <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
+    <dl class="post-facts__list">
+      <dt>Artista</dt>
+      <dd><a href="/archive/artists/nirvana.html">Nirvana</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
+      <dt>País</dt>
+      <dd><a href="/archive/countries/estados-unidos.html">Estados Unidos</a></dd>
+      <dt>Web</dt>
+      <dd><a href="https://www.nirvana.com/" rel="noopener" target="_blank">nirvana.com ↗</a></dd>
+      <dt>Canción</dt>
+      <dd>Come as You Are <a class="post-facts__mb" href="https://musicbrainz.org/recording/8bab26df-c96c-4261-822e-8c2405d67ab7" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
+      <dt>Álbum</dt>
+      <dd><a href="/archive/albums/nirvana-nevermind.html">Nevermind</a> <a class="post-facts__mb" href="https://musicbrainz.org/release-group/1b022e01-4da6-387b-8658-8678046e4cef" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
+      <dt>Año</dt>
+      <dd><a href="/archive/years/1991.html">1991</a> <span class="post-facts__note">(primera edición: 24 de septiembre de 1991)</span></dd>
+      <dt>Género</dt>
+      <dd>Grunge</dd>
+      <dt>Géneros en MusicBrainz</dt>
+      <dd>alternative rock, rock, noise rock, acoustic rock</dd>
+      <dt>Escuchar en</dt>
+      <dd><a href="https://www.youtube.com/watch?v=vabnZ9-ex7o" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/album/7fh6U3pYDTFZBjLaF2tyTp" rel="noopener" target="_blank">Spotify ↗</a></dd>
+    </dl>
+    <h3 class="post-facts__group kicker">dSong</h3>
+    <dl class="post-facts__list">
+      <dt>Categoría</dt>
+      <dd><a href="/archive/categories/albumes.html">Álbumes</a></dd>
+      <dt>Autor</dt>
+      <dd><a href="/archive/editors/jose.html">Jose</a></dd>
+      <dt>Publicado</dt>
+      <dd>6 de septiembre de 2009</dd>
+    </dl>
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (2)</summary>
+      <summary class="post-view__comments-summary"><strong>2 comentarios</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -191,7 +181,7 @@ Edito: Además, me acuerdo que uno de los primeros punteos de bajo que aprendí 
                   </a>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-09-06T13:39:19+02:00">6 de Septiembre de 2009, 13:39</time>
+              <time class="post-view__comment-date" datetime="2009-09-06T13:39:19+02:00">6 de septiembre de 2009, 13:39</time>
             </div>
           </li>
         
@@ -206,7 +196,7 @@ Edito: Además, me acuerdo que uno de los primeros punteos de bajo que aprendí 
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-09-07T13:09:52+02:00">7 de Septiembre de 2009, 13:09</time>
+              <time class="post-view__comment-date" datetime="2009-09-07T13:09:52+02:00">7 de septiembre de 2009, 13:09</time>
             </div>
           </li>
         
@@ -220,22 +210,23 @@ Edito: Además, me acuerdo que uno de los primeros punteos de bajo que aprendí 
   <a class="post-nav__link post-nav__link--prev" href="/archive/2009-09-05-what-is-love-de-haddaway.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">What is love, de Haddaway</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2009-09-07-el-tempano-de-juan-carlos-baglietto.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">El témpano, de Juan Carlos Baglietto</span>
+    <span class="post-nav__editor">jesusr</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

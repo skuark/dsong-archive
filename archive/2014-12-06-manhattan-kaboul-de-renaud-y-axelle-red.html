@@ -14,11 +14,12 @@
   <meta property="og:description" content="Renaud es uno de los artistas franceses más influyentes y conocidos de la segunda mitad del siglo XX. En su repertorio se incluyen grandes éxitos como “…">
   <meta property="og:url" content="https://dsong.es/archive/2014-12-06-manhattan-kaboul-de-renaud-y-axelle-red.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,90 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2014-12-05-solo-tu-de-pastora-soler.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">Sólo tú, de Pastora Soler</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2014-12-07-las-noches-de-insomnio-de-ninos-mutantes.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">Las noches de insomnio, de Niños Mutantes</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2014">2014</a><span>Nº 1834</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">Manhattan-Kaboul, de Renaud y Axelle Red</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Chanson française</span>
+  <h1 class="display post-view__title">Manhattan-Kaboul</h1>
+  <p class="post-view__by">de Renaud y Axelle Red</p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.alvaromontoro.com" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/bebd502207c63b6e2caa00dd3e297672?s=20" alt="" />
-            <span class="post-view__editor-name">Monty</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2014-12-06T08:00:22+01:00">6 de Diciembre de 2014</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <a href="http://www.alvaromontoro.com" target="_blank"><span class="post-view__editor-name">Monty</span></a>
+    </span>
+    <time class="post-view__date" datetime="2014-12-06T08:00:22+01:00">sábado, 6 de diciembre de 2014</time>
+    <span>1 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p><b>Renaud</b> es uno de los artistas franceses más influyentes y conocidos de la segunda mitad del siglo XX. En su repertorio se incluyen grandes éxitos como “<i>Mistral gagnant</i>”, “<i>Morgane de toi</i>” o “<i>C’est quand qu’on va où?</i>”.</p>
+<p>Aunque hoy me voy a centrar en una canción inspirada por los ataques terroristas del 11 de Septiembre en Nueva York y la sucesiva guerra en Afganistán, y que ganó numerosos premios a la mejor canción del año en Francia durante el año 2003: “<b><i>Manhattan-Kaboul</i></b>”.</p>
+<p>La letra cuenta la historia de dos personajes anónimos que no se conocen, ni se conocerán nunca, porque viven en dos puntos opuestos del planeta y mueren en circunstancias diferentes pero relacionadas: un joven portorriqueño que trabaja en el <i>World Trade Center </i>y que fallece cuando los aviones se estrellan contra su oficina; y una niña afgana que vive en un mundo injusto y violento que muere durante los ataques americanos a su país.</p>
+<p><b>Renaud</b> canta la parte que correspondería al joven portorriqueño, mientras <b>Axelle Red</b> canta la parte de la niña afgana. Y ambos critican la posición de los dos lados (el extremismo islámico y el poder excesivo de los Estados Unidos).</p>
+<p>En el vídeo musical es interesante, en él se evitan las imágenes directas del atentado (aunque algunas se ven reflejadas en los cristales de un escaparate) y tanto <b>Renaud</b> como <b>Axelle Red</b> sólo aparecen en posters en paredes o también en reflejos, centrándose más en las reacciones de la gente al ver las imágenes o escuchar las noticias.</p>
+<p>“<b><i>Manhattan-Kaboul</i></b>” está incluida en el 13º álbum de estudio de <b>Renaud</b>: “<b><i>Boucan d'enfer</i></b>” (2002).</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/mSGTxd1ZvaI?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/0BBA4lJjtOziL8K8zyBVV3" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1449625246?i=1449625251" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/axelle-red.html">Axelle Red</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/2334787c-a3d6-4dd2-a9ef-9c02b35e7485" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -107,7 +135,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=mSGTxd1ZvaI" rel="noopener" target="_blank">YouTube ↗</a><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/0BBA4lJjtOziL8K8zyBVV3" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/1449625246?i=1449625251" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -117,44 +145,7 @@
       <dd>6 de diciembre de 2014</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p><b>Renaud</b> es uno de los artistas franceses más influyentes y conocidos de la segunda mitad del siglo XX. En su repertorio se incluyen grandes éxitos como “<i>Mistral gagnant</i>”, “<i>Morgane de toi</i>” o “<i>C’est quand qu’on va où?</i>”.</p>
-<p>Aunque hoy me voy a centrar en una canción inspirada por los ataques terroristas del 11 de Septiembre en Nueva York y la sucesiva guerra en Afganistán, y que ganó numerosos premios a la mejor canción del año en Francia durante el año 2003: “<b><i>Manhattan-Kaboul</i></b>”.</p>
-<p>La letra cuenta la historia de dos personajes anónimos que no se conocen, ni se conocerán nunca, porque viven en dos puntos opuestos del planeta y mueren en circunstancias diferentes pero relacionadas: un joven portorriqueño que trabaja en el <i>World Trade Center </i>y que fallece cuando los aviones se estrellan contra su oficina; y una niña afgana que vive en un mundo injusto y violento que muere durante los ataques americanos a su país.</p>
-<p><b>Renaud</b> canta la parte que correspondería al joven portorriqueño, mientras <b>Axelle Red</b> canta la parte de la niña afgana. Y ambos critican la posición de los dos lados (el extremismo islámico y el poder excesivo de los Estados Unidos).</p>
-<p>En el vídeo musical es interesante, en él se evitan las imágenes directas del atentado (aunque algunas se ven reflejadas en los cristales de un escaparate) y tanto <b>Renaud</b> como <b>Axelle Red</b> sólo aparecen en posters en paredes o también en reflejos, centrándose más en las reacciones de la gente al ver las imágenes o escuchar las noticias.</p>
-<p>“<b><i>Manhattan-Kaboul</i></b>” está incluida en el 13º álbum de estudio de <b>Renaud</b>: “<b><i>Boucan d'enfer</i></b>” (2002).</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/mSGTxd1ZvaI?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/0BBA4lJjtOziL8K8zyBVV3" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1449625246?i=1449625251" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
@@ -166,22 +157,23 @@
   <a class="post-nav__link post-nav__link--prev" href="/archive/2014-12-05-solo-tu-de-pastora-soler.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">Sólo tú, de Pastora Soler</span>
+    <span class="post-nav__editor">Brian Edward Hyde</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2014-12-07-las-noches-de-insomnio-de-ninos-mutantes.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">Las noches de insomnio, de Niños Mutantes</span>
+    <span class="post-nav__editor">Ascen</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>

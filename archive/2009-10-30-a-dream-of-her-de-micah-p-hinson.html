@@ -14,11 +14,12 @@
   <meta property="og:description" content="Micah P. Hinson es uno de esos artistas que llegan por la puerta grande. Apareció en 2004, un chaval de 23 años y bajo el brazo un álbum de base de guitarra y…">
   <meta property="og:url" content="https://dsong.es/archive/2009-10-30-a-dream-of-her-de-micah-p-hinson.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=0ff68794">
+  <link rel="stylesheet" href="/css/bundle.css?v=9ef4b092">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v=6b80fedc"></script>
   
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ebacc999-9257-49da-8a25-0c42e7496918"></script>
   
@@ -28,63 +29,87 @@
 
   <div class="app page-">
     <div class="app-wrapper">
-      <div class="header">
-        <div class="header__logo-container">
-          <a href="/"><img src="/images/logo.png" class="header__logo" alt="dSong"></a>
-          <div class="header__logo-headline">El Archivo de dSong</div>
-        </div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
+          <span class="header__logo-headline">El archivo · 2009–2017</span>
+        </a>
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
 
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="/">Inicio</a></li>
-          <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
-          <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
-        </ul>
-      </div>
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
+          <ul class="header__menu">
+            <li class="header__menu--item"><a href="/">Inicio</a></li>
+            <li class="header__menu--item"><a href="/archive/" aria-current="page">Archivo</a></li>
+            <li class="header__menu--item"><a href="/mapa/">Mapa</a></li>
+            <li class="header__menu--item"><a href="/archive/podcasts/">Podcast</a></li>
+            <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/">El proyecto</a></li>
+          </ul>
+          <form class="header__search" role="search" action="/archive/all/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <label class="visually-hidden" for="header-search">Buscar en el archivo</label>
+            <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Artista, canción…">
+          </form>
+        </nav>
+      </header>
 
       
 
-
-<nav class="post-nav post-nav--top" aria-label="Navegación entre artículos">
-  <a class="post-nav__link post-nav__link--prev" href="/archive/2009-10-29-a-lack-of-color-de-death-cab-for-cutie.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">A lack of color, de Death Cab for Cutie</span>
-  </a>
-  <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
-  </a>
-  <a class="post-nav__link post-nav__link--next" href="/archive/2009-10-31-a-natural-disaster-de-anathema.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">A Natural Disaster, de Anathema</span>
-  </a>
-</nav>
-
 <div class="post-view">
+  <nav class="crumbs post-view__crumbs" aria-label="Migas">
+    <a href="/archive/">Archivo</a><a href="/archive/all/?q=2009">2009</a><span>Nº 135</span>
+  </nav>
+
   <header class="post-view__header">
-  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a></span>
-  <h2 class="post-view__title">A dream of her, de Micah P. Hinson</h2>
+  <span class="kicker post-view__kicker"><a href="/archive/categories/canciones.html">Canciones</a> · Alternative country</span>
+  <h1 class="display post-view__title">A dream of her</h1>
+  <p class="post-view__by">de <a href="/archive/artists/micah-p-hinson.html">Micah P. Hinson</a></p>
 
   <div class="post-view__meta">
-    <span>
-      <span class="post-view__editor">
-        
-          <a href="http://www.jesusr.es" target="_blank">
-            <img class="post-view__editor-image" src="https://s.gravatar.com/avatar/3627cf44a707970b4f2b493e78030448?s=20" alt="" />
-            <span class="post-view__editor-name">jesusr</span>
-          </a>
-        
-      </span>
-
-      <time class="post-view__date" datetime="2009-10-30T09:00:31+01:00">30 de Octubre de 2009</time>
-      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button></span>
+    <span class="post-view__editor">
+      <a href="http://www.jesusr.es" target="_blank"><span class="post-view__editor-name">jesusr</span></a>
+    </span>
+    <time class="post-view__date" datetime="2009-10-30T09:00:31+01:00">viernes, 30 de octubre de 2009</time>
+    <span>1 min de lectura</span>
   </div>
-  <div class="post-facts" id="post-facts" popover="manual">
-    <div class="post-facts__header">
-      <span class="kicker">Ficha</span>
-      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+  </header>
+
+  <div class="post-view__content">
+    <p><strong>Micah P. Hinson</strong> es uno de esos artistas que llegan por la puerta grande. Apareció en 2004, un chaval de 23 años y bajo el brazo un álbum de base de guitarra y voz muy indie, que fue acogido muy favorablemente por la crítica de forma casi unánime. La historia de Micah es muy interesante: americano, nacido en Memphis, la tierra de Elvis; a los 18 años comenzó a salir con una chica que le introdujo en el consumo de medicamentos y drogas. Su adicción le llevo a falsificar recetas de medicamentos, lo que le llevó a la cárcel durante una temporada. A los 19 años, al salir de la cárcel, sus padres le echaron de casa; durante un tiempo se vio obligado a vivir dando tumbos por casas de amigos y durmiendo a veces en la calle.</p>
+<p>Finalmente, consiguió un empleo de telemarketing y ganó lo suficiente para alquilar una habitación en un motel. Allí compuso más de 30 temas, con instrumentos que le iban prestando, y que poco tiempo después fue incluyendo en sus primeros álbumes. Una de las primeras maquetas que se grabaron con dinero prestado fue a parar a la BBC, al otro lado del charco, y de ahí a un sello discográfico llamado Scetch Book Records, de Glasgow. Este fue el comienzo de la carrera musical, que desembocó en &quot;<em>Micah P. Hinson and the Gospel of Progress&quot;</em> y más tarde &quot;<em>Micah P. Hinson and the Opera Circuit&quot;. </em></p>
+<p>En los últimos tiempos ha ido publicando sencillos en lugar de álbumes. El que os traigo hoy es <strong>&quot;A dream of her&quot;</strong>, de 2008.</p>
+
+  </div><aside class="post-view__side">
+  <details class="players" open>
+    <summary class="players__summary">Escuchar</summary>
+
+    <div class="players__tabs" role="tablist" aria-label="Reproductores">
+      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
+      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
+      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
     </div>
-    <div class="post-facts__body">
-    <h4 class="post-facts__group kicker">Música</h4>
+    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
+      <div class="post-view__media-container">
+        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/VXlD9JO9we8?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
+      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/5gUjAr8cclrXCAOU7eC0JQ" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
+      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1710779822?i=1710779824" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
+    </div>
+    <button class="radio-toggle" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/></svg><span class="radio-toggle__label">Seguir en modo radio desde aquí</span></button>
+  </details>
+  <script src="/js/players.js?v=a8790672" defer></script>
+  <script src="/js/radio.js?v=9db5772b" defer></script>
+  <script src="/js/podcast.js?v=d309dc07" defer></script>
+  <section class="post-facts" aria-labelledby="post-facts-title">
+    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    <h3 class="post-facts__group kicker">Música</h3>
     <dl class="post-facts__list">
       <dt>Artista</dt>
       <dd><a href="/archive/artists/micah-p-hinson.html">Micah P. Hinson</a> <a class="post-facts__mb" href="https://musicbrainz.org/artist/3584d6f6-62a5-4453-995c-66a7d6bd7a62" rel="noopener" target="_blank" title="Ver en MusicBrainz"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>MusicBrainz</a></dd>
@@ -105,7 +130,7 @@
       <dt>Escuchar en</dt>
       <dd><a href="https://www.youtube.com/watch?v=VXlD9JO9we8" rel="noopener" target="_blank">YouTube ↗</a> <span class="post-facts__note">(búsqueda automática)</span><span class="post-facts__sep"> · </span><a href="https://open.spotify.com/track/5gUjAr8cclrXCAOU7eC0JQ" rel="noopener" target="_blank">Spotify ↗</a><span class="post-facts__sep"> · </span><a href="https://music.apple.com/es/album/1710779822?i=1710779824" rel="noopener" target="_blank">Apple Music ↗</a> <span class="post-facts__note">(búsqueda automática)</span></dd>
     </dl>
-    <h4 class="post-facts__group kicker">dSong</h4>
+    <h3 class="post-facts__group kicker">dSong</h3>
     <dl class="post-facts__list">
       <dt>Categoría</dt>
       <dd><a href="/archive/categories/canciones.html">Canciones</a></dd>
@@ -115,47 +140,13 @@
       <dd>30 de octubre de 2009</dd>
     </dl>
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-    </div>
-  </div>
-  </header>
-
-  <div class="post-view__content">
-    <p><strong>Micah P. Hinson</strong> es uno de esos artistas que llegan por la puerta grande. Apareció en 2004, un chaval de 23 años y bajo el brazo un álbum de base de guitarra y voz muy indie, que fue acogido muy favorablemente por la crítica de forma casi unánime. La historia de Micah es muy interesante: americano, nacido en Memphis, la tierra de Elvis; a los 18 años comenzó a salir con una chica que le introdujo en el consumo de medicamentos y drogas. Su adicción le llevo a falsificar recetas de medicamentos, lo que le llevó a la cárcel durante una temporada. A los 19 años, al salir de la cárcel, sus padres le echaron de casa; durante un tiempo se vio obligado a vivir dando tumbos por casas de amigos y durmiendo a veces en la calle.</p>
-<p>Finalmente, consiguió un empleo de telemarketing y ganó lo suficiente para alquilar una habitación en un motel. Allí compuso más de 30 temas, con instrumentos que le iban prestando, y que poco tiempo después fue incluyendo en sus primeros álbumes. Una de las primeras maquetas que se grabaron con dinero prestado fue a parar a la BBC, al otro lado del charco, y de ahí a un sello discográfico llamado Scetch Book Records, de Glasgow. Este fue el comienzo de la carrera musical, que desembocó en &quot;<em>Micah P. Hinson and the Gospel of Progress&quot;</em> y más tarde &quot;<em>Micah P. Hinson and the Opera Circuit&quot;. </em></p>
-<p>En los últimos tiempos ha ido publicando sencillos en lugar de álbumes. El que os traigo hoy es <strong>&quot;A dream of her&quot;</strong>, de 2008.</p>
-
-  </div><aside class="post-view__side">
-  <button class="radio-toggle" type="button" hidden>📻 Modo radio <span class="radio-toggle__hint">escucha los siguientes artículos seguidos, en YouTube o, si no lo hay, en Spotify</span></button>
-  <details class="players" open>
-    <summary class="players__summary">Escuchar</summary>
-
-    <div class="players__tabs" role="tablist" aria-label="Reproductores">
-      <button class="players__tab" type="button" role="tab" id="tab-youtube" aria-controls="panel-youtube" aria-selected="true">YouTube</button>
-      <button class="players__tab" type="button" role="tab" id="tab-spotify" aria-controls="panel-spotify" aria-selected="false" tabindex="-1">Spotify</button>
-      <button class="players__tab" type="button" role="tab" id="tab-apple-music" aria-controls="panel-apple-music" aria-selected="false" tabindex="-1">Apple Music</button>
-    </div>
-    <div class="players__panel players__panel--youtube" role="tabpanel" id="panel-youtube" aria-labelledby="tab-youtube">
-      <div class="post-view__media-container">
-        <iframe title="Vídeo de YouTube" src="https://www.youtube.com/embed/VXlD9JO9we8?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="players__panel players__panel--spotify" role="tabpanel" id="panel-spotify" aria-labelledby="tab-spotify" hidden>
-      <iframe title="Reproductor de Spotify" data-src="https://open.spotify.com/embed/track/5gUjAr8cclrXCAOU7eC0JQ" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    <div class="players__panel players__panel--apple-music" role="tabpanel" id="panel-apple-music" aria-labelledby="tab-apple-music" hidden>
-      <iframe title="Reproductor de Apple Music" data-src="https://embed.music.apple.com/es/album/1710779822?i=1710779824" width="100%" height="175" frameborder="0" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" style="max-width: 660px; overflow: hidden; border-radius: 10px;"></iframe>
-    </div>
-  </details>
-  <script src="/js/players.js?v=a8790672" defer></script>
-  <script src="/js/radio.js?v=2c48743e" defer></script>
-  <script src="/js/podcast.js?v=d309dc07" defer></script><script src="/js/post-facts.js?v=034fa2f8" defer></script>
-  <script src="/js/post-header.js?v=b10e229b" defer></script>
+  </section>
   </aside>
 
 
   
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary">Comentarios (1)</summary>
+      <summary class="post-view__comments-summary"><strong>1 comentario</strong> en el blog original</summary>
       <ul>
         
           <li class="post-view__comment">
@@ -170,7 +161,7 @@ Estupendo blog</div>
                   </span>
                 
               </span>
-              <time class="post-view__comment-date" datetime="2009-11-18T20:27:04+01:00">18 de Noviembre de 2009, 20:27</time>
+              <time class="post-view__comment-date" datetime="2009-11-18T20:27:04+01:00">18 de noviembre de 2009, 20:27</time>
             </div>
           </li>
         
@@ -184,22 +175,23 @@ Estupendo blog</div>
   <a class="post-nav__link post-nav__link--prev" href="/archive/2009-10-29-a-lack-of-color-de-death-cab-for-cutie.html" rel="prev">
     <span class="post-nav__label">← Anterior</span>
     <span class="post-nav__title">A lack of color, de Death Cab for Cutie</span>
+    <span class="post-nav__editor">Jose Dueñas</span>
   </a>
   <a class="post-nav__link post-nav__link--random" href="/rand/">
-    <span class="post-nav__label">🎲 Al azar</span>
-    <span class="post-nav__title">Cualquier artículo</span>
+    <span class="post-nav__label">Al azar</span>
+    <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   <a class="post-nav__link post-nav__link--next" href="/archive/2009-10-31-a-natural-disaster-de-anathema.html" rel="next">
     <span class="post-nav__label">Siguiente →</span>
     <span class="post-nav__title">A Natural Disaster, de Anathema</span>
+    <span class="post-nav__editor">skuark</span>
   </a>
 </nav>
 
 
       <footer class="footer">
-        <p>🎧 <a href="/">dSong</a>: una recomendación musical diaria entre 2009 y 2017. Cerca de 2.000 artículos y 335 podcasts con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>.</p>
-        <p>🤝 Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a>.</p>
-        <p>📨 ¿Una errata o un reproductor que no funciona? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue en GitHub</a>.</p>
+        <p><a href="/el-proyecto/">El proyecto</a> · Contenidos bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">CC BY-NC-SA 3.0 ES</a></p>
+        <p>¿Una errata o un reproductor roto? <a href="mailto:dsong@jesusmagamu.dev">Escríbenos</a> o <a href="https://github.com/skuark/dsong-archive" target="_blank">abre una issue</a></p>
       </footer>
     </div>
   </div>
