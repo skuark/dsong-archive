@@ -18,6 +18,7 @@ Static archive of the dSong music blog (2009–2017), built with Eleventy 3 + Nu
 | `npm run match-musicbrainz-posts [-- --apply]` | Phase 2 (after phase 1 `--apply`): recording + release group of each post, searched inside its artist, into `musicbrainz-posts-candidates.json`; `--apply` writes `data/musicbrainz.json` (`posts`: recording, release_group, isrcs, first_release) |
 | `npm run review-musicbrainz` | Local UI (`http://localhost:8083`) to review both phases (tabs Artistas / Canciones); decisions go to `musicbrainz-review.json` / `musicbrainz-posts-review.json` and win on `--apply` |
 | `npm run audit-players` | Report (`players-audit.md`) of YouTube/Spotify/Apple Music players that don't match what the post says it presents (performer, cover, live/acoustic/remix vs studio); no keys, cached in `players-cache.json` |
+| `npm run fix-players -- --candidates\|--apply` | Alternatives for the players flagged by audit-players (YouTube via yt-dlp, Apple Music via iTunes Search) into `players-fix-candidates.json`; `--apply` applies `players-fix-decisions.json` (keep/replace/remove) to posts.json |
 | `npm run musicbrainz-diffs` | Report (`musicbrainz-diffs.md`) of years and titles that differ between posts.json and MusicBrainz, for data cleanup |
 
 CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build → check-links → deploy (only from `main`). Node version comes from `.nvmrc`.
@@ -53,7 +54,7 @@ js/                    archive-table-sort.js, archive-table-search.js (accent-in
 _includes/layouts/     main.njk (head, SEO meta, header).
 _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js).
 scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, review-youtube.mjs (+ .html),
-                       match-musicbrainz.mjs, match-musicbrainz-posts.mjs, review-musicbrainz.mjs (+ .html), musicbrainz-diffs.mjs, audit-players.mjs,
+                       match-musicbrainz.mjs, match-musicbrainz-posts.mjs, review-musicbrainz.mjs (+ .html), musicbrainz-diffs.mjs, audit-players.mjs, fix-players.mjs,
                        podcast-sizes.mjs (mp3 sizes -> data/podcast-sizes.json, for the feed; run by hand),
                        edit-posts.mjs (+ .html, local editor).
 ```
@@ -93,5 +94,6 @@ scripts/               validate-data.mjs, check-links.mjs, check-media.mjs, find
 - **`reviewed_at`** (post level, `yyyy-mm-dd`): set by `npm run edit` when a post has been reviewed by hand; not shown on the site.
 - **MusicBrainz is the identity base for metadata enrichment**: artists are matched to an MBID (`data/musicbrainz.json`, outside posts.json so the original data stays untouched); posts are matched only inside their artist (phase 2), and later steps (Wikidata for country/genre/official site, ISRC for cross-platform players) hang off those ids. Years come from the release group's first release (recording dates are unreliable: songs get re-released). Matching is never written into posts.json automatically: differences go to `musicbrainz-diffs` for a human to fix. Artist pages link to MusicBrainz.
 - **`data/post-context.json` is the reference for "which recording"**: extracted once from each post's text by a cheap LLM (2026-11, batches of ~50 posts), so it can be wrong (`confidence`); it's a hint for matching (MusicBrainz phase 2, find-youtube's live mode, audit-players), never shown on the site and never written into posts.json.
+- **A player is the recording the post presents, or nothing**: the specific version (live, acoustic, the cover by X…) if it exists; otherwise the same song by the right performer; never another performer (cover bands, karaoke, the original instead of the post's cover). If none fits, the field is removed (history keeps it). Spotify has no keyless search, so wrong Spotify embeds can only be kept or removed.
 - **Rewriting posts.json from a script**: `JSON.stringify(data, null, 2) + "\n"`, escaping U+007F–U+009F as `\uXXXX`, keeps the file byte-identical.
 - Refactors are verified by building before/after and running `diff -rq` on `_site`.

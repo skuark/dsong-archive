@@ -2,12 +2,14 @@
 // presents (data/post-context.json): the performer (a cover by X, not the original), the song, and the
 // version (live, acoustic, remix…, or the studio original). No API keys: YouTube oEmbed, the Spotify
 // embed page and the iTunes lookup API. Player info is cached in players-cache.json (resumable).
-// Usage: node scripts/audit-players.mjs [out.md]  (default players-audit.md; read-only for posts.json)
+// Usage: node scripts/audit-players.mjs [--cached] [out.md]  (default players-audit.md; read-only for posts.json)
+//   --cached: report only from players already in the cache (no requests, cache untouched)
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { norm } from "../lib/musicbrainz.js";
 import { kindsIn } from "../lib/versions.js";
 
-const out = process.argv[2] ?? "players-audit.md";
+const cached = process.argv.includes("--cached");
+const out = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? "players-audit.md";
 const CACHE = "players-cache.json";
 const read = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : {});
 const posts = JSON.parse(readFileSync(new URL("../data/posts.json", import.meta.url), "utf8")).posts;
@@ -59,6 +61,7 @@ async function apple(ids) {
 const withContext = posts.filter((p) => context[p.id]);
 // 1. Fetch player info not cached yet.
 const jobs = [];
+if (!cached) {
 for (const p of withContext) {
   const m = p.metadata;
   if (m.youtube_code && !(`yt:${m.youtube_code}` in cache)) jobs.push([`yt:${m.youtube_code}`, () => youtube(m.youtube_code), 300]);
@@ -80,6 +83,7 @@ for (let i = 0; i < appleIds.length; i += 150) {
   await sleep(3000);
 }
 save();
+}
 
 // 2. Compare. Names match loosely: "Damien Rice" in "Damien Rice, Lisa Hannigan", or the other way round,
 // any one of a duo ("Ara Malikian y Fernando Egozcue"), or a close spelling ("Ce Ce Peniston" = "CeCe Peniston").
@@ -92,6 +96,7 @@ const has = (a, b) => {
   return parts(b).some((p) => x.includes(p)) || parts(a).some((p) => y.includes(p));
 };
 const issues = { gone: [], performer: [], original: [], version: [], studio: [] };
+const found = [];   // the same issues, structured (players-audit.json), for scripts/fix-players.mjs
 const LABEL = {
   gone: "Player no longer exists",
   performer: "Player artist isn't the performer the post names",
@@ -108,16 +113,16 @@ for (const p of withContext) {
     m.spotify_url && /\/(track|album)\//.test(m.spotify_url) && ["Spotify", cache[`sp:${m.spotify_url}`]],
     m.apple_music_url && ["Apple Music", cache[`am:${appleId(m.apple_music_url)}`]],
   ].filter(Boolean);
-  for (const [name, info] of players) {
-    const row = (detail) => `| [${p.id}](https://dsong.es/archive/${p.id}.html) | ${name} | ${(info ? `${info.artist ?? ""} — ${info.title}` : "").replace(/\|/g, "/")} | ${detail.replace(/\|/g, "/")} |`;
-    if (!info) { issues.gone.push(row("")); continue; }
+  for (const [name, info] of players.filter(([, info]) => info !== undefined)) {
+    const row = (detail, kind) => { found.push({ id: p.id, player: name, kind, info: info ?? null, detail }); return `| [${p.id}](https://dsong.es/archive/${p.id}.html) | ${name} | ${(info ? `${info.artist ?? ""} — ${info.title}` : "").replace(/\|/g, "/")} | ${detail.replace(/\|/g, "/")} |`; };
+    if (!info) { issues.gone.push(row("", "gone")); continue; }
     // YouTube uploaders aren't always the artist: there the title counts too.
     const credited = has(info.artist, performer) || (name === "YouTube" && has(info.title, performer));
-    if (c.is_cover && c.original_artist && !credited && (has(info.artist, c.original_artist) || has(info.title, c.original_artist))) issues.original.push(row(`cover by ${performer} of ${c.original_artist}`));
-    else if (performer && info.artist && !credited) issues.performer.push(row(`performer: ${performer}`));
+    if (c.is_cover && c.original_artist && !credited && (has(info.artist, c.original_artist) || has(info.title, c.original_artist))) issues.original.push(row(`cover by ${performer} of ${c.original_artist}`, "original"));
+    else if (performer && info.artist && !credited) issues.performer.push(row(`performer: ${performer}`, "performer"));
     const kinds = kindsIn(`${info.title} ${info.album ?? ""}`);
-    if (c.version && !["original", "cover", "other"].includes(c.version) && !kinds.includes(c.version)) issues.version.push(row(`${c.version}${c.version_detail ? `: ${c.version_detail}` : ""}`));
-    if (c.version === "original" && kinds.length && !kindsIn(m.song ?? "").length) issues.studio.push(row(`player looks ${kinds.join(", ")}`));
+    if (c.version && !["original", "cover", "other"].includes(c.version) && !kinds.includes(c.version)) issues.version.push(row(`${c.version}${c.version_detail ? `: ${c.version_detail}` : ""}`, "version"));
+    if (c.version === "original" && kinds.length && !kindsIn(m.song ?? "").length) issues.studio.push(row(`player looks ${kinds.join(", ")}`, "studio"));
   }
 }
 
@@ -126,4 +131,5 @@ const md = [`# Players vs what each post says`, ``,
   ...Object.entries(issues).flatMap(([k, rows]) => [`## ${LABEL[k]} (${rows.length})`, ``, `| Post | Player | Player says | Post says |`, `|---|---|---|---|`, ...rows, ``]),
 ].join("\n");
 writeFileSync(out, md);
+writeFileSync(out.replace(/\.md$/, "") + ".json", JSON.stringify(found, null, 2) + "\n");
 console.log(Object.entries(issues).map(([k, r]) => `${k}: ${r.length}`).join(", "), `-> ${out}`);
