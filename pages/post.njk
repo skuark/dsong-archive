@@ -62,12 +62,47 @@ permalink: "archive/{{ post.id }}.html"
       </span>
 
       <time class="post-view__date" datetime="{{ post.published_at | isoDate }}">{{ post.published_at | longDate }}</time>
+      {%- if post.facts | length %}
+      <button class="post-facts-toggle" type="button" popovertarget="post-facts">📋 Ficha</button>
+      {%- endif %}
       {#- Local builds only (CI builds with ELEVENTY_ENV=production): opens the post in the local editor (npm run edit) -#}
       {%- if env.ELEVENTY_ENV != "production" %}
       <a class="post-view__edit" href="http://localhost:8082/#{{ post.id }}" target="dsong-editor">✏️ Editar</a>
       {%- endif %}
+      {#- Ficha (lib/facts.js): everything we know about the post, linked to the archive and its sources, in a
+          side panel (a manual popover: the page stays usable beside it; ✕, the button or Esc close it) opened from
+          the header. Inside the header, so radio mode swaps it with the post. -#}
     </span>
   </div>
+  {%- if post.facts | length %}
+  <div class="post-facts" id="post-facts" popover="manual">
+    <div class="post-facts__header">
+      <span class="kicker">Ficha</span>
+      <button class="post-facts__close" type="button" popovertarget="post-facts" popovertargetaction="hide" aria-label="Cerrar la ficha">✕</button>
+    </div>
+    <div class="post-facts__body">
+    {%- for group in post.facts %}
+    <h4 class="post-facts__group kicker">{{ group.title }}</h4>
+    <dl class="post-facts__list">
+      {%- for row in group.rows %}
+      <dt>{{ row.label }}</dt>
+      <dd>
+        {%- for item in row.items %}
+        {%- if item.musicbrainz %} <a class="post-facts__mb" href="{{ item.href }}" rel="noopener" target="_blank" title="Ver en {{ item.text }}"><svg class="post-facts__mb-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>{{ item.text }}</a>
+        {%- else %}
+        {%- if not loop.first %}<span class="post-facts__sep"> · </span>{% endif %}
+        {%- if item.href %}<a href="{{ item.href }}"{% if item.external %} rel="noopener" target="_blank"{% endif %}>{{ item.text }}{% if item.external %} ↗{% endif %}</a>{% else %}{{ item.text }}{% endif %}
+        {%- if item.note %} <span class="post-facts__note">({{ item.note }})</span>{% endif %}
+        {%- endif %}
+        {%- endfor -%}
+      </dd>
+      {%- endfor %}
+    </dl>
+    {%- endfor %}
+    <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
+    </div>
+  </div>
+  {%- endif %}
   </header>
 
   <div class="post-view__content">
@@ -82,6 +117,7 @@ permalink: "archive/{{ post.id }}.html"
   {%- if m.spotify_url %}{% set players = players.concat([{ id: "spotify", label: "Spotify", type: "iframe", src: m.spotify_url, height: (80 if "/track/" in m.spotify_url else 352), title: "Reproductor de Spotify" }]) %}{% endif %}
   {#- Apple song embeds (?i=<track>) are compact; album embeds show the tracklist #}
   {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
+
 
   {#- Side column in the desktop split view: players and podcast (sticky) #}
   {%- set hasSide = (players | length) or m.podcast_file %}
@@ -148,10 +184,13 @@ permalink: "archive/{{ post.id }}.html"
 
   {#- On every post: radio mode may bring in a podcast block from another post #}
   <script src="/js/podcast.js?v={{ 'js/podcast.js' | assetVersion }}" defer></script>
+  {#- Esc closes the Ficha panel (a manual popover doesn't) -#}
+  <script src="/js/post-facts.js?v={{ 'js/post-facts.js' | assetVersion }}" defer></script>
   {%- if hasSide %}
   <script src="/js/post-header.js?v={{ 'js/post-header.js' | assetVersion }}" defer></script>
   </aside>
   {%- endif %}
+
 
   {% if post.comments and post.comments | length > 0 %}
     <details class="post-view__comments">

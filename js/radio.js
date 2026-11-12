@@ -267,6 +267,8 @@
     const current = document.querySelector('.post-view');
     const next = doc.querySelector('.post-view');
 
+    // The header carries the Ficha popover: close it before swapping
+    current.querySelector('.post-facts:popover-open')?.hidePopover();
     current.querySelector('.post-view__header').innerHTML = next.querySelector('.post-view__header').innerHTML;
     current.querySelector('.post-view__content').replaceWith(document.importNode(next.querySelector('.post-view__content'), true));
 
