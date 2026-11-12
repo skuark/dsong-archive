@@ -6,6 +6,11 @@ const musicbrainz = () => {
   try { return JSON.parse(readFileSync("data/musicbrainz.json", "utf8")).artists; } catch { return {}; }
 };
 
+// MBID -> { bio, lang, wikipedia, image? } (scripts/artist-bios.mjs), for the artist pages
+const artistBios = () => {
+  try { return JSON.parse(readFileSync("data/artist-bios.json", "utf8")); } catch { return {}; }
+};
+
 // Links to the artist's MusicBrainz page(s): a collaboration ([{ name, mbid }]) links each of its artists.
 const musicbrainzLinks = (v) => !v ? null : Array.isArray(v)
   ? v.filter(({ mbid }) => mbid).map(({ name, mbid }) => ({ label: `MusicBrainz: ${name}`, url: `https://musicbrainz.org/artist/${mbid}` }))   // parts not in MusicBrainz: no link
@@ -46,6 +51,7 @@ function onThisDay(posts) {
 export default function () {
   const posts = loadPosts();
   const mbids = musicbrainz();
+  const bios = artistBios();
   const radio = posts
     .map((post) => [post.id, post.title, post.metadata.youtube_code ?? "", spotifyUri(post.metadata.spotify_url)])
     .filter(([, , youtube, spotify], i) => youtube || (spotify && !brokenSpotify(posts[i].metadata.spotify_url)));
@@ -53,7 +59,9 @@ export default function () {
   return {
     ids: posts.map(post => post.id),
     byEditor: groupBy("editor"),
-    byArtist: groupBy("artist").map((group) => ({ ...group, musicbrainz: musicbrainzLinks(mbids[group.name]) })),
+    // A bio only for artists linked one to one (not collaborations)
+    byArtist: groupBy("artist").map((group) => ({ ...group, musicbrainz: musicbrainzLinks(mbids[group.name]),
+      bio: typeof mbids[group.name] === "string" ? bios[mbids[group.name]] : undefined })),
     byAlbum: groupBy("album"),
     byYear: groupBy("year"),
     byCategory: groupBy("category"),

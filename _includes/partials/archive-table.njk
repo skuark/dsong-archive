@@ -4,6 +4,7 @@
 {%- if headingLinks %}
 <p class="archive-links">{% for link in headingLinks %}<a href="{{ link.url }}" rel="noopener">{{ link.label }} ↗</a>{% endfor %}</p>
 {%- endif %}
+{%- if artistBio %}{% include "partials/artist-bio.njk" %}{% endif %}
 
 <div class="archive-search">
   <label class="archive-search__label" for="archive-search">Buscar</label>
