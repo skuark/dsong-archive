@@ -25,6 +25,7 @@ Static archive of the dSong music blog (2009–2017), built with Eleventy 3 + Nu
 | `node scripts/redirect-moved.mjs <old _site>` | After a data change that moves facet pages (album/artist renamed, MusicBrainz titles): redirects each page of the previous build that's gone to the current page listing most of its posts, and retargets earlier redirects whose target is gone. Build the previous version clean first |
 | `npm run musicbrainz-players [-- --check\|--apply]` | YouTube, Spotify and Apple Music links that MusicBrainz attaches to each post's recording (song posts) or album releases (album posts), into `reports/musicbrainz-urls.json` (1 req/s, ~30 min, resumable); `--check` tests each link (YouTube/Spotify oEmbed, iTunes lookup; no keys) and places Apple Music songs in their album embed; `--apply` writes the working ones to `musicbrainzMetadata`. Run again after phase 2 changes matches |
 | `npm run musicbrainz-diffs` | Report (`reports/musicbrainz-diffs.md`) of what differs between posts.json and MusicBrainz, for data cleanup: years, song/album titles and, with `musicbrainz-artists`, artist names, nationalities, websites and genre suggestions |
+| `npm run refresh-musicbrainz` | Refresh what MusicBrainz says about what's already matched (~1 h): `musicbrainz-artists --refresh`, then `musicbrainz-players` (previous cache kept as `.prev`), `--check`, `--apply`, `musicbrainz-diffs`, `redirect-moved` against the build from before, validate and check-links. Matching again (phases 1 and 2) is by hand: move their candidates file aside and rerun them; review decisions win on `--apply` |
 
 CI (`.github/workflows/deploy-to-ghpages.yml`): `npm ci` → validate → build → check-links → deploy (only from `main`). Node version comes from `.nvmrc`.
 
@@ -72,7 +73,7 @@ _includes/layouts/     main.njk (head, SEO meta, header).
 _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js).
 scripts/               validate-data.mjs, musicbrainz-players.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, find-spotify.mjs, review-youtube.mjs (+ .html),
                        match-musicbrainz.mjs, match-musicbrainz-posts.mjs, review-musicbrainz.mjs (+ .html), musicbrainz-artists.mjs, musicbrainz-diffs.mjs, audit-players.mjs, fix-players.mjs,
-                       rename-artists.mjs, redirect-moved.mjs, podcast-sizes.mjs (mp3 sizes -> data/podcast-sizes.json, for the feed; run by hand),
+                       rename-artists.mjs, redirect-moved.mjs, refresh-musicbrainz.mjs, podcast-sizes.mjs (mp3 sizes -> data/podcast-sizes.json, for the feed; run by hand),
                        edit-posts.mjs (+ .html, local editor; edit-sources.mjs: its context, MusicBrainz and player searches).
 ```
 
