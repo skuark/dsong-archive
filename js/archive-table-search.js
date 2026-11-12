@@ -1,4 +1,11 @@
 (function() {
+  // Card photos that fail (an author without a Gravatar: d=404) go away, and so does the room kept for them
+  document.addEventListener('error', (event) => {
+    if (!event.target.matches?.('.facet-cards__image')) return;
+    event.target.closest('.facet-cards__card')?.classList.remove('facet-cards__card--image');
+    event.target.remove();
+  }, true);
+
   const table = document.getElementById('archive-table');
   const input = document.getElementById('archive-search');
   const count = document.getElementById('archive-search-count');
@@ -9,9 +16,9 @@
 
   // Table rows, or the items of a card list (facet indexes: partials/facet-index.njk)
   const items = table.tBodies ? table.tBodies[0].rows : table.children;
-  // Publication year of a table row (its first cell's data-value, "yyyy-MM-dd …"), for the year chips
+  // Publication year of a table row (its first cell's data-value, "yyyy-MM-dd …"), for the year select
   const rows = Array.from(items).map((row) => ({ row, text: normalize(row.textContent), year: row.cells?.[0]?.dataset.value?.slice(0, 4) }));
-  const chips = Array.from(document.querySelectorAll('.archive-search__years [data-year]'));
+  const select = document.getElementById('archive-year');
   const empty = document.getElementById('archive-search-empty');
   let year = '';
   const total = rows.length;
@@ -30,7 +37,7 @@
       if (match) visible++;
     }
     if (empty) empty.hidden = visible > 0;
-    for (const chip of chips) chip.setAttribute('aria-pressed', String(chip.dataset.year === year));
+    if (select) select.value = year;
     count.textContent = words.length || year
       ? `${thousands(visible)} de ${thousands(total)} ${plural(total)}`
       : `${thousands(total)} ${plural(total)}`;
@@ -45,8 +52,8 @@
 
   const params = new URLSearchParams(window.location.search);
   input.value = params.get('q') || '';
-  if (chips.some((chip) => chip.dataset.year === params.get('year'))) year = params.get('year');
+  if (select && [...select.options].some((option) => option.value === params.get('year'))) year = params.get('year');
   input.addEventListener('input', filter);
-  for (const chip of chips) chip.addEventListener('click', () => { year = chip.dataset.year; filter(); });
+  select?.addEventListener('change', () => { year = select.value; filter(); });
   filter();
 })();

@@ -38,7 +38,10 @@
     const title = el('a', '', el('em', '', a.title), a.artist ? `, de ${a.artist}` : '');
     title.href = `/archive/${a.id}.html`;
     const meta = el('span', 'on-this-day__meta', `${a.year} · lo recomendó ${a.author}${a.song ? ` con «${a.song}»` : ''}`);
-    return el('li', 'on-this-day__item', el('span', 'display on-this-day__age', today.getFullYear() - a.year), el('span', 'on-this-day__body', title, meta));
+    // The age it turns today, with "año(s)" under it
+    const age = today.getFullYear() - a.year;
+    const box = el('span', 'on-this-day__age', el('span', 'display on-this-day__age-value', age), el('span', 'on-this-day__age-unit', age === 1 ? 'año' : 'años'));
+    return el('li', 'on-this-day__item', box, el('span', 'on-this-day__body', title, meta));
   }
 
   (async () => {

@@ -13,7 +13,9 @@ pageClass: archive
     <h1 class="page-title">{{ posts | length }} recomendaciones, <mark>en antena</mark></h1>
     <p class="podcast-hero__lead">Durante un tiempo narramos algunas de las recomendaciones de la web en UniRadio Jaén. Cada programa tiene su artículo, y todos se pueden seguir desde cualquier app de podcasts.</p>
     <p class="podcast-hero__actions">
-      <a class="button button--accent" href="/podcast.xml"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 19a1 1 0 100-2 1 1 0 000 2zM4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/></svg>Suscribirse por RSS</a>
+      {#- Radio mode: plays the episodes one after another (js/podcasts.js); hidden without JS -#}
+      <button class="button button--accent podcast-hero__radio" type="button" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="1"/><path d="M7 8l9-5"/><circle cx="15" cy="14" r="2.5"/><path d="M6 12h4M6 16h4"/></svg>Escuchar en modo radio</button>
+      <a class="button" href="/podcast.xml"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 19a1 1 0 100-2 1 1 0 000 2zM4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/></svg>Suscribirse por RSS</a>
       {#- Copies the feed URL (js/podcasts.js); hidden without JS -#}
       <button class="button podcast-hero__copy" type="button" data-feed="{{ site.url }}/podcast.xml" hidden>Copiar la dirección del feed</button>
     </p>

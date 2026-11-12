@@ -4,7 +4,8 @@ title: El proyecto
 permalink: /el-proyecto/
 pageClass: project
 ---
-{#- dSong's history (_data/historia.js): milestones from the archive and told by hand (data/historia.json) -#}
+{#- dSong's history, written by hand. Team (18) and readers who sent a recommendation (31) from 5.dsong.es (May 2014);
+    "Del archivo" milestones link to a post, "Contado" ones are told by us. -#}
 <section class="project-hero">
   <div class="project-hero__title">
     <p class="kicker">El proyecto</p>
@@ -19,8 +20,9 @@ pageClass: project
 <section class="home__figures" aria-label="En cifras">
   {%- for figure in [
     [stats.totals.posts, "artículos", "/archive/all/"],
-    [historia.totals.comments, "comentarios", "/archive/all/"],
-    [stats.totals.editors, "autores", "/archive/editors/"],
+    [1774, "comentarios", "/archive/all/"],
+    [18, "en el equipo", "/archive/editors/"],
+    [31, "lectores invitados", "/archive/editors/"],
     [archive.specialCount, "especiales", "/archive/especiales/"],
     [stats.totals.podcasts, "podcasts", "/archive/podcasts/"]
   ] %}
@@ -32,37 +34,324 @@ pageClass: project
   <div class="history__head">
     <h2 class="display history__title" id="history-title">La historia</h2>
     <p class="history__legend">
-      <span><span class="history__tag">Del archivo</span> sale solo de los artículos</span>
+      <span><span class="history__tag">Del archivo</span> enlaza al artículo</span>
       <span><span class="history__tag history__tag--told">Contado</span> lo escribimos nosotros</span>
     </p>
   </div>
   <ol class="history__years">
-    {%- for year in historia.years %}
     <li class="history__year">
       <div class="history__year-side">
         <div class="history__year-sticky">
-          <span class="display history__year-number">{{ year.year }}</span>
-          {%- if year.count %}
-          <span class="history__year-count">{{ year.count }} {{ "artículo" if year.count == 1 else "artículos" }}</span>
-          <span class="history__year-track"><span class="history__year-fill" style="width: {{ year.pct }}%"></span></span>
-          {%- endif %}
+          <span class="display history__year-number">2009</span>
+          <span class="history__year-count">197 artículos</span>
+          <span class="history__year-track"><span class="history__year-fill" style="width: 59%"></span></span>
         </div>
       </div>
       <ol class="history__items">
-        {%- for item in year.items %}
-        <li class="history__item history__item--{{ item.kind }}">
+        <li class="history__item history__item--contado">
           <div class="history__item-head">
-            <span class="kicker">{{ (item.date + " 00:00") | longDate }}</span>
-            <span class="history__tag{% if item.kind == 'contado' %} history__tag--told{% endif %}">{{ "Contado" if item.kind == "contado" else "Del archivo" }}</span>
+            <span class="kicker">18 de mayo de 2009</span>
+            <span class="history__tag history__tag--told">Contado</span>
           </div>
-          <h3 class="display history__item-title">{{ item.title }}</h3>
-          {%- if item.text %}<p>{{ item.text }}</p>{% endif %}
-          {%- if item.link %}<a class="history__link" href="{{ item.link.url }}"{% if not item.link.url.startsWith("/") %} rel="noopener" target="_blank"{% endif %}>{{ item.link.label }} →</a>{% endif %}
+          <h3 class="display history__item-title">Empieza dSong</h3>
+          <p>Un proyecto web sin ánimo de lucro en el que un grupo de amigos nos propusimos escribir una recomendación musical diaria.</p>
         </li>
-        {%- endfor %}
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">18 de mayo de 2009</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">El primer artículo</h3>
+          <p>Lo firmó jesusr.</p>
+          <a class="history__link" href="/archive/2009-05-18-i-remember-de-damien-rice.html">I remember, de Damien Rice →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">18 de mayo de 2009</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">Los primeros 8 autores</h3>
+          <p>jesusr, Jose, skuark, Poncho, luizk, Jose Dueñas, juanje.ra y david.</p>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">8 de junio de 2009</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">Especial Lagarto Festival 2009</h3>
+          <p>7 artículos seguidos, un grupo al día.</p>
+          <a class="history__link" href="/archive/2009-06-08-especial-lagarto-festival-2009-the-red-crayon-aristocrat-club.html">Especial Lagarto Festival 2009: The Red Crayon Aristocrat Club →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">18 de junio de 2009</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">La primera recomendación de un lector</h3>
+          <p>La envió Mari. Hasta el final, 31 lectores mandaron 51 recomendaciones.</p>
+          <a class="history__link" href="/archive/2009-06-18-finding-out-true-love-is-blind-de-louis-xiv.html">Finding Out True Love is Blind, de Louis XIV →</a>
+        </li>
       </ol>
     </li>
-    {%- endfor %}
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2010</span>
+          <span class="history__year-count">334 artículos</span>
+          <span class="history__year-track"><span class="history__year-fill" style="width: 100%"></span></span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">29 de marzo de 2010</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">3 autores se unen en 2010</h3>
+          <p>Jacky, Beita y virginia.</p>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">6 de mayo de 2010</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">El más comentado</h3>
+          <p>20 comentarios.</p>
+          <a class="history__link" href="/archive/2010-05-06-factor-dsong-maripili-ahora-se-que-me-quieres-de-formula-v.html">Factor dSong [Maripili] - Ahora sé que me quieres, de Formula V →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">18 de mayo de 2010</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">Primer Aniversario de dSong</h3>
+          <p>Lo celebró dSong.</p>
+          <a class="history__link" href="/archive/2010-05-18-especial-primer-aniversario-de-dsong.html">Especial Primer Aniversario de dSong →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">7 de junio de 2010</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">Especial Lagarto Festival 2010</h3>
+          <p>7 artículos seguidos, un grupo al día.</p>
+          <a class="history__link" href="/archive/2010-06-07-especial-lagarto-festival-2010-markus-wc-meetings-de-the-welcome-dinasty.html">Especial Lagarto Festival 2010: Markus (WC Meetings), de The Welcome Dinasty →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">30 de noviembre de 2010</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">El artículo nº 500</h3>
+          <p>De Jose.</p>
+          <a class="history__link" href="/archive/2010-11-30-bohemian-rhapsody-de-queen.html">Bohemian Rhapsody, de Queen →</a>
+        </li>
+      </ol>
+    </li>
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2011</span>
+          <span class="history__year-count">334 artículos</span>
+          <span class="history__year-track"><span class="history__year-fill" style="width: 100%"></span></span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">21 de enero de 2011</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">3 autores se unen en 2011</h3>
+          <p>Johnbo, Jal y Silvia.</p>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">18 de mayo de 2011</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">Segundo Aniversario de dSong</h3>
+          <p>Lo celebró dSong.</p>
+          <a class="history__link" href="/archive/2011-05-18-especial-segundo-aniversario-de-dsong.html">Especial Segundo Aniversario de dSong →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">10 de octubre de 2011</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">Primer podcast en UniRadio Jaén</h3>
+          <p>El primero de 335 programas.</p>
+          <a class="history__link" href="/archive/2011-10-10-do-you-want-to-de-franz-ferdinand.html">Do you want to, de Franz Ferdinand →</a>
+        </li>
+      </ol>
+    </li>
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2012</span>
+          <span class="history__year-count">333 artículos</span>
+          <span class="history__year-track"><span class="history__year-fill" style="width: 100%"></span></span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">20 de marzo de 2012</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">4 autores se unen en 2012</h3>
+          <p>Ascen, medinaman, Monty y Ome Gak.</p>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">14 de mayo de 2012</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">El artículo nº 1000</h3>
+          <p>De jesusr.</p>
+          <a class="history__link" href="/archive/2012-05-14-musica-en-1000-direcciones-de-elefantes.html">Música en 1000 direcciones, de Elefantes →</a>
+        </li>
+      </ol>
+    </li>
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2013</span>
+          <span class="history__year-count">333 artículos</span>
+          <span class="history__year-track"><span class="history__year-fill" style="width: 100%"></span></span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">18 de mayo de 2013</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">4º Aniversario de dSong</h3>
+          <p>Lo celebró dSong.</p>
+          <a class="history__link" href="/archive/2013-05-18-especial-4o-aniversario-de-dsong-1a-parte.html">Especial 4º Aniversario de dSong (1ª Parte) →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">2 de octubre de 2013</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">Especial El Lagarto 2013</h3>
+          <p>5 artículos seguidos, un grupo al día.</p>
+          <a class="history__link" href="/archive/2013-10-02-especial-el-lagarto-2013-cientocero-de-supersubmarina.html">Especial El Lagarto 2013: Cientocero, de Supersubmarina →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">29 de noviembre de 2013</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">Último podcast</h3>
+          <p>El último programa en UniRadio Jaén.</p>
+          <a class="history__link" href="/archive/2013-11-29-silbo-de-feloche.html">Silbo, de Féloche →</a>
+        </li>
+        <li class="history__item history__item--archivo">
+          <div class="history__item-head">
+            <span class="kicker">30 de noviembre de 2013</span>
+            <span class="history__tag">Del archivo</span>
+          </div>
+          <h3 class="display history__item-title">El artículo nº 1500</h3>
+          <p>De Ascen.</p>
+          <a class="history__link" href="/archive/2013-11-30-full-circle-de-half-moon-run.html">Full circle, de Half Moon Run →</a>
+        </li>
+      </ol>
+    </li>
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2014</span>
+          <span class="history__year-count">315 artículos</span>
+          <span class="history__year-track"><span class="history__year-fill" style="width: 94%"></span></span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--contado">
+          <div class="history__item-head">
+            <span class="kicker">18 de mayo de 2014</span>
+            <span class="history__tag history__tag--told">Contado</span>
+          </div>
+          <h3 class="display history__item-title">Cumplimos cinco años</h3>
+          <p>1.668 recomendaciones a ritmo de una al día, 335 podcasts con UniRadio Jaén, 544.594 palabras y 137.116 visitantes de 141 países. Lo celebramos con una web con las cifras, el equipo y los lectores que nos mandaron sus canciones.</p>
+          <a class="history__link" href="https://5.dsong.es" rel="noopener" target="_blank">5.dsong.es →</a>
+        </li>
+      </ol>
+    </li>
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2017</span>
+          <span class="history__year-count">1 artículo</span>
+          <span class="history__year-track"><span class="history__year-fill" style="width: 0%"></span></span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--contado">
+          <div class="history__item-head">
+            <span class="kicker">6 de enero de 2017</span>
+            <span class="history__tag history__tag--told">Contado</span>
+          </div>
+          <h3 class="display history__item-title">El último artículo</h3>
+          <p>A principios de 2017 publicamos el último artículo. En archive.org se pueden seguir consultando algunas capturas de la web original.</p>
+          <a class="history__link" href="https://web.archive.org/web/20170501000000*/http://www.dsong.es" rel="noopener" target="_blank">Capturas en archive.org →</a>
+        </li>
+      </ol>
+    </li>
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2020</span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--contado">
+          <div class="history__item-head">
+            <span class="kicker">2 de mayo de 2020</span>
+            <span class="history__tag history__tag--told">Contado</span>
+          </div>
+          <h3 class="display history__item-title">Nace el archivo</h3>
+          <p>Era una pena que todo este contenido se perdiese en un disco duro de copias de seguridad, así que creamos este archivo para que se pueda seguir consultando más allá del formato blog que un día fue. La primera versión sacó los artículos, con sus reproductores y comentarios, de la base de datos de dSong.</p>
+        </li>
+      </ol>
+    </li>
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2021</span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--contado">
+          <div class="history__item-head">
+            <span class="kicker">7 de febrero de 2021</span>
+            <span class="history__tag history__tag--told">Contado</span>
+          </div>
+          <h3 class="display history__item-title">Vuelve dsong.es</h3>
+          <p>El archivo pasa a la dirección de siempre.</p>
+        </li>
+      </ol>
+    </li>
+    <li class="history__year">
+      <div class="history__year-side">
+        <div class="history__year-sticky">
+          <span class="display history__year-number">2025</span>
+        </div>
+      </div>
+      <ol class="history__items">
+        <li class="history__item history__item--contado">
+          <div class="history__item-head">
+            <span class="kicker">11 de diciembre de 2025</span>
+            <span class="history__tag history__tag--told">Contado</span>
+          </div>
+          <h3 class="display history__item-title">El archivo, estático</h3>
+          <p>Lo rehacemos como una web estática, más fácil de mantener, y empezamos a completar los datos de cada artículo con MusicBrainz.</p>
+          <a class="history__link" href="https://github.com/skuark/dsong-archive" rel="noopener" target="_blank">El código, en GitHub →</a>
+        </li>
+      </ol>
+    </li>
   </ol>
 </section>
 

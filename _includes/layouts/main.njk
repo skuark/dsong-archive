@@ -26,6 +26,7 @@
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
+  <script defer src="/js/menu.js?v={{ 'js/menu.js' | assetVersion }}"></script>
   {% if env.ELEVENTY_ENV == "production" %}
   <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiId }}"></script>
   {% else %}
@@ -59,17 +60,25 @@
     <div class="app-wrapper">
       <header class="header">
         <a class="header__logo" href="/">
-          <span class="header__logo-name">dSong</span>
+          {#- dSong's logo, traced to SVG from the podcast cover (its script lettering and the headphones) #}
+          <img class="header__logo-img" src="/images/logo.svg" width="149" height="80" alt="dSong">
           <span class="header__logo-headline">El archivo · 2009–2017</span>
         </a>
 
-        <nav class="header__nav" aria-label="Principal">
+        {#- Phones: the menu folds behind this button (js/menu.js shows it; without JS the menu stays open) #}
+        <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-nav" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path class="header__burger-open" d="M3 6h18M3 12h18M3 18h18"/><path class="header__burger-close" d="M5 5l14 14M19 5L5 19"/></svg>
+          <span>Menú</span>
+        </button>
+
+        <nav class="header__nav" id="header-nav" aria-label="Principal">
           <ul class="header__menu">
             <li class="header__menu--item"><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Inicio</a></li>
             <li class="header__menu--item"><a href="/archive/"{% if page.url.startsWith("/archive") and not page.url.startsWith("/archive/podcasts") %} aria-current="page"{% endif %}>Archivo</a></li>
             <li class="header__menu--item"><a href="/mapa/"{% if page.url == "/mapa/" %} aria-current="page"{% endif %}>Mapa</a></li>
             <li class="header__menu--item"><a href="/archive/podcasts/"{% if page.url.startsWith("/archive/podcasts") %} aria-current="page"{% endif %}>Podcast</a></li>
             <li class="header__menu--item"><a href="/radio/">Radio</a></li>
+            <li class="header__menu--item"><a href="/el-proyecto/"{% if page.url == "/el-proyecto/" %} aria-current="page"{% endif %}>El proyecto</a></li>
           </ul>
           <form class="header__search" role="search" action="/archive/all/">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>

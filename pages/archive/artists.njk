@@ -10,4 +10,5 @@ pageClass: archive
 {%- set crumb = "Artistas" %}
 {%- set placeholder %}Busca un artista entre {{ items | length | thousands }}…{% endset %}
 {%- set noun = "artista|artistas" %}
+{%- set images = archive.artistImages %}
 {% include "partials/facet-index.njk" %}

@@ -3,6 +3,18 @@
   if (!table) return;
 
   const tbody = table.querySelector('tbody');
+
+  // A click on a row (or card) outside its links opens the post, as its title link would (new tab with
+  // Ctrl/⌘ or the middle button); selecting text doesn't
+  function openRow(event) {
+    if (event.target.closest('a, button') || String(getSelection())) return;
+    const link = event.target.closest('tr')?.querySelector('.archive-table__cell--title a');
+    if (!link) return;
+    if (event.ctrlKey || event.metaKey || event.button === 1) window.open(link.href, '_blank');
+    else location.href = link.href;
+  }
+  tbody?.addEventListener('click', openRow);
+  tbody?.addEventListener('auxclick', (event) => { if (event.button === 1) openRow(event); });
   const headers = table.querySelectorAll('th.sortable');
   const originalRows = Array.from(tbody.querySelectorAll('tr'));
 

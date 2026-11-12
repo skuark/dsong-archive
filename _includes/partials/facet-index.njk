@@ -1,6 +1,7 @@
 {#- Index of a facet (authors, artists): searchable cards with each name and its number of posts,
     most posts first. Expects `items` ([{ name, slug, posts }]), `base` (URL prefix), `heading`, `crumb`,
-    `placeholder` and `noun` ("artista|artistas"). Tabs link the two indexes. The search
+    `placeholder`, `noun` ("artista|artistas") and optionally `images` (slug -> { src, credit? }: artists' Commons photos, authors' Gravatars; lazy-loaded as they
+    scroll into view). Tabs link the two indexes. The search
     (js/archive-table-search.js) also filters card lists. -#}
 {%- set nouns = noun.split("|") %}
 <nav class="crumbs" aria-label="Migas">
@@ -25,7 +26,9 @@
   {%- for item in items | sort(true, false, "posts.length") %}
   {%- set first = (item.posts | first).published_at.slice(0, 4) %}
   {%- set last = (item.posts | last).published_at.slice(0, 4) %}
-  <li><a class="facet-cards__card" href="{{ base }}{{ item.slug }}.html">
+  {%- set image = images[item.slug] if images %}
+  <li><a class="facet-cards__card{% if image %} facet-cards__card--image{% endif %}" href="{{ base }}{{ item.slug }}.html">
+    {%- if image %}<img class="facet-cards__image" src="{{ image.src }}" alt="" {% if image.credit %}title="Foto: {{ image.credit }}" {% endif %} loading="lazy" decoding="async" width="64" height="64">{% endif %}
     <span class="display facet-cards__count">{{ item.posts.length }}</span>
     <span class="facet-cards__name">{{ item.name }}</span>
     <span class="facet-cards__sub">{{ "artículo" if item.posts.length == 1 else "artículos" }} · {{ first }}{% if last != first %}–{{ last }}{% endif %}</span>

@@ -76,6 +76,18 @@ export default function () {
     // A bio only for artists linked one to one (not collaborations)
     byArtist: groupBy("artist").map((group) => ({ ...group, ...artistDetails(group), musicbrainz: musicbrainzLinks(mbids[group.name]),
       bio: typeof mbids[group.name] === "string" ? bios[mbids[group.name]] : undefined })),
+    // Artist slug -> its Commons photo { src, credit } (data/artist-bios.json), for the cards of /archive/artists/
+    artistImages: Object.fromEntries(groupBy("artist").flatMap((group) => {
+      const image = typeof mbids[group.name] === "string" && bios[mbids[group.name]]?.image;
+      // Its credit too (Commons' reuse terms), shown on hover
+      return image ? [[group.slug, { src: image.src, credit: [image.author || "Wikimedia Commons", image.license].filter(Boolean).join(" · ") }]] : [];
+    })),
+    // Author slug -> their Gravatar (from posts.json's gravatar_url), for the cards of /archive/editors/;
+    // d=404: no picture -> the card drops the image (js/archive-table-search.js)
+    editorImages: Object.fromEntries(groupBy("editor").flatMap((group) => {
+      const url = group.posts.find((post) => post.editor.gravatar_url)?.editor.gravatar_url;
+      return url ? [[group.slug, { src: `${url}?s=128&d=404` }]] : [];
+    })),
     byAlbum: groupBy("album"),
     byYear: groupBy("year"),
     byCategory: groupBy("category"),

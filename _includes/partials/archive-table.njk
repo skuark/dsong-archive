@@ -1,5 +1,5 @@
 {#- Variables: posts, heading, crumbs ([{ url, label }] between "Archivo" and the heading), headingLinks,
-    yearChips (publication-year filter, js/archive-table-search.js) -#}
+    yearChips (publication-year select, js/archive-table-search.js) -#}
 <nav class="crumbs" aria-label="Migas">
   <a href="/archive/">Archivo</a>
   {%- for crumb in crumbs %}<a href="{{ crumb.url }}">{{ crumb.label }}</a>{% endfor %}
@@ -15,16 +15,23 @@
 {%- endif %}
 
 <div class="archive-search archive-search--table">
-  <label class="visually-hidden" for="archive-search">Buscar</label>
-  <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, año, autor…" autocomplete="off">
-  {%- if yearChips %}
-  <div class="chips archive-search__years" role="group" aria-label="Año de publicación">
-    <button class="chip chip--small" type="button" data-year="" aria-pressed="true">Todos</button>
-    {%- for item in stats.byYear %}
-    <button class="chip chip--small" type="button" data-year="{{ item.name }}" aria-pressed="false">{{ item.name }}</button>
-    {%- endfor %}
+  {#- One box: the text filter and, joined to it, the publication-year select (js/archive-table-search.js) #}
+  <div class="archive-search__bar">
+    <label class="visually-hidden" for="archive-search">Buscar</label>
+    <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, autor…" autocomplete="off">
+    {%- if yearChips %}
+    <label class="archive-search__year">
+      <span class="archive-search__year-label">Año</span>
+      <select class="archive-search__year-select" id="archive-year">
+        <option value="">Todos</option>
+        {%- for item in stats.byYear %}
+        <option value="{{ item.name }}"><span class="archive-search__option-year">{{ item.name }}</span> <span class="archive-search__option-count">({{ item.count }})</span></option>
+        {%- endfor %}
+      </select>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </label>
+    {%- endif %}
   </div>
-  {%- endif %}
   <span class="archive-search__count" id="archive-search-count" aria-live="polite">{{ posts | length }} {{ "publicación" if (posts | length) == 1 else "publicaciones" }}</span>
 </div>
 

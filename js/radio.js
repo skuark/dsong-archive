@@ -21,6 +21,20 @@
     if (toggleLabel) toggleLabel.textContent = on ? 'Sonando en modo radio' : startLabel;
   }
 
+  // "Radio" in the header menu is the current item while it plays (instead of "Archivo")
+  const radioLink = document.querySelector('.header__menu a[href="/radio/"]');
+  const pageLink = document.querySelector('.header__menu [aria-current="page"]');
+  function setMenu(on) {
+    if (on) {
+      pageLink?.removeAttribute('aria-current');
+      radioLink?.setAttribute('aria-current', 'page');
+    } else {
+      radioLink?.removeAttribute('aria-current');
+      pageLink?.setAttribute('aria-current', 'page');
+    }
+  }
+  let barSize = null;
+
   const idOf = (path) => (path.match(/\/archive\/([^/]+)\.html$/) || [])[1];
   let list = null;          // [[id, title, youtubeCode, spotifyUri], ...] from /radio.json
   let active = false;
@@ -267,6 +281,9 @@
     spotify = null;
     if (bar) bar.remove();
     bar = null;
+    barSize?.disconnect();
+    document.documentElement.style.removeProperty('--radio-bar');
+    setMenu(false);
     document.body.classList.remove('radio-on');
     setToggle(false);
   }
@@ -399,8 +416,12 @@
       if (action === 'skip') advance();
       if (action === 'stop') stop();
     });
-    document.body.append(bar);
+    document.body.prepend(bar);
     document.body.classList.add('radio-on');
+    // Its height, for the sticky side column under it
+    barSize = new ResizeObserver(() => document.documentElement.style.setProperty('--radio-bar', `${bar.offsetHeight}px`));
+    barSize.observe(bar);
+    setMenu(true);
     updateBar();
   }
 

@@ -25,8 +25,12 @@ pageClass: archive
 <section class="artist-hero{% if not (bio and bio.image) %} artist-hero--text{% endif %}" aria-label="Sobre el artista">
   {%- if bio and bio.image %}
   <figure class="artist-hero__photo">
-    <img src="{{ bio.image.src }}" width="{{ bio.image.width }}" height="{{ bio.image.height }}" alt="{{ artist.name }}" decoding="async">
-    <figcaption><a href="{{ bio.image.page }}" rel="noopener">{{ bio.image.author or "Wikimedia Commons" }}{% if bio.image.license %} · {{ bio.image.license }}{% endif %}</a></figcaption>
+    {#- Commons thumbnails are small (330px): shown at their own size, over a blurred copy that fills the frame #}
+    <div class="artist-hero__frame">
+      <img class="artist-hero__backdrop" src="{{ bio.image.src }}" alt="" aria-hidden="true" decoding="async">
+      <img class="artist-hero__image" src="{{ bio.image.src }}" width="{{ bio.image.width }}" height="{{ bio.image.height }}" alt="{{ artist.name }}" decoding="async">
+    </div>
+    <figcaption><a href="{{ bio.image.page }}" rel="noopener" target="_blank">{{ bio.image.author or "Wikimedia Commons" }}{% if bio.image.license %} · {{ bio.image.license }}{% endif %}</a></figcaption>
   </figure>
   {%- endif %}
   <div class="artist-hero__text">
