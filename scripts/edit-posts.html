@@ -46,6 +46,7 @@
   /* What the site shows when it isn't the editor's value (MusicBrainz, yt-dlp…), and hidden players */
   .site { background: var(--soft); border-left: 3px solid var(--muted); display: block; font-size: .75rem; overflow-wrap: anywhere; padding: .2rem .4rem; }
   .site--other { border-left-color: var(--accent); background: #ffffe0; }
+  .site--match { background: #e8f5e8; border-left-color: var(--ok); color: var(--ok); font-weight: 700; }
   .site b { font-weight: 700; }
   .site__source { color: var(--muted); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
   .site .button { font-size: .7rem; margin-left: .4rem; padding: 0 .35rem; }
@@ -506,7 +507,13 @@ function renderSite() {
     const own = current.post.editorMetadata[field] ?? '';
     const lines = [];
     const isPlayer = 'hidden' in info;
-    if (info.value && (info.source !== 'editor' || info.value !== own)) {
+    // Green: our value is MusicBrainz's. Grey: MusicBrainz says something else that the site doesn't use.
+    if (info.match) lines.push(`<small class="site site--match">✓ Coincide con MusicBrainz${info.value && info.value !== own ? ` · en la web: ${esc(info.value)}` : ''}</small>`);
+    else if (info.musicbrainz && own && info.value !== info.musicbrainz && !(field === 'genre' && info.source === 'editor' && !own)) {
+      lines.push(`<small class="site"><span class="site__source">MusicBrainz dice</span> ${esc(info.musicbrainz)}</small>`);
+    }
+    if (info.match && !isPlayer) { /* already said */ }
+    else if (info.value && (info.source !== 'editor' || info.value !== own)) {
       lines.push(`<small class="site site--other"><span class="site__source">En la web · ${esc(SOURCE_LABEL[info.source] ?? info.source)}</span> <b>${esc(info.value)}</b>${isPlayer ? ` <button class="button" type="button" data-hide="${esc(field)}" data-value="${esc(info.value)}">Ocultar</button>` : ''}</small>`);
     } else if (!info.value && own) {
       lines.push(`<small class="site site--other"><span class="site__source">En la web</span> no se muestra</small>`);

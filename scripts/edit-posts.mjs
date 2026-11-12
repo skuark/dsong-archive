@@ -9,7 +9,8 @@ import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import MarkdownIt from "markdown-it";
 import { serializePosts, validatePost } from "../lib/validate-post.js";
-import { PLAYERS, effective, hidePlayer, ordered, playerSources, resolveMetadata } from "../lib/metadata.js";
+import { PLAYERS, effective, hidePlayer, musicbrainzValues, ordered, playerSources, resolveMetadata, sameAsMusicbrainz } from "../lib/metadata.js";
+import { countryOf } from "../lib/countries.js";
 import { chooseArtist, chooseRecord, details, searchSource, summaries } from "./edit-sources.mjs";
 
 const PORT = Number(process.env.PORT) || 8082;
@@ -44,12 +45,16 @@ const SOURCE = { editorMetadata: "editor", musicbrainzMetadata: "MusicBrainz", s
 const COMPARED = ["song", "artist", "album", "year", "genre", "artist_nationality", "artist_url"];
 const mbFile = () => { try { return JSON.parse(readFileSync(MB_FILE, "utf8")); } catch { return {}; } };
 function site(post, mb = mbFile()) {
-  const resolved = resolveMetadata(post, mb), ed = post.editorMetadata, out = {};
+  const resolved = resolveMetadata(post, mb), ed = post.editorMetadata, out = {}, said = musicbrainzValues(post, mb);
   for (const f of COMPARED) out[f] = { value: resolved[f] ?? "", source: (resolved[f] ?? "") === (ed[f] ?? "") ? "editor" : "MusicBrainz" };
   const shown = playerSources(post);
   for (const f of PLAYERS) {
     out[f] = { value: shown[f]?.value ?? "", source: shown[f] ? SOURCE[shown[f].source] : "",
       hidden: Object.entries(post.hiddenPlayers?.[f] ?? {}).map(([value, reason]) => ({ value, reason })) };
+  }
+  // MusicBrainz's own value, and whether it's the editor's.
+  for (const [f, info] of Object.entries(out)) {
+    if (said[f]) Object.assign(info, { musicbrainz: said[f], match: sameAsMusicbrainz(f, ed[f], said[f], { countryOf }) });
   }
   return out;
 }
