@@ -83,7 +83,8 @@
         "isrcs": [
           "IEABD0100009"
         ],
-        "first_release": "2002-02-01"
+        "first_release": "2002-02-01",
+        "spotify_url": "https://open.spotify.com/embed/track/6C6H2lkwmb2F2eUHhnlNy5"
       },
       "ytdlpMetadata": {
         "youtube_code": "7uCp1YzscKg"
@@ -151,7 +152,8 @@
           "USIR10300191",
           "USIR10211290"
         ],
-        "first_release": "2002-08-17"
+        "first_release": "2002-08-17",
+        "spotify_url": "https://open.spotify.com/embed/track/0wzRcekWyVCSyPtlPOeJau"
       },
       "ytdlpMetadata": {
         "youtube_code": "DcHKOC64KnE"
@@ -202,7 +204,8 @@
           "GBAAA9820874",
           "GB1209800770"
         ],
-        "first_release": "1999-03-19"
+        "first_release": "1999-03-19",
+        "spotify_url": "https://open.spotify.com/embed/track/7Bf0RPsldDH7jVi9H3wODv"
       },
       "ytdlpMetadata": {
         "youtube_code": "9E9-L9_S3V0"
@@ -306,7 +309,8 @@
         "isrcs": [
           "USAT20802283"
         ],
-        "first_release": "2008-06-23"
+        "first_release": "2008-06-23",
+        "apple_music_url": "https://embed.music.apple.com/es/album/382972326?i=382972365"
       },
       "ytdlpMetadata": {
         "youtube_code": "1B89Osfj8dg"
@@ -340,7 +344,9 @@
         "isrcs": [
           "USSM10604659"
         ],
-        "first_release": "2006-11-02"
+        "first_release": "2006-11-02",
+        "spotify_url": "https://open.spotify.com/embed/track/29ZFyYgGXNGsZcfixlY68o",
+        "apple_music_url": "https://embed.music.apple.com/es/album/204285054?i=204285542"
       },
       "ytdlpMetadata": {
         "youtube_code": "YqJkJpZvWpo"
@@ -375,7 +381,9 @@
       "musicbrainzMetadata": {
         "release_group": "d5f992ab-6238-3b28-bf2b-7b16d913c9f6",
         "album": "Devils & Dust",
-        "first_release": "2005-04-25"
+        "first_release": "2005-04-25",
+        "spotify_url": "https://open.spotify.com/embed/album/2LG4zoUVueg6iYQTHEQLx6",
+        "apple_music_url": "https://embed.music.apple.com/es/album/302692899"
       }
     },
     {
@@ -508,7 +516,9 @@
         "isrcs": [
           "GBSTK0700009"
         ],
-        "first_release": "2007-10-10"
+        "first_release": "2007-10-10",
+        "spotify_url": "https://open.spotify.com/embed/track/0YJ9FWWHn9EfnN0lHwbzvV",
+        "youtube_code": "GoLJJRIWCLU"
       },
       "ytdlpMetadata": {
         "youtube_code": "GoLJJRIWCLU"
@@ -654,7 +664,9 @@
           "GBDHC0606611",
           "US4E40636013"
         ],
-        "first_release": "2006-03-31"
+        "first_release": "2006-03-31",
+        "spotify_url": "https://open.spotify.com/embed/track/71KtwiEpzcn9WxwlaS7ZJY",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1045281848?i=1045283175"
       },
       "ytdlpMetadata": {
         "youtube_code": "Lx58hXh4pVA"
@@ -789,7 +801,9 @@
       "musicbrainzMetadata": {
         "release_group": "64ad146f-304f-3353-9fc2-d21833a830ff",
         "album": "LeftRightLeftRightLeft",
-        "first_release": "2009-05-15"
+        "first_release": "2009-05-15",
+        "spotify_url": "https://open.spotify.com/embed/album/3pboBm7GTa6V5dFXXCt52b",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1579715459"
       }
     },
     {
@@ -864,7 +878,8 @@
         "isrcs": [
           "USRC10301519"
         ],
-        "first_release": "2003-10-16"
+        "first_release": "2003-10-16",
+        "spotify_url": "https://open.spotify.com/embed/track/57Xjny5yNzAcsxnusKmAfA"
       },
       "ytdlpMetadata": {
         "youtube_code": "b8-tXG8KrWs"
@@ -921,7 +936,8 @@
         "isrcs": [
           "USL2S0520197"
         ],
-        "first_release": "2006-04-04"
+        "first_release": "2006-04-04",
+        "spotify_url": "https://open.spotify.com/embed/track/1cSQw8jOGbtz18qSKuF15H"
       },
       "ytdlpMetadata": {
         "youtube_code": "7qH4qyi1-Ys"
@@ -1067,7 +1083,8 @@
           "ISCRU1000230",
           "GBALW9700074"
         ],
-        "first_release": "1997-09-20"
+        "first_release": "1997-09-20",
+        "spotify_url": "https://open.spotify.com/embed/track/30j9ij28SJum1lp740MsHS"
       },
       "ytdlpMetadata": {
         "youtube_code": "JNJv-Ebi67I"
@@ -1148,7 +1165,9 @@
       "musicbrainzMetadata": {
         "release_group": "eaf703d1-2f39-39a3-8152-d528ac98d780",
         "album": "Estrella de mar",
-        "first_release": "2002-02-04"
+        "first_release": "2002-02-04",
+        "spotify_url": "https://open.spotify.com/embed/album/61ubSwllNCZJux3IG7G83T",
+        "apple_music_url": "https://embed.music.apple.com/es/album/726352183"
       }
     },
     {
@@ -1670,7 +1689,8 @@
           "GBY2T1600314",
           "GBAAA0201199"
         ],
-        "first_release": "2003-01-08"
+        "first_release": "2003-01-08",
+        "spotify_url": "https://open.spotify.com/embed/track/2yYASbXnAV71CLbNY1HCWf"
       },
       "ytdlpMetadata": {
         "youtube_code": "-JJAXwAaA2w"
@@ -2016,7 +2036,9 @@
       "musicbrainzMetadata": {
         "release_group": "3dd0c8e4-af53-3605-9c20-f27c7635fb60",
         "album": "Urban Hymns",
-        "first_release": "1997-09-29"
+        "first_release": "1997-09-29",
+        "spotify_url": "https://open.spotify.com/embed/album/52AeC4gwbxDfFlLHgK1ByD",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440885112"
       }
     },
     {
@@ -2149,7 +2171,8 @@
           "USC4R2106786",
           "GBBPF0100538"
         ],
-        "first_release": "2001-06-10"
+        "first_release": "2001-06-10",
+        "spotify_url": "https://open.spotify.com/embed/track/5gfmEhfgMIcV3He1wgDGJY"
       },
       "ytdlpMetadata": {
         "youtube_code": "VK3Q4SLVkAU"
@@ -2214,7 +2237,8 @@
         "isrcs": [
           "FRS940500060"
         ],
-        "first_release": "2005-06-22"
+        "first_release": "2005-06-22",
+        "spotify_url": "https://open.spotify.com/embed/track/2Mz1F6dhy66urwoY9GEoBL"
       },
       "ytdlpMetadata": {
         "youtube_code": "90GR25U8qtc"
@@ -2315,7 +2339,9 @@
           "GBAHJ9500039",
           "GBAHJ0900001"
         ],
-        "first_release": "1989-04"
+        "first_release": "1989-04",
+        "spotify_url": "https://open.spotify.com/embed/track/758wEKVqfYopJIHYWdLVd4",
+        "youtube_code": "4D2qcbu26gs"
       },
       "ytdlpMetadata": {
         "youtube_code": "4D2qcbu26gs"
@@ -2402,7 +2428,9 @@
           "GRUM70900205",
           "NO23B0900001"
         ],
-        "first_release": "2009-01-12"
+        "first_release": "2009-01-12",
+        "spotify_url": "https://open.spotify.com/embed/track/3MnAsEBBsEj86d03RgO4EM",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1438988563?i=1438988564"
       },
       "ytdlpMetadata": {
         "youtube_code": "mNcJEebwOuE"
@@ -2496,7 +2524,9 @@
           "USSM10905827",
           "USSM19500010"
         ],
-        "first_release": "1995"
+        "first_release": "1995",
+        "spotify_url": "https://open.spotify.com/embed/track/4GCGH6TJ69neckwITeBFXK",
+        "apple_music_url": "https://embed.music.apple.com/es/album/310505551?i=310505593"
       },
       "ytdlpMetadata": {
         "youtube_code": "XAi3VTSdTxU"
@@ -2874,7 +2904,8 @@
         "isrcs": [
           "USDJM0200101"
         ],
-        "first_release": "2002-11-05"
+        "first_release": "2002-11-05",
+        "youtube_code": "8AHCfZTRGiI"
       },
       "ytdlpMetadata": {
         "youtube_code": "8AHCfZTRGiI"
@@ -3010,7 +3041,9 @@
         "isrcs": [
           "USSM17900817"
         ],
-        "first_release": "1979-08-10"
+        "first_release": "1979-08-10",
+        "spotify_url": "https://open.spotify.com/embed/track/36eWbpGbM3DxpErvZImHgD",
+        "apple_music_url": "https://embed.music.apple.com/es/album/159292399?i=159293419"
       },
       "ytdlpMetadata": {
         "youtube_code": "5X-Mrc2l1d0"
@@ -3185,7 +3218,9 @@
           "USUM72009888",
           "USIR29400443"
         ],
-        "first_release": "1994-09"
+        "first_release": "1994-09",
+        "youtube_code": "yGxHDmHoqXc",
+        "spotify_url": "https://open.spotify.com/embed/track/5kWY52e7A2dH11zFeu9nzK"
       },
       "ytdlpMetadata": {
         "youtube_code": "6Ejga4kJUts"
@@ -3256,7 +3291,9 @@
         "isrcs": [
           "USSM10200777"
         ],
-        "first_release": "2002-06-10"
+        "first_release": "2002-06-10",
+        "spotify_url": "https://open.spotify.com/embed/track/5WEctcGxrja4rzOwOJUPJ6",
+        "apple_music_url": "https://embed.music.apple.com/es/album/436138238?i=436138301"
       },
       "ytdlpMetadata": {
         "youtube_code": "V3GA2d-J2_A"
@@ -3306,7 +3343,9 @@
           "USWB19900917",
           "GBAHW9500326"
         ],
-        "first_release": "1994-11-29"
+        "first_release": "1994-11-29",
+        "spotify_url": "https://open.spotify.com/embed/track/0AKcA69xtIVPhse3R5INg2",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1605625451?i=1605625767"
       },
       "ytdlpMetadata": {
         "youtube_code": "hDd2G_V1rzc"
@@ -3416,7 +3455,9 @@
       "musicbrainzMetadata": {
         "release_group": "ea29c347-696f-3165-986d-7bad1394b178",
         "album": "Grace",
-        "first_release": "1994-08-15"
+        "first_release": "1994-08-15",
+        "spotify_url": "https://open.spotify.com/embed/album/7yQtjAjhtNi76KRu05XWFS",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1046187510"
       }
     },
     {
@@ -3548,7 +3589,8 @@
         "isrcs": [
           "USVI20100525"
         ],
-        "first_release": "2001-01-01"
+        "first_release": "2001-01-01",
+        "spotify_url": "https://open.spotify.com/embed/track/7aJjhQlplwtUS7emsLIEWC"
       },
       "ytdlpMetadata": {
         "youtube_code": "ol6-W-_ixnU"
@@ -4041,7 +4083,8 @@
           "GBDFN9600001",
           "GBAAA9600016"
         ],
-        "first_release": "1996-05-06"
+        "first_release": "1996-05-06",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1617670455?i=1617670456"
       },
       "ytdlpMetadata": {
         "youtube_code": "zNBj4EV_hAo"
@@ -4457,7 +4500,8 @@
           "US64G0501409",
           "USLS50686508"
         ],
-        "first_release": "2005-07-04"
+        "first_release": "2005-07-04",
+        "spotify_url": "https://open.spotify.com/embed/track/1yupbrI7ROhigIHpQBevPh"
       },
       "ytdlpMetadata": {
         "youtube_code": "tWX3El-slpY"
@@ -4602,7 +4646,8 @@
         "isrcs": [
           "USSM10500189"
         ],
-        "first_release": "2005-04-13"
+        "first_release": "2005-04-13",
+        "spotify_url": "https://open.spotify.com/embed/track/4mrVwQQiv8AkXoJWehbWsK"
       },
       "ytdlpMetadata": {
         "youtube_code": "yvbuBQ5QzGg"
@@ -4968,7 +5013,9 @@
         "isrcs": [
           "USRC10001047"
         ],
-        "first_release": "2001-07-10"
+        "first_release": "2001-07-10",
+        "spotify_url": "https://open.spotify.com/embed/track/26G7A9J6lbUHFTrZzw0RQG",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1308612610?i=1308614265"
       },
       "ytdlpMetadata": {
         "youtube_code": "iAP9AF6DCu4"
@@ -5244,7 +5291,9 @@
         "isrcs": [
           "USWWW0202466"
         ],
-        "first_release": "1994-10-26"
+        "first_release": "1994-10-26",
+        "spotify_url": "https://open.spotify.com/embed/track/2GpBrAoCwt48fxjgjlzMd4",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1453924216?i=1453925093"
       },
       "ytdlpMetadata": {
         "youtube_code": "dLl4PZtxia8"
@@ -5306,7 +5355,8 @@
           "GBBBN8700004",
           "GBBBN0009285"
         ],
-        "first_release": "1987-07-09"
+        "first_release": "1987-07-09",
+        "spotify_url": "https://open.spotify.com/embed/track/40MLhSPcJ2jcxOdFhlm9WU"
       },
       "ytdlpMetadata": {
         "youtube_code": "iLVLfL3QVQQ"
@@ -5418,7 +5468,8 @@
         "isrcs": [
           "DEC760400310"
         ],
-        "first_release": "2004-11-12"
+        "first_release": "2004-11-12",
+        "spotify_url": "https://open.spotify.com/embed/album/6ONAp3sKAdvbMqFW68sCTH"
       },
       "ytdlpMetadata": {
         "youtube_code": "gsQIOgkZt68"
@@ -5666,7 +5717,9 @@
       "musicbrainzMetadata": {
         "release_group": "8411a4db-e104-4e45-995f-24b2f1849437",
         "album": "The Resistance",
-        "first_release": "2009-09-10"
+        "first_release": "2009-09-10",
+        "apple_music_url": "https://embed.music.apple.com/es/album/991509751",
+        "spotify_url": "https://open.spotify.com/embed/album/0eFHYz8NmK75zSplL5qlfM"
       }
     },
     {
@@ -5735,7 +5788,8 @@
         "isrcs": [
           "GBBBY9610058"
         ],
-        "first_release": "1996-04-08"
+        "first_release": "1996-04-08",
+        "spotify_url": "https://open.spotify.com/embed/track/61SVJX0TWSSHU0wgqL2RT0"
       },
       "ytdlpMetadata": {
         "youtube_code": "6hYgc0fTONc"
@@ -6116,7 +6170,9 @@
           "USAT22103220",
           "USAT20804057"
         ],
-        "first_release": "2008-04-11"
+        "first_release": "2008-04-11",
+        "youtube_code": "NCuUjjBt-Qs",
+        "spotify_url": "https://open.spotify.com/embed/track/0Nv8P6aa0SjH1ABaAlc1OJ"
       },
       "ytdlpMetadata": {
         "youtube_code": "RvnkAtWcKYg"
@@ -6174,7 +6230,9 @@
         "isrcs": [
           "USDW10110256"
         ],
-        "first_release": "2001-07-17"
+        "first_release": "2001-07-17",
+        "youtube_code": "rubpIfLPzvU",
+        "spotify_url": "https://open.spotify.com/embed/track/6lNOcyUklBa5dBsPqJ7Ydd"
       },
       "ytdlpMetadata": {
         "youtube_code": "oKsxPW6i3pM"
@@ -6255,7 +6313,9 @@
         "isrcs": [
           "USAM19800328"
         ],
-        "first_release": "1998-01-01"
+        "first_release": "1998-01-01",
+        "spotify_url": "https://open.spotify.com/embed/track/7p9dd71JR2ucoAuO1Sy0VZ",
+        "youtube_code": "Iu8elWPSUwE"
       },
       "ytdlpMetadata": {
         "youtube_code": "_W2jONIjrM0"
@@ -6791,7 +6851,8 @@
           "GBAAP1500073",
           "GBCRL0800398"
         ],
-        "first_release": "1986-09"
+        "first_release": "1986-09",
+        "youtube_code": "LhLmgg_u29k"
       },
       "ytdlpMetadata": {
         "youtube_code": "tkOr12AQpnU"
@@ -6906,7 +6967,9 @@
           "USWB11201115",
           "USWB10002405"
         ],
-        "first_release": "2000-05-07"
+        "first_release": "2000-05-07",
+        "spotify_url": "https://open.spotify.com/embed/track/0X576XiCW9uEtko6f6VkcU",
+        "apple_music_url": "https://embed.music.apple.com/es/album/528436018?i=528437426"
       },
       "ytdlpMetadata": {
         "youtube_code": "Gd9OhYroLN0"
@@ -7042,7 +7105,8 @@
           "ES5709901831",
           "ES5008500167"
         ],
-        "first_release": "1983"
+        "first_release": "1983",
+        "spotify_url": "https://open.spotify.com/embed/track/4JmgchiOwHb9kIRC16Ib2g"
       },
       "ytdlpMetadata": {
         "youtube_code": "0vq3qZwaXrw"
@@ -7077,7 +7141,8 @@
           "USBS50310289",
           "USBS50410396"
         ],
-        "first_release": "2003-09-01"
+        "first_release": "2003-09-01",
+        "spotify_url": "https://open.spotify.com/embed/track/617GoDMLDCGJSouPbBb1k7"
       },
       "ytdlpMetadata": {
         "youtube_code": "EeiQ4CYFBP8"
@@ -7577,7 +7642,9 @@
       "musicbrainzMetadata": {
         "release_group": "21e886f7-db66-3103-beb4-da9323adddc7",
         "album": "Continuum",
-        "first_release": "2006-09-09"
+        "first_release": "2006-09-09",
+        "spotify_url": "https://open.spotify.com/embed/album/1Xsprdt1q9rOzTic7b9zYM",
+        "apple_music_url": "https://embed.music.apple.com/es/album/184335550"
       }
     },
     {
@@ -8174,8 +8241,8 @@
     {
       "id": "2009-11-18-kajama-de-karl-jenkins",
       "published_at": "2009-11-18 09:00:19 +0100",
-      "title": "Kajama, de Karl Jenkins",
-      "content": "Hoy os voy a proponer la escucha de un tema de <strong>Adiemus</strong>, el más popular de los numerosos trabajos del prestigioso músico y compositor galo <strong>Karl Jenkins</strong>, quien a lo largo de su carrera ha sido participe de unos cuantos proyectos musicales entorno al jazz y el new age en su ámplio espectro.\r\n\r\nAdiemus es una saga de, hasta la fecha, 5 álbumes, un recopilatorio y una grabación en vivo en las cuales Jenkins da rienda suelta a su imaginación musical. Cada uno de los álbumes de Adiemus consiste en una serie de voces melódicas acompañadas por una orquesta. La letra de las canciones, aunque pueda parecer que está cantada en un extraño idioma de alguna recóndita región de un país africano no son más que palabras inventadas que tratan de conseguir que la parte vocal parezca otro instrumento musical más de los tantos que aparecen en la obra: instrumentos étnicos de percusión, campanas, una flauta dulce, una quena, una guitarra acústica, etc.\r\n\r\nLa Orquesta Filarmónica de Londres fue la encargada de ejecutar las partes I, II y III. Para la cuarta parte de la saga se formó la propia orquesta Adiemus pero al parecer Jenkins no quedó satisfecho y volvió a la orquesta londinense para la quinta entrega.\r\n\r\nRealmente, el gran éxito de la saga lo consiguió con la primera de las entregas. Las subsiguientes entregas no tuvieron el mismo éxito ni la buena crítica que obtuvo la primera parte, la cual posee el nombre en clave de <em><strong>\"Songs of Sanctuary\"</strong></em> (1995). Hoy os recomiendo el corte titulado <em><strong>\"Kajama\"</strong></em> de esta primera entrega, aunque el álbum al completo es un buen remedio para escuchar a solas en esos momentos en los que el cuerpo te pide un poco de relajación.",
+      "title": "Kayama, de Karl Jenkins",
+      "content": "Hoy os voy a proponer la escucha de un tema de <strong>Adiemus</strong>, el más popular de los numerosos trabajos del prestigioso músico y compositor galo <strong>Karl Jenkins</strong>, quien a lo largo de su carrera ha sido participe de unos cuantos proyectos musicales entorno al jazz y el new age en su ámplio espectro.\r\n\r\nAdiemus es una saga de, hasta la fecha, 5 álbumes, un recopilatorio y una grabación en vivo en las cuales Jenkins da rienda suelta a su imaginación musical. Cada uno de los álbumes de Adiemus consiste en una serie de voces melódicas acompañadas por una orquesta. La letra de las canciones, aunque pueda parecer que está cantada en un extraño idioma de alguna recóndita región de un país africano no son más que palabras inventadas que tratan de conseguir que la parte vocal parezca otro instrumento musical más de los tantos que aparecen en la obra: instrumentos étnicos de percusión, campanas, una flauta dulce, una quena, una guitarra acústica, etc.\r\n\r\nLa Orquesta Filarmónica de Londres fue la encargada de ejecutar las partes I, II y III. Para la cuarta parte de la saga se formó la propia orquesta Adiemus pero al parecer Jenkins no quedó satisfecho y volvió a la orquesta londinense para la quinta entrega.\r\n\r\nRealmente, el gran éxito de la saga lo consiguió con la primera de las entregas. Las subsiguientes entregas no tuvieron el mismo éxito ni la buena crítica que obtuvo la primera parte, la cual posee el nombre en clave de <em><strong>\"Songs of Sanctuary\"</strong></em> (1995). Hoy os recomiendo el corte titulado <em><strong>\"Kayama\"</strong></em> de esta primera entrega, aunque el álbum al completo es un buen remedio para escuchar a solas en esos momentos en los que el cuerpo te pide un poco de relajación.",
       "editor": {
         "name": "skuark",
         "url": "http://www.skuark.com/",
@@ -8189,7 +8256,18 @@
         "category": "Canciones",
         "song": "Kayama",
         "spotify_url": "https://open.spotify.com/embed/track/4hPzTegFCuJGrRUyVc3K4q",
-        "year": "1995"
+        "year": "1995",
+        "youtube_code": "zpOKNe-THAg"
+      },
+      "musicbrainzMetadata": {
+        "recording": "fa88595c-72a8-4c52-a5df-4074ac694bb4",
+        "song": "Kayama",
+        "release_group": "26db8020-2a24-3fa3-b291-228a30b0c0e0",
+        "album": "Songs of Sanctuary",
+        "isrcs": [
+          "GBAAA9500013"
+        ],
+        "first_release": "1995-05-04"
       },
       "ytdlpMetadata": {
         "youtube_code": "lae_Bd_5rk4"
@@ -8319,7 +8397,9 @@
           "NLA321393035",
           "NLA320888014"
         ],
-        "first_release": "2008-11-15"
+        "first_release": "2008-11-15",
+        "spotify_url": "https://open.spotify.com/embed/track/3B8NyX2Wyl3rNSQ5goyTOX",
+        "apple_music_url": "https://embed.music.apple.com/es/album/318875889?i=318875997"
       },
       "ytdlpMetadata": {
         "youtube_code": "gUxH1zN0yOc"
@@ -8363,7 +8443,9 @@
       "musicbrainzMetadata": {
         "release_group": "679f816b-e974-3d54-afdc-8446f80b9148",
         "album": "Friendly Fire",
-        "first_release": "2006-09-29"
+        "first_release": "2006-09-29",
+        "spotify_url": "https://open.spotify.com/embed/album/5XFRKvpWx2DX5VrEtukNqN",
+        "apple_music_url": "https://embed.music.apple.com/es/album/716346603"
       }
     },
     {
@@ -8591,7 +8673,10 @@
         "isrcs": [
           "USUR10300461"
         ],
-        "first_release": "2003-06-18"
+        "first_release": "2003-06-18",
+        "spotify_url": "https://open.spotify.com/embed/track/16Elz7HJPLZPMylp13ewxv",
+        "youtube_code": "neSQgkEy_xQ",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1442923238?i=1442923397"
       },
       "ytdlpMetadata": {
         "youtube_code": "neSQgkEy_xQ"
@@ -8670,7 +8755,8 @@
           "GBUM70500951",
           "USUM70600433"
         ],
-        "first_release": "2006-01-01"
+        "first_release": "2006-01-01",
+        "spotify_url": "https://open.spotify.com/embed/track/6tuiDRFaXOBqFLpeTBjAAn"
       },
       "ytdlpMetadata": {
         "youtube_code": "dewzOxQ52kg"
@@ -9064,7 +9150,9 @@
           "GBUM72102506",
           "GBF088500681"
         ],
-        "first_release": "1985-05-15"
+        "first_release": "1985-05-15",
+        "spotify_url": "https://open.spotify.com/embed/track/3elV4E1GOKfF0MVRgdp6eU",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1565391787?i=1565392081"
       },
       "ytdlpMetadata": {
         "youtube_code": "jhdFe3evXpk"
@@ -9098,7 +9186,9 @@
         "isrcs": [
           "USMJ19700131"
         ],
-        "first_release": "2000-04-10"
+        "first_release": "2000-04-10",
+        "spotify_url": "https://open.spotify.com/embed/track/4X3qGigyU6ARi3HP4lWD95",
+        "apple_music_url": "https://embed.music.apple.com/es/album/254825683?i=254825686"
       },
       "ytdlpMetadata": {
         "youtube_code": "XvziPPpryv0"
@@ -9175,7 +9265,10 @@
           "GBDUW0600059",
           "GBDUW0000059"
         ],
-        "first_release": "2001-02-26"
+        "first_release": "2001-02-26",
+        "youtube_code": "JhulBGMA7G4",
+        "spotify_url": "https://open.spotify.com/embed/track/5W3cjX2J3tjhG8zb6u0qHn",
+        "apple_music_url": "https://embed.music.apple.com/es/album/697194953?i=697195787"
       },
       "ytdlpMetadata": {
         "youtube_code": "gAjR4_CbPpQ"
@@ -9336,7 +9429,9 @@
           "USBB49901025",
           "USAT21402732"
         ],
-        "first_release": "1997-03-25"
+        "first_release": "1997-03-25",
+        "spotify_url": "https://open.spotify.com/embed/track/4INDiWSKvqSKDEu7mh8HFz",
+        "apple_music_url": "https://embed.music.apple.com/es/album/906888433?i=906888513"
       },
       "ytdlpMetadata": {
         "youtube_code": "gUhRKVIjJtw"
@@ -9446,7 +9541,9 @@
         "isrcs": [
           "GBBND0401374"
         ],
-        "first_release": "2005-01-31"
+        "first_release": "2005-01-31",
+        "spotify_url": "https://open.spotify.com/embed/track/1gZPlxa1pQIJly4ZL6FTwr",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1438738252?i=1438738262"
       },
       "ytdlpMetadata": {
         "youtube_code": "4a4ScRBLUHg"
@@ -9492,7 +9589,8 @@
           "USMC19340588",
           "USQX90900749"
         ],
-        "first_release": "1968-10-25"
+        "first_release": "1968-10-25",
+        "spotify_url": "https://open.spotify.com/embed/track/2aoo2jlRnM3A0NyLQqMN2f"
       },
       "ytdlpMetadata": {
         "youtube_code": "TLV4_xaYynY"
@@ -9617,7 +9715,9 @@
         "isrcs": [
           "USCA28900086"
         ],
-        "first_release": "1990-03-20"
+        "first_release": "1990-03-20",
+        "spotify_url": "https://open.spotify.com/embed/track/5qm0KiVKMXW1kq6VrnIhz5",
+        "apple_music_url": "https://embed.music.apple.com/es/album/724495198?i=724497085"
       },
       "ytdlpMetadata": {
         "youtube_code": "aiRn3Zlw3Rw"
@@ -9905,7 +10005,8 @@
         "isrcs": [
           "GBCFB0600900"
         ],
-        "first_release": "2006-10-02"
+        "first_release": "2006-10-02",
+        "spotify_url": "https://open.spotify.com/embed/track/1gI1nC5E3ObyMtejdc8crP"
       },
       "ytdlpMetadata": {
         "youtube_code": "CsLkmyPg8bs"
@@ -10017,7 +10118,8 @@
         "isrcs": [
           "USRW30500001"
         ],
-        "first_release": "2005-06-10"
+        "first_release": "2005-06-10",
+        "spotify_url": "https://open.spotify.com/embed/track/5FZxsHWIvUsmSK1IAvm2pp"
       },
       "ytdlpMetadata": {
         "youtube_code": "h_L4Rixya64"
@@ -10205,7 +10307,9 @@
       "musicbrainzMetadata": {
         "release_group": "cea5d18a-1924-3cda-bebc-38933834b25d",
         "album": "Ten",
-        "first_release": "1991-08-27"
+        "first_release": "1991-08-27",
+        "spotify_url": "https://open.spotify.com/embed/album/6a5n1Frj3nxGcyTqT1xfrg",
+        "apple_music_url": "https://embed.music.apple.com/es/album/685575665"
       }
     },
     {
@@ -10326,7 +10430,9 @@
           "USWB11202727",
           "USWB11506474"
         ],
-        "first_release": "1985-06-01"
+        "first_release": "1985-06-01",
+        "youtube_code": "HzdD8kbDzZA",
+        "spotify_url": "https://open.spotify.com/embed/track/2n4zllK7PoPbJUXfWGpVmO"
       },
       "ytdlpMetadata": {
         "youtube_code": "djV11Xbc914"
@@ -10384,7 +10490,9 @@
         "isrcs": [
           "USRC10800300"
         ],
-        "first_release": "2008-08-26"
+        "first_release": "2008-08-26",
+        "spotify_url": "https://open.spotify.com/embed/track/0ntQJM78wzOLVeCUAW7Y45",
+        "apple_music_url": "https://embed.music.apple.com/es/album/290302885?i=290303003"
       },
       "ytdlpMetadata": {
         "youtube_code": "RF0HhrwIwp0"
@@ -10910,7 +11018,9 @@
         "isrcs": [
           "USAT20903996"
         ],
-        "first_release": "2009-12-11"
+        "first_release": "2009-12-11",
+        "spotify_url": "https://open.spotify.com/embed/track/6IuYJDCqWZhO2Mqx18EqJY",
+        "apple_music_url": "https://embed.music.apple.com/es/album/367204921?i=367204990"
       },
       "ytdlpMetadata": {
         "youtube_code": "5yR3jP_OxUU"
@@ -10968,7 +11078,8 @@
         "isrcs": [
           "SEVVX0700305"
         ],
-        "first_release": "2007-09-21"
+        "first_release": "2007-09-21",
+        "spotify_url": "https://open.spotify.com/embed/track/4yhqCixS1JJ2i63wqSLgE9"
       },
       "ytdlpMetadata": {
         "youtube_code": "_6rIks03cdM"
@@ -11229,7 +11340,10 @@
         "isrcs": [
           "USDW10022224"
         ],
-        "first_release": "2001-03-06"
+        "first_release": "2001-03-06",
+        "youtube_code": "mjXRapctp6k",
+        "spotify_url": "https://open.spotify.com/embed/track/0ey6L6OStPbKAbvvLBUi1D",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6790972695?i=6790973053"
       },
       "ytdlpMetadata": {
         "youtube_code": "CDl9ZMfj6aE"
@@ -11394,7 +11508,8 @@
         "isrcs": [
           "USSM10700153"
         ],
-        "first_release": "2007-03-20"
+        "first_release": "2007-03-20",
+        "spotify_url": "https://open.spotify.com/embed/track/0Fe3WxeO6lZZxj7ytvbDUh"
       },
       "ytdlpMetadata": {
         "youtube_code": "penvn9VL32Y"
@@ -11487,7 +11602,8 @@
           "USHR10622153",
           "USHR11132877"
         ],
-        "first_release": "2006-08-08"
+        "first_release": "2006-08-08",
+        "spotify_url": "https://open.spotify.com/embed/track/5pvJ59i7JxylN8VB24xdMs"
       },
       "ytdlpMetadata": {
         "youtube_code": "DWaB4PXCwFU"
@@ -11712,7 +11828,9 @@
           "GBAYE1600178",
           "GBAYE0500609"
         ],
-        "first_release": "2005-06-01"
+        "first_release": "2005-06-01",
+        "spotify_url": "https://open.spotify.com/embed/track/0WWz2AaqxLoO0fa9ou6Fqc",
+        "youtube_code": "EhC_c7p50so"
       },
       "ytdlpMetadata": {
         "youtube_code": "EhC_c7p50so"
@@ -11878,7 +11996,8 @@
           "GBCQV1900424",
           "USAT20201630"
         ],
-        "first_release": "2002-09-24"
+        "first_release": "2002-09-24",
+        "spotify_url": "https://open.spotify.com/embed/track/1K5FJO5UZYn6GkVNgKbb2m"
       },
       "ytdlpMetadata": {
         "youtube_code": "Nfql0PyA8D0"
@@ -12136,7 +12255,10 @@
         "isrcs": [
           "USSM10107256"
         ],
-        "first_release": "2001-08-27"
+        "first_release": "2001-08-27",
+        "youtube_code": "-cid1qHuy_U",
+        "spotify_url": "https://open.spotify.com/embed/track/2DlHlPMa4M17kufBvI2lEN",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1744586004?i=1744586021"
       },
       "ytdlpMetadata": {
         "youtube_code": "CSvFpBOe8eY"
@@ -12427,7 +12549,8 @@
         "isrcs": [
           "GBUM70901122"
         ],
-        "first_release": "2009-06-07"
+        "first_release": "2009-06-07",
+        "spotify_url": "https://open.spotify.com/embed/album/4X0bhkSBOfcnOPyfG5Ef6a"
       },
       "ytdlpMetadata": {
         "youtube_code": "O8owZRixRBs"
@@ -12479,7 +12602,10 @@
           "GBUM72101005",
           "GBAAA0500836"
         ],
-        "first_release": "2006-01-12"
+        "first_release": "2006-01-12",
+        "youtube_code": "4tyLvtzMwwE",
+        "spotify_url": "https://open.spotify.com/embed/track/7BHPGtpuuWWsvE7cCaMuEU",
+        "apple_music_url": "https://embed.music.apple.com/es/album/724160495?i=724160600"
       },
       "ytdlpMetadata": {
         "youtube_code": "jkaMiaRLgvY"
@@ -12628,7 +12754,9 @@
           "USSM18700216",
           "USSM18800426"
         ],
-        "first_release": "1988-10-18"
+        "first_release": "1988-10-18",
+        "spotify_url": "https://open.spotify.com/embed/track/4E226xefFbbyFDXigRs23R",
+        "apple_music_url": "https://embed.music.apple.com/es/album/193605824?i=193605920"
       },
       "ytdlpMetadata": {
         "youtube_code": "PSoOFn3wQV4"
@@ -12831,7 +12959,9 @@
       "musicbrainzMetadata": {
         "release_group": "63373d83-a96e-355c-aa44-837db92c2193",
         "album": "I Am a Bird Now",
-        "first_release": "2005-02-01"
+        "first_release": "2005-02-01",
+        "spotify_url": "https://open.spotify.com/embed/album/24Xm5zS2KvwojChzxLGdn9",
+        "apple_music_url": "https://embed.music.apple.com/es/album/260750982"
       }
     },
     {
@@ -12951,7 +13081,9 @@
         "isrcs": [
           "GBENL0200008"
         ],
-        "first_release": "2002-06-17"
+        "first_release": "2002-06-17",
+        "spotify_url": "https://open.spotify.com/embed/track/0U3qsVtcIeip9YRXxogZbC",
+        "apple_music_url": "https://embed.music.apple.com/es/album/273175524?i=273176145"
       },
       "ytdlpMetadata": {
         "youtube_code": "HOYvc1zLn_c"
@@ -13174,7 +13306,9 @@
         "isrcs": [
           "USSM10211587"
         ],
-        "first_release": "2002-11-15"
+        "first_release": "2002-11-15",
+        "youtube_code": "Wo7qhT7lBXw",
+        "spotify_url": "https://open.spotify.com/embed/track/7M4rjVT0Or32uZPsKQIoCD"
       },
       "ytdlpMetadata": {
         "youtube_code": "7QU1nvuxaMA"
@@ -13377,7 +13511,8 @@
         "isrcs": [
           "DEA450404180"
         ],
-        "first_release": "2004-09-27"
+        "first_release": "2004-09-27",
+        "spotify_url": "https://open.spotify.com/embed/track/0C8SSfZIRllA7yF8o9oq7x"
       },
       "ytdlpMetadata": {
         "youtube_code": "qz7hCazQESM"
@@ -13428,7 +13563,9 @@
           "USWB10903624",
           "USWB19800001"
         ],
-        "first_release": "1998-02-23"
+        "first_release": "1998-02-23",
+        "spotify_url": "https://open.spotify.com/embed/track/0YT8MKXuaRdhOnDG9Jm1Dv",
+        "apple_music_url": "https://embed.music.apple.com/es/album/329064696?i=329064733"
       },
       "ytdlpMetadata": {
         "youtube_code": "XS088Opj9o0"
@@ -13730,7 +13867,9 @@
       "musicbrainzMetadata": {
         "release_group": "7ae906d6-5ae6-393c-993c-8402cf5b52b7",
         "album": "The Bourne Identity",
-        "first_release": "2002-06-11"
+        "first_release": "2002-06-11",
+        "spotify_url": "https://open.spotify.com/embed/album/3aDqvGxXssMiNjhSZi7IKO",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1636991675"
       }
     },
     {
@@ -14208,7 +14347,8 @@
         "song": "Short Skirt / Long Jacket",
         "release_group": "cdb7197f-ed14-3238-a402-d0e554bcc0c8",
         "album": "Comfort Eagle",
-        "first_release": "2001-07-23"
+        "first_release": "2001-07-23",
+        "youtube_code": "X5KmB8Laemg"
       },
       "ytdlpMetadata": {
         "youtube_code": "X5KmB8Laemg"
@@ -14361,7 +14501,9 @@
           "GBCAD1300444",
           "USIR20000145"
         ],
-        "first_release": "2000-05-17"
+        "first_release": "2000-05-17",
+        "spotify_url": "https://open.spotify.com/embed/track/5cip9VYoxgGWm15QNoqpEW",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6791756811?i=6791757154"
       },
       "ytdlpMetadata": {
         "youtube_code": "vx2u5uUu3DE"
@@ -14429,7 +14571,9 @@
       "musicbrainzMetadata": {
         "release_group": "a507b67e-e106-44d6-a9a8-c59228953abc",
         "album": "Battle Studies",
-        "first_release": "2009-11-16"
+        "first_release": "2009-11-16",
+        "spotify_url": "https://open.spotify.com/embed/album/1V5vQRMWTNGmqwxY8jMVou",
+        "apple_music_url": "https://embed.music.apple.com/es/album/336390756"
       }
     },
     {
@@ -14574,7 +14718,9 @@
           "GBHCD1711391",
           "BEU010001061"
         ],
-        "first_release": "2000-08-23"
+        "first_release": "2000-08-23",
+        "spotify_url": "https://open.spotify.com/embed/track/2xC9RijCKYFMRS1gfWODqF",
+        "apple_music_url": "https://embed.music.apple.com/es/album/607172293?i=607173443"
       },
       "ytdlpMetadata": {
         "youtube_code": "xVKGXgHDMvQ"
@@ -14617,7 +14763,9 @@
           "USC4R2003794",
           "USAT29400014"
         ],
-        "first_release": "1994"
+        "first_release": "1994",
+        "spotify_url": "https://open.spotify.com/embed/track/2LflDhyBXVNrfmHxAayS3K",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1576787215?i=1576787499"
       },
       "ytdlpMetadata": {
         "youtube_code": "UNoouLa7uxA"
@@ -14706,7 +14854,10 @@
           "GBBKS9700073",
           "GBBKS9800073"
         ],
-        "first_release": "1997-06-30"
+        "first_release": "1997-06-30",
+        "youtube_code": "UsE6gxgfVzA",
+        "spotify_url": "https://open.spotify.com/embed/track/1JzwR1X7JfMXdN1jaxR528",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1454134564?i=1454134653"
       },
       "ytdlpMetadata": {
         "youtube_code": "gB5aXPgZ61s"
@@ -14922,7 +15073,8 @@
           "SEAYD7501010",
           "SEAYD7590001"
         ],
-        "first_release": "1975-04-21"
+        "first_release": "1975-04-21",
+        "spotify_url": "https://open.spotify.com/embed/track/6ZGR4XGx4tiVyPoWSGgiFq"
       },
       "ytdlpMetadata": {
         "youtube_code": "unfzfe8f9NI"
@@ -15069,7 +15221,9 @@
       "musicbrainzMetadata": {
         "release_group": "e4a3c015-3cac-31cb-8602-88d11edf5ddf",
         "album": "Gladiator: Music From the Motion Picture",
-        "first_release": "2000-04-04"
+        "first_release": "2000-04-04",
+        "spotify_url": "https://open.spotify.com/embed/album/5XgEM5g3xWEwL4Zr6UjoLo",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1510822340"
       }
     },
     {
@@ -15115,7 +15269,9 @@
         "isrcs": [
           "GBUM70710049"
         ],
-        "first_release": "2008-03-17"
+        "first_release": "2008-03-17",
+        "youtube_code": "kB03hciZlI8",
+        "spotify_url": "https://open.spotify.com/embed/track/1OZSVl0JJ1MBzibpuhmmXb"
       },
       "ytdlpMetadata": {
         "youtube_code": "0NFV8dHrZYM"
@@ -15283,7 +15439,8 @@
         "isrcs": [
           "USDW10110357"
         ],
-        "first_release": "2001-09-19"
+        "first_release": "2001-09-19",
+        "spotify_url": "https://open.spotify.com/embed/track/7iNjxpUUFTG3TvssgrgKwZ"
       },
       "ytdlpMetadata": {
         "youtube_code": "gNvhvI59YX0"
@@ -15383,7 +15540,8 @@
           "GBCVS0802439",
           "GBCVZ0802439"
         ],
-        "first_release": "2008-09-06"
+        "first_release": "2008-09-06",
+        "spotify_url": "https://open.spotify.com/embed/track/49sGyqfSqURWHIKDbkTfdQ"
       },
       "ytdlpMetadata": {
         "youtube_code": "nmK5X4KtSzA"
@@ -15425,7 +15583,9 @@
       "musicbrainzMetadata": {
         "release_group": "a89eb3b6-efe2-3d03-86c1-7e88f66695d3",
         "album": "Daughtry",
-        "first_release": "2006-11-20"
+        "first_release": "2006-11-20",
+        "apple_music_url": "https://embed.music.apple.com/es/album/214412700",
+        "spotify_url": "https://open.spotify.com/embed/album/6ii8Ja21xLGkFH8CQ6bKjj"
       }
     },
     {
@@ -15503,7 +15663,8 @@
         "isrcs": [
           "GBDCA9900067"
         ],
-        "first_release": "1999-06"
+        "first_release": "1999-06",
+        "spotify_url": "https://open.spotify.com/embed/track/6LJTOcwvjU1NB5ttQ5elsL"
       },
       "ytdlpMetadata": {
         "youtube_code": "8L64BcCRDAE"
@@ -16366,7 +16527,8 @@
         "isrcs": [
           "GBUM70605901"
         ],
-        "first_release": "2007-01-29"
+        "first_release": "2007-01-29",
+        "spotify_url": "https://open.spotify.com/embed/track/6BqWhxll86CGGE6WxgdRqG"
       },
       "ytdlpMetadata": {
         "youtube_code": "q-SJjFcnsGs"
@@ -16833,7 +16995,9 @@
         "isrcs": [
           "GBAHT0800150"
         ],
-        "first_release": "2008-03-17"
+        "first_release": "2008-03-17",
+        "spotify_url": "https://open.spotify.com/embed/track/6tC2iHfUlzB2W4ntXXL2BH",
+        "apple_music_url": "https://embed.music.apple.com/es/album/279346512?i=279346570"
       },
       "ytdlpMetadata": {
         "youtube_code": "WPbeEtjo70g"
@@ -17140,7 +17304,10 @@
           "GBFFP0300052",
           "USIR20400274"
         ],
-        "first_release": "2004-06-07"
+        "first_release": "2004-06-07",
+        "youtube_code": "m2zUrruKjDQ",
+        "spotify_url": "https://open.spotify.com/embed/track/003vvx7Niy0yvhvHt4a68B",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440717563?i=1440717826"
       },
       "ytdlpMetadata": {
         "youtube_code": "gGdGFtwCNBE"
@@ -17197,7 +17364,8 @@
           "USGF19941504",
           "USGF19141504"
         ],
-        "first_release": "1991-09-16"
+        "first_release": "1991-09-16",
+        "spotify_url": "https://open.spotify.com/embed/track/2N2yrmodOnVF10mKvItC9P"
       },
       "ytdlpMetadata": {
         "youtube_code": "zRIbf6JqkNc"
@@ -17437,7 +17605,9 @@
         "isrcs": [
           "USWB10803333"
         ],
-        "first_release": "2008-07-15"
+        "first_release": "2008-07-15",
+        "spotify_url": "https://open.spotify.com/embed/track/1G4VFKAV5bFupGsQWcCfxS",
+        "apple_music_url": "https://embed.music.apple.com/es/album/302505039?i=302505040"
       },
       "ytdlpMetadata": {
         "youtube_code": "KjShkVqz2a4"
@@ -17508,7 +17678,8 @@
         "isrcs": [
           "GBUM70708690"
         ],
-        "first_release": "2007-10-12"
+        "first_release": "2007-10-12",
+        "youtube_code": "X8BDyedO22M"
       },
       "ytdlpMetadata": {
         "youtube_code": "TqkJ30Kh7ZM"
@@ -18299,7 +18470,9 @@
         "isrcs": [
           "FRU700900116"
         ],
-        "first_release": "2010-02-17"
+        "first_release": "2010-02-17",
+        "spotify_url": "https://open.spotify.com/embed/track/4JHg4nNYUJQ5HULcCmI18R",
+        "apple_music_url": "https://embed.music.apple.com/es/album/671941810?i=671942200"
       }
     },
     {
@@ -18806,7 +18979,8 @@
           "USAT20703221",
           "USAT29900560"
         ],
-        "first_release": "1984"
+        "first_release": "1984",
+        "spotify_url": "https://open.spotify.com/embed/track/6QKToMy6096oooFMGEXije"
       },
       "ytdlpMetadata": {
         "youtube_code": "5jZ9IoMqHcY"
@@ -19195,7 +19369,9 @@
           "US78S0570701",
           "US78S0502308"
         ],
-        "first_release": "1998-03-10"
+        "first_release": "1998-03-10",
+        "spotify_url": "https://open.spotify.com/embed/track/5zNFTtuzuYNsGSfF3s1x7f",
+        "youtube_code": "IflFhpxyy-Y"
       },
       "ytdlpMetadata": {
         "youtube_code": "IflFhpxyy-Y"
@@ -19638,7 +19814,8 @@
           "USWB11403549",
           "USWB19901568"
         ],
-        "first_release": "1991-09-24"
+        "first_release": "1991-09-24",
+        "spotify_url": "https://open.spotify.com/embed/track/0cG9ocYqYOIVtgiWTmTe3g"
       },
       "ytdlpMetadata": {
         "youtube_code": "iyu04pqC8lE"
@@ -19705,7 +19882,8 @@
         "isrcs": [
           "GBGAC0700015"
         ],
-        "first_release": "2007-04-11"
+        "first_release": "2007-04-11",
+        "spotify_url": "https://open.spotify.com/embed/track/2ibNhXeLiX8fm7KQtQUIgl"
       }
     },
     {
@@ -19859,7 +20037,8 @@
           "FR31Q0900002",
           "GBUM70902408"
         ],
-        "first_release": "2009-05-22"
+        "first_release": "2009-05-22",
+        "spotify_url": "https://open.spotify.com/embed/track/1mvyqSb1tOvtVP1qfWEyPa"
       },
       "ytdlpMetadata": {
         "youtube_code": "36_4xjLFjM0"
@@ -20368,7 +20547,8 @@
           "GBAAA0000068",
           "GBAAA0000067"
         ],
-        "first_release": "2000-06-21"
+        "first_release": "2000-06-21",
+        "spotify_url": "https://open.spotify.com/embed/track/7a90gal9tr3yS8bEXUvu8D"
       },
       "ytdlpMetadata": {
         "youtube_code": "UEAhCsslqpE"
@@ -20510,7 +20690,10 @@
           "GBBKS1700112",
           "GBAYE9701368"
         ],
-        "first_release": "1997-05-21"
+        "first_release": "1997-05-21",
+        "spotify_url": "https://open.spotify.com/embed/track/63OQupATfueTdZMWTxW03A",
+        "youtube_code": "1uYWYWPc9HU",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1097861387?i=1097861836"
       },
       "ytdlpMetadata": {
         "youtube_code": "1uYWYWPc9HU"
@@ -20840,7 +21023,9 @@
         "isrcs": [
           "USGF19463401"
         ],
-        "first_release": "1994-03-01"
+        "first_release": "1994-03-01",
+        "spotify_url": "https://open.spotify.com/embed/track/5NTZM8YYeKM2YsGSffVIge",
+        "youtube_code": "YgSPaXgAdzE"
       },
       "ytdlpMetadata": {
         "youtube_code": "YgSPaXgAdzE"
@@ -21113,7 +21298,8 @@
         "isrcs": [
           "USAT20202117"
         ],
-        "first_release": "2002-10-22"
+        "first_release": "2002-10-22",
+        "spotify_url": "https://open.spotify.com/embed/track/5WDZ6xKg20YiD0PLwApRyz"
       },
       "ytdlpMetadata": {
         "youtube_code": "nCvRT2sy5FE"
@@ -21328,7 +21514,10 @@
           "USWB10704707",
           "USWB19800160"
         ],
-        "first_release": "1998-09-22"
+        "first_release": "1998-09-22",
+        "youtube_code": "Dy_eP-mqWow",
+        "spotify_url": "https://open.spotify.com/embed/track/2mtVxf50BYsKNtQoz8sfzm",
+        "apple_music_url": "https://embed.music.apple.com/es/album/267536485?i=267537169"
       },
       "ytdlpMetadata": {
         "youtube_code": "NdYWuo9OFAw"
@@ -21473,7 +21662,8 @@
           "USRH11804134",
           "USAT29800349"
         ],
-        "first_release": "1989-01-24"
+        "first_release": "1989-01-24",
+        "spotify_url": "https://open.spotify.com/embed/track/0qgrrDnUUhyxpxbBznUnzg"
       },
       "ytdlpMetadata": {
         "youtube_code": "ZLwwIe_PjhE"
@@ -21608,7 +21798,8 @@
         "isrcs": [
           "USIR19902517"
         ],
-        "first_release": "1999-09-01"
+        "first_release": "1999-09-01",
+        "youtube_code": "C3lWwBslWqg"
       },
       "ytdlpMetadata": {
         "youtube_code": "C3lWwBslWqg"
@@ -21806,7 +21997,10 @@
         "isrcs": [
           "USGF19816401"
         ],
-        "first_release": "1998-09-02"
+        "first_release": "1998-09-02",
+        "youtube_code": "Bv9d27d1Byg",
+        "spotify_url": "https://open.spotify.com/embed/track/73Iw7xqdYyaf8a2bbERcj3",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6799151579?i=6799152059"
       },
       "ytdlpMetadata": {
         "youtube_code": "O3dWBLoU--E"
@@ -21850,7 +22044,8 @@
           "USAM10110099",
           "USAM19800072"
         ],
-        "first_release": "1998-06-16"
+        "first_release": "1998-06-16",
+        "spotify_url": "https://open.spotify.com/embed/track/09bkkXFpOVi3aPLvByyWD5"
       },
       "ytdlpMetadata": {
         "youtube_code": "dscfeQOMuGw"
@@ -21967,7 +22162,8 @@
           "USCA20300307",
           "USRHD0531632"
         ],
-        "first_release": "2003-07-21"
+        "first_release": "2003-07-21",
+        "spotify_url": "https://open.spotify.com/embed/track/6z4CTIToU7a03Rq07F9FF4"
       },
       "ytdlpMetadata": {
         "youtube_code": "T68sBbo9LlI"
@@ -22115,7 +22311,9 @@
           "FRZ810607794",
           "GBAJH0000082"
         ],
-        "first_release": "2000-09-11"
+        "first_release": "2000-09-11",
+        "spotify_url": "https://open.spotify.com/embed/track/1zgep5cR2ZjHRKLi3qqbl8",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1435646598?i=1435646607"
       },
       "ytdlpMetadata": {
         "youtube_code": "KHM4PrHqNCo"
@@ -22302,7 +22500,9 @@
         "isrcs": [
           "GBUM71021644"
         ],
-        "first_release": "2010-07-03"
+        "first_release": "2010-07-03",
+        "spotify_url": "https://open.spotify.com/embed/track/37EmPMVwdBaKs7UhJOkHUU",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1252757950?i=1252758323"
       },
       "ytdlpMetadata": {
         "youtube_code": "wRFkxOM90UA"
@@ -22346,7 +22546,9 @@
           "USAHB1000664",
           "USAHB1000639"
         ],
-        "first_release": "2010-02-14"
+        "first_release": "2010-02-14",
+        "spotify_url": "https://open.spotify.com/embed/track/1WhcapNu5f96cigVRmEjSL",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1610400335?i=1610400700"
       },
       "ytdlpMetadata": {
         "youtube_code": "9mqVekWJwxo"
@@ -22936,7 +23138,9 @@
       "musicbrainzMetadata": {
         "release_group": "bac471c8-02e3-4013-ae07-b6166e2059fa",
         "album": "Tiger Suit",
-        "first_release": "2010-09-22"
+        "first_release": "2010-09-22",
+        "spotify_url": "https://open.spotify.com/embed/album/2qkkwNpRD7j4z5o50NsOVN",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1588764586"
       }
     },
     {
@@ -23168,7 +23372,8 @@
           "USRC17201946",
           "USRC10200416"
         ],
-        "first_release": "1972-11-08"
+        "first_release": "1972-11-08",
+        "spotify_url": "https://open.spotify.com/embed/track/4TOMI010Sd4ZAX4aZ5TS85"
       },
       "ytdlpMetadata": {
         "youtube_code": "9wxI4KK9ZYo"
@@ -23722,7 +23927,8 @@
         "isrcs": [
           "USA6G0527109"
         ],
-        "first_release": "1999-01-01"
+        "first_release": "1999-01-01",
+        "spotify_url": "https://open.spotify.com/embed/track/3q2e5D6NGrfh9Mx7WlrnHq"
       },
       "ytdlpMetadata": {
         "youtube_code": "SkkIwO_X4i4"
@@ -23755,7 +23961,8 @@
         "isrcs": [
           "USCA20300003"
         ],
-        "first_release": "2003-05-19"
+        "first_release": "2003-05-19",
+        "spotify_url": "https://open.spotify.com/embed/track/7hpFYWL3cw5m4y70cce7Zb"
       },
       "ytdlpMetadata": {
         "youtube_code": "Bm1g5Yg0hUw"
@@ -23846,7 +24053,8 @@
         "song": "Nemo",
         "release_group": "84d8f181-8307-360f-bd50-8b6ce1309751",
         "album": "Once",
-        "first_release": "2004-06-07"
+        "first_release": "2004-06-07",
+        "youtube_code": "rNg2Dh6gPkw"
       },
       "ytdlpMetadata": {
         "youtube_code": "rNg2Dh6gPkw"
@@ -23890,7 +24098,9 @@
           "NLF050390207",
           "GBAHS0104435"
         ],
-        "first_release": "1993-12"
+        "first_release": "1993-12",
+        "youtube_code": "-wBkKED42oo",
+        "spotify_url": "https://open.spotify.com/embed/track/2oDR7QWoLBk9VYMwsFbRGq"
       }
     },
     {
@@ -24137,7 +24347,8 @@
       "musicbrainzMetadata": {
         "release_group": "ce4d29aa-6347-402e-8cd0-81aa5909ba10",
         "album": "Live in London",
-        "first_release": "2010-11-19"
+        "first_release": "2010-11-19",
+        "apple_music_url": "https://embed.music.apple.com/es/album/403901596"
       }
     },
     {
@@ -24188,7 +24399,9 @@
           "GBDJQ7900022",
           "USSM17900251"
         ],
-        "first_release": "1979-11-30"
+        "first_release": "1979-11-30",
+        "spotify_url": "https://open.spotify.com/embed/track/30birPSEM6ClZrV2RLglyQ",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1067444712?i=1067444896"
       },
       "ytdlpMetadata": {
         "youtube_code": "7kWl-ZGMwkQ"
@@ -24313,7 +24526,8 @@
         "isrcs": [
           "GBCVZ0501391"
         ],
-        "first_release": "2006-02-06"
+        "first_release": "2006-02-06",
+        "spotify_url": "https://open.spotify.com/embed/track/3mNR11M9RLdJbQRxCl6tni"
       },
       "ytdlpMetadata": {
         "youtube_code": "CQwcqwHvrus"
@@ -24356,7 +24570,8 @@
           "GBAFL0700153",
           "USCPT0700043"
         ],
-        "first_release": "2007-10-08"
+        "first_release": "2007-10-08",
+        "spotify_url": "https://open.spotify.com/embed/track/1WBSFlSLyOZnSa8fj7a5yC"
       },
       "ytdlpMetadata": {
         "youtube_code": "dPRYEZx01qU"
@@ -24615,7 +24830,9 @@
         "isrcs": [
           "GBBKS0900025"
         ],
-        "first_release": "2009-08-14"
+        "first_release": "2009-08-14",
+        "spotify_url": "https://open.spotify.com/embed/track/5UBBJnFxsfjFxfrtvErQoH",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1850810462?i=1850810465"
       },
       "ytdlpMetadata": {
         "youtube_code": "Pib8eYDSFEI"
@@ -24715,7 +24932,8 @@
           "USWB10504979",
           "USWB10504917"
         ],
-        "first_release": "2005-11-11"
+        "first_release": "2005-11-11",
+        "youtube_code": "Rx0mYN32Kps"
       },
       "ytdlpMetadata": {
         "youtube_code": "Rx0mYN32Kps"
@@ -24827,7 +25045,9 @@
         "isrcs": [
           "FIWMA1000179"
         ],
-        "first_release": "2010-03-31"
+        "first_release": "2010-03-31",
+        "spotify_url": "https://open.spotify.com/embed/track/3tjJyUaaqTIXY7am2mF855",
+        "apple_music_url": "https://embed.music.apple.com/es/album/362180473?i=362180487"
       },
       "ytdlpMetadata": {
         "youtube_code": "EO0p_U1w89A"
@@ -24877,7 +25097,8 @@
         "isrcs": [
           "FR6P10901230"
         ],
-        "first_release": "2009-12-03"
+        "first_release": "2009-12-03",
+        "spotify_url": "https://open.spotify.com/embed/track/5FrbEiNS4IT5AAlU60XoVn"
       },
       "ytdlpMetadata": {
         "youtube_code": "NARh2xZeegM"
@@ -25208,7 +25429,9 @@
         "isrcs": [
           "GBAYE1001401"
         ],
-        "first_release": "2010-12-01"
+        "first_release": "2010-12-01",
+        "spotify_url": "https://open.spotify.com/embed/track/4fzyvSu73BhGvi96p2zwjL",
+        "youtube_code": "ptfBPEQZQAg"
       },
       "ytdlpMetadata": {
         "youtube_code": "z1rYmzQ8C9Q"
@@ -25235,7 +25458,9 @@
       "musicbrainzMetadata": {
         "release_group": "dcf699e6-3948-38fd-a3de-cf6bf0c61030",
         "album": "Alas I Cannot Swim",
-        "first_release": "2008-02-11"
+        "first_release": "2008-02-11",
+        "spotify_url": "https://open.spotify.com/embed/album/6C5vaAEWNO1ayXvYwv45Q2",
+        "apple_music_url": "https://embed.music.apple.com/es/album/714761357"
       }
     },
     {
@@ -25384,7 +25609,8 @@
           "GBBXH0100093",
           "USAR19900862"
         ],
-        "first_release": "1999-06-01"
+        "first_release": "1999-06-01",
+        "spotify_url": "https://open.spotify.com/embed/track/5RfAE6BeGzLX9fIcuq8iAL"
       },
       "ytdlpMetadata": {
         "youtube_code": "1qmKk7fj9Ug"
@@ -25583,7 +25809,8 @@
         "isrcs": [
           "GBBKS0700588"
         ],
-        "first_release": "2008-01-27"
+        "first_release": "2008-01-27",
+        "spotify_url": "https://open.spotify.com/embed/track/4zFHwVj4A8s0G5f7aOlpKo"
       },
       "ytdlpMetadata": {
         "youtube_code": "BW9Fzwuf43c"
@@ -25662,7 +25889,9 @@
           "GBARL1100703",
           "GBBBN9601018"
         ],
-        "first_release": "1996-09-11"
+        "first_release": "1996-09-11",
+        "spotify_url": "https://open.spotify.com/embed/track/0D4L0fEkGaxLYP9EGg4xS0",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1694076566?i=1694076582"
       },
       "ytdlpMetadata": {
         "youtube_code": "pyExn6paD0U"
@@ -25730,7 +25959,8 @@
         "isrcs": [
           "GBDCG0400007"
         ],
-        "first_release": "2004-06-21"
+        "first_release": "2004-06-21",
+        "youtube_code": "OczRpuGKTfY"
       },
       "ytdlpMetadata": {
         "youtube_code": "BluHmpE8WfE"
@@ -25795,7 +26025,10 @@
         "isrcs": [
           "FRS639700560"
         ],
-        "first_release": "1998-01-16"
+        "first_release": "1998-01-16",
+        "spotify_url": "https://open.spotify.com/embed/track/6INLpBxo9F5QMer04VXEnd",
+        "youtube_code": "wouKI_myXxk",
+        "apple_music_url": "https://embed.music.apple.com/es/album/697240234?i=697240266"
       },
       "ytdlpMetadata": {
         "youtube_code": "R6Yfk-RL_9A"
@@ -25948,7 +26181,8 @@
           "DEG930610160",
           "GBARL0700179"
         ],
-        "first_release": "2006-03-13"
+        "first_release": "2006-03-13",
+        "spotify_url": "https://open.spotify.com/embed/track/341zzm98KLs7O1GGjErHzO"
       },
       "ytdlpMetadata": {
         "youtube_code": "B2DlKf8_8Ck"
@@ -26149,7 +26383,8 @@
         "isrcs": [
           "USMRG0340037"
         ],
-        "first_release": "2002-08-20"
+        "first_release": "2002-08-20",
+        "spotify_url": "https://open.spotify.com/embed/track/2k6TManBkFAweRUCH6jYny"
       },
       "ytdlpMetadata": {
         "youtube_code": "jCG2XNaODnM"
@@ -26223,7 +26458,9 @@
           "GBAYE1100924",
           "GBAYE7800619"
         ],
-        "first_release": "1978"
+        "first_release": "1978",
+        "spotify_url": "https://open.spotify.com/embed/track/0eady1ff8YgWQY7bSYt7Fk",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1714781747?i=1714782632"
       },
       "ytdlpMetadata": {
         "youtube_code": "Fo6aKnRnBxM"
@@ -26371,7 +26608,8 @@
           "DEE868300007",
           "DEE868300011"
         ],
-        "first_release": "1984"
+        "first_release": "1984",
+        "youtube_code": "JW00hp7KVzc"
       },
       "ytdlpMetadata": {
         "youtube_code": "Fpu5a0Bl8eY"
@@ -26448,7 +26686,8 @@
           "USRH10901858",
           "USRE19901525"
         ],
-        "first_release": "1992-04-14"
+        "first_release": "1992-04-14",
+        "spotify_url": "https://open.spotify.com/embed/track/1U5rYDi9jUBnU2yJqOGnLX"
       },
       "ytdlpMetadata": {
         "youtube_code": "g-UOTOqtU0M"
@@ -26553,7 +26792,8 @@
           "GBAJH0200045",
           "USVT10200011"
         ],
-        "first_release": "2002-05-02"
+        "first_release": "2002-05-02",
+        "spotify_url": "https://open.spotify.com/embed/track/1ri0jogXgL9CSgFGucTNvR"
       },
       "ytdlpMetadata": {
         "youtube_code": "qp7KX1h3i_w"
@@ -26610,7 +26850,8 @@
       "musicbrainzMetadata": {
         "release_group": "435fe38e-404c-3887-8300-cc94420a121c",
         "album": "You’ve Come a Long Way, Baby",
-        "first_release": "1998-10-12"
+        "first_release": "1998-10-12",
+        "spotify_url": "https://open.spotify.com/embed/album/0J43YxxLFPZxIrCd12LRuN"
       }
     },
     {
@@ -26930,7 +27171,8 @@
       "musicbrainzMetadata": {
         "release_group": "c7ddfdae-0d61-4fde-be30-bacb35b3bc4d",
         "album": "Pablo Alborán",
-        "first_release": "2011-01-28"
+        "first_release": "2011-01-28",
+        "spotify_url": "https://open.spotify.com/embed/album/1PfEXmG8ioEwsj7qDaCQXc"
       }
     },
     {
@@ -27222,7 +27464,9 @@
           "USC4R1901438",
           "USWB19901513"
         ],
-        "first_release": "1994-09-23"
+        "first_release": "1994-09-23",
+        "youtube_code": "6Qim5MsVlVo",
+        "spotify_url": "https://open.spotify.com/embed/track/4ymd3iAOgswyIZFHdwTILF"
       },
       "ytdlpMetadata": {
         "youtube_code": "j4iuG7StmPc"
@@ -27324,7 +27568,9 @@
         "isrcs": [
           "GBCEL0700067"
         ],
-        "first_release": "2007-04-18"
+        "first_release": "2007-04-18",
+        "spotify_url": "https://open.spotify.com/embed/track/2x8evxqUlF0eRabbW2JBJd",
+        "apple_music_url": "https://embed.music.apple.com/es/album/251126923?i=251126957"
       },
       "ytdlpMetadata": {
         "youtube_code": "ma9I9VBKPiw"
@@ -27638,7 +27884,9 @@
         "isrcs": [
           "DEZ650711846"
         ],
-        "first_release": "2005-02-28"
+        "first_release": "2005-02-28",
+        "spotify_url": "https://open.spotify.com/embed/track/2qgLMzMhA0wJrIKcm81V0K",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1000859450?i=1000859507"
       },
       "ytdlpMetadata": {
         "youtube_code": "zP5G7r7YQgI"
@@ -28193,7 +28441,8 @@
           "QZPJ32348939",
           "USSM19502563"
         ],
-        "first_release": "1996-03-28"
+        "first_release": "1996-03-28",
+        "spotify_url": "https://open.spotify.com/embed/track/0tZ3mElWcr74OOhKEiNz1x"
       },
       "ytdlpMetadata": {
         "youtube_code": "3L4YrGaR8E4"
@@ -28390,7 +28639,8 @@
         "isrcs": [
           "USSM19911009"
         ],
-        "first_release": "1999-10-26"
+        "first_release": "1999-10-26",
+        "spotify_url": "https://open.spotify.com/embed/track/0ZVorBFSmsJBE0pczFzIvk"
       },
       "ytdlpMetadata": {
         "youtube_code": "FSBiplT9pi8"
@@ -28439,7 +28689,8 @@
         "isrcs": [
           "USRC10301518"
         ],
-        "first_release": "2003-10-16"
+        "first_release": "2003-10-16",
+        "spotify_url": "https://open.spotify.com/embed/track/78Gzxi27GuNHTfkn2BylG4"
       },
       "ytdlpMetadata": {
         "youtube_code": "yQOJTLylm-A"
@@ -28540,7 +28791,9 @@
         "isrcs": [
           "USDW10021694"
         ],
-        "first_release": "2000-04-17"
+        "first_release": "2000-04-17",
+        "spotify_url": "https://open.spotify.com/embed/track/6tPiCU4LFsXUQPRIykOAnl",
+        "youtube_code": "afeAUndotas"
       },
       "ytdlpMetadata": {
         "youtube_code": "afeAUndotas"
@@ -28651,7 +28904,8 @@
         "isrcs": [
           "GBAYE9701387"
         ],
-        "first_release": "1997-07-25"
+        "first_release": "1997-07-25",
+        "spotify_url": "https://open.spotify.com/embed/track/7ItpUlCUwTRyiXZ0YclPQ7"
       },
       "ytdlpMetadata": {
         "youtube_code": "6XKvbROUmNk"
@@ -28754,7 +29008,8 @@
         "isrcs": [
           "GBAMY9700331"
         ],
-        "first_release": "1998-04-29"
+        "first_release": "1998-04-29",
+        "spotify_url": "https://open.spotify.com/embed/track/6q1pd4xCMHPb9PADvGBhWe"
       },
       "ytdlpMetadata": {
         "youtube_code": "QjdK9oRdKGM"
@@ -28822,7 +29077,8 @@
         "isrcs": [
           "AUAP09000014"
         ],
-        "first_release": "1990-09-21"
+        "first_release": "1990-09-21",
+        "youtube_code": "v2AC41dglnM"
       },
       "ytdlpMetadata": {
         "youtube_code": "v2AC41dglnM"
@@ -28857,7 +29113,9 @@
       "musicbrainzMetadata": {
         "release_group": "93d5a1d1-73c0-34d3-b7f1-49473c48face",
         "album": "Songs About Jane",
-        "first_release": "2002-06-25"
+        "first_release": "2002-06-25",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440851650",
+        "spotify_url": "https://open.spotify.com/embed/album/1Rv9WRKyYhFaGbuYDaQunN"
       }
     },
     {
@@ -28926,7 +29184,8 @@
         "isrcs": [
           "GBDGG0000014"
         ],
-        "first_release": "2000-04-03"
+        "first_release": "2000-04-03",
+        "spotify_url": "https://open.spotify.com/embed/track/6Ux6eeFcmChiRFqA5cDJy2"
       },
       "ytdlpMetadata": {
         "youtube_code": "Jj1VKss9FWw"
@@ -29009,7 +29268,10 @@
         "isrcs": [
           "USCA29300105"
         ],
-        "first_release": "1993-09-27"
+        "first_release": "1993-09-27",
+        "youtube_code": "avv2IIdDnnk",
+        "spotify_url": "https://open.spotify.com/embed/track/1LzNfuep1bnAUR9skqdHCK",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440848808?i=1440848810"
       },
       "ytdlpMetadata": {
         "youtube_code": "ImKY6TZEyrI"
@@ -29188,7 +29450,9 @@
         "isrcs": [
           "FR89R0800001"
         ],
-        "first_release": "2008-10-20"
+        "first_release": "2008-10-20",
+        "spotify_url": "https://open.spotify.com/embed/track/6rDBZ713unxrYEtvwvn9Kn",
+        "youtube_code": "inHbha2nyPs"
       },
       "ytdlpMetadata": {
         "youtube_code": "inHbha2nyPs"
@@ -29252,7 +29516,9 @@
           "UKZKB2500001",
           "GBDVX0400056"
         ],
-        "first_release": "2005-03-07"
+        "first_release": "2005-03-07",
+        "spotify_url": "https://open.spotify.com/embed/track/5u5kxfOW5OlNIvQXlkk9ED",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6803617369?i=6803618011"
       },
       "ytdlpMetadata": {
         "youtube_code": "xAkg4cwJp1Y"
@@ -29398,7 +29664,8 @@
           "GBCQV2000559",
           "GBQGU0900043"
         ],
-        "first_release": "2009-09-11"
+        "first_release": "2009-09-11",
+        "spotify_url": "https://open.spotify.com/embed/track/66LtH18spUS20HD5kZn7TM"
       },
       "ytdlpMetadata": {
         "youtube_code": "UkJBS0Zazmw"
@@ -29513,7 +29780,9 @@
         "isrcs": [
           "USSM19400814"
         ],
-        "first_release": "1994-10-25"
+        "first_release": "1994-10-25",
+        "spotify_url": "https://open.spotify.com/embed/track/5EvmbJOcjZkO5KBWqvtYOP",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1443919777?i=1443920055"
       }
     },
     {
@@ -29685,7 +29954,9 @@
         "isrcs": [
           "USRHD0610205"
         ],
-        "first_release": "1975-01-01"
+        "first_release": "1975-01-01",
+        "spotify_url": "https://open.spotify.com/embed/track/6x959m2QDvatSwUAVCHIuf",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1202370682?i=1202371164"
       },
       "ytdlpMetadata": {
         "youtube_code": "sH0Qda32IKM"
@@ -29819,7 +30090,8 @@
         "isrcs": [
           "USSUB0669004"
         ],
-        "first_release": "2006-03-21"
+        "first_release": "2006-03-21",
+        "spotify_url": "https://open.spotify.com/embed/track/5lRzWDEe7UuedU2QPsFg0K"
       },
       "ytdlpMetadata": {
         "youtube_code": "HJ9qLSpuJ7M"
@@ -29853,7 +30125,8 @@
         "isrcs": [
           "GBBKS0700586"
         ],
-        "first_release": "2008-01-27"
+        "first_release": "2008-01-27",
+        "spotify_url": "https://open.spotify.com/embed/track/273QnyCvJB65rScHJ1nPZb"
       },
       "ytdlpMetadata": {
         "youtube_code": "9IzKueQ2ZxY"
@@ -29933,7 +30206,9 @@
         "isrcs": [
           "SEBKB9802010"
         ],
-        "first_release": "1998-10-19"
+        "first_release": "1998-10-19",
+        "youtube_code": "o_UBvlWJPWQ",
+        "spotify_url": "https://open.spotify.com/embed/track/0Ui05Ov0s4PnRc4JI3Pilg"
       },
       "ytdlpMetadata": {
         "youtube_code": "u9WgtlgGAgs"
@@ -30052,7 +30327,10 @@
           "USAM19400007",
           "USAMI9400007"
         ],
-        "first_release": "1994-03-07"
+        "first_release": "1994-03-07",
+        "youtube_code": "9kIv6vVRKpw",
+        "spotify_url": "https://open.spotify.com/embed/track/1PWweee9xU2dA1p9w6bQuJ",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1443210826?i=1443211417"
       }
     },
     {
@@ -30356,7 +30634,9 @@
         "isrcs": [
           "GBPNH0700002"
         ],
-        "first_release": "2008-01-08"
+        "first_release": "2008-01-08",
+        "spotify_url": "https://open.spotify.com/embed/track/0aSdH48aHnE8KdSf39vWFF",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1648620567?i=1648620718"
       },
       "ytdlpMetadata": {
         "youtube_code": "JTLsF5hbuO8"
@@ -30510,7 +30790,8 @@
           "DEA349503011",
           "DEA349502964"
         ],
-        "first_release": "1995-12-07"
+        "first_release": "1995-12-07",
+        "youtube_code": "enPg09IpUjU"
       },
       "ytdlpMetadata": {
         "youtube_code": "wCQfkEkePx8"
@@ -30619,7 +30900,8 @@
           "USCH30100133",
           "USCH39200004"
         ],
-        "first_release": "2002-01-29"
+        "first_release": "2002-01-29",
+        "spotify_url": "https://open.spotify.com/embed/track/7ybBm8EkdDR0Hu7Dbcy1lT"
       },
       "ytdlpMetadata": {
         "youtube_code": "qcnPfHS24Pg"
@@ -30661,7 +30943,9 @@
         "isrcs": [
           "USSM10605926"
         ],
-        "first_release": "2007-03-14"
+        "first_release": "2007-03-14",
+        "spotify_url": "https://open.spotify.com/embed/track/5tA0Xhrb6mkksQhRE5sQ9z",
+        "apple_music_url": "https://embed.music.apple.com/es/album/271448504?i=271448509"
       },
       "ytdlpMetadata": {
         "youtube_code": "2lP5Og2tyVQ"
@@ -30734,7 +31018,9 @@
         "isrcs": [
           "USRE10901849"
         ],
-        "first_release": "2010-02-08"
+        "first_release": "2010-02-08",
+        "spotify_url": "https://open.spotify.com/embed/track/3h8mfw84zvx8aQh7e8aeBy",
+        "youtube_code": "rJzJDWkCEQM"
       },
       "ytdlpMetadata": {
         "youtube_code": "PHzAavDjTR0"
@@ -31198,7 +31484,9 @@
         "isrcs": [
           "USMC19857421"
         ],
-        "first_release": "1998-03-24"
+        "first_release": "1998-03-24",
+        "spotify_url": "https://open.spotify.com/embed/track/1OhctVvuAU8kVCtzDWsCTj",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1432108891?i=1432110505"
       },
       "ytdlpMetadata": {
         "youtube_code": "kryV3E4QKGk"
@@ -31505,7 +31793,9 @@
           "GBARL1100962",
           "GBBBM9802044"
         ],
-        "first_release": "1998-09-09"
+        "first_release": "1998-09-09",
+        "spotify_url": "https://open.spotify.com/embed/track/0RbcNXEIVt4g78DXaHMFQV",
+        "youtube_code": "5ywga4gItmc"
       },
       "ytdlpMetadata": {
         "youtube_code": "cX8szNPgrEs"
@@ -31654,7 +31944,9 @@
         "isrcs": [
           "USSM10107262"
         ],
-        "first_release": "2001-08-27"
+        "first_release": "2001-08-27",
+        "spotify_url": "https://open.spotify.com/embed/track/0snQkGI5qnAmohLE7jTsTn",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1744586004?i=1744586141"
       },
       "ytdlpMetadata": {
         "youtube_code": "iywaBOMvYLI"
@@ -31969,7 +32261,10 @@
         "isrcs": [
           "GBAHT0500592"
         ],
-        "first_release": "2006-06-28"
+        "first_release": "2006-06-28",
+        "spotify_url": "https://open.spotify.com/embed/track/2Jlq1yNoXP548kPZcKRl18",
+        "youtube_code": "Pgum6OT_VH8",
+        "apple_music_url": "https://embed.music.apple.com/es/album/317961444?i=317961447"
       },
       "ytdlpMetadata": {
         "youtube_code": "Pgum6OT_VH8"
@@ -32026,7 +32321,8 @@
           "USJT11700005",
           "USJT19900130"
         ],
-        "first_release": "1977-10-14"
+        "first_release": "1977-10-14",
+        "spotify_url": "https://open.spotify.com/embed/album/4I5zzKYd2SKDgZ9DRf5LVk"
       },
       "ytdlpMetadata": {
         "youtube_code": "lXgkuM2NhYI"
@@ -32239,7 +32535,8 @@
       "musicbrainzMetadata": {
         "release_group": "c1c4e0c4-fc82-44fa-9032-16d81b327ab7",
         "album": "La fabulosa historia de...",
-        "first_release": "2009-05-26"
+        "first_release": "2009-05-26",
+        "spotify_url": "https://open.spotify.com/embed/album/0rvRFArQ6SlABePrcCNEZn"
       }
     },
     {
@@ -32416,7 +32713,9 @@
         "isrcs": [
           "GBG4U1000003"
         ],
-        "first_release": "2010-09-08"
+        "first_release": "2010-09-08",
+        "spotify_url": "https://open.spotify.com/embed/track/5nXg90TXS8BuL1lAGVAubv",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1494515637?i=1494515857"
       },
       "ytdlpMetadata": {
         "youtube_code": "LjZWlffF-d0"
@@ -32804,7 +33103,9 @@
       "musicbrainzMetadata": {
         "release_group": "48599cd5-8def-3224-8e68-6551d2e2c19f",
         "album": "Mad Dogs & Englishmen",
-        "first_release": "1970-08"
+        "first_release": "1970-08",
+        "spotify_url": "https://open.spotify.com/embed/album/7kXPAQK9SXrGuvvfjjsEjN",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1425140968"
       }
     },
     {
@@ -33055,7 +33356,9 @@
       "musicbrainzMetadata": {
         "release_group": "70ab1f74-0ce1-3112-ba56-a0a9ed98d3ee",
         "album": "Music From Braid",
-        "first_release": "2009-04-09"
+        "first_release": "2009-04-09",
+        "spotify_url": "https://open.spotify.com/embed/album/39atgCIirIYwhiuiYdgLmM",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1745311431"
       }
     },
     {
@@ -33147,7 +33450,8 @@
           "USCA10000241",
           "USCA20000241"
         ],
-        "first_release": "2000-06-12"
+        "first_release": "2000-06-12",
+        "spotify_url": "https://open.spotify.com/embed/track/0yEhNqCwEfy8LHUmnZoHpP"
       },
       "ytdlpMetadata": {
         "youtube_code": "CU3mc0yvRNk"
@@ -33261,7 +33565,9 @@
           "USDW10110270",
           "USDW10110177"
         ],
-        "first_release": "2001-08-27"
+        "first_release": "2001-08-27",
+        "spotify_url": "https://open.spotify.com/embed/track/5M5mzimlah21xlC1rAuIuY",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440517518?i=1440517522"
       },
       "ytdlpMetadata": {
         "youtube_code": "0mYBSayCsH0"
@@ -33632,7 +33938,9 @@
         "isrcs": [
           "GBBKS1000335"
         ],
-        "first_release": "2011-01-19"
+        "first_release": "2011-01-19",
+        "spotify_url": "https://open.spotify.com/embed/track/4OSBTYWVwsQhGLF9NHvIbR",
+        "youtube_code": "rYEDA3JcQqw"
       },
       "ytdlpMetadata": {
         "youtube_code": "rYEDA3JcQqw"
@@ -34017,7 +34325,8 @@
           "DEX170420804",
           "USNO11401288"
         ],
-        "first_release": "1972-11"
+        "first_release": "1972-11",
+        "spotify_url": "https://open.spotify.com/embed/track/4zdsBics0asw0gj4L5wu5v"
       },
       "ytdlpMetadata": {
         "youtube_code": "YmN9oHa3ZIQ"
@@ -34082,7 +34391,8 @@
         "isrcs": [
           "GBUM70916516"
         ],
-        "first_release": "2010-01-01"
+        "first_release": "2010-01-01",
+        "spotify_url": "https://open.spotify.com/embed/track/26Vf29fPDPShyKNoEZJoAq"
       },
       "ytdlpMetadata": {
         "youtube_code": "Ph7-BeEQW4Y"
@@ -34380,7 +34690,9 @@
         "isrcs": [
           "USUM71019328"
         ],
-        "first_release": "2010-08-27"
+        "first_release": "2010-08-27",
+        "youtube_code": "jRfDNnioH30",
+        "spotify_url": "https://open.spotify.com/embed/track/0JaCpPppNvZnSFtA2V5uFy"
       },
       "ytdlpMetadata": {
         "youtube_code": "Y7VGOnV2QhU"
@@ -34621,7 +34933,8 @@
         "isrcs": [
           "USIR19902521"
         ],
-        "first_release": "1999-09-01"
+        "first_release": "1999-09-01",
+        "youtube_code": "lC5WALVS-zw"
       },
       "ytdlpMetadata": {
         "youtube_code": "lC5WALVS-zw"
@@ -34663,7 +34976,9 @@
         "isrcs": [
           "USJAY0800153"
         ],
-        "first_release": "2008-10-24"
+        "first_release": "2008-10-24",
+        "spotify_url": "https://open.spotify.com/embed/track/01bMpqmvH031R417l3AQTA",
+        "apple_music_url": "https://embed.music.apple.com/es/album/293229932?i=293230345"
       },
       "ytdlpMetadata": {
         "youtube_code": "hM5UJvnbbuY"
@@ -34756,7 +35071,10 @@
           "USCH30100029",
           "USCH37800020"
         ],
-        "first_release": "1978-09-08"
+        "first_release": "1978-09-08",
+        "youtube_code": "Fnb1xYDViDs",
+        "spotify_url": "https://open.spotify.com/embed/track/4cQJ27R11K634x5qCOwKW5",
+        "apple_music_url": "https://embed.music.apple.com/es/album/724578151?i=724578931"
       },
       "ytdlpMetadata": {
         "youtube_code": "_zBwRDEFMRY"
@@ -34872,7 +35190,8 @@
         "song": "In Bloom",
         "release_group": "1b022e01-4da6-387b-8658-8678046e4cef",
         "album": "Nevermind",
-        "first_release": "1991-09-24"
+        "first_release": "1991-09-24",
+        "youtube_code": "PbgKEjNBHqM"
       },
       "ytdlpMetadata": {
         "youtube_code": "PbgKEjNBHqM"
@@ -35321,7 +35640,9 @@
         "isrcs": [
           "USBN20100889"
         ],
-        "first_release": "2002-02-26"
+        "first_release": "2002-02-26",
+        "spotify_url": "https://open.spotify.com/embed/track/6jGnykaS6TkWp15utXSAeI",
+        "youtube_code": "9IZ_d6zadGw"
       },
       "ytdlpMetadata": {
         "youtube_code": "lbjZPFBD6JU"
@@ -35452,7 +35773,9 @@
       "musicbrainzMetadata": {
         "release_group": "dd2203dd-a149-316b-ad7f-a303dc4fc459",
         "album": "The Score",
-        "first_release": "1996-02-12"
+        "first_release": "1996-02-12",
+        "spotify_url": "https://open.spotify.com/embed/album/18XFe4CPBgVezXkxZP6rTb",
+        "apple_music_url": "https://embed.music.apple.com/es/album/281701670"
       }
     },
     {
@@ -35537,7 +35860,8 @@
           "GBFO88500676",
           "GBF088500676"
         ],
-        "first_release": "1985-05-15"
+        "first_release": "1985-05-15",
+        "spotify_url": "https://open.spotify.com/embed/track/2oKOGvdJ5BQEiguaSQJJpc"
       }
     },
     {
@@ -35760,7 +36084,9 @@
           "USWU31100060",
           "USWU31100059"
         ],
-        "first_release": "2011-10-05"
+        "first_release": "2011-10-05",
+        "spotify_url": "https://open.spotify.com/embed/track/0uOo8xRtQ6okTZMR89ppVk",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440641905?i=1440641920"
       }
     },
     {
@@ -35959,7 +36285,9 @@
         "song": "No te dolerá",
         "release_group": "d8dd728a-83c3-4b8a-9419-dc7c96308113",
         "album": "José Antonio Delgado: 2005",
-        "first_release": "2005"
+        "first_release": "2005",
+        "spotify_url": "https://open.spotify.com/embed/track/1QqVRpTBUnC5ZWDKjoVDed",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1492352544?i=1492352549"
       },
       "ytdlpMetadata": {
         "youtube_code": "1iz1Nv0rJSk"
@@ -36052,7 +36380,8 @@
       "musicbrainzMetadata": {
         "release_group": "2ad55d15-fa17-4f0b-91d0-9916a65ba386",
         "album": "Junk of the Heart",
-        "first_release": "2011-01-01"
+        "first_release": "2011-01-01",
+        "spotify_url": "https://open.spotify.com/embed/album/1VGaygrbOjkte4Ca81nEeQ"
       }
     },
     {
@@ -36209,7 +36538,8 @@
           "GBAWA0652857",
           "GBAWA5765428"
         ],
-        "first_release": "1958-06-24"
+        "first_release": "1958-06-24",
+        "spotify_url": "https://open.spotify.com/embed/track/3NJKI4cwlSBuTYNmDoRVb3"
       }
     },
     {
@@ -36255,7 +36585,8 @@
         "isrcs": [
           "USBN20800047"
         ],
-        "first_release": "2007"
+        "first_release": "2007",
+        "spotify_url": "https://open.spotify.com/embed/album/2y8fiUO036vTYKHM2gNSuW"
       },
       "ytdlpMetadata": {
         "youtube_code": "WIPcB7x3350"
@@ -36378,7 +36709,9 @@
       "musicbrainzMetadata": {
         "release_group": "744c7a1b-ac79-35c4-bd92-7e2c6a24c8d8",
         "album": "Achtung Baby",
-        "first_release": "1991-11-18"
+        "first_release": "1991-11-18",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1593009205",
+        "spotify_url": "https://open.spotify.com/embed/album/5n52kyQKeUZs5ObZJejLQd"
       }
     },
     {
@@ -36420,7 +36753,8 @@
           "USTB10400128",
           "USTB10250016"
         ],
-        "first_release": "1995-10-02"
+        "first_release": "1995-10-02",
+        "spotify_url": "https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHt3PDt8p"
       },
       "ytdlpMetadata": {
         "youtube_code": "fPO76Jlnz6c"
@@ -36488,7 +36822,9 @@
         "isrcs": [
           "GB7TY1000007"
         ],
-        "first_release": "2010-06-21"
+        "first_release": "2010-06-21",
+        "spotify_url": "https://open.spotify.com/embed/track/4LfZe8Qp5PBZUO4dQyxA8n",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1589234620?i=1589234645"
       },
       "ytdlpMetadata": {
         "youtube_code": "---a4A0MqbI"
@@ -36531,7 +36867,10 @@
         "isrcs": [
           "GBAYE1400422"
         ],
-        "first_release": "2005-05-11"
+        "first_release": "2005-05-11",
+        "youtube_code": "NxxjLD2pmlk",
+        "spotify_url": "https://open.spotify.com/embed/track/72YCeOZX7NoyRPJGyGbTHs",
+        "apple_music_url": "https://embed.music.apple.com/es/album/850571319?i=850571371"
       },
       "ytdlpMetadata": {
         "youtube_code": "HyHNuVaZJ-k"
@@ -36678,7 +37017,9 @@
         "isrcs": [
           "GBBPW0900065"
         ],
-        "first_release": "2009-05-22"
+        "first_release": "2009-05-22",
+        "spotify_url": "https://open.spotify.com/embed/track/04uR2cdkgiaLIzebPcs25m",
+        "youtube_code": "tjecYugTbIQ"
       },
       "ytdlpMetadata": {
         "youtube_code": "Mcfk3KFhIZg"
@@ -36736,7 +37077,9 @@
           "DEU240819915",
           "USBN21200591"
         ],
-        "first_release": "1958-02"
+        "first_release": "1958-02",
+        "spotify_url": "https://open.spotify.com/embed/track/3zIuHdD8dkh1vPxQu334T7",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1468202477?i=1468202479"
       },
       "ytdlpMetadata": {
         "youtube_code": "HT_Zs5FKDZE"
@@ -36812,7 +37155,10 @@
         "isrcs": [
           "GBAYE9400061"
         ],
-        "first_release": "1994-11-29"
+        "first_release": "1994-11-29",
+        "spotify_url": "https://open.spotify.com/embed/track/2QwObYJWyJTiozvs0RI7CF",
+        "youtube_code": "LCJblaUkkfc",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1097862703?i=1097863295"
       },
       "ytdlpMetadata": {
         "youtube_code": "LCJblaUkkfc"
@@ -36964,7 +37310,8 @@
           "GBAHS1300024",
           "USAT29500004"
         ],
-        "first_release": "1995-09-15"
+        "first_release": "1995-09-15",
+        "spotify_url": "https://open.spotify.com/embed/track/6peuzKfj2BSTkNosdZ3SmC"
       },
       "ytdlpMetadata": {
         "youtube_code": "0fMUYU8DC1U"
@@ -37041,7 +37388,8 @@
         "isrcs": [
           "USC7R1100001"
         ],
-        "first_release": "2012-01-01"
+        "first_release": "2012-01-01",
+        "youtube_code": "NiHWwKC8WjU"
       }
     },
     {
@@ -37128,7 +37476,10 @@
         "isrcs": [
           "GBCFB0700100"
         ],
-        "first_release": "2007-05-07"
+        "first_release": "2007-05-07",
+        "youtube_code": "OAYuMygPkbI",
+        "spotify_url": "https://open.spotify.com/embed/track/54KFQB6N4pn926IUUYZGzK",
+        "apple_music_url": "https://embed.music.apple.com/es/album/416320083?i=416320084"
       },
       "ytdlpMetadata": {
         "youtube_code": "tMy6_XFpjeQ"
@@ -37210,7 +37561,9 @@
       "musicbrainzMetadata": {
         "release_group": "760f9d8c-3465-497f-9186-a63b1270d9fb",
         "album": "The Whole Love",
-        "first_release": "2011-09-23"
+        "first_release": "2011-09-23",
+        "spotify_url": "https://open.spotify.com/embed/album/6rZ4kezyodXHKzCBsVrKpg",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1810628579"
       }
     },
     {
@@ -37279,7 +37632,8 @@
           "USAT29901632",
           "GBAMX8700005"
         ],
-        "first_release": "1987-10-02"
+        "first_release": "1987-10-02",
+        "spotify_url": "https://open.spotify.com/embed/track/1GjbTNFImFrjFsNdleDe78"
       },
       "ytdlpMetadata": {
         "youtube_code": "AIBv2GEnXlc"
@@ -37332,7 +37686,9 @@
         "isrcs": [
           "ITUM70900631"
         ],
-        "first_release": "2010-02-19"
+        "first_release": "2010-02-19",
+        "spotify_url": "https://open.spotify.com/embed/track/4nBvrgfT10QU1tzT0v8Q4r",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1443513176?i=1443513184"
       }
     },
     {
@@ -37499,7 +37855,8 @@
       "musicbrainzMetadata": {
         "release_group": "13081627-5418-300c-af24-f65875ab61b7",
         "album": "Thick as a Brick",
-        "first_release": "1972-02-18"
+        "first_release": "1972-02-18",
+        "spotify_url": "https://open.spotify.com/embed/album/1ZxChDw03SUFGUz0RC8A8M"
       }
     },
     {
@@ -37728,7 +38085,9 @@
           "USRE18900030",
           "USRH11901970"
         ],
-        "first_release": "1989-06-06"
+        "first_release": "1989-06-06",
+        "spotify_url": "https://open.spotify.com/embed/track/0LzeivEHO16a8eBQGlpVkE",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1464527564?i=1464527641"
       }
     },
     {
@@ -37817,7 +38176,9 @@
       "musicbrainzMetadata": {
         "release_group": "df0bfd42-78a9-40c3-a45f-a12e10d446f8",
         "album": "Odelay",
-        "first_release": "1996-06-17"
+        "first_release": "1996-06-17",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1510827144",
+        "spotify_url": "https://open.spotify.com/embed/album/3PpTsdpZmaLUh6RvViu9G7"
       }
     },
     {
@@ -37952,7 +38313,9 @@
         "isrcs": [
           "NLY160900071"
         ],
-        "first_release": "2009-10-30"
+        "first_release": "2009-10-30",
+        "spotify_url": "https://open.spotify.com/embed/track/5ToIJNhaBSmxfWd06EbQut",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6819286354?i=6819286842"
       },
       "ytdlpMetadata": {
         "youtube_code": "telPDj1VQjQ"
@@ -38095,7 +38458,8 @@
       "musicbrainzMetadata": {
         "release_group": "2d7b621f-7243-353f-86fd-100ff54d071d",
         "album": "Jackson C. Frank",
-        "first_release": "1965"
+        "first_release": "1965",
+        "spotify_url": "https://open.spotify.com/embed/album/07gXWexIqgcoBg01fFgU8Y"
       }
     },
     {
@@ -38253,7 +38617,8 @@
           "USDJ20110903",
           "USPR37902457"
         ],
-        "first_release": "1980-01-07"
+        "first_release": "1980-01-07",
+        "spotify_url": "https://open.spotify.com/embed/track/4msYO7EOWx0tgy47uzlvCJ"
       },
       "ytdlpMetadata": {
         "youtube_code": "Z6dqIYKIBSU"
@@ -38290,7 +38655,8 @@
           "USA176530110",
           "USA176510190"
         ],
-        "first_release": "1965-07-30"
+        "first_release": "1965-07-30",
+        "spotify_url": "https://open.spotify.com/embed/track/2vZ9MSGgRlbbQaZEScckw9"
       },
       "ytdlpMetadata": {
         "youtube_code": "KvONpTA1qK8"
@@ -38326,7 +38692,9 @@
         "isrcs": [
           "CACQ20700905"
         ],
-        "first_release": "2000-03-13"
+        "first_release": "2000-03-13",
+        "spotify_url": "https://open.spotify.com/embed/track/7jbLjvNlKbfCRUoFWKo5TR",
+        "apple_music_url": "https://embed.music.apple.com/es/album/479688113?i=479688182"
       },
       "ytdlpMetadata": {
         "youtube_code": "1gTDePBiTV0"
@@ -39099,7 +39467,9 @@
         "isrcs": [
           "GBAAN0000174"
         ],
-        "first_release": "2000-10-23"
+        "first_release": "2000-10-23",
+        "spotify_url": "https://open.spotify.com/embed/track/5H5Ts04goEtHQ205LejQZX",
+        "youtube_code": "STxXS5lLunE"
       }
     },
     {
@@ -39189,7 +39559,9 @@
       "musicbrainzMetadata": {
         "release_group": "cd7200a6-b5f7-3b8e-b844-9377fc2c9716",
         "album": "Lemon Parade",
-        "first_release": "1996-07-16"
+        "first_release": "1996-07-16",
+        "spotify_url": "https://open.spotify.com/embed/album/6IQxEwIABLLej0bEYdrB0V",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440911250"
       }
     },
     {
@@ -39251,7 +39623,8 @@
           "GBCVZ0802486",
           "GBQWS0700029"
         ],
-        "first_release": "2009-02-16"
+        "first_release": "2009-02-16",
+        "spotify_url": "https://open.spotify.com/embed/track/68mFYsJcVEDCQJnGMRb3uM"
       },
       "ytdlpMetadata": {
         "youtube_code": "F2IA8_5bzeE"
@@ -39322,7 +39695,8 @@
         "isrcs": [
           "USIR10000340"
         ],
-        "first_release": "2000-06-05"
+        "first_release": "2000-06-05",
+        "spotify_url": "https://open.spotify.com/embed/track/6FlAJtf8aSZOpEj9ITSfYh"
       }
     },
     {
@@ -39415,7 +39789,8 @@
       "musicbrainzMetadata": {
         "release_group": "a46d4f02-0891-4dd6-adab-76df647526f9",
         "album": "Different Gear, Still Speeding",
-        "first_release": "2011-02-23"
+        "first_release": "2011-02-23",
+        "spotify_url": "https://open.spotify.com/embed/album/5408WteOw8kE5SzHPBZba3"
       }
     },
     {
@@ -39551,7 +39926,9 @@
         "isrcs": [
           "FR4DI1300260"
         ],
-        "first_release": "2012-05-21"
+        "first_release": "2012-05-21",
+        "spotify_url": "https://open.spotify.com/embed/track/1R3exjbONX91U0dA7R0BU2",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440818644?i=1440818751"
       }
     },
     {
@@ -39678,7 +40055,9 @@
         "isrcs": [
           "USPG19090044"
         ],
-        "first_release": "1990-11-06"
+        "first_release": "1990-11-06",
+        "youtube_code": "K9RKlz1qpQY",
+        "spotify_url": "https://open.spotify.com/embed/track/1bKQ48M9onID2kbSpRy8kK"
       }
     },
     {
@@ -39792,7 +40171,8 @@
         "isrcs": [
           "GBGNS1000704"
         ],
-        "first_release": "2011-11-02"
+        "first_release": "2011-11-02",
+        "spotify_url": "https://open.spotify.com/embed/track/3KT55R6l6uDCsMxPlm1SVo"
       },
       "ytdlpMetadata": {
         "youtube_code": "IugOfDBWcGc"
@@ -39944,7 +40324,9 @@
         "isrcs": [
           "GBARL0800144"
         ],
-        "first_release": "2008-07-14"
+        "first_release": "2008-07-14",
+        "spotify_url": "https://open.spotify.com/embed/track/4AFwnrH5atiJoAd5xS5QtR",
+        "apple_music_url": "https://embed.music.apple.com/es/album/290295275?i=290295294"
       },
       "ytdlpMetadata": {
         "youtube_code": "gS9o1FAszdk"
@@ -40081,7 +40463,8 @@
         "isrcs": [
           "USCPT0600026"
         ],
-        "first_release": "2005"
+        "first_release": "2005",
+        "spotify_url": "https://open.spotify.com/embed/track/1rE0CFRH2Ag4Aa03Gu6bhT"
       },
       "ytdlpMetadata": {
         "youtube_code": "gSbf5z7__eI"
@@ -40201,7 +40584,9 @@
           "USWB10903628",
           "USWB19900669"
         ],
-        "first_release": "1999-05-31"
+        "first_release": "1999-05-31",
+        "spotify_url": "https://open.spotify.com/embed/track/3DlRZM6zKSlAZigHbJQ3cp",
+        "apple_music_url": "https://embed.music.apple.com/es/album/329064696?i=329064737"
       },
       "ytdlpMetadata": {
         "youtube_code": "Dsh0TfIKhoE"
@@ -40307,7 +40692,8 @@
         "isrcs": [
           "FR9T31200001"
         ],
-        "first_release": "2012-01-23"
+        "first_release": "2012-01-23",
+        "youtube_code": "3n46W4PEjRQ"
       }
     },
     {
@@ -40515,7 +40901,8 @@
         "isrcs": [
           "USIR27800259"
         ],
-        "first_release": "1978-03-23"
+        "first_release": "1978-03-23",
+        "spotify_url": "https://open.spotify.com/embed/track/2sevvnMrqH607r5lwk3kFT"
       },
       "ytdlpMetadata": {
         "youtube_code": "x0T_GIQGqM4"
@@ -40623,7 +41010,8 @@
           "USWB11403550",
           "USWB19901559"
         ],
-        "first_release": "1995-09-08"
+        "first_release": "1995-09-08",
+        "spotify_url": "https://open.spotify.com/embed/track/3iHvXVAXLpoGMWnDhpFspL"
       }
     },
     {
@@ -40760,7 +41148,8 @@
         "isrcs": [
           "GBCEL0300065"
         ],
-        "first_release": "2003-05-05"
+        "first_release": "2003-05-05",
+        "spotify_url": "https://open.spotify.com/embed/track/4VyWe1PYyh1p8hfTl0dSDt"
       }
     },
     {
@@ -40843,7 +41232,9 @@
           "USPR36600001",
           "USPR36500079"
         ],
-        "first_release": "1965"
+        "first_release": "1965",
+        "spotify_url": "https://open.spotify.com/embed/track/5TtDlBbNwaL4rnrA3KAuHO",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1445667726?i=1445667962"
       },
       "ytdlpMetadata": {
         "youtube_code": "WCjzNfJLHa0"
@@ -40945,7 +41336,8 @@
           "GB5KW2100095",
           "GBBGU9701350"
         ],
-        "first_release": "1997-06-23"
+        "first_release": "1997-06-23",
+        "spotify_url": "https://open.spotify.com/embed/track/6yBJrChr7XY36XTW389Av2"
       }
     },
     {
@@ -41041,7 +41433,8 @@
           "GBUM71107964",
           "GBUM71111621"
         ],
-        "first_release": "2012-01-24"
+        "first_release": "2012-01-24",
+        "youtube_code": "mhr4YecSV_Y"
       }
     },
     {
@@ -41134,7 +41527,8 @@
         "isrcs": [
           "GBMVH1100350"
         ],
-        "first_release": "2012-01-30"
+        "first_release": "2012-01-30",
+        "spotify_url": "https://open.spotify.com/embed/track/1EmimnysAUBhiy8rDbNN01"
       }
     },
     {
@@ -41519,7 +41913,10 @@
           "FR6F31374280",
           "GB55H1100002"
         ],
-        "first_release": "2011-10-14"
+        "first_release": "2011-10-14",
+        "youtube_code": "K8v_DaCcORQ",
+        "spotify_url": "https://open.spotify.com/embed/track/1eyzqe2QqGZUmfcPZtrIyt",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1674598530?i=1674599206"
       }
     },
     {
@@ -42034,7 +42431,10 @@
         "isrcs": [
           "AUEI10800041"
         ],
-        "first_release": "2009-05-01"
+        "first_release": "2009-05-01",
+        "youtube_code": "r02mYOlfcCw",
+        "spotify_url": "https://open.spotify.com/embed/track/3zEN0ii6s4DHHBpnTp3RP7",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6798386596?i=6798386606"
       },
       "ytdlpMetadata": {
         "youtube_code": "hN5X4kGhAtU"
@@ -42333,7 +42733,10 @@
           "USCH38900007",
           "USCH37800025"
         ],
-        "first_release": "1978-09-08"
+        "first_release": "1978-09-08",
+        "youtube_code": "2QO7ibBXVK4",
+        "spotify_url": "https://open.spotify.com/embed/track/41AE8ODX2JETBCa6muhSLY",
+        "apple_music_url": "https://embed.music.apple.com/es/album/724421933?i=724422231"
       }
     },
     {
@@ -42602,7 +43005,8 @@
           "GBAHT0700388",
           "USGF19500403"
         ],
-        "first_release": "1995-08-15"
+        "first_release": "1995-08-15",
+        "spotify_url": "https://open.spotify.com/embed/track/1IsGA5ceSC4a5nxgAEYnQd"
       },
       "ytdlpMetadata": {
         "youtube_code": "GpBFOJ3R0M4"
@@ -42705,7 +43109,9 @@
         "isrcs": [
           "IEABD0100003"
         ],
-        "first_release": "2002-02-01"
+        "first_release": "2002-02-01",
+        "spotify_url": "https://open.spotify.com/embed/track/5yyRH93h4Pm6tXXYTxt7ea",
+        "youtube_code": "5YXVMCHG-Nk"
       }
     },
     {
@@ -42881,7 +43287,8 @@
         "isrcs": [
           "SEWMP0500105"
         ],
-        "first_release": "2005"
+        "first_release": "2005",
+        "spotify_url": "https://open.spotify.com/embed/track/6jS6OsgzlbCP5Q6YScN7xt"
       },
       "ytdlpMetadata": {
         "youtube_code": "latLSCl7ZvU"
@@ -43124,7 +43531,8 @@
           "USNO12100176",
           "USNO11100273"
         ],
-        "first_release": "2011-12-01"
+        "first_release": "2011-12-01",
+        "spotify_url": "https://open.spotify.com/embed/track/5G1sTBGbZT5o4PNRc75RKI"
       }
     },
     {
@@ -43455,7 +43863,8 @@
           "SEWFN1000106",
           "USJ5G1034006"
         ],
-        "first_release": "2010-04-12"
+        "first_release": "2010-04-12",
+        "spotify_url": "https://open.spotify.com/embed/track/7nf794AzR4NDuhNOnkJoOd"
       },
       "ytdlpMetadata": {
         "youtube_code": "JFZYG4fN1qU"
@@ -43554,7 +43963,8 @@
         "isrcs": [
           "USSM10702127"
         ],
-        "first_release": "2007-10-02"
+        "first_release": "2007-10-02",
+        "spotify_url": "https://open.spotify.com/embed/track/4iG2gAwKXsOcijVaVXzRPW"
       }
     },
     {
@@ -43989,7 +44399,9 @@
           "GBDNH0400601",
           "GBDNH0400391"
         ],
-        "first_release": "2004"
+        "first_release": "2004",
+        "spotify_url": "https://open.spotify.com/embed/track/1IlloBPE1WSEwAMyvDjIzA",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1854528192?i=1854528976"
       },
       "ytdlpMetadata": {
         "youtube_code": "dzZQJZdcCU4"
@@ -44628,7 +45040,8 @@
           "GBARL1000318",
           "GBARL1000780"
         ],
-        "first_release": "2010-08-27"
+        "first_release": "2010-08-27",
+        "spotify_url": "https://open.spotify.com/embed/track/0b49i5C7IEgW5PfsiS17R7"
       }
     },
     {
@@ -44711,7 +45124,8 @@
         "isrcs": [
           "USSM11106850"
         ],
-        "first_release": "2012-03-15"
+        "first_release": "2012-03-15",
+        "spotify_url": "https://open.spotify.com/embed/track/0S9sCEqXbgDZer7ACyb03K"
       }
     },
     {
@@ -44926,7 +45340,9 @@
       "musicbrainzMetadata": {
         "release_group": "3ca9c5a3-3754-347c-826a-9b598fa52ed3",
         "album": "E.T. The Extra-Terrestrial",
-        "first_release": "1982"
+        "first_release": "1982",
+        "spotify_url": "https://open.spotify.com/embed/album/3Pood3AEXTNuRqXlEvLLUf",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440497170"
       }
     },
     {
@@ -45113,7 +45529,8 @@
           "USSUB0877707",
           "GBBRP0816707"
         ],
-        "first_release": "2008-06-03"
+        "first_release": "2008-06-03",
+        "spotify_url": "https://open.spotify.com/embed/track/5xwar7KFXDlPzEhhRf5ua4"
       },
       "ytdlpMetadata": {
         "youtube_code": "Eo_lzng1UYM"
@@ -45166,7 +45583,9 @@
           "GBKEE1200234",
           "GBKEE1100222"
         ],
-        "first_release": "2012-05-23"
+        "first_release": "2012-05-23",
+        "spotify_url": "https://open.spotify.com/embed/track/6Ss7upGobLSpoLNmO7jj7u",
+        "youtube_code": "NUysiCX-XZQ"
       },
       "ytdlpMetadata": {
         "youtube_code": "Gf1h2PMPCAo"
@@ -45252,7 +45671,8 @@
           "USEE10900667",
           "USEE10180255"
         ],
-        "first_release": "1992-07-06"
+        "first_release": "1992-07-06",
+        "spotify_url": "https://open.spotify.com/embed/track/6nRCTb5b0N5zp8WTeY6xFZ"
       },
       "ytdlpMetadata": {
         "youtube_code": "IqqRx77T4Vo"
@@ -45324,7 +45744,9 @@
         "isrcs": [
           "USVR90954206"
         ],
-        "first_release": "2009-07-07"
+        "first_release": "2009-07-07",
+        "spotify_url": "https://open.spotify.com/embed/track/50tmeMXSafZWrXz0yVz7Bl",
+        "youtube_code": "4306i99LMXo"
       }
     },
     {
@@ -45527,7 +45949,8 @@
         "isrcs": [
           "USCPT0910002"
         ],
-        "first_release": "2009-02-13"
+        "first_release": "2009-02-13",
+        "spotify_url": "https://open.spotify.com/embed/track/24LDPVMwvoFOLzqsi6ll3I"
       },
       "ytdlpMetadata": {
         "youtube_code": "Dj5c9TKLtlI"
@@ -45692,7 +46115,9 @@
       "musicbrainzMetadata": {
         "release_group": "95daaaea-b100-4c4f-aa5f-b5d9670f4916",
         "album": "Magia & efectos especiales",
-        "first_release": "2012-03-12"
+        "first_release": "2012-03-12",
+        "spotify_url": "https://open.spotify.com/embed/album/1H0Kzu6QdUAuUDMGOIe271",
+        "apple_music_url": "https://embed.music.apple.com/es/album/641091916"
       }
     },
     {
@@ -46376,7 +46801,9 @@
         "isrcs": [
           "DEDU60900008"
         ],
-        "first_release": "2009-10-26"
+        "first_release": "2009-10-26",
+        "spotify_url": "https://open.spotify.com/embed/track/5dwjQsS2ezI4NDnokvK7IM",
+        "apple_music_url": "https://embed.music.apple.com/es/album/315321789?i=315321905"
       }
     },
     {
@@ -46418,7 +46845,8 @@
           "GBAFL0700156",
           "USCPT0700046"
         ],
-        "first_release": "2007-10-08"
+        "first_release": "2007-10-08",
+        "spotify_url": "https://open.spotify.com/embed/track/35hmrfcRLLYRph1HmwlBB8"
       },
       "ytdlpMetadata": {
         "youtube_code": "h0AgDrQ4YhU"
@@ -46585,7 +47013,8 @@
           "GBAHT1200434",
           "GBAHT1200332"
         ],
-        "first_release": "2012-09-24"
+        "first_release": "2012-09-24",
+        "spotify_url": "https://open.spotify.com/embed/track/1UBZYPLWe8BUlitnIVxvuC"
       },
       "ytdlpMetadata": {
         "youtube_code": "UcOUJM08bYk"
@@ -46921,7 +47350,8 @@
         "isrcs": [
           "GBUM70710042"
         ],
-        "first_release": "2008-03-17"
+        "first_release": "2008-03-17",
+        "spotify_url": "https://open.spotify.com/embed/track/27rgTetikreqkvedaxrF5N"
       }
     },
     {
@@ -47084,7 +47514,9 @@
           "USWB19902157",
           "USWB10900778"
         ],
-        "first_release": "1987"
+        "first_release": "1987",
+        "spotify_url": "https://open.spotify.com/embed/track/3HYjD4Q5xTP8pZ2VQc0xsD",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1895245406?i=6763282063"
       }
     },
     {
@@ -47126,7 +47558,9 @@
           "GBAYE8100053",
           "GBAYE8100082"
         ],
-        "first_release": "1981-11-09"
+        "first_release": "1981-11-09",
+        "spotify_url": "https://open.spotify.com/embed/track/5GpfyJrKHJI36jDKtQiyGN",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1827235410?i=1827235433"
       },
       "ytdlpMetadata": {
         "youtube_code": "HjmAPAoxCb0"
@@ -47216,7 +47650,8 @@
       "musicbrainzMetadata": {
         "release_group": "5e798395-6221-4ecb-8ebf-8f01704539e0",
         "album": "WALL-E (Original Motion Picture Soundtrack)",
-        "first_release": "2008-06-24"
+        "first_release": "2008-06-24",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1445606264"
       }
     },
     {
@@ -47558,7 +47993,8 @@
         "isrcs": [
           "USAT29300016"
         ],
-        "first_release": "1993-06-22"
+        "first_release": "1993-06-22",
+        "youtube_code": "gcfQoJn7hRo"
       }
     },
     {
@@ -47592,7 +48028,9 @@
         "isrcs": [
           "USAT21000477"
         ],
-        "first_release": "2010-04-27"
+        "first_release": "2010-04-27",
+        "spotify_url": "https://open.spotify.com/embed/track/1KDyqg3xuvjUfGugdq2trP",
+        "apple_music_url": "https://embed.music.apple.com/es/album/397728297?i=397728298"
       }
     },
     {
@@ -47657,7 +48095,9 @@
         "isrcs": [
           "GBUM71003027"
         ],
-        "first_release": "2010-08-27"
+        "first_release": "2010-08-27",
+        "spotify_url": "https://open.spotify.com/embed/track/6gP1bZkh2gLfdU9JgFh2X0",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1695961437?i=1695962099"
       }
     },
     {
@@ -47693,7 +48133,8 @@
           "USBS51300075",
           "GBEQT0901157"
         ],
-        "first_release": "2009-09-15"
+        "first_release": "2009-09-15",
+        "spotify_url": "https://open.spotify.com/embed/track/1eRZ7SYPW54ghVSVOljr5l"
       }
     },
     {
@@ -47717,7 +48158,8 @@
       "musicbrainzMetadata": {
         "release_group": "cfc7581a-385e-3933-93b7-432f16873cf3",
         "album": "Titanic: Music From the Motion Picture",
-        "first_release": "1997-11-18"
+        "first_release": "1997-11-18",
+        "spotify_url": "https://open.spotify.com/embed/album/4XOyZHKFHkrBZtgJ0uYTd1"
       }
     },
     {
@@ -47797,7 +48239,8 @@
         "isrcs": [
           "USIR19500279"
         ],
-        "first_release": "1995-10-10"
+        "first_release": "1995-10-10",
+        "youtube_code": "Q7uiJcxIsK4"
       },
       "ytdlpMetadata": {
         "youtube_code": "TR3Vdo5etCQ"
@@ -47871,7 +48314,9 @@
         "isrcs": [
           "GBCSG0400135"
         ],
-        "first_release": "2004"
+        "first_release": "2004",
+        "spotify_url": "https://open.spotify.com/embed/track/1I6TUyf1UyCVOW77x9xS6Y",
+        "apple_music_url": "https://embed.music.apple.com/es/album/7415815?i=7415811"
       },
       "ytdlpMetadata": {
         "youtube_code": "Z4KLrUdPcUI"
@@ -47966,7 +48411,9 @@
       "musicbrainzMetadata": {
         "release_group": "cba0c394-1aa2-40e0-8613-a9ead5624c21",
         "album": "Inception: Music From the Motion Picture",
-        "first_release": "2010-07-09"
+        "first_release": "2010-07-09",
+        "spotify_url": "https://open.spotify.com/embed/album/2qvA7HmSg1iM6XMiFF76dp",
+        "apple_music_url": "https://embed.music.apple.com/es/album/380349905"
       }
     },
     {
@@ -48108,7 +48555,8 @@
         "song": "No One Knows",
         "release_group": "cbffb669-c390-3a4d-b46f-1be8ea934b03",
         "album": "Songs for the Deaf",
-        "first_release": "2002-08-17"
+        "first_release": "2002-08-17",
+        "youtube_code": "s88r_q7oufE"
       }
     },
     {
@@ -48195,7 +48643,8 @@
         "isrcs": [
           "ATE610800080"
         ],
-        "first_release": "2009-08-28"
+        "first_release": "2009-08-28",
+        "youtube_code": "Mombzli2Txs"
       },
       "ytdlpMetadata": {
         "youtube_code": "WXrdYwG17PE"
@@ -48249,7 +48698,9 @@
           "GBAYE8400072",
           "GBAYE0901456"
         ],
-        "first_release": "2019-07-19"
+        "first_release": "2019-07-19",
+        "spotify_url": "https://open.spotify.com/embed/track/1dYeAcam5sOc5SvgOx3Z2q",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1605625451?i=1605625772"
       },
       "ytdlpMetadata": {
         "youtube_code": "RxJuIlbT740"
@@ -48397,7 +48848,9 @@
       "musicbrainzMetadata": {
         "release_group": "f393097a-b567-3253-9bdf-df353ee3e9e1",
         "album": "Blade Runner",
-        "first_release": "1993-12"
+        "first_release": "1993-12",
+        "spotify_url": "https://open.spotify.com/embed/album/6NkuCdMz5tGmHbOXAWbtCW",
+        "apple_music_url": "https://embed.music.apple.com/es/album/73327394"
       }
     },
     {
@@ -48509,7 +48962,8 @@
         "isrcs": [
           "USSM10603632"
         ],
-        "first_release": "2006-09-09"
+        "first_release": "2006-09-09",
+        "spotify_url": "https://open.spotify.com/embed/track/2jdAk8ATWIL3dwT47XpRfu"
       }
     },
     {
@@ -48691,7 +49145,8 @@
         "isrcs": [
           "GBBKS0600074"
         ],
-        "first_release": "2006-08-21"
+        "first_release": "2006-08-21",
+        "spotify_url": "https://open.spotify.com/embed/track/3qkFIjYRInFasy2jeDZPgm"
       },
       "ytdlpMetadata": {
         "youtube_code": "BcoPKWzLjrE"
@@ -48933,7 +49388,8 @@
       "musicbrainzMetadata": {
         "release_group": "dafa15b5-7703-472c-bab1-11fe9407ffd1",
         "album": "Drag Me to Hell (Original Motion Picture Soundtrack)",
-        "first_release": "2009-08-18"
+        "first_release": "2009-08-18",
+        "spotify_url": "https://open.spotify.com/embed/album/4dM8Fx4aKJwvpLueXS7F6L"
       }
     },
     {
@@ -48997,7 +49453,9 @@
         "isrcs": [
           "JPKI00150470"
         ],
-        "first_release": "2001-10-03"
+        "first_release": "2001-10-03",
+        "spotify_url": "https://open.spotify.com/embed/track/6dl9CLsX1YMILAq5qQgkIo",
+        "apple_music_url": "https://embed.music.apple.com/es/album/164069102?i=164070838"
       },
       "ytdlpMetadata": {
         "youtube_code": "ZwLvcaDMhU8"
@@ -49139,7 +49597,8 @@
         "isrcs": [
           "FRU701000147"
         ],
-        "first_release": "2011-06-13"
+        "first_release": "2011-06-13",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1566647800?i=1566647818"
       }
     },
     {
@@ -49217,7 +49676,9 @@
           "FR26V2057690",
           "FRZ036800450"
         ],
-        "first_release": "1969"
+        "first_release": "1969",
+        "youtube_code": "JIQiGN-vO-g",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1391621152?i=1391622218"
       }
     },
     {
@@ -49251,7 +49712,8 @@
         "isrcs": [
           "QMW3D1100007"
         ],
-        "first_release": "2011-10-04"
+        "first_release": "2011-10-04",
+        "spotify_url": "https://open.spotify.com/embed/track/0cWfWH7cXgSRcAX06Vj7N7"
       },
       "ytdlpMetadata": {
         "youtube_code": "k78eFqax9Kw"
@@ -49373,7 +49835,8 @@
         "isrcs": [
           "GBBKS9900093"
         ],
-        "first_release": "2000-06-21"
+        "first_release": "2000-06-21",
+        "spotify_url": "https://open.spotify.com/embed/track/2AGcgmUIBlSUKiJlEruHrI"
       },
       "ytdlpMetadata": {
         "youtube_code": "RpUvE8SQ6So"
@@ -49646,7 +50109,9 @@
           "GBAZP9000087",
           "GBBBY0200016"
         ],
-        "first_release": "1990-09-25"
+        "first_release": "1990-09-25",
+        "spotify_url": "https://open.spotify.com/embed/track/7ziicmUOzWXAkdPriOmFk9",
+        "youtube_code": "0RJwW77Lsj8"
       }
     },
     {
@@ -49777,7 +50242,8 @@
         "isrcs": [
           "USUM70600411"
         ],
-        "first_release": "2006-04-04"
+        "first_release": "2006-04-04",
+        "spotify_url": "https://open.spotify.com/embed/track/4mbscHErDrJvBYZNRNjeSj"
       }
     },
     {
@@ -50055,7 +50521,8 @@
           "GB5KW2400908",
           "GBAJE0200152"
         ],
-        "first_release": "1988-08-29"
+        "first_release": "1988-08-29",
+        "spotify_url": "https://open.spotify.com/embed/track/6cXmvyzvXGYDH4PQmYRVou"
       }
     },
     {
@@ -50131,7 +50598,9 @@
       "musicbrainzMetadata": {
         "release_group": "455f56d1-5258-36c2-ba84-921a6fa4fcda",
         "album": "Jurassic Park: Music From the Original Motion Picture Soundtrack",
-        "first_release": "1993-05-25"
+        "first_release": "1993-05-25",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440860715",
+        "spotify_url": "https://open.spotify.com/embed/album/1yyFmCMeNtuLWsLZAXPStf"
       }
     },
     {
@@ -50235,7 +50704,9 @@
         "isrcs": [
           "USSM19805796"
         ],
-        "first_release": "1983-06-13"
+        "first_release": "1983-06-13",
+        "spotify_url": "https://open.spotify.com/embed/track/0uRl2l1F5rZ0CnFsAhV2KH",
+        "apple_music_url": "https://embed.music.apple.com/es/album/193063151?i=193063186"
       },
       "ytdlpMetadata": {
         "youtube_code": "nnbnRWHDFpw"
@@ -50319,7 +50790,8 @@
           "QT53P2600048",
           "US25X0588947"
         ],
-        "first_release": "1971-07-12"
+        "first_release": "1971-07-12",
+        "spotify_url": "https://open.spotify.com/embed/track/5WJU527RQNyMLuKecjsL8V"
       },
       "ytdlpMetadata": {
         "youtube_code": "xby5467EbdU"
@@ -50839,7 +51311,9 @@
         "isrcs": [
           "USUM70919263"
         ],
-        "first_release": "2009-11-13"
+        "first_release": "2009-11-13",
+        "youtube_code": "GqWYJT-iMTw",
+        "spotify_url": "https://open.spotify.com/embed/track/5G0A4lFaKNwIBhUEhpdrVs"
       }
     },
     {
@@ -51163,7 +51637,8 @@
       "musicbrainzMetadata": {
         "release_group": "3dbe1d28-29ed-47ac-a713-b2bca3581116",
         "album": "PPPPPP: The VVVVVV Soundtrack",
-        "first_release": "2010-01-10"
+        "first_release": "2010-01-10",
+        "spotify_url": "https://open.spotify.com/embed/album/2aJ4asSRIn4QA6ZEIrHhJT"
       }
     },
     {
@@ -51278,7 +51753,8 @@
         "isrcs": [
           "USRC10300638"
         ],
-        "first_release": "2003-07-23"
+        "first_release": "2003-07-23",
+        "spotify_url": "https://open.spotify.com/embed/track/3Fc5OiXuy3pgmLLdoDQqjX"
       }
     },
     {
@@ -51320,7 +51796,10 @@
         "isrcs": [
           "USOCT0500070"
         ],
-        "first_release": "2005-09-27"
+        "first_release": "2005-09-27",
+        "youtube_code": "vwFoz1T-_xE",
+        "spotify_url": "https://open.spotify.com/embed/track/0bqb8cyz8MfgE5IYklNYWD",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1473620305?i=1473620826"
       }
     },
     {
@@ -51482,7 +51961,9 @@
           "GBAWA0673580",
           "GBEEJ0900007"
         ],
-        "first_release": "1957-09-20"
+        "first_release": "1957-09-20",
+        "spotify_url": "https://open.spotify.com/embed/track/39lnzOIUCSNaQmgBHoz7rt",
+        "youtube_code": "SQ0rKFa9ZUU"
       },
       "ytdlpMetadata": {
         "youtube_code": "EqWwy6BCxxU"
@@ -51814,7 +52295,8 @@
         "isrcs": [
           "USUM71019658"
         ],
-        "first_release": "2010-09-15"
+        "first_release": "2010-09-15",
+        "spotify_url": "https://open.spotify.com/embed/track/1QEEtiBWpf8DZhLAPTsLhE"
       }
     },
     {
@@ -51979,7 +52461,8 @@
           "GBBPW0900075",
           "GBBPW0900047"
         ],
-        "first_release": "2009-05-22"
+        "first_release": "2009-05-22",
+        "spotify_url": "https://open.spotify.com/embed/track/4dBfL69e2UtXAJrdAywyOs"
       },
       "ytdlpMetadata": {
         "youtube_code": "VUTUd7-TKV4"
@@ -52182,7 +52665,10 @@
           "FR6F31374280",
           "GB55H1100002"
         ],
-        "first_release": "2011-10-14"
+        "first_release": "2011-10-14",
+        "youtube_code": "K8v_DaCcORQ",
+        "spotify_url": "https://open.spotify.com/embed/track/1eyzqe2QqGZUmfcPZtrIyt",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1674598530?i=1674599206"
       }
     },
     {
@@ -52444,7 +52930,8 @@
           "USRH11503012",
           "USAT20103135"
         ],
-        "first_release": "1970-09"
+        "first_release": "1970-09",
+        "spotify_url": "https://open.spotify.com/embed/track/1HFoO5EdFw6emUIf8GofxH"
       },
       "ytdlpMetadata": {
         "youtube_code": "AqVWBVbytXo"
@@ -52523,7 +53010,9 @@
       "musicbrainzMetadata": {
         "release_group": "b6c636ae-aeb5-45b0-a03d-ad64c5cef859",
         "album": "Avatar: Music From the Motion Picture",
-        "first_release": "2009-12-11"
+        "first_release": "2009-12-11",
+        "spotify_url": "https://open.spotify.com/embed/album/2n9XTeWA3qyZVxWiH8TKlV",
+        "apple_music_url": "https://embed.music.apple.com/es/album/367204921"
       }
     },
     {
@@ -52605,7 +53094,9 @@
           "DEF079004750",
           "USMR18270052"
         ],
-        "first_release": "1981"
+        "first_release": "1981",
+        "spotify_url": "https://open.spotify.com/embed/track/6S0O1LpQtGyALQ9TVurDMU",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1601827856?i=1601828005"
       }
     },
     {
@@ -52682,7 +53173,8 @@
           "USAT20703871",
           "USAT29900614"
         ],
-        "first_release": "1970-10-05"
+        "first_release": "1970-10-05",
+        "spotify_url": "https://open.spotify.com/embed/track/5B3Zj2prDQT1VrYxXCzQg3"
       },
       "ytdlpMetadata": {
         "youtube_code": "vcIem-L398w"
@@ -52846,7 +53338,9 @@
           "GBBPW0900073",
           "GBBPW0900045"
         ],
-        "first_release": "2009-05-22"
+        "first_release": "2009-05-22",
+        "spotify_url": "https://open.spotify.com/embed/track/4lyhYM26W4DdIArcfVTUBh",
+        "youtube_code": "mQ4jZeGUFzI"
       },
       "ytdlpMetadata": {
         "youtube_code": "mQ4jZeGUFzI"
@@ -53179,7 +53673,9 @@
           "GB1809101200",
           "GBAAN7900013"
         ],
-        "first_release": "1980-02-04"
+        "first_release": "1980-02-04",
+        "spotify_url": "https://open.spotify.com/embed/track/7nm8w9dMwTjlWDosdnxBSn",
+        "youtube_code": "a_njqZftjKY"
       }
     },
     {
@@ -53361,7 +53857,9 @@
       "musicbrainzMetadata": {
         "release_group": "6d5001e4-0d0c-30e5-acd5-95784c5223b4",
         "album": "Aladdin",
-        "first_release": "1992-11-06"
+        "first_release": "1992-11-06",
+        "spotify_url": "https://open.spotify.com/embed/album/7bt2aty3lUo6Q1Ud8pthRz",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1445883238"
       }
     },
     {
@@ -53598,7 +54096,9 @@
       "musicbrainzMetadata": {
         "release_group": "a55a5a03-0c0e-311b-85df-ec52f841715c",
         "album": "Smash",
-        "first_release": "1994-03-22"
+        "first_release": "1994-03-22",
+        "spotify_url": "https://open.spotify.com/embed/album/6xkuVd7iJcSSJamThkWY0p",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1485043082"
       }
     },
     {
@@ -53706,7 +54206,9 @@
           "USSM17600461",
           "USSM17600874"
         ],
-        "first_release": "1976-10-21"
+        "first_release": "1976-10-21",
+        "spotify_url": "https://open.spotify.com/embed/track/4DMKwE2E2iYDKY01C335Uw",
+        "apple_music_url": "https://embed.music.apple.com/es/album/190655957?i=190655992"
       },
       "ytdlpMetadata": {
         "youtube_code": "P5ZJui3aPoQ"
@@ -53925,7 +54427,9 @@
           "GBBPF0601454",
           "USATO0600007"
         ],
-        "first_release": "2006-05-02"
+        "first_release": "2006-05-02",
+        "spotify_url": "https://open.spotify.com/embed/track/1KdKilHyJswPGCAlevpg5e",
+        "youtube_code": "S8bDpzpDVu4"
       },
       "ytdlpMetadata": {
         "youtube_code": "S8bDpzpDVu4"
@@ -53964,7 +54468,9 @@
           "USAT21207256",
           "USAT21207255"
         ],
-        "first_release": "2013-04-05"
+        "first_release": "2013-04-05",
+        "spotify_url": "https://open.spotify.com/embed/track/0LBz07gAdgUukYvpFyW87y",
+        "apple_music_url": "https://embed.music.apple.com/es/album/593149278?i=593149405"
       }
     },
     {
@@ -54034,7 +54540,8 @@
           "USAT21202944",
           "USAT21202558"
         ],
-        "first_release": "2012-12-26"
+        "first_release": "2012-12-26",
+        "spotify_url": "https://open.spotify.com/embed/track/4RdRa3qq0GBSKjomxrkh5K"
       }
     },
     {
@@ -54095,7 +54602,8 @@
         "isrcs": [
           "FRU520900007"
         ],
-        "first_release": "2009-10-05"
+        "first_release": "2009-10-05",
+        "spotify_url": "https://open.spotify.com/embed/track/49LYE84rKn8iRjUwKD3sXR"
       },
       "ytdlpMetadata": {
         "youtube_code": "PYtnjNal-SQ"
@@ -54137,7 +54645,8 @@
         "isrcs": [
           "USMV20400039"
         ],
-        "first_release": "2004-02-11"
+        "first_release": "2004-02-11",
+        "spotify_url": "https://open.spotify.com/embed/track/4oIOXVdUUHaxLyeosHWABU"
       },
       "ytdlpMetadata": {
         "youtube_code": "YFAi7wMVN94"
@@ -54348,7 +54857,8 @@
         "isrcs": [
           "FRS639900098"
         ],
-        "first_release": "2000-03-06"
+        "first_release": "2000-03-06",
+        "youtube_code": "fJALBK5YD3c"
       }
     },
     {
@@ -54382,7 +54892,9 @@
         "isrcs": [
           "USGF19960703"
         ],
-        "first_release": "1993-09-21"
+        "first_release": "1993-09-21",
+        "spotify_url": "https://open.spotify.com/embed/track/144IMbY4x1EeUnjYr2uDcB",
+        "youtube_code": "n6P0SitRwy8"
       }
     },
     {
@@ -54542,7 +55054,9 @@
       "musicbrainzMetadata": {
         "release_group": "ae45bd9c-a304-3271-9245-6b8858485f62",
         "album": "Coraline: Original Motion Picture Soundtrack",
-        "first_release": "2009-02-03"
+        "first_release": "2009-02-03",
+        "spotify_url": "https://open.spotify.com/embed/album/4S1D4o4e4c81Fc7shdFdyI",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1762897093"
       }
     },
     {
@@ -54682,7 +55196,9 @@
           "GBUM70817143",
           "GBUM70900467"
         ],
-        "first_release": "2009-06-26"
+        "first_release": "2009-06-26",
+        "spotify_url": "https://open.spotify.com/embed/track/2QXQ9BrS8bmfKYbHuuYkkS",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1445011403?i=1445011413"
       },
       "ytdlpMetadata": {
         "youtube_code": "tXtATeQ7GKg"
@@ -54756,7 +55272,10 @@
         "isrcs": [
           "USAT21100831"
         ],
-        "first_release": "2011-06-07"
+        "first_release": "2011-06-07",
+        "youtube_code": "YcJaYkamg5Y",
+        "spotify_url": "https://open.spotify.com/embed/track/5i7fZq3chLyCHo3VeB6goD",
+        "apple_music_url": "https://embed.music.apple.com/es/album/442170036?i=442170037"
       }
     },
     {
@@ -54931,7 +55450,8 @@
         "isrcs": [
           "USUR10401189"
         ],
-        "first_release": "2005-02-07"
+        "first_release": "2005-02-07",
+        "spotify_url": "https://open.spotify.com/embed/track/5meJWQuHyHDsOjWF8AtSDe"
       }
     },
     {
@@ -55043,7 +55563,10 @@
         "isrcs": [
           "USSM19200799"
         ],
-        "first_release": "1992-09-29"
+        "first_release": "1992-09-29",
+        "spotify_url": "https://open.spotify.com/embed/track/1GnsJnHaiRaezP5EqDsc3G",
+        "youtube_code": "zTuD8k3JvxQ",
+        "apple_music_url": "https://embed.music.apple.com/es/album/157316517?i=157316531"
       }
     },
     {
@@ -55068,7 +55591,9 @@
       "musicbrainzMetadata": {
         "release_group": "e4a3c015-3cac-31cb-8602-88d11edf5ddf",
         "album": "Gladiator: Music From the Motion Picture",
-        "first_release": "2000-04-04"
+        "first_release": "2000-04-04",
+        "spotify_url": "https://open.spotify.com/embed/album/5XgEM5g3xWEwL4Zr6UjoLo",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1510822340"
       }
     },
     {
@@ -55243,7 +55768,10 @@
         "isrcs": [
           "USSM11202617"
         ],
-        "first_release": "2012-07-20"
+        "first_release": "2012-07-20",
+        "youtube_code": "v_5P26wMiAo",
+        "spotify_url": "https://open.spotify.com/embed/track/4e4vS0hfcXbqB82tZVMz6z",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1680811693?i=1680812015"
       }
     },
     {
@@ -55303,7 +55831,8 @@
       "musicbrainzMetadata": {
         "release_group": "9978ebdd-ac50-34ac-af53-c926aca854a5",
         "album": "The Age of the Understatement",
-        "first_release": "2008-04-16"
+        "first_release": "2008-04-16",
+        "spotify_url": "https://open.spotify.com/embed/album/2y3Rm0cT1xbf2NoTQwKv99"
       }
     },
     {
@@ -55335,7 +55864,8 @@
         "isrcs": [
           "US38Y1323201"
         ],
-        "first_release": "2013-02-04"
+        "first_release": "2013-02-04",
+        "spotify_url": "https://open.spotify.com/embed/track/7HoQrIcMEyd0bi9q3xFVhy"
       },
       "ytdlpMetadata": {
         "youtube_code": "1NGvOILq8D4"
@@ -55478,7 +56008,8 @@
           "GBCCS0100723",
           "GBCCS1000115"
         ],
-        "first_release": "1970-04-17"
+        "first_release": "1970-04-17",
+        "spotify_url": "https://open.spotify.com/embed/track/1Qa0Y05al633fG8f9Peytc"
       }
     },
     {
@@ -55756,7 +56287,8 @@
         "isrcs": [
           "USUM71201074"
         ],
-        "first_release": "2012-09-04"
+        "first_release": "2012-09-04",
+        "spotify_url": "https://open.spotify.com/embed/track/62yJjFtgkhUrXktIoSjgP2"
       }
     },
     {
@@ -55813,7 +56345,8 @@
         "isrcs": [
           "GB7940000250"
         ],
-        "first_release": "2006-05"
+        "first_release": "2006-05",
+        "youtube_code": "-GY9DWIfpwc"
       },
       "ytdlpMetadata": {
         "youtube_code": "-GY9DWIfpwc"
@@ -56274,7 +56807,8 @@
           "USWB11101654",
           "USWB19901165"
         ],
-        "first_release": "1972-03-25"
+        "first_release": "1972-03-25",
+        "spotify_url": "https://open.spotify.com/embed/track/3uMmllZo1AfoEnVT4ENCD3"
       },
       "ytdlpMetadata": {
         "youtube_code": "I7PHolrHOck"
@@ -56503,7 +57037,10 @@
         "isrcs": [
           "USQX91300104"
         ],
-        "first_release": "2013-05-17"
+        "first_release": "2013-05-17",
+        "spotify_url": "https://open.spotify.com/embed/track/3LWZv4XgPP958j9a3gTYuq",
+        "youtube_code": "cuj__JnGWLg",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1673536063?i=1673536434"
       },
       "ytdlpMetadata": {
         "youtube_code": "cuj__JnGWLg"
@@ -56611,7 +57148,8 @@
           "USRH10801704",
           "GBUM71021600"
         ],
-        "first_release": "1980-02-07"
+        "first_release": "1980-02-07",
+        "youtube_code": "bIEFMhQRlRo"
       },
       "ytdlpMetadata": {
         "youtube_code": "mcCK99wHrk0"
@@ -56700,7 +57238,9 @@
       "musicbrainzMetadata": {
         "release_group": "c360052d-aecd-4716-9984-bd1f0d1c9d7f",
         "album": "Game of Thrones: Music From the HBO Series",
-        "first_release": "2011-06-14"
+        "first_release": "2011-06-14",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440798940",
+        "spotify_url": "https://open.spotify.com/embed/album/5P9JZJW0itEaDK5RfWiSuZ"
       }
     },
     {
@@ -56735,7 +57275,9 @@
         "isrcs": [
           "QMTM61200406"
         ],
-        "first_release": "2012-11-19"
+        "first_release": "2012-11-19",
+        "youtube_code": "D011jANopLs",
+        "spotify_url": "https://open.spotify.com/embed/track/1fA4ineMbhYflXD0BgE6fw"
       }
     },
     {
@@ -57141,7 +57683,9 @@
       "musicbrainzMetadata": {
         "release_group": "56c49d75-8d99-49e7-a9ef-f71f621cd3c0",
         "album": "La cuesta de Mr. Bond",
-        "first_release": "1999"
+        "first_release": "1999",
+        "spotify_url": "https://open.spotify.com/embed/album/1CLd4e3Crv3c5niqaZh7Aa",
+        "apple_music_url": "https://embed.music.apple.com/es/album/268440194"
       }
     },
     {
@@ -57248,7 +57792,9 @@
           "USSM19500379",
           "US35G0400023"
         ],
-        "first_release": "1995-08-08"
+        "first_release": "1995-08-08",
+        "spotify_url": "https://open.spotify.com/embed/track/02ZdZqhpfrPnxwyakXgxB8",
+        "youtube_code": "4uDDdxDKmNA"
       }
     },
     {
@@ -57379,7 +57925,9 @@
       "musicbrainzMetadata": {
         "release_group": "74f154e4-a8a5-4f12-8767-e8845ff65560",
         "album": "Man of Steel",
-        "first_release": "2013-06-10"
+        "first_release": "2013-06-10",
+        "spotify_url": "https://open.spotify.com/embed/album/2rgInD5nZNONheZwqir4Xg",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1454321984"
       }
     },
     {
@@ -57414,7 +57962,8 @@
           "GMM881200024",
           "GMM881200005"
         ],
-        "first_release": "2012-10-09"
+        "first_release": "2012-10-09",
+        "spotify_url": "https://open.spotify.com/embed/track/2SUbEGOWS0cUV19uFjQQxR"
       }
     },
     {
@@ -57606,7 +58155,8 @@
       "musicbrainzMetadata": {
         "release_group": "1dfbf2c9-6fba-4538-b795-7da7fd351f86",
         "album": "All the Little Lights",
-        "first_release": "2012-02-24"
+        "first_release": "2012-02-24",
+        "spotify_url": "https://open.spotify.com/embed/album/25bKp06DTIMODKnzXQf4gR"
       }
     },
     {
@@ -57645,7 +58195,8 @@
         "isrcs": [
           "GBEFR0801291"
         ],
-        "first_release": "2008-03-23"
+        "first_release": "2008-03-23",
+        "spotify_url": "https://open.spotify.com/embed/track/6wVgm9tgIEbabePkuZ7no8"
       },
       "ytdlpMetadata": {
         "youtube_code": "p8e19MVPS5I"
@@ -57823,7 +58374,9 @@
         "isrcs": [
           "GBAAN7000015"
         ],
-        "first_release": "1971-03"
+        "first_release": "1971-03",
+        "spotify_url": "https://open.spotify.com/embed/track/0hNVjU6JKydHts0SAjHCno",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6820682787?i=6820683728"
       },
       "ytdlpMetadata": {
         "youtube_code": "vDtsgVgAx6k"
@@ -58086,7 +58639,8 @@
       "musicbrainzMetadata": {
         "release_group": "18ab56e0-7068-341e-ba17-7fe8eea1a829",
         "album": "The Shawshank Redemption: Original Motion Picture Soundtrack",
-        "first_release": "1994-09-20"
+        "first_release": "1994-09-20",
+        "spotify_url": "https://open.spotify.com/embed/album/5ucvCY0hFIAL95DVKohEiB"
       }
     },
     {
@@ -58394,7 +58948,10 @@
         "isrcs": [
           "GBDVX0600080"
         ],
-        "first_release": "2007-02-23"
+        "first_release": "2007-02-23",
+        "youtube_code": "EqiAWNIZ_dA",
+        "spotify_url": "https://open.spotify.com/embed/track/4qK1MDkgUC1pcGU40qd3Wd",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6788859137?i=6788859488"
       },
       "ytdlpMetadata": {
         "youtube_code": "qObzgUfCl28"
@@ -58504,7 +59061,8 @@
         "isrcs": [
           "USSM10407311"
         ],
-        "first_release": "1994-08-15"
+        "first_release": "1994-08-15",
+        "spotify_url": "https://open.spotify.com/embed/track/4OIfhY9Bzyqh6xpYQseGaQ"
       }
     },
     {
@@ -58590,7 +59148,9 @@
       "musicbrainzMetadata": {
         "release_group": "16879ae9-c718-328e-b2e4-cef03537eb4b",
         "album": "The Nightmare Before Christmas: Original Motion Picture Soundtrack",
-        "first_release": "1993-10-12"
+        "first_release": "1993-10-12",
+        "spotify_url": "https://open.spotify.com/embed/album/32hXKuDkMnpQaOI67xQj86",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440662430"
       }
     },
     {
@@ -58624,7 +59184,10 @@
           "USCJ80600051",
           "GBBLK0600573"
         ],
-        "first_release": "2006-10-10"
+        "first_release": "2006-10-10",
+        "youtube_code": "AXA3NWmly_U",
+        "spotify_url": "https://open.spotify.com/embed/track/07fa2JhutvgaTaLaKn2UiC",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6800520837?i=6800521059"
       }
     },
     {
@@ -58723,7 +59286,9 @@
           "NLA321392686",
           "NLA321392677"
         ],
-        "first_release": "2013-09-18"
+        "first_release": "2013-09-18",
+        "spotify_url": "https://open.spotify.com/embed/track/1ZR4QAYsiO9zPsGaMPW2OI",
+        "apple_music_url": "https://embed.music.apple.com/es/album/676891642?i=676891648"
       }
     },
     {
@@ -58806,7 +59371,9 @@
       "musicbrainzMetadata": {
         "release_group": "6c9c4985-3628-3070-b956-b538f30c9bea",
         "album": "Whatever People Say I Am, That’s What I’m Not",
-        "first_release": "2005"
+        "first_release": "2005",
+        "spotify_url": "https://open.spotify.com/embed/album/0ndGMh4twJNzPpr5XtHTR2",
+        "apple_music_url": "https://embed.music.apple.com/es/album/111153953"
       }
     },
     {
@@ -58940,7 +59507,8 @@
         "isrcs": [
           "QMW3D1100010"
         ],
-        "first_release": "2011-10-04"
+        "first_release": "2011-10-04",
+        "spotify_url": "https://open.spotify.com/embed/track/5eVSK8fo5oUKVbsYva83Bh"
       }
     },
     {
@@ -59033,7 +59601,9 @@
       "musicbrainzMetadata": {
         "release_group": "09d10a78-c2c3-3a11-bb0e-95eb8821acaf",
         "album": "Beauty and the Beast",
-        "first_release": "1994-04-26"
+        "first_release": "1994-04-26",
+        "spotify_url": "https://open.spotify.com/embed/album/3Pzoe4ffuNsxdgTHGaFJmo",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440778057"
       }
     },
     {
@@ -59157,7 +59727,8 @@
         "isrcs": [
           "USSUB1297004"
         ],
-        "first_release": "2012-04-30"
+        "first_release": "2012-04-30",
+        "spotify_url": "https://open.spotify.com/embed/track/2gUwnJ5cpl40TSlqmjfqAC"
       }
     },
     {
@@ -59252,7 +59823,9 @@
       "musicbrainzMetadata": {
         "release_group": "92f942a3-0856-43a9-8dce-8b2edf897fa4",
         "album": "Lisbon",
-        "first_release": "2010-09-14"
+        "first_release": "2010-09-14",
+        "spotify_url": "https://open.spotify.com/embed/album/5YcmiD7NBPKJEOedvakNJD",
+        "apple_music_url": "https://embed.music.apple.com/es/album/671911182"
       }
     },
     {
@@ -59535,7 +60108,9 @@
           "GBAKW0300040",
           "USIR10300259"
         ],
-        "first_release": "2003-04-28"
+        "first_release": "2003-04-28",
+        "youtube_code": "UKRo86ccTtY",
+        "spotify_url": "https://open.spotify.com/embed/track/5ypaZzzhcVYoy8BYSkbfih"
       },
       "ytdlpMetadata": {
         "youtube_code": "oIIxlgcuQRU"
@@ -59661,7 +60236,9 @@
           "USAT21206698",
           "USAT21206701"
         ],
-        "first_release": "2012-12-07"
+        "first_release": "2012-12-07",
+        "spotify_url": "https://open.spotify.com/embed/track/0nJW01T7XtvILxQgC5J7Wh",
+        "youtube_code": "ekzHIouo8Q4"
       }
     },
     {
@@ -59744,7 +60321,9 @@
       "musicbrainzMetadata": {
         "release_group": "ff29c859-9503-3a01-86ab-1cfff9233cc0",
         "album": "Forrest Gump: Original Motion Picture Score",
-        "first_release": "1994-08-02"
+        "first_release": "1994-08-02",
+        "spotify_url": "https://open.spotify.com/embed/album/1Fw951OcmbeCmVnnNcRYrp",
+        "apple_music_url": "https://embed.music.apple.com/es/album/203797180"
       }
     },
     {
@@ -59778,7 +60357,9 @@
         "isrcs": [
           "GBAJH0300036"
         ],
-        "first_release": "2003-04-23"
+        "first_release": "2003-04-23",
+        "spotify_url": "https://open.spotify.com/embed/track/1SyOjtLqqqk2AVLZnRI3bk",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1435643051?i=1435643065"
       }
     },
     {
@@ -59949,7 +60530,9 @@
           "GBMQN1200020",
           "GBMQN1100012"
         ],
-        "first_release": "2012-02-24"
+        "first_release": "2012-02-24",
+        "youtube_code": "_NDlXiYH33I",
+        "spotify_url": "https://open.spotify.com/embed/track/04MEZAnQkDX798DFfnk0bT"
       }
     },
     {
@@ -59976,7 +60559,9 @@
       "musicbrainzMetadata": {
         "release_group": "a862b364-6b65-4b6f-945f-6f4f1258411a",
         "album": "Coexist",
-        "first_release": "2012-09-05"
+        "first_release": "2012-09-05",
+        "spotify_url": "https://open.spotify.com/embed/album/4SXTQ305LjMh2DBHA3CXIW",
+        "apple_music_url": "https://embed.music.apple.com/es/album/555642294"
       }
     },
     {
@@ -60283,7 +60868,8 @@
           "GBZN81300020",
           "GBZN51300020"
         ],
-        "first_release": "2013-09-20"
+        "first_release": "2013-09-20",
+        "spotify_url": "https://open.spotify.com/embed/track/31IxooDVO2GR9HRUSCdcRG"
       },
       "ytdlpMetadata": {
         "youtube_code": "cpnXMMq-uWs"
@@ -60325,7 +60911,8 @@
         "isrcs": [
           "USAM18490004"
         ],
-        "first_release": "1984-10-29"
+        "first_release": "1984-10-29",
+        "spotify_url": "https://open.spotify.com/embed/track/7Ewz6bJ97vUqk5HdkvguFQ"
       },
       "ytdlpMetadata": {
         "youtube_code": "3eT464L1YRA"
@@ -60424,7 +61011,9 @@
         "isrcs": [
           "USSM10604653"
         ],
-        "first_release": "2006-11-02"
+        "first_release": "2006-11-02",
+        "spotify_url": "https://open.spotify.com/embed/track/5JTgqOeHWg4bxMZYMRTE4H",
+        "apple_music_url": "https://embed.music.apple.com/es/album/204285054?i=204285273"
       }
     },
     {
@@ -60624,7 +61213,8 @@
         "isrcs": [
           "SEVVX0700303"
         ],
-        "first_release": "2007-09-21"
+        "first_release": "2007-09-21",
+        "spotify_url": "https://open.spotify.com/embed/track/1UzKTLOvypzRyPGZKkOPMA"
       },
       "ytdlpMetadata": {
         "youtube_code": "MlpInCp7anE"
@@ -60831,7 +61421,9 @@
           "USUM71029010",
           "USUM71027542"
         ],
-        "first_release": "2010-01-01"
+        "first_release": "2010-01-01",
+        "spotify_url": "https://open.spotify.com/embed/track/3hXc1pUnHffDFfYLqoVBzh",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6801602796?i=6801603909"
       },
       "ytdlpMetadata": {
         "youtube_code": "WLNp0g2GBxQ"
@@ -60929,7 +61521,8 @@
         "isrcs": [
           "SEVVX0700310"
         ],
-        "first_release": "2007-09-21"
+        "first_release": "2007-09-21",
+        "spotify_url": "https://open.spotify.com/embed/track/1Y25ZqyjAgVCvOgNL9EDf3"
       },
       "ytdlpMetadata": {
         "youtube_code": "U5ThjAve3CQ"
@@ -61354,7 +61947,8 @@
           "USDW10021640",
           "USBMG0100026"
         ],
-        "first_release": "1999"
+        "first_release": "1999",
+        "spotify_url": "https://open.spotify.com/embed/track/4WFNb2UhW5E5qxHGsgebuQ"
       },
       "ytdlpMetadata": {
         "youtube_code": "iwMTZFBd5eQ"
@@ -61428,7 +62022,8 @@
         "isrcs": [
           "CA1251212601"
         ],
-        "first_release": "2012-03-27"
+        "first_release": "2012-03-27",
+        "youtube_code": "azV0Y7v6wsg"
       }
     },
     {
@@ -61454,7 +62049,9 @@
       "musicbrainzMetadata": {
         "release_group": "263f11cf-5ae7-4fad-9d35-f9c4c123ccfa",
         "album": "The Hunger Games: Catching Fire: Original Motion Picture Score",
-        "first_release": "2013-01-01"
+        "first_release": "2013-01-01",
+        "spotify_url": "https://open.spotify.com/embed/album/1ZjhC3CL1GLbPQbU6lKtow",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1442822751"
       }
     },
     {
@@ -61564,7 +62161,8 @@
           "GBBLG0200064",
           "USMC10110179"
         ],
-        "first_release": "1982"
+        "first_release": "1982",
+        "spotify_url": "https://open.spotify.com/embed/track/1V9C0pLA8yIVPLgjt8MFt8"
       }
     },
     {
@@ -61716,7 +62314,8 @@
       "musicbrainzMetadata": {
         "release_group": "64b55e16-93e8-4afd-88fb-10c75e180a32",
         "album": "Once I Was an Eagle",
-        "first_release": "2013-05-24"
+        "first_release": "2013-05-24",
+        "spotify_url": "https://open.spotify.com/embed/album/35He6RuwS8C2KjG067Gobl"
       }
     },
     {
@@ -61760,7 +62359,9 @@
           "USEE10001295",
           "USEE10412479"
         ],
-        "first_release": "1995-05-23"
+        "first_release": "1995-05-23",
+        "spotify_url": "https://open.spotify.com/embed/track/15tHagkk8z306XkyOHqiip",
+        "apple_music_url": "https://embed.music.apple.com/es/album/333452525?i=333453018"
       }
     },
     {
@@ -61833,7 +62434,9 @@
         "isrcs": [
           "GBGEY0900107"
         ],
-        "first_release": "2010-06-04"
+        "first_release": "2010-06-04",
+        "spotify_url": "https://open.spotify.com/embed/track/0luBU1ldkuto4nflQqond5",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6803617369?i=6803617862"
       },
       "ytdlpMetadata": {
         "youtube_code": "8dBv4i0dXUc"
@@ -61966,7 +62569,9 @@
       "musicbrainzMetadata": {
         "release_group": "3d478f36-7a5e-33b5-91ea-2847c6609808",
         "album": "The Thin Red Line",
-        "first_release": "1999-01-11"
+        "first_release": "1999-01-11",
+        "spotify_url": "https://open.spotify.com/embed/album/7wPDOZ30toNEBkr5uBIANF",
+        "apple_music_url": "https://embed.music.apple.com/es/album/212408475"
       }
     },
     {
@@ -62027,7 +62632,8 @@
         "isrcs": [
           "FR9W11214238"
         ],
-        "first_release": "2013-04-19"
+        "first_release": "2013-04-19",
+        "youtube_code": "86_TqlVQscQ"
       },
       "ytdlpMetadata": {
         "youtube_code": "tBsRvthVhdw"
@@ -62208,7 +62814,9 @@
       "musicbrainzMetadata": {
         "release_group": "b1b7e9ba-bbac-4bdd-90fb-9517f840b247",
         "album": "Frozen",
-        "first_release": "2013-11-25"
+        "first_release": "2013-11-25",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440618177",
+        "spotify_url": "https://open.spotify.com/embed/album/3R0cmw38LpSNPOooqhBxO1"
       }
     },
     {
@@ -62449,7 +63057,9 @@
       "musicbrainzMetadata": {
         "release_group": "3dc9ee80-0768-490d-9e43-534796da3076",
         "album": "Reflektor",
-        "first_release": "2013-10-25"
+        "first_release": "2013-10-25",
+        "spotify_url": "https://open.spotify.com/embed/album/7HTKIIhsSQNTDfahJBnCOT",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1446334028"
       }
     },
     {
@@ -62666,7 +63276,9 @@
       "musicbrainzMetadata": {
         "release_group": "004357e6-d631-37e7-85d7-4d5b0671c6f5",
         "album": "American Beauty: Original Motion Picture Score",
-        "first_release": "2000-01-11"
+        "first_release": "2000-01-11",
+        "spotify_url": "https://open.spotify.com/embed/album/11y3Dzg44npGsTWKtmuzTW",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1437293429"
       }
     },
     {
@@ -62803,7 +63415,9 @@
         "isrcs": [
           "GBARL0100225"
         ],
-        "first_release": "2001-10-31"
+        "first_release": "2001-10-31",
+        "spotify_url": "https://open.spotify.com/embed/track/2k2dy09WIdwhQUP73JkvKb",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1308573786?i=1308573787"
       }
     },
     {
@@ -63093,7 +63707,10 @@
         "isrcs": [
           "USUM71307498"
         ],
-        "first_release": "2013-06-18"
+        "first_release": "2013-06-18",
+        "youtube_code": "KEA0btSNkpw",
+        "spotify_url": "https://open.spotify.com/embed/track/42GcjriRK6srwHkfbkBqVl",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440873068?i=1440873246"
       },
       "ytdlpMetadata": {
         "youtube_code": "KEA0btSNkpw"
@@ -63163,7 +63780,8 @@
       "musicbrainzMetadata": {
         "release_group": "cffbbd41-005f-4da7-86f3-674fb861eef4",
         "album": "Life of Pi",
-        "first_release": "2012-11-16"
+        "first_release": "2012-11-16",
+        "spotify_url": "https://open.spotify.com/embed/album/0ogV7CBV00ONXAVx4tm0gk"
       }
     },
     {
@@ -63450,7 +64068,8 @@
           "USLIC0602233",
           "SEVHC0007060"
         ],
-        "first_release": "2000-04-10"
+        "first_release": "2000-04-10",
+        "spotify_url": "https://open.spotify.com/embed/track/5wuIUd0lIHxgjJ8Zt3mfgN"
       }
     },
     {
@@ -63677,7 +64296,9 @@
           "NLA321393034",
           "NLA320119533"
         ],
-        "first_release": "2001-09-11"
+        "first_release": "2001-09-11",
+        "spotify_url": "https://open.spotify.com/embed/track/0gmbgwZ8iqyMPmXefof8Yf",
+        "apple_music_url": "https://embed.music.apple.com/es/album/405942827?i=405942832"
       }
     },
     {
@@ -63848,7 +64469,9 @@
       "musicbrainzMetadata": {
         "release_group": "2221ed36-10e5-31a4-bd39-782a65f4fc99",
         "album": "The Lion King: Original Motion Picture Soundtrack",
-        "first_release": "1994-05-31"
+        "first_release": "1994-05-31",
+        "spotify_url": "https://open.spotify.com/embed/album/6BqcXoEgLpiGHQit2hXBIl",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440669121"
       }
     },
     {
@@ -64101,7 +64724,8 @@
       "musicbrainzMetadata": {
         "release_group": "0778c20f-62e4-4197-99d5-8be3745aef4a",
         "album": "Enter the 37th Chamber",
-        "first_release": "2009-04-21"
+        "first_release": "2009-04-21",
+        "spotify_url": "https://open.spotify.com/embed/album/7ylTeGpMy2RbFDMGSnYjX5"
       }
     },
     {
@@ -64135,7 +64759,8 @@
         "isrcs": [
           "GBARL1301080"
         ],
-        "first_release": "2014-03-07"
+        "first_release": "2014-03-07",
+        "youtube_code": "fLuv6yv1_a4"
       }
     },
     {
@@ -64195,7 +64820,9 @@
           "GBAHS0900320",
           "GBAHS0900112"
         ],
-        "first_release": "2009-05-29"
+        "first_release": "2009-05-29",
+        "spotify_url": "https://open.spotify.com/embed/track/3TkMsJZVZkYSsGtwkXx6br",
+        "apple_music_url": "https://embed.music.apple.com/es/album/316834424?i=316834534"
       },
       "ytdlpMetadata": {
         "youtube_code": "AFsLkxLAVM4"
@@ -64233,7 +64860,9 @@
           "GBMQN1200012",
           "GBMQN1100004"
         ],
-        "first_release": "2012-02-24"
+        "first_release": "2012-02-24",
+        "youtube_code": "ZINPsG4CVcE",
+        "spotify_url": "https://open.spotify.com/embed/track/2pUpNOgJBIBCcjyQZQ00qU"
       }
     },
     {
@@ -64273,7 +64902,8 @@
           "USAK19900358",
           "USPR36500095"
         ],
-        "first_release": "1965-10-01"
+        "first_release": "1965-10-01",
+        "spotify_url": "https://open.spotify.com/embed/track/3NSXTyLMW93B9IjdAANXg2"
       }
     },
     {
@@ -64528,7 +65158,10 @@
         "isrcs": [
           "GBAAA1200795"
         ],
-        "first_release": "2012-04-27"
+        "first_release": "2012-04-27",
+        "youtube_code": "9Gb0a8Ie2hM",
+        "spotify_url": "https://open.spotify.com/embed/track/1bwFfoGw6mJHqM6VjIZ5KN",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440861870?i=1440861879"
       }
     },
     {
@@ -64554,7 +65187,8 @@
       "musicbrainzMetadata": {
         "release_group": "bb5b05dc-5514-4df7-8425-7f553678969b",
         "album": "El Tiempo Entre Costuras",
-        "first_release": "2013-12-10"
+        "first_release": "2013-12-10",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1557684039"
       }
     },
     {
@@ -64885,7 +65519,8 @@
         "isrcs": [
           "USSM10108752"
         ],
-        "first_release": "2001-09-25"
+        "first_release": "2001-09-25",
+        "spotify_url": "https://open.spotify.com/embed/track/5RJI4frP6s1xr9Ma9GgRkr"
       },
       "ytdlpMetadata": {
         "youtube_code": "L25NgHpsMsA"
@@ -65260,7 +65895,10 @@
           "USUM70502809",
           "USUM70502810"
         ],
-        "first_release": "1986-08-10"
+        "first_release": "1986-08-10",
+        "spotify_url": "https://open.spotify.com/embed/track/0ee1DiZF94NSqqpG0XHUzH",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1794889301?i=1794889306",
+        "youtube_code": "lDK9QqIzhwk"
       }
     },
     {
@@ -65391,7 +66029,8 @@
         "isrcs": [
           "USSM19600051"
         ],
-        "first_release": "1996-02-12"
+        "first_release": "1996-02-12",
+        "apple_music_url": "https://embed.music.apple.com/es/album/281701670?i=281701718"
       }
     },
     {
@@ -65456,7 +66095,8 @@
       "musicbrainzMetadata": {
         "release_group": "462ef28a-9a62-4803-9c9e-613ec96cfaa3",
         "album": "Argentina Songbook",
-        "first_release": "2013-11-19"
+        "first_release": "2013-11-19",
+        "spotify_url": "https://open.spotify.com/embed/album/5FNdQV7A2U2tSAfDuHFhdu"
       }
     },
     {
@@ -65523,7 +66163,10 @@
         "isrcs": [
           "USUM71314082"
         ],
-        "first_release": "2013-11-05"
+        "first_release": "2013-11-05",
+        "youtube_code": "ZDXXi19_7iE",
+        "spotify_url": "https://open.spotify.com/embed/track/0g81BXLg8tsoY5RuGpBjHE",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440819356?i=1440820363"
       }
     },
     {
@@ -65556,7 +66199,8 @@
         "isrcs": [
           "FRZ020181090"
         ],
-        "first_release": "2002-03-25"
+        "first_release": "2002-03-25",
+        "spotify_url": "https://open.spotify.com/embed/track/6uZsAFuJ6twFAp2et3PFMp"
       },
       "ytdlpMetadata": {
         "youtube_code": "VsCupfZ-o6U"
@@ -65593,7 +66237,8 @@
           "USSM19911593",
           "USSM19911429"
         ],
-        "first_release": "1999-11-04"
+        "first_release": "1999-11-04",
+        "spotify_url": "https://open.spotify.com/embed/track/0VPV735BQGu1j4MVFnJ3s5"
       }
     },
     {
@@ -65925,7 +66570,9 @@
       "musicbrainzMetadata": {
         "release_group": "227f64aa-9a0b-4775-bc88-50e828575706",
         "album": "Introducing Slim Moore and the Mar-Kays",
-        "first_release": "2011-10-04"
+        "first_release": "2011-10-04",
+        "spotify_url": "https://open.spotify.com/embed/album/4eLI3YzF0yrobxoUXdumGL",
+        "apple_music_url": "https://embed.music.apple.com/es/album/459630299"
       }
     },
     {
@@ -66160,7 +66807,9 @@
       "musicbrainzMetadata": {
         "release_group": "5013fdcb-e87a-47bf-b313-103cd72a70f3",
         "album": "Out Among the Stars",
-        "first_release": "2014-03-21"
+        "first_release": "2014-03-21",
+        "spotify_url": "https://open.spotify.com/embed/album/33jUyJOx4j6BWJ7VkzWoth",
+        "apple_music_url": "https://embed.music.apple.com/es/album/735727526"
       }
     },
     {
@@ -66193,7 +66842,8 @@
         "isrcs": [
           "GBARL9200043"
         ],
-        "first_release": "1992-04-06"
+        "first_release": "1992-04-06",
+        "spotify_url": "https://open.spotify.com/embed/track/22M5LjnTiBLsMoz5OLCOEB"
       }
     },
     {
@@ -66358,7 +67008,10 @@
           "USSM11406726",
           "USQ4E1300686"
         ],
-        "first_release": "2013-12-16"
+        "first_release": "2013-12-16",
+        "youtube_code": "dJqxQzxLbHM",
+        "spotify_url": "https://open.spotify.com/embed/track/3MZYcGc3SPV4gt06ZbTFEA",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1771866522?i=1771867458"
       }
     },
     {
@@ -66384,7 +67037,9 @@
       "musicbrainzMetadata": {
         "release_group": "8e53e260-a7ae-3ec4-9f5b-5647e1f2a7f3",
         "album": "Keep It Hid",
-        "first_release": "2009-02-09"
+        "first_release": "2009-02-09",
+        "spotify_url": "https://open.spotify.com/embed/album/2KQn93GMsH7IoOvQ0Hlqzx",
+        "apple_music_url": "https://embed.music.apple.com/es/album/993418191"
       }
     },
     {
@@ -66593,7 +67248,10 @@
           "GBARL1300610",
           "GBARL1300107"
         ],
-        "first_release": "2013-06-21"
+        "first_release": "2013-06-21",
+        "youtube_code": "YKMFQRqz_xM",
+        "spotify_url": "https://open.spotify.com/embed/track/5E4jBLx4P0UBji68bBThSw",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1308605488?i=1308605492"
       }
     },
     {
@@ -66675,7 +67333,10 @@
         "isrcs": [
           "SE3NM1300101"
         ],
-        "first_release": "2014-03-03"
+        "first_release": "2014-03-03",
+        "youtube_code": "HnZQpoLDkcg",
+        "spotify_url": "https://open.spotify.com/embed/track/0a9npeEQIad1Wr4H1RsLPU",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1770261069?i=1770262010"
       }
     },
     {
@@ -66940,7 +67601,8 @@
         "isrcs": [
           "US64G1007708"
         ],
-        "first_release": "2010-10-11"
+        "first_release": "2010-10-11",
+        "spotify_url": "https://open.spotify.com/embed/track/3GWZX3YtldXCdSQqrzGgV5"
       }
     },
     {
@@ -67036,7 +67698,8 @@
         "isrcs": [
           "GBBBY9610056"
         ],
-        "first_release": "1996-04-08"
+        "first_release": "1996-04-08",
+        "spotify_url": "https://open.spotify.com/embed/track/6Ykk0PRL8VMQb6h13CxH31"
       },
       "ytdlpMetadata": {
         "youtube_code": "brzzM31G4x8"
@@ -67241,7 +67904,8 @@
           "FR31Q0900007",
           "GBUM70903480"
         ],
-        "first_release": "2009-05-22"
+        "first_release": "2009-05-22",
+        "spotify_url": "https://open.spotify.com/embed/track/5URiEZGRfV2XXfrgRURmiL"
       },
       "ytdlpMetadata": {
         "youtube_code": "OtD7Xj3Sw0o"
@@ -67360,7 +68024,8 @@
         "isrcs": [
           "SEPQA1201986"
         ],
-        "first_release": "2012-10-22"
+        "first_release": "2012-10-22",
+        "spotify_url": "https://open.spotify.com/embed/track/2knr7ikPt4l7bk92qS4ZXW"
       }
     },
     {
@@ -67396,7 +68061,9 @@
           "USWB19700703",
           "GBBKT9700052"
         ],
-        "first_release": "1997-09-08"
+        "first_release": "1997-09-08",
+        "spotify_url": "https://open.spotify.com/embed/track/1t6tQ0ETeOIDl5cscjEC55",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1540690922?i=1540691258"
       }
     },
     {
@@ -67564,7 +68231,8 @@
       "musicbrainzMetadata": {
         "release_group": "13060e0f-48d5-4fdf-87be-e53b22dd66d8",
         "album": "Everyday Robots",
-        "first_release": "2014-04-22"
+        "first_release": "2014-04-22",
+        "spotify_url": "https://open.spotify.com/embed/album/5SzhltQSSi1HUMi5cveZIZ"
       }
     },
     {
@@ -67599,7 +68267,9 @@
           "BET671300060",
           "BET671300160"
         ],
-        "first_release": "2013-08-16"
+        "first_release": "2013-08-16",
+        "spotify_url": "https://open.spotify.com/embed/track/34dx8DACTJsc3rsJdaEIQw",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6801602796?i=6801603262"
       }
     },
     {
@@ -68140,7 +68810,8 @@
         "isrcs": [
           "USUM71319540"
         ],
-        "first_release": "2014-04-22"
+        "first_release": "2014-04-22",
+        "spotify_url": "https://open.spotify.com/embed/track/6fFuOXIrVHUmSI8IM889wa"
       }
     },
     {
@@ -68277,7 +68948,9 @@
           "USCA29600198",
           "USCA29800055"
         ],
-        "first_release": "1997-07-12"
+        "first_release": "1997-07-12",
+        "spotify_url": "https://open.spotify.com/embed/track/0BfPhHh0Gf1WR1hQgIYqen",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1668262479?i=1668262841"
       }
     },
     {
@@ -68640,7 +69313,8 @@
         "isrcs": [
           "GBW231400003"
         ],
-        "first_release": "2014-05-26"
+        "first_release": "2014-05-26",
+        "spotify_url": "https://open.spotify.com/embed/track/11Kul1T6RWIvvuh5ctCAgo"
       }
     },
     {
@@ -68961,7 +69635,8 @@
           "USUM71410382",
           "USUM71406881"
         ],
-        "first_release": "2014-07-01"
+        "first_release": "2014-07-01",
+        "spotify_url": "https://open.spotify.com/embed/track/0CaBSfPJZsPHVT2ShEahc3"
       }
     },
     {
@@ -68999,7 +69674,9 @@
           "USWB10202603",
           "USWB19900178"
         ],
-        "first_release": "1977-02-04"
+        "first_release": "1977-02-04",
+        "spotify_url": "https://open.spotify.com/embed/track/5TDZyWDfbQFQJabbPwImVY",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1714781747?i=1714781749"
       },
       "ytdlpMetadata": {
         "youtube_code": "Y3ywicffOj4"
@@ -69069,7 +69746,8 @@
           "USVI29800169",
           "USV129800169"
         ],
-        "first_release": "1998-04-29"
+        "first_release": "1998-04-29",
+        "spotify_url": "https://open.spotify.com/embed/track/1OxcIUqVmVYxT6427tbhDW"
       }
     },
     {
@@ -69162,7 +69840,9 @@
       "musicbrainzMetadata": {
         "release_group": "fb43ac3a-8d28-3686-8653-bbf15a5e4389",
         "album": "Americana",
-        "first_release": "1998-11-16"
+        "first_release": "1998-11-16",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440880887",
+        "spotify_url": "https://open.spotify.com/embed/album/2RNTBrSO8U8XjjEj9RVvZ5"
       }
     },
     {
@@ -69255,7 +69935,8 @@
         "isrcs": [
           "GBUM70603491"
         ],
-        "first_release": "2006-10-30"
+        "first_release": "2006-10-30",
+        "spotify_url": "https://open.spotify.com/embed/track/2pxCOdnHEZZ3A1XRNxjc1v"
       },
       "ytdlpMetadata": {
         "youtube_code": "bS8-qQojlhA"
@@ -69369,7 +70050,8 @@
       "musicbrainzMetadata": {
         "release_group": "99b2e3b9-4898-3dca-8cc6-5303dba35752",
         "album": "Me and Armini",
-        "first_release": "2008-09-06"
+        "first_release": "2008-09-06",
+        "spotify_url": "https://open.spotify.com/embed/album/1yvjQwB2MnCVrqnP8FnZ6k"
       }
     },
     {
@@ -69464,7 +70146,10 @@
           "USSM11307291",
           "IEACJ1300031"
         ],
-        "first_release": "2014-03-20"
+        "first_release": "2014-03-20",
+        "youtube_code": "JKlYOUfviXM",
+        "spotify_url": "https://open.spotify.com/embed/track/0aOluBqXYd0rFSCsgDyAWX",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440854885?i=1440855014"
       },
       "ytdlpMetadata": {
         "youtube_code": "PVjiKRfKpPI"
@@ -69562,7 +70247,8 @@
         "isrcs": [
           "USSM19400914"
         ],
-        "first_release": "1994-08-15"
+        "first_release": "1994-08-15",
+        "spotify_url": "https://open.spotify.com/embed/track/1StXVL5gClph4z4XzanYko"
       }
     },
     {
@@ -69621,7 +70307,8 @@
       "musicbrainzMetadata": {
         "release_group": "ad57d7d3-de7a-4f2a-b412-2618e5771429",
         "album": "Where You Stand",
-        "first_release": "2013-08-14"
+        "first_release": "2013-08-14",
+        "spotify_url": "https://open.spotify.com/embed/album/6xP3ZLgx7K3bdZoa8UJB5f"
       }
     },
     {
@@ -69682,7 +70369,9 @@
         "isrcs": [
           "USSM11305808"
         ],
-        "first_release": "2014-03-14"
+        "first_release": "2014-03-14",
+        "spotify_url": "https://open.spotify.com/embed/track/4sR1DX3rjXpmvIfKNaFWH0",
+        "apple_music_url": "https://embed.music.apple.com/es/album/793285794?i=793286921"
       },
       "ytdlpMetadata": {
         "youtube_code": "Ndzln1UEyf0"
@@ -69725,7 +70414,10 @@
           "GBAYE1600166",
           "GBAYE0000566"
         ],
-        "first_release": "2000-07-10"
+        "first_release": "2000-07-10",
+        "spotify_url": "https://open.spotify.com/embed/track/2QhURnm7mQDxBb5jWkbDug",
+        "youtube_code": "2XqpXmhM1Fc",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1122782080?i=1122782218"
       },
       "ytdlpMetadata": {
         "youtube_code": "yWeuUwpEQfs"
@@ -69850,7 +70542,9 @@
       "musicbrainzMetadata": {
         "release_group": "b9a4e9ad-400c-4219-ae45-519c2d8167f7",
         "album": "Overgrown",
-        "first_release": "2013-04-05"
+        "first_release": "2013-04-05",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440871055",
+        "spotify_url": "https://open.spotify.com/embed/album/53FEYOXnplxBWoQMmWn82U"
       }
     },
     {
@@ -69908,7 +70602,8 @@
         "isrcs": [
           "USY741100002"
         ],
-        "first_release": "2012-07-24"
+        "first_release": "2012-07-24",
+        "spotify_url": "https://open.spotify.com/embed/track/2kWowW0k4oFymhkr7LmvzO"
       }
     },
     {
@@ -69942,7 +70637,9 @@
           "IEABD1400017",
           "IEABD1400003"
         ],
-        "first_release": "2014-10-31"
+        "first_release": "2014-10-31",
+        "spotify_url": "https://open.spotify.com/embed/track/3RjptwtQO8qaN5m2GLVfgX",
+        "youtube_code": "xGIIfNxfUAE"
       },
       "ytdlpMetadata": {
         "youtube_code": "3gEoLKQWoV0"
@@ -70148,7 +70845,9 @@
         "isrcs": [
           "USAT21101334"
         ],
-        "first_release": "2011-09-02"
+        "first_release": "2011-09-02",
+        "youtube_code": "pkV5Lh2dZ_A",
+        "spotify_url": "https://open.spotify.com/embed/track/4IIFRMeYmJux7kh7Ws1mXF"
       },
       "ytdlpMetadata": {
         "youtube_code": "1x1wjGKHjBI"
@@ -70186,7 +70885,10 @@
           "USSM12410059",
           "USSM11401317"
         ],
-        "first_release": "2015-01-09"
+        "first_release": "2015-01-09",
+        "spotify_url": "https://open.spotify.com/embed/track/4UFfkQj7bkQmqO9GF52rTq",
+        "youtube_code": "7PCkvCPvDXk",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1058093893?i=1058093898"
       }
     },
     {
@@ -70242,7 +70944,8 @@
         "isrcs": [
           "USSUB0774501"
         ],
-        "first_release": "2007-10-09"
+        "first_release": "2007-10-09",
+        "spotify_url": "https://open.spotify.com/embed/track/7fgOmdonXZap1Kuz7hs3O1"
       }
     },
     {
@@ -70269,7 +70972,9 @@
       "musicbrainzMetadata": {
         "release_group": "939ca88a-0764-4959-ba1a-f18e4e5ef0a7",
         "album": "Ryan Adams",
-        "first_release": "2014-08-19"
+        "first_release": "2014-08-19",
+        "spotify_url": "https://open.spotify.com/embed/album/69K1Pef7hoy91Q81F6WPey",
+        "apple_music_url": "https://embed.music.apple.com/es/album/893638994"
       }
     },
     {
@@ -70424,7 +71129,8 @@
         "isrcs": [
           "BET671300182"
         ],
-        "first_release": "2013-08-16"
+        "first_release": "2013-08-16",
+        "spotify_url": "https://open.spotify.com/embed/track/6M4nkEPZMj58acftDRTuKL"
       }
     },
     {
@@ -70456,7 +71162,10 @@
         "isrcs": [
           "USUM71405259"
         ],
-        "first_release": "2014-01-01"
+        "first_release": "2014-01-01",
+        "youtube_code": "nyfkyf4ocjA",
+        "spotify_url": "https://open.spotify.com/embed/track/2DbI1sUI8OEh70KbJ5Wb3w",
+        "apple_music_url": "https://embed.music.apple.com/es/album/6800394701?i=6800394704"
       },
       "ytdlpMetadata": {
         "youtube_code": "Twix375Me4Q"
@@ -70486,7 +71195,9 @@
       "musicbrainzMetadata": {
         "release_group": "67e28d5b-f68e-4349-8e43-76189c90be65",
         "album": "Lazaretto",
-        "first_release": "2014-06-06"
+        "first_release": "2014-06-06",
+        "spotify_url": "https://open.spotify.com/embed/album/75224XX4gZg2PjWeXzRjsa",
+        "apple_music_url": "https://embed.music.apple.com/es/album/855605167"
       }
     },
     {
@@ -70693,7 +71404,9 @@
         "isrcs": [
           "GBDNH0400364"
         ],
-        "first_release": "2004"
+        "first_release": "2004",
+        "spotify_url": "https://open.spotify.com/embed/track/2NWLgWfZdHjxTfK0mNTmId",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1854528192?i=1854528490"
       }
     },
     {
@@ -70751,7 +71464,9 @@
           "GBN9X1400180",
           "GBN9X1400068"
         ],
-        "first_release": "2014-11-07"
+        "first_release": "2014-11-07",
+        "spotify_url": "https://open.spotify.com/embed/track/2nMRGpC0iszLNkJxBQuQ2a",
+        "apple_music_url": "https://embed.music.apple.com/es/album/919600058?i=919600099"
       },
       "ytdlpMetadata": {
         "youtube_code": "Ezc4HdLGxg4"
@@ -70992,7 +71707,8 @@
           "USVT10600070",
           "GBBKS0600007"
         ],
-        "first_release": "2006-10-23"
+        "first_release": "2006-10-23",
+        "spotify_url": "https://open.spotify.com/embed/track/5HkLVhdVOifwVzQhuh51dL"
       },
       "ytdlpMetadata": {
         "youtube_code": "aFNDxEYtO80"
@@ -71078,7 +71794,9 @@
         "isrcs": [
           "USRC11400498"
         ],
-        "first_release": "2014-07-04"
+        "first_release": "2014-07-04",
+        "youtube_code": "uzaYLK3k0DQ",
+        "spotify_url": "https://open.spotify.com/embed/track/2s1sdSqGcKxpPr5lCl7jAV"
       }
     },
     {
@@ -71174,7 +71892,9 @@
         "isrcs": [
           "USSM19502352"
         ],
-        "first_release": "1996-01-23"
+        "first_release": "1996-01-23",
+        "spotify_url": "https://open.spotify.com/embed/track/6uy5itaRq4EAjwLQWskF1d",
+        "apple_music_url": "https://embed.music.apple.com/es/album/274782938?i=274783145"
       }
     },
     {
@@ -71216,7 +71936,8 @@
         "isrcs": [
           "CAV161300016"
         ],
-        "first_release": "2014-06-25"
+        "first_release": "2014-06-25",
+        "spotify_url": "https://open.spotify.com/embed/track/69iJSZ4mdRsVkJIvvORtpj"
       }
     },
     {
@@ -71250,7 +71971,8 @@
           "GBGAC0500001",
           "US4HB0600001"
         ],
-        "first_release": "2005-07-25"
+        "first_release": "2005-07-25",
+        "spotify_url": "https://open.spotify.com/embed/track/1TF8mSG5YHyaS4o3NeBSAo"
       }
     },
     {
@@ -71284,7 +72006,10 @@
         "isrcs": [
           "GBCEL0501190"
         ],
-        "first_release": "2005"
+        "first_release": "2005",
+        "youtube_code": "zr0p6qqtlcw",
+        "spotify_url": "https://open.spotify.com/embed/track/0DJEHQPVFgHM3EQpXV5jyv",
+        "apple_music_url": "https://embed.music.apple.com/es/album/108067777?i=108067623"
       }
     },
     {
@@ -71483,7 +72208,9 @@
         "isrcs": [
           "GBAFL1300056"
         ],
-        "first_release": "2013-05-17"
+        "first_release": "2013-05-17",
+        "spotify_url": "https://open.spotify.com/embed/track/2yKczCmnpWYuIJuel6M0eV",
+        "apple_music_url": "https://embed.music.apple.com/es/album/626872826?i=626873093"
       },
       "ytdlpMetadata": {
         "youtube_code": "N527oBKIPMc"
@@ -71583,7 +72310,10 @@
           "SEAMA7343050",
           "SEPQA1900089"
         ],
-        "first_release": "1974"
+        "first_release": "1974",
+        "youtube_code": "bXavjlEGYEM",
+        "spotify_url": "https://open.spotify.com/embed/track/6Ac4NVYYl2U73QiTt11ZKd",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440657117?i=1440657130"
       }
     },
     {
@@ -71806,7 +72536,8 @@
         "isrcs": [
           "USWB11401083"
         ],
-        "first_release": "2014-06-13"
+        "first_release": "2014-06-13",
+        "apple_music_url": "https://embed.music.apple.com/es/album/873395041?i=873395060"
       },
       "ytdlpMetadata": {
         "youtube_code": "i8q8fFs3kTM"
@@ -71873,7 +72604,8 @@
           "USEE11300197",
           "USEE19900325"
         ],
-        "first_release": "1976-12-08"
+        "first_release": "1976-12-08",
+        "spotify_url": "https://open.spotify.com/embed/track/6gXrEUzibufX9xYPk3HD5p"
       }
     },
     {
@@ -71981,7 +72713,8 @@
         "isrcs": [
           "USSP30765393"
         ],
-        "first_release": "2007-10-23"
+        "first_release": "2007-10-23",
+        "youtube_code": "B46-k7r1wB0"
       }
     },
     {
@@ -72052,7 +72785,9 @@
         "isrcs": [
           "GBAHS1400002"
         ],
-        "first_release": "2014-04-11"
+        "first_release": "2014-04-11",
+        "spotify_url": "https://open.spotify.com/embed/track/0HbsSFEoX3GPy0KHL470t2",
+        "apple_music_url": "https://embed.music.apple.com/es/album/829640817?i=829640826"
       }
     },
     {
@@ -72148,7 +72883,10 @@
         "isrcs": [
           "GBW231400026"
         ],
-        "first_release": "2014-11-04"
+        "first_release": "2014-11-04",
+        "youtube_code": "IAtXhEQgWNQ",
+        "spotify_url": "https://open.spotify.com/embed/track/3x7LQKHnmYvHKdWogvK8o0",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1516888678?i=1516888679"
       },
       "ytdlpMetadata": {
         "youtube_code": "IlCQP4GnpXk"
@@ -72222,7 +72960,8 @@
           "USJT19900112",
           "GBAYE7600033"
         ],
-        "first_release": "1976-01-23"
+        "first_release": "1976-01-23",
+        "spotify_url": "https://open.spotify.com/embed/track/7ynwkFhXbrQqnMIWqFfRUS"
       },
       "ytdlpMetadata": {
         "youtube_code": "YsqlXkkEKxI"
@@ -72520,7 +73259,9 @@
         "isrcs": [
           "USUM71400120"
         ],
-        "first_release": "2014-01-01"
+        "first_release": "2014-01-01",
+        "youtube_code": "jngUbqFZ7VY",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440852355?i=1440852364"
       }
     },
     {
@@ -72554,7 +73295,8 @@
         "isrcs": [
           "USSM10312427"
         ],
-        "first_release": "2004-02-03"
+        "first_release": "2004-02-03",
+        "youtube_code": "pA-YIAYKB4I"
       }
     },
     {
@@ -72656,7 +73398,8 @@
           "USSUB1087505",
           "GBAHT1000047"
         ],
-        "first_release": "2010-05-07"
+        "first_release": "2010-05-07",
+        "youtube_code": "YaVE4WVlsDQ"
       }
     },
     {
@@ -72723,7 +73466,9 @@
           "IEABD1400019",
           "IEABD1400006"
         ],
-        "first_release": "2014-10-31"
+        "first_release": "2014-10-31",
+        "spotify_url": "https://open.spotify.com/embed/track/36GjcWZ4a1ebv10Adr27CC",
+        "youtube_code": "2xzwRUD19aY"
       },
       "ytdlpMetadata": {
         "youtube_code": "WcjRcCdivIk"
@@ -72848,7 +73593,9 @@
           "USVI29701046",
           "USWB19700559"
         ],
-        "first_release": "1997-06-06"
+        "first_release": "1997-06-06",
+        "spotify_url": "https://open.spotify.com/embed/track/7MGSo2m2F8xjB88ncRjhIT",
+        "apple_music_url": "https://embed.music.apple.com/es/album/378856576?i=378856630"
       }
     },
     {
@@ -73023,7 +73770,9 @@
         "isrcs": [
           "USCJY1431309"
         ],
-        "first_release": "2014-10-24"
+        "first_release": "2014-10-24",
+        "spotify_url": "https://open.spotify.com/embed/track/1G2JHXxbKpFIuJNpmv3yU8",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1445881848?i=1445882174"
       }
     },
     {
@@ -73267,7 +74016,10 @@
           "GBARL1400477",
           "GBARL1301120"
         ],
-        "first_release": "2014-05-19"
+        "first_release": "2014-05-19",
+        "youtube_code": "jYSLu01Lc5A",
+        "spotify_url": "https://open.spotify.com/embed/track/0ZnnRLXJnzmWG0bRNUCW8J",
+        "apple_music_url": "https://embed.music.apple.com/es/album/858633779?i=858633782"
       }
     },
     {
@@ -73331,7 +74083,10 @@
         "isrcs": [
           "GBUM71101222"
         ],
-        "first_release": "2011-07-08"
+        "first_release": "2011-07-08",
+        "youtube_code": "BXWzpnHXYOw",
+        "spotify_url": "https://open.spotify.com/embed/track/4VySpxhRGy32u5zPCprzDn",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1442818658?i=1442819056"
       }
     },
     {
@@ -73399,7 +74154,9 @@
         "isrcs": [
           "USRC11401950"
         ],
-        "first_release": "2015-02-13"
+        "first_release": "2015-02-13",
+        "spotify_url": "https://open.spotify.com/embed/track/70eDxAyAraNTiD6lx2ZEnH",
+        "apple_music_url": "https://embed.music.apple.com/es/album/941366731?i=941366737"
       }
     },
     {
@@ -73432,7 +74189,8 @@
         "isrcs": [
           "GBAAN7200021"
         ],
-        "first_release": "1972-02-25"
+        "first_release": "1972-02-25",
+        "spotify_url": "https://open.spotify.com/embed/track/4KROoGIaPaR1pBHPnR3bwC"
       }
     },
     {
@@ -73500,7 +74258,10 @@
         "isrcs": [
           "USUM71502643"
         ],
-        "first_release": "2015-06-23"
+        "first_release": "2015-06-23",
+        "youtube_code": "5JhZdu4O2w0",
+        "spotify_url": "https://open.spotify.com/embed/track/0fYVliAYKHuPmECRs1pbRf",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440846598?i=1440847016"
       }
     },
     {
@@ -73685,7 +74446,8 @@
         "isrcs": [
           "USC4R1503363"
         ],
-        "first_release": "2015-08-21"
+        "first_release": "2015-08-21",
+        "youtube_code": "OhEWoKttcEI"
       }
     },
     {
@@ -73749,7 +74511,10 @@
           "USAT21503974",
           "USAT21503728"
         ],
-        "first_release": "2016-03-03"
+        "first_release": "2016-03-03",
+        "spotify_url": "https://open.spotify.com/embed/track/6yHczwGhD6R0Mh1fe6IHkG",
+        "youtube_code": "P_SlAzsXa7E",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1061243224?i=1061243229"
       }
     },
     {
@@ -73908,7 +74673,9 @@
       "musicbrainzMetadata": {
         "release_group": "7f8959f5-de21-4feb-a926-f0c5793ca7ca",
         "album": "Me mata si me necesitas",
-        "first_release": "2016-03-04"
+        "first_release": "2016-03-04",
+        "spotify_url": "https://open.spotify.com/embed/album/6nHt4bdWzFyknubFpruwhz",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1078672337"
       }
     },
     {
@@ -74077,7 +74844,9 @@
         "isrcs": [
           "QM88K1400006"
         ],
-        "first_release": "2014-09-23"
+        "first_release": "2014-09-23",
+        "youtube_code": "VTKc2y85O60",
+        "spotify_url": "https://open.spotify.com/embed/track/33BhBFID7OBU3ie0KccF9B"
       }
     },
     {

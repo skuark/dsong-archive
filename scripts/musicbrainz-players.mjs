@@ -72,6 +72,15 @@ if (process.argv.includes("--check")) {
     await new Promise((r) => setTimeout(r, 300));
     if (++n % 25 === 0) { save(); console.log(`${n}/${todo.length}`); }
   }
+  // Apple Music song links (/song/<id>) -> the usual embed of the song inside its album (/album/<id>?i=<song>).
+  cache.appleAlbums ??= {};
+  const songs = Object.keys(cache.checks).filter((v) => cache.checks[v] === true && /\/song\/\d+$/.test(v) && !(v in cache.appleAlbums));
+  if (songs.length) console.log(`${songs.length} Apple Music songs to place in their album`);
+  for (const v of songs) {
+    const id = /\/song\/(\d+)$/.exec(v)[1];
+    try { cache.appleAlbums[v] = (await (await fetch(`https://itunes.apple.com/lookup?id=${id}&country=es`)).json()).results?.[0]?.collectionId ?? null; } catch {}
+    await new Promise((r) => setTimeout(r, 300));
+  }
   save();
   const values = Object.values(cache.checks);
   console.log(`Checked: ${values.filter((v) => v === true).length} work, ${values.filter((v) => v === false).length} dead, ${values.filter((v) => v === null).length} unknown`);
@@ -83,7 +92,8 @@ if (process.argv.includes("--check")) {
     for (const field of ["youtube_code", "spotify_url", "apple_music_url"]) delete rec[field];
     for (const [field, value] of Object.entries(picks(p))) {
       if (cache.checks[value] !== true) continue;
-      rec[field] = value;
+      const album = cache.appleAlbums?.[value];
+      rec[field] = album ? `https://embed.music.apple.com/es/album/${album}?i=${/\/song\/(\d+)$/.exec(value)[1]}` : value;
       counts[field] = (counts[field] ?? 0) + 1;
     }
   }

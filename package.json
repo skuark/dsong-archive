@@ -19,7 +19,8 @@
     "audit-players": "node scripts/audit-players.mjs",
     "fix-players": "node scripts/fix-players.mjs",
     "find-spotify": "node scripts/find-spotify.mjs",
-    "musicbrainz-artists": "node scripts/musicbrainz-artists.mjs"
+    "musicbrainz-artists": "node scripts/musicbrainz-artists.mjs",
+    "musicbrainz-players": "node scripts/musicbrainz-players.mjs"
   },
   "keywords": [],
   "author": "",

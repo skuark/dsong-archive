@@ -1102,5 +1102,9 @@
   {
     "from": "/archive/albums/colin-mutchler-activefreedom.html",
     "to": "/archive/artists/colin-mutchler.html"
+  },
+  {
+    "from": "/archive/albums/karl-jenkins-adiemus-songs-of-sanctuary.html",
+    "to": "/archive/albums/karl-jenkins-songs-of-sanctuary.html"
   }
 ]
