@@ -416,7 +416,6 @@
         "artist_url": "http://www.radiohead.com/",
         "category": "Canciones",
         "song": "Jigsaw Falling Into Place",
-        "spotify_url": "https://open.spotify.com/embed/track/6nB3rviYjrrg2IIltIStvs",
         "year": "2007",
         "apple_music_url": "https://embed.music.apple.com/es/album/1109714933?i=1109715469",
         "youtube_code": "GoLJJRIWCLU"
@@ -2608,7 +2607,7 @@
         "song": "Me gustaría poder hacerte feliz",
         "spotify_url": "https://open.spotify.com/embed/track/3YsmKLVYhTSXtp8ZZf0FVb",
         "year": "2000",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1172951873?i=1172951886",
+        "apple_music_url": "https://embed.music.apple.com/es/album/690558721?i=690558728",
         "youtube_code": "YYiiJDs-kwk"
       }
     },
@@ -2655,7 +2654,7 @@
         "song": "Standing in the way of control",
         "spotify_url": "https://open.spotify.com/embed/track/7anI9BA3qzGFhVBaogZ7xd",
         "year": "2005",
-        "apple_music_url": "https://embed.music.apple.com/es/album/313412362?i=313412419",
+        "apple_music_url": "https://embed.music.apple.com/es/album/313238787?i=313238965",
         "youtube_code": "yn043ArR98M"
       }
     },
@@ -2900,9 +2899,9 @@
         "category": "Canciones",
         "song": "El lado oscuro de las cosas",
         "spotify_url": "https://open.spotify.com/embed/track/27EmeDvh0REq3zqgsj3Ey0",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1086983264?i=1086983386",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1872440620?i=1872440862",
         "year": "1991",
-        "youtube_code": "FGWjM6XnC4w"
+        "youtube_code": "Ct6ee_WGTTA"
       }
     },
     {
@@ -3233,7 +3232,7 @@
         "song": "The Kill",
         "spotify_url": "https://open.spotify.com/embed/track/0lP4HYLmvowOKdsQ7CVkuq",
         "year": "2005",
-        "youtube_code": "8yvGCAvOAfM"
+        "youtube_code": "ChhPIw52zuA"
       }
     },
     {
@@ -4789,7 +4788,7 @@
         "song": "The circle",
         "spotify_url": "https://open.spotify.com/embed/track/61SVJX0TWSSHU0wgqL2RT0",
         "year": "1996",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1446019650?i=1446021935",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440644451?i=1440644599",
         "youtube_code": "6hYgc0fTONc"
       }
     },
@@ -5339,7 +5338,7 @@
         "song": "Rain",
         "spotify_url": "https://open.spotify.com/embed/track/0xE7L73vKEODFHDlR9h9QN",
         "year": "2009",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1443482784?i=1443484895",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1443459847?i=1443460242",
         "youtube_code": "5WK-vRhz9xs"
       }
     },
@@ -9422,7 +9421,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/6v0UEJbj9Hcm2K7f8trMFw",
         "year": "2005",
         "apple_music_url": "https://embed.music.apple.com/es/album/285954185?i=285954202",
-        "youtube_code": "I-oVq8oihcY"
+        "youtube_code": "yIv3RKbYMgc"
       }
     },
     {
@@ -9875,7 +9874,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/0MYNeFsKpzBHwrJGfWZysV",
         "year": "1971",
         "apple_music_url": "https://embed.music.apple.com/es/album/726371044?i=726371896",
-        "youtube_code": "eSUdlUmtg3Q"
+        "youtube_code": "c4JqvK3Fwn8"
       }
     },
     {
@@ -11108,7 +11107,6 @@
         "artist_url": "http://www.katiemelua.com/",
         "category": "Canciones",
         "song": "The Closest Thing to Crazy",
-        "spotify_url": "https://open.spotify.com/embed/track/0BM0tJcU7R1QEOHOJgM9yj",
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/1702829366?i=1702829369",
         "youtube_code": "C-BnRZ52jHs"
@@ -11437,8 +11435,7 @@
         "artist": "Desconocido",
         "artist_url": "Desconocido",
         "category": "Canciones",
-        "song": "Himno de Nuestro Padre Jesús",
-        "youtube_code": "J6DyM8DUJ3Q"
+        "song": "Himno de Nuestro Padre Jesús"
       }
     },
     {
@@ -11836,7 +11833,7 @@
         "song": "Mad about you",
         "spotify_url": "https://open.spotify.com/embed/track/5rDgjcCHR1OqK8txXcccbR",
         "year": "2000",
-        "apple_music_url": "https://embed.music.apple.com/es/album/456962080?i=456962087",
+        "apple_music_url": "https://embed.music.apple.com/es/album/186057800?i=186057914",
         "youtube_code": "xVKGXgHDMvQ"
       }
     },
@@ -11929,7 +11926,7 @@
         "song": "Smack my bitch up",
         "spotify_url": "https://open.spotify.com/embed/track/2lBpN5CZ3zLyVIPejUhN6Y",
         "year": "1997",
-        "apple_music_url": "https://embed.music.apple.com/es/album/574422728?i=574423109",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1450122969?i=1450122974",
         "youtube_code": "gB5aXPgZ61s"
       }
     },
@@ -12217,7 +12214,6 @@
         "artist": "Gladiator",
         "artist_url": "http://www.imdb.com/title/tt0172495/",
         "category": "Bandas Sonoras Originales",
-        "spotify_url": "https://open.spotify.com/embed/album/22UOVuCSJnESOxHBL7UJQN",
         "year": "2000"
       }
     },
@@ -13699,7 +13695,7 @@
         "song": "Propane Nightmares",
         "spotify_url": "https://open.spotify.com/embed/track/6tC2iHfUlzB2W4ntXXL2BH",
         "year": "2008",
-        "apple_music_url": "https://embed.music.apple.com/es/album/324964025?i=324964172",
+        "apple_music_url": "https://embed.music.apple.com/es/album/279346512?i=279346570",
         "youtube_code": "WPbeEtjo70g"
       }
     },
@@ -14587,7 +14583,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/6S5dsfxiu8lC91GarBtK8t",
         "year": "2006",
         "apple_music_url": "https://embed.music.apple.com/es/album/140877534?i=140876941",
-        "youtube_code": "URc8neJXhC0"
+        "youtube_code": "Du5ATGhUHTQ"
       }
     },
     {
@@ -15504,7 +15500,6 @@
         "artist": "Puff Daddy feat. Jimmy Page",
         "category": "Canciones",
         "song": "Come with me",
-        "spotify_url": "https://open.spotify.com/embed/track/4SCnjFSNQ56BmeamHqcOMA",
         "year": "1998"
       }
     },
@@ -15609,7 +15604,7 @@
         "spotify_url": "https://open.spotify.com/embed/album/7L71kEobxeJszx6zWiu5Sz",
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/101217908",
-        "youtube_code": "AiCoRwtO0cQ"
+        "youtube_code": "jnH2Ayhh9PE"
       }
     },
     {
@@ -16307,7 +16302,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/2kXCLXOIGPyShFgWhlpVFQ",
         "year": "2009",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440769689?i=1440769904",
-        "youtube_code": "P0RlY2jEqSY"
+        "youtube_code": "TboqyliegDI"
       }
     },
     {
@@ -19061,7 +19056,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/39glcz6F0DrW8UfFOdxkQx",
         "year": "1987",
         "apple_music_url": "https://embed.music.apple.com/es/album/1653566279?i=1653567069",
-        "youtube_code": "O5IoZR41ltE"
+        "youtube_code": "f4PCDkM4z7w"
       }
     },
     {
@@ -19136,7 +19131,7 @@
         "category": "Álbumes",
         "song": "Master of Puppets",
         "year": "1999",
-        "youtube_code": "E0ozmU9cJDg"
+        "youtube_code": "HHTn9twCiBU"
       }
     },
     {
@@ -19490,7 +19485,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/3ORPCieEBGoKjUY85YyQuN",
         "year": "1997",
         "apple_music_url": "https://embed.music.apple.com/es/album/284735474?i=284735478",
-        "youtube_code": "qh8UPZs2t3Q"
+        "youtube_code": "iF2eHnqUvYI"
       }
     },
     {
@@ -19552,7 +19547,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/5pZ8szyEDzBVqBo4egZ7OX",
         "year": "2004",
         "apple_music_url": "https://embed.music.apple.com/es/album/723757915?i=723757978",
-        "youtube_code": "388bzfEEEWE"
+        "youtube_code": "WaWh1wxXeUo"
       }
     },
     {
@@ -20692,7 +20687,7 @@
         "song": "Hometown Glory",
         "spotify_url": "https://open.spotify.com/embed/track/0p6GeAWS4VCZddxNbBtEss",
         "year": "2008",
-        "apple_music_url": "https://embed.music.apple.com/es/album/295832758?i=295832767",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1401058390?i=1401059465",
         "youtube_code": "BW9Fzwuf43c"
       }
     },
@@ -20840,7 +20835,7 @@
         "song": "Sexy Boy",
         "spotify_url": "https://open.spotify.com/embed/track/6INLpBxo9F5QMer04VXEnd",
         "year": "1998",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1730717589?i=1730717726",
+        "apple_music_url": "https://embed.music.apple.com/es/album/697240234?i=697240266",
         "youtube_code": "R6Yfk-RL_9A"
       }
     },
@@ -21517,7 +21512,7 @@
         "song": "God save the Queen",
         "spotify_url": "https://open.spotify.com/embed/track/3aUB8lF87qQBFPeXrszfjj",
         "year": "1977",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1443347631?i=1443348357",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440810369?i=1440811242",
         "youtube_code": "yqrAPOZxgzU"
       }
     },
@@ -22208,7 +22203,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/1deWgqhgAzI6dY35TbKKh7",
         "year": "1990",
         "apple_music_url": "https://embed.music.apple.com/es/album/380597264?i=380597267",
-        "youtube_code": "J_pRUZxIgdQ"
+        "youtube_code": "9HKNAhAxMAk"
       }
     },
     {
@@ -22321,7 +22316,7 @@
         "song": "A little less conversation",
         "spotify_url": "https://open.spotify.com/embed/track/28ASL502mpsN4rqS2NmrS3",
         "year": "1963",
-        "youtube_code": "KThbNtVCFs4"
+        "youtube_code": "Zx1_6F-nCaw"
       }
     },
     {
@@ -23158,7 +23153,6 @@
         "artist_url": "http://www.acdc.com/",
         "category": "Canciones",
         "song": "Thunderstruck",
-        "spotify_url": "https://open.spotify.com/embed/track/4u9FaGP5sQT0j6xyLGpj9i",
         "year": "1990",
         "apple_music_url": "https://embed.music.apple.com/es/album/574049507?i=574051407",
         "youtube_code": "v2AC41dglnM"
@@ -23486,7 +23480,7 @@
         "song": "Everyday I love you less and less",
         "spotify_url": "https://open.spotify.com/embed/track/55u8P50DpfufSAXms8jL5e",
         "year": "2005",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1823000708?i=1823001100",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440954595?i=1440954734",
         "youtube_code": "xAkg4cwJp1Y"
       }
     },
@@ -23627,8 +23621,8 @@
         "song": "The Outsider",
         "spotify_url": "https://open.spotify.com/embed/track/6CqYhhUPJORx1vvdTNc8jv",
         "year": "2003",
-        "apple_music_url": "https://embed.music.apple.com/es/album/723637755?i=723637961",
-        "youtube_code": "nzyNWyZhUS0"
+        "apple_music_url": "https://embed.music.apple.com/es/album/712750351?i=712750380",
+        "youtube_code": "waQk3FK3dC8"
       }
     },
     {
@@ -23647,9 +23641,8 @@
         "artist": "Sexy Sadie",
         "category": "Canciones",
         "song": "Always drunk",
-        "spotify_url": "https://open.spotify.com/embed/track/73zhbFviP7yg9cRYWpCzBB",
         "year": "2004",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1239395764?i=1239396389"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1239113177?i=1239113198"
       }
     },
     {
@@ -24428,7 +24421,7 @@
         "song": "Tango",
         "spotify_url": "https://open.spotify.com/embed/track/1SN46fWhF52YGnj7mGMTgQ",
         "year": "1995",
-        "youtube_code": "QIRHNFhbdR4"
+        "youtube_code": "UHQQ-IgZEeg"
       }
     },
     {
@@ -24539,7 +24532,7 @@
         "song": "Mr Wendal",
         "spotify_url": "https://open.spotify.com/embed/track/6LSTAQ6r7OxsOOlIIYY47Q",
         "year": "2002",
-        "apple_music_url": "https://embed.music.apple.com/es/album/724379218?i=724379320",
+        "apple_music_url": "https://embed.music.apple.com/es/album/716595806?i=716595963",
         "youtube_code": "qcnPfHS24Pg"
       }
     },
@@ -24624,8 +24617,8 @@
         "song": "Sky is Over",
         "spotify_url": "https://open.spotify.com/embed/track/11ORC9bXqNaaW950bnl3NV",
         "year": "2010",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1349314069?i=1349314080",
-        "youtube_code": "PHzAavDjTR0"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1349432579?i=1349432778",
+        "youtube_code": "9bb8jUQl-_A"
       }
     },
     {
@@ -24871,7 +24864,7 @@
         "category": "Canciones",
         "song": "Imagine",
         "year": "1971",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1709169680?i=1709169689",
+        "apple_music_url": "https://embed.music.apple.com/es/album/721272842?i=721275427",
         "youtube_code": "Ts0XSyWpMnU"
       }
     },
@@ -24916,7 +24909,7 @@
         "song": "Dreamer",
         "spotify_url": "https://open.spotify.com/embed/track/78PKCefXwDLbl4FVO1Pjzh",
         "year": "2002",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1588943607?i=1588943805",
+        "apple_music_url": "https://embed.music.apple.com/es/album/307631269?i=307631403",
         "youtube_code": "LCCiwPEdEpg"
       }
     },
@@ -28285,7 +28278,6 @@
         "song": "Zapalduen Olerkia",
         "spotify_url": "https://open.spotify.com/embed/track/1qjIZqUE2NmoLVOGzxzSXm",
         "year": "2005",
-        "youtube_code": "UdtyQj1Qw8E",
         "apple_music_url": "https://embed.music.apple.com/es/album/372794115?i=372794337"
       }
     },
@@ -28462,8 +28454,7 @@
         "song": "One",
         "spotify_url": "https://open.spotify.com/embed/track/5UCcfmuRD2N2G0fhJVk2KQ",
         "year": "1969",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1296521451?i=1296521519",
-        "youtube_code": "DYzY7-V5vxY"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440744525?i=1440744526"
       }
     },
     {
@@ -28519,7 +28510,6 @@
         "category": "Canciones",
         "genre": "Indie",
         "song": "The Time is Now",
-        "spotify_url": "https://open.spotify.com/embed/track/0PvaFaGAKfaA1JcPKDI3A6",
         "year": "2011",
         "apple_music_url": "https://embed.music.apple.com/es/album/425143998?i=425144002",
         "youtube_code": "cBfClXEkmBU"
@@ -29060,7 +29050,7 @@
         "song": "Gangsta's Paradise",
         "spotify_url": "https://open.spotify.com/embed/track/3u9fHuAtjMY1RW2mZfO4Cf",
         "year": "1995",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1604629452?i=1604629464",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1604645496?i=1604645502",
         "youtube_code": "fPO76Jlnz6c"
       }
     },
@@ -29873,7 +29863,7 @@
         "spotify_url": "https://open.spotify.com/embed/album/1ZxChDw03SUFGUz0RC8A8M",
         "year": "1972",
         "youtube_code": "toHlMD50eYY",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1006839794"
+        "apple_music_url": "https://embed.music.apple.com/es/album/693269577"
       }
     },
     {
@@ -29931,7 +29921,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/7c1iI6dwdCpHGYT8DGEfab",
         "year": "1998",
         "youtube_code": "FjTB6EG3xGo",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1051426157?i=1051426664"
+        "apple_music_url": "https://embed.music.apple.com/es/album/329935275?i=329935536"
       }
     },
     {
@@ -31139,7 +31129,7 @@
         "song": "Marieta",
         "spotify_url": "https://open.spotify.com/embed/track/1VG10Ln2yYle29nObxykNJ",
         "year": "1981",
-        "youtube_code": "DvJc5DoE4Fc",
+        "youtube_code": "pJShVd3tLc0",
         "apple_music_url": "https://embed.music.apple.com/es/album/422022505?i=422022512"
       }
     },
@@ -31164,7 +31154,7 @@
         "song": "Even Flow",
         "spotify_url": "https://open.spotify.com/embed/track/0o7g2ndHoHmzTXaxjPM44O",
         "year": "1992",
-        "apple_music_url": "https://embed.music.apple.com/es/album/685575665?i=685576007",
+        "apple_music_url": "https://embed.music.apple.com/es/album/730171944?i=730171946",
         "youtube_code": "CxKWTzr-k6s"
       }
     },
@@ -31639,7 +31629,7 @@
         "song": "Good Day Today",
         "spotify_url": "https://open.spotify.com/embed/track/6zV8crVFzXMtvXOyS7dM0j",
         "year": "2011",
-        "apple_music_url": "https://embed.music.apple.com/es/album/546641881?i=546642110",
+        "apple_music_url": "https://embed.music.apple.com/es/album/470561295?i=470561301",
         "youtube_code": "IugOfDBWcGc"
       }
     },
@@ -31826,8 +31816,8 @@
         "song": "Veneno",
         "spotify_url": "https://open.spotify.com/embed/track/3kZMzMQ7GonLzBkv6s95At",
         "year": "2010",
-        "apple_music_url": "https://embed.music.apple.com/es/album/713647550?i=713647609",
-        "youtube_code": "KPYB9MWs07I"
+        "apple_music_url": "https://embed.music.apple.com/es/album/715964321?i=715964658",
+        "youtube_code": "x0O516S_VaA"
       }
     },
     {
@@ -31986,7 +31976,7 @@
         "song": "Gran Vals",
         "spotify_url": "https://open.spotify.com/embed/track/3kirqYYj7QJmkhNa4jtWdr",
         "year": "1902",
-        "youtube_code": "q437Oxfu2tQ"
+        "youtube_code": "eChixk2FDc8"
       }
     },
     {
@@ -32772,7 +32762,7 @@
         "song": "Something happened on the way to Heaven",
         "spotify_url": "https://open.spotify.com/embed/track/6eyqdgLPrzPyK3sKQVzIJl",
         "year": "1989",
-        "youtube_code": "_0soY3Dk6QI",
+        "youtube_code": "CKrGj73OsAY",
         "apple_music_url": "https://embed.music.apple.com/es/album/1107820371?i=1107820611"
       }
     },
@@ -32982,7 +32972,7 @@
         "podcast_file": "dsong.es_20120314.mp3",
         "song": "Black Roses",
         "year": "2011",
-        "youtube_code": "Hq6LH4_G_xI"
+        "youtube_code": "vWWoZTjbksA"
       }
     },
     {
@@ -33443,7 +33433,7 @@
         "podcast_file": "dsong.es_20120330.mp3",
         "song": "Nothing",
         "year": "2007",
-        "youtube_code": "_SDXwDmiZBo"
+        "youtube_code": "pIPFmhB-PzI"
       }
     },
     {
@@ -33661,7 +33651,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/2VLuRB7WcAnhIjobFvS5kP",
         "year": "2003",
         "apple_music_url": "https://embed.music.apple.com/es/album/690544940?i=690545374",
-        "youtube_code": "nEn5efE6jsg"
+        "youtube_code": "ek_0sgBJ9KQ"
       }
     },
     {
@@ -33781,7 +33771,7 @@
         "song": "Only Happy When it Rains",
         "spotify_url": "https://open.spotify.com/embed/track/1IYgKFqW3gkJ1MxFi6KZcl",
         "year": "1994",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1030363854?i=1030364375",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1030363854?i=1030364091",
         "youtube_code": "GpBFOJ3R0M4"
       }
     },
@@ -34884,7 +34874,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/6eBcq8p8fzlWlzDZEiP7Jj",
         "year": "1994",
         "youtube_code": "gJUcCZGDXM8",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1471016488?i=1471016782"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1471441302?i=1471441380"
       }
     },
     {
@@ -35628,7 +35618,7 @@
         "song": "Dry Martina",
         "spotify_url": "https://open.spotify.com/embed/track/3MDVVSMjnetHeNmcXlgpsU",
         "year": "2012",
-        "youtube_code": "gUDrKuIO2Kc"
+        "youtube_code": "Xawchwusw-Y"
       }
     },
     {
@@ -36368,7 +36358,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/3sJPu8BjbRTAs9sSzvziFQ",
         "year": "2001",
         "apple_music_url": "https://embed.music.apple.com/es/album/690544940?i=690545376",
-        "youtube_code": "iwy309kLRyc"
+        "youtube_code": "szVPzE6TggE"
       }
     },
     {
@@ -36416,7 +36406,7 @@
         "song": "Glory and consequence",
         "spotify_url": "https://open.spotify.com/embed/track/3cX3538X3QTbcnLmBX87n0",
         "year": "1997",
-        "youtube_code": "KztTFWkElbI",
+        "youtube_code": "qHgaJ5UI90M",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443283591?i=1443283804"
       }
     },
@@ -36651,7 +36641,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/1rkSXEdbgPZj5uBurEStCM",
         "year": "1964",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443268739?i=1443268743",
-        "youtube_code": "KcMwzi2RtSs"
+        "youtube_code": "45LBdEVbP-E"
       }
     },
     {
@@ -37283,7 +37273,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/0bXhjlgUddDlJzHOeVM4Tq",
         "year": "2008",
         "youtube_code": "r-rgIPIkCl4",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1444021486?i=1444022333"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1444021486?i=1444021600"
       }
     },
     {
@@ -37743,7 +37733,7 @@
         "song": "Me and the Devil",
         "spotify_url": "https://open.spotify.com/embed/track/76lCwB3Bu4tNcyXRLGvVba",
         "year": "2010",
-        "apple_music_url": "https://embed.music.apple.com/es/album/351874422?i=351874439",
+        "apple_music_url": "https://embed.music.apple.com/es/album/351874422?i=351874489",
         "youtube_code": "ny7iqn-7r-c"
       }
     },
@@ -38214,7 +38204,7 @@
         "song": "Never Ending Story",
         "spotify_url": "https://open.spotify.com/embed/track/6PImcdogxK1V7lLhPi0Z5w",
         "year": "1984",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1473594975?i=1473595061",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1473594975?i=1473595046",
         "youtube_code": "RxJuIlbT740"
       }
     },
@@ -39480,8 +39470,7 @@
         "album": "Lady Halcon",
         "artist": "Andrew Powell",
         "category": "Bandas Sonoras Originales",
-        "genre": "bso",
-        "spotify_url": "https://open.spotify.com/embed/track/3WEeXl4vPsCh15dNfgEgTr"
+        "genre": "bso"
       }
     },
     {
@@ -39866,7 +39855,7 @@
         "category": "Bandas Sonoras Originales",
         "genre": "Instrumental",
         "year": "2005",
-        "youtube_code": "nUdrFkW1RY8"
+        "youtube_code": "CmXyTrxNLYY"
       }
     },
     {
@@ -40063,7 +40052,7 @@
         "genre": "Soundtrack",
         "spotify_url": "https://open.spotify.com/embed/album/2r4a3PREYIRF2QdbcPnrEO",
         "year": "2011",
-        "youtube_code": "t8cELTdtw6U"
+        "youtube_code": "AJ9pQk2jxTc"
       }
     },
     {
@@ -40220,7 +40209,6 @@
         "artist_url": "http://es.answers.yahoo.com/question/index?qid=20110207193116AAiHVC2",
         "category": "Canciones",
         "song": "Baby",
-        "spotify_url": "https://open.spotify.com/embed/track/1iSohu1a3AVS2ulUYyoQIf",
         "youtube_code": "TvBZmHyQv0c",
         "apple_music_url": "https://embed.music.apple.com/es/album/1440803218?i=1440803930",
         "year": "2010"
@@ -40349,7 +40337,6 @@
         "category": "Canciones",
         "genre": "Rock",
         "song": "Christmas Is All Around",
-        "spotify_url": "https://open.spotify.com/embed/track/49FE3lHyo4yboBYHOeGG98",
         "year": "2003",
         "youtube_code": "bpmFletV_pU"
       }
@@ -40423,7 +40410,7 @@
         "genre": "Pop",
         "song": "Because I'm a girl",
         "year": "2001",
-        "youtube_code": "A0BAssXgeHs"
+        "youtube_code": "HeyqIDARVEQ"
       }
     },
     {
@@ -40617,7 +40604,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/3CzOoYfw7mj5jMHGsJp9TG",
         "year": "2005",
         "youtube_code": "iWIADZKU9dw",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1445319539?i=1445319548"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1473620305?i=1473620826"
       }
     },
     {
@@ -41336,7 +41323,7 @@
         "song": "The Chain",
         "spotify_url": "https://open.spotify.com/embed/track/2X6gdRlGOQgfaXU9ALUQFQ",
         "year": "1977",
-        "youtube_code": "GBWp6Us3oEc",
+        "youtube_code": "xwTPvcPYaOo",
         "apple_music_url": "https://embed.music.apple.com/es/album/651879763?i=651880159"
       }
     },
@@ -41992,7 +41979,7 @@
         "song": "Nightbook",
         "spotify_url": "https://open.spotify.com/embed/album/2KSrRXCedZo51cyGvQvSVs",
         "year": "2009",
-        "youtube_code": "xPXWxPdQMSw",
+        "youtube_code": "pCgRah4Q3nY",
         "apple_music_url": "https://embed.music.apple.com/es/album/1731881505"
       }
     },
@@ -42818,7 +42805,7 @@
         "song": "A more perfect union",
         "spotify_url": "https://open.spotify.com/embed/track/5XgUwP0KHtV0ERDTDD0mEt",
         "year": "2010",
-        "youtube_code": "ghb6eDopW8I",
+        "youtube_code": "08fqHr_KGPY",
         "apple_music_url": "https://embed.music.apple.com/es/album/355708784?i=355708789"
       }
     },
@@ -43196,7 +43183,7 @@
         "song": "In for the kill",
         "spotify_url": "https://open.spotify.com/embed/track/1inG2cgfeGVBsTCcmMIv0e",
         "year": "2009",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1446200073?i=1446200416",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1446200073?i=1446200074",
         "youtube_code": "tXtATeQ7GKg"
       }
     },
@@ -43594,7 +43581,7 @@
         "song": "Banana Boat Song (Day-O)",
         "spotify_url": "https://open.spotify.com/embed/track/06NrcxSt33gEfQumUkbZ1E",
         "year": "1956",
-        "youtube_code": "AQXVHITd1N4"
+        "youtube_code": "oKD_PfCQx9A"
       }
     },
     {
@@ -43792,7 +43779,7 @@
         "song": "Maybe I'm Amazed",
         "spotify_url": "https://open.spotify.com/embed/track/34jOBavlBgAG0ILZOlXmWm",
         "year": "1970",
-        "youtube_code": "qVpd6uhLJi8",
+        "youtube_code": "cdDPR8GzXy8",
         "apple_music_url": "https://embed.music.apple.com/es/album/1443150811?i=1443151733"
       }
     },
@@ -44253,7 +44240,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/7LrM28pPWCpJYmbnaxHBmu",
         "year": "2006",
         "youtube_code": "q1OqrXK-Fws",
-        "apple_music_url": "https://embed.music.apple.com/es/album/206348621?i=206349145"
+        "apple_music_url": "https://embed.music.apple.com/es/album/206348621?i=206349043"
       }
     },
     {
@@ -44370,7 +44357,7 @@
         "category": "Bandas Sonoras Originales",
         "genre": "OST",
         "year": "2010",
-        "youtube_code": "l4-uDo9ESdQ"
+        "youtube_code": "iHqcr4b3blk"
       }
     },
     {
@@ -46001,7 +45988,7 @@
         "song": "Ruby",
         "spotify_url": "https://open.spotify.com/embed/track/2rjOaGr1mcTYePllS8crRf",
         "year": "2007",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1443919260?i=1443919513",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1443919260?i=1443919262",
         "youtube_code": "qObzgUfCl28"
       }
     },
@@ -46465,7 +46452,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/2KiobKdvm1gFoI174TS4Q9",
         "year": "1969",
         "apple_music_url": "https://embed.music.apple.com/es/album/803386203?i=803386225",
-        "youtube_code": "RV4bZDkh7RI"
+        "youtube_code": "PHtzz5n5KJA"
       }
     },
     {
@@ -46903,7 +46890,7 @@
         "song": "Kazimierz",
         "spotify_url": "https://open.spotify.com/embed/track/33qiu8VWVGq3ZPxcK6GR3q",
         "year": "1996",
-        "youtube_code": "yLRtrShxHXc"
+        "youtube_code": "OMj0BP3_4Ns"
       }
     },
     {
@@ -47098,7 +47085,7 @@
         "song": "San Francisco (Be Sure to Wear Flowers in Your Hair)",
         "spotify_url": "https://open.spotify.com/embed/track/66ujRcQB3xjilVohGyvTKM",
         "year": "1967",
-        "youtube_code": "Ift2XLEkj8g"
+        "youtube_code": "Qp3eFAKgbDE"
       }
     },
     {
@@ -47331,8 +47318,7 @@
         "podcast_file": "dsong.es_20131025.mp3",
         "song": "Arrival of the birds",
         "spotify_url": "https://open.spotify.com/embed/track/1xRCmlU2GyzGem2vw4glxK",
-        "year": "2008",
-        "youtube_code": "hxpLptewNa8"
+        "year": "2008"
       }
     },
     {
@@ -47818,7 +47804,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/6Iocm6VMu6bVNYwiDoyQFW",
         "year": "2010",
         "apple_music_url": "https://embed.music.apple.com/es/album/1442960487?i=1442962169",
-        "youtube_code": "k84QxVJd0tI"
+        "youtube_code": "WLNp0g2GBxQ"
       }
     },
     {
@@ -48091,7 +48077,7 @@
         "song": "November blue",
         "spotify_url": "https://open.spotify.com/embed/track/7F2SZG2JptrDHqDI7LJXnT",
         "year": "2002",
-        "youtube_code": "gV_SyNfnPxI",
+        "youtube_code": "gnjk0ur3O9M",
         "apple_music_url": "https://embed.music.apple.com/es/album/346089310?i=346089576"
       }
     },
@@ -48281,7 +48267,6 @@
         "artist_nationality": "american",
         "category": "Bandas Sonoras Originales",
         "genre": "bso",
-        "spotify_url": "https://open.spotify.com/embed/album/6ykKLW7CHfZjB4OyQYBDRl",
         "year": "2013"
       }
     },
@@ -48618,7 +48603,7 @@
         "song": "Grafton Street",
         "spotify_url": "https://open.spotify.com/embed/track/5ag19dk2Gz1oe7x2dJwiCU",
         "year": "2008",
-        "youtube_code": "-q_EqjXOiM0",
+        "youtube_code": "Jl6u0SVtGUo",
         "apple_music_url": "https://embed.music.apple.com/es/album/293941006?i=293941011"
       }
     },
@@ -48667,7 +48652,7 @@
         "genre": "bso",
         "spotify_url": "https://open.spotify.com/embed/album/7wPDOZ30toNEBkr5uBIANF",
         "year": "1998",
-        "youtube_code": "LCmlOhsIwBk"
+        "youtube_code": "PpEIoBnQsKs"
       }
     },
     {
@@ -48857,7 +48842,7 @@
         "genre": "bso",
         "spotify_url": "https://open.spotify.com/embed/album/7eNp8lTIdJmqCsz73AUFOq",
         "year": "2013",
-        "youtube_code": "b0wQhtVSVjA"
+        "youtube_code": "cKEehfNGDHw"
       }
     },
     {
@@ -49177,7 +49162,6 @@
         "song": "No pensar nunca en la muerte",
         "spotify_url": "https://open.spotify.com/embed/track/0HFAHHkGgGKghVQVdmsC8D",
         "year": "2009",
-        "youtube_code": "46mYCy-eibc",
         "apple_music_url": "https://embed.music.apple.com/es/album/874824909?i=874824960"
       }
     },
@@ -49208,7 +49192,7 @@
         "genre": "bso",
         "spotify_url": "https://open.spotify.com/embed/album/7vC1yfNXcURh42ZN70x0Oj",
         "year": "2000",
-        "youtube_code": "CQH51MGFwpY"
+        "youtube_code": "ucdz7A3s4Wc"
       }
     },
     {
@@ -49399,7 +49383,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/68jcZxq23NCXPlFH0o1EwP",
         "year": "2013",
         "youtube_code": "DgNFNPekXBc",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1444018885?i=1444019261"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1442217595?i=1442217948"
       }
     },
     {
@@ -49866,7 +49850,7 @@
         "category": "Canciones",
         "genre": "Cantautor",
         "year": "1991",
-        "youtube_code": "USZSCV26gbQ",
+        "youtube_code": "7fhtLolvMMY",
         "apple_music_url": "https://embed.music.apple.com/es/album/1175101473?i=1175101934",
         "song": "Revivre"
       }
@@ -49892,7 +49876,6 @@
         "song": "1, 2, 3 Sol",
         "spotify_url": "https://open.spotify.com/embed/track/3W3Zx2nMjqlyVWcDEI499B",
         "year": "2006",
-        "youtube_code": "TC-AbRktJKw",
         "apple_music_url": "https://embed.music.apple.com/es/album/694376964?i=694377831"
       }
     },
@@ -50125,7 +50108,7 @@
         "song": "Pégate",
         "spotify_url": "https://open.spotify.com/embed/track/6derJzyW5gcu125FpbsReh",
         "year": "2006",
-        "youtube_code": "1G2-r-5ZwnY",
+        "youtube_code": "-XBIC81dkqo",
         "apple_music_url": "https://embed.music.apple.com/es/album/204788724?i=204790111"
       }
     },
@@ -50389,7 +50372,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/6GmUVqe73u5YRfUUynZK6I",
         "year": "2012",
         "youtube_code": "RBumgq5yVrA",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1650365607?i=1650366663"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1650365607?i=1650365624"
       }
     },
     {
@@ -50623,7 +50606,7 @@
         "category": "Bandas Sonoras Originales",
         "genre": "bso",
         "year": "2013",
-        "youtube_code": "UbJ4gD0c5aE"
+        "youtube_code": "rI--9AHRb4E"
       }
     },
     {
@@ -50671,7 +50654,7 @@
         "song": "Sr. Troncoso",
         "spotify_url": "https://open.spotify.com/embed/track/6OvM9WHSWfHsXEWBBDcQ0r",
         "year": "1977",
-        "youtube_code": "OfhPIprJYdM",
+        "youtube_code": "n-22h43m5LI",
         "apple_music_url": "https://embed.music.apple.com/es/album/128118843?i=128118812"
       }
     },
@@ -51121,7 +51104,7 @@
         "song": "Dos carnes paralelas",
         "spotify_url": "https://open.spotify.com/embed/track/7ELAxg9JuTkjwAaB278tRK",
         "year": "2008",
-        "youtube_code": "D2OPc6twn2c",
+        "youtube_code": "0DkdhlQjxsg",
         "apple_music_url": "https://embed.music.apple.com/es/album/1138938999?i=1138939019"
       }
     },
@@ -51190,7 +51173,7 @@
         "song": "Country Roads",
         "spotify_url": "https://open.spotify.com/embed/track/2xYlyywNgefLCRDG8hlxZq",
         "year": "1971",
-        "youtube_code": "KSmh6FO3T74"
+        "youtube_code": "1vrEljMfXYo"
       }
     },
     {
@@ -51502,7 +51485,7 @@
         "song": "Si los hombres han llegado hasta la luna",
         "spotify_url": "https://open.spotify.com/embed/track/3ILCZvzo8RxrI9C4g6I1EY",
         "year": "1998",
-        "youtube_code": "IPPpM9fAQzc",
+        "youtube_code": "0ZbCFcGGfas",
         "apple_music_url": "https://embed.music.apple.com/es/album/295098508?i=295098531"
       }
     },
@@ -51744,7 +51727,6 @@
         "category": "Canciones",
         "genre": "Folk",
         "song": "Falling in love",
-        "spotify_url": "https://open.spotify.com/embed/track/27vLoCnqzgXWV3UWhB29bD",
         "year": "2013",
         "youtube_code": "wkzXExY14wM"
       }
@@ -51793,7 +51775,7 @@
         "song": "Una estrella en mi jardín",
         "spotify_url": "https://open.spotify.com/embed/track/1dfC7nyZsGgR74ElJWKwCe",
         "year": "1982",
-        "youtube_code": "5vIjTu-D4rI",
+        "youtube_code": "zx1qNhlfdwc",
         "apple_music_url": "https://embed.music.apple.com/es/album/905821663?i=905821664"
       }
     },
@@ -52247,7 +52229,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/73DdlUXPj6SIOJQRrqgjld",
         "year": "2014",
         "youtube_code": "oh2LWWORoiM",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1444849439?i=1444849591"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1440815457?i=1440816478"
       }
     },
     {
@@ -52389,7 +52371,7 @@
         "song": "Micaela",
         "spotify_url": "https://open.spotify.com/embed/track/4d8HXROn8ggtPE4oGc7pKG",
         "year": "1998",
-        "apple_music_url": "https://embed.music.apple.com/es/album/710568270?i=710568350",
+        "apple_music_url": "https://embed.music.apple.com/es/album/25514693?i=25514625",
         "youtube_code": "fMRh2ValbZQ"
       }
     },
@@ -52694,7 +52676,6 @@
         "category": "Canciones",
         "genre": "Poesía",
         "song": "Signo de admiración",
-        "spotify_url": "https://open.spotify.com/embed/track/3nMEC3nwNEWnN1bBMbC7Sd",
         "year": "2010",
         "youtube_code": "WqSW7dxCeQo"
       }
@@ -52791,7 +52772,7 @@
         "song": "Brimful of Asha",
         "spotify_url": "https://open.spotify.com/embed/track/3Zh5cecN8TqelTN30SJUww",
         "year": "1997",
-        "youtube_code": "5LBnMRWeV-E",
+        "youtube_code": "lM7H0ooV_o8",
         "apple_music_url": "https://embed.music.apple.com/es/album/1540690922?i=1540691258"
       }
     },
@@ -52856,7 +52837,7 @@
         "song": "I gotta find peace of mind",
         "spotify_url": "https://open.spotify.com/embed/track/3QVlJ073oeCkTlp5Bcwa9a",
         "year": "2001",
-        "youtube_code": "brWmS8As9Wk&feature=kp",
+        "youtube_code": "b2IbsMCgz4A",
         "apple_music_url": "https://embed.music.apple.com/es/album/192492278?i=192492922"
       }
     },
@@ -53072,7 +53053,7 @@
         "song": "Stay",
         "spotify_url": "https://open.spotify.com/embed/track/6hNGQkTmxFAHSkPpfBbBBt",
         "year": "1997",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1171366635?i=1171366710",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1171366635?i=1171366691",
         "youtube_code": "nrwi79HxaOw"
       }
     },
@@ -53253,7 +53234,7 @@
         "song": "Todos tus caballos de carreras",
         "spotify_url": "https://open.spotify.com/embed/track/5cyynLY1UYRfKhfzh6UD6g",
         "year": "2011",
-        "youtube_code": "eel5ThBMQkI",
+        "youtube_code": "lwBNUUnmWo8",
         "apple_music_url": "https://embed.music.apple.com/es/album/478944940?i=478944972"
       }
     },
@@ -53725,7 +53706,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/0R0nZJtTEYGo9jNGG5JYWw",
         "year": "2014",
         "youtube_code": "HIG7PVa8SS8",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1520172435?i=1520172451"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1520172435?i=1520172437"
       }
     },
     {
@@ -53749,7 +53730,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/52IJOHip9UQ65yXnprRpeA",
         "year": "2000",
         "apple_music_url": "https://embed.music.apple.com/es/album/128893245?i=128893268",
-        "youtube_code": "RjGEbuZQ7Ic"
+        "youtube_code": "VEwrOHLVgOM"
       }
     },
     {
@@ -54142,7 +54123,7 @@
         "genre": "Opening",
         "song": "Futurama",
         "year": "1999",
-        "youtube_code": "QRk1s5Kf3aQ"
+        "youtube_code": "Tz8HmN2uvuk"
       }
     },
     {
@@ -54404,7 +54385,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/6ZSvhLZRJredt15aJiBQqv",
         "year": "2014",
         "youtube_code": "WIKqgE4BwAY",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1830273487?i=1830273741"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1830273487?i=1830273490"
       }
     },
     {
@@ -54893,7 +54874,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/1q676iYDR3GeJtOHdyggIU",
         "year": "2014",
         "youtube_code": "7PCkvCPvDXk",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1791794300?i=1791794659"
+        "apple_music_url": "https://embed.music.apple.com/es/album/1107076378?i=1107076591"
       }
     },
     {
@@ -54913,7 +54894,6 @@
         "category": "Canciones",
         "genre": "Caribbean",
         "song": "The Secret of Monkey Island (main theme)",
-        "spotify_url": "https://open.spotify.com/embed/track/3EQKvV0msZ7rkVu3Qsj7ub",
         "year": "1990",
         "youtube_code": "FoT5qK6hpbw"
       }
@@ -55035,7 +55015,7 @@
         "song": "Cantaré a los almendros",
         "spotify_url": "https://open.spotify.com/embed/track/0sESrjEouhBtZ8YmvOISed",
         "year": "2014",
-        "youtube_code": "mzufzrJjxPg",
+        "youtube_code": "DipSsMZtjbs",
         "apple_music_url": "https://embed.music.apple.com/es/album/1776253029?i=1776253346"
       }
     },
@@ -55533,7 +55513,6 @@
         "category": "Canciones",
         "genre": "klezmer",
         "song": "Hava Nagila",
-        "spotify_url": "https://open.spotify.com/embed/track/2TdLx0tdHO5AqBjn2Niolm",
         "year": "1914"
       }
     },
@@ -55630,7 +55609,7 @@
         "genre": "Folk-Rock",
         "song": "Bolero Do Coronel Sensível Que Fez Amor Em Monsanto",
         "year": "2013",
-        "youtube_code": "Bh_655j9jhI"
+        "youtube_code": "iUUfDb_NxHg"
       }
     },
     {
@@ -55652,7 +55631,6 @@
         "genre": "bso",
         "song": "After Dark",
         "year": "1996",
-        "youtube_code": "YiCjUNI1GC0",
         "apple_music_url": "https://embed.music.apple.com/es/album/274782938?i=274783145"
       }
     },
@@ -55709,7 +55687,7 @@
         "genre": "indie rock",
         "song": "Munich",
         "year": "2005",
-        "youtube_code": "3DFCM5GegcA",
+        "youtube_code": "KPUs63HuJ78",
         "apple_music_url": "https://embed.music.apple.com/es/album/1378459935?i=1378459937"
       }
     },
@@ -55962,7 +55940,7 @@
         "song": "Hooked on a feeling",
         "spotify_url": "https://open.spotify.com/embed/track/6Ac4NVYYl2U73QiTt11ZKd",
         "year": "1974",
-        "youtube_code": "-5x5OXfe9KY",
+        "youtube_code": "l6DepmNwbn8",
         "apple_music_url": "https://embed.music.apple.com/es/album/690456020?i=690456025"
       }
     },
@@ -56167,7 +56145,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/1GT0Q2ZTeKtIBueYKr4vhr",
         "year": "1991",
         "youtube_code": "mHZnCKwbkaM",
-        "apple_music_url": "https://embed.music.apple.com/es/album/715953873?i=715954058"
+        "apple_music_url": "https://embed.music.apple.com/es/album/19468976?i=19468966"
       }
     },
     {
@@ -56191,7 +56169,7 @@
         "song": "Life In The Fast Lane",
         "spotify_url": "https://open.spotify.com/embed/track/78Pny5O5RDkHJNPZf1QcFs",
         "year": "1976",
-        "youtube_code": "04176XP9Ij0",
+        "youtube_code": "Ybg_uZxdE0c",
         "apple_music_url": "https://embed.music.apple.com/es/album/635770200?i=635770204"
       }
     },
@@ -56550,7 +56528,7 @@
         "song": "Sólo tú",
         "spotify_url": "https://open.spotify.com/embed/track/07oHoLMmdx59sG2P5NqHzq",
         "year": "2005",
-        "youtube_code": "FfaQwvckP8w",
+        "youtube_code": "47_op0Ck-yA",
         "apple_music_url": "https://embed.music.apple.com/es/album/68311965?i=68310973"
       }
     },
@@ -56624,8 +56602,7 @@
         "song": "This land is your land",
         "spotify_url": "https://open.spotify.com/embed/track/6VbsBYL6FzRhgcyDbGrXtx",
         "year": "1944",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1442422610?i=1442422612",
-        "youtube_code": "IlaqPRCuRhU"
+        "youtube_code": "5AvTezD4XIU"
       }
     },
     {
@@ -56699,7 +56676,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/44AL9Xok81qGEOZdPQpUnM",
         "year": "2010",
         "youtube_code": "TM6TCGltfHM",
-        "apple_music_url": "https://embed.music.apple.com/es/album/389480749?i=389480778"
+        "apple_music_url": "https://embed.music.apple.com/es/album/380072074?i=380072075"
       }
     },
     {
@@ -56964,7 +56941,7 @@
         "song": "The Hanging Tree",
         "spotify_url": "https://open.spotify.com/embed/track/4rvD0Pq9MEoDyyoCGPm7zS",
         "year": "2014",
-        "youtube_code": "DqhOzH8QcH4"
+        "youtube_code": "F3hTW9e20d8"
       }
     },
     {
@@ -57063,7 +57040,7 @@
         "spotify_url": "https://open.spotify.com/embed/track/5I15QYhcdOYwfKV0yiXAAb",
         "year": "2014",
         "youtube_code": "FSCsCmmbO9Y",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1014384261?i=1014384533"
+        "apple_music_url": "https://embed.music.apple.com/es/album/954890548?i=954890549"
       }
     },
     {
@@ -57520,7 +57497,6 @@
         "category": "Canciones",
         "genre": "Vals",
         "song": "Vals nº 2",
-        "spotify_url": "https://open.spotify.com/embed/track/0pjCsB0XNSyqM9UazlTODC",
         "year": "1956",
         "youtube_code": "vauo4o-ExoY"
       }
@@ -57644,8 +57620,8 @@
         "song": "Don't Wanna Fight",
         "spotify_url": "https://open.spotify.com/embed/track/1xmctspTzQxisNXKY6Gxf6",
         "year": "2015",
-        "youtube_code": "nin-fiNz50M",
-        "apple_music_url": "https://embed.music.apple.com/es/album/1557887509?i=1557888592"
+        "youtube_code": "x-5OX7CO26c",
+        "apple_music_url": "https://embed.music.apple.com/es/album/961995106?i=961995527"
       }
     },
     {
@@ -57930,7 +57906,7 @@
         "genre": "Ópera",
         "song": "Barcelona",
         "year": "1988",
-        "youtube_code": "7icIbZYvEtk",
+        "youtube_code": "Y1fiOJDXA-E",
         "apple_music_url": "https://embed.music.apple.com/es/album/1478411290?i=1478411293"
       }
     }
