@@ -150,7 +150,7 @@
         <optgroup label="Fuentes">
           <option value="mbArtist">MusicBrainz: artista por revisar</option>
           <option value="mbRecord">MusicBrainz: canción/álbum por revisar</option>
-          <option value="mbNone">MusicBrainz: canción/álbum sin encontrar</option>
+          <option value="mbNone">MusicBrainz: no está (artista o canción/álbum)</option>
           <option value="mbLinked">MusicBrainz: enlazados</option>
           <option value="conflict">Texto ≠ metadatos</option>
           <option value="version">El texto presenta otra versión (directo, cover…)</option>
@@ -357,9 +357,9 @@ const FILTERS = {
   noCountry: (p) => !p.country,
   podcast: (p) => p.podcast,
   comments: (p) => p.comments > 0,
-  mbArtist: (p) => ['review', 'none'].includes(p.mb?.artist),
+  mbArtist: (p) => p.mb?.artist === 'review',
   mbRecord: (p) => p.mb?.record === 'review',
-  mbNone: (p) => ['none', 'noartist'].includes(p.mb?.record),
+  mbNone: (p) => ['none', 'noartist', 'notfound', 'nomatch'].includes(p.mb?.record) || ['none', 'notfound', 'nomatch'].includes(p.mb?.artist),
   mbLinked: (p) => p.mb?.artist === 'ok' && p.mb?.record === 'ok',
   conflict: (p) => p.conflict,
   version: (p) => !!p.version,
@@ -393,7 +393,7 @@ function renderList() {
       badge.textContent = label;
       meta.append(badge);
     }
-    if (['review', 'none'].includes(p.mb?.artist) || ['review', 'none'].includes(p.mb?.record)) {
+    if (p.mb?.artist === 'review' || p.mb?.record === 'review') {
       const badge = document.createElement('span');
       badge.className = 'badge';
       badge.title = 'MusicBrainz por revisar';
@@ -674,7 +674,7 @@ const KIND_RE = {
 const KIND_TYPE = { live: 'Live', remix: 'Remix', demo: 'Demo' };
 const KEYWORD = { live: 'live', acoustic: 'acoustic', remix: 'remix', orchestral: 'orchestra', demo: 'demo' };
 const AUDIT = { performer: 'otro intérprete', original: 'es el original y el post va de un cover', version: 'no parece la versión que presenta el post', studio: 'parece otra versión y el post presenta la original', gone: 'ya no existe' };
-const STATUS = { ok: '✓ enlazado', review: 'por revisar', none: 'sin encontrar', nomatch: 'no está en MusicBrainz (decidido)', noartist: 'falta enlazar el artista' };
+const STATUS = { ok: '✓ enlazado', review: 'por revisar', none: 'sin buscar todavía', notfound: 'no está en MusicBrainz (búsqueda automática)', nomatch: 'no está en MusicBrainz (decidido)', noartist: 'falta enlazar el artista' };
 const bare = (s) => (s ?? '').replace(/^\s*(?:b\.?s\.?o\.?|o\.?s\.?t\.?|banda sonora(?: original)?(?: de)?)(?:\s*[:\-–]\s*|\s+)/i, '').trim();
 const mmss = (s) => (s ? `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}` : '');
 const ctx = () => current.sources?.context ?? {};

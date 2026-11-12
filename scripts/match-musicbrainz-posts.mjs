@@ -130,6 +130,146 @@ async function releaseGroups(arid, album, text, kind) {
   })).map((c) => ({ ...c, points: rank(c, null, album, text, kind) }));
 }
 
+if (process.argv.includes("--resolve")) {
+  // Last automatic pass for the posts left to review. Picks, in order:
+  //   version   the best candidate that is the version the post presents (not just the top one)
+  //   album     a candidate on the album the metadata or the text names
+  //   original  the song's earliest official studio album (the metadata album differs: reported by musicbrainz-diffs)
+  //   albumonly the post presents a version MusicBrainz doesn't have, or the song isn't found: the album alone
+  //   cover     a cover whose metadata artist is the original: searched inside the cover's performer
+  // Searches again with the text's album/song and looser titles (typos) when nothing fits. What still
+  // has nothing is "notfound" (not in MusicBrainz); only posts with no single recording (podcasts,
+  // lists: subject "other") are left out.
+  const decisions = readJson(DECISIONS);
+  const loose = (a, b) => !!a && !!b && (similar(a, b) >= 0.75 || similar(filmTitle(a), b) >= 0.75);
+  const studio = (c) => !VERSION.test(c.disambiguation ?? "") && !c.secondary.some((t) => OTHER_TYPES.has(t) && t !== "Soundtrack") && (!c.status || c.status === "Official");
+  // First release of a candidate's album (release group lookups, cached): the original, not a reissue
+  // or a live album that happens to come first in the search. Main types first (album, single, EP).
+  let soundtrack = false, kindNow = null, yearNow = null;   // set per post below
+  const COMPILATION = /\b(hits?|best of|greatest|collection|colecci[oó]n|antolog[ií]a|anthology|essential|lo mejor|grandes [eé]xitos|[eé]xitos|vol\.?|volume|jahre|top \d+|\d+ top|duets|years|a[nñ]os|todo|complete|recopilatorio|sus mejores)\b/i;
+  // The song on an album or single of the artist first released around the post's year (the metadata
+  // year is usually the original's): found by album, then the song looked up inside it.
+  async function aroundYear(arid, song, year, kind, albums = []) {
+    if (!/^\d{4}$/.test(year ?? "")) return null;
+    const groupsFound = (await search("release-group", `arid:${aridOf(arid)} AND (primarytype:album OR primarytype:single OR primarytype:ep) AND firstreleasedate:[${+year - 1} TO ${+year + 1}]`, 25))?.["release-groups"] ?? [];
+    // The album the post names first, if it's among them.
+    const named = (g) => albums.some((a) => similar(g.title, a) >= 0.85);
+    const ordered = groupsFound.filter((g) => !(g["secondary-types"] ?? []).some((t) => t !== "Soundtrack" || !soundtrack) && !COMPILATION.test(g.title) && (kind || !KIND.live.re.test(g.title))).sort((a, b) => named(b) - named(a));
+    for (const g of ordered.slice(0, 6)) {
+      const items = (await search("recording", `recording:${terms(song)} AND rgid:${g.id}`, 10))?.recordings ?? [];
+      const rec = items.find((x) => (loose(x.title, song) || norm(x.title).startsWith(`${norm(song)} `)) && (kind ? KIND[kind].re.test(x.disambiguation ?? "") : !VERSION.test(x.disambiguation ?? "")));
+      if (rec) { groups[g.id] ??= g["first-release-date"] || null; return { key: `${rec.id}|${g.id}`, recording: rec.id, release_group: g.id, title: rec.title, disambiguation: rec.disambiguation ?? null,
+        isrcs: rec.isrcs ?? [], length: rec.length ?? null, date: g["first-release-date"] ?? null, album: g.title, type: g["primary-type"] ?? null, secondary: g["secondary-types"] ?? [], status: null, points: 0 }; }
+    }
+    return null;
+  }
+  async function earliest(pool, any = false) {
+    // Soundtracks only count as the first release when the post is about a film's music.
+    // Compilations MusicBrainz files as plain albums are told apart by their title.
+    const main = pool.filter((c) => ["Album", "Single", "EP"].includes(c.type) && c.secondary.every((t) => t === "Soundtrack" && soundtrack) && !COMPILATION.test(c.album ?? ""));
+    const list = (main.length || !any ? main : pool).filter((c) => kindNow || !KIND.live.re.test(c.album ?? "")).slice(0, 8);
+    for (const c of list) if (!(c.release_group in groups)) groups[c.release_group] = (await get(`release-group/${c.release_group}`))?.["first-release-date"] || null;
+    // Never years after the post's own year: that's a reissue or a compilation, not the original.
+    const fits = list.filter((c) => !yearNow || !groups[c.release_group] || +groups[c.release_group].slice(0, 4) <= yearNow + 3);
+    return fits.sort((a, b) => (groups[a.release_group] || "9999").localeCompare(groups[b.release_group] || "9999"))[0];
+  }
+  // --again: redo the posts it already settled by "original" (after a rule change)
+  if (process.argv.includes("--again")) for (const r of Object.values(results)) if (r.resolved && (["original", "recording", "albumonly"].includes(r.via) || r.status === "review" || (r.status === "notfound" && !r.via))) { r.resolved = false; r.status = "review"; delete r.via; }
+  const todo = Object.entries(results).filter(([id, r]) => r.status === "review" && !(id in decisions) && !r.resolved).slice(0, limit);
+  console.log(`${todo.length} posts to resolve`);
+  let n = 0;
+  for (const [id, r] of todo) {
+    const post = posts.find((p) => p.id === id);
+    if (!post) continue;
+    r.resolved = true;
+    const ctx = CONTEXT[id] ?? {}, text = plain(post.content);
+    if (["podcast", "other"].includes(ctx.subject)) { r.status = "notfound"; r.via = "no single recording"; continue; }
+    const kind = KIND[ctx.version] ? ctx.version : null;
+    const song = post.metadata.song, metaAlbum = bareTitle(post.metadata.album);
+    const albums = [metaAlbum, ctx.album && bareTitle(ctx.album)].filter(Boolean);
+    let arid = r.arid;
+    // A cover by someone else than the metadata artist: the performer's own recording.
+    if (ctx.is_cover && ctx.performer && similar(ctx.performer, r.artist) < 0.8) {
+      const pid = data.artists[ctx.performer] ?? (((await search("artist", `artist:${phrase(ctx.performer)}`, 5))?.artists ?? []).filter((a) => norm(a.name) === norm(ctx.performer)).length === 1
+        ? (await search("artist", `artist:${phrase(ctx.performer)}`, 5)).artists.find((a) => norm(a.name) === norm(ctx.performer)).id : null);
+      if (!pid) { r.status = "notfound"; r.via = "cover by an artist not in MusicBrainz"; continue; }
+      arid = pid;
+      r.performerArid = pid;
+      r.candidates = song ? await recordings(pid, song, albums[0], text, kind) : [];
+    }
+    // More candidates: the text's own song/album, and looser titles.
+    const more = [];
+    if (song && !r.candidates.some((c) => c.recording && loose(c.title, song))) {
+      const found = (await search("recording", `recording:${terms(song)} AND arid:${aridOf(arid)}`, 25))?.recordings ?? [];
+      for (const rec of found.filter((x) => loose(x.title, song))) more.push(...(await recordings(arid, rec.title, albums[0], text, kind)));
+      if (ctx.song && norm(ctx.song) !== norm(song)) more.push(...(await recordings(arid, ctx.song, albums[0], text, kind)));
+    }
+    for (const album of albums) if (!r.candidates.concat(more).some((c) => c.album && loose(c.album, album))) {
+      const found = await releaseGroups(arid, album, text, kind);
+      // Not inside the artist: credited to a group under their name ("Exodus" is by "Bob Marley & The Wailers").
+      if (!found.length) {
+        const groupsFound = (await search("release-group", `releasegroup:${phrase(album)} AND artist:${phrase(r.artist)}`, 10))?.["release-groups"] ?? [];
+        for (const g of groupsFound.filter((g) => similar(g.title, album) >= 0.85 && (g["artist-credit"] ?? []).some((c) => norm(c.name ?? c.artist?.name).includes(norm(r.artist)))))
+          found.push({ key: `|${g.id}`, recording: null, release_group: g.id, title: null, disambiguation: null, length: null, isrcs: [], date: g["first-release-date"] ?? null,
+            album: g.title, type: g["primary-type"] ?? null, secondary: g["secondary-types"] ?? [], status: null, points: 0 });
+      }
+      more.push(...found);
+    }
+    r.candidates = [...r.candidates, ...more].filter((c, i, all) => all.findIndex((o) => o.key === c.key) === i).sort((a, b) => b.points - a.points);
+    const cands = r.candidates;
+    const titleOk = (c) => !song || (c.title && (loose(c.title, song) || (ctx.song && loose(c.title, ctx.song))));
+    const versionOk = (c) => (kind ? matchesKind(c, kind) : studio(c));
+    const onAlbum = (c) => c.album && albums.some((a) => similar(c.album, a) >= 0.85 || similar(filmTitle(c.album), a) >= 0.85);
+    const set = (c, via) => { r.pick = c.key; r.status = "auto"; r.via = via; if (!cands.includes(c)) cands.unshift(c); };
+    const albumOnly = (c) => ({ ...c, key: `|${c.release_group}`, recording: null, title: null, isrcs: [], disambiguation: null });
+    const songs = cands.filter((c) => c.recording && titleOk(c));
+    kindNow = kind; yearNow = /^\d{4}$/.test(post.metadata.year ?? "") ? +post.metadata.year : null;
+    soundtrack = post.metadata.category === "Bandas Sonoras Originales" || !!ctx.soundtrack_of || /\b(bso|ost|soundtrack|banda sonora)\b/i.test(post.metadata.album ?? "");
+    let pick = songs.find((c) => versionOk(c) && onAlbum(c))
+      ?? (!song && cands.find((c) => c.release_group && onAlbum(c)));
+    // The album the post names is there but the song wasn't paired with it: look for the song on that album.
+    if (!pick && song) for (const g of cands.filter((c) => c.release_group && onAlbum(c)).filter((c, i, all) => all.findIndex((o) => o.release_group === c.release_group) === i).slice(0, 3)) {
+      const items = (await search("recording", `recording:${terms(song)} AND rgid:${g.release_group}`, 10))?.recordings ?? [];
+      const rec = items.find((x) => (loose(x.title, song) || norm(x.title).startsWith(`${norm(song)} `)) && (kind ? KIND[kind].re.test(`${x.disambiguation ?? ""} ${g.album}`) || g.secondary.includes(KIND[kind].type) : !VERSION.test(x.disambiguation ?? "")));
+      if (rec) { pick = { ...g, key: `${rec.id}|${g.release_group}`, recording: rec.id, title: rec.title, disambiguation: rec.disambiguation ?? null, isrcs: rec.isrcs ?? [], length: rec.length ?? null }; break; }
+    }
+    if (pick) set(pick, song ? (kind ? "version" : "album") : "album");
+    else if (songs.some(versionOk)) {
+      // The song is there in the right version, on another album: its first release (album, single or EP).
+      const original = (await aroundYear(r.performerArid ?? arid, song, post.metadata.year, kind, albums)) ?? await earliest(songs.filter((c) => versionOk(c) && c.release_group));
+      if (original) set(original, "original");
+    }
+    // Nothing reliable for the song: the album the post names, alone, if MusicBrainz has it.
+    if (r.status !== "auto") { const named = cands.find((c) => c.release_group && onAlbum(c) && !c.secondary.includes("Compilation") && !COMPILATION.test(c.album)); if (named) set(albumOnly(named), "albumonly"); }
+    if (r.status === "auto") { /* settled above */ }
+    else if (!kind && songs.some((c) => c.release_group && !matchesKind(c, "live") && !VERSION.test(c.disambiguation ?? ""))) {
+      // Only on compilations and the like: still the same recording; its first release.
+      const first = await earliest(songs.filter((c) => c.release_group && !matchesKind(c, "live") && !VERSION.test(c.disambiguation ?? "")), true);
+      // The compilation isn't the song's album: link the recording alone.
+      if (first) set({ ...first, key: `${first.recording}|`, release_group: null, album: null }, "recording");
+    } else {
+      // No such version (or the song isn't found): the album alone, if it's there.
+      const album = cands.find((c) => c.release_group && onAlbum(c) && (!c.recording || !kind || !matchesKind(c, kind)));
+      if (album) set(albumOnly(album), "albumonly");
+      else if (song && songs.length && kind) {
+        const base = songs.filter(studio).sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999"))[0];
+        if (base?.release_group) set(albumOnly(base), "albumonly");
+      }
+    }
+    // A version MusicBrainz doesn't have (only other takes of the song): the album of its first release.
+    if (r.status !== "auto" && song && kind && songs.length) { const first = await earliest(songs.filter((c) => c.release_group), true); if (first) set(albumOnly(first), "albumonly"); }
+    if (r.status !== "auto") r.status = "notfound";
+    if (r.status !== "auto" && r.status !== "notfound" && !r.candidates.some((c) => titleOk(c) || onAlbum(c))) r.status = "notfound";
+    if (++n % 10 === 0) { save(); console.log(`${n}/${todo.length}`); }
+  }
+  save();
+  writeFileSync(GROUPS, JSON.stringify(groups, null, 2) + "\n");
+  await lookupDates();
+  const st = (s) => todo.filter(([, r]) => r.status === s).length;
+  console.log(`Resolve done: ${st("auto")} auto, ${st("notfound")} not in MusicBrainz, ${st("review")} left to review`);
+  process.exit(0);
+}
+
 const todo = posts.filter((p) => data.artists[p.metadata.artist] && (p.metadata.song || p.metadata.album)
   && !sameMbid(results[p.id]?.arid, data.artists[p.metadata.artist])).slice(0, limit);
 console.log(`${todo.length} posts to search (${Object.keys(results).length} already in ${report})`);

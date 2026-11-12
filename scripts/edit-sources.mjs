@@ -23,13 +23,14 @@ const load = () => ({
 const write = (file, value) => writeFileSync(file, JSON.stringify(value, null, 2) + "\n");
 
 // Status of the artist and of the post's recording/album: ok (linked), review (candidates to check),
-// none (nothing found), nomatch (decided: not in MusicBrainz), noartist (the artist isn't linked yet).
+// none (not searched yet), notfound (searched: not in MusicBrainz), nomatch (decided by hand: not in MusicBrainz),
+// noartist (the artist isn't linked yet).
 function status(post, s) {
   const m = post.metadata, key = norm(m.artist);
   const artist = !m.artist ? null : key in s.artistDecisions ? (s.artistDecisions[key].mbid ? "ok" : "nomatch")
-    : s.mb.artists[m.artist] ? "ok" : s.artists[key]?.status === "review" ? "review" : "none";
+    : s.mb.artists[m.artist] ? "ok" : s.artists[key]?.status === "review" ? "review" : s.artists[key]?.status === "notfound" ? "notfound" : "none";
   const record = !(m.song || m.album) || !m.artist ? null : post.id in s.postDecisions ? (s.postDecisions[post.id].pick ? "ok" : "nomatch")
-    : s.mb.posts[post.id] ? "ok" : !s.mb.artists[m.artist] ? "noartist" : s.posts[post.id]?.status === "review" ? "review" : "none";
+    : s.mb.posts[post.id] ? "ok" : !s.mb.artists[m.artist] ? "noartist" : s.posts[post.id]?.status === "review" ? "review" : s.posts[post.id]?.status === "notfound" ? "notfound" : "none";
   return { artist, record };
 }
 
