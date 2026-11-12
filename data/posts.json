@@ -19813,8 +19813,14 @@
         "year": "1996"
       },
       "musicbrainzMetadata": {
-        "recording": "6d431ddf-3586-4f34-9047-bd85b9bef64e",
-        "song": "Forty Six & 2"
+        "recording": "f355d857-0920-40a7-927d-051c78188768",
+        "song": "Forty Six & 2",
+        "release_group": "ef1e8130-dd5f-336a-85fa-4936a47342bd",
+        "album": "Ænima",
+        "isrcs": [
+          "USZE19600086"
+        ],
+        "first_release": "1996-09-17"
       },
       "ytdlpMetadata": {
         "youtube_code": "GIuZUCpm9hc"
@@ -21596,10 +21602,11 @@
         "year": "2010"
       },
       "musicbrainzMetadata": {
-        "recording": "c363f07c-9121-46e8-8cd9-8e4b8dffd6fc",
+        "recording": "07a615d1-57aa-49ed-a722-c8f1f0ad3e26",
         "song": "By Some Miracle",
-        "release_group": "130d8bfa-79e4-45b1-bec2-41da3c3019f6",
-        "album": "By Some Miracle"
+        "release_group": "b6298967-cd21-4031-89cb-b9ba6ac095b3",
+        "album": "Familial",
+        "first_release": "2010-08-25"
       },
       "ytdlpMetadata": {
         "youtube_code": "0xwxDra-xyg"
@@ -22213,10 +22220,11 @@
         "year": "1997"
       },
       "musicbrainzMetadata": {
-        "recording": "3b45d640-10e7-4fa2-b209-58ffe0114781",
+        "recording": "143e9cf8-17c0-4a69-9c59-822ad282c3a5",
         "song": "Chan Chan",
-        "release_group": "6cdddcff-6115-3a14-9ff7-9cfe0e9228df",
-        "album": "Buena Vista Social Club 5"
+        "release_group": "56d48c6d-82fa-3d9e-8b32-4ef596422258",
+        "album": "Chan Chan",
+        "first_release": "2004"
       },
       "ytdlpMetadata": {
         "youtube_code": "3w_InVVk5KU"
