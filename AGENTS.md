@@ -67,7 +67,7 @@ lib/validate-post.js   Per-post rules + byte-identical posts.json writer (valida
 lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only (pages/feeds/fonts.11ty.js -> /css/fonts.css).
 js/                    archive-table-sort.js (also: a click on a row outside its links opens the post),
                        archive-table-search.js (accent-insensitive filter, ?q=; publication-year select, ?year=),
-                       players.js (post players as tabs inside a <details>; lazy-loads via data-src),
+                       players.js (post players as tabs in a box; lazy-loads via data-src),
                        podcasts.js (podcast page: copy the feed URL, play an episode in place with one <audio>, radio mode (episodes one
                        after another in the page's order, with the radio bar on top), newest/oldest order),
                        menu.js (header menu folded behind a "Menú" button on phones and small tablets),
