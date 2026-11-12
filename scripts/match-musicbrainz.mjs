@@ -3,27 +3,23 @@
 // Usage:
 //   node scripts/match-musicbrainz.mjs [report.json]          search (resumable: skips artists already in the report)
 //   node scripts/match-musicbrainz.mjs --limit=N [report.json] search only N artists (for testing)
+//   node scripts/match-musicbrainz.mjs --recheck [report.json] second pass for "review" artists: confirm each
+//                                                              candidate by its id (catches "Enrique Bunbury" = "Bunbury")
 //   node scripts/match-musicbrainz.mjs --apply [report.json]  write matches to data/musicbrainz.json
 // Each artist gets candidates from an artist search, confirmed by searching its songs and albums:
 // "auto" = a candidate with the same name credited on one of them; otherwise "review"
 // (decide in `npm run review-musicbrainz`, whose decisions win on --apply).
-// Set MB_CONTACT (an email or URL) to send it in the User-Agent, as MusicBrainz asks.
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
+import { norm, phrase as q, readData, readJson as read, search as mb, writeData } from "../lib/musicbrainz.js";
 
 const POSTS = new URL("../data/posts.json", import.meta.url);
-const OUT = new URL("../data/musicbrainz.json", import.meta.url);
 const DECISIONS = "musicbrainz-review.json";
 const apply = process.argv.includes("--apply");
 const limit = Number(process.argv.find((a) => a.startsWith("--limit="))?.slice(8)) || Infinity;
 const report = process.argv.slice(2).find((a) => !a.startsWith("--")) ?? "musicbrainz-candidates.json";
 const posts = JSON.parse(readFileSync(POSTS, "utf8")).posts;
-const read = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : {});
 const results = read(report);
 const save = () => writeFileSync(report, JSON.stringify(results, null, 2) + "\n");
-
-// Accent, case, punctuation and leading "the" insensitive ("The strokes" = "Strokes").
-export const norm = (s = "") => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()
-  .replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim().replace(/^the /, "");
 
 // Artists grouped by normalized name, with the exact spellings used in posts.json.
 const artists = {};
@@ -47,32 +43,11 @@ if (apply) {
     for (const name of artists[key]?.names ?? []) out[name] = mbid;
   }
   const sorted = Object.fromEntries(Object.entries(out).sort(([a], [b]) => a.localeCompare(b, "es")));
-  writeFileSync(OUT, JSON.stringify({ artists: sorted }, null, 2) + "\n");
+  writeData({ ...readData(), artists: sorted });
   console.log(`${Object.keys(sorted).length} artist names with an MBID -> data/musicbrainz.json`);
   process.exit(0);
 }
 
-const UA = `MetadataMatcher/0.1${process.env.MB_CONTACT ? ` ( ${process.env.MB_CONTACT} )` : ""}`;
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-let last = 0;
-async function mb(entity, query, limit = 5) {
-  const url = `https://musicbrainz.org/ws/2/${entity}?fmt=json&limit=${limit}&query=${encodeURIComponent(query)}`;
-  for (let attempt = 0; attempt < 6; attempt++) {
-    await sleep(Math.max(0, last + 1100 - Date.now()));
-    last = Date.now();
-    try {
-      const res = await fetch(url, { headers: { "user-agent": UA, accept: "application/json" }, signal: AbortSignal.timeout(30000) });
-      if (res.ok) return res.json();
-      if (res.status !== 503 && res.status !== 429) throw new Error(`HTTP ${res.status}`);
-    } catch (e) {
-      if (attempt === 5) throw e;
-    }
-    await sleep(2000 * (attempt + 1));
-  }
-  return null;
-}
-// Lucene phrase: only quotes and backslashes need escaping inside "…".
-const q = (s) => `"${s.replace(/[\\"]/g, "\\$&")}"`;
 const sameName = (artist, key) => [artist.name, artist["sort-name"], ...(artist.aliases ?? []).map((a) => a.name)]
   .some((n) => norm(n) === key || norm(n.replace(/^(.*), (the|los|las|el|la)$/i, "$2 $1")) === key);
 
@@ -93,6 +68,38 @@ async function confirmations(name, entity, field, titles) {
     if (hits.size) break;
   }
   return hits;
+}
+
+if (process.argv.includes("--recheck")) {
+  // Up to 4 candidates (same name first, then by score), each searched by arid with 2 songs, then 2 albums.
+  const todo = Object.entries(results).filter(([, r]) => r.status === "review" && !r.rechecked && r.candidates.length).slice(0, limit);
+  console.log(`${todo.length} artists to recheck`);
+  let done = 0;
+  for (const [key, r] of todo) {
+    const a = artists[key];
+    const songs = [...(a?.songs ?? [])].slice(0, 2), albums = [...(a?.albums ?? [])].filter((t) => norm(t) !== key).slice(0, 2);
+    const pool = [...r.candidates].sort((x, y) => y.sameName - x.sameName || (y.score ?? 0) - (x.score ?? 0)).slice(0, 4);
+    for (const c of pool) {
+      for (const [entity, field, titles] of [["recording", "recording", songs], ["release-group", "releasegroup", albums]]) {
+        for (const title of titles) {
+          const data = await mb(entity, `${field}:${q(title)} AND arid:${c.mbid}`, 5);
+          const items = data?.[entity === "recording" ? "recordings" : "release-groups"] ?? [];
+          if (items.some((i) => norm(i.title) === norm(title)) && !c.confirmed.includes(title)) c.confirmed.push(title);
+        }
+        if (c.confirmed.length) break;
+      }
+    }
+    // Auto when exactly one candidate is confirmed and its name fits ("Bunbury" inside "Enrique Bunbury").
+    const confirmed = r.candidates.filter((c) => c.confirmed.length);
+    const fits = (c) => c.sameName || key.includes(norm(c.name)) || norm(c.name).includes(key);
+    if (confirmed.length === 1 && fits(confirmed[0])) { r.pick = confirmed[0].mbid; r.status = "auto"; r.via = "recheck"; }
+    else if (confirmed.length) r.pick = confirmed.sort((x, y) => y.confirmed.length - x.confirmed.length)[0].mbid;
+    r.rechecked = true;
+    if (++done % 10 === 0) { save(); console.log(`${done}/${todo.length}`); }
+  }
+  save();
+  console.log(`Recheck done: ${todo.filter(([, r]) => r.status === "auto").length} of ${todo.length} now auto`);
+  process.exit(0);
 }
 
 const pending = Object.entries(artists).filter(([key]) => !results[key]).slice(0, limit);

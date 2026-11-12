@@ -13,7 +13,9 @@
     "review-youtube": "node scripts/review-youtube.mjs",
     "edit": "node scripts/edit-posts.mjs",
     "match-musicbrainz": "node scripts/match-musicbrainz.mjs",
-    "review-musicbrainz": "node scripts/review-musicbrainz.mjs"
+    "review-musicbrainz": "node scripts/review-musicbrainz.mjs",
+    "match-musicbrainz-posts": "node scripts/match-musicbrainz-posts.mjs",
+    "musicbrainz-diffs": "node scripts/musicbrainz-diffs.mjs"
   },
   "keywords": [],
   "author": "",
