@@ -3004,13 +3004,13 @@ button.chip {
   display: none;
 }
 
-/* Desktop split view: the author's text first and widest; podcast, players and Ficha sticky on the right,
+/* Desktop split view: the author's text first, filling the room left; podcast, players and Ficha sticky on the right,
    smaller. By the page's room (container), not the window. */
 @container app (min-width: 60rem) {
   .post-view {
     column-gap: 3.5rem;
     display: grid;
-    grid-template-columns: minmax(0, 42rem) minmax(18rem, 26rem);
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 26rem);
     justify-content: space-between;
     padding-top: 1.5rem;
   }
