@@ -64,7 +64,7 @@ lib/fonts.js           Self-hosted @fontsource fonts: used weights/subsets only 
 js/                    archive-table-sort.js, archive-table-search.js (accent-insensitive filter, ?q=),
                        players.js (post players as tabs inside a <details>; lazy-loads via data-src).
                        post-header.js (sticky post header height -> --post-header-height for the split view),
-                       on-this-day.js (home "Tal día como hoy": fetches today's JSON in the browser),
+                       on-this-day.js (home "Tal día como hoy": fetches today's JSON in the browser: posts of the day and anniversaries),
                        radio.js (radio mode: swaps posts in place keeping the live YouTube/Spotify players, their iframe APIs).
 .eleventy.js           Filters (formatDate, markdown, excerpt), `posts` collection, passthrough.
 pages/                 Templates (permalinks set in each): index, 404, map, rand, radio-start, post, redirect;
@@ -92,7 +92,7 @@ scripts/               validate-data.mjs, musicbrainz-players.mjs, check-links.m
 | `pages/rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
 | `pages/feeds/radio.njk` | `archive.radio` | `/radio.json` (posts with YouTube, or else a playable Spotify embed, for radio mode) |
 | `pages/feeds/podcast-feed.njk` | `archive.podcast` | `/podcast.xml` (RSS + iTunes tags for the 335 UniRadio podcasts) |
-| `pages/feeds/on-this-day.njk` | `archive.byDay` | `/tal-dia-como-hoy/<MM-DD>.json` (only days with posts) |
+| `pages/feeds/on-this-day.njk` | `archive.byDay` | `/tal-dia-como-hoy/<MM-DD>.json` (`{ posts, anniversaries }`: posts published that day; albums first released that day by MusicBrainz `first_release`, only when it's the year the site shows and not a bare 1 January; only days with either) |
 | `pages/redirect.njk` | `redirects` | each old URL (meta refresh + canonical) |
 | `pages/404.njk` | — | `/404.html` (served by GitHub Pages) |
 

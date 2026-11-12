@@ -6,4 +6,4 @@ pagination:
 permalink: "tal-dia-como-hoy/{{ entry.day }}.json"
 eleventyExcludeFromCollections: true
 ---
-{{ entry.posts | dump | safe }}
+{{ { posts: entry.posts, anniversaries: entry.anniversaries } | dump | safe }}
