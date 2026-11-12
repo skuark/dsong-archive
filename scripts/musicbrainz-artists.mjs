@@ -1,10 +1,11 @@
 // Fetches the MusicBrainz record of every linked artist (data/musicbrainz.json): canonical name and aliases,
 // country/area, type, community genres and links (official site, Wikidata…), into musicbrainz-artists.json
 // (a cache in reports/). musicbrainz-diffs.mjs compares it with posts.json. What the site uses (country, genres,
-// official site: lib/metadata.js) is copied to data/musicbrainz.json `artistInfo`. No key; 1 req/s (~25 min).
+// official site: lib/metadata.js) and what the editor compares (name, and the aliases of artists whose name in
+// posts.json isn't MusicBrainz's) is copied to data/musicbrainz.json `artistInfo`. No key; 1 req/s (~25 min).
 // Usage: node scripts/musicbrainz-artists.mjs [--refresh]   (resumable: skips artists already fetched)
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { get, mbidsOf, readData, writeData } from "../lib/musicbrainz.js";
+import { get, mbidsOf, norm, readData, writeData } from "../lib/musicbrainz.js";
 import { report as reportFile } from "../lib/reports.js";
 
 const OUT = reportFile("musicbrainz-artists.json");
@@ -40,9 +41,12 @@ save();
 const NOT_A_SITE = /web\.archive\.org|pirate-punk\.net|musicroamer\.com|dr-dee\.info|thacarterv\.com/;
 const { posts, ...data } = readData();
 const linked = new Set(Object.values(data.artists).flatMap(mbidsOf));
+// Names in posts.json by MBID (artists linked one to one), to keep aliases only where they're needed.
+const ours = Object.entries(data.artists).filter(([, id]) => typeof id === "string").reduce((m, [name, id]) => m.set(id, [...(m.get(id) ?? []), name]), new Map());
 data.artistInfo = Object.fromEntries([...linked].filter((id) => info[id]).sort().map((id) => {
   const a = info[id], url = a.urls.official && !NOT_A_SITE.test(a.urls.official) ? a.urls.official : undefined;
-  return [id, Object.fromEntries(Object.entries({ country: a.country ?? undefined, genres: a.genres.length ? a.genres : undefined, url }).filter(([, v]) => v))];
+  const aliases = (ours.get(id) ?? []).some((name) => norm(name) !== norm(a.name)) && a.aliases.length ? a.aliases : undefined;
+  return [id, Object.fromEntries(Object.entries({ name: a.name, aliases, country: a.country ?? undefined, genres: a.genres.length ? a.genres : undefined, url }).filter(([, v]) => v))];
 }));
 writeData(data);
 console.log(`Done: ${Object.keys(info).length} artists in ${OUT}`);

@@ -541,7 +541,7 @@ function renderSite() {
       lines.push(`<small class="site"><span class="site__source">Oculto · ${esc(REASON[h.reason] ?? h.reason)}</span> ${esc(h.value)} <button class="button" type="button" data-show="${esc(field)}" data-value="${esc(h.value)}">Mostrar</button></small>`);
     }
     // Differs from MusicBrainz: a button copies MusicBrainz's value into the field (saved with the post).
-    if (info.musicbrainz && !info.match) {
+    if (info.musicbrainz && !info.match && info.sync !== false) {
       const value = field === 'genre' ? info.musicbrainz.split(', ')[0].replace(/^./, (c) => c.toUpperCase()) : info.musicbrainz;
       lines.push(`<small class="site"><button class="button" type="button" data-sync="${esc(field)}" data-value="${esc(value)}" title="Copia al campo el dato de MusicBrainz (se guarda con Guardar)">↓ Usar el de MusicBrainz: ${esc(value)}</button></small>`);
     }

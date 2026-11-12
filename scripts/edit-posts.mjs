@@ -11,6 +11,9 @@ import MarkdownIt from "markdown-it";
 import { serializePosts, validatePost } from "../lib/validate-post.js";
 import { PLAYERS, effective, hidePlayer, musicbrainzValues, ordered, playerSources, resolveMetadata, sameAsMusicbrainz } from "../lib/metadata.js";
 import { countryOf } from "../lib/countries.js";
+import { readJson } from "../lib/musicbrainz.js";
+import { renameArtists } from "../lib/rename-artists.js";
+import { report as reportFile } from "../lib/reports.js";
 import { chooseArtist, chooseRecord, details, searchSource, summaries } from "./edit-sources.mjs";
 
 const PORT = Number(process.env.PORT) || 8082;
@@ -94,10 +97,27 @@ function site(post, mb = mbFile()) {
       hidden: Object.entries(post.hiddenPlayers?.[f] ?? {}).map(([value, reason]) => ({ value, reason })) };
   }
   // MusicBrainz's own value, and whether it's the editor's.
+  const aliases = mb.artistInfo?.[mb.artists?.[ed.artist]]?.aliases;
   for (const [f, info] of Object.entries(out)) {
-    if (said[f]) Object.assign(info, { musicbrainz: said[f], match: sameAsMusicbrainz(f, ed[f], said[f], { countryOf }) });
+    if (said[f]) Object.assign(info, { musicbrainz: said[f], match: sameAsMusicbrainz(f, ed[f], said[f], { countryOf, aliases }) });
   }
+  // MusicBrainz's name already belongs to another artist ("John Williams", the composer): no button to copy it.
+  if (out.artist.musicbrainz && artistClash(mb, ed.artist, out.artist.musicbrainz)) out.artist.sync = false;
   return out;
+}
+// Whether `to` is linked to another MusicBrainz artist than `from` (one name -> one MBID in data/musicbrainz.json).
+const artistClash = (mb, from, to) => !!mb.artists?.[to] && !!mb.artists?.[from] && JSON.stringify(mb.artists[to]) !== JSON.stringify(mb.artists[from]);
+// The artist changed in one post: its MusicBrainz link moves to the new name and the artist and album pages it
+// leaves get redirects (lib/rename-artists.js, as scripts/rename-artists.mjs does).
+const DECISIONS = reportFile("musicbrainz-review.json");
+function renameArtist(data, id, from, to) {
+  const mb = mbFile(), redirects = loadRedirects(), decisions = readJson(DECISIONS);
+  if (artistClash(mb, from, to)) return `«${to}» ya es otro artista de MusicBrainz (${mb.artists[to]}); usa otro nombre`;
+  renameArtists([{ from, to, posts: [id] }], { data, mb, decisions, redirects });
+  writeFileSync(MB_FILE, JSON.stringify(mb, null, 2) + "\n");
+  writeFileSync(REDIRECTS, JSON.stringify(redirects, null, 2) + "\n");
+  if (existsSync("reports")) writeFileSync(DECISIONS, JSON.stringify(decisions, null, 2) + "\n");
+  return null;
 }
 function withLayers(post, disk) {
   const out = { ...post };
@@ -211,6 +231,8 @@ createServer(async (req, res) => {
       const post = withLayers(clean(edited), data.posts[i]);
       const { errors, missing } = validatePost(post);
       if (errors.length) return send(400, { errors });
+      const from = data.posts[i].editorMetadata.artist, to = post.editorMetadata.artist;
+      if (from && to && from !== to) { const problem = renameArtist(data, match[1], from, to); if (problem) return send(400, { errors: [problem] }); }
       data.posts[i] = post;
       writeFileSync(FILE, serializePosts(data));
       if (renamed) renameId(match[1], post.id);
