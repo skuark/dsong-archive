@@ -62,7 +62,8 @@ if (apply) {
     const c = pick && (r?.candidates.find((c) => c.key === pick) ?? d?.candidate);
     if (!c) continue;
     out[post.id] = Object.fromEntries(Object.entries({
-      recording: c.recording, release_group: c.release_group, isrcs: c.isrcs?.length ? c.isrcs : undefined, first_release: (c.release_group && groups[c.release_group]) || undefined,
+      recording: c.recording, song: (c.recording && c.title) || undefined, release_group: c.release_group, album: (c.release_group && c.album) || undefined,
+      isrcs: c.isrcs?.length ? c.isrcs : undefined, first_release: (c.release_group && groups[c.release_group]) || undefined,
     }).filter(([, v]) => v));
   }
   writeData({ ...data, posts: out });

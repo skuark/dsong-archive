@@ -154,7 +154,8 @@ export async function chooseRecord(id, candidate) {
     write(FILES.groups, groups);
   }
   mb.posts[id] = Object.fromEntries(Object.entries({
-    recording: candidate.recording, release_group: candidate.release_group, isrcs: isrcs.length ? isrcs : undefined,
+    recording: candidate.recording, song: (candidate.recording && candidate.title) || undefined,
+    release_group: candidate.release_group, album: (candidate.release_group && candidate.album) || undefined, isrcs: isrcs.length ? isrcs : undefined,
     first_release: (candidate.release_group && groups[candidate.release_group]) || undefined,
   }).filter(([, v]) => v));
   writeData(mb);

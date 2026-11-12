@@ -477,7 +477,7 @@
   },
   {
     "from": "/archive/albums/avatar-avatar.html",
-    "to": "/archive/albums/james-horner-avatar.html"
+    "to": "/archive/albums/james-horner-avatar-music-from-the-motion-picture.html"
   },
   {
     "from": "/archive/albums/yeah-you-have-no-idea-what-you-re-getting-yourself-into.html",
@@ -485,7 +485,7 @@
   },
   {
     "from": "/archive/albums/la-vida-es-bella-la-vida-es-bella.html",
-    "to": "/archive/albums/nicola-piovani-la-vida-es-bella.html"
+    "to": "/archive/albums/nicola-piovani-la-vita-e-bella.html"
   },
   {
     "from": "/archive/albums/the-bourne-identity-the-bourne-identity.html",
@@ -493,7 +493,7 @@
   },
   {
     "from": "/archive/albums/gladiator-gladiator.html",
-    "to": "/archive/albums/lisa-gerrard-gladiator.html"
+    "to": "/archive/albums/lisa-gerrard-gladiator-music-from-the-motion-picture.html"
   },
   {
     "from": "/archive/albums/john-buttler-trio-live-at-st-gallen.html",
@@ -505,15 +505,15 @@
   },
   {
     "from": "/archive/albums/john-willians-jurassic-park.html",
-    "to": "/archive/albums/john-williams-jurassic-park.html"
+    "to": "/archive/albums/john-williams-jurassic-park-music-from-the-original-motion-picture-soundtrack.html"
   },
   {
     "from": "/archive/albums/braveheart-braveheart.html",
-    "to": "/archive/albums/james-horner-braveheart.html"
+    "to": "/archive/albums/james-horner-braveheart-original-motion-picture-soundtrack.html"
   },
   {
     "from": "/archive/albums/indiana-jones-indiana-jones.html",
-    "to": "/archive/albums/john-williams-indiana-jones.html"
+    "to": "/archive/albums/john-williams-indiana-jones-the-soundtracks-collection.html"
   },
   {
     "from": "/archive/albums/my-brightest-diamon-a-thousand-sharks-teeth.html",
@@ -521,7 +521,7 @@
   },
   {
     "from": "/archive/albums/gnars-barkley-st-elsewere.html",
-    "to": "/archive/albums/gnarls-barkley-st-elsewere.html"
+    "to": "/archive/albums/gnarls-barkley-st-elsewhere.html"
   },
   {
     "from": "/archive/albums/cibella-the-shine-of-dried-electric-leaves.html",
@@ -533,7 +533,7 @@
   },
   {
     "from": "/archive/albums/buena-vista-club-social-buena-vista-club-social.html",
-    "to": "/archive/albums/buena-vista-social-club-buena-vista-club-social.html"
+    "to": "/archive/albums/buena-vista-social-club-buena-vista-social-club.html"
   },
   {
     "from": "/archive/albums/marek-hermmann-in-between.html",
@@ -545,7 +545,7 @@
   },
   {
     "from": "/archive/albums/alan-menker-bso-aladdin.html",
-    "to": "/archive/albums/alan-menken-bso-aladdin.html"
+    "to": "/archive/albums/alan-menken-aladdin.html"
   },
   {
     "from": "/archive/albums/kroke-band-trio.html",
@@ -558,5 +558,537 @@
   {
     "from": "/archive/albums/us-no-matter-where-you-are.html",
     "to": "/archive/albums/us-the-duo-no-matter-where-you-are.html"
+  },
+  {
+    "from": "/archive/albums/a-fine-frenzy-bomb-on-a-birdcage.html",
+    "to": "/archive/albums/a-fine-frenzy-bomb-in-a-birdcage.html"
+  },
+  {
+    "from": "/archive/albums/a-ha-major-sky.html",
+    "to": "/archive/albums/a-ha-minor-earth-major-sky.html"
+  },
+  {
+    "from": "/archive/albums/above-and-beyond-above-and-beyond-tri-state.html",
+    "to": "/archive/albums/above-and-beyond-tri-state.html"
+  },
+  {
+    "from": "/archive/albums/al-green-im-still-in-love-with-you.html",
+    "to": "/archive/albums/al-green-i-m-still-in-love-with-you.html"
+  },
+  {
+    "from": "/archive/albums/alan-menken-ost-beauty-and-the-beast.html",
+    "to": "/archive/albums/alan-menken-beauty-and-the-beast.html"
+  },
+  {
+    "from": "/archive/albums/alan-silvestri-ost-polar-express.html",
+    "to": "/archive/albums/alan-silvestri-the-polar-express.html"
+  },
+  {
+    "from": "/archive/albums/angus-and-julia-stone-chocolate-and-cigarettes.html",
+    "to": "/archive/albums/angus-and-julia-stone-chocolates-and-cigarettes.html"
+  },
+  {
+    "from": "/archive/albums/annie-b-sweet-undo.html",
+    "to": "/archive/albums/annie-b-sweet-start-restart-undo.html"
+  },
+  {
+    "from": "/archive/albums/antilopez-ser-musico.html",
+    "to": "/archive/albums/antilopez-ser-musico-maquetas.html"
+  },
+  {
+    "from": "/archive/albums/arrested-development-classic-matters.html",
+    "to": "/archive/albums/arrested-development-classic-masters.html"
+  },
+  {
+    "from": "/archive/albums/avalanch-ruinas-del-eden.html",
+    "to": "/archive/albums/avalanch-las-ruinas-del-eden.html"
+  },
+  {
+    "from": "/archive/albums/banks-goddes.html",
+    "to": "/archive/albums/banks-goddess.html"
+  },
+  {
+    "from": "/archive/albums/barrett-strong-money-thats-what-i-want-vinilo-single.html",
+    "to": "/archive/albums/barrett-strong-money-thats-what-i-want-oh-i-apologize.html"
+  },
+  {
+    "from": "/archive/albums/beady-eye-still-speeding.html",
+    "to": "/archive/albums/beady-eye-different-gear-still-speeding.html"
+  },
+  {
+    "from": "/archive/albums/bee-gees-saturday-night-fever.html",
+    "to": "/archive/albums/bee-gees-saturday-night-fever-soundtrack-zur-originalauffuehrung-im-musical-dome-koeln.html"
+  },
+  {
+    "from": "/archive/albums/beirut-march-of-the-zapotec-and-realpeople-holland.html",
+    "to": "/archive/albums/beirut-march-of-the-zapotec-holland.html"
+  },
+  {
+    "from": "/archive/albums/beirut-the-gulag-orkestar.html",
+    "to": "/archive/albums/beirut-gulag-orkestar.html"
+  },
+  {
+    "from": "/archive/albums/ben-harper-will-to-live.html",
+    "to": "/archive/albums/ben-harper-the-will-to-live.html"
+  },
+  {
+    "from": "/archive/albums/blue-october-foiled-again-ep.html",
+    "to": "/archive/albums/blue-october-foiled.html"
+  },
+  {
+    "from": "/archive/albums/boney-m-nightfligh-to-venus.html",
+    "to": "/archive/albums/boney-m-nightflight-to-venus.html"
+  },
+  {
+    "from": "/archive/albums/brian-eno-apollo-atmospheres-and-sountracks.html",
+    "to": "/archive/albums/brian-eno-apollo-atmospheres-and-soundtracks.html"
+  },
+  {
+    "from": "/archive/albums/bruce-springsteen-devil-and-dust.html",
+    "to": "/archive/albums/bruce-springsteen-devils-and-dust.html"
+  },
+  {
+    "from": "/archive/albums/c2c-down-the-road-ep.html",
+    "to": "/archive/albums/c2c-down-the-road.html"
+  },
+  {
+    "from": "/archive/albums/cesar-benito-bso-el-tiempo-entre-costuras.html",
+    "to": "/archive/albums/cesar-benito-el-tiempo-entre-costuras.html"
+  },
+  {
+    "from": "/archive/albums/chiara-mastroianni-pesepolis.html",
+    "to": "/archive/albums/chiara-mastroianni-persepolis.html"
+  },
+  {
+    "from": "/archive/albums/chingon-kill-bill-vol-2-ost.html",
+    "to": "/archive/albums/chingon-kill-bill-vol-2-original-soundtrack.html"
+  },
+  {
+    "from": "/archive/albums/chris-cornell-euphoria-morning.html",
+    "to": "/archive/albums/chris-cornell-euphoria-mourning.html"
+  },
+  {
+    "from": "/archive/albums/christophe-beck-ost-frozen.html",
+    "to": "/archive/albums/christophe-beck-frozen.html"
+  },
+  {
+    "from": "/archive/albums/coldplay-christmas-lights-cdsingle.html",
+    "to": "/archive/albums/coldplay-christmas-lights.html"
+  },
+  {
+    "from": "/archive/albums/compay-segundo-buena-vista-club-social.html",
+    "to": "/archive/albums/compay-segundo-buena-vista-social-club-5.html"
+  },
+  {
+    "from": "/archive/albums/deadmau-4x4-12.html",
+    "to": "/archive/albums/deadmau-4-4-12.html"
+  },
+  {
+    "from": "/archive/albums/delafe-y-las-flores-azules-las-trompetas-de-la-muerte.html",
+    "to": "/archive/albums/delafe-y-las-flores-azules-vs-las-trompetas-de-la-muerte.html"
+  },
+  {
+    "from": "/archive/albums/diana-krall-christmas-song.html",
+    "to": "/archive/albums/diana-krall-christmas-songs.html"
+  },
+  {
+    "from": "/archive/albums/die-kleingeldprinzessin-und-die-stadtpiraten-die-kleingeldprinzessin.html",
+    "to": "/archive/albums/die-kleingeldprinzessin-und-die-stadtpiraten-dota-die-kleingeldprinzessin-and-die-stadtpiraten.html"
+  },
+  {
+    "from": "/archive/albums/digitalism-dude.html",
+    "to": "/archive/albums/digitalism-i-love-you-dude.html"
+  },
+  {
+    "from": "/archive/albums/dream-theater-a-change-of-seasons-ep.html",
+    "to": "/archive/albums/dream-theater-a-change-of-seasons.html"
+  },
+  {
+    "from": "/archive/albums/dream-theater-metropolis-part-2-scenes-from-a-memory.html",
+    "to": "/archive/albums/dream-theater-metropolis-pt-2-scenes-from-a-memory.html"
+  },
+  {
+    "from": "/archive/albums/duffy-rain-your-parade.html",
+    "to": "/archive/albums/duffy-rain-on-your-parade.html"
+  },
+  {
+    "from": "/archive/albums/eddie-vedder-ukelele-songs.html",
+    "to": "/archive/albums/eddie-vedder-ukulele-songs.html"
+  },
+  {
+    "from": "/archive/albums/eliane-elias-sings-jobim.html",
+    "to": "/archive/albums/eliane-elias-eliane-elias-sings-jobim.html"
+  },
+  {
+    "from": "/archive/albums/eskorzo-afrobeat-experience-hypnotic-covers-ep.html",
+    "to": "/archive/albums/eskorzo-afrobeat-experience-hypnotic-covers.html"
+  },
+  {
+    "from": "/archive/albums/fernando-velazquez-bso-lo-imposible.html",
+    "to": "/archive/albums/fernando-velazquez-lo-imposible.html"
+  },
+  {
+    "from": "/archive/albums/finley-quaye-y-beth-orton-much-more-than-love.html",
+    "to": "/archive/albums/finley-quaye-y-beth-orton-much-more-than-much-love.html"
+  },
+  {
+    "from": "/archive/albums/flowing-tears-thy-kingdom-come.html",
+    "to": "/archive/albums/flowing-tears-thy-kingdom-gone.html"
+  },
+  {
+    "from": "/archive/albums/flying-colors-flyiing-colors.html",
+    "to": "/archive/albums/flying-colors-flying-colors.html"
+  },
+  {
+    "from": "/archive/albums/glen-hansard-once.html",
+    "to": "/archive/albums/glen-hansard-once-music-from-the-motion-picture.html"
+  },
+  {
+    "from": "/archive/albums/hans-zimmer-ost-man-of-steel.html",
+    "to": "/archive/albums/hans-zimmer-man-of-steel.html"
+  },
+  {
+    "from": "/archive/albums/hans-zimmer-ost-the-thin-red-line.html",
+    "to": "/archive/albums/hans-zimmer-the-thin-red-line.html"
+  },
+  {
+    "from": "/archive/albums/harry-belafonte-banana-song-boat.html",
+    "to": "/archive/albums/harry-belafonte-banana-boat-song.html"
+  },
+  {
+    "from": "/archive/albums/henry-mancini-ost-pink-panther.html",
+    "to": "/archive/albums/henry-mancini-the-pink-panther.html"
+  },
+  {
+    "from": "/archive/albums/hola-a-todo-el-mundo-ultraviolet-catastrophe.html",
+    "to": "/archive/albums/hola-a-todo-el-mundo-ultraviolet-catastrophe-deluxe-edition.html"
+  },
+  {
+    "from": "/archive/albums/hooverphonic-the-magnificient-tree.html",
+    "to": "/archive/albums/hooverphonic-the-magnificent-tree.html"
+  },
+  {
+    "from": "/archive/albums/hozier-take-me-to-the-church.html",
+    "to": "/archive/albums/hozier-take-me-to-church.html"
+  },
+  {
+    "from": "/archive/albums/izal-magia-y-efectos-especiales.html",
+    "to": "/archive/albums/izal-magia-and-efectos-especiales.html"
+  },
+  {
+    "from": "/archive/albums/jeff-buckley-grace-legacy-edition.html",
+    "to": "/archive/albums/jeff-buckley-grace.html"
+  },
+  {
+    "from": "/archive/albums/joan-colomo-vol-1.html",
+    "to": "/archive/albums/joan-colomo-producto-interior-bruto-vol-1.html"
+  },
+  {
+    "from": "/archive/albums/joan-manuel-serrat-poeta.html",
+    "to": "/archive/albums/joan-manuel-serrat-dedicado-a-antonio-machado-poeta.html"
+  },
+  {
+    "from": "/archive/albums/joao-gilberto-getz-gilberto.html",
+    "to": "/archive/albums/joao-gilberto-getz-gilberto-2.html"
+  },
+  {
+    "from": "/archive/albums/john-williams-ost-e-t-extra-terrestrial.html",
+    "to": "/archive/albums/john-williams-e-t-the-extra-terrestrial.html"
+  },
+  {
+    "from": "/archive/albums/jose-antonio-delgado-jose-antonio-delgado.html",
+    "to": "/archive/albums/jose-antonio-delgado-jose-antonio-delgado-2005.html"
+  },
+  {
+    "from": "/archive/albums/joy-division-love-will-tear-us-apart-single.html",
+    "to": "/archive/albums/joy-division-love-will-tear-us-apart.html"
+  },
+  {
+    "from": "/archive/albums/junip-black-refuge.html",
+    "to": "/archive/albums/junip-black-refuge-ep.html"
+  },
+  {
+    "from": "/archive/albums/klaus-and-kinski-tragalos.html",
+    "to": "/archive/albums/klaus-and-kinski-tierra-tragalos.html"
+  },
+  {
+    "from": "/archive/albums/klaus-badelt-ost-small-world.html",
+    "to": "/archive/albums/klaus-badelt-small-world.html"
+  },
+  {
+    "from": "/archive/albums/laura-marling-i-cannot-swim.html",
+    "to": "/archive/albums/laura-marling-alas-i-cannot-swim.html"
+  },
+  {
+    "from": "/archive/albums/lauryn-hill-mtv-unplugged-no-2-0.html",
+    "to": "/archive/albums/lauryn-hill-mtv-unplugged-2-0.html"
+  },
+  {
+    "from": "/archive/albums/lisa-ekdahl-lisa-ekdahl-sings-salvadore-poe.html",
+    "to": "/archive/albums/lisa-ekdahl-sings-salvadore-poe.html"
+  },
+  {
+    "from": "/archive/albums/liv-tyler-need-you-tonight-single.html",
+    "to": "/archive/albums/liv-tyler-need-you-tonight.html"
+  },
+  {
+    "from": "/archive/albums/los-bravos-black-is-black-single.html",
+    "to": "/archive/albums/los-bravos-black-is-black.html"
+  },
+  {
+    "from": "/archive/albums/los-delinqueentes-arquitectura-de-la-calle.html",
+    "to": "/archive/albums/los-delinqueentes-arquitectura-del-aire-en-la-calle.html"
+  },
+  {
+    "from": "/archive/albums/luca-turilli-demonheart-ep.html",
+    "to": "/archive/albums/luca-turilli-demonheart.html"
+  },
+  {
+    "from": "/archive/albums/madonna-austin-powers-the-spy-who-shagged-me.html",
+    "to": "/archive/albums/madonna-austin-powers-the-spy-who-shagged-me-music-from-the-motion-picture.html"
+  },
+  {
+    "from": "/archive/albums/maga-maga-album-blanco.html",
+    "to": "/archive/albums/maga-maga.html"
+  },
+  {
+    "from": "/archive/albums/manic-street-preachers-tell-me-yours.html",
+    "to": "/archive/albums/manic-street-preachers-this-is-my-truth-tell-me-yours.html"
+  },
+  {
+    "from": "/archive/albums/marco-beltrami-ost-knowing.html",
+    "to": "/archive/albums/marco-beltrami-knowing.html"
+  },
+  {
+    "from": "/archive/albums/mark-ronson-exit-music-songs-with-radio-heads.html",
+    "to": "/archive/albums/mark-ronson-exit-music-songs-with-radio-heads-ep-1.html"
+  },
+  {
+    "from": "/archive/albums/mecano-siglo-xii.html",
+    "to": "/archive/albums/mecano-siglo-xxi.html"
+  },
+  {
+    "from": "/archive/albums/mercedes-sosa-mercedes-sosa-83.html",
+    "to": "/archive/albums/mercedes-sosa-mercedes-sosa.html"
+  },
+  {
+    "from": "/archive/albums/micah-p-hinson-the-gospel-of-progress.html",
+    "to": "/archive/albums/micah-p-hinson-micah-p-hinson-and-the-gospel-of-progress.html"
+  },
+  {
+    "from": "/archive/albums/michael-buble-special-delibery.html",
+    "to": "/archive/albums/michael-buble-special-delivery.html"
+  },
+  {
+    "from": "/archive/albums/michel-camilo-randezvous.html",
+    "to": "/archive/albums/michel-camilo-rendezvous.html"
+  },
+  {
+    "from": "/archive/albums/michiru-yamane-castlevania-symphony-of-the-night-ost.html",
+    "to": "/archive/albums/michiru-yamane-castlevania-symphony-of-the-night.html"
+  },
+  {
+    "from": "/archive/albums/miss-caffeina-la-imposibilidad-del-fenomeno.html",
+    "to": "/archive/albums/miss-caffeina-imposibilidad-del-fenomeno.html"
+  },
+  {
+    "from": "/archive/albums/my-morning-jacket-evil-urge.html",
+    "to": "/archive/albums/my-morning-jacket-evil-urges.html"
+  },
+  {
+    "from": "/archive/albums/mychael-danna-ost-life-of-pi.html",
+    "to": "/archive/albums/mychael-danna-life-of-pi.html"
+  },
+  {
+    "from": "/archive/albums/nickelback-black-horse.html",
+    "to": "/archive/albums/nickelback-dark-horse.html"
+  },
+  {
+    "from": "/archive/albums/olga-roman-entre-todas-las-mujeres.html",
+    "to": "/archive/albums/olga-roman-entre-todas-las-mujeres-voces-de-mujer-cantan-a-joaquin-sabina.html"
+  },
+  {
+    "from": "/archive/albums/orquesta-filarmonica-de-viena-new-years-day-concert-2008.html",
+    "to": "/archive/albums/orquesta-filarmonica-de-viena-new-years-concert-2000.html"
+  },
+  {
+    "from": "/archive/albums/parov-stelar-coco-part-2.html",
+    "to": "/archive/albums/parov-stelar-coco.html"
+  },
+  {
+    "from": "/archive/albums/pasion-vega-con-pasion-en-el-maestranza.html",
+    "to": "/archive/albums/pasion-vega-pasion-en-el-maestranza.html"
+  },
+  {
+    "from": "/archive/albums/patrick-doyle-ost-brave.html",
+    "to": "/archive/albums/patrick-doyle-brave.html"
+  },
+  {
+    "from": "/archive/albums/pepa-flores-marinero.html",
+    "to": "/archive/albums/pepa-flores-hablame-del-mar-marinero.html"
+  },
+  {
+    "from": "/archive/albums/perla-batalla-bird-on-the-wire-songs-of-leonard-cohen.html",
+    "to": "/archive/albums/perla-batalla-bird-on-the-wire-the-songs-of-leonard-cohen.html"
+  },
+  {
+    "from": "/archive/albums/peter-bjorn-and-john-writer-s-block.html",
+    "to": "/archive/albums/peter-bjorn-and-john-writers-block.html"
+  },
+  {
+    "from": "/archive/albums/phoenix-wolfang-amadeus-phoenix.html",
+    "to": "/archive/albums/phoenix-wolfgang-amadeus-phoenix.html"
+  },
+  {
+    "from": "/archive/albums/phone-joan-the-early-sounds-of-phone-joan.html",
+    "to": "/archive/albums/phone-joan-the-early-sounds-of-joan.html"
+  },
+  {
+    "from": "/archive/albums/plan-b-the-defamation-of-stricklands-banks.html",
+    "to": "/archive/albums/plan-b-the-defamation-of-strickland-banks.html"
+  },
+  {
+    "from": "/archive/albums/primal-scream-its-allright.html",
+    "to": "/archive/albums/primal-scream-its-alright-its-ok.html"
+  },
+  {
+    "from": "/archive/albums/qotsa-song-for-the-deaf.html",
+    "to": "/archive/albums/qotsa-songs-for-the-deaf.html"
+  },
+  {
+    "from": "/archive/albums/queens-of-the-stone-age-song-for-the-deaf.html",
+    "to": "/archive/albums/queens-of-the-stone-age-songs-for-the-deaf.html"
+  },
+  {
+    "from": "/archive/albums/quique-gonzalez-daikiri-blues.html",
+    "to": "/archive/albums/quique-gonzalez-daiquiri-blues.html"
+  },
+  {
+    "from": "/archive/albums/radio-futura-ley-del-desierto-ley-del-mar.html",
+    "to": "/archive/albums/radio-futura-la-ley-del-desierto-la-ley-del-mar.html"
+  },
+  {
+    "from": "/archive/albums/red-fang-murder-of-the-mountains.html",
+    "to": "/archive/albums/red-fang-murder-the-mountains.html"
+  },
+  {
+    "from": "/archive/albums/red-hot-chili-peppers-blood-sugar-sex-magic.html",
+    "to": "/archive/albums/red-hot-chili-peppers-blood-sugar-sex-magik.html"
+  },
+  {
+    "from": "/archive/albums/rino-gaetano-il-cielo-e-sempre-piu-blu.html",
+    "to": "/archive/albums/rino-gaetano-ma-il-cielo-e-sempre-piu-blu.html"
+  },
+  {
+    "from": "/archive/albums/russell-shaw-fable-ost.html",
+    "to": "/archive/albums/russell-shaw-fable.html"
+  },
+  {
+    "from": "/archive/albums/salif-keita-mofou.html",
+    "to": "/archive/albums/salif-keita-moffou.html"
+  },
+  {
+    "from": "/archive/albums/samantha-barks-les-miserables-highlights-from-the-motion-picture-soundtrack.html",
+    "to": "/archive/albums/samantha-barks-les-miserables-the-motion-picture-soundtrack.html"
+  },
+  {
+    "from": "/archive/albums/serge-gainsbourg-jane-birkin-et-serge-gainsbourg.html",
+    "to": "/archive/albums/serge-gainsbourg-jane-birkin-and-serge-gainsbourg.html"
+  },
+  {
+    "from": "/archive/albums/silvia-perez-cruz-blancanieves.html",
+    "to": "/archive/albums/silvia-perez-cruz-blancanieves-pablo-bergers-original-motion-picture-soundtrack.html"
+  },
+  {
+    "from": "/archive/albums/skumdum-tigerraender-and-taggtrad.html",
+    "to": "/archive/albums/skumdum-tigerraender-och-taggtrad.html"
+  },
+  {
+    "from": "/archive/albums/soziedad-alkoholika-no-intenten-hacer-esto-en-su-casa.html",
+    "to": "/archive/albums/soziedad-alkoholika-no-intente-hacer-esto-en-su-casa.html"
+  },
+  {
+    "from": "/archive/albums/susanne-sundfor-late-night-tales-roeyksopp.html",
+    "to": "/archive/albums/susanne-sundfor-latenighttales-roeyksopp.html"
+  },
+  {
+    "from": "/archive/albums/the-cure-desintegration.html",
+    "to": "/archive/albums/the-cure-disintegration.html"
+  },
+  {
+    "from": "/archive/albums/the-doors-the-doors.html",
+    "to": "/archive/albums/the-doors-the-doors-music-from-the-original-motion-picture.html"
+  },
+  {
+    "from": "/archive/albums/the-expressions-faithfull-man.html",
+    "to": "/archive/albums/the-expressions-faithful-man.html"
+  },
+  {
+    "from": "/archive/albums/the-last-shadow-puppets-the-age-of-understatement.html",
+    "to": "/archive/albums/the-last-shadow-puppets-the-age-of-the-understatement.html"
+  },
+  {
+    "from": "/archive/albums/the-lightning-seeds-three-lions.html",
+    "to": "/archive/albums/the-lightning-seeds-three-lions-98.html"
+  },
+  {
+    "from": "/archive/albums/the-national-lights-the-dead-will-walk.html",
+    "to": "/archive/albums/the-national-lights-the-dead-will-walk-dear.html"
+  },
+  {
+    "from": "/archive/albums/the-pretenders-last-of-the-independets.html",
+    "to": "/archive/albums/the-pretenders-last-of-the-independents.html"
+  },
+  {
+    "from": "/archive/albums/the-smashing-pumpkins-batman-and-robin.html",
+    "to": "/archive/albums/the-smashing-pumpkins-batman-and-robin-music-from-and-inspired-by-the-motion-picture.html"
+  },
+  {
+    "from": "/archive/albums/the-smiths-how-soon-is-now-single.html",
+    "to": "/archive/albums/the-smiths-how-soon-is-now.html"
+  },
+  {
+    "from": "/archive/albums/the-sugarhill-gang-the-sugarhill-gang.html",
+    "to": "/archive/albums/the-sugarhill-gang-sugarhill-gang.html"
+  },
+  {
+    "from": "/archive/albums/tove-styrke-borderline-ep.html",
+    "to": "/archive/albums/tove-styrke-borderline.html"
+  },
+  {
+    "from": "/archive/albums/vangelis-chariots-of-fire-ost.html",
+    "to": "/archive/albums/vangelis-chariots-of-fire.html"
+  },
+  {
+    "from": "/archive/albums/vangelis-ost-blade-runner.html",
+    "to": "/archive/albums/vangelis-blade-runner.html"
+  },
+  {
+    "from": "/archive/albums/wilco-blue-sky.html",
+    "to": "/archive/albums/wilco-sky-blue-sky.html"
+  },
+  {
+    "from": "/archive/albums/wir-sind-helden-bring-mich-nach-house.html",
+    "to": "/archive/albums/wir-sind-helden-bring-mich-nach-hause.html"
+  },
+  {
+    "from": "/archive/albums/yoko-ono-yes-im-a-witch.html",
+    "to": "/archive/albums/yoko-ono-yes-i-m-a-witch.html"
+  },
+  {
+    "from": "/archive/albums/zucchero-azu-and-co.html",
+    "to": "/archive/albums/zucchero-zu-and-co.html"
+  },
+  {
+    "from": "/archive/countries/birmania.html",
+    "to": "/archive/countries/reino-unido.html"
+  },
+  {
+    "from": "/archive/countries/mozambique.html",
+    "to": "/archive/countries/portugal.html"
+  },
+  {
+    "from": "/archive/countries/trinidad-y-tobago.html",
+    "to": "/archive/countries/estados-unidos.html"
   }
 ]
