@@ -8267,7 +8267,9 @@
         "isrcs": [
           "GBAAA9500013"
         ],
-        "first_release": "1995-05-04"
+        "first_release": "1995-05-04",
+        "spotify_url": "https://open.spotify.com/embed/track/74UiAwqOTEtEBcSKDIayj6",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1447107137?i=1447107151"
       },
       "ytdlpMetadata": {
         "youtube_code": "lae_Bd_5rk4"
@@ -69314,7 +69316,8 @@
           "GBW231400003"
         ],
         "first_release": "2014-05-26",
-        "spotify_url": "https://open.spotify.com/embed/track/11Kul1T6RWIvvuh5ctCAgo"
+        "spotify_url": "https://open.spotify.com/embed/track/11Kul1T6RWIvvuh5ctCAgo",
+        "apple_music_url": "https://embed.music.apple.com/es/album/1516351195?i=1516351357"
       }
     },
     {
@@ -71796,7 +71799,8 @@
         ],
         "first_release": "2014-07-04",
         "youtube_code": "uzaYLK3k0DQ",
-        "spotify_url": "https://open.spotify.com/embed/track/2s1sdSqGcKxpPr5lCl7jAV"
+        "spotify_url": "https://open.spotify.com/embed/track/2s1sdSqGcKxpPr5lCl7jAV",
+        "apple_music_url": "https://embed.music.apple.com/es/album/882945378?i=882945383"
       }
     },
     {
