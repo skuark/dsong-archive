@@ -400,7 +400,8 @@
     bar.setAttribute('role', 'region');
     bar.setAttribute('aria-label', 'Modo radio');
     bar.innerHTML = `
-      <span class="kicker radio-bar__label">Radio<span class="radio-bar__scope"></span><span class="radio-bar__source"></span></span>
+      <span class="kicker radio-bar__label">Radio<span class="radio-bar__source"></span></span>
+      <span class="radio-bar__scope"></span>
       <span class="radio-bar__actions">
         <button class="radio-bar__button radio-bar__button--start" type="button" data-action="play" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>Empezar</button>
         <button class="radio-bar__button radio-bar__button--icon" type="button" data-action="previous" aria-label="Anterior" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
@@ -408,8 +409,8 @@
       </span>
       <span class="radio-bar__next"></span>
       <span class="radio-bar__order" role="radiogroup" aria-label="Orden">
-        <button class="radio-bar__button" type="button" role="radio" data-action="order" data-shuffle="false" aria-checked="true">En orden</button>
-        <button class="radio-bar__button" type="button" role="radio" data-action="order" data-shuffle="true" aria-checked="false">Al azar</button>
+        <button class="radio-bar__button" type="button" role="radio" data-action="order" data-shuffle="false" aria-checked="true" aria-label="En orden"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="radio-bar__text">En orden</span></button>
+        <button class="radio-bar__button" type="button" role="radio" data-action="order" data-shuffle="true" aria-checked="false" aria-label="Al azar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span class="radio-bar__text">Al azar</span></button>
       </span>
       <button class="radio-bar__button radio-bar__button--stop" type="button" data-action="stop" aria-label="Salir del modo radio">×</button>`;
     bar.addEventListener('click', (e) => {
@@ -431,12 +432,12 @@
     });
     if (scope?.name) {
       const name = bar.querySelector('.radio-bar__scope');
-      name.textContent = ` · ${scope.name}`;
+      name.textContent = scope.name;
       name.title = scope.name;
     }
-    document.body.append(bar);
+    document.body.prepend(bar);
     document.body.classList.add('radio-on');
-    // Its height, for the body's room at the bottom and the sticky side column over it
+    // Its height, for the sticky side column under it
     barSize = new ResizeObserver(() => document.documentElement.style.setProperty('--radio-bar', `${bar.offsetHeight}px`));
     barSize.observe(bar);
     setMenu(true);
@@ -458,7 +459,7 @@
     const slot = bar.querySelector('.radio-bar__next');
     slot.textContent = '';
     if (!next) { slot.textContent = scope ? 'Última canción de la lista' : 'Última canción del archivo'; return; }
-    slot.append('Al acabar la canción pasa a ');
+    slot.insertAdjacentHTML('beforeend', '<span class="radio-bar__lead--long">Al acabar la canción pasa a </span><span class="radio-bar__lead--short">Luego: </span>');
     const link = document.createElement('a');
     link.href = `/archive/${next[0]}.html`;
     link.textContent = next[1];

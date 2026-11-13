@@ -2669,50 +2669,37 @@ button.chip {
   display: none;
 }
 
-/* Radio bar: a yellow card (the current state) floating at the bottom while it plays, ink on yellow so
-   it stands out from both the paper page and its black shadow */
+/* Radio bar: a black band across the top while it plays, paper on ink; yellow only on its label (the
+   current state) and on hover */
 .radio-bar {
   align-items: center;
-  background: var(--accent);
-  border: var(--border);
-  bottom: var(--radio-gap);
-  box-shadow: var(--shadow);
-  box-sizing: border-box;
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   display: flex;
   flex-wrap: wrap;
   gap: .75rem 1.5rem;
-  left: 50%;
-  padding: .75rem 1.25rem;
-  /* Floats over the page near the bottom of the window, narrower than it; the body keeps its room
-     (--radio-bar, set by js/radio.js, plus the gap) so the page's foot isn't hidden under it */
-  position: fixed;
-  transform: translateX(-50%);
-  width: min(calc(100% - 2 * var(--radio-gap)), 72rem);
+  padding: .875rem max(2rem, calc((100% - 86rem) / 2));
+  /* First in <body> (js/radio.js): takes its room at the top and stays there while scrolling */
+  position: sticky;
+  top: 0;
   z-index: 10;
 }
 
-:root {
-  --radio-gap: 1rem;
-}
-
-body.radio-on {
-  padding-bottom: calc(var(--radio-bar, 4.5rem) + 2 * var(--radio-gap));
-}
-
 .radio-bar__label {
-  background: var(--ink);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--ink);
   padding: .25rem .625rem;
+  white-space: nowrap;
 }
 
-/* The list radio mode plays, when it's an archive table's (js/archive-radio.js) */
+/* The list radio mode plays, when it's an archive table's (js/archive-radio.js): beside the label, in
+   paper, cut with "…" */
 .radio-bar__scope {
-  display: inline-block;
-  max-width: 16rem;
+  font-weight: 700;
+  max-width: 20rem;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  vertical-align: bottom;
   white-space: nowrap;
 }
 
@@ -2726,14 +2713,18 @@ body.radio-on {
   min-width: 0;
 }
 
+.radio-bar__lead--short {
+  display: none;
+}
+
 .radio-bar a {
-  color: var(--ink);
+  color: var(--paper);
   font-weight: 700;
 }
 
 .radio-bar a:hover {
-  background: var(--ink);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--ink);
 }
 
 .radio-bar__actions {
@@ -2743,9 +2734,9 @@ body.radio-on {
 
 .radio-bar__button {
   align-items: center;
-  background: var(--paper);
-  border: var(--border-thin);
-  color: var(--ink);
+  background: var(--ink);
+  border: 2px solid var(--paper);
+  color: var(--paper);
   cursor: pointer;
   display: inline-flex;
   font: inherit;
@@ -2763,33 +2754,35 @@ body.radio-on {
 
 .radio-bar__button:hover,
 .radio-bar__button--start {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
 }
 
-/* En orden / Al azar: two halves of one ink-bordered box; the chosen one black with a check, the
+/* En orden / Al azar: two halves of one paper-bordered box; the chosen one paper with a check, the
    other one plain */
 .radio-bar__order {
-  border: var(--border-thin);
+  border: 2px solid var(--paper);
   display: flex;
 }
 
 .radio-bar__order .radio-bar__button {
-  background: var(--paper);
+  background: var(--ink);
   border: 0;
+  color: var(--paper);
   font-weight: 400;
 }
 
 .radio-bar__order .radio-bar__button:hover {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   text-decoration: underline;
 }
 
 .radio-bar__order .radio-bar__button[aria-checked="true"],
 .radio-bar__order .radio-bar__button[aria-checked="true"]:hover {
-  background: var(--ink);
-  color: var(--accent);
+  background: var(--paper);
+  color: var(--ink);
   cursor: default;
   font-weight: 700;
   text-decoration: none;
@@ -2797,6 +2790,11 @@ body.radio-on {
 
 .radio-bar__order .radio-bar__button[aria-checked="true"]::before {
   content: "✓";
+}
+
+/* Their icons are for phones, where the words don't fit */
+.radio-bar__order svg {
+  display: none;
 }
 
 .radio-bar__button--stop {
@@ -2817,39 +2815,48 @@ body.radio-on {
 }
 
 .radio-bar__button:disabled:hover {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--ink);
+  border-color: var(--paper);
+  color: var(--paper);
 }
 
-/* Phones: two compact rows (label, order, close / previous, next, what comes next), so the floating bar
-   leaves room for the post */
+/* Phones: two short rows, each one line: label, the list (cut with "…") and close / previous, next,
+   "Luego:" and the next title (cut with "…"), and the order as two icons. Where it plays
+   (YouTube/Spotify) is left out: the players show it */
 @media (max-width: 40rem) {
   .radio-bar {
     align-items: center;
     display: grid;
-    gap: .5rem .75rem;
-    grid-template-areas: "label order stop" "actions next next";
-    grid-template-columns: auto 1fr auto;
-    padding: .5rem .75rem;
+    gap: .5rem .625rem;
+    grid-template-areas: "label scope scope stop" "actions next order order";
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    padding: .5rem 1rem;
   }
 
-  :root {
-    --radio-gap: .5rem;
-  }
-
-  .radio-bar__label { grid-area: label; }
+  .radio-bar__label { grid-area: label; justify-self: start; }
+  .radio-bar__scope { font-size: .875rem; grid-area: scope; max-width: none; }
   .radio-bar__order { grid-area: order; justify-self: end; }
-  .radio-bar__button--stop { grid-area: stop; }
+  .radio-bar__button--stop { grid-area: stop; justify-self: end; }
   .radio-bar__actions { grid-area: actions; }
 
+  .radio-bar__source {
+    display: none;
+  }
+
   .radio-bar__next {
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
     font-size: .8125rem;
     grid-area: next;
-    -webkit-line-clamp: 2;
-    line-height: 1.3;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .radio-bar__lead--long {
+    display: none;
+  }
+
+  .radio-bar__lead--short {
+    display: inline;
   }
 
   .radio-bar__button {
@@ -2859,9 +2866,19 @@ body.radio-on {
   }
 
   .radio-bar__button--icon,
-  .radio-bar__button--stop {
+  .radio-bar__button--stop,
+  .radio-bar__order .radio-bar__button {
     padding: 0;
     width: 36px;
+  }
+
+  .radio-bar__order .radio-bar__button[aria-checked="true"]::before,
+  .radio-bar__text {
+    display: none;
+  }
+
+  .radio-bar__order svg {
+    display: block;
   }
 }
 
