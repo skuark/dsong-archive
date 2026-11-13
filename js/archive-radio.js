@@ -1,6 +1,6 @@
 // "Escuchar en modo radio" on an archive table (partials/archive-table.njk): the posts the table shows,
 // filtered and sorted as they are, become radio mode's list. They're kept in sessionStorage and played
-// from the first one that can be (YouTube or Spotify: /radio.json), on its post page with ?radio=lista
+// from the first one that can be (with a YouTube video: /radio.json), on its post page with ?radio=lista
 // (js/radio.js).
 (() => {
   const button = document.getElementById('archive-radio');
@@ -36,7 +36,7 @@
       return;
     }
     try {
-      sessionStorage.setItem('dsong-radio-list', JSON.stringify({ ids, name: nameOf() }));
+      sessionStorage.setItem('dsong-radio-list', JSON.stringify({ ids, name: nameOf(), url: location.pathname + location.search }));
     } catch {
       return;
     }
