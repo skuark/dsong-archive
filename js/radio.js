@@ -155,27 +155,37 @@
   function started() {
     playing = true;
     everPlayed = true;
-    clearTimeout(watchTimer);
+    clearInterval(watchTimer);
     setNeedsClick(false);
   }
 
-  // If the song doesn't start, the browser may be blocking playback with sound (always possible
-  // arriving from the menu, with no click on this page yet): the box offers a "Start" button.
-  function watch() {
+  // If the first song doesn't start, the browser is blocking playback with sound (arriving from the menu
+  // or a table: no tap on this page yet). The box offers "Empezar" only once YouTube has the video ready
+  // and it still isn't playing (not while it loads or buffers); after a song has played, never.
+  function watch(player) {
     playing = false;
-    clearTimeout(watchTimer);
-    watchTimer = setTimeout(() => {
-      if (playing || !active) return;
-      setNeedsClick(true);
-    }, everPlayed ? 10000 : 3000);
+    clearInterval(watchTimer);
+    if (everPlayed) return;
+    let readyFor = 0;
+    let ticks = 0;
+    watchTimer = setInterval(() => {
+      if (playing || !active) { clearInterval(watchTimer); return; }
+      ticks += 1;
+      const state = player.getPlayerState?.();
+      const buffering = state === YT.PlayerState.BUFFERING;
+      const ready = (player.getDuration?.() || 0) > 0 && !buffering;
+      readyFor = ready ? readyFor + 1 : 0;
+      // Ready and stopped for a second (or, without its duration, not loading after 8 s): it won't start
+      if (readyFor >= 2 || (ticks >= 16 && !buffering)) { clearInterval(watchTimer); setNeedsClick(true); }
+    }, 500);
   }
 
   async function play(entry) {
     selectPanel('youtube');
-    watch();
     const player = await ensureYoutube();
     if (player.getVideoData?.().video_id === entry[2]) player.playVideo();
     else player.loadVideoById(entry[2]);
+    watch(player);
   }
 
   async function start() {
@@ -209,7 +219,7 @@
 
   function stop() {
     active = false;
-    clearTimeout(watchTimer);
+    clearInterval(watchTimer);
     // The live panel, if this post has no YouTube tab (it can't happen now, but a swap may fail), goes
     // away, which also stops it
     if (!document.getElementById('tab-youtube')) document.getElementById('panel-youtube')?.remove();
