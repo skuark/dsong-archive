@@ -11,7 +11,7 @@
 </div>
 {%- endif %}
 {%- if headingLinks %}
-<p class="archive-links">{% for link in headingLinks %}<a href="{{ link.url }}" rel="noopener">{{ link.label }} ↗</a>{% endfor %}</p>
+<p class="archive-links">{% for link in headingLinks %}<a href="{{ link.url }}" rel="noopener" target="_blank">{{ link.label }} ↗</a>{% endfor %}</p>
 {%- endif %}
 
 <div class="archive-search archive-search--table">
@@ -33,6 +33,8 @@
     {%- endif %}
   </div>
   <span class="archive-search__count" id="archive-search-count" aria-live="polite">{{ posts | length }} {{ "publicación" if (posts | length) == 1 else "publicaciones" }}</span>
+  {#- Radio mode with the posts the table shows, in its order (js/archive-radio.js) #}
+  <button class="button archive-radio" id="archive-radio" type="button" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/><path d="M6 12h4M6 15h4"/></svg><span class="archive-radio__label">Escuchar en modo radio</span></button>
 </div>
 
 <div class="archive">
@@ -59,7 +61,7 @@
         <td class="archive-table__cell--album">{% if post.slugs.album %}<a href="/archive/albums/{{ post.slugs.album }}.html">{{ post.metadata.album }}</a>{% endif %}</td>
         <td class="archive-table__cell--year">{% if post.slugs.year %}<a href="/archive/years/{{ post.slugs.year }}.html">{{ post.metadata.year }}</a>{% endif %}</td>
         <td class="archive-table__cell--category">{% if post.slugs.category %}<a href="/archive/categories/{{ post.slugs.category }}.html">{{ post.metadata.category }}</a>{% endif %}</td>
-        <td class="archive-table__cell--editor">{% if post.slugs.editor %}<a href="/archive/editors/{{ post.slugs.editor }}.html">{{ post.editor.name }}</a>{% endif %}</td>
+        <td class="archive-table__cell--editor">{% if post.slugs.editor %}<a class="author" href="/archive/editors/{{ post.slugs.editor }}.html">{% set slug = post.slugs.editor %}{% include "partials/avatar.njk" %}{{ post.editor.name }}</a>{% endif %}</td>
       </tr>
       {%- endfor -%}
     </tbody>
@@ -69,3 +71,4 @@
 
 <script src="/js/archive-table-search.js?v={{ 'js/archive-table-search.js' | assetVersion }}"></script>
 <script src="/js/archive-table-sort.js?v={{ 'js/archive-table-sort.js' | assetVersion }}"></script>
+<script src="/js/archive-radio.js?v={{ 'js/archive-radio.js' | assetVersion }}"></script>

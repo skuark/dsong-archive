@@ -13,25 +13,36 @@ permalink: "archive/{{ post.id }}.html"
     It lives outside .post-view: the sticky side column can travel to the end of .post-view and would overlap it. #}
 {%- set prevPost = collections.posts[pagination.pageNumber - 1] if pagination.pageNumber > 0 %}
 {%- set nextPost = collections.posts[pagination.pageNumber + 1] %}
+{#- A previous/next card: the artist's Commons photo (archive.artistImages), or their initials, beside the
+    label, title and author #}
+{%- macro navCard(target, rel, label) %}
+  {%- set photo = archive.artistImages[target.slugs.artist] if target.slugs.artist %}
+  {%- set initial = archive.artistInitials[target.slugs.artist] if target.slugs.artist %}
+  <a class="post-nav__link post-nav__link--{{ rel }}{% if photo or initial %} post-nav__link--image{% endif %}" href="/archive/{{ target.id }}.html" rel="{{ rel }}">
+    {%- if photo or initial %}
+    <span class="post-nav__photo" aria-hidden="true">
+      {%- if initial %}<span class="display post-nav__initial">{{ initial }}</span>{% endif %}
+      {%- if photo %}<img src="{{ photo.src }}" alt="" title="Foto: {{ photo.credit }}" loading="lazy" decoding="async" width="72" height="72" onerror="this.remove()">{% endif -%}
+    </span>
+    {%- endif %}
+    <span class="post-nav__text">
+      <span class="post-nav__label">{{ label }}</span>
+      <span class="post-nav__title">{{ target.title }}</span>
+      <span class="post-nav__editor">{{ target.editor.name }}</span>
+    </span>
+  </a>
+{%- endmacro %}
 {%- macro postNav(position, prevPost, nextPost) %}
 <nav class="post-nav post-nav--{{ position }}" aria-label="Navegación entre artículos">
   {%- if prevPost %}
-  <a class="post-nav__link post-nav__link--prev" href="/archive/{{ prevPost.id }}.html" rel="prev">
-    <span class="post-nav__label">← Anterior</span>
-    <span class="post-nav__title">{{ prevPost.title }}</span>
-    <span class="post-nav__editor">{{ prevPost.editor.name }}</span>
-  </a>
+  {{ navCard(prevPost, "prev", "← Anterior") }}
   {%- endif %}
   <a class="post-nav__link post-nav__link--random" href="/rand/">
     <span class="post-nav__label">Al azar</span>
     <span class="post-nav__title">Sorpréndeme con cualquier artículo</span>
   </a>
   {%- if nextPost %}
-  <a class="post-nav__link post-nav__link--next" href="/archive/{{ nextPost.id }}.html" rel="next">
-    <span class="post-nav__label">Siguiente →</span>
-    <span class="post-nav__title">{{ nextPost.title }}</span>
-    <span class="post-nav__editor">{{ nextPost.editor.name }}</span>
-  </a>
+  {{ navCard(nextPost, "next", "Siguiente →") }}
   {%- endif %}
 </nav>
 {%- endmacro %}
@@ -42,8 +53,13 @@ permalink: "archive/{{ post.id }}.html"
   <nav class="crumbs post-view__crumbs" aria-label="Migas">
     <a href="/archive/">Archivo</a>
     {%- if post.special %}<a href="/archive/especiales/">Especiales</a>{% for t in archive.specials %}{% if t.type == post.special.type %}<a href="/archive/especiales/#{{ t.type }}">{{ t.name }}</a>{% endif %}{% endfor %}
-    {%- else %}<a href="/archive/all/?q={{ pubYear }}">{{ pubYear }}</a>{% endif -%}
-    <span>Nº {{ pagination.pageNumber + 1 }}</span>
+    {%- else %}<a href="/archive/all/?year={{ pubYear }}">{{ pubYear }}</a>{% endif -%}
+    {#- The post's Nº between the previous and next posts (also at the foot: post-nav) #}
+    <span class="crumbs__pager">
+      {%- if prevPost %}<a href="/archive/{{ prevPost.id }}.html" rel="prev" title="Anterior" aria-label="Anterior">←</a>{% endif %}
+      <span class="crumbs__number">Nº {{ pagination.pageNumber + 1 }}</span>
+      {%- if nextPost %}<a href="/archive/{{ nextPost.id }}.html" rel="next" title="Siguiente" aria-label="Siguiente">→</a>{% endif -%}
+    </span>
   </nav>
 
   <header class="post-view__header">
@@ -72,7 +88,8 @@ permalink: "archive/{{ post.id }}.html"
   {%- endif %}
 
   <div class="post-view__meta">
-    <span class="post-view__editor">
+    <span class="post-view__editor author">
+      {%- set slug = post.slugs.editor %}{% include "partials/avatar.njk" %}
       {%- if post.editor.url %}
       <a href="{{ post.editor.url }}" target="_blank"><span class="post-view__editor-name">{{ post.editor.name }}</span></a>
       {%- else %}
@@ -194,9 +211,9 @@ permalink: "archive/{{ post.id }}.html"
   {%- if post.facts | length %}
   <section class="post-facts" aria-labelledby="post-facts-title">
     <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+    {#- Its groups (the music, then the post on dSong) without headings: a rule between them #}
     {%- for group in post.facts %}
-    <h3 class="post-facts__group kicker">{{ group.title }}</h3>
-    <dl class="post-facts__list">
+    <dl class="post-facts__list" aria-label="{{ group.title }}">
       {%- for row in group.rows %}
       <dt>{{ row.label }}</dt>
       <dd>
@@ -222,7 +239,11 @@ permalink: "archive/{{ post.id }}.html"
 
   {% if post.comments and post.comments | length > 0 %}
     <details class="post-view__comments">
-      <summary class="post-view__comments-summary"><strong>{{ post.comments | length }} {{ "comentario" if post.comments | length == 1 else "comentarios" }}</strong> en el blog original</summary>
+      <summary class="post-view__comments-summary">
+        <svg class="post-view__comments-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+        <span class="post-view__comments-text"><strong class="display">{{ post.comments | length }} {{ "comentario" if post.comments | length == 1 else "comentarios" }}</strong> en el blog original</span>
+        <span class="post-view__comments-toggle" aria-hidden="true"><span class="post-view__comments-show">Ver</span><span class="post-view__comments-hide">Ocultar</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
       <ul>
         {% for comment in post.comments %}
           <li class="post-view__comment">

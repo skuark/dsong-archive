@@ -168,6 +168,16 @@ a:hover {
   padding-right: .5rem;
 }
 
+/* The post's Nº between arrows to the previous and next posts (pages/post.njk): the arrows bold */
+.crumbs__pager > a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.crumbs__pager > * + * {
+  margin-left: .5rem;
+}
+
 /* The page is a size container: the post's split view depends on the room the page has, not on the window */
 .app {
   container: app / inline-size;
@@ -1720,6 +1730,13 @@ button.chip {
   outline-offset: 4px;
 }
 
+/* Focus shows once, around the whole box: neither the text filter nor the year select draw their own
+   (the generic .archive-search__input:focus below would, and :focus-visible on the select) */
+.archive-search__bar .archive-search__input:focus,
+.archive-search__bar .archive-search__year-select:focus-visible {
+  outline: none;
+}
+
 .archive-search__bar .archive-search__input {
   border: 0;
   box-shadow: none;
@@ -1873,6 +1890,15 @@ button.chip {
   color: var(--muted);
 }
 
+/* "Escuchar en modo radio" (js/archive-radio.js): at the right end of the search row */
+.archive-radio {
+  margin-left: auto;
+}
+
+.archive-radio[hidden] {
+  display: none;
+}
+
 /* Archive table: white header over a 3px rule, uppercase labels, the sorted column in yellow */
 .archive-table {
   font-size: .9375rem;
@@ -1895,6 +1921,8 @@ button.chip {
   text-transform: uppercase;
   top: 0;
   height: 48px;
+  /* Over the rows' positioned content (the authors' avatars) while it sticks */
+  z-index: 2;
 }
 
 .archive-table th.sortable {
@@ -1958,7 +1986,7 @@ button.chip {
 }
 
 .archive-table__cell--title {
-  width: 26%;
+  width: 23%;
 }
 
 .archive-table__cell--album,
@@ -1971,9 +1999,13 @@ button.chip {
   width: 5%;
 }
 
-.archive-table__cell--editor,
 .archive-table__cell--category {
   width: 8%;
+}
+
+/* Room for the avatar beside the name */
+.archive-table__cell--editor {
+  width: 11%;
 }
 
 /* Below the room the table needs: each post is a card (title; artist · album · year; date · category ·
@@ -2108,12 +2140,70 @@ button.chip {
   display: flex;
   flex-wrap: wrap;
   font-size: .9375rem;
-  gap: .5rem 1.25rem;
+  gap: .5rem 1.75rem;
   padding: .75rem 0;
+}
+
+/* A dot between author, date and reading time, centred in the gap (not before the dev-only "Editar" link) */
+.post-view__meta > * + *:not(.post-view__edit)::before {
+  color: var(--rule);
+  content: "·";
+  font-weight: 700;
+  margin-left: -1.125rem;
+  margin-right: .75rem;
 }
 
 .post-view__editor-name {
   font-weight: 700;
+}
+
+/* An author's name with their avatar (partials/avatar.njk): the post's byline and the archive table */
+.author {
+  align-items: center;
+  display: inline-flex;
+  gap: .5rem;
+}
+
+.avatar {
+  --avatar: 1.75rem;
+  align-items: center;
+  background: var(--accent);
+  border: var(--border-thin);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: var(--ink);
+  display: inline-flex;
+  flex: none;
+  font-family: var(--font-display);
+  font-size: calc(var(--avatar) * .36);
+  height: var(--avatar);
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: var(--avatar);
+}
+
+.avatar::before {
+  content: attr(data-initials);
+}
+
+.avatar img {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.archive-table .avatar {
+  --avatar: 1.5rem;
+  border-width: 1px;
+}
+
+/* Long names break inside the cell instead of spilling out of it */
+.archive-table .author {
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 /* Local builds only: link to the post in the local editor */
@@ -2161,18 +2251,17 @@ button.chip {
   padding: 1.25rem;
 }
 
+/* The box's heading: a yellow band across its top, like the players' tabs, so it doesn't read as one more
+   group label (Música, dSong) */
 .post-facts__title {
-  margin-bottom: .75rem;
+  background: var(--accent);
+  border-bottom: var(--border-thin);
+  margin: -1.25rem -1.25rem 1rem;
+  padding: .75rem 1.25rem;
 }
 
-/* Group headings inside the Ficha (Música, dSong) */
-.post-facts__group {
-  color: var(--muted);
-  font-size: .6875rem;
-  margin-bottom: .375rem;
-}
-
-.post-facts__list + .post-facts__group {
+/* The Ficha's groups (Música, dSong), with no heading: a rule between them */
+.post-facts__list + .post-facts__list {
   border-top: 1px solid var(--rule);
   margin-top: .875rem;
   padding-top: .875rem;
@@ -2221,17 +2310,23 @@ button.chip {
   margin: .875rem 0 0;
 }
 
-/* Comments: a dashed box, closed until asked for (kept as they were in 2017) */
+/* Comments: a card like the Ficha's (2px box, small shadow), closed until asked for (kept as they were
+   in 2017): an icon, the count in the display font and a "Ver / Ocultar" toggle at the right */
 .post-view__comments {
-  border: 2px dashed var(--ink);
+  background: var(--paper);
+  border: var(--border-thin);
+  box-shadow: var(--shadow-small);
   font-size: .9375rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .post-view__comments-summary {
+  align-items: center;
   cursor: pointer;
+  display: flex;
   font-size: .9375rem;
   font-weight: 400;
+  gap: .75rem;
   letter-spacing: 0;
   list-style: none;
   padding: 1rem 1.25rem;
@@ -2246,19 +2341,53 @@ button.chip {
   display: none;
 }
 
-.post-view__comments-summary::before {
-  content: "▸";
-  display: inline-block;
-  margin-right: .5rem;
+.post-view__comments-icon {
+  flex: none;
+}
+
+.post-view__comments-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.post-view__comments-text strong {
+  font-size: 1.25rem;
+  margin-right: .25rem;
+}
+
+.post-view__comments-toggle {
+  align-items: center;
+  display: inline-flex;
+  flex: none;
+  font-size: .75rem;
+  font-weight: 700;
+  gap: .375rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.post-view__comments-toggle svg {
   transition: transform .2s ease;
 }
 
-.post-view__comments[open] .post-view__comments-summary::before {
-  transform: rotate(90deg);
+.post-view__comments[open] .post-view__comments-toggle svg {
+  transform: rotate(180deg);
+}
+
+.post-view__comments-hide,
+.post-view__comments[open] .post-view__comments-show {
+  display: none;
+}
+
+.post-view__comments[open] .post-view__comments-hide {
+  display: inline;
+}
+
+.post-view__comments[open] .post-view__comments-summary {
+  border-bottom: var(--border-thin);
 }
 
 .post-view__comments ul {
-  border-top: 2px dashed var(--ink);
   padding: 1.25rem;
 }
 
@@ -2540,25 +2669,55 @@ button.chip {
   display: none;
 }
 
-/* Radio bar: black, fixed at the bottom while it plays */
+/* Radio bar: a yellow card (the current state) floating at the bottom while it plays, ink on yellow so
+   it stands out from both the paper page and its black shadow */
 .radio-bar {
   align-items: center;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--accent);
+  border: var(--border);
+  bottom: var(--radio-gap);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  color: var(--ink);
   display: flex;
   flex-wrap: wrap;
   gap: .75rem 1.5rem;
-  padding: .875rem max(2rem, calc((100% - 86rem) / 2));
-  /* First in <body> (js/radio.js): takes its room at the top and stays there while scrolling */
-  position: sticky;
-  top: 0;
+  left: 50%;
+  padding: .75rem 1.25rem;
+  /* Floats over the page near the bottom of the window, narrower than it; the body keeps its room
+     (--radio-bar, set by js/radio.js, plus the gap) so the page's foot isn't hidden under it */
+  position: fixed;
+  transform: translateX(-50%);
+  width: min(calc(100% - 2 * var(--radio-gap)), 72rem);
   z-index: 10;
 }
 
+:root {
+  --radio-gap: 1rem;
+}
+
+body.radio-on {
+  padding-bottom: calc(var(--radio-bar, 4.5rem) + 2 * var(--radio-gap));
+}
+
 .radio-bar__label {
-  background: var(--accent);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--accent);
   padding: .25rem .625rem;
+}
+
+/* The list radio mode plays, when it's an archive table's (js/archive-radio.js) */
+.radio-bar__scope {
+  display: inline-block;
+  max-width: 16rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.radio-bar__scope:empty {
+  display: none;
 }
 
 .radio-bar__next {
@@ -2568,13 +2727,13 @@ button.chip {
 }
 
 .radio-bar a {
-  color: var(--paper);
+  color: var(--ink);
   font-weight: 700;
 }
 
 .radio-bar a:hover {
-  background: var(--accent);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--accent);
 }
 
 .radio-bar__actions {
@@ -2584,9 +2743,9 @@ button.chip {
 
 .radio-bar__button {
   align-items: center;
-  background: var(--ink);
-  border: 2px solid var(--paper);
-  color: var(--paper);
+  background: var(--paper);
+  border: var(--border-thin);
+  color: var(--ink);
   cursor: pointer;
   display: inline-flex;
   font: inherit;
@@ -2604,27 +2763,44 @@ button.chip {
 
 .radio-bar__button:hover,
 .radio-bar__button--start {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
 }
 
-/* En orden / Al azar: two halves of one white box, the chosen one white */
+/* En orden / Al azar: two halves of one ink-bordered box; the chosen one black with a check, the
+   other one plain */
 .radio-bar__order {
-  border: 2px solid var(--paper);
+  border: var(--border-thin);
   display: flex;
 }
 
 .radio-bar__order .radio-bar__button {
+  background: var(--paper);
   border: 0;
+  font-weight: 400;
 }
 
-.radio-bar__order .radio-bar__button[aria-checked="true"] {
+.radio-bar__order .radio-bar__button:hover {
   background: var(--paper);
   color: var(--ink);
+  text-decoration: underline;
+}
+
+.radio-bar__order .radio-bar__button[aria-checked="true"],
+.radio-bar__order .radio-bar__button[aria-checked="true"]:hover {
+  background: var(--ink);
+  color: var(--accent);
+  cursor: default;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.radio-bar__order .radio-bar__button[aria-checked="true"]::before {
+  content: "✓";
 }
 
 .radio-bar__button--stop {
+  background: transparent;
   border: 0;
   font-size: 1.375rem;
   padding: 0;
@@ -2641,12 +2817,11 @@ button.chip {
 }
 
 .radio-bar__button:disabled:hover {
-  background: var(--ink);
-  border-color: var(--paper);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
 }
 
-/* Phones: two compact rows (label, order, close / previous, next, what comes next), so the bar on top
+/* Phones: two compact rows (label, order, close / previous, next, what comes next), so the floating bar
    leaves room for the post */
 @media (max-width: 40rem) {
   .radio-bar {
@@ -2655,7 +2830,11 @@ button.chip {
     gap: .5rem .75rem;
     grid-template-areas: "label order stop" "actions next next";
     grid-template-columns: auto 1fr auto;
-    padding: .5rem 1rem;
+    padding: .5rem .75rem;
+  }
+
+  :root {
+    --radio-gap: .5rem;
   }
 
   .radio-bar__label { grid-area: label; }
@@ -2712,13 +2891,63 @@ button.chip {
 
 .post-nav__title {
   font-family: var(--font-display);
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
+  /* Long single words ("LeftRightLeftRightLeft") break instead of spilling out of the card */
+  overflow-wrap: anywhere;
 }
 
 .post-nav__editor {
   font-size: .875rem;
+}
+
+.post-nav__text {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  min-width: 0;
+}
+
+/* With the artist's photo (or initials): a square beside the text, on the outer side of each card */
+.post-nav__link--image {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+}
+
+.post-nav__link--next.post-nav__link--image {
+  grid-template-columns: minmax(0, 1fr) 4.5rem;
+}
+
+.post-nav__link--next .post-nav__photo {
+  order: 1;
+}
+
+.post-nav__photo {
+  align-items: center;
+  aspect-ratio: 1;
+  background: var(--accent);
+  border: var(--border-thin);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-nav__initial {
+  font-size: 1.375rem;
+}
+
+.post-nav__photo img {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  width: 100%;
 }
 
 /* Order: previous, random, next, whichever exist */
@@ -2727,10 +2956,24 @@ button.chip {
   text-align: right;
 }
 
-/* Middle widths: previous and next side by side, random under them across both */
+/* Middle widths: previous and next side by side, random under them across both; smaller photos and
+   padding, so the titles keep their room */
 @container app (min-width: 32rem) and (max-width: 56rem) {
   .post-nav {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .post-nav__link {
+    padding: 1rem;
+  }
+
+  .post-nav__link--image {
+    gap: .75rem;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+  }
+
+  .post-nav__link--next.post-nav__link--image {
+    grid-template-columns: minmax(0, 1fr) 3.5rem;
   }
 
   .post-nav__link--random {
@@ -2739,16 +2982,32 @@ button.chip {
   }
 }
 
-/* Home: hero (title, lead, actions) and "Tal día como hoy" side by side, wrapping on narrow screens */
+/* Home: hero (title, lead, actions, figures) and "Tal día como hoy" side by side, stacked on narrow screens */
 .home__hero {
   align-items: start;
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22.5rem), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   padding: 3.5rem 0 3rem;
 }
 
+/* Side by side from tablets in landscape up: halves, then (wide screens) the intro wider and "Tal día
+   como hoy" narrower */
+@container app (min-width: 56rem) {
+  .home__hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@container app (min-width: 80rem) {
+  .home__hero {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+}
+
 .home__intro {
+  /* For the figures' container queries */
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -2759,7 +3018,8 @@ button.chip {
 }
 
 .home__title {
-  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  /* By the intro column (container), so each sentence keeps to one line beside the card */
+  font-size: clamp(2.25rem, 11.5cqi, 4.5rem);
   letter-spacing: -.02em;
   line-height: 1.1;
 }
@@ -2793,6 +3053,8 @@ button.chip {
 /* "Tal día como hoy" (filled by js/on-this-day.js): a card with a big shadow and a yellow header */
 .on-this-day {
   background: var(--paper);
+  /* For the posts' rows (container query: a narrow card drops "hace N años") */
+  container-type: inline-size;
   border: var(--border);
   box-shadow: var(--shadow-big);
   line-height: 1.55;
@@ -2832,8 +3094,8 @@ button.chip {
   border-bottom: 1px solid var(--rule);
   display: grid;
   gap: .75rem;
-  grid-template-columns: 4rem 1fr;
-  padding: .75rem 0;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  padding: .625rem 0;
 }
 
 .on-this-day__list .on-this-day__item:last-child {
@@ -2849,10 +3111,35 @@ button.chip {
   flex-direction: column;
 }
 
+/* Posts: one row each (year, title cut with "…", "author · hace N años" at the right) */
+.on-this-day__list .on-this-day__body {
+  align-items: baseline;
+  flex-direction: row;
+  gap: .75rem;
+  min-width: 0;
+}
+
 .on-this-day__list .on-this-day__body > a {
+  flex: 1 1 auto;
   font-size: 1.0625rem;
   font-weight: 700;
   line-height: 1.3;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.on-this-day__list .on-this-day__meta {
+  color: var(--muted);
+  flex: none;
+  white-space: nowrap;
+}
+
+@container (max-width: 30rem) {
+  .on-this-day__ago {
+    display: none;
+  }
 }
 
 .on-this-day__meta {
@@ -2915,22 +3202,30 @@ button.chip {
 
 /* "dSong en cifras": a strip of big figures between two 3px rules */
 /* Flex rows that always fill (any number of figures); the 1px lines between them are the ink behind the gap */
+/* dSong en cifras: in the hero's left column, under the actions; four tiles in a row, two by two when
+   the column is narrow (a container query on .home__intro), the figures sized by the column */
 .home__figures {
   background: var(--ink);
-  border-bottom: var(--border);
-  border-top: var(--border);
-  display: flex;
-  flex-wrap: wrap;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  display: grid;
   gap: 1px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+@container (max-width: 32rem) {
+  .home__figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .home__figure {
   background: var(--paper);
-  box-sizing: border-box;
   display: flex;
-  flex: 1 1 11rem;
   flex-direction: column;
-  padding: 1.5rem 1.25rem;
+  min-width: 0;
+  padding: 1rem;
   text-decoration: none;
 }
 
@@ -2939,17 +3234,13 @@ button.chip {
 }
 
 .home__figure-value {
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 7cqi, 2.75rem);
+  line-height: 1.1;
 }
 
-@media (max-width: 40rem) {
-  /* Two a row; an odd last one takes the whole row */
-  .home__figure {
-    flex-basis: 40%;
-  }
-
+@container (max-width: 32rem) {
   .home__figure-value {
-    font-size: 2.25rem;
+    font-size: clamp(1.75rem, 11cqi, 2.75rem);
   }
 }
 
@@ -3033,15 +3324,10 @@ button.chip {
     margin-top: 0;
     /* Sticky without scrolling inside: a column taller than the window moves with the page, both ways,
        until its foot (going down) or its head (going up) shows, and stays there; js/post-side.js sets
-       that top (--side-top). Without JS, it sticks at the top. --side-start: under the radio bar too */
+       that top (--side-top). Without JS, it sticks at the top */
     --side-start: 1.5rem;
     position: sticky;
     top: var(--side-top, var(--side-start));
-  }
-
-  /* Under the radio bar (its height: --radio-bar, set by js/radio.js) */
-  .radio-on .post-view > .post-view__side {
-    --side-start: calc(1.5rem + var(--radio-bar, 4.5rem));
   }
 }
 

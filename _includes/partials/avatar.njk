@@ -1,0 +1,11 @@
+{#- An author's avatar: their Gravatar (archive.editorImages) over a yellow square with their initials
+    (archive.editorInitials). The initials are CSS content (data-initials), so they stay out of the text
+    the archive table sorts and searches; a missing Gravatar (d=404) removes the image and leaves them.
+    Expects `slug`. -#}
+{%- set avatarImage = archive.editorImages[slug] %}
+{%- set avatarInitials = archive.editorInitials[slug] %}
+{%- if avatarImage or avatarInitials -%}
+<span class="avatar" data-initials="{{ avatarInitials }}" aria-hidden="true">
+  {%- if avatarImage %}<img src="{{ avatarImage.src }}" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()">{% endif -%}
+</span>
+{%- endif -%}

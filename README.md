@@ -10,13 +10,15 @@ The original blog ended in early 2017. Rather than let all this content be lost 
 
 ## Features
 
-- **Archive**: `/archive/` shows dSong in numbers (posts per year, top authors, artists and genres, decade of the songs by year of publication) and leads to every post in a sortable, searchable table (`/archive/all/`), with pages per artist, album, year, category, author and country.
-- **Authors and artists**: `/archive/editors/` and `/archive/artists/` list every author and artist as searchable cards, most posts first.
+- **Home**: the project in four figures and "Tal día como hoy": the posts published on today's date in previous years and the albums that turn years today (MusicBrainz release dates).
+- **Archive**: `/archive/` shows dSong in numbers (posts per year, top authors, artists and genres, decade of the songs by year of publication) and leads to every post in a sortable, searchable table (`/archive/all/`, with each author's avatar), with pages per artist, album, year, category, author and country.
+- **Authors and artists**: `/archive/editors/` and `/archive/artists/` list every author and artist as searchable cards (Gravatar or Wikimedia Commons photo, else initials). Artist pages add a short Wikipedia bio, a photo and links to MusicBrainz.
+- **Especiales**: `/archive/especiales/` gathers the special posts (albums, festivals, lists) by shape.
 - **Music map**: `/mapa/` shows a world map colored by the artists' nationality; click a country to see its posts.
-- **Posts**: split view on desktop (text on the left, players on the right) with YouTube, Spotify and Apple Music players, and previous/next/random navigation.
-- **Radio mode**: plays post after post (YouTube, or Spotify when there's no video) without reloading the page, so the text of each song is shown next to it. In chronological or random order; `/radio/` starts on a random post.
-- **Podcast**: the 335 UniRadio Jaén episodes with their own player on each post, listed at `/archive/podcasts/`, and an RSS feed (`/podcast.xml`) to subscribe from any podcast app.
-- **On this day**: the home page lists the posts published on today's date in previous years.
+- **Posts**: the author's text first, with the players (YouTube, Spotify, Apple Music, podcast) and a "Ficha" beside it on wide screens: everything known about the song, linked to the archive and its sources. Previous/next links in the breadcrumbs and cards at the foot (with the artist's photo), and the original blog's comments.
+- **Radio mode**: plays post after post (YouTube, or Spotify when there's no video) without reloading the page, so the text of each song is shown next to it. A floating bar at the bottom picks chronological or random order; `/radio/` starts on a random post.
+- **Podcast**: the 335 UniRadio Jaén episodes with their own player on each post, listed at `/archive/podcasts/` (playable in place, one after another), and an RSS feed (`/podcast.xml`) to subscribe from any podcast app.
+- **El proyecto**: `/el-proyecto/` tells dSong's history year by year, with its team and guest readers.
 - **Random post**: `/rand/` opens a random post.
 
 ## Requirements
@@ -76,10 +78,17 @@ npm run check-media   # check YouTube/Spotify embeds still exist (slow, run by h
 
 ## Maintenance scripts
 
+Players and data enrichment (each writes its own layer of `posts.json`, never the editor's data; see `AGENTS.md` for every option):
+
 ```bash
 npm run find-youtube              # find YouTube videos for posts without one (yt-dlp, no API key)
 npm run review-youtube            # local UI (http://localhost:8081) to review those candidates
 npm run find-youtube -- --apply   # write the accepted videos into posts.json
+npm run audit-players             # report players that don't match what the post presents
+npm run fix-players -- --candidates   # alternatives for those, then --apply the decisions
+npm run match-musicbrainz         # match artists to MusicBrainz (then match-musicbrainz-posts for songs)
+npm run refresh-musicbrainz       # refresh what MusicBrainz says about the matches (~1 h)
+npm run artist-bios               # Wikipedia bio and Commons photo of each linked artist
 node scripts/podcast-sizes.mjs    # refresh mp3 sizes for the podcast feed (only if podcast files change)
 ```
 
@@ -95,6 +104,7 @@ See [`AGENTS.md`](AGENTS.md) for the project structure and design decisions.
 - [Nunjucks](https://mozilla.github.io/nunjucks/) - Template engine
 - [markdown-it](https://github.com/markdown-it/markdown-it) - Markdown parser
 - [d3-geo](https://d3js.org/d3-geo) + [visionscarto-world-atlas](https://github.com/Fil/visionscarto-world-atlas) - World map, projected at build time
+- [MusicBrainz](https://musicbrainz.org/), [Wikidata](https://www.wikidata.org/) and [Wikimedia Commons](https://commons.wikimedia.org/) - Song, album and artist data, bios and photos
 
 ## License
 

@@ -41,9 +41,9 @@ pageClass: archive
     {%- endif %}
     {%- if (bio and bio.wikipedia) or artist.musicbrainz or artist.url %}
     <p class="artist-hero__links">
-      {%- if bio and bio.wikipedia %}<a href="{{ bio.wikipedia }}" rel="noopener">Wikipedia{% if bio.lang != "es" %} (en inglés){% endif %} ↗</a>{% endif %}
-      {%- for link in artist.musicbrainz %}<a href="{{ link.url }}" rel="noopener">{{ link.label }} ↗</a>{% endfor %}
-      {%- if artist.url %}<a href="{{ artist.url }}" rel="noopener">Web oficial ↗</a>{% endif %}
+      {%- if bio and bio.wikipedia %}<a href="{{ bio.wikipedia }}" rel="noopener" target="_blank">Wikipedia{% if bio.lang != "es" %} (en inglés){% endif %} ↗</a>{% endif %}
+      {%- for link in artist.musicbrainz %}<a href="{{ link.url }}" rel="noopener" target="_blank">{{ link.label }} ↗</a>{% endfor %}
+      {%- if artist.url %}<a href="{{ artist.url }}" rel="noopener" target="_blank">Web oficial ↗</a>{% endif %}
     </p>
     {%- endif %}
   </div>

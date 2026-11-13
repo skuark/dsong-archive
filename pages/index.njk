@@ -13,9 +13,22 @@ pageClass: index
         335 programas con <a href="https://uniradio.ujaen.es/" target="_blank">UniRadio Jaén</a>. Aquí siguen todas, con su reproductor.</p>
       <p class="home__actions">
         <a class="button button--accent" href="/radio/"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>Escuchar la radio</a>
-        <a class="button" href="/archive/">Explorar el archivo</a>
+        <a class="button" href="/archive/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Explorar el archivo</a>
         <a class="button" href="/rand/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.3" fill="currentColor"/><circle cx="16" cy="16" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg>Al azar</a>
       </p>
+
+      {#- In the hero's left column: it fills the room beside the long "Tal día como hoy" card. No "8 años":
+          the title already says it #}
+      <section class="home__figures" aria-label="dSong en cifras">
+        {%- for figure in [
+          [stats.totals.posts, "artículos", "/archive/all/"],
+          [stats.totals.podcasts, "podcasts", "/archive/podcasts/"],
+          [stats.totals.artists, "artistas", "/archive/artists/"],
+          [stats.totals.editors, "autores", "/archive/editors/"]
+        ] %}
+        <a class="home__figure" href="{{ figure[2] }}"><span class="display home__figure-value">{{ figure[0] | thousands }}</span><span class="kicker">{{ figure[1] }}</span></a>
+        {%- endfor %}
+      </section>
     </div>
 
     {#- Filled by js/on-this-day.js with the visitor's date (the site is static) #}
@@ -32,18 +45,6 @@ pageClass: index
         <p class="on-this-day__source">Años que cumple cada disco hoy, según MusicBrainz.</p>
       </section>
     </aside>
-  </section>
-
-  <section class="home__figures" aria-label="dSong en cifras">
-    {%- for figure in [
-      [stats.totals.posts, "artículos", "/archive/all/"],
-      [stats.totals.podcasts, "podcasts", "/archive/podcasts/"],
-      [stats.totals.artists, "artistas", "/archive/artists/"],
-      [stats.totals.editors, "autores", "/archive/editors/"],
-      [8, "años", "/archive/"]
-    ] %}
-    <a class="home__figure" href="{{ figure[2] }}"><span class="display home__figure-value">{{ figure[0] | thousands }}</span><span class="kicker">{{ figure[1] }}</span></a>
-    {%- endfor %}
   </section>
 
   <section class="home__ways">
