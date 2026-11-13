@@ -2141,6 +2141,8 @@ button.chip {
   flex-wrap: wrap;
   font-size: .9375rem;
   gap: .5rem 1.75rem;
+  /* Clips the dot of an item that wraps to the start of a line (it hangs into the side padding) */
+  overflow: clip;
   padding: .75rem 0;
 }
 
@@ -3061,6 +3063,11 @@ button.chip {
     .radio-on .post-view .players--radio {
       margin: 0 -1rem;
     }
+  }
+
+  /* The header's rule (inside the side padding) would show as a ledge over the edge-to-edge box */
+  .radio-on .header {
+    border-bottom-color: transparent;
   }
 
   .radio-on .post-view__side > :not(.players) {
