@@ -1,5 +1,6 @@
 // Radio mode: plays posts one after another, in chronological or random order (menu "Radio" ->
-// /radio/ -> a random post with ?radio=aleatoria), without reloading the page, so the music keeps
+// /radio/ -> a random post with ?radio=aleatoria), or the posts an archive table shows, in its order
+// (js/archive-radio.js -> the first one with ?radio=lista), without reloading the page, so the music keeps
 // going and each post's text is shown next to it. Each post plays its YouTube video or, if it has
 // none, its Spotify embed (only a 30 s preview without a Spotify session in the browser).
 // A page navigation would stop playback (and browsers don't allow autoplay with sound on the new
@@ -40,7 +41,13 @@
   let active = false;
   let bar = null;
   let currentId = idOf(location.pathname);
-  let shuffle = new URLSearchParams(location.search).get('radio') === 'aleatoria';
+  const mode = new URLSearchParams(location.search).get('radio');
+  let shuffle = mode === 'aleatoria';
+  // An archive table's list ({ ids, name }, js/archive-radio.js): radio mode plays only those, in that order
+  let scope = null;
+  if (mode === 'lista') {
+    try { scope = JSON.parse(sessionStorage.getItem('dsong-radio-list')); } catch { /* no storage */ }
+  }
   const played = new Set();
   const previous = [];      // entries already played in this radio session, for "Anterior"
   let upcoming = null;      // next entry, chosen in advance so the bar can show it
@@ -248,6 +255,10 @@
     toggle.disabled = true;
     try {
       list = list || await (await fetch('/radio.json')).json();
+      if (scope) {
+        const byId = new Map(list.map((entry) => [entry[0], entry]));
+        list = scope.ids.map((id) => byId.get(id)).filter(Boolean);
+      }
     } catch {
       toggle.disabled = false;
       return;
@@ -279,6 +290,8 @@
     }
     youtube = null;
     spotify = null;
+    // Started again from a post's button: the whole archive, not the table's list
+    if (scope) { scope = null; list = null; }
     if (bar) bar.remove();
     bar = null;
     barSize?.disconnect();
@@ -387,7 +400,7 @@
     bar.setAttribute('role', 'region');
     bar.setAttribute('aria-label', 'Modo radio');
     bar.innerHTML = `
-      <span class="kicker radio-bar__label">Radio<span class="radio-bar__source"></span></span>
+      <span class="kicker radio-bar__label">Radio<span class="radio-bar__scope"></span><span class="radio-bar__source"></span></span>
       <span class="radio-bar__actions">
         <button class="radio-bar__button radio-bar__button--start" type="button" data-action="play" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>Empezar</button>
         <button class="radio-bar__button radio-bar__button--icon" type="button" data-action="previous" aria-label="Anterior" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
@@ -416,9 +429,14 @@
       if (action === 'skip') advance();
       if (action === 'stop') stop();
     });
-    document.body.prepend(bar);
+    if (scope?.name) {
+      const name = bar.querySelector('.radio-bar__scope');
+      name.textContent = ` · ${scope.name}`;
+      name.title = scope.name;
+    }
+    document.body.append(bar);
     document.body.classList.add('radio-on');
-    // Its height, for the sticky side column under it
+    // Its height, for the body's room at the bottom and the sticky side column over it
     barSize = new ResizeObserver(() => document.documentElement.style.setProperty('--radio-bar', `${bar.offsetHeight}px`));
     barSize.observe(bar);
     setMenu(true);
@@ -439,7 +457,7 @@
     const next = upcoming;
     const slot = bar.querySelector('.radio-bar__next');
     slot.textContent = '';
-    if (!next) { slot.textContent = 'Última canción del archivo'; return; }
+    if (!next) { slot.textContent = scope ? 'Última canción de la lista' : 'Última canción del archivo'; return; }
     slot.append('Al acabar la canción pasa a ');
     const link = document.createElement('a');
     link.href = `/archive/${next[0]}.html`;
@@ -448,7 +466,7 @@
   }
 
   toggle.addEventListener('click', () => start());
-  if (shuffle) start();
+  if (shuffle || scope) start();
 
   document.addEventListener('click', (e) => {
     if (!active) return;

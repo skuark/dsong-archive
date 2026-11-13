@@ -14,7 +14,7 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/categories/listas.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=ed2b5ede">
+  <link rel="stylesheet" href="/css/bundle.css?v=cf815ee0">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -73,6 +73,7 @@
     <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, autor…" autocomplete="off">
   </div>
   <span class="archive-search__count" id="archive-search-count" aria-live="polite">21 publicaciones</span>
+  <button class="button archive-radio" id="archive-radio" type="button" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/><path d="M6 12h4M6 15h4"/></svg><span class="archive-radio__label">Escuchar en modo radio</span></button>
 </div>
 
 <div class="archive">
@@ -97,7 +98,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jesusr.html">jesusr</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/jesusr.html"><span class="avatar" data-initials="JES" aria-hidden="true"><img src="https://s.gravatar.com/avatar/3627cf44a707970b4f2b493e78030448?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>jesusr</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2009-12-19 09:00:43 +0100">19/12/2009</td>
         <td class="archive-table__cell--title"><a href="/archive/2009-12-19-especial-navidad-2009.html">Especial Navidad 2009</a></td>
@@ -106,7 +107,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/dsong.html">dSong</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/dsong.html"><span class="avatar" data-initials="DSO" aria-hidden="true"></span>dSong</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2010-01-01 09:00:25 +0100">01/01/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-01-01-feliz-ano-nuevo.html">Feliz año nuevo</a></td>
@@ -115,7 +116,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/poncho.html">Poncho</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/poncho.html"><span class="avatar" data-initials="PON" aria-hidden="true"><img src="https://s.gravatar.com/avatar/74291eae2bd3251783b8aa958e5ffd3c?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Poncho</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2010-05-23 09:00:14 +0200">23/05/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-05-23-especial-las-10-mejores-canciones-de-lost-perdidos.html">Especial: Las 10 mejores canciones de Lost (Perdidos)</a></td>
@@ -124,7 +125,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/skuark.html"><span class="avatar" data-initials="SKU" aria-hidden="true"><img src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>skuark</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2010-07-31 09:00:08 +0200">31/07/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-07-31-especial-cancion-del-verano-2010.html">Especial Canción del Verano 2010</a></td>
@@ -133,7 +134,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/skuark.html"><span class="avatar" data-initials="SKU" aria-hidden="true"><img src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>skuark</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2010-10-24 09:00:14 +0200">24/10/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-10-24-especial-lista-10-canciones-de-discoteca-que-bailaste-en-los-90s.html">Especial Lista: 10 canciones de discoteca que bailaste en los 90′s</a></td>
@@ -142,7 +143,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/skuark.html"><span class="avatar" data-initials="SKU" aria-hidden="true"><img src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>skuark</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2010-12-19 09:00:18 +0100">19/12/2010</td>
         <td class="archive-table__cell--title"><a href="/archive/2010-12-19-especial-navidad-2010.html">Especial Navidad 2010</a></td>
@@ -151,7 +152,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/dsong.html">dSong</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/dsong.html"><span class="avatar" data-initials="DSO" aria-hidden="true"></span>dSong</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2011-01-01 09:00:12 +0100">01/01/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-01-01-10-temas-que-me-acompanaron-en-la-primera-decada-del-s-xxi.html">10 temas que me acompañaron en la primera década del S.XXI</a></td>
@@ -160,7 +161,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/skuark.html"><span class="avatar" data-initials="SKU" aria-hidden="true"><img src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>skuark</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2011-03-13 15:53:31 +0100">13/03/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-03-13-especial-one-hit-wonders.html">Especial One Hit Wonders</a></td>
@@ -169,7 +170,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo.html">Johnbo</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/johnbo.html"><span class="avatar" data-initials="JOH" aria-hidden="true"><img src="https://s.gravatar.com/avatar/1ec93d310204e8b4e2562ec656d94568?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Johnbo</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2011-05-29 13:22:48 +0200">29/05/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-05-29-especial-mash-ups.html">Especial mash-ups</a></td>
@@ -178,7 +179,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo.html">Johnbo</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/johnbo.html"><span class="avatar" data-initials="JOH" aria-hidden="true"><img src="https://s.gravatar.com/avatar/1ec93d310204e8b4e2562ec656d94568?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Johnbo</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2011-06-26 16:34:58 +0200">26/06/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-06-26-especial-versiones.html">Especial versiones</a></td>
@@ -187,7 +188,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo.html">Johnbo</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/johnbo.html"><span class="avatar" data-initials="JOH" aria-hidden="true"><img src="https://s.gravatar.com/avatar/1ec93d310204e8b4e2562ec656d94568?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Johnbo</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2011-07-31 09:00:10 +0200">31/07/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-07-31-especial-verano-2011-10-temas-que-suenan-a-verano.html">Especial Verano 2011: 10 temas que suenan a verano</a></td>
@@ -196,7 +197,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/skuark.html"><span class="avatar" data-initials="SKU" aria-hidden="true"><img src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>skuark</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2011-09-11 09:00:38 +0200">11/09/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-09-11-lanzamientos-del-indie-pop-de-septiembre-de-2011.html">Lanzamientos del Indie Pop de Septiembre de 2011</a></td>
@@ -205,7 +206,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"><a href="/archive/years/2011.html">2011</a></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/alwayscandy.html">alwayscandy</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/alwayscandy.html"><span class="avatar" data-initials="ALW" aria-hidden="true"><img src="https://s.gravatar.com/avatar/90b7fd609161ec25c8bc3859e823e2c4?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>alwayscandy</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2011-09-25 09:00:54 +0200">25/09/2011</td>
         <td class="archive-table__cell--title"><a href="/archive/2011-09-25-especial-one-hit-wonders-2a-parte.html">Especial One Hit Wonders (2ª parte)</a></td>
@@ -214,7 +215,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/johnbo.html">Johnbo</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/johnbo.html"><span class="avatar" data-initials="JOH" aria-hidden="true"><img src="https://s.gravatar.com/avatar/1ec93d310204e8b4e2562ec656d94568?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Johnbo</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2012-03-11 09:00:04 +0100">11/03/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-03-11-especial-twelve-step-suite-de-dream-theater.html">Especial: Twelve-step Suite, de Dream Theater</a></td>
@@ -223,7 +224,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/skuark.html">skuark</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/skuark.html"><span class="avatar" data-initials="SKU" aria-hidden="true"><img src="https://s.gravatar.com/avatar/df09df1aaff0f8245e44d751f40e17c0?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>skuark</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2012-12-25 08:00:15 +0100">25/12/2012</td>
         <td class="archive-table__cell--title"><a href="/archive/2012-12-25-especial-eclecticismo-navideno-navidad-2012.html">Especial: Eclecticismo Navideño (Navidad 2012)</a></td>
@@ -232,7 +233,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/ascen.html">Ascen</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/ascen.html"><span class="avatar" data-initials="ASC" aria-hidden="true"><img src="https://s.gravatar.com/avatar/d6053ebb23bd256b19517c7e733639ce?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Ascen</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2013-11-03 08:00:32 +0100">03/11/2013</td>
         <td class="archive-table__cell--title"><a href="/archive/2013-11-03-boy-bands.html">Boy Bands</a></td>
@@ -241,7 +242,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/monty.html">Monty</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/monty.html"><span class="avatar" data-initials="MON" aria-hidden="true"><img src="https://s.gravatar.com/avatar/bebd502207c63b6e2caa00dd3e297672?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Monty</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2014-11-09 08:00:00 +0100">09/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-09-canciones-infantiles.html">Canciones infantiles</a></td>
@@ -250,7 +251,7 @@
         <td class="archive-table__cell--album"><a href="/archive/albums/varios-varios.html">Varios</a></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/monty.html">Monty</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/monty.html"><span class="avatar" data-initials="MON" aria-hidden="true"><img src="https://s.gravatar.com/avatar/bebd502207c63b6e2caa00dd3e297672?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Monty</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2014-11-15 08:00:00 +0100">15/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-15-especial-versiones-i.html">Especial Versiones (I)</a></td>
@@ -259,7 +260,7 @@
         <td class="archive-table__cell--album"><a href="/archive/albums/varios-varios.html">Varios</a></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/monty.html">Monty</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/monty.html"><span class="avatar" data-initials="MON" aria-hidden="true"><img src="https://s.gravatar.com/avatar/bebd502207c63b6e2caa00dd3e297672?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Monty</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2014-11-16 08:00:00 +0100">16/11/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-11-16-especial-versiones-y-ii.html">Especial Versiones (y II)</a></td>
@@ -268,7 +269,7 @@
         <td class="archive-table__cell--album"><a href="/archive/albums/varios-varios.html">Varios</a></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/monty.html">Monty</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/monty.html"><span class="avatar" data-initials="MON" aria-hidden="true"><img src="https://s.gravatar.com/avatar/bebd502207c63b6e2caa00dd3e297672?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Monty</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2014-12-28 08:00:00 +0100">28/12/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-12-28-especial-100-de-100.html">Especial: 100 de 100</a></td>
@@ -277,7 +278,7 @@
         <td class="archive-table__cell--album"></td>
         <td class="archive-table__cell--year"></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/listas.html">Listas</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/monty.html">Monty</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/monty.html"><span class="avatar" data-initials="MON" aria-hidden="true"><img src="https://s.gravatar.com/avatar/bebd502207c63b6e2caa00dd3e297672?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Monty</a></td>
       </tr></tbody>
   </table>
   <p class="archive__empty" id="archive-search-empty" hidden>Nada por aquí. Prueba con otro nombre o <a href="/rand/">un artículo al azar</a>.</p>
@@ -285,6 +286,7 @@
 
 <script src="/js/archive-table-search.js?v=eca49726"></script>
 <script src="/js/archive-table-sort.js?v=778b989e"></script>
+<script src="/js/archive-radio.js?v=29fdb08e"></script>
 
 
 

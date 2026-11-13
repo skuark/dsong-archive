@@ -14,7 +14,7 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/albums/bobby-mcferrin-be-happy.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=ed2b5ede">
+  <link rel="stylesheet" href="/css/bundle.css?v=cf815ee0">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -74,6 +74,7 @@
     <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, autor…" autocomplete="off">
   </div>
   <span class="archive-search__count" id="archive-search-count" aria-live="polite">1 publicación</span>
+  <button class="button archive-radio" id="archive-radio" type="button" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/><path d="M6 12h4M6 15h4"/></svg><span class="archive-radio__label">Escuchar en modo radio</span></button>
 </div>
 
 <div class="archive">
@@ -98,7 +99,7 @@
         <td class="archive-table__cell--album"><a href="/archive/albums/bobby-mcferrin-be-happy.html">Be Happy</a></td>
         <td class="archive-table__cell--year"><a href="/archive/years/1988.html">1988</a></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/jose.html">Jose</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/jose.html"><span class="avatar" data-initials="JOS" aria-hidden="true"><img src="https://s.gravatar.com/avatar/7a499d70b8711d2d3b8726bfd8b430ec?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Jose</a></td>
       </tr></tbody>
   </table>
   <p class="archive__empty" id="archive-search-empty" hidden>Nada por aquí. Prueba con otro nombre o <a href="/rand/">un artículo al azar</a>.</p>
@@ -106,6 +107,7 @@
 
 <script src="/js/archive-table-search.js?v=eca49726"></script>
 <script src="/js/archive-table-sort.js?v=778b989e"></script>
+<script src="/js/archive-radio.js?v=29fdb08e"></script>
 
 
 

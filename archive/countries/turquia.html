@@ -14,7 +14,7 @@
   <meta property="og:description" content="Archivo de dSong, blog musical sin ánimo de lucro (2009–2017) con cerca de 2.000 recomendaciones musicales y 335 podcasts con UniRadio Jaén.">
   <meta property="og:url" content="https://dsong.es/archive/countries/turquia.html">
   <meta property="og:image" content="https://dsong.es/images/logo.png">
-  <link rel="stylesheet" href="/css/bundle.css?v=ed2b5ede">
+  <link rel="stylesheet" href="/css/bundle.css?v=cf815ee0">
   <link rel="icon" href="/images/favicon.png">
   <link rel="preload" href="/fonts/titillium-web-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/amaranth-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -73,6 +73,7 @@
     <input class="archive-search__input" id="archive-search" type="search" placeholder="Canción, artista, álbum, autor…" autocomplete="off">
   </div>
   <span class="archive-search__count" id="archive-search-count" aria-live="polite">2 publicaciones</span>
+  <button class="button archive-radio" id="archive-radio" type="button" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 4l10 4"/><circle cx="15" cy="14" r="3"/><path d="M6 12h4M6 15h4"/></svg><span class="archive-radio__label">Escuchar en modo radio</span></button>
 </div>
 
 <div class="archive">
@@ -97,7 +98,7 @@
         <td class="archive-table__cell--album"><a href="/archive/albums/aynur-dogan-kece-kurdan.html">Keçe Kurdan</a></td>
         <td class="archive-table__cell--year"><a href="/archive/years/2004.html">2004</a></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/beita.html">Beita</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/beita.html"><span class="avatar" data-initials="BEI" aria-hidden="true"><img src="https://s.gravatar.com/avatar/8d6372053a84d687208517cc9a9627d6?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Beita</a></td>
       </tr><tr>
         <td class="archive-table__cell--published-at" data-value="2014-03-12 08:00:35 +0100">12/03/2014</td>
         <td class="archive-table__cell--title"><a href="/archive/2014-03-12-fly-away-de-omar-faruk-tekbilek.html">Fly Away, de Omar Faruk Tekbilek</a></td>
@@ -106,7 +107,7 @@
         <td class="archive-table__cell--album"><a href="/archive/albums/omar-faruk-tekbilek-longing.html">Longing</a></td>
         <td class="archive-table__cell--year"><a href="/archive/years/2010.html">2010</a></td>
         <td class="archive-table__cell--category"><a href="/archive/categories/canciones.html">Canciones</a></td>
-        <td class="archive-table__cell--editor"><a href="/archive/editors/silvia.html">Silvia</a></td>
+        <td class="archive-table__cell--editor"><a class="author" href="/archive/editors/silvia.html"><span class="avatar" data-initials="SIL" aria-hidden="true"><img src="https://s.gravatar.com/avatar/5f772767c24124a1f66fe4fd0c35f6c7?s=128&amp;d=404" alt="" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()"></span>Silvia</a></td>
       </tr></tbody>
   </table>
   <p class="archive__empty" id="archive-search-empty" hidden>Nada por aquí. Prueba con otro nombre o <a href="/rand/">un artículo al azar</a>.</p>
@@ -114,6 +115,7 @@
 
 <script src="/js/archive-table-search.js?v=eca49726"></script>
 <script src="/js/archive-table-sort.js?v=778b989e"></script>
+<script src="/js/archive-radio.js?v=29fdb08e"></script>
 
 
 

@@ -25,12 +25,16 @@
     return res.ok ? res.json() : null;
   }
 
-  // A post: the year big, then the title and "author · hace N años"
+  // A post, in one row: the year big, the title (cut with "…" when it doesn't fit: the full one as its
+  // tooltip) and "author · hace N años"
   function postItem(post, today) {
     const time = el('time', 'display on-this-day__year', post.year);
     time.dateTime = post.year;
-    const meta = el('span', 'on-this-day__meta', `${post.author} · hace ${years(today.getFullYear() - post.year)}`);
-    return el('li', 'on-this-day__item', time, el('span', 'on-this-day__body', link(post.id, post.title), meta));
+    // "· hace N años" goes away on a narrow card (css/bundle.css): the year already says it
+    const meta = el('span', 'on-this-day__meta', post.author, el('span', 'on-this-day__ago', ` · hace ${years(today.getFullYear() - post.year)}`));
+    const title = link(post.id, post.title);
+    title.title = post.title;
+    return el('li', 'on-this-day__item', time, el('span', 'on-this-day__body', title, meta));
   }
 
   // An album (or song) released that day: its age in a yellow box, then "<title>, de <artist>" and who posted it
