@@ -71,6 +71,29 @@ pageClass: archive
   <a class="artist-posts__table" href="/archive/all/?q={{ artist.name | urlencode }}">Ver en la tabla del archivo →</a>
 </section>
 
+{#- Related artists (ListenBrainz: listened to in the same sessions), as the artist index's cards #}
+{%- if artist.related | length %}
+<section class="artist-related" id="artistas-relacionados" aria-labelledby="artist-related-title">
+  <h2 class="display artist-posts__title" id="artist-related-title">Artistas relacionados</h2>
+  <ol class="facet-cards">
+    {%- for other in artist.related %}
+    {%- set image = archive.artistImages[other.slug] %}
+    {%- set initial = archive.artistInitials[other.slug] %}
+    {%- set first = (other.posts | first).published_at.slice(0, 4) %}
+    {%- set last = (other.posts | last).published_at.slice(0, 4) %}
+    <li><a class="facet-cards__card{% if image or initial %} facet-cards__card--image{% endif %}" href="/archive/artists/{{ other.slug }}.html">
+      {%- if initial %}<span class="display facet-cards__initial" aria-hidden="true">{{ initial }}</span>{% endif %}
+      {%- if image %}<img class="facet-cards__image" src="{{ image.src }}" alt="" title="Foto: {{ image.credit }}" loading="lazy" decoding="async" width="64" height="64" onerror="this.remove()">{% endif %}
+      <span class="display facet-cards__count">{{ other.posts.length }}</span>
+      <span class="facet-cards__name">{{ other.name }}</span>
+      <span class="facet-cards__sub">{{ "artículo" if other.posts.length == 1 else "artículos" }} · {{ first }}{% if last != first %}–{{ last }}{% endif %}</span>
+    </a></li>
+    {%- endfor %}
+  </ol>
+  <p class="artist-related__source">Según lo que se escucha junto en <a href="https://listenbrainz.org/" rel="noopener" target="_blank">ListenBrainz ↗</a>.</p>
+</section>
+{%- endif %}
+
 {%- if artist.albums | length %}
 <section class="artist-albums" aria-labelledby="artist-albums-title">
   <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>

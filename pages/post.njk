@@ -271,3 +271,32 @@ permalink: "archive/{{ post.id }}.html"
 </div>
 
 {{ postNav("bottom", prevPost, nextPost) }}
+
+{#- Cross navigation: posts of artists related to this one (archive.relatedPosts, from ListenBrainz), each the
+    one nearest in date; js/radio.js swaps it with the post #}
+{%- set relatedPosts = archive.relatedPosts[post.id] %}
+{%- if relatedPosts %}
+<section class="post-related" aria-labelledby="post-related-title">
+  <h2 class="post-related__title" id="post-related-title"><span class="kicker">Si te gusta {{ post.metadata.artist }}</span></h2>
+  <div class="post-nav post-related__cards">
+    {%- for item in relatedPosts %}
+    {%- set photo = archive.artistImages[item.artist.slug] %}
+    {%- set initial = archive.artistInitials[item.artist.slug] %}
+    <a class="post-nav__link{% if photo or initial %} post-nav__link--image{% endif %}" href="/archive/{{ item.post.id }}.html">
+      {%- if photo or initial %}
+      <span class="post-nav__photo" aria-hidden="true">
+        {%- if initial %}<span class="display post-nav__initial">{{ initial }}</span>{% endif %}
+        {%- if photo %}<img src="{{ photo.src }}" alt="" title="Foto: {{ photo.credit }}" loading="lazy" decoding="async" width="72" height="72" onerror="this.remove()">{% endif -%}
+      </span>
+      {%- endif %}
+      <span class="post-nav__text">
+        <span class="post-nav__label">{{ item.artist.name }}</span>
+        <span class="post-nav__title">{{ item.post.title }}</span>
+        <span class="post-nav__editor">{{ item.post.editor.name }}</span>
+      </span>
+    </a>
+    {%- endfor %}
+  </div>
+  <a class="post-related__more" href="/archive/artists/{{ post.slugs.artist }}.html#artistas-relacionados">Más artistas como {{ post.metadata.artist }} →</a>
+</section>
+{%- endif %}

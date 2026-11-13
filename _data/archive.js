@@ -12,6 +12,36 @@ const artistBios = () => {
   try { return JSON.parse(readFileSync("data/artist-bios.json", "utf8")); } catch { return {}; }
 };
 
+// MBID -> [[MBID, score]…] (scripts/related-artists.mjs: ListenBrainz's similar artists inside the archive)
+const relatedArtists = () => {
+  try { return JSON.parse(readFileSync("data/related-artists.json", "utf8")); } catch { return {}; }
+};
+
+// Related artists of each artist page ({ name, slug, posts }, strongest first, at most 8) and, for each
+// post, up to three posts of its artist's related ones: of each, the post nearest in date (cross navigation
+// under the post, "Si te gusta X")
+function relatedOf(artistGroups, mbids) {
+  const related = relatedArtists();
+  const groupOf = new Map();   // MBID -> artist group (artists linked one to one)
+  for (const group of artistGroups) if (typeof mbids[group.name] === "string") groupOf.set(mbids[group.name], group);
+  const byArtist = {};
+  for (const group of artistGroups) {
+    const list = related[mbids[group.name]]?.map(([id]) => groupOf.get(id)).filter((g) => g && g !== group) ?? [];
+    if (list.length) byArtist[group.slug] = list.slice(0, 8);
+  }
+  const byPost = {};
+  for (const group of artistGroups) {
+    const others = (byArtist[group.slug] ?? []).slice(0, 3);
+    if (!others.length) continue;
+    for (const post of group.posts) {
+      const time = Date.parse(post.published_at);
+      byPost[post.id] = others.map((other) => ({ artist: other, post: other.posts
+        .reduce((best, p) => (Math.abs(Date.parse(p.published_at) - time) < Math.abs(Date.parse(best.published_at) - time) ? p : best)) }));
+    }
+  }
+  return { byArtist, byPost };
+}
+
 // Links to the artist's MusicBrainz page(s): a collaboration ([{ name, mbid }]) links each of its artists.
 const musicbrainzLinks = (v) => !v ? null : Array.isArray(v)
   ? v.filter(({ mbid }) => mbid).map(({ name, mbid }) => ({ label: `MusicBrainz: ${name}`, url: `https://musicbrainz.org/artist/${mbid}` }))   // parts not in MusicBrainz: no link
@@ -70,6 +100,7 @@ export default function () {
   const posts = loadPosts();
   const mbids = musicbrainz();
   const bios = artistBios();
+  const related = relatedOf(groupBy("artist"), mbids);
   // Radio mode plays YouTube only: posts without a video are left out
   const radio = posts
     .filter((post) => post.metadata.youtube_code)
@@ -80,7 +111,9 @@ export default function () {
     byEditor: groupBy("editor"),
     // A bio only for artists linked one to one (not collaborations)
     byArtist: groupBy("artist").map((group) => ({ ...group, ...artistDetails(group), musicbrainz: musicbrainzLinks(mbids[group.name]),
-      bio: typeof mbids[group.name] === "string" ? bios[mbids[group.name]] : undefined })),
+      bio: typeof mbids[group.name] === "string" ? bios[mbids[group.name]] : undefined, related: related.byArtist[group.slug] ?? [] })),
+    // Post id -> [{ artist, post }…]: posts of related artists, under the post
+    relatedPosts: related.byPost,
     // Artist slug -> its Commons photo { src, credit } (data/artist-bios.json), for the cards of /archive/artists/
     artistImages: Object.fromEntries(groupBy("artist").flatMap((group) => {
       const image = typeof mbids[group.name] === "string" && bios[mbids[group.name]]?.image;
