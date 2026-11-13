@@ -89,7 +89,7 @@ npm run fix-players -- --candidates   # alternatives for those, then --apply the
 npm run match-musicbrainz         # match artists to MusicBrainz (then match-musicbrainz-posts for songs)
 npm run refresh-musicbrainz       # refresh what MusicBrainz says about the matches (~1 h)
 npm run artist-bios               # Wikipedia bio and Commons photo of each linked artist
-node scripts/podcast-sizes.mjs    # refresh mp3 sizes for the podcast feed (only if podcast files change)
+node scripts/podcast-sizes.mjs    # refresh mp3 sizes and durations for the podcast feed (only if podcast files change)
 ```
 
 ## Deployment

@@ -33,6 +33,9 @@ eleventyExcludeFromCollections: true
       <pubDate>{{ episode.post.published_at | rfc822 }}</pubDate>
       <description>{{ episode.post.content | excerpt(400) }}</description>
       <itunes:author>{{ episode.post.editor.name }}</itunes:author>
+      {%- if episode.duration %}
+      <itunes:duration>{{ episode.duration }}</itunes:duration>
+      {%- endif %}
       <enclosure url="https://dsongstatic.jesusmagamu.dev/mp3/podcast/{{ episode.file }}" length="{{ episode.length }}" type="audio/mpeg"/>
     </item>
     {%- endfor %}

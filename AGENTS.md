@@ -40,7 +40,8 @@ data/posts.json        Source data (~1,900 posts). Not in _data on purpose (see 
                        isrcs, first_release and the players MusicBrainz links), `spotifyMetadata` (find-spotify),
                        `ytdlpMetadata` (YouTube videos found by searching) and `itunesMetadata` (Apple Music found in iTunes Search, last resort). The site's `metadata` is resolved from them (lib/metadata.js).
 data/artist-bios.json  MBID -> { bio, lang, wikipedia, image? { src, width, height, page, author, license } } (artist-bios.mjs), shown on artist pages (pages/archive/artist.njk; artists linked one to one only).
-data/podcast-sizes.json Byte size of each podcast mp3 (RSS <enclosure> needs it).
+data/podcast-sizes.json Byte size of each podcast mp3 (RSS <enclosure> needs it); data/podcast-durations.json its seconds (<itunes:duration>,
+                       from its first 64 KB: Xing/VBRI frame count, or bytes over bitrate).
 data/musicbrainz.json  { artists: name (as in posts.json) -> MBID, or [{ name, mbid }] for a collaboration ("X y Y"; mbid null: that artist isn't in MusicBrainz),
                          artistInfo: MBID -> { name, aliases? (only where our name isn't MusicBrainz's), country, genres, url }, preferEditor: { field: [MBID…] } (lib/metadata.js) }.
 data/post-context.json What each post says it presents, read from its text by an LLM (Haiku): subject, performer, version
@@ -85,7 +86,7 @@ _includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.
                        the post's byline and the table's Autor column).
 scripts/               validate-data.mjs, musicbrainz-players.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, find-spotify.mjs, review-youtube.mjs (+ .html),
                        match-musicbrainz.mjs, match-musicbrainz-posts.mjs, review-musicbrainz.mjs (+ .html), musicbrainz-artists.mjs, musicbrainz-diffs.mjs, audit-players.mjs, fix-players.mjs,
-                       rename-artists.mjs, redirect-moved.mjs, refresh-musicbrainz.mjs, podcast-sizes.mjs (mp3 sizes -> data/podcast-sizes.json, for the feed; run by hand),
+                       rename-artists.mjs, redirect-moved.mjs, refresh-musicbrainz.mjs, podcast-sizes.mjs (mp3 sizes and durations -> data/podcast-sizes.json, podcast-durations.json, for the feed; run by hand),
                        edit-posts.mjs (+ .html, local editor; edit-sources.mjs: its context, MusicBrainz and player searches).
 ```
 

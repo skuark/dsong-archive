@@ -19,6 +19,10 @@ const musicbrainzLinks = (v) => !v ? null : Array.isArray(v)
 
 // Byte size of each podcast mp3 (scripts/podcast-sizes.mjs), for the RSS <enclosure>
 const podcastSizes = JSON.parse(readFileSync("data/podcast-sizes.json", "utf8"));
+// Its length in seconds (same script), as <itunes:duration> "H:MM:SS"
+const podcastDurations = JSON.parse(readFileSync("data/podcast-durations.json", "utf8"));
+const hms = (seconds) => seconds ? [Math.floor(seconds / 3600), Math.floor(seconds / 60) % 60, seconds % 60]
+  .map((n, i) => (i ? String(n).padStart(2, "0") : n)).join(":") : "";
 
 const has = (v) => v != null && v !== "";
 
@@ -109,7 +113,8 @@ export default function () {
     series: Object.groupBy(posts.filter((post) => post.special?.series), (post) => post.special.series),
     // Podcast feed (/podcast.xml): posts with a UniRadio Jaén podcast, newest first
     podcast: posts.filter((post) => post.metadata.podcast_file)
-      .map((post) => ({ post, file: post.metadata.podcast_file, length: podcastSizes[post.metadata.podcast_file] ?? 0 }))
+      .map((post) => ({ post, file: post.metadata.podcast_file, length: podcastSizes[post.metadata.podcast_file] ?? 0,
+        duration: hms(podcastDurations[post.metadata.podcast_file]) }))
       .reverse(),
     // "On this day" on the home page (/tal-dia-como-hoy/MM-DD.json): posts by publication day, oldest year
     // first, and anniversaries: posts whose album (or song) first came out that day, by MusicBrainz's full
