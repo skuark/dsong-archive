@@ -1261,18 +1261,24 @@ button.chip {
 }
 
 @media (max-width: 40rem) {
-  .episode,
+  /* The play button on the right, by the thumb; date, title and author on the left. Inner room on both
+     sides, as on wider screens: the playing one's yellow and black edge stay clear of its text and button */
+  .episode {
+    grid-template-columns: minmax(0, 1fr) 3rem;
+    padding: .75rem;
+  }
+
   .episode:has(.episode__play[hidden]) {
-    grid-template-columns: 3rem minmax(0, 1fr);
-    padding: .75rem 0;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .episode__play {
-    grid-row: span 3;
+    grid-column: 2;
+    grid-row: 1 / span 3;
   }
 
   .episode > :not(.episode__play) {
-    grid-column: 2;
+    grid-column: 1;
   }
 }
 
