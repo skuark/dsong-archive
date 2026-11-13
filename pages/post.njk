@@ -124,7 +124,7 @@ permalink: "archive/{{ post.id }}.html"
   {%- if hasSide %}<aside class="post-view__side">{% endif %}
 
   {%- if players | length %}
-  {#- Radio mode (js/radio.js): plays the next posts' YouTube (or Spotify) with their text; hidden without JS #}
+  {#- Radio mode (js/radio.js): plays the next posts' YouTube videos with their text; hidden without JS #}
   {%- set inRadio = archive.radioById[post.id] %}
   <div class="players">
     <div class="players__tabs" role="tablist" aria-label="Reproductores">

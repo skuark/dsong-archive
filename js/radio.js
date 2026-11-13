@@ -1,12 +1,13 @@
 // Radio mode: plays posts one after another, in chronological or random order (menu "Radio" ->
 // /radio/ -> a random post with ?radio=aleatoria), or the posts an archive table shows, in its order
 // (js/archive-radio.js -> the first one with ?radio=lista), without reloading the page, so the music keeps
-// going and each post's text is shown next to it. Each post plays its YouTube video or, if it has
-// none, its Spotify embed (only a 30 s preview without a Spotify session in the browser).
+// going and each post's text is shown next to it. Only posts with a YouTube video are in it.
+// There's no bar of its own: the post's players box becomes the radio (its head, where the list comes
+// from, the video, previous/next, what comes next and the order), sticky at the top on phones.
 // A page navigation would stop playback (and browsers don't allow autoplay with sound on the new
 // page), so the article is swapped in place: header, text, comments, navigation and the players'
-// tabs are replaced, while the live YouTube and Spotify panels stay where they are (moving an
-// iframe in the DOM reloads it) and load the next song through their APIs. The URL is updated
+// tabs are replaced, while the live YouTube panel stays where it is (moving an iframe in the DOM
+// reloads it) and loads the next video through its API. The URL is updated
 // with pushState.
 (function() {
   const toggle = document.querySelector('.radio-toggle');
@@ -29,17 +30,19 @@
     if (on) {
       pageLink?.removeAttribute('aria-current');
       radioLink?.setAttribute('aria-current', 'page');
+      radioLink?.classList.add('is-playing');
     } else {
       radioLink?.removeAttribute('aria-current');
+      radioLink?.classList.remove('is-playing');
       pageLink?.setAttribute('aria-current', 'page');
     }
   }
-  let barSize = null;
+  let progressTimer = null;
 
   const idOf = (path) => (path.match(/\/archive\/([^/]+)\.html$/) || [])[1];
-  let list = null;          // [[id, title, youtubeCode, spotifyUri], ...] from /radio.json
+  let list = null;          // [[id, title, youtubeCode], ...] from /radio.json
   let active = false;
-  let bar = null;
+  let box = null;           // the radio's parts in the players box: { head, from, controls }
   let currentId = idOf(location.pathname);
   const mode = new URLSearchParams(location.search).get('radio');
   let shuffle = mode === 'aleatoria';
@@ -50,21 +53,26 @@
   }
   const played = new Set();
   const previous = [];      // entries already played in this radio session, for "Anterior"
-  let upcoming = null;      // next entry, chosen in advance so the bar can show it
+  let upcoming = null;      // next entry, chosen in advance so the box can show it
   let advancing = false;
+  // Post pages already fetched (the next one is fetched in advance: its author for the box, a quicker swap)
+  const pages = new Map();
+  function loadDoc(id) {
+    if (!pages.has(id)) {
+      pages.set(id, fetch(`/archive/${id}.html`)
+        .then((res) => { if (!res.ok) throw new Error(res.status); return res.text(); })
+        .then((html) => new DOMParser().parseFromString(html, 'text/html'))
+        .catch((error) => { pages.delete(id); throw error; }));
+    }
+    return pages.get(id);
+  }
 
   let youtube = null;       // YT.Player on the live #panel-youtube iframe
-  let spotify = null;       // Spotify embed controller on the live #panel-spotify
-  let source = null;        // 'youtube' | 'spotify': what is playing now
   let playing = false;      // the current song has started
   let everPlayed = false;   // some song started: autoplay works in this browser
   let watchTimer = null;
-  let last = { position: 0, duration: 0 };   // last Spotify playback update
-  let spotifyUri = '';      // what the Spotify player has loaded (track, album, playlist...)
-  let endTimer = null;
 
   const indexOf = (id) => list.findIndex((entry) => entry[0] === id);
-  const sourceOf = (entry) => (entry[2] ? 'youtube' : 'spotify');
 
   function pickNext() {
     if (shuffle) {
@@ -94,15 +102,6 @@
     return youtubeApi;
   }
 
-  let spotifyApi = null;
-  function loadSpotifyApi() {
-    spotifyApi = spotifyApi || new Promise((resolve) => {
-      window.onSpotifyIframeApiReady = resolve;
-      loadScript('https://open.spotify.com/embed/iframe-api/v1');
-    });
-    return spotifyApi;
-  }
-
   // Shows a player's tab and panel. Other panels are hidden; those without a live player are
   // stopped the way players.js does it (the live ones are paused through their API instead).
   function selectPanel(name) {
@@ -123,7 +122,7 @@
     });
   }
 
-  const isLive = (panel) => (panel.id === 'panel-youtube' && youtube) || (panel.id === 'panel-spotify' && spotify);
+  const isLive = (panel) => panel.id === 'panel-youtube' && youtube;
 
   async function ensureYoutube() {
     if (youtube) return youtube;
@@ -142,58 +141,15 @@
         events: {
           onReady: () => { youtube = player; resolve(player); },
           onStateChange: (e) => {
-            if (source !== 'youtube') return;
+            if (!active) return;
             if (e.data === YT.PlayerState.PLAYING) started();
             if (e.data === YT.PlayerState.ENDED) advance();
           },
           // Removed or non-embeddable video: skip it
-          onError: () => { if (source === 'youtube') advance(); },
+          onError: () => { if (active) advance(); },
         },
       });
     });
-  }
-
-  async function ensureSpotify(uri) {
-    if (spotify) return spotify;
-    const api = await loadSpotifyApi();
-    // The API replaces an element with its own iframe: swap the post's iframe for a placeholder
-    // inside the same panel (the panel itself doesn't move)
-    const target = document.createElement('div');
-    document.querySelector('#panel-spotify iframe').replaceWith(target);
-    return new Promise((resolve) => {
-      api.createController(target, { uri, width: '100%', height: uri.startsWith('spotify:track:') ? 80 : 352 }, (controller) => {
-        controller.addListener('playback_update', onSpotifyUpdate);
-        spotify = controller;
-        resolve(controller);
-      });
-    });
-  }
-
-  function dropSpotify() {
-    try { spotify.destroy(); } catch { /* already gone */ }
-    document.getElementById('panel-spotify')?.remove();
-    spotify = null;
-    if (source === 'spotify') source = null;
-  }
-
-  function onSpotifyUpdate(e) {
-    if (source !== 'spotify') return;
-    const { isPaused, position, duration } = e.data;
-    // Playing again (e.g. the next album track, even at 0:00): it wasn't the end
-    if (!isPaused) clearTimeout(endTimer);
-    if (!isPaused && position > 0) started();
-    const nearEnd = last.duration > 0 && last.position >= last.duration - 1500;
-    // Next track started: the end for a single song, but an album or playlist keeps going
-    const trackChanged = nearEnd && !isPaused && position < last.position;
-    // Stopped at the end (or at 30 s, the end of a preview): wait a moment in case it's just the
-    // pause between two album tracks
-    const stoppedAtEnd = isPaused && last.position > 0 && (nearEnd || Math.abs(position - 30000) < 1500);
-    last = { position, duration };
-    if (trackChanged && spotifyUri.startsWith('spotify:track:')) advance();
-    if (stoppedAtEnd) {
-      clearTimeout(endTimer);
-      endTimer = setTimeout(() => { if (source === 'spotify') advance(); }, 2500);
-    }
   }
 
   function started() {
@@ -204,51 +160,22 @@
   }
 
   // If the song doesn't start, the browser may be blocking playback with sound (always possible
-  // arriving from the menu, with no click on this page yet): the bar offers a "Start" button.
-  // Once something has played, a Spotify song that doesn't start is unavailable: skip it.
+  // arriving from the menu, with no click on this page yet): the box offers a "Start" button.
   function watch() {
     playing = false;
     clearTimeout(watchTimer);
     watchTimer = setTimeout(() => {
       if (playing || !active) return;
-      if (source === 'spotify' && everPlayed) advance();
-      else setNeedsClick(true);
+      setNeedsClick(true);
     }, everPlayed ? 10000 : 3000);
   }
 
   async function play(entry) {
-    const next = sourceOf(entry);
-    if (source === 'youtube' && next !== 'youtube') youtube?.pauseVideo();
-    if (source === 'spotify' && next !== 'spotify') spotify?.pause();
-    source = next;
-    selectPanel(next);
-    const via = bar && bar.querySelector('.radio-bar__source');
-    if (via) {
-      via.textContent = next === 'youtube' ? ' · en YouTube' : ' · en Spotify';
-      via.title = next === 'youtube' ? '' : 'Este artículo no tiene vídeo de YouTube. Sin sesión de Spotify en el navegador suena una muestra de 30 s';
-    }
+    selectPanel('youtube');
     watch();
-    if (next === 'youtube') {
-      const player = await ensureYoutube();
-      if (player.getVideoData?.().video_id === entry[2]) player.playVideo();
-      else player.loadVideoById(entry[2]);
-    } else {
-      const fresh = !spotify;
-      const controller = await ensureSpotify(entry[3]);
-      last = { position: 0, duration: 0 };
-      clearTimeout(endTimer);
-      spotifyUri = entry[3];
-      if (!fresh) {
-        // Same player, maybe another kind: albums and playlists show their track list
-        const iframe = document.querySelector('#panel-spotify iframe');
-        if (iframe) iframe.height = entry[3].startsWith('spotify:track:') ? 80 : 352;
-        controller.loadUri(entry[3]);
-      }
-      controller.play();
-      // play() may arrive before the new URI has loaded: try once more
-      const id = entry[0];
-      setTimeout(() => { if (active && !playing && currentId === id) controller.play(); }, 2000);
-    }
+    const player = await ensureYoutube();
+    if (player.getVideoData?.().video_id === entry[2]) player.playVideo();
+    else player.loadVideoById(entry[2]);
   }
 
   async function start() {
@@ -270,7 +197,7 @@
     played.add(currentId);
     upcoming = pickNext();
     setToggle(true);
-    showBar();
+    showBox();
     // Drop ?radio=aleatoria so a reload doesn't restart it
     if (location.search) history.replaceState(history.state, '', location.pathname);
     try {
@@ -282,20 +209,14 @@
 
   function stop() {
     active = false;
-    source = null;
     clearTimeout(watchTimer);
-    // Live panels this post has no tab for (kept for later songs) go away, which also stops them
-    for (const name of ['youtube', 'spotify']) {
-      if (!document.getElementById(`tab-${name}`)) document.getElementById(`panel-${name}`)?.remove();
-    }
+    // The live panel, if this post has no YouTube tab (it can't happen now, but a swap may fail), goes
+    // away, which also stops it
+    if (!document.getElementById('tab-youtube')) document.getElementById('panel-youtube')?.remove();
     youtube = null;
-    spotify = null;
     // Started again from a post's button: the whole archive, not the table's list
     if (scope) { scope = null; list = null; }
-    if (bar) bar.remove();
-    bar = null;
-    barSize?.disconnect();
-    document.documentElement.style.removeProperty('--radio-bar');
+    hideBox();
     setMenu(false);
     document.body.classList.remove('radio-on');
     setToggle(false);
@@ -328,7 +249,8 @@
         el.removeAttribute('src');
       });
       copy.hidden = true;
-      players.append(copy);
+      // Before the radio's controls, which stay at the foot of the box
+      players.insertBefore(copy, box?.controls ?? null);
     }
 
     // Podcast block (only some posts have one): in the side column, under the players
@@ -363,14 +285,10 @@
       entry = entry || upcoming;
       while (entry && active) {
         try {
-          const res = await fetch(`/archive/${entry[0]}.html`);
-          if (!res.ok) throw new Error(res.status);
-          const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+          const doc = await loadDoc(entry[0]);
+          pages.delete(entry[0]);
           if (!active) return;
           const leaving = list[indexOf(currentId)];
-          // Next song is on YouTube: drop the live Spotify player (reusing it for the post's Spotify
-          // tab would start playing it too); the post brings its own, idle Spotify panel
-          if (spotify && entry[2]) dropSpotify();
           swap(doc);
           if (!back && leaving) previous.push(leaving);
           break;
@@ -386,7 +304,7 @@
       played.add(entry[0]);
       upcoming = pickNext();
       history.pushState({ radio: true }, '', `/archive/${entry[0]}.html`);
-      updateBar();
+      updateBox();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       await play(entry);
     } finally {
@@ -394,76 +312,126 @@
     }
   }
 
-  function showBar() {
-    bar = document.createElement('div');
-    bar.className = 'radio-bar';
-    bar.setAttribute('role', 'region');
-    bar.setAttribute('aria-label', 'Modo radio');
-    bar.innerHTML = `
-      <span class="kicker radio-bar__label">Radio<span class="radio-bar__source"></span></span>
-      <span class="radio-bar__scope"></span>
-      <span class="radio-bar__actions">
-        <button class="radio-bar__button radio-bar__button--start" type="button" data-action="play" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>Empezar</button>
-        <button class="radio-bar__button radio-bar__button--icon" type="button" data-action="previous" aria-label="Anterior" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
-        <button class="radio-bar__button radio-bar__button--icon" type="button" data-action="skip" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
-      </span>
-      <span class="radio-bar__next"></span>
-      <span class="radio-bar__order" role="radiogroup" aria-label="Orden">
-        <button class="radio-bar__button" type="button" role="radio" data-action="order" data-shuffle="false" aria-checked="true" aria-label="En orden"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="radio-bar__text">En orden</span></button>
-        <button class="radio-bar__button" type="button" role="radio" data-action="order" data-shuffle="true" aria-checked="false" aria-label="Al azar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span class="radio-bar__text">Al azar</span></button>
-      </span>
-      <button class="radio-bar__button radio-bar__button--stop" type="button" data-action="stop" aria-label="Salir del modo radio">×</button>`;
-    bar.addEventListener('click', (e) => {
-      const action = e.target.closest('[data-action]')?.dataset.action;
-      if (action === 'play') {
-        if (source === 'youtube') youtube?.playVideo();
-        if (source === 'spotify') spotify?.play();
-      }
-      if (action === 'order') {
-        const wanted = e.target.closest('[data-action]').dataset.shuffle === 'true';
-        if (wanted === shuffle) return;
-        shuffle = wanted;
-        upcoming = pickNext();
-        updateBar();
-      }
-      if (action === 'previous' && previous.length) advance(previous.pop(), { back: true });
-      if (action === 'skip') advance();
-      if (action === 'stop') stop();
-    });
+  function showBox() {
+    const players = document.querySelector('.players');
+    players.classList.add('players--radio');
+    const head = document.createElement('div');
+    head.className = 'radio-box__head';
+    head.innerHTML = `
+      <span class="radio-box__title"><span class="kicker radio-box__label">Radio</span><span class="radio-box__position"></span><span class="radio-box__scope"></span></span>
+      <span class="radio-box__order radio-box__order--head" role="radiogroup" aria-label="Orden">
+          <button class="radio-box__order-button" type="button" role="radio" data-action="order" data-shuffle="false" aria-checked="true" aria-label="En orden"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="radio-box__text">En orden</span></button>
+          <button class="radio-box__order-button" type="button" role="radio" data-action="order" data-shuffle="true" aria-checked="false" aria-label="Al azar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span class="radio-box__text">Al azar</span></button>
+        </span>
+      <button class="radio-box__stop" type="button" data-action="stop" aria-label="Salir del modo radio">×</button>`;
+    let from = null;
     if (scope?.name) {
-      const name = bar.querySelector('.radio-bar__scope');
-      name.textContent = scope.name;
-      name.title = scope.name;
+      from = document.createElement('div');
+      from.className = 'radio-box__from';
+      from.append('Desde ');
+      const link = document.createElement(scope.url ? 'a' : 'span');
+      if (scope.url) link.href = scope.url;
+      link.textContent = scope.name;
+      from.append(link);
+      head.querySelector('.radio-box__scope').textContent = ` · ${scope.name}`;
     }
-    document.body.prepend(bar);
+    const controls = document.createElement('div');
+    controls.className = 'radio-box';
+    controls.innerHTML = `
+      <span class="radio-box__progress" aria-hidden="true"><span></span></span>
+      <button class="radio-box__start" type="button" data-action="play" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>Empezar</button>
+      <div class="radio-box__nav">
+        <button class="radio-box__button radio-box__button--previous" type="button" data-action="previous" aria-label="Anterior" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg><span class="radio-box__text">Anterior</span></button>
+        <div class="radio-box__next" aria-live="polite"></div>
+        <button class="radio-box__button radio-box__button--skip" type="button" data-action="skip" aria-label="Siguiente"><span class="radio-box__text">Siguiente</span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+      </div>
+      <span class="radio-box__order radio-box__order--foot" role="radiogroup" aria-label="Orden">
+          <button class="radio-box__order-button" type="button" role="radio" data-action="order" data-shuffle="false" aria-checked="true" aria-label="En orden"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="radio-box__text">En orden</span></button>
+          <button class="radio-box__order-button" type="button" role="radio" data-action="order" data-shuffle="true" aria-checked="false" aria-label="Al azar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span class="radio-box__text">Al azar</span></button>
+        </span>`;
+    players.prepend(head);
+    if (from) head.after(from);
+    players.append(controls);
+    box = { head, from, controls };
+    for (const part of [head, controls]) part.addEventListener('click', onBoxClick);
+    // How far the song is: a thin line under the video
+    const line = controls.querySelector('.radio-box__progress span');
+    progressTimer = setInterval(() => {
+      const duration = youtube?.getDuration?.() || 0;
+      line.style.width = duration ? `${Math.min(100, (youtube.getCurrentTime() / duration) * 100)}%` : '0';
+    }, 500);
     document.body.classList.add('radio-on');
-    // Its height, for the sticky side column under it
-    barSize = new ResizeObserver(() => document.documentElement.style.setProperty('--radio-bar', `${bar.offsetHeight}px`));
-    barSize.observe(bar);
     setMenu(true);
-    updateBar();
+    updateBox();
+  }
+
+  function hideBox() {
+    if (!box) return;
+    clearInterval(progressTimer);
+    box.head.remove();
+    box.from?.remove();
+    box.controls.remove();
+    box = null;
+    document.querySelector('.players')?.classList.remove('players--radio');
+    document.body.classList.remove('radio-on');
+  }
+
+  function onBoxClick(e) {
+    const target = e.target.closest('[data-action]');
+    const action = target?.dataset.action;
+    if (action === 'play') youtube?.playVideo();
+    if (action === 'order') {
+      const wanted = target.dataset.shuffle === 'true';
+      if (wanted === shuffle) return;
+      shuffle = wanted;
+      upcoming = pickNext();
+      updateBox();
+    }
+    if (action === 'previous' && previous.length) advance(previous.pop(), { back: true });
+    if (action === 'skip') advance();
+    if (action === 'stop') stop();
   }
 
   function setNeedsClick(needed) {
-    const button = bar && bar.querySelector('[data-action="play"]');
+    const button = box?.controls.querySelector('[data-action="play"]');
     if (button) button.hidden = !needed;
   }
 
-  function updateBar() {
-    if (!bar) return;
-    for (const button of bar.querySelectorAll('[data-action="order"]')) {
+  // "13 mar 2014" from the id's date
+  const months = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+  const shortDate = (id) => {
+    const [y, m, d] = id.split('-').map(Number);
+    return `${d} ${months[m - 1]} ${y}`;
+  };
+
+  function updateBox() {
+    if (!box) return;
+    for (const button of document.querySelectorAll('.radio-box__order [data-action="order"]')) {
       button.setAttribute('aria-checked', String((button.dataset.shuffle === 'true') === shuffle));
     }
-    bar.querySelector('[data-action="previous"]').disabled = !previous.length;
+    box.controls.querySelector('[data-action="previous"]').disabled = !previous.length;
+    const i = indexOf(currentId);
+    box.head.querySelector('.radio-box__position').textContent = i >= 0 ? ` ${(i + 1).toLocaleString('es')} de ${list.length.toLocaleString('es')}` : '';
     const next = upcoming;
-    const slot = bar.querySelector('.radio-bar__next');
+    const slot = box.controls.querySelector('.radio-box__next');
     slot.textContent = '';
-    if (!next) { slot.textContent = scope ? 'Última canción de la lista' : 'Última canción del archivo'; return; }
-    slot.insertAdjacentHTML('beforeend', '<span class="radio-bar__lead--long">Al acabar la canción pasa a </span><span class="radio-bar__lead--short">Luego: </span>');
-    const link = document.createElement('a');
+    if (!next) {
+      slot.innerHTML = `<span class="radio-box__next-title">${scope ? 'Última canción de la lista' : 'Última canción del archivo'}</span>`;
+      return;
+    }
+    slot.innerHTML = '<span class="kicker radio-box__lead"><span class="radio-box__lead--long">Al acabar la canción</span><span class="radio-box__lead--short">Luego</span></span><span class="radio-box__next-title"><a></a><span class="radio-box__by"></span></span>';
+    const link = slot.querySelector('a');
     link.href = `/archive/${next[0]}.html`;
     link.textContent = next[1];
-    slot.append(link);
+    // Its author and date, from its page (fetched now; it's the next one swapped in)
+    loadDoc(next[0]).then((doc) => {
+      if (upcoming !== next || !box) return;
+      const editor = doc.querySelector('.post-view__editor');
+      const by = slot.querySelector('.radio-box__by');
+      const avatar = editor?.querySelector('.avatar');
+      if (avatar) by.append(document.importNode(avatar, true));
+      by.append(`${editor?.querySelector('.post-view__editor-name')?.textContent.trim() ?? ''} · ${shortDate(next[0])}`);
+    }).catch(() => { /* shown without its author */ });
   }
 
   toggle.addEventListener('click', () => start());
@@ -473,8 +441,8 @@
     if (!active) return;
     // Switching to another player tab reloads the playing iframe: radio mode ends
     const tab = e.target.closest('.players__tabs [role="tab"]');
-    if (tab && e.isTrusted && tab.id !== `tab-${source}`) { stop(); return; }
-    // Links to posts in the radio (prev/next, "A continuación" in the bar) keep it going
+    if (tab && e.isTrusted && tab.id !== 'tab-youtube') { stop(); return; }
+    // Links to posts in the radio (prev/next, what comes next in the box) keep it going
     const link = e.target.closest('a[href^="/archive/"]');
     const id = link && idOf(link.getAttribute('href'));
     const entry = id && list[indexOf(id)];

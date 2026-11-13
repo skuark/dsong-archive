@@ -16,7 +16,7 @@ The original blog ended in early 2017. Rather than let all this content be lost 
 - **Especiales**: `/archive/especiales/` gathers the special posts (albums, festivals, lists) by shape.
 - **Music map**: `/mapa/` shows a world map colored by the artists' nationality; click a country to see its posts.
 - **Posts**: the author's text first, with the players (YouTube, Spotify, Apple Music, podcast) and a "Ficha" beside it on wide screens: everything known about the song, linked to the archive and its sources. Previous/next links in the breadcrumbs and cards at the foot (with the artist's photo), and the original blog's comments.
-- **Radio mode**: plays post after post (YouTube, or Spotify when there's no video) without reloading the page, so the text of each song is shown next to it. A floating bar at the bottom picks chronological or random order; `/radio/` starts on a random post.
+- **Radio mode**: plays post after post (only those with a YouTube video) without reloading the page, so the text of each song is shown next to it. The post's players box becomes the radio (sticky at the top on phones) and picks chronological or random order; `/radio/` starts on a random post.
 - **Podcast**: the 335 UniRadio Jaén episodes with their own player on each post, listed at `/archive/podcasts/` (playable in place, one after another), and an RSS feed (`/podcast.xml`) to subscribe from any podcast app.
 - **El proyecto**: `/el-proyecto/` tells dSong's history year by year, with its team and guest readers.
 - **Random post**: `/rand/` opens a random post.

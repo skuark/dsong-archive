@@ -2669,8 +2669,8 @@ button.chip {
   display: none;
 }
 
-/* Radio bar: a black band across the top while it plays, paper on ink; yellow only on its label (the
-   current state) and on hover */
+/* The podcast page's radio bar (js/podcasts.js): a black band across the top while it plays, paper on
+   ink, yellow only on its label */
 .radio-bar {
   align-items: center;
   background: var(--ink);
@@ -2679,7 +2679,7 @@ button.chip {
   flex-wrap: wrap;
   gap: .75rem 1.5rem;
   padding: .875rem max(2rem, calc((100% - 86rem) / 2));
-  /* First in <body> (js/radio.js): takes its room at the top and stays there while scrolling */
+  /* First in <body>: takes its room at the top and stays there while scrolling */
   position: sticky;
   top: 0;
   z-index: 10;
@@ -2692,29 +2692,10 @@ button.chip {
   white-space: nowrap;
 }
 
-/* The list radio mode plays, when it's an archive table's (js/archive-radio.js): beside the label, in
-   paper, cut with "…" */
-.radio-bar__scope {
-  font-weight: 700;
-  max-width: 20rem;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.radio-bar__scope:empty {
-  display: none;
-}
-
 .radio-bar__next {
   flex: 1 1 15rem;
   font-size: .9375rem;
   min-width: 0;
-}
-
-.radio-bar__lead--short {
-  display: none;
 }
 
 .radio-bar a {
@@ -2741,7 +2722,6 @@ button.chip {
   display: inline-flex;
   font: inherit;
   font-weight: 700;
-  gap: .5rem;
   justify-content: center;
   min-height: 44px;
   padding: 0 .875rem;
@@ -2752,49 +2732,10 @@ button.chip {
   width: 44px;
 }
 
-.radio-bar__button:hover,
-.radio-bar__button--start {
+.radio-bar__button:hover {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--ink);
-}
-
-/* En orden / Al azar: two halves of one paper-bordered box; the chosen one paper with a check, the
-   other one plain */
-.radio-bar__order {
-  border: 2px solid var(--paper);
-  display: flex;
-}
-
-.radio-bar__order .radio-bar__button {
-  background: var(--ink);
-  border: 0;
-  color: var(--paper);
-  font-weight: 400;
-}
-
-.radio-bar__order .radio-bar__button:hover {
-  background: var(--ink);
-  color: var(--paper);
-  text-decoration: underline;
-}
-
-.radio-bar__order .radio-bar__button[aria-checked="true"],
-.radio-bar__order .radio-bar__button[aria-checked="true"]:hover {
-  background: var(--paper);
-  color: var(--ink);
-  cursor: default;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.radio-bar__order .radio-bar__button[aria-checked="true"]::before {
-  content: "✓";
-}
-
-/* Their icons are for phones, where the words don't fit */
-.radio-bar__order svg {
-  display: none;
 }
 
 .radio-bar__button--stop {
@@ -2803,10 +2744,6 @@ button.chip {
   font-size: 1.375rem;
   padding: 0;
   width: 44px;
-}
-
-.radio-bar__button[hidden] {
-  display: none;
 }
 
 .radio-bar__button:disabled {
@@ -2820,65 +2757,394 @@ button.chip {
   color: var(--paper);
 }
 
-/* Phones: two short rows, each one line: label, the list (cut with "…") and close / previous, next,
-   "Luego:" and the next title (cut with "…"), and the order as two icons. Where it plays
-   (YouTube/Spotify) is left out: the players show it */
+/* Phones: two short rows (label, close / previous, next, what comes next) */
 @media (max-width: 40rem) {
   .radio-bar {
-    align-items: center;
     display: grid;
     gap: .5rem .625rem;
-    grid-template-areas: "label scope scope stop" "actions next order order";
-    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    grid-template-areas: "label label stop" "actions next next";
+    grid-template-columns: auto minmax(0, 1fr) auto;
     padding: .5rem 1rem;
   }
 
   .radio-bar__label { grid-area: label; justify-self: start; }
-  .radio-bar__scope { font-size: .875rem; grid-area: scope; max-width: none; }
-  .radio-bar__order { grid-area: order; justify-self: end; }
-  .radio-bar__button--stop { grid-area: stop; justify-self: end; }
+  .radio-bar__button--stop { grid-area: stop; }
   .radio-bar__actions { grid-area: actions; }
-
-  .radio-bar__source {
-    display: none;
-  }
 
   .radio-bar__next {
     font-size: .8125rem;
     grid-area: next;
+  }
+
+  .radio-bar__button {
+    min-height: 36px;
+  }
+
+  .radio-bar__button--icon,
+  .radio-bar__button--stop {
+    width: 36px;
+  }
+}
+
+/* Radio mode (js/radio.js): the post's players box is the radio. A black head (Radio, where it is in the
+   list, close), where the list comes from, the video and a line with how far it is, previous/next, what
+   comes next with its author, the order; the player tabs go to its foot. Bigger border and shadow: the
+   current state */
+.players--radio {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.players--radio .players__tabs {
+  border-bottom: 0;
+  border-top: var(--border-thin);
+  order: 10;
+}
+
+.players--radio .radio-toggle {
+  display: none;
+}
+
+.radio-box__head {
+  align-items: center;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+  padding: .25rem .25rem .25rem .875rem;
+}
+
+.radio-box__title {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.radio-box__label {
+  background: var(--accent);
+  color: var(--ink);
+  margin-right: .375rem;
+  padding: .125rem .375rem;
+}
+
+.radio-box__scope,
+.radio-box__order.radio-box__order--head,
+.radio-box__lead--short {
+  display: none;
+}
+
+.radio-box__stop {
+  background: transparent;
+  border: 0;
+  color: var(--paper);
+  cursor: pointer;
+  flex: none;
+  font: inherit;
+  font-size: 1.375rem;
+  height: 40px;
+  width: 40px;
+}
+
+.radio-box__stop:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.radio-box__from {
+  border-bottom: var(--border-thin);
+  font-size: .875rem;
+  line-height: 1.4;
+  padding: .5rem .875rem;
+}
+
+.radio-box {
+  display: flex;
+  flex-direction: column;
+  order: 5;
+}
+
+.radio-box__progress {
+  background: var(--rule);
+  display: block;
+  height: 4px;
+}
+
+.radio-box__progress span {
+  background: var(--ink);
+  display: block;
+  height: 100%;
+  width: 0;
+}
+
+.radio-box__start {
+  align-items: center;
+  background: var(--accent);
+  border: var(--border-thin);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-weight: 700;
+  gap: .5rem;
+  justify-content: center;
+  margin: .75rem .875rem 0;
+  min-height: 44px;
+}
+
+.radio-box__start[hidden] {
+  display: none;
+}
+
+.radio-box__nav {
+  column-gap: .5rem;
+  display: grid;
+  grid-template-areas: "previous skip" "next next";
+  grid-template-columns: 1fr 1fr;
+  padding: .75rem .875rem 0;
+}
+
+.radio-box__button {
+  align-items: center;
+  background: var(--paper);
+  border: var(--border-thin);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-weight: 700;
+  gap: .375rem;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.radio-box__button--previous { grid-area: previous; }
+.radio-box__button--skip { background: var(--accent); grid-area: skip; }
+
+.radio-box__button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.radio-box__button:disabled {
+  cursor: default;
+  opacity: .4;
+}
+
+.radio-box__button:disabled:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.radio-box__next {
+  border-top: var(--border-thin);
+  display: flex;
+  flex-direction: column;
+  font-size: .9375rem;
+  gap: .125rem;
+  grid-area: next;
+  line-height: 1.4;
+  margin: .75rem -.875rem 0;
+  min-width: 0;
+  padding: .75rem .875rem;
+}
+
+.radio-box__next-title {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.radio-box__next-title a {
+  font-weight: 700;
+}
+
+.radio-box__by {
+  align-items: center;
+  display: flex;
+  font-size: .8125rem;
+  gap: .375rem;
+}
+
+.radio-box__by:empty {
+  display: none;
+}
+
+.radio-box__by .avatar {
+  --avatar: 1.125rem;
+  border-width: 1px;
+}
+
+/* En orden / Al azar: the chosen one black */
+.radio-box__order {
+  border-top: var(--border-thin);
+  display: flex;
+  gap: .5rem;
+  padding: .75rem .875rem;
+}
+
+.radio-box__order-button {
+  align-items: center;
+  background: var(--paper);
+  border: var(--border-thin);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  font: inherit;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.radio-box__order-button:hover {
+  text-decoration: underline;
+}
+
+.radio-box__order-button[aria-checked="true"] {
+  background: var(--ink);
+  color: var(--paper);
+  cursor: default;
+  text-decoration: none;
+}
+
+/* Icons for the head's order on phones */
+.radio-box__order--foot svg {
+  display: none;
+}
+
+/* "Radio" in the header menu while it plays: a dot */
+.header__menu a.is-playing::before {
+  background: currentColor;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  margin-right: .5rem;
+  vertical-align: middle;
+  width: 8px;
+}
+
+/* Narrow screens (no split view): the box goes first, sticky at the top, with one row of controls under
+   the video (previous, the next title, next); the order moves to its head as two icons; the tabs, where
+   the list comes from and the line are left out. The side column lets go of its children
+   (display: contents, no DOM move: the live iframe would reload) so the box can stick along the post */
+@container app (max-width: 59.99rem) {
+  .radio-on .post-view {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .radio-on .post-view > .post-view__side {
+    display: contents;
+  }
+
+  .radio-on .post-view .players--radio {
+    border-width: 0 0 3px;
+    box-shadow: none;
+    /* Edge to edge: over the page's side padding (.app-wrapper) */
+    margin: 0 -2rem;
+    order: -1;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+  @media (max-width: 40rem) {
+    .radio-on .post-view .players--radio {
+      margin: 0 -1rem;
+    }
+  }
+
+  .radio-on .post-view__side > :not(.players) {
+    margin-top: 1.5rem;
+  }
+
+  .players--radio .players__tabs,
+  .radio-box__from,
+  .radio-box__progress,
+  .radio-box__order--foot,
+  .radio-box__text,
+  .radio-box__lead--long {
+    display: none;
+  }
+
+  .radio-box__scope {
+    display: inline;
+  }
+
+  .radio-box__lead--short {
+    display: inline;
+  }
+
+  .radio-box__order.radio-box__order--head {
+    border: 2px solid var(--paper);
+    display: flex;
+    flex: none;
+    gap: 0;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .radio-box__order--head .radio-box__order-button {
+    background: var(--ink);
+    border: 0;
+    color: var(--paper);
+    flex: none;
+    min-height: 32px;
+    width: 36px;
+  }
+
+  .radio-box__order--head .radio-box__order-button[aria-checked="true"] {
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  .radio-box__nav {
+    grid-template-areas: "previous next skip";
+    grid-template-columns: 3.5rem minmax(0, 1fr) 3.5rem;
+    padding: 0;
+  }
+
+  .radio-box__button {
+    border: 0;
+    min-height: 52px;
+  }
+
+  .radio-box__button--previous { border-right: var(--border-thin); }
+  .radio-box__button--skip { border-left: var(--border-thin); }
+
+  .radio-box__start {
+    margin: .5rem 1rem;
+  }
+
+  .radio-box__next {
+    border-top: 0;
+    font-size: .875rem;
+    gap: 0;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    padding: .375rem .625rem;
+  }
+
+  .radio-box__next-title {
+    display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .radio-bar__lead--long {
+  /* No room for the author here: the title alone */
+  .radio-box__by {
     display: none;
-  }
-
-  .radio-bar__lead--short {
-    display: inline;
-  }
-
-  .radio-bar__button {
-    font-size: .8125rem;
-    min-height: 36px;
-    padding: 0 .625rem;
-  }
-
-  .radio-bar__button--icon,
-  .radio-bar__button--stop,
-  .radio-bar__order .radio-bar__button {
-    padding: 0;
-    width: 36px;
-  }
-
-  .radio-bar__order .radio-bar__button[aria-checked="true"]::before,
-  .radio-bar__text {
-    display: none;
-  }
-
-  .radio-bar__order svg {
-    display: block;
   }
 }
 
