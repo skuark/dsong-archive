@@ -282,6 +282,11 @@
       if (nav) document.querySelector(`.post-nav--${position}`)?.replaceWith(document.importNode(nav, true));
     }
 
+    // "Si te gusta X" (only posts whose artist has related ones): after the bottom navigation
+    document.querySelector('.post-related')?.remove();
+    const related = doc.querySelector('.post-related');
+    if (related) document.querySelector('.post-nav--bottom')?.after(document.importNode(related, true));
+
     document.title = doc.title;
     const canonical = doc.querySelector('link[rel="canonical"]');
     if (canonical) document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical.getAttribute('href'));
