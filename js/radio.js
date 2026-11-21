@@ -9,6 +9,10 @@
 // tabs are replaced, while the live YouTube panel stays where it is (moving an iframe in the DOM
 // reloads it) and loads the next video through its API. The URL is updated
 // with pushState.
+// Cinema mode (the button beside the close one, or the C key; Esc or the same button leave it), like YouTube's
+// theater mode: under the site's header, a black band edge to edge with the video, and under it one row (what's
+// playing, previous/next, the way out) that stays at the top of the window when the page scrolls on. Only CSS
+// classes and a measured sticky top (no DOM move, so the video goes on).
 (function() {
   const toggle = document.querySelector('.radio-toggle');
   if (!toggle) return;
@@ -37,7 +41,6 @@
       pageLink?.setAttribute('aria-current', 'page');
     }
   }
-  let progressTimer = null;
 
   const idOf = (path) => (path.match(/\/archive\/([^/]+)\.html$/) || [])[1];
   let list = null;          // [[id, title, youtubeCode], ...] from /radio.json
@@ -172,6 +175,8 @@
       if (playing || !active) { clearInterval(watchTimer); return; }
       ticks += 1;
       const state = player.getPlayerState?.();
+      // Already playing (the listener started this video before the radio: no state change comes)
+      if (state === YT.PlayerState.PLAYING) { started(); return; }
       const buffering = state === YT.PlayerState.BUFFERING;
       const ready = (player.getDuration?.() || 0) > 0 && !buffering;
       readyFor = ready ? readyFor + 1 : 0;
@@ -350,6 +355,7 @@
           <button class="radio-box__order-button" type="button" role="radio" data-action="order" data-shuffle="false" aria-checked="true" aria-label="En orden"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="radio-box__text">En orden</span></button>
           <button class="radio-box__order-button" type="button" role="radio" data-action="order" data-shuffle="true" aria-checked="false" aria-label="Al azar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span class="radio-box__text">Al azar</span></button>
         </span>
+      <button class="radio-box__cinema" type="button" data-action="cinema" aria-pressed="false" title="Modo cine (C)" aria-label="Modo cine"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="1.5"/><path d="M2.5 16h19"/><path class="radio-box__cinema-in" d="M9.5 7.5L7 10l2.5 2.5M14.5 7.5L17 10l-2.5 2.5"/><path class="radio-box__cinema-out" d="M7 7.5L9.5 10 7 12.5M17 7.5L14.5 10l2.5 2.5"/></svg><span class="radio-box__cinema-label radio-box__cinema-in">Modo cine</span></button>
       <button class="radio-box__stop" type="button" data-action="stop" aria-label="Salir del modo radio">×</button>`;
     let from = null;
     if (scope?.name) {
@@ -365,7 +371,7 @@
     const controls = document.createElement('div');
     controls.className = 'radio-box';
     controls.innerHTML = `
-      <span class="radio-box__progress" aria-hidden="true"><span></span></span>
+      <p class="radio-box__now" aria-live="polite"><span class="kicker radio-box__now-label">Suena</span><span class="radio-box__now-title"></span><span class="radio-box__now-by"></span></p>
       <button class="radio-box__start" type="button" data-action="play" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>Empezar</button>
       <div class="radio-box__nav">
         <button class="radio-box__button radio-box__button--previous" type="button" data-action="previous" aria-label="Anterior" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg><span class="radio-box__text">Anterior</span></button>
@@ -381,20 +387,49 @@
     players.append(controls);
     box = { head, from, controls };
     for (const part of [head, controls]) part.addEventListener('click', onBoxClick);
-    // How far the song is: a thin line under the video
-    const line = controls.querySelector('.radio-box__progress span');
-    progressTimer = setInterval(() => {
-      const duration = youtube?.getDuration?.() || 0;
-      line.style.width = duration ? `${Math.min(100, (youtube.getCurrentTime() / duration) * 100)}%` : '0';
-    }, 500);
     document.body.classList.add('radio-on');
     setMenu(true);
     updateBox();
   }
 
+  // Cinema mode: a class on the box and the page (css/bundle.css). The box is sticky with a negative top as
+  // tall as the band over its row (the video), so scrolling down leaves the row at the top of the
+  // window; measured again when the window or the row change size.
+  const cinemaBox = () => document.querySelector('.players--cinema');
+  // Only with the split view's room (60rem, as css/bundle.css): on narrow screens the box already goes first
+  const cinemaFits = () => (document.querySelector('.app')?.clientWidth ?? 0) >= 960;
+  const cinemaSize = new ResizeObserver(() => {
+    const players = cinemaBox();
+    if (!players) return;
+    if (!cinemaFits()) { setCinema(false); return; }
+    const band = players.querySelector('.players__panel--youtube');
+    players.style.setProperty('--cinema-top', `${-(band.offsetTop + band.offsetHeight)}px`);
+  });
+
+  function setCinema(on) {
+    const players = document.querySelector('.players');
+    if (!players || (on && !cinemaFits())) return;
+    if (on === players.classList.contains('players--cinema')) return;
+    players.classList.toggle('players--cinema', on);
+    document.documentElement.classList.toggle('radio-cinema', on);
+    const button = box?.head.querySelector('[data-action="cinema"]');
+    if (button) {
+      button.setAttribute('aria-pressed', String(on));
+      button.title = on ? 'Salir del modo cine (Esc)' : 'Modo cine (C)';
+      button.setAttribute('aria-label', on ? 'Salir del modo cine' : 'Modo cine');
+    }
+    if (on) {
+      cinemaSize.observe(players);
+    } else {
+      cinemaSize.disconnect();
+      players.style.removeProperty('--cinema-top');
+    }
+    window.scrollTo({ top: 0 });
+  }
+
   function hideBox() {
     if (!box) return;
-    clearInterval(progressTimer);
+    setCinema(false);
     box.head.remove();
     box.from?.remove();
     box.controls.remove();
@@ -406,7 +441,10 @@
   function onBoxClick(e) {
     const target = e.target.closest('[data-action]');
     const action = target?.dataset.action;
-    if (action === 'play') youtube?.playVideo();
+    if (action === 'play') {
+      if (youtube?.getPlayerState?.() === YT.PlayerState.PLAYING) started();
+      else youtube?.playVideo();
+    }
     if (action === 'order') {
       const wanted = target.dataset.shuffle === 'true';
       if (wanted === shuffle) return;
@@ -417,6 +455,7 @@
     if (action === 'previous' && previous.length) advance(previous.pop(), { back: true });
     if (action === 'skip') advance();
     if (action === 'stop') stop();
+    if (action === 'cinema') setCinema(!document.querySelector('.players--cinema'));
   }
 
   function setNeedsClick(needed) {
@@ -437,6 +476,9 @@
       button.setAttribute('aria-checked', String((button.dataset.shuffle === 'true') === shuffle));
     }
     box.controls.querySelector('[data-action="previous"]').disabled = !previous.length;
+    // What's playing (shown in cinema mode): the post's heading and its "de …" line
+    box.controls.querySelector('.radio-box__now-title').textContent = document.querySelector('.post-view__title')?.textContent.trim() ?? '';
+    box.controls.querySelector('.radio-box__now-by').textContent = document.querySelector('.post-view__by')?.textContent.trim().replace(/\s+/g, ' ') ?? '';
     const i = indexOf(currentId);
     box.head.querySelector('.radio-box__position').textContent = i >= 0 ? ` ${(i + 1).toLocaleString('es')} de ${list.length.toLocaleString('es')}` : '';
     const next = upcoming;
@@ -469,6 +511,14 @@
   }
 
   toggle.addEventListener('click', () => start());
+
+  // C: cinema mode on and off; Esc: off (outside text fields; keys pressed inside the video stay in it)
+  document.addEventListener('keydown', (e) => {
+    if (!box || e.metaKey || e.ctrlKey || e.altKey || e.target.closest?.('input, textarea, select, [contenteditable]')) return;
+    const on = !!document.querySelector('.players--cinema');
+    if (e.key === 'Escape' && on) { e.preventDefault(); setCinema(false); }
+    if (e.key.toLowerCase() === 'c') setCinema(!on);
+  });
   if (shuffle || scope) start();
 
   document.addEventListener('click', (e) => {

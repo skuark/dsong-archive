@@ -2930,7 +2930,7 @@ button.chip {
 }
 
 /* Radio mode (js/radio.js): the post's players box is the radio. A black head (Radio, where it is in the
-   list, close), where the list comes from, the video and a line with how far it is, previous/next, what
+   list, close), where the list comes from, the video, previous/next, what
    comes next with its author, the order; the player tabs go to its foot. Bigger border and shadow: the
    current state */
 .players--radio {
@@ -2961,6 +2961,7 @@ button.chip {
 }
 
 .radio-box__title {
+  flex: 1;
   font-size: .75rem;
   font-weight: 700;
   letter-spacing: .12em;
@@ -3012,19 +3013,6 @@ button.chip {
   display: flex;
   flex-direction: column;
   order: 5;
-}
-
-.radio-box__progress {
-  background: var(--rule);
-  display: block;
-  height: 4px;
-}
-
-.radio-box__progress span {
-  background: var(--ink);
-  display: block;
-  height: 100%;
-  width: 0;
 }
 
 .radio-box__start {
@@ -3190,9 +3178,311 @@ button.chip {
   width: 8px;
 }
 
+/* What's playing: only in cinema mode */
+.radio-box__now {
+  display: none;
+}
+
+/* Cinema button, beside the close one: four corners out (on) or in (off) */
+.radio-box__cinema {
+  align-items: center;
+  background: transparent;
+  border: 2px solid var(--paper);
+  color: var(--paper);
+  cursor: pointer;
+  display: flex;
+  flex: none;
+  font: inherit;
+  font-size: .75rem;
+  font-weight: 700;
+  gap: .375rem;
+  letter-spacing: .08em;
+  min-height: 32px;
+  padding: 0 .625rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.radio-box__cinema:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+/* In cinema mode the way out is the one yellow button in the head */
+.radio-box__cinema[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.radio-box__cinema[aria-pressed="true"]:hover {
+  background: var(--paper);
+  border-color: var(--paper);
+}
+
+.radio-box__cinema-out,
+.radio-box__cinema[aria-pressed="true"] .radio-box__cinema-in {
+  display: none;
+}
+
+.radio-box__cinema[aria-pressed="true"] .radio-box__cinema-out {
+  display: inline;
+}
+
+/* Cinema mode (js/radio.js), like YouTube's theater mode: under the site's header, a black band edge to edge
+   with only the video, as big as fits; under it, one dark row, as the band: what's playing, previous/next
+   and the way out. The rest of the page goes on under it, in one column; scrolling down, the band goes up out
+   of sight (the video still plays: it doesn't move in the DOM) and the row stays at the top of the window:
+   the box is sticky, with a negative top as tall as the band (--cinema-top, js/radio.js). The box's parts
+   (head, controls) let go of their children (display: contents) so they line up in that row; the rest of
+   the radio box (where it is in the list, the order, what comes next, the tabs) stays out. The selectors
+   outweigh the split view and the narrow screens' sticky box */
+.radio-cinema .app {
+  overflow-x: clip;
+}
+
+.radio-cinema .post-view {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The site's header, as it is but lower: less room around it, a smaller logo, no rule */
+.radio-cinema .app-wrapper {
+  padding-top: .5rem;
+}
+
+.radio-cinema .header {
+  border-bottom: 0;
+  padding-bottom: .5rem;
+}
+
+.radio-cinema .header__logo-img {
+  height: 2.5rem;
+  margin: 0;
+}
+
+
+.radio-cinema .post-view {
+  padding-top: 0;
+}
+
+.radio-cinema .post-view > .post-view__side {
+  display: contents;
+}
+
+/* The rest of the page, one readable column under the video */
+.radio-cinema .post-view > :not(.post-view__side),
+.radio-cinema .post-view__side > :not(.players) {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48rem;
+  width: 100%;
+}
+
+.radio-cinema .post-view__side > :not(.players) {
+  margin-top: 1.5rem;
+}
+
+/* A grid: the band across; under it, what's playing (left, with the page's side room), then on the right
+   previous / what comes next / next and the way out (an icon, as YouTube's theater button) */
+.radio-on .post-view .players.players--cinema {
+  --cinema-side: max(1.25rem, (100vw - 90rem) / 2);
+  align-items: center;
+  background: #000;
+  border: 0;
+  box-shadow: none;
+  color: var(--paper);
+  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: var(--cinema-side) minmax(0, 1fr) auto auto var(--cinema-side);
+  margin: 0 0 1.5rem calc(50% - 50vw);
+  order: -1;
+  position: sticky;
+  top: var(--cinema-top, 0);
+  width: 100vw;
+  z-index: 5;
+}
+
+.players--cinema :is(.radio-box__head, .radio-box) {
+  display: contents;
+}
+
+.players.players--cinema :is(.radio-box__title, .radio-box__order, .radio-box__stop, .radio-box__from, .players__tabs),
+.players--cinema .players__panel:not(.players__panel--youtube) {
+  display: none;
+}
+
+/* The band: black, the video 16:9 inside it, leaving room for the header above and the row under it */
+.players--cinema .players__panel--youtube {
+  align-items: center;
+  background: #000;
+  container-type: size;
+  display: flex;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  /* Room for the header, the row and a strip of the page under it (so it reads as scrollable) */
+  height: min(56.25vw, 100dvh - 12.5rem);
+  justify-content: center;
+}
+
+.players--cinema .post-view__media-container {
+  width: min(100cqw, 100cqh * 16 / 9);
+}
+
+.players--cinema .radio-box__start {
+  grid-column: 2 / 5;
+  grid-row: 2;
+  justify-self: start;
+  margin: .75rem 0 0;
+}
+
+.players--cinema .radio-box__now {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .125rem .625rem;
+  grid-column: 2;
+  grid-row: 3;
+  margin: .75rem 0;
+  min-width: 0;
+}
+
+.players--cinema .radio-box__now-label {
+  display: none;
+}
+
+.players--cinema .radio-box__now-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  line-height: 1.15;
+}
+
+.players--cinema .radio-box__now-by {
+  color: #bbb;
+}
+
+.players--cinema .radio-box__nav {
+  align-items: center;
+  column-gap: 1rem;
+  display: flex;
+  grid-column: 3;
+  grid-row: 3;
+  padding: .5rem 0;
+}
+
+/* What comes next, between previous and next, as in the radio box: the lead, the title and its author */
+.players--cinema .radio-box__next {
+  border: 0;
+  margin: 0;
+  max-width: 22rem;
+  min-width: 0;
+  padding: 0;
+}
+
+.players--cinema .radio-box__lead {
+  color: #bbb;
+}
+
+.players--cinema .radio-box__next-title {
+  gap: .125rem;
+  min-width: 0;
+}
+
+.players--cinema .radio-box__next-title a {
+  color: var(--paper);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.players--cinema .radio-box__by {
+  color: #bbb;
+}
+
+/* Links on the dark row: yellow text on hover, as previous/next (not the site's yellow highlight) */
+.players--cinema a:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.players--cinema .radio-box__cover {
+  border-color: #333;
+}
+
+/* Quiet controls on the dark row, all 40px high: previous/next as plain links (white, yellow on hover), the
+   way out as an outlined button; no yellow fills (the video is the main thing here) */
+.players--cinema .radio-box__button,
+.players--cinema .radio-box__button--skip {
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--paper);
+  flex: none;
+  height: 40px;
+  min-height: 0;
+  padding: 0 .5rem;
+}
+
+/* The icons centered on the lowercase letters (most of "Anterior", "Siguiente"), not on the capitals */
+.players--cinema .radio-box__button svg {
+  transform: translateY(1.5px);
+}
+
+.players--cinema .radio-box__button:hover {
+  background: transparent;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.players--cinema .radio-box__button:disabled,
+.players--cinema .radio-box__button:disabled:hover {
+  background: transparent;
+  color: var(--paper);
+  opacity: .35;
+  text-decoration: none;
+}
+
+.players--cinema .radio-box__cinema,
+.players--cinema .radio-box__cinema[aria-pressed="true"] {
+  background: transparent;
+  border: 0;
+  color: var(--paper);
+  grid-column: 4;
+  grid-row: 3;
+  height: 40px;
+  justify-content: center;
+  min-height: 0;
+  padding: 0;
+  width: 40px;
+}
+
+.players--cinema .radio-box__cinema:hover,
+.players--cinema .radio-box__cinema[aria-pressed="true"]:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.players--cinema .radio-box__cinema-label {
+  display: none;
+}
+
+.players--cinema .radio-box__cinema svg {
+  height: 24px;
+  width: 24px;
+}
+
+/* Narrow screens: no cinema mode (the box already goes first there, edge to edge; js/radio.js leaves it) */
+@container app (max-width: 59.99rem) {
+  .radio-box__cinema {
+    display: none;
+  }
+}
+
 /* Narrow screens (no split view): the box goes first, sticky at the top, with one row of controls under
    the video (previous, the next title, next); the order moves to its head as two icons; the tabs, where
-   the list comes from and the line are left out. The side column lets go of its children
+   the list comes from are left out. The side column lets go of its children
    (display: contents, no DOM move: the live iframe would reload) so the box can stick along the post */
 @container app (max-width: 59.99rem) {
   .radio-on .post-view {
@@ -3232,7 +3522,6 @@ button.chip {
 
   .players--radio .players__tabs,
   .radio-box__from,
-  .radio-box__progress,
   .radio-box__order--foot,
   .radio-box__text,
   .radio-box__lead--long {
