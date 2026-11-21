@@ -119,8 +119,8 @@ permalink: "archive/{{ post.id }}.html"
   {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
 
 
-  {#- Side column (sticky in the desktop split view, after the text on narrow screens): players, podcast, Ficha #}
-  {%- set hasSide = (players | length) or m.podcast_file or (post.facts | length) or series %}
+  {#- Side column (sticky in the desktop split view, after the text on narrow screens): players, podcast, series #}
+  {%- set hasSide = (players | length) or m.podcast_file or series %}
   {%- if hasSide %}<aside class="post-view__side">{% endif %}
 
   {%- if players | length %}
@@ -206,11 +206,21 @@ permalink: "archive/{{ post.id }}.html"
     {%- endif %}
   </nav>
   {%- endif %}
+  {%- if hasSide %}
+  </aside>
+  {%- endif %}
+
+
   {#- Ficha (lib/facts.js): everything we know about the post, linked to the archive and its sources.
-      In the side column, under the players; radio mode swaps it with the post. -#}
+      A folded card over the comments, like them; radio mode swaps it with the post. -#}
   {%- if post.facts | length %}
-  <section class="post-facts" aria-labelledby="post-facts-title">
-    <h2 class="kicker post-facts__title" id="post-facts-title">Ficha</h2>
+  <details class="fold post-facts">
+    <summary class="fold__summary">
+      <svg class="fold__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+      <h2 class="fold__text"><strong class="display">Ficha</strong> artista, disco, año y dónde escucharlo</h2>
+      <span class="fold__toggle" aria-hidden="true"><span class="fold__show">Ver</span><span class="fold__hide">Ocultar</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+    </summary>
+    <div class="post-facts__body">
     {#- Its groups (the music, then the post on dSong) without headings: a rule between them #}
     {%- for group in post.facts %}
     <dl class="post-facts__list" aria-label="{{ group.title }}">
@@ -230,19 +240,16 @@ permalink: "archive/{{ post.id }}.html"
     </dl>
     {%- endfor %}
     <p class="post-facts__source">Datos de dSong, completados con <a href="https://musicbrainz.org/" rel="noopener" target="_blank">MusicBrainz ↗</a>.</p>
-  </section>
+    </div>
+  </details>
   {%- endif %}
-  {%- if hasSide %}
-  </aside>
-  {%- endif %}
-
 
   {% if post.comments and post.comments | length > 0 %}
-    <details class="post-view__comments">
-      <summary class="post-view__comments-summary">
-        <svg class="post-view__comments-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
-        <span class="post-view__comments-text"><strong class="display">{{ post.comments | length }} {{ "comentario" if post.comments | length == 1 else "comentarios" }}</strong> en el blog original</span>
-        <span class="post-view__comments-toggle" aria-hidden="true"><span class="post-view__comments-show">Ver</span><span class="post-view__comments-hide">Ocultar</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+    <details class="fold post-view__comments">
+      <summary class="fold__summary">
+        <svg class="fold__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+        <span class="fold__text"><strong class="display">{{ post.comments | length }} {{ "comentario" if post.comments | length == 1 else "comentarios" }}</strong> en el blog original</span>
+        <span class="fold__toggle" aria-hidden="true"><span class="fold__show">Ver</span><span class="fold__hide">Ocultar</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
       </summary>
       <ul>
         {% for comment in post.comments %}
@@ -268,35 +275,11 @@ permalink: "archive/{{ post.id }}.html"
       </ul>
     </details>
   {% endif %}
+  {#- Related artists (ListenBrainz): a link to that section of the artist's page; js/radio.js swaps it #}
+  {%- if archive.relatedArtists[post.slugs.artist] %}
+  <a class="post-view__related" href="/archive/artists/{{ post.slugs.artist }}.html#artistas-relacionados">Artistas como {{ post.metadata.artist }} →</a>
+  {%- endif %}
 </div>
 
 {{ postNav("bottom", prevPost, nextPost) }}
 
-{#- Cross navigation: posts of artists related to this one (archive.relatedPosts, from ListenBrainz), each the
-    one nearest in date; js/radio.js swaps it with the post #}
-{%- set relatedPosts = archive.relatedPosts[post.id] %}
-{%- if relatedPosts %}
-<section class="post-related" aria-labelledby="post-related-title">
-  <h2 class="post-related__title" id="post-related-title"><span class="kicker">Si te gusta {{ post.metadata.artist }}</span></h2>
-  <div class="post-nav post-related__cards">
-    {%- for item in relatedPosts %}
-    {%- set photo = archive.artistImages[item.artist.slug] %}
-    {%- set initial = archive.artistInitials[item.artist.slug] %}
-    <a class="post-nav__link{% if photo or initial %} post-nav__link--image{% endif %}" href="/archive/{{ item.post.id }}.html">
-      {%- if photo or initial %}
-      <span class="post-nav__photo" aria-hidden="true">
-        {%- if initial %}<span class="display post-nav__initial">{{ initial }}</span>{% endif %}
-        {%- if photo %}<img src="{{ photo.src }}" alt="" title="Foto: {{ photo.credit }}" loading="lazy" decoding="async" width="72" height="72" onerror="this.remove()">{% endif -%}
-      </span>
-      {%- endif %}
-      <span class="post-nav__text">
-        <span class="post-nav__label">{{ item.artist.name }}</span>
-        <span class="post-nav__title">{{ item.post.title }}</span>
-        <span class="post-nav__editor">{{ item.post.editor.name }}</span>
-      </span>
-    </a>
-    {%- endfor %}
-  </div>
-  <a class="post-related__more" href="/archive/artists/{{ post.slugs.artist }}.html#artistas-relacionados">Más artistas como {{ post.metadata.artist }} →</a>
-</section>
-{%- endif %}

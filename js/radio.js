@@ -241,9 +241,23 @@
     current.querySelector('.post-view__header').innerHTML = next.querySelector('.post-view__header').innerHTML;
     current.querySelector('.post-view__content').replaceWith(document.importNode(next.querySelector('.post-view__content'), true));
 
+    // Under the side column: the Ficha (open or folded as the listener left it), then the comments
+    const side = current.querySelector('.post-view__side');
     current.querySelector('.post-view__comments')?.remove();
     const comments = next.querySelector('.post-view__comments');
-    if (comments) current.querySelector('.post-view__side').after(document.importNode(comments, true));
+    if (comments) side.after(document.importNode(comments, true));
+    const wasOpen = current.querySelector('.post-facts')?.open;
+    current.querySelector('.post-facts')?.remove();
+    const facts = next.querySelector('.post-facts');
+    if (facts) {
+      const node = document.importNode(facts, true);
+      if (wasOpen) node.open = true;
+      side.after(node);
+    }
+    // The link to the artist's related artists: last in the post
+    current.querySelector('.post-view__related')?.remove();
+    const related = next.querySelector('.post-view__related');
+    if (related) current.append(document.importNode(related, true));
 
     // Players: new tabs; panels without a live player are replaced by the new post's ones, which
     // wait in data-src, hidden (play() shows the right one). Live panels stay in place.
@@ -268,24 +282,17 @@
     const podcast = next.querySelector('.podcast');
     if (podcast) current.querySelector('.post-view__side .players').after(document.importNode(podcast, true));
 
-    // Festival series, then the Ficha: last in the side column, under the players
+    // Festival series: last in the side column, under the players
     current.querySelector('.series')?.remove();
     const series = next.querySelector('.series');
     if (series) current.querySelector('.post-view__side').append(document.importNode(series, true));
 
-    current.querySelector('.post-facts')?.remove();
-    const facts = next.querySelector('.post-facts');
-    if (facts) current.querySelector('.post-view__side').append(document.importNode(facts, true));
 
     for (const position of ['top', 'bottom']) {
       const nav = doc.querySelector(`.post-nav--${position}`);
       if (nav) document.querySelector(`.post-nav--${position}`)?.replaceWith(document.importNode(nav, true));
     }
 
-    // "Si te gusta X" (only posts whose artist has related ones): after the bottom navigation
-    document.querySelector('.post-related')?.remove();
-    const related = doc.querySelector('.post-related');
-    if (related) document.querySelector('.post-nav--bottom')?.after(document.importNode(related, true));
 
     document.title = doc.title;
     const canonical = doc.querySelector('link[rel="canonical"]');

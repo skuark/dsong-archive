@@ -108,7 +108,7 @@ a:hover {
 .kicker,
 .archive-search__count,
 .post-nav__label,
-.post-view__comments-summary,
+.fold__summary,
 .players__tab {
   font-size: .75rem;
   font-weight: 700;
@@ -597,6 +597,12 @@ button.chip {
 
 .artist-albums {
   margin-top: 3rem;
+}
+
+.artist-albums__lead {
+  color: var(--muted);
+  font-size: .875rem;
+  margin: 0;
 }
 
 .artist-posts__head {
@@ -2239,15 +2245,11 @@ button.chip {
   margin-left: auto;
 }
 
-/* The author's text: the first paragraph bigger, as a lead */
+/* The author's text: every paragraph at the size of a lead */
 .post-view__content {
-  font-size: 1.125rem;
-  margin-top: 1.25rem;
-}
-
-.post-view__content > p:first-child {
   font-size: 1.375rem;
   line-height: 1.5;
+  margin-top: 1.25rem;
 }
 
 .post-view__content p {
@@ -2269,22 +2271,11 @@ button.chip {
   list-style: disc;
 }
 
-/* Ficha (lib/facts.js): a 2px box under the players, label + values in two columns */
-.post-facts {
-  border: var(--border-thin);
-  box-shadow: var(--shadow-small);
+/* Ficha (lib/facts.js): a folded card over the comments (.fold), label + values in two columns */
+.post-facts__body {
   font-size: .875rem;
   line-height: 1.5;
   padding: 1.25rem;
-}
-
-/* The box's heading: a yellow band across its top, like the players' tabs, so it doesn't read as one more
-   group label (Música, dSong) */
-.post-facts__title {
-  background: var(--accent);
-  border-bottom: var(--border-thin);
-  margin: -1.25rem -1.25rem 1rem;
-  padding: .75rem 1.25rem;
 }
 
 /* The Ficha's groups (Música, dSong), with no heading: a rule between them */
@@ -2337,9 +2328,9 @@ button.chip {
   margin: .875rem 0 0;
 }
 
-/* Comments: a card like the Ficha's (2px box, small shadow), closed until asked for (kept as they were
-   in 2017): an icon, the count in the display font and a "Ver / Ocultar" toggle at the right */
-.post-view__comments {
+/* Folded cards under the text (the Ficha, then the comments): a 2px box with a small shadow, closed until
+   asked for: an icon, its name in the display font and a "Ver / Ocultar" toggle at the right */
+.fold {
   background: var(--paper);
   border: var(--border-thin);
   box-shadow: var(--shadow-small);
@@ -2347,7 +2338,11 @@ button.chip {
   margin-top: 2rem;
 }
 
-.post-view__comments-summary {
+.fold + .fold {
+  margin-top: 1rem;
+}
+
+.fold__summary {
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -2360,29 +2355,30 @@ button.chip {
   text-transform: none;
 }
 
-.post-view__comments-summary:hover {
+.fold__summary:hover {
   background: var(--accent);
 }
 
-.post-view__comments-summary::-webkit-details-marker {
+.fold__summary::-webkit-details-marker {
   display: none;
 }
 
-.post-view__comments-icon {
+.fold__icon {
   flex: none;
 }
 
-.post-view__comments-text {
+.fold__text {
   flex: 1;
+  font: inherit;
   min-width: 0;
 }
 
-.post-view__comments-text strong {
+.fold__text strong {
   font-size: 1.25rem;
   margin-right: .25rem;
 }
 
-.post-view__comments-toggle {
+.fold__toggle {
   align-items: center;
   display: inline-flex;
   flex: none;
@@ -2393,24 +2389,24 @@ button.chip {
   text-transform: uppercase;
 }
 
-.post-view__comments-toggle svg {
+.fold__toggle svg {
   transition: transform .2s ease;
 }
 
-.post-view__comments[open] .post-view__comments-toggle svg {
+.fold[open] .fold__toggle svg {
   transform: rotate(180deg);
 }
 
-.post-view__comments-hide,
-.post-view__comments[open] .post-view__comments-show {
+.fold__hide,
+.fold[open] .fold__show {
   display: none;
 }
 
-.post-view__comments[open] .post-view__comments-hide {
+.fold[open] .fold__hide {
   display: inline;
 }
 
-.post-view__comments[open] .post-view__comments-summary {
+.fold[open] .fold__summary {
   border-bottom: var(--border-thin);
 }
 
@@ -3188,6 +3184,20 @@ button.chip {
   margin-top: 4rem;
 }
 
+/* The foot's navigation: a 3px rule ends the post over it */
+.post-nav--bottom {
+  border-top: var(--border);
+  padding-top: 2.5rem;
+}
+
+/* The link to the artist's related artists, last in the post */
+.post-view__related {
+  display: inline-block;
+  font-weight: 700;
+  justify-self: start;
+  margin-top: 2rem;
+}
+
 .post-nav__link {
   background: var(--paper);
   border: var(--border);
@@ -3263,28 +3273,6 @@ button.chip {
   object-position: top;
   position: absolute;
   width: 100%;
-}
-
-/* "Si te gusta X": up to three posts of related artists, under the previous/random/next cards */
-.post-related {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 3rem;
-}
-
-.post-related__title {
-  border-top: var(--border);
-  margin: 0;
-  padding-top: 1rem;
-}
-
-.post-related__cards {
-  margin-top: 0;
-}
-
-.post-related__more {
-  font-weight: 700;
 }
 
 /* Order: previous, random, next, whichever exist */
@@ -3621,7 +3609,7 @@ button.chip {
   font-size: 1.5rem;
 }
 
-/* The side column (podcast, players, Ficha) after the text on narrow screens */
+/* The side column (podcast, players, series) after the text on narrow screens */
 .post-view__side {
   display: flex;
   flex-direction: column;
@@ -3633,7 +3621,7 @@ button.chip {
   display: none;
 }
 
-/* Desktop split view: the author's text first, filling the room left; podcast, players and Ficha sticky on the right,
+/* Desktop split view: the author's text first, filling the room left; podcast, players and series sticky on the right,
    smaller. By the page's room (container), not the window. */
 @container app (min-width: 60rem) {
   .post-view {
@@ -3661,7 +3649,7 @@ button.chip {
     margin-top: 0;
     /* Sticky without scrolling inside: a column taller than the window moves with the page, both ways,
        until its foot (going down) or its head (going up) shows, and stays there; js/post-side.js sets
-       that top (--side-top). Without JS, it sticks at the top */
+       that top (--side-top). Without JS, it sticks at the top; in radio mode, always at the top (the video stays whole) */
     --side-start: 1.5rem;
     position: sticky;
     top: var(--side-top, var(--side-start));

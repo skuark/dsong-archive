@@ -17,9 +17,8 @@ const relatedArtists = () => {
   try { return JSON.parse(readFileSync("data/related-artists.json", "utf8")); } catch { return {}; }
 };
 
-// Related artists of each artist page ({ name, slug, posts }, strongest first, at most 8) and, for each
-// post, up to three posts of its artist's related ones: of each, the post nearest in date (cross navigation
-// under the post, "Si te gusta X")
+// Related artists of each artist page ({ name, slug, posts }, strongest first, at most 8); a post whose
+// artist has them links that section ("Artistas como X")
 function relatedOf(artistGroups, mbids) {
   const related = relatedArtists();
   const groupOf = new Map();   // MBID -> artist group (artists linked one to one)
@@ -29,17 +28,7 @@ function relatedOf(artistGroups, mbids) {
     const list = related[mbids[group.name]]?.map(([id]) => groupOf.get(id)).filter((g) => g && g !== group) ?? [];
     if (list.length) byArtist[group.slug] = list.slice(0, 8);
   }
-  const byPost = {};
-  for (const group of artistGroups) {
-    const others = (byArtist[group.slug] ?? []).slice(0, 3);
-    if (!others.length) continue;
-    for (const post of group.posts) {
-      const time = Date.parse(post.published_at);
-      byPost[post.id] = others.map((other) => ({ artist: other, post: other.posts
-        .reduce((best, p) => (Math.abs(Date.parse(p.published_at) - time) < Math.abs(Date.parse(best.published_at) - time) ? p : best)) }));
-    }
-  }
-  return { byArtist, byPost };
+  return { byArtist };
 }
 
 // Links to the artist's MusicBrainz page(s): a collaboration ([{ name, mbid }]) links each of its artists.
@@ -83,16 +72,17 @@ function onThisDay(posts) {
 }
 
 // Artist page extras from its latest post: country (name + slug of its page), official site, and the albums
-// its posts present ({ name, slug, count }, in order of appearance)
+// its posts present ({ name, slug, year, count }, oldest first; no year last, in order of appearance)
 function artistDetails(group) {
   const latest = group.posts.at(-1);
   const country = groupBy("country", [latest])[0];
   const albums = {};
   for (const post of group.posts) {
     if (!post.slugs.album) continue;
-    (albums[post.slugs.album] ??= { name: post.metadata.album, slug: post.slugs.album, count: 0 }).count++;
+    (albums[post.slugs.album] ??= { name: post.metadata.album, slug: post.slugs.album, year: post.metadata.year, count: 0 }).count++;
   }
-  return { country: country && { name: country.name, slug: country.slug }, url: latest.metadata.artist_url, albums: Object.values(albums) };
+  const byYear = Object.values(albums).sort((a, b) => (Number(a.year) || 1e4) - (Number(b.year) || 1e4));
+  return { country: country && { name: country.name, slug: country.slug }, url: latest.metadata.artist_url, albums: byYear };
 }
 
 // A function, so it's recomputed on every build (and rebuild under `npm run serve`)
@@ -112,8 +102,8 @@ export default function () {
     // A bio only for artists linked one to one (not collaborations)
     byArtist: groupBy("artist").map((group) => ({ ...group, ...artistDetails(group), musicbrainz: musicbrainzLinks(mbids[group.name]),
       bio: typeof mbids[group.name] === "string" ? bios[mbids[group.name]] : undefined, related: related.byArtist[group.slug] ?? [] })),
-    // Post id -> [{ artist, post }…]: posts of related artists, under the post
-    relatedPosts: related.byPost,
+    // Artist slug -> its related artists (only artists with some): the post's link to them
+    relatedArtists: related.byArtist,
     // Artist slug -> its Commons photo { src, credit } (data/artist-bios.json), for the cards of /archive/artists/
     artistImages: Object.fromEntries(groupBy("artist").flatMap((group) => {
       const image = typeof mbids[group.name] === "string" && bios[mbids[group.name]]?.image;

@@ -71,6 +71,23 @@ pageClass: archive
   <a class="artist-posts__table" href="/archive/all/?q={{ artist.name | urlencode }}">Ver en la tabla del archivo →</a>
 </section>
 
+{#- Its albums the posts present, oldest first, as the related artists' cards: how many posts each, its year #}
+{%- if artist.albums | length %}
+<section class="artist-albums" aria-labelledby="artist-albums-title">
+  <h2 class="display artist-posts__title" id="artist-albums-title">Sus discos en dSong</h2>
+  <p class="artist-albums__lead">Los álbumes de las canciones de las que hemos escrito: cada uno lleva a sus artículos.</p>
+  <ol class="facet-cards">
+    {%- for album in artist.albums %}
+    <li><a class="facet-cards__card" href="/archive/albums/{{ album.slug }}.html">
+      <span class="display facet-cards__count">{{ album.count }}</span>
+      <span class="facet-cards__name">{{ album.name }}</span>
+      <span class="facet-cards__sub">{{ "artículo" if album.count == 1 else "artículos" }}{% if album.year %} del disco de {{ album.year }}{% endif %}</span>
+    </a></li>
+    {%- endfor %}
+  </ol>
+</section>
+{%- endif %}
+
 {#- Related artists (ListenBrainz: listened to in the same sessions), as the artist index's cards #}
 {%- if artist.related | length %}
 <section class="artist-related" id="artistas-relacionados" aria-labelledby="artist-related-title">
@@ -91,16 +108,5 @@ pageClass: archive
     {%- endfor %}
   </ol>
   <p class="artist-related__source">Según lo que se escucha junto en <a href="https://listenbrainz.org/" rel="noopener" target="_blank">ListenBrainz ↗</a>.</p>
-</section>
-{%- endif %}
-
-{%- if artist.albums | length %}
-<section class="artist-albums" aria-labelledby="artist-albums-title">
-  <h2 class="display artist-posts__title" id="artist-albums-title">Álbumes que aparecen</h2>
-  <div class="chips">
-    {%- for album in artist.albums %}
-    <a class="chip" href="/archive/albums/{{ album.slug }}.html">{{ album.name }}{% if album.count > 1 %} · {{ album.count }}{% endif %}</a>
-    {%- endfor %}
-  </div>
 </section>
 {%- endif %}
