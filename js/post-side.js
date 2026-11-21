@@ -1,4 +1,4 @@
-// The post's side column (players, podcast, Ficha) is sticky without scrolling inside (css/bundle.css).
+// The post's side column (players, podcast, festival series) is sticky without scrolling inside (css/bundle.css).
 // One taller than the window moves with the page, both ways, between two stops: its head under the top
 // of the window and its foot over the bottom. Its sticky top follows the scroll,
 // clamped between them, so it never jumps when the direction changes.
@@ -9,7 +9,9 @@
   let top = null;
   let lastY = scrollY;
   let frame = 0;
+  // In radio mode the box (the video) stays whole at the top: the column doesn't move by its foot
   const stops = () => {
+    if (document.body.classList.contains('radio-on')) return { start: gap, end: gap };
     return { start: gap, end: Math.min(gap, innerHeight - side.offsetHeight - gap) };
   };
   function update() {
@@ -29,7 +31,7 @@
   const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
   addEventListener('scroll', schedule, { passive: true });
   addEventListener('resize', schedule);
-  // Its height changes (radio mode swaps the Ficha and fills the players box, tabs change the players)
+  // Its height changes (radio mode fills the players box and swaps the series, tabs change the players)
   new ResizeObserver(schedule).observe(side);
   new MutationObserver(schedule).observe(document.body, { attributes: true, attributeFilter: ['class'] });
   update();

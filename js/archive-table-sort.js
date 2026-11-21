@@ -29,6 +29,14 @@
     header.addEventListener('click', () => handleSort(header));
   });
 
+  // ?sort=<data-key> (a link from the archive landing) sorts by that column on load; the URL follows the sort
+  function syncUrl(header) {
+    const url = new URL(window.location);
+    if (currentSortState && header.dataset.key) url.searchParams.set('sort', header.dataset.key);
+    else url.searchParams.delete('sort');
+    history.replaceState(null, '', url);
+  }
+
   function handleSort(header) {
     const col = parseInt(header.dataset.col);
     const sortType = header.dataset.sort;
@@ -51,12 +59,14 @@
       // Reset to original order
       currentSortCol = null;
       originalRows.forEach(row => tbody.appendChild(row));
+      syncUrl(header);
       return;
     }
 
-    // Set indicator
+    // Set indicator. Headers with data-first="desc" (comments: most first) start descending
     const indicator = header.querySelector('.sort-indicator');
-    if (currentSortState === 1) {
+    const ascending = (currentSortState === 1) !== (header.dataset.first === 'desc');
+    if (ascending) {
       header.classList.add('sort-asc');
       indicator.textContent = ' ▲';
     } else {
@@ -69,11 +79,11 @@
     // ("¿", "(", quotes); empty cells always last, whatever the direction.
     const value = (cell) => {
       if (sortType === 'date') return cell.dataset.value || '';
-      const text = cell.textContent.trim();
+      const text = cell.dataset.value ?? cell.textContent.trim();
       if (sortType === 'number') return text === '' ? '' : (parseInt(text, 10) || 0);
       return text.replace(/^[^\p{L}\p{N}]+/u, '') || text;   // all punctuation (an album "✝"): as is
     };
-    const sign = currentSortState === 1 ? 1 : -1;
+    const sign = ascending ? 1 : -1;
     const rows = Array.from(tbody.querySelectorAll('tr'));
     const keyed = rows.map((row) => ({ row, key: value(row.cells[col]) }));
     keyed.sort((a, b) => {
@@ -85,5 +95,10 @@
     const sortedRows = keyed.map(({ row }) => row);
 
     sortedRows.forEach(row => tbody.appendChild(row));
+    syncUrl(header);
   }
+
+  const sortKey = new URLSearchParams(window.location.search).get('sort');
+  const sortHeader = sortKey && [...headers].find((h) => h.dataset.key === sortKey);
+  if (sortHeader) handleSort(sortHeader);
 })();
