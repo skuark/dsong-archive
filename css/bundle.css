@@ -2008,6 +2008,16 @@ button.chip {
   font-weight: 700;
 }
 
+/* Album cover beside the album's name (a card's top right corner below 72rem) */
+.archive-table__cover {
+  border: 1px solid var(--rule);
+  float: left;
+  height: 2.5rem;
+  margin: .125rem .625rem .25rem 0;
+  object-fit: cover;
+  width: 2.5rem;
+}
+
 .archive__empty {
   font-size: 1.0625rem;
   padding: 2rem 0;
@@ -2121,6 +2131,23 @@ button.chip {
 
   .archive-table tbody tr[hidden] {
     display: none;
+  }
+
+  .archive-table tbody tr:has(.archive-table__cover) {
+    position: relative;
+  }
+
+  .archive-table tbody tr:has(.archive-table__cover) td.archive-table__cell--title {
+    padding-right: 4.5rem;
+  }
+
+  .archive-table .archive-table__cover {
+    height: 3.5rem;
+    margin: 0;
+    position: absolute;
+    right: .875rem;
+    top: .875rem;
+    width: 3.5rem;
   }
 
   /* The line break between the two meta lines */
@@ -2531,6 +2558,56 @@ button.chip {
   display: block;
   height: 100%;
   width: 100%;
+}
+
+/* Album cover (Cover Art Archive) in the side column: the image beside album, year and credit */
+.post-cover {
+  align-items: center;
+  background: var(--paper);
+  border: var(--border-thin);
+  box-shadow: var(--shadow-small);
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: .75rem;
+}
+
+.post-cover__image {
+  aspect-ratio: 1;
+  border: var(--border-thin);
+  flex: 0 0 7.5rem;
+  overflow: hidden;
+}
+
+.post-cover__image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.post-cover__caption {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  min-width: 0;
+}
+
+.post-cover__album {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+.post-cover__year {
+  color: var(--muted);
+}
+
+.post-cover__credit {
+  color: var(--muted);
+  font-size: .75rem;
+  margin-top: .25rem;
 }
 
 /* UniRadio Jaén podcast: own block above the players */
@@ -3022,6 +3099,21 @@ button.chip {
   padding: .75rem .875rem;
 }
 
+/* What comes next with its album cover: the cover on the left of the lead and the title */
+.radio-box__next:has(.radio-box__cover) {
+  column-gap: .75rem;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+}
+
+.radio-box__cover {
+  border: 1px solid var(--rule);
+  grid-row: span 2;
+  height: 2.5rem;
+  object-fit: cover;
+  width: 2.5rem;
+}
+
 .radio-box__next-title {
   display: flex;
   flex-direction: column;
@@ -3194,6 +3286,14 @@ button.chip {
 
   .radio-box__start {
     margin: .5rem 1rem;
+  }
+
+  .radio-box__next:has(.radio-box__cover) {
+    display: flex;
+  }
+
+  .radio-box__cover {
+    display: none;
   }
 
   .radio-box__next {

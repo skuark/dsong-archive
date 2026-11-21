@@ -282,6 +282,11 @@
     const podcast = next.querySelector('.podcast');
     if (podcast) current.querySelector('.post-view__side .players').after(document.importNode(podcast, true));
 
+    // Album cover: in the side column, under the players and the podcast
+    current.querySelector('.post-cover')?.remove();
+    const cover = next.querySelector('.post-cover');
+    if (cover) (current.querySelector('.post-view__side .podcast') ?? current.querySelector('.post-view__side .players')).after(document.importNode(cover, true));
+
     // Festival series: last in the side column, under the players
     current.querySelector('.series')?.remove();
     const series = next.querySelector('.series');
@@ -453,6 +458,13 @@
       const avatar = editor?.querySelector('.avatar');
       if (avatar) by.append(document.importNode(avatar, true));
       by.append(`${editor?.querySelector('.post-view__editor-name')?.textContent.trim() ?? ''} · ${shortDate(next[0])}`);
+      // Its album cover, beside it (hidden on phones)
+      const cover = doc.querySelector('.post-cover img');
+      if (cover) {
+        const img = Object.assign(new Image(40, 40), { className: 'radio-box__cover', alt: '', src: cover.getAttribute('src') });
+        img.onerror = () => img.remove();
+        slot.prepend(img);
+      }
     }).catch(() => { /* shown without its author */ });
   }
 

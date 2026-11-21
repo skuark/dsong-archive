@@ -119,8 +119,8 @@ permalink: "archive/{{ post.id }}.html"
   {%- if m.apple_music_url %}{% set players = players.concat([{ id: "apple-music", label: "Apple Music", type: "iframe", src: m.apple_music_url, height: (175 if "?i=" in m.apple_music_url else 450), title: "Reproductor de Apple Music" }]) %}{% endif %}
 
 
-  {#- Side column (sticky in the desktop split view, after the text on narrow screens): players, podcast, series #}
-  {%- set hasSide = (players | length) or m.podcast_file or series %}
+  {#- Side column (sticky in the desktop split view, after the text on narrow screens): players, podcast, cover, series #}
+  {%- set hasSide = (players | length) or m.podcast_file or post.cover or series %}
   {%- if hasSide %}<aside class="post-view__side">{% endif %}
 
   {%- if players | length %}
@@ -179,6 +179,21 @@ permalink: "archive/{{ post.id }}.html"
       <button class="podcast-player__speed" type="button" aria-label="Velocidad de reproducción">1×</button>
     </div>
   </section>
+  {%- endif %}
+
+  {#- The album's cover (Cover Art Archive, hotlinked: lib/posts.js `cover`), linked to its page; radio mode swaps it #}
+  {%- if post.cover %}
+  <figure class="post-cover">
+    {%- if post.slugs.album %}<a class="post-cover__image" href="/archive/albums/{{ post.slugs.album }}.html" tabindex="-1" aria-hidden="true">{% else %}<span class="post-cover__image">{% endif -%}
+    <img src="{{ post.cover.small }}" alt="" width="250" height="250" loading="lazy" decoding="async" onerror="this.closest('.post-cover').remove()">
+    {%- if post.slugs.album %}</a>{% else %}</span>{% endif %}
+    <figcaption class="post-cover__caption">
+      <span class="kicker">Álbum</span>
+      <span class="post-cover__album">{% if post.slugs.album %}<a href="/archive/albums/{{ post.slugs.album }}.html">{{ post.cover.album }}</a>{% else %}{{ post.cover.album }}{% endif %}</span>
+      {%- if m.year %}<span class="post-cover__year">{{ m.year }}</span>{% endif %}
+      <a class="post-cover__credit" href="https://musicbrainz.org/release-group/{{ post.musicbrainzMetadata.release_group }}" target="_blank" rel="noopener">Portada: Cover Art Archive ↗</a>
+    </figcaption>
+  </figure>
   {%- endif %}
 
   {#- On every post: radio mode may bring in a podcast block from another post #}
