@@ -104,6 +104,31 @@ pageClass: stats
       {%- endfor %}
     </div>
   </section>
+
+  <section class="stats-section">
+    <h3 class="kicker">Los más comentados</h3>
+    <ol class="ranking ranking--long">
+      {%- for item in stats.mostCommented.slice(0, 10) %}
+      <li><a href="/archive/{{ item.slug }}.html">{{ item.name }}</a><strong>{{ item.count }}</strong></li>
+      {%- endfor %}
+    </ol>
+    <details class="bars-more">
+      <summary>Ver {{ stats.mostCommented.length - 10 }} más</summary>
+      <ol class="ranking ranking--long" start="11">
+        {%- for item in stats.mostCommented.slice(10) %}
+        <li><a href="/archive/{{ item.slug }}.html">{{ item.name }}</a><strong>{{ item.count }}</strong></li>
+        {%- endfor %}
+      </ol>
+    </details>
+    <p>{{ stats.comments.total | thousands }} comentarios en {{ stats.comments.posts }} artículos, casi todos entre 2009 y 2012.</p>
+    <a class="stats-section__more" href="/archive/all/?sort=comments">Ordenar el archivo por comentarios →</a>
+  </section>
+
+  <section class="stats-section">
+    <h3 class="kicker">Quién comentaba más</h3>
+    {{ bars(stats.commenters, "/archive/editors/", 10) }}
+    <p>{{ stats.comments.people }} personas dejaron algún comentario; las que también escribían en dSong llevan a sus artículos.</p>
+  </section>
 </div>
 
 <section class="stats-section stats-section--wide">

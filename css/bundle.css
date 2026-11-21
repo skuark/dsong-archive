@@ -1687,6 +1687,11 @@ button.chip {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Long names (post titles): one column */
+.ranking--long {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .ranking li {
   border-bottom: 1px solid var(--rule);
   display: flex;
@@ -2017,7 +2022,7 @@ button.chip {
 }
 
 .archive-table__cell--title {
-  width: 23%;
+  width: 19%;
 }
 
 .archive-table__cell--album,
@@ -2037,6 +2042,33 @@ button.chip {
 /* Room for the avatar beside the name */
 .archive-table__cell--editor {
   width: 11%;
+}
+
+/* Comments: an icon and the count; the header's word shows only on the cards' sort chips */
+.archive-table__cell--comments {
+  width: 4%;
+}
+
+.archive-table .archive-table__cell--comments {
+  white-space: nowrap;
+}
+
+.archive-table__cell--comments svg {
+  margin-right: .25rem;
+  vertical-align: -.1875rem;
+}
+
+.archive-table th.archive-table__cell--comments svg {
+  margin-right: 0;
+}
+
+.archive-table__comments-label {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* Below the room the table needs: each post is a card (title; artist · album · year; date · category ·
@@ -2120,14 +2152,25 @@ button.chip {
     order: 1;
   }
 
-  .archive-table :is(td.archive-table__cell--published-at, td.archive-table__cell--category, td.archive-table__cell--editor) {
+  .archive-table th.archive-table__cell--comments svg {
+    display: none;
+  }
+
+  .archive-table .archive-table__comments-label {
+    clip-path: none;
+    height: auto;
+    position: static;
+    width: auto;
+  }
+
+  .archive-table :is(td.archive-table__cell--published-at, td.archive-table__cell--category, td.archive-table__cell--editor, td.archive-table__cell--comments) {
     color: var(--muted);
     font-size: .875rem;
     margin-top: .25rem;
     order: 3;
   }
 
-  .archive-table :is(td.archive-table__cell--album, td.archive-table__cell--year, td.archive-table__cell--category, td.archive-table__cell--editor)::before {
+  .archive-table :is(td.archive-table__cell--album, td.archive-table__cell--year, td.archive-table__cell--category, td.archive-table__cell--editor, td.archive-table__cell--comments)::before {
     color: var(--muted);
     content: "·";
     margin-right: .5rem;

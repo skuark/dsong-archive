@@ -46,6 +46,21 @@ export default function () {
     };
   });
 
+  // Comments of the original blog: the most commented posts, and who commented most (names that differ only in
+  // case or spaces are one person, shown as written most often; a name that's an author's links to their page)
+  const commented = posts.filter((post) => post.comments?.length);
+  const editors = new Map(groupBy("editor").map((g) => [g.name.toLowerCase(), g.slug]));
+  const commenters = Object.values(
+    Object.groupBy(
+      posts.flatMap((post) => post.comments ?? []).filter((comment) => comment.author?.name?.trim()),
+      (comment) => comment.author.name.trim().replace(/\s+/g, " ").toLowerCase(),
+    ),
+  ).map((list) => {
+    const spellings = countBy(list, (comment) => comment.author.name.trim().replace(/\s+/g, " "));
+    const name = spellings.toSorted((a, b) => b.count - a.count)[0].name;
+    return { name, slug: editors.get(name.toLowerCase()), count: list.length };
+  });
+
   const withGenre = posts.filter((post) => genreFamily(post.metadata.genre));
   const artists = groupBy("artist").filter((group) => group.name !== "Varios");
   return {
@@ -62,6 +77,14 @@ export default function () {
     // Full rankings: the page shows the top 10 and the rest under "Ver más" (artists: 3+ posts)
     editors: ranked(groupBy("editor").map((g) => ({ name: g.name, slug: g.slug, count: g.posts.length }))),
     artists: ranked(artists.filter((g) => g.posts.length >= 3).map((g) => ({ name: g.name, slug: g.slug, count: g.posts.length }))),
+    comments: {
+      total: commented.reduce((sum, post) => sum + post.comments.length, 0),
+      posts: commented.length,
+      people: commenters.length,
+    },
+    // Ties keep the posts' chronological order (toSorted is stable)
+    mostCommented: ranked(commented.map((post) => ({ name: post.title, slug: post.id, count: post.comments.length })), 25),
+    commenters: ranked(commenters.filter((c) => c.count >= 5)),
     genres: ranked(countBy(withGenre, (post) => genreFamily(post.metadata.genre))),
     genreTotal: withGenre.length,
     decades: withPct(DECADES.map((decade) => ({ name: decadeLabel(decade), count: dated.filter((post) => decadeOf(songYear(post)) === decade).length }))),

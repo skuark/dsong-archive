@@ -85,7 +85,8 @@ pages/                 Templates (permalinks set in each): index, 404, map, rand
   archive/             the archive: archive (landing), all, podcasts, <facet> pages and their indexes (artists, editors);
   feeds/               non-HTML outputs: sitemap, robots, podcast-feed (RSS), radio and on-this-day (JSON), fonts.11ty.js (CSS).
 _includes/layouts/     main.njk (head, SEO meta, header).
-_includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js), avatar.njk (an author's round Gravatar over their initials:
+_includes/partials/    archive-table.njk (sortable table, js/archive-table-sort.js; its last column counts the original blog's comments,
+                       most first, and `?sort=comments` opens it sorted that way), avatar.njk (an author's round Gravatar over their initials:
                        the post's byline and the table's Autor column).
 scripts/               validate-data.mjs, musicbrainz-players.mjs, check-links.mjs, check-media.mjs, find-youtube.mjs, find-spotify.mjs, review-youtube.mjs (+ .html),
                        match-musicbrainz.mjs, match-musicbrainz-posts.mjs, review-musicbrainz.mjs (+ .html), musicbrainz-artists.mjs, musicbrainz-diffs.mjs, audit-players.mjs, fix-players.mjs,
@@ -105,7 +106,7 @@ scripts/               validate-data.mjs, musicbrainz-players.mjs, check-links.m
 | `pages/archive/specials.njk` | `archive.specials` | `/archive/especiales/` (the especiales as cards, by shape: álbumes, festivales, listas y temas) |
 | `pages/proyecto.njk` | — | `/el-proyecto/` (the project's history by year, static HTML written by hand: "del archivo" milestones link a post, "contado" ones are told; team and readers from 5.dsong.es; in the header menu and the footer; eight figures on top, two rows of four) |
 | `pages/archive/all.njk` | `collections.posts` | `/archive/all/` (the full table) |
-| `pages/archive/archive.njk` | `stats` | `/archive/` (landing: search form + "dSong en cifras", static HTML/CSS charts, top 10s with a "Ver más" <details>) |
+| `pages/archive/archive.njk` | `stats` | `/archive/` (landing: search form + "dSong en cifras", static HTML/CSS charts, top 10s with a "Ver más" <details>, among them the most commented posts and who commented most (names merged only by case/spaces; authors link to their page)) |
 | `pages/map.njk` | `worldMap`, `archive.byCountry` | `/mapa/` (static SVG world map by artist nationality) |
 | `pages/rand.njk` | `archive.ids` | `/rand/` (redirects to a random post) |
 | `pages/feeds/radio.njk` | `archive.radio` | `/radio.json` (posts with a YouTube video, for radio mode) |

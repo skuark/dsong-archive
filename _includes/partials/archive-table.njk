@@ -49,6 +49,8 @@
         <th class="archive-table__cell--year sortable" data-sort="number" data-col="5">Año <span class="sort-indicator"></span></th>
         <th class="archive-table__cell--category sortable" data-sort="string" data-col="6">Categoría <span class="sort-indicator"></span></th>
         <th class="archive-table__cell--editor sortable" data-sort="string" data-col="7">Autor <span class="sort-indicator"></span></th>
+        {#- Comments in the original blog: an icon on the table, the word on the cards' sort chips; most first #}
+        <th class="archive-table__cell--comments sortable" data-sort="number" data-col="8" data-key="comments" data-first="desc" title="Comentarios"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><span class="archive-table__comments-label">Comentarios</span> <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody>
@@ -62,6 +64,8 @@
         <td class="archive-table__cell--year">{% if post.slugs.year %}<a href="/archive/years/{{ post.slugs.year }}.html">{{ post.metadata.year }}</a>{% endif %}</td>
         <td class="archive-table__cell--category">{% if post.slugs.category %}<a href="/archive/categories/{{ post.slugs.category }}.html">{{ post.metadata.category }}</a>{% endif %}</td>
         <td class="archive-table__cell--editor">{% if post.slugs.editor %}<a class="author" href="/archive/editors/{{ post.slugs.editor }}.html">{% set slug = post.slugs.editor %}{% include "partials/avatar.njk" %}{{ post.editor.name }}</a>{% endif %}</td>
+        {#- The count sorts by data-value; the label is an aria-label, out of the text the search reads #}
+        <td class="archive-table__cell--comments"{% if post.comments | length %} data-value="{{ post.comments | length }}"{% endif %}>{% if post.comments | length %}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" role="img" aria-label="Comentarios:"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg>{{ post.comments | length }}{% endif %}</td>
       </tr>
       {%- endfor -%}
     </tbody>
